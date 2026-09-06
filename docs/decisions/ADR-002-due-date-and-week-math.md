@@ -21,7 +21,7 @@ Derived values, computed on every render from `lmpEquivalent` and today's local 
 
 ## Edge states the UI must handle
 - `gestationalDays < 14`: before conception on the LMP scale. Show a "too early to compare" state, not week 1/3 rows (which have no comparison).
-- `weeks == 3`: the CSV has no comparison for week 3. Data gap flagged for the author; until filled, the UI falls back to the nearest earlier row and says so.
+- `weeks == 3`: the source CSV had no comparison; the data now carries a proposed one (`proposed: true`). Rows flagged proposed render normally.
 - `weeks > 42`: clamp to the Osprey row and show "past 42 weeks".
 - `gestationalDays < 0`: invalid input; block with a validation message.
 - Week 20 → 21: length jumps from 6.46 in to 10.51 in because the measurement convention changes from crown-rump to crown-heel. Show a one-line note on weeks 20 and 21.

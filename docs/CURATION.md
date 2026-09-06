@@ -50,11 +50,11 @@ For eggs, add the age/behavior filter for eggs in the search UI (or search "egg"
 | 41 | Great Horned Owl | grhowl | https://search.macaulaylibrary.org/catalog?taxonCode=grhowl&mediaType=photo&sort=rating_rank_desc |
 | 42 | Osprey | osprey | https://search.macaulaylibrary.org/catalog?taxonCode=osprey&mediaType=photo&sort=rating_rank_desc |
 
-Seeds (weeks 2, 4, 5, 6): search Wikimedia Commons for "poppy seeds", "nyjer seed", "proso millet seed", "sunflower seed",
+Seeds and grit (weeks 2–6): search Wikimedia Commons for "poppy seeds", "nyjer seed", "proso millet seed", "sunflower seed",
 pick a CC0 or CC BY file, download it to `public/images/seeds/`, and record `provider: "commons"`, `sourceUrl`,
 `author`, `license`, `licenseUrl` in `image`.
 
-Week 3: no comparison in the source data. Author to choose (something smaller than a nyjer seed and bird-adjacent).
+Week 3: proposed "Grain of grit" (`proposed: true` in the data). If accepted, source a Commons photo of gizzard grit or coarse sand alongside the seed photos.
 
 ## B. Facts review
 

@@ -3,7 +3,7 @@
 Status: accepted (2026-09-06)
 
 ## Decision
-The user picks one of six skins in About. A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
+The user picks one of seven skins in About. A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
 
 | Skin | Bird | Ground / Ink / Accent / Secondary / Highlight (light) | Display / Body |
 |---|---|---|---|
@@ -12,7 +12,8 @@ The user picks one of six skins in About. A skin is a palette (five roles, each 
 | Bluebird | Eastern Bluebird | #F7F5F0 / #23324A / #3B7DD8 / #C7643A / #D6E6F7 | Outfit / Nunito Sans |
 | Green Heron | Green Heron | #F2F3EE / #1E2A22 / #7A4A2E / #2F4A3A / #D9A21B | Cormorant Garamond / Source Sans 3 |
 | Oriole | Baltimore Oriole | #FBF7F1 / #141414 / #F28C1A / #3A3A3A / #FFD9A8 | Archivo / Karla |
-| Goldfinch | American Goldfinch | #FCFBF4 / #1A1A1A / #C9A000 / #6B6F3A / #FBEC8C | Syne / Mulish |
+| Goldfinch | American Goldfinch | #FCFBF4 / #1A1A1A / #C9A000 / #6B6F3A / #FBEC8C | Gabarito / Mulish |
+| Cardinal | Northern Cardinal | #FAF5F2 / #1A1414 / #C41E3A / #8A6E4B / #F5D6D0 | Instrument Serif / Instrument Sans |
 
 Light values are shown in `docs/mockups/screens.html`. Dark values are the build session's to derive, keeping the accent recognizable and text contrast at or above 4.5:1.
 
@@ -24,6 +25,6 @@ Light values are shown in `docs/mockups/screens.html`. Dark values are the build
 - Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/__screenshots__`.
 
 ## Consequences
-- Adds twelve font families to the repo (roughly 30–40 KB each subset). Acceptable for a PWA; the app shell caches them.
+- Adds fourteen font families to the repo (roughly 30–40 KB each subset). Acceptable for a PWA; the app shell caches them.
 - Every new component must be written against tokens only. A lint rule (`stylelint-declaration-strict-value` on `color`, `background`, `border-color`) enforces it.
 - The Goldfinch accent is darkened from true goldfinch yellow so it holds contrast on light ground; the highlight token carries the brighter yellow.

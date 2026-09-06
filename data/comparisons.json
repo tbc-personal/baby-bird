@@ -47,10 +47,10 @@
       "weightOz": 0.04,
       "weightIsUpperBound": true,
       "kind": "seed",
-      "comparison": null,
+      "comparison": "Grain of grit",
       "sourceComparisonText": null,
       "scientificName": null,
-      "wikipediaTitle": null,
+      "wikipediaTitle": "Gizzard",
       "allAboutBirdsSlug": null,
       "image": {
         "provider": null,
@@ -60,7 +60,9 @@
         "altText": null
       },
       "facts": [],
-      "ebirdSpeciesCode": null
+      "ebirdSpeciesCode": null,
+      "proposed": true,
+      "proposalNote": "Proposed during planning: the grains of sand and grit that seed-eating birds swallow to grind food in the gizzard. Roughly 0.5-1 mm. Author to confirm."
     },
     {
       "week": 4,

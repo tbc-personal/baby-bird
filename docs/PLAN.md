@@ -1,10 +1,10 @@
-# Puffin Baby: development plan
+# Baby Bird (working title): development plan
 
 A pregnancy tracker that compares fetal size each week to a seed, an egg, or a bird.
 Decisions are recorded in `docs/decisions/`; research in `docs/research/`; the build prompt for the
 implementation session is `prompts/opus-build-prompt.md`.
 
-> "Puffin Baby" is taken from the title of the source spreadsheet. Confirm or rename.
+> Name not yet chosen. "Baby Bird" is the repo name and stands in until then; candidates are listed in the README.
 
 ## 1. Scope
 
@@ -24,7 +24,7 @@ implementation session is `prompts/opus-build-prompt.md`.
 
 ### v1.1
 - Miscarriage "chance of continuing" panel, opt-in (ADR-005).
-- Week 3 comparison and any other data gaps filled by the author.
+- Any remaining data gaps filled by the author.
 - Optional: metric/imperial preference, push-style "new week" notification via the PWA.
 
 ### Out of scope
@@ -59,7 +59,7 @@ One row per week 1–42. Fields: `week`, `lengthIn`, `lengthMeasure` (crown-rump
 `weightIsUpperBound`, `kind` (seed | egg | bird), `comparison`, `scientificName`, `wikipediaTitle`,
 `allAboutBirdsSlug`, `ebirdSpeciesCode`, `image { provider, mlAssetId, embedUrl, credit, altText }`, `facts[] { text, sources[], reviewed }`.
 
-Known gaps: week 1 (no data, by design), week 3 (no comparison). Names, slugs and codes were filled during
+Known gaps: week 1 (no data, by design). Week 3 carries a proposed comparison (grain of grit) pending the author's sign-off. Names, slugs and codes were filled during
 planning and must be verified (see `docs/CURATION.md`).
 
 ## 4. Milestones for the build session
@@ -86,4 +86,4 @@ planning and must be verified (see `docs/CURATION.md`).
 - Vitest for `lib/*` (aim: 100% branch coverage on gestation math).
 - Fixed-date tests: pass `today` explicitly; never call `new Date()` inside lib code.
 - Playwright: one happy-path smoke test on the built site plus one test that a Macaulay embed iframe reaches `load`.
-- `scripts/validate-data.ts` fails CI on schema errors, duplicate weeks, or missing facts for weeks 2–42 (week 3 exempted until filled).
+- `scripts/validate-data.ts` fails CI on schema errors, duplicate weeks, or missing facts for weeks 2–42 .

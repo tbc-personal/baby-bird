@@ -1,6 +1,6 @@
-# Build prompt: Puffin Baby v1
+# Build prompt: Baby Bird v1 (working title)
 
-You are implementing the v1 of Puffin Baby, a static pregnancy-tracking PWA that compares fetal size each week to a bird, egg, or seed. All product and architecture decisions have already been made in this repository. Read these before writing any code, in this order:
+You are implementing the v1 of Baby Bird (working title; the final name is in the README if it has been chosen, otherwise use "Baby Bird" and keep the name in one constant), a static pregnancy-tracking PWA that compares fetal size each week to a bird, egg, or seed. All product and architecture decisions have already been made in this repository. Read these before writing any code, in this order:
 
 1. `README.md`
 2. `docs/PLAN.md` (scope, architecture, milestones, testing)
@@ -23,9 +23,9 @@ Work milestone by milestone. Commit after each one with a message that names the
 - `scripts/validate-data.ts`: validate `data/comparisons.json` against a zod schema; fail on duplicate weeks, missing weeks 1–42, non-monotonic lengths except the documented 20→21 convention switch, and (warning only, for now) missing facts or image IDs. Run it in CI.
 
 ### M2 Setup and Today
-- Setup screen per mockup 1: three methods (last menstrual period, conception date, enter my due date), live "Due date" and "Today you are" preview on separate lines, no privacy copy on this screen.
+- Setup screen per mockup 1: three methods (last menstrual period, conception date, enter my due date), live "Due date" and "Today you are" preview on separate lines, no privacy copy on this screen. The per-method calculation details are hidden behind an info button to the right of the "Count from" label (accessible: `aria-expanded`, closes on outside tap and Escape).
 - Storage per ADR-006, including the `?m=&d=` share link and the "replace saved date?" confirmation.
-- Today screen per mockup 2, using `ComparisonCard`. Header: trimester left, "due <date>" right; big line "23 weeks, 0 days · 119 days to go". Card heading: small lead "Your baby is roughly the size of a/an", then the comparison name large, then scientific name and week. Article and "egg" suffix derived from the row (e.g. "an American Robin egg"). Button text: "Copy a shareable link". Units: imperial default; metric conversions rounded (cm to 1 decimal, g to whole); the toggle lives in About.
+- Today screen per mockup 2, using `ComparisonCard`. Header: trimester left, "due <date>" right; big line "23 weeks, 0 days · 119 days to go". Card heading, top to bottom: "Week N" in italics, small lead "Your baby is roughly the size of a/an", the comparison name large, then the scientific name. Article and "egg" suffix derived from the row (e.g. "an American Robin egg"). Button text: "Copy a shareable link". Units: imperial default; metric conversions rounded (cm to 1 decimal, g to whole); the toggle lives in About.
 - Empty, too-early, week-3-gap, and past-42 states from the mockup's state table.
 
 ### M3 Images
@@ -42,14 +42,14 @@ Work milestone by milestone. Commit after each one with a message that names the
 - `#/week/:n` renders the same `ComparisonCard` for any week 2–42.
 
 ### M5 Facts
-- Write 2–3 original facts for every week 2–42 (one for each seed) following the rules in ADR-004. Each fact: `{ "text": "...", "sources": ["https://..."], "reviewed": false }`. Never copy sentences from All About Birds, Audubon, Birds of the World, or Wikipedia; consult them, then write your own sentence. Prefer facts about eggs, chicks, nests, incubation, and size. One sentence, ≤160 characters, no exclamation marks.
+- Write 2–3 original facts for every week 2–42 (one for each seed, and one about gizzard grit for week 3) following the rules in ADR-004. Each fact: `{ "text": "...", "sources": ["https://..."], "reviewed": false }`. Never copy sentences from All About Birds, Audubon, Birds of the World, or Wikipedia; consult them, then write your own sentence. Prefer facts about eggs, chicks, nests, incubation, and size. One sentence, ≤160 characters, no exclamation marks.
 - Add a `## Facts to review` section to `docs/CURATION.md` listing the count and how to review.
 - Render a small "draft" chip next to any fact with `reviewed: false`, only when `import.meta.env.DEV` or when `?review=1` is in the URL.
 
 ### M6b Skins (ADR-007)
-- Six skins as data files, `applySkin()`, `SkinPicker` in About, persisted selection, default Puffin.
+- Seven skins as data files, `applySkin()`, `SkinPicker` in About, persisted selection, default Puffin.
 - Light tokens from the ADR table; derive dark tokens per skin and record them in the skin file with a comment on the contrast ratios you measured.
-- Self-host the twelve display/body families plus IBM Plex Mono (latin subset, woff2, only the weights used). Load only the active skin's fonts up front.
+- Self-host the fourteen display/body families plus IBM Plex Mono (latin subset, woff2, only the weights used). Load only the active skin's fonts up front.
 - Add the stylelint rule that forbids literal colors in component CSS.
 - Playwright: screenshot Today in every skin, light and dark; commit the baselines.
 

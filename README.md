@@ -1,7 +1,9 @@
-# Puffin Baby
+# Baby Bird (working title)
 
 A pregnancy tracker. Enter your last menstrual period, conception date, or due date and see each week's
 fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin at week 23, Osprey at week 42.
+
+Name: not yet chosen. Candidates: **Nestling**, **Featherweight**, **Hatch Day**. See "Naming" below.
 
 Status: **planning**. No application code yet. This repository currently holds the plan, decision
 records, research, mockups, data, and the build prompt for the implementation session.
@@ -13,8 +15,15 @@ records, research, mockups, data, and the build prompt for the implementation se
   two or three short original bird facts, and a link to the species on All About Birds.
 - Browse the full week-by-week timeline.
 - From 34 weeks, see the chance of going into labor in the next week, re-derived from published studies.
-- Six skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch.
+- Seven skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
 - Works as an installable web app. Data stays on your device.
+
+## Naming
+| Candidate | Why |
+|---|---|
+| Nestling | A chick still in the nest. One word, literal for the theme, reads as a noun for the baby. |
+| Featherweight | The lightest weight class; the app's weekly weight readout. Warm without being cute. |
+| Hatch Day | The due date, reframed. Puns on birthday; works as a countdown ("47 days to hatch day"). |
 
 ## Not medical advice
 Fetal sizes are population averages. Probability features are population statistics, not predictions
