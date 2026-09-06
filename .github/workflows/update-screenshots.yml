@@ -1,12 +1,20 @@
 name: Update the skin screenshots
 
-# Manual only. The ADR-007 baselines in tests/e2e/__screenshots__ are pixel
-# comparisons of text, and text rasterises differently between a development
-# sandbox and the GitHub runner, so the baselines have to be generated on the
-# runner that gates them. Run this from the Actions tab against the branch whose
-# baselines need regenerating, then review the committed images before merging.
+# The ADR-007 baselines in tests/e2e/__screenshots__ are pixel comparisons of
+# text, and text rasterizes differently between a development sandbox and the
+# GitHub runner, so the baselines have to be generated on the runner that gates
+# them. Two ways in:
+#
+#   - From the Actions tab, against any branch. This only appears once the file
+#     has reached the default branch, which is how workflow_dispatch works.
+#   - By pushing a commit whose message contains [update-screenshots], which is
+#     the only route available from a branch before that.
+#
+# Either way, review the committed images before merging.
 on:
   workflow_dispatch:
+  push:
+    branches: ['**']
 
 permissions:
   contents: write
@@ -14,6 +22,9 @@ permissions:
 jobs:
   update:
     name: Regenerate and commit the baselines
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.head_commit.message, '[update-screenshots]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
