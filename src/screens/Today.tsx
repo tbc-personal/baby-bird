@@ -11,6 +11,8 @@ import { formatShortDate } from '../lib/dates';
 import { buildShareLink, isReviewMode } from '../lib/storage';
 import { weekRow } from '../data/comparisons';
 import { ComparisonCard } from '../components/ComparisonCard';
+import { LaborPanelCard } from '../components/LaborPanel';
+import { LABOR_PANEL_FROM_DAY } from '../lib/laborProbability';
 import { useAppState } from '../useAppState';
 import './Today.css';
 
@@ -52,6 +54,10 @@ export function TodayScreen({ today }: { today: Date }) {
           reviewMode={reviewMode}
         />
       )}
+
+      {settings.laborPanelEnabled && progress.gestationalDays >= LABOR_PANEL_FROM_DAY ? (
+        <LaborPanelCard gestationalDays={progress.gestationalDays} />
+      ) : null}
 
       <ShareButton method={saved.method} inputDate={saved.inputDate} />
     </>

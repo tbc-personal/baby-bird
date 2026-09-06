@@ -1,0 +1,81 @@
+.curve {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.curve__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.curve__axis,
+.curve__grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.curve__grid {
+  stroke-dasharray: 2 3;
+}
+
+.curve__line {
+  fill: none;
+  stroke: var(--secondary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.curve__area {
+  fill: var(--secondary);
+  fill-opacity: 0.14;
+  stroke: none;
+}
+
+.curve__today {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.curve__due {
+  stroke: var(--ink-2);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.curve__label {
+  fill: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.legend__line {
+  background: var(--secondary);
+}
+
+.legend__today {
+  background: var(--accent);
+}
+
+.legend__due {
+  background: var(--ink-2);
+}
