@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Nestling puffin mark">
+  <!-- Ground: the Puffin skin's paper colour, opaque so the rasterised PNGs never show transparency. -->
+  <rect x="0" y="0" width="512" height="512" fill="#F6F4EF" />
+
+  <!-- Head: a single rounded ink shape. Kept as one big blob (no small notches) so it
+       stays a clean, unbroken silhouette down to 16px. -->
+  <path
+    d="M256 76c88 0 154 66 154 164s-66 196-154 196S102 338 102 240 168 76 256 76Z"
+    fill="#1F2A33"
+  />
+
+  <!-- Cheek / face patch: a bold white oval, offset toward the bill side of the head. -->
+  <ellipse cx="300" cy="270" rx="98" ry="86" fill="#FFFFFF" />
+
+  <!-- Bill: one large flat-sided triangle in the accent orange, its base tucked inside the head
+       silhouette and its tip short of the canvas edge, so it reads as one wedge
+       at any size and never clips. -->
+  <path d="M344 214 L470 254 L344 314 Z" fill="#E8632B" />
+
+  <!-- Eye: a single dark dot sitting clear of the bill inside the white patch,
+       oversized on purpose so it still registers at favicon size. -->
+  <circle cx="292" cy="230" r="19" fill="#1F2A33" />
+</svg>

@@ -1,0 +1,8 @@
+dist
+dev-dist
+coverage
+node_modules
+public/fonts
+playwright-report
+test-results
+tests/e2e/__screenshots__

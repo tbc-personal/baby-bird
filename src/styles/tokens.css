@@ -1,0 +1,71 @@
+/*
+ * Skin tokens (ADR-007). The values here are the Puffin skin, which is also the
+ * default; `applySkin()` overwrites the same custom properties on :root when the
+ * user picks another skin, and swaps --font-display / --font-body with it.
+ *
+ * This file is the one place literal colors are allowed; the stylelint rule in
+ * .stylelintrc.json forbids them everywhere else.
+ */
+:root {
+  color-scheme: light dark;
+
+  --ground: #f6f4ef;
+  --paper: #ffffff;
+  --ink: #1f2a33;
+  --ink-2: #5d6b70;
+  --line: #dcd8cf;
+  --accent: #e8632b;
+  --accent-soft: #fbe3d8;
+  --secondary: #2f6f73;
+  --secondary-soft: #e6f0f0;
+  --highlight: #f2b33d;
+  --egg: #ede4d2;
+  --note: #fff7e3;
+  --focus: #2f6f73;
+  --on-accent: #2a1206;
+
+  --font-display: 'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Atkinson Hyperlegible', 'Helvetica Neue', arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, sfmono-regular, menlo, monospace;
+
+  --radius: 12px;
+  --radius-lg: 16px;
+  --gap: 12px;
+  --screen-max: 460px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ground: #15191d;
+    --paper: #1f262b;
+    --ink: #eef0ea;
+    --ink-2: #a5b0b4;
+    --line: #37424a;
+    --accent: #f07a45;
+    --accent-soft: #3a2a22;
+    --secondary: #6fb2b5;
+    --secondary-soft: #223a3c;
+    --highlight: #f2b33d;
+    --egg: #2c3238;
+    --note: #2c2a22;
+    --focus: #6fb2b5;
+    --on-accent: #1a1005;
+  }
+}
+
+:root[data-theme='dark'] {
+  --ground: #15191d;
+  --paper: #1f262b;
+  --ink: #eef0ea;
+  --ink-2: #a5b0b4;
+  --line: #37424a;
+  --accent: #f07a45;
+  --accent-soft: #3a2a22;
+  --secondary: #6fb2b5;
+  --secondary-soft: #223a3c;
+  --highlight: #f2b33d;
+  --egg: #2c3238;
+  --note: #2c2a22;
+  --focus: #6fb2b5;
+  --on-accent: #1a1005;
+}

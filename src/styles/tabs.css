@@ -1,0 +1,27 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  position: sticky;
+  bottom: 0;
+}
+
+.tabs a,
+.tabs span {
+  font-size: 11px;
+  text-align: center;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 4px 2px;
+}
+
+.tabs a[aria-current='page'] {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.tabs span[aria-disabled='true'] {
+  opacity: 0.4;
+}

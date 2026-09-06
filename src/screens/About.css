@@ -1,0 +1,71 @@
+.about__title {
+  font-size: 20px;
+}
+
+.about__section {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about__section h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about__section p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.about__section ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 13px;
+  display: grid;
+  gap: 6px;
+}
+
+.about__section ul li::marker {
+  color: var(--accent);
+}
+
+.toggle {
+  display: grid;
+  gap: 5px;
+}
+
+.toggle--check {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.segmented button {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 9px;
+  background: var(--paper);
+  color: var(--ink-2);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.segmented button[aria-pressed='true'] {
+  border-color: var(--secondary);
+  background: var(--secondary-soft);
+  color: var(--secondary);
+  font-weight: 700;
+}

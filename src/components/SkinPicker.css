@@ -1,0 +1,77 @@
+/*
+ * The swatches are the one place a literal colour is legitimate: each one has
+ * to render *another* skin's palette, which cannot come from the active
+ * skin's tokens. The colours are set inline from the skin data, never
+ * hard-coded, so this file itself still holds no literal colours.
+ */
+.skins {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.skins__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.skin {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--line);
+  cursor: pointer;
+}
+
+.skin--on {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1.5px var(--accent);
+}
+
+.skin input {
+  /*
+   * The input covers the whole swatch and sits above its own label content, so
+   * a tap anywhere on the card hits the control itself rather than a span. The
+   * label would forward the click either way, but keeping the input as the top
+   * hit target makes the target area exactly the visible card.
+   */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.skin:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.skin__name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.skin__bird {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.skin__chips {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.skin__chips i {
+  flex: 1;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}

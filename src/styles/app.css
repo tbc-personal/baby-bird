@@ -1,0 +1,178 @@
+/* Global layout and shared primitives. Every color here is a skin token. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--secondary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: var(--screen-max);
+  margin: 0 auto;
+  background: var(--paper);
+}
+
+.app__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 16px 18px 8px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 10px 14px;
+  background: var(--paper);
+  color: var(--ink);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
+
+.appname {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.small {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.big {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.big small {
+  /* Wraps as a whole phrase rather than breaking after "119 days". */
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.bar {
+  height: 8px;
+  background: var(--egg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius);
+  padding: 13px 12px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--quiet {
+  background: var(--secondary-soft);
+  color: var(--secondary);
+}
+
+.note {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--note);
+  color: var(--ink);
+  font-size: 12px;
+  border-left: 3px solid var(--highlight);
+}
+
+.empty {
+  display: grid;
+  gap: 10px;
+  padding: 24px 0;
+  color: var(--ink-2);
+}
+
+.empty h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--ink);
+  margin: 0;
+}

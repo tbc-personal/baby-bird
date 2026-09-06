@@ -5,8 +5,38 @@ fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin
 
 Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
-Status: **planning**. No application code yet. This repository currently holds the plan, decision
-records, research, mockups, data, and the build prompt for the implementation session.
+Status: **v1 built**. All seven milestones in `docs/PLAN.md` §4 are implemented and tested.
+Two things are deliberately unfinished and do not block the app running: the image curation in
+`docs/CURATION.md` (no asset IDs, no seed photos) and the review pass on the 123 bird facts. The
+build session had no network access to Macaulay Library, Wikimedia Commons, Wikipedia or the CDC,
+so none of it could be fetched or checked; see "Known gaps" below.
+
+## Running it
+
+```sh
+npm install
+npm run dev          # http://localhost:5173
+npm run build        # production build; VITE_BASE=/repo/ for a project Pages URL
+npm run test         # unit tests
+npm run test:e2e     # Playwright, against the preview build
+npm run lint         # ESLint plus the ADR-007 no-literal-colours rule
+npm run typecheck
+npm run validate-data
+```
+
+`npm run fonts` re-downloads the self-hosted woff2 subsets, `npm run icons` regenerates the PWA
+icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor parameters, and
+`npm run check-links` verifies every outbound URL in the data (needs network).
+
+## Known gaps
+
+| Gap | Where |
+|---|---|
+| No Macaulay Library asset IDs; every card shows a kind silhouette tagged "Photo coming" | `docs/CURATION.md` |
+| No Commons seed photos for weeks 2-6 | `docs/CURATION.md` |
+| The Macaulay embed `src` is an unverified guess, isolated in one constant | `docs/decisions/ADR-003-images.md` |
+| All 123 facts are `reviewed: false` and were written without opening their sources | `docs/CURATION.md` |
+| The labor model misses one of its three calibration targets, because no skew-normal can meet all three | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
 ## What it will do (v1)
 - Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.
