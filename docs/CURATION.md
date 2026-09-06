@@ -82,6 +82,52 @@ The build session writes facts with `reviewed: false`. Review pass: check each a
 edit for voice, set `reviewed: true`. `scripts/validate-data.ts` reports the count of unreviewed facts;
 the release checklist requires zero.
 
+## Facts to review
+
+**123 facts, across all 41 comparison weeks (2–42). All 123 are `reviewed: false`.
+None has been checked against a live source.**
+
+Three facts per week. They are original sentences written for this app; no text
+was copied from All About Birds, Audubon, Birds of the World or Wikipedia. They
+follow the ADR-004 rules, which `scripts/validate-data.ts` enforces: one
+sentence, 160 characters or fewer, no exclamation marks, at least one source URL.
+
+**The accuracy caveat matters here.** The build session's egress proxy blocked
+`en.wikipedia.org` and `www.allaboutbirds.org` along with everything else, so
+the sentences were written from the model's own knowledge and the `sources[]`
+URLs point at where each claim *should* be checked, not at a page that was
+opened. Treat every one as an unverified draft.
+
+### How to review
+
+1. Run the app with `?review=1` on the URL (or `npm run dev`, where review mode
+   is always on). Each unreviewed fact shows a small **draft** chip beside it.
+2. Walk the timeline week by week. For each fact, open the URL in its
+   `sources[]` and confirm the claim.
+3. Edit for voice and accuracy in `data/comparisons.json`, then set
+   `"reviewed": true` on that fact.
+4. `npm run validate-data` prints the remaining unreviewed count. Release
+   requires it to reach zero.
+
+### Where to look hardest
+
+These are the claims most worth a careful check, either because they are
+specific numbers or because they are the kind of widely repeated statement that
+turns out to be folklore:
+
+| Week | Claim | Why |
+|---|---|---|
+| 3 | Grouse and doves take grit from roadsides | The whole week-3 comparison is `proposed: true` and needs the author's sign-off first. |
+| 5 | Proso millet ripens in 60–90 days | A range, quoted from memory. |
+| 13 | An eagle nest can reach two metres across and a tonne | Record-holder figures; confirm whether they describe a record or a typical nest. |
+| 21 | Kestrels see vole urine trails in ultraviolet | Real research, but the popular version overstates it. |
+| 27 | Nostril baffles let a Peregrine breathe in a stoop | Widely repeated and not firmly established; the sentence hedges with "thought to". |
+| 28 | Many Cooper's Hawks carry healed fractures | Comes from a specific skeletal survey; check the proportion before restating it. |
+| 30 | Crows recognise faces and pass the grudge on | From Marzluff's masked-researcher studies; check what the studies actually showed. |
+| 34 | Ring-billed chicks peck at the parent's bill | The classic red-spot experiment is Herring Gull, not Ring-billed. |
+| 36 | Ducklings drop from as high as fifteen metres | Confirm the figure. |
+| 40 | Snowy Owl clutches run 3 to 11 with the lemming supply | A range, quoted from memory. |
+
 ## C. Verify slugs and codes
 
 For each row: `https://www.allaboutbirds.org/guide/<allAboutBirdsSlug>/overview` returns 200, and
