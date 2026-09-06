@@ -2,6 +2,26 @@
 
 Two human tasks must happen alongside (or after) the code build. Both write into `data/comparisons.json`.
 
+## What the build session could and could not do (2026-09-06)
+
+The implementation session ran in a sandbox whose egress proxy refuses `CONNECT`
+to every source this checklist depends on. `macaulaylibrary.org`,
+`search.macaulaylibrary.org`, `commons.wikimedia.org`, `upload.wikimedia.org`,
+`en.wikipedia.org` and `www.allaboutbirds.org` all answer `HTTP 403` at the
+gateway before a request leaves the machine. So:
+
+| Task | Status | What is left |
+|---|---|---|
+| A. Macaulay asset ids, weeks 7–42 | **not started** | All 36 rows. `image` is `null` throughout; every card renders the kind silhouette tagged "Photo coming" and the app is fully usable that way. |
+| A. Commons seed photos, weeks 2–6 | **not started** | All 5 rows, including the week 3 grit photo. Files were to go in `public/images/seeds/`; that directory is empty. |
+| Verify the Macaulay embed `src` | **not done** | See `docs/decisions/ADR-003-images.md` → "Embed mechanics". The template in `src/components/macaulay.ts` is an unverified guess and is the only line that needs changing if it is wrong. |
+| B. Facts, weeks 2–42 | **drafted, unverified** | Written from the build session's own knowledge and cited to public references it could not open. Every fact is `reviewed: false`. See "Facts to review" below. |
+| C. Verify slugs and species codes | **not done** | `scripts/check-links.ts` automates it; run it from a machine with network access. |
+
+None of this blocks the code. `scripts/validate-data.ts` treats missing images
+and missing facts as warnings, not errors, so CI stays green while curation
+trails; it reports the outstanding counts on every run.
+
 ## A. Image IDs (weeks 7–42: Macaulay Library; weeks 2–6: Wikimedia Commons)
 
 For each species row, open the search page, pick a well-rated photo showing the whole bird (or the egg for

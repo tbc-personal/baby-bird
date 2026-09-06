@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useOnline } from '../useOnline';
 import { OfflineGoose } from './OfflineGoose';
 import { Silhouette } from './Silhouette';
@@ -18,14 +18,23 @@ export function MacaulayEmbed({
   altText: string;
 }) {
   const online = useOnline();
-  const holderRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState<EmbedState>('idle');
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Lazy-load: the frame is only created once the card is near the viewport, so
-  // the timeline and a scrolled-past card cost nothing (ADR-003).
-  useEffect(() => {
-    const holder = holderRef.current;
+  /*
+   * Lazy-load: the frame is only created once the card is near the viewport, so
+   * the timeline and a scrolled-past card cost nothing (ADR-003).
+   *
+   * This is a callback ref rather than a mount effect because the holder is not
+   * always mounted on the first render: a card that first renders offline shows
+   * the goose instead, and the holder only appears when the connection returns.
+   * A mount effect would run once against a null node and never observe
+   * anything, leaving the photo permanently unloaded after coming back online.
+   */
+  const attachHolder = useCallback((holder: HTMLDivElement | null) => {
+    observerRef.current?.disconnect();
+    observerRef.current = null;
     if (!holder) return;
     if (typeof IntersectionObserver === 'undefined') {
       setVisible(true);
@@ -41,10 +50,15 @@ export function MacaulayEmbed({
       { rootMargin: '200px' },
     );
     observer.observe(holder);
-    return () => {
-      observer.disconnect();
-    };
+    observerRef.current = observer;
   }, []);
+
+  useEffect(
+    () => () => {
+      observerRef.current?.disconnect();
+    },
+    [],
+  );
 
   const shouldLoad = visible && online;
 
@@ -77,7 +91,7 @@ export function MacaulayEmbed({
 
   return (
     <PhotoFrame tag={state === 'loaded' ? null : 'Loading photo'}>
-      <div className="photo__holder" ref={holderRef}>
+      <div className="photo__holder" ref={attachHolder}>
         {shouldLoad ? (
           <iframe
             className="photo__frame"

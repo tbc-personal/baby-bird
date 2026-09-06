@@ -20,10 +20,43 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
-## Embed mechanics (verify during build)
-- From an asset page such as `https://macaulaylibrary.org/asset/<ID>`, the "Embed" control yields an iframe. The expected form is `<iframe src="https://macaulaylibrary.org/asset/<ID>/embed" ...>`; confirm the exact `src` and any required size attributes from the live "Embed" dialog before templating it.
-- The embed renders its own credit line. The app should still show "Photo: <photographer> / Macaulay Library ML<ID>" as text for accessibility and per Cornell's credit guidance.
+## Embed mechanics
+
+**Status after the build session (2026-09-06): NOT VERIFIED. Do not ship a
+curated asset id until someone with a browser confirms the pattern below.**
+
+The build session was asked to confirm the exact `src` from a live asset page's
+Embed dialog. It could not. The sandbox's egress proxy refuses `CONNECT` to
+`macaulaylibrary.org` and `search.macaulaylibrary.org`, and the gateway answers
+`HTTP 403` before any request leaves the machine. The same block applies to
+`commons.wikimedia.org`, `upload.wikimedia.org`, `en.wikipedia.org` and
+`www.allaboutbirds.org`. Nothing about Cornell's markup was observed; the note
+below is unchanged from the planning guess and is recorded as a guess.
+
+- Assumed form, templated in `src/components/macaulay.ts` as the single constant
+  `MACAULAY_EMBED_TEMPLATE`: `https://macaulaylibrary.org/asset/<ID>/embed`,
+  rendered as an `<iframe>` with `loading="lazy"` and a fixed 150px height.
+  Required size attributes, if Cornell specifies any, are unknown.
+- Verification step for whoever picks this up: open any asset page, use the
+  **Embed** control, copy the iframe it produces, and compare it against
+  `MACAULAY_EMBED_TEMPLATE`. If the `src` differs, that one constant is the only
+  edit needed. `scripts/check-links.ts` will then confirm the asset ids resolve.
+- The app is fully usable meanwhile. No row in `data/comparisons.json` carries an
+  `mlAssetId`, so every card renders the kind silhouette tagged "Photo coming",
+  and `MacaulayEmbed` is never mounted in the shipped build.
+- The embed renders its own credit line. The app still shows
+  "Photo: <photographer> / Macaulay Library at the Cornell Lab of Ornithology
+  ML<ID>" as text, for accessibility and per Cornell's credit guidance.
 - Each card also deep-links to `https://www.allaboutbirds.org/guide/<slug>/overview`.
+
+### Failure handling as built
+- `navigator.onLine` false, or no `load` within **6 seconds**: the offline goose,
+  tagged "Photo needs a connection".
+- No `mlAssetId` curated: the kind silhouette, tagged "Photo coming". Distinct
+  from the offline state, as this ADR requires.
+- The frame is created only when the card comes within 200px of the viewport,
+  via a callback ref rather than a mount effect, so a card that first renders
+  offline still attaches its observer when the connection returns.
 
 ## Alternatives rejected
 - Wikimedia Commons for all weeks: no permission needed, offline-capable, but not Cornell's photos. Remains the fallback if the embed route breaks; the `image.provider` field is designed so the swap is a data change.
