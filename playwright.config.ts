@@ -1,6 +1,16 @@
+import { existsSync } from 'node:fs';
 import { defineConfig, devices } from '@playwright/test';
 
 const PORT = 4173;
+
+/**
+ * Some sandboxes ship a Chromium that Playwright's own download step cannot
+ * fetch. When one is present, point at it; in CI the normal
+ * `npx playwright install --with-deps chromium` provides the browser and this
+ * is skipped.
+ */
+const SANDBOX_CHROMIUM = '/opt/pw-browsers/chromium';
+const launch = existsSync(SANDBOX_CHROMIUM) ? { executablePath: SANDBOX_CHROMIUM } : {};
 
 export default defineConfig({
   testDir: 'tests/e2e',
@@ -21,6 +31,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         // A phone-shaped viewport; the mockups are all 300px screens.
         viewport: { width: 420, height: 900 },
+        launchOptions: launch,
       },
     },
   ],

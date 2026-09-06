@@ -106,11 +106,14 @@ button {
 }
 
 .big small {
+  /* Wraps as a whole phrase rather than breaking after "119 days". */
+  display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0;
   color: var(--ink-2);
+  white-space: nowrap;
 }
 
 .bar {

@@ -5,9 +5,9 @@ import type { SavedState, Settings } from './lib/storage';
 export interface AppState {
   readonly saved: SavedState | null;
   readonly settings: Settings;
-  save(method: DatingMethod, inputDate: IsoDate): void;
-  updateSettings(patch: Partial<Settings>): void;
-  forget(): void;
+  readonly save: (method: DatingMethod, inputDate: IsoDate) => void;
+  readonly updateSettings: (patch: Partial<Settings>) => void;
+  readonly forget: () => void;
 }
 
 export const AppStateContext = createContext<AppState | null>(null);

@@ -1,0 +1,48 @@
+.photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  background: var(--egg);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.photo__tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  font-size: 10px;
+  background: var(--paper);
+  color: var(--ink-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.photo__holder {
+  width: 100%;
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+}
+
+.photo__frame {
+  width: 100%;
+  height: 150px;
+  border: 0;
+  display: block;
+}
+
+.photo__img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.credit {
+  margin: 0;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
