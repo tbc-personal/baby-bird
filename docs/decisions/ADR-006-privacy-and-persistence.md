@@ -3,7 +3,7 @@
 Status: accepted (2026-09-06)
 
 ## Decision
-- State (`method`, `inputDate`, `settings`) lives in `localStorage` under a versioned key (`babybird.v1`). No cookies, no analytics, no error reporting service, no third-party scripts except the Macaulay Library embed frames (ADR-003).
+- State (`method`, `inputDate`, `settings`) lives in `localStorage` under a versioned key (`nestling.v1`). No cookies, no analytics, no error reporting service, no third-party scripts except the Macaulay Library embed frames (ADR-003).
 - Shareable link: the Today screen offers "Copy link for your partner", producing `?m=lmp&d=2026-03-01`. Opening such a link pre-fills setup and asks before overwriting existing local state.
 - A "Forget my data" control clears storage.
 

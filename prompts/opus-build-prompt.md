@@ -1,6 +1,6 @@
-# Build prompt: Baby Bird v1 (working title)
+# Build prompt: Nestling v1
 
-You are implementing the v1 of Baby Bird (working title; the final name is in the README if it has been chosen, otherwise use "Baby Bird" and keep the name in one constant), a static pregnancy-tracking PWA that compares fetal size each week to a bird, egg, or seed. All product and architecture decisions have already been made in this repository. Read these before writing any code, in this order:
+You are implementing the v1 of Nestling (keep the app name in one constant), a static pregnancy-tracking PWA that compares fetal size each week to a bird, egg, or seed. All product and architecture decisions have already been made in this repository. Read these before writing any code, in this order:
 
 1. `README.md`
 2. `docs/PLAN.md` (scope, architecture, milestones, testing)

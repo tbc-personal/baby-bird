@@ -1,10 +1,10 @@
-# Baby Bird (working title): development plan
+# Nestling: development plan
 
 A pregnancy tracker that compares fetal size each week to a seed, an egg, or a bird.
 Decisions are recorded in `docs/decisions/`; research in `docs/research/`; the build prompt for the
 implementation session is `prompts/opus-build-prompt.md`.
 
-> Name not yet chosen. "Baby Bird" is the repo name and stands in until then; candidates are listed in the README.
+> App name: Nestling. The repo keeps its name, baby-bird.
 
 ## 1. Scope
 

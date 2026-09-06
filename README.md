@@ -1,9 +1,9 @@
-# Baby Bird (working title)
+# Nestling
 
 A pregnancy tracker. Enter your last menstrual period, conception date, or due date and see each week's
 fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin at week 23, Osprey at week 42.
 
-Name: not yet chosen. Candidates: **Nestling**, **Featherweight**, **Hatch Day**. See "Naming" below.
+Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
 Status: **planning**. No application code yet. This repository currently holds the plan, decision
 records, research, mockups, data, and the build prompt for the implementation session.
