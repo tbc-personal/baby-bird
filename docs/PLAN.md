@@ -16,7 +16,7 @@ implementation session is `prompts/opus-build-prompt.md`.
 3. Timeline screen: all 41 comparison rows (weeks 2–42) as a scrollable list; tapping opens that week's card.
 4. Labor probability panel (from 34w0d): chance of spontaneous labor in the next 7 days given still pregnant, with daily curve and caveats.
 5. About screen: skin picker, unit preference, labor panel toggle, sources, credits, non-commercial statement, limitations, "forget my data".
-5a. Six skins (ADR-007): Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch.
+5a. Seven skins (ADR-007): Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
 6. PWA: manifest, icons, app-shell service worker, offline goose in place of embeds.
 7. Content: curated image IDs for every week; original facts for every week (flagged for review).
 8. Tests: unit tests for gestation math and labor model; one Playwright smoke test (setup → today → timeline).
@@ -72,7 +72,7 @@ planning and must be verified (see `docs/CURATION.md`).
 | M4 | Timeline + Week | All rows listed; deep link `#/week/23` works |
 | M5 | Facts | Every week has ≥2 facts with sources, `reviewed: false` |
 | M6 | Labor panel | Model tests pass calibration; panel appears at 34w |
-| M6b | Skins | All six skins apply from About, persist, pass contrast checks in light and dark; per-skin screenshots recorded |
+| M6b | Skins | All seven skins apply from About, persist, pass contrast checks in light and dark; per-skin screenshots recorded |
 | M7 | PWA + CI + deploy | Installable; Lighthouse PWA pass; Actions green; Pages URL live |
 
 ## 5. Key risks
