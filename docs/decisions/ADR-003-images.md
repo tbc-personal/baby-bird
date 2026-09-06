@@ -14,8 +14,9 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Risk | Mitigation |
 |---|---|
 | Iframe markup or URL pattern changes on Cornell's side | Isolate in one component (`MacaulayEmbed`). Store the asset ID, not the markup; build the iframe from a single template constant. Add a smoke test that loads one embed in CI via Playwright and fails if it renders empty. |
-| No offline support for embeds | Service worker does not cache cross-origin frames. Show a species silhouette SVG plus name when `navigator.onLine` is false or the frame fails to load within a timeout. |
-| Third-party script weight on every screen | Lazy-load the iframe only for the current week's card; timeline thumbnails use the silhouette. |
+| No offline support for embeds | Service worker does not cache cross-origin frames. Show the offline goose (`docs/mockups/goose-offline.svg`: a line-drawn goose in a hat with a no-wifi symbol) with the tag "Photo needs a connection" when `navigator.onLine` is false or the frame fails to load within a timeout. |
+| Third-party script weight on every screen | Lazy-load the iframe only for the current week's card; timeline rows use small kind silhouettes (seed / egg / bird), not photos. |
+| No asset ID curated yet | Render the kind silhouette with the tag "Photo coming". Distinct from the offline goose. |
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 

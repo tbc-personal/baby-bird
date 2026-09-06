@@ -1,19 +1,19 @@
 # Puffin Baby
 
-A small, private pregnancy tracker. Enter your last menstrual period or conception date and see, each
-week, how big the baby is compared with a bird, a bird's egg, or a bird seed: from a poppy seed at
-week 2 to an Osprey at week 42, with an Atlantic Puffin at week 23.
+A pregnancy tracker. Enter your last menstrual period, conception date, or due date and see each week's
+fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin at week 23, Osprey at week 42.
 
 Status: **planning**. No application code yet. This repository currently holds the plan, decision
 records, research, mockups, data, and the build prompt for the implementation session.
 
 ## What it will do (v1)
-- Choose how the due date is calculated (last menstrual period or conception date) and enter the date.
+- Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.
 - See progress as weeks and days, days remaining, and trimester.
 - See this week's comparison with fetal length and weight, a Cornell Lab Macaulay Library photo embed,
   two or three short original bird facts, and a link to the species on All About Birds.
 - Browse the full week-by-week timeline.
 - From 34 weeks, see the chance of going into labor in the next week, re-derived from published studies.
+- Six skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch.
 - Works as an installable web app. Data stays on your device.
 
 ## Not medical advice
@@ -29,10 +29,10 @@ The project has no ads, no paid tier, and must not be used commercially. See
 | Path | What |
 |---|---|
 | `docs/PLAN.md` | Scope, architecture, milestones, risks, testing |
-| `docs/decisions/` | Architecture decision records (ADR-001 … 006) |
+| `docs/decisions/` | Architecture decision records (ADR-001 … 007) |
 | `docs/research/` | Licensing findings; Datayze feature feasibility and sources |
 | `docs/CURATION.md` | Human checklist: image IDs, fact review, slug verification |
-| `docs/mockups/` | Static HTML mockups of the main screens |
+| `docs/mockups/` | Static HTML mockups of the main screens and skins; offline goose SVG |
 | `data/comparisons.json` | Single source of truth for weeks, sizes, species, images, facts |
 | `data/size-comparisons.source.csv` | The original spreadsheet export |
 | `prompts/opus-build-prompt.md` | The prompt for the implementation session |

@@ -1,5 +1,5 @@
 <title>Puffin Baby Screens</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=DM+Serif+Display&family=Public+Sans:wght@400;600&family=Outfit:wght@500;700&family=Nunito+Sans:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600&family=Archivo:wght@800&family=Karla:wght@400;600&family=Syne:wght@700;800&family=Mulish:wght@400;700&display=swap">
 <style>
   :root {
     --ground: #F6F4EF;
@@ -60,11 +60,13 @@
   .mark::before { content: ""; position: absolute; left: 6px; top: 9px; width: 9px; height: 9px; background: var(--paper); border-radius: 50%; }
   label.f { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
   .ctl { border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px; color: var(--ink); background: var(--paper); display: flex; justify-content: space-between; align-items: center; }
-  .ctl.dashed { border-style: dashed; color: var(--ink-2); }
   .btn { background: var(--orange); color: #fff; border-radius: 12px; padding: 12px; text-align: center; font-weight: 700; }
   .btn.quiet { background: var(--teal-soft); color: var(--teal); }
   .small { font-size: 12px; color: var(--ink-2); }
   .mono { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+  .preview { display: grid; gap: 10px; padding: 12px 0 4px; border-top: 1px solid var(--line); }
+  .preview .lbl { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+  .preview .val { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 26px; line-height: 1; letter-spacing: -0.02em; }
 
   .big { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 34px; line-height: 1; letter-spacing: -0.02em; }
   .big small { font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 14px; letter-spacing: 0; color: var(--ink-2); }
@@ -76,8 +78,9 @@
   .embed { background: var(--egg); height: 130px; display: grid; place-items: center; position: relative; }
   .embed .tag { position: absolute; top: 8px; left: 8px; font-family: "IBM Plex Mono", monospace; font-size: 10px; background: var(--paper); color: var(--ink-2); padding: 2px 6px; border-radius: 4px; }
   .cardbody { padding: 12px; display: grid; gap: 8px; }
-  .cardbody h3 { margin: 0; font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; font-weight: 700; line-height: 1.15; }
-  .cardbody h3 span { display: block; font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 12px; color: var(--ink-2); }
+  .cardbody h3 { margin: 0; font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.05; letter-spacing: -0.01em; }
+  .cardbody h3 .lead { display: block; font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 12px; color: var(--ink-2); letter-spacing: 0; margin-bottom: 4px; }
+  .cardbody h3 .sci { display: block; font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 12px; color: var(--ink-2); letter-spacing: 0; margin-top: 4px; }
   .dims { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .dim { background: var(--teal-soft); border-radius: 8px; padding: 6px 8px; }
   .dim b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 14px; font-weight: 500; }
@@ -106,20 +109,53 @@
   .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
   .caveat { font-size: 11px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 8px; }
 
-  section.flow { margin-top: 48px; max-width: 65ch; }
+  .goose { width: 150px; height: auto; }
+  .goose path, .goose circle, .goose line, .goose rect { stroke: var(--ink); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .goose .fill { fill: var(--ink); stroke: none; }
+  .goose .paper { fill: var(--paper); }
+
+  section.flow { margin-top: 48px; }
   section.flow h2 { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; margin: 0 0 8px; }
-  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  section.flow > p { max-width: 65ch; color: var(--ink-2); margin: 0 0 16px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; max-width: 900px; }
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); font-weight: 500; }
   .tablewrap { overflow-x: auto; }
+
+  /* skins */
+  .skins { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .skin { border-radius: 16px; padding: 18px; border: 1.5px solid var(--line); display: grid; gap: 10px; }
+  .skin .who { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; }
+  .skin .who b { font-size: 14px; }
+  .skin .chips { display: flex; gap: 6px; }
+  .skin .chips i { flex: 1; height: 22px; border-radius: 6px; border: 1px solid rgba(0,0,0,.08); }
+  .skin .h { font-size: 30px; line-height: 1; margin: 4px 0 0; }
+  .skin .p { font-size: 14px; line-height: 1.4; }
+  .skin .p b { display: block; font-size: 20px; line-height: 1.1; margin-top: 2px; }
+  .skin .btnx { border-radius: 10px; padding: 8px 12px; font-size: 13px; font-weight: 700; color: #fff; justify-self: start; }
+  .skin .fonts { font-family: "IBM Plex Mono", monospace; font-size: 11px; opacity: .8; }
+  .skin.puffin { --g:#F6F4EF; --k:#1F2A33; --a:#E8632B; --s:#2F6F73; --hl:#F2B33D; --fd:"Bricolage Grotesque"; --fb:"Atkinson Hyperlegible"; }
+  .skin.kingfisher { --g:#F3F5F7; --k:#1C2E44; --a:#B5542D; --s:#4A6B8A; --hl:#9DB9CE; --fd:"DM Serif Display"; --fb:"Public Sans"; }
+  .skin.bluebird { --g:#F7F5F0; --k:#23324A; --a:#3B7DD8; --s:#C7643A; --hl:#D6E6F7; --fd:"Outfit"; --fb:"Nunito Sans"; }
+  .skin.heron { --g:#F2F3EE; --k:#1E2A22; --a:#7A4A2E; --s:#2F4A3A; --hl:#D9A21B; --fd:"Cormorant Garamond"; --fb:"Source Sans 3"; }
+  .skin.oriole { --g:#FBF7F1; --k:#141414; --a:#F28C1A; --s:#3A3A3A; --hl:#FFD9A8; --fd:"Archivo"; --fb:"Karla"; }
+  .skin.goldfinch { --g:#FCFBF4; --k:#1A1A1A; --a:#C9A000; --s:#6B6F3A; --hl:#FBEC8C; --fd:"Syne"; --fb:"Mulish"; }
+  .skin { background: var(--g); color: var(--k); font-family: var(--fb), sans-serif; }
+  .skin .h { font-family: var(--fd), serif; font-weight: 800; color: var(--k); }
+  .skin.heron .h { font-weight: 700; }
+  .skin .p b { font-family: var(--fd), serif; font-weight: 700; }
+  .skin .btnx { background: var(--a); }
+  .skin .who span { color: var(--s); }
+  .skin .chips i:nth-child(1) { background: var(--g); } .skin .chips i:nth-child(2) { background: var(--k); }
+  .skin .chips i:nth-child(3) { background: var(--a); } .skin .chips i:nth-child(4) { background: var(--s); } .skin .chips i:nth-child(5) { background: var(--hl); }
   @media (prefers-reduced-motion: no-preference) { .bar i { transition: width .6s ease; } }
 </style>
 
 <div class="wrap">
   <header class="top">
-    <div class="eyebrow">Mockups · planning session 2026-09-06 · not code</div>
-    <h1>Puffin Baby: the four v1 screens</h1>
-    <p>Example state throughout: last menstrual period March 29, 2026, viewed on September 6, 2026. That is 23 weeks 0 days, due January 3, 2027, and the comparison row is the Atlantic Puffin. Numbers in the labor panel are illustrative until the model is fitted.</p>
+    <div class="eyebrow">Mockups · revision 2 · 2026-09-06 · not code</div>
+    <h1>Puffin Baby: v1 screens</h1>
+    <p>Example state: last menstrual period March 29, 2026, viewed September 6, 2026. That is 23 weeks 0 days, due January 3, 2027, comparison row Atlantic Puffin. Labor-panel numbers are illustrative until the model is fitted. All screens are shown in the Puffin skin; the six skins are at the bottom.</p>
   </header>
 
   <div class="board">
@@ -131,28 +167,30 @@
         <div class="status"><span>9:41</span><span>●●●</span></div>
         <div class="body">
           <div class="appname"><span class="mark"></span>Puffin Baby</div>
-          <p class="small" style="margin:0">Every week, your baby measured against a bird, an egg, or a bird seed. From a poppy seed to an Osprey.</p>
-          <label class="f">How should we count?
+          <p class="small" style="margin:0">Your baby's size, week by week, as a seed, an egg, then a bird.</p>
+          <label class="f">Count from
             <div class="ctl"><span>Last menstrual period</span><span class="mono">▾</span></div>
           </label>
           <div class="small" style="margin-top:-6px; padding-left:4px">
-            <div>◦ Last menstrual period <span class="mono">(due = date + 280 d)</span></div>
-            <div>◦ Conception date <span class="mono">(due = date + 266 d)</span></div>
-            <div style="opacity:.7">◦ Due date from ultrasound <span class="draft">proposed</span></div>
+            <div>◦ Last menstrual period <span class="mono">+280 d</span></div>
+            <div>◦ Conception date <span class="mono">+266 d</span></div>
+            <div>◦ Enter my due date</div>
           </div>
           <label class="f">Date of last period
             <div class="ctl"><span>March 29, 2026</span><span class="mono">📅</span></div>
           </label>
-          <div class="small">Due date: <b class="mono">Jan 3, 2027</b> · today you are <b class="mono">23 w 0 d</b></div>
+          <div class="preview">
+            <div><div class="lbl">Due date</div><div class="val">January 3, 2027</div></div>
+            <div><div class="lbl">Today you are</div><div class="val">23 weeks, 0 days</div></div>
+          </div>
           <div class="btn">Start counting</div>
-          <p class="small" style="margin:0">Stays on this phone. No account, no tracking. You can change the method later.</p>
           <div class="tabs"><span class="on">Setup</span><span>Today</span><span>Timeline</span><span>About</span></div>
         </div>
       </div></div>
       <ul class="notes">
-        <li>Live preview under the date input so the user sees the effect of the dropdown before committing.</li>
-        <li>Validation: future dates, dates over 300 days ago, and empty input block the button with a plain message.</li>
-        <li>The third method is a proposal (ADR-002); shown dashed so the author can veto it.</li>
+        <li>Due date and progress update live as the dropdown or date changes.</li>
+        <li>With "Enter my due date" selected, the date label reads "Due date" and the preview shows the derived period date instead.</li>
+        <li>Validation: future dates (except in due-date mode), dates over 300 days ago, and empty input block the button.</li>
       </ul>
     </div>
 
@@ -162,8 +200,8 @@
       <div class="phone"><div class="screen">
         <div class="status"><span>9:41</span><span>●●●</span></div>
         <div class="body">
-          <div class="meta"><span>Second trimester</span><span class="mono">119 days to go</span></div>
-          <div class="big">23 weeks, 0 days <small>· due Jan 3</small></div>
+          <div class="meta"><span>Second trimester</span><span class="mono">due Jan 3</span></div>
+          <div class="big">23 weeks, 0 days <small>· 119 days to go</small></div>
           <div class="bar"><i></i></div>
           <div class="card">
             <div class="embed">
@@ -177,7 +215,7 @@
               </svg>
             </div>
             <div class="cardbody">
-              <h3>This week: an Atlantic Puffin <span>Fratercula arctica · week 23</span></h3>
+              <h3><span class="lead">Your baby is roughly the size of an</span>Atlantic Puffin<span class="sci">Fratercula arctica · week 23</span></h3>
               <div class="dims">
                 <div class="dim"><b>11.4 in</b><span>length, head to heel</span></div>
                 <div class="dim"><b>1 lb 1.6 oz</b><span>weight (17.6 oz)</span></div>
@@ -187,18 +225,18 @@
                 <li>A pair raises one chick a summer in a burrow dug into a sea-cliff slope. <span class="draft">draft</span></li>
               </ul>
               <div class="small"><a href="#">More at All About Birds →</a></div>
-              <div class="credit">Photo: photographer name / Macaulay Library ML000000. Embedded for non-commercial use.</div>
+              <div class="credit">Photo: photographer name / Macaulay Library ML000000.</div>
             </div>
           </div>
-          <div class="btn quiet">Copy link for your partner</div>
+          <div class="btn quiet">Copy a shareable link</div>
           <div class="tabs"><span>Setup</span><span class="on">Today</span><span>Timeline</span><span>About</span></div>
         </div>
       </div></div>
       <ul class="notes">
-        <li>Unit chip toggles in/oz vs cm/g; weight shows both oz and lb-oz above 16 oz.</li>
-        <li>"Head to heel" label appears from week 21; "crown to rump" before. Weeks 20 and 21 add a one-line note about the jump.</li>
-        <li>Offline or embed failure: the silhouette stays, the tag reads "Photo needs a connection", the rest of the card is unchanged.</li>
-        <li>Facts marked <em>draft</em> until the author reviews them (ADR-004).</li>
+        <li>The lead line adapts to the row: "the size of a" / "the size of an" / "the size of a" + "egg" for weeks 7–13 ("an American Robin egg").</li>
+        <li>Unit chip in About toggles in/oz vs cm/g; weight shows lb-oz above 16 oz.</li>
+        <li>"Head to heel" from week 21; "crown to rump" before. Weeks 20 and 21 carry a one-line note about the jump.</li>
+        <li>Facts show the <em>draft</em> chip only in review mode (ADR-004).</li>
       </ul>
     </div>
 
@@ -226,8 +264,8 @@
       </div></div>
       <ul class="notes">
         <li>Opens scrolled to the current week. Tapping a row opens <span class="mono">#/week/N</span>, the same card as Today for that week.</li>
-        <li>No thumbnails in the list: 41 Macaulay embeds would be far too heavy. A small silhouette per kind (seed / egg / bird) is enough.</li>
-        <li>Week 3 row shows "comparison to be chosen" until the data gap is filled.</li>
+        <li>No photo thumbnails in the list; a small silhouette per kind (seed / egg / bird).</li>
+        <li>Week 3 row reads "comparison to be chosen" until the data gap is filled.</li>
       </ul>
     </div>
 
@@ -266,16 +304,137 @@
           </svg>
           <div class="legend"><span><i style="background:var(--teal)"></i>daily chance</span><span><i style="background:var(--orange)"></i>today</span><span><i style="background:var(--brown)"></i>due date</span></div>
           <div class="caveat">Population averages for singleton pregnancies with spontaneous onset. Not a prediction for you. Sources: Smith 2001, Jukic 2013, CDC natality. <a href="#">Hide this panel</a></div>
-          <div class="tabs"><span>Setup</span><span>Today</span><span>Timeline</span><span class="on">About</span></div>
+          <div class="tabs"><span>Setup</span><span class="on">Today</span><span>Timeline</span><span>About</span></div>
         </div>
       </div></div>
       <ul class="notes">
-        <li>Appears as a card at the bottom of Today from 34 w 0 d, with this screen as its detail view.</li>
-        <li>Headline number is the conditional probability (given still pregnant), which is what Datayze shows and what people actually want.</li>
-        <li>Miscarriage "chance of continuing" panel is v1.1 and opt-in (ADR-005); it does not appear in these mockups on purpose.</li>
+        <li>Reached from a card at the bottom of Today from 34 w 0 d, so the Today tab stays selected.</li>
+        <li>Headline is the conditional probability (given still pregnant).</li>
+        <li>Miscarriage "chance of continuing" panel is v1.1, opt-in (ADR-005), and is not shown here.</li>
+      </ul>
+    </div>
+
+    <!-- 5. OFFLINE -->
+    <div class="stage">
+      <h2>5. Offline card <span class="route">#/ · no connection</span></h2>
+      <div class="phone"><div class="screen">
+        <div class="status"><span>9:41</span><span>✕ offline</span></div>
+        <div class="body">
+          <div class="meta"><span>Second trimester</span><span class="mono">due Jan 3</span></div>
+          <div class="big">23 weeks, 0 days <small>· 119 days to go</small></div>
+          <div class="bar"><i></i></div>
+          <div class="card">
+            <div class="embed">
+              <span class="tag">Photo needs a connection</span>
+              <svg class="goose" viewBox="0 0 160 120" role="img" aria-label="Line drawing of a goose wearing a hat with a no-wifi symbol">
+                <!-- body -->
+                <path d="M34 78 C30 96 48 104 68 104 L112 104 C134 104 142 92 138 78 C134 66 118 64 100 66 L60 68 C44 69 36 72 34 78 Z"/>
+                <!-- tail -->
+                <path d="M36 76 L18 64 L30 84"/>
+                <!-- wing -->
+                <path d="M66 76 C84 70 106 74 122 88"/>
+                <!-- neck -->
+                <path d="M62 68 C56 54 58 40 66 32"/>
+                <path d="M78 66 C72 54 72 42 80 34"/>
+                <!-- head -->
+                <circle cx="76" cy="30" r="12" class="paper"/>
+                <circle cx="76" cy="30" r="12"/>
+                <!-- beak -->
+                <path d="M87 28 L104 32 L87 36 Z"/>
+                <!-- eye and brow -->
+                <circle cx="79" cy="27" r="2" class="fill"/>
+                <path d="M72 21 C75 18 79 18 82 21"/>
+                <!-- hat brim and crown -->
+                <path d="M58 20 L96 20"/>
+                <path d="M64 20 L66 4 L88 4 L90 20"/>
+                <!-- no-wifi symbol on crown -->
+                <path d="M71 12 A6 6 0 0 1 83 12"/>
+                <path d="M74 15 A3 3 0 0 1 80 15"/>
+                <circle cx="77" cy="17.5" r="1.2" class="fill"/>
+                <path d="M70 18 L84 6"/>
+                <!-- feet -->
+                <path d="M84 104 L82 114 M82 114 L74 116 M82 114 L90 116"/>
+                <path d="M106 104 L104 114 M104 114 L96 116 M104 114 L112 116"/>
+              </svg>
+            </div>
+            <div class="cardbody">
+              <h3><span class="lead">Your baby is roughly the size of an</span>Atlantic Puffin<span class="sci">Fratercula arctica · week 23</span></h3>
+              <div class="dims">
+                <div class="dim"><b>11.4 in</b><span>length, head to heel</span></div>
+                <div class="dim"><b>1 lb 1.6 oz</b><span>weight (17.6 oz)</span></div>
+              </div>
+              <ul class="facts">
+                <li>Puffins carry a dozen small fish at once, held crosswise in the bill.</li>
+                <li>A pair raises one chick a summer in a burrow dug into a sea-cliff slope.</li>
+              </ul>
+              <div class="small"><a href="#">More at All About Birds →</a></div>
+            </div>
+          </div>
+          <div class="tabs"><span>Setup</span><span class="on">Today</span><span>Timeline</span><span>About</span></div>
+        </div>
+      </div></div>
+      <ul class="notes">
+        <li>Same goose for every week; it replaces the photo area only. Facts and sizes are bundled, so they still render.</li>
+        <li>Drawn in the skin's ink color so it works in every skin and in dark mode.</li>
+        <li>Also used when the embed fails to load within 6 seconds while online.</li>
       </ul>
     </div>
   </div>
+
+  <section class="flow">
+    <h2>Skins</h2>
+    <p>Six skins, each a palette and a display/body type pair named for a bird. The user picks one in About. Each skin ships light and dark variants; light is shown. IBM Plex Mono is shared for numbers. Chips: ground, ink, accent, secondary, highlight.</p>
+    <div class="skins">
+      <div class="skin puffin">
+        <div class="who"><b>Puffin</b><span>Atlantic Puffin</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">Bricolage Grotesque / Atkinson Hyperlegible</div>
+      </div>
+      <div class="skin kingfisher">
+        <div class="who"><b>Kingfisher</b><span>Belted Kingfisher</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">DM Serif Display / Public Sans</div>
+      </div>
+      <div class="skin bluebird">
+        <div class="who"><b>Bluebird</b><span>Eastern Bluebird</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">Outfit / Nunito Sans</div>
+      </div>
+      <div class="skin heron">
+        <div class="who"><b>Green Heron</b><span>Butorides virescens</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">Cormorant Garamond / Source Sans 3</div>
+      </div>
+      <div class="skin oriole">
+        <div class="who"><b>Oriole</b><span>Baltimore Oriole</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">Archivo / Karla</div>
+      </div>
+      <div class="skin goldfinch">
+        <div class="who"><b>Goldfinch</b><span>American Goldfinch</span></div>
+        <div class="chips"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="h">23 weeks</div>
+        <div class="p">Your baby is roughly the size of an <b>Atlantic Puffin</b></div>
+        <div class="btnx">Start counting</div>
+        <div class="fonts">Syne / Mulish</div>
+      </div>
+    </div>
+  </section>
 
   <section class="flow">
     <h2>Navigation and states</h2>
@@ -287,8 +446,8 @@
       <tr><td>Under 2 weeks</td><td>Today shows "Too early for a comparison. Counting starts from your period date, so the first two weeks are before conception."</td></tr>
       <tr><td>Week 3 (data gap)</td><td>Card says "Comparison coming" and shows the size numbers.</td></tr>
       <tr><td>Past 42 weeks</td><td>Osprey card stays; header reads "42+ weeks".</td></tr>
-      <tr><td>Offline</td><td>Everything works except the photo, which becomes the silhouette with "Photo needs a connection".</td></tr>
-      <tr><td>About</td><td>Sources, credits, non-commercial note, unit preference, labor panel toggle, "Forget my data".</td></tr>
+      <tr><td>Offline or embed failed</td><td>Photo area shows the goose (screen 5) with "Photo needs a connection". Everything else unchanged.</td></tr>
+      <tr><td>About</td><td>Skin picker, unit preference, labor panel toggle, sources and credits, non-commercial note, "Forget my data".</td></tr>
     </table>
     </div>
   </section>

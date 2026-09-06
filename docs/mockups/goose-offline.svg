@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="Line drawing of a goose wearing a hat with a no-wifi symbol"><style>path,circle{stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.fill{fill:currentColor;stroke:none}.paper{fill:#fff}</style>
+                <!-- body -->
+                <path d="M34 78 C30 96 48 104 68 104 L112 104 C134 104 142 92 138 78 C134 66 118 64 100 66 L60 68 C44 69 36 72 34 78 Z"/>
+                <!-- tail -->
+                <path d="M36 76 L18 64 L30 84"/>
+                <!-- wing -->
+                <path d="M66 76 C84 70 106 74 122 88"/>
+                <!-- neck -->
+                <path d="M62 68 C56 54 58 40 66 32"/>
+                <path d="M78 66 C72 54 72 42 80 34"/>
+                <!-- head -->
+                <circle cx="76" cy="30" r="12" class="paper"/>
+                <circle cx="76" cy="30" r="12"/>
+                <!-- beak -->
+                <path d="M87 28 L104 32 L87 36 Z"/>
+                <!-- eye and brow -->
+                <circle cx="79" cy="27" r="2" class="fill"/>
+                <path d="M72 21 C75 18 79 18 82 21"/>
+                <!-- hat brim and crown -->
+                <path d="M58 20 L96 20"/>
+                <path d="M64 20 L66 4 L88 4 L90 20"/>
+                <!-- no-wifi symbol on crown -->
+                <path d="M71 12 A6 6 0 0 1 83 12"/>
+                <path d="M74 15 A3 3 0 0 1 80 15"/>
+                <circle cx="77" cy="17.5" r="1.2" class="fill"/>
+                <path d="M70 18 L84 6"/>
+                <!-- feet -->
+                <path d="M84 104 L82 114 M82 114 L74 116 M82 114 L90 116"/>
+                <path d="M106 104 L104 114 M104 114 L96 116 M104 114 L112 116"/>
+              </svg>

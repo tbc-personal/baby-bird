@@ -9,6 +9,7 @@ The user picks one dating method from a dropdown and enters one date. Both metho
 |---|---|---|---|
 | Last menstrual period (LMP) | LMP date | LMP | LMP + 280 days |
 | Conception date | conception date | conception − 14 days | conception + 266 days |
+| Enter my due date | due date | due − 280 days | as entered |
 
 Derived values, computed on every render from `lmpEquivalent` and today's local date:
 
@@ -25,8 +26,8 @@ Derived values, computed on every render from `lmpEquivalent` and today's local 
 - `gestationalDays < 0`: invalid input; block with a validation message.
 - Week 20 → 21: length jumps from 6.46 in to 10.51 in because the measurement convention changes from crown-rump to crown-heel. Show a one-line note on weeks 20 and 21.
 
-## Proposed addition (author to confirm)
-A third method, "Due date from ultrasound", where the user enters the clinician's due date and `lmpEquivalent = dueDate − 280`. It is the most common real-world input and costs one more dropdown option. Not in the original request; included in the mockups as a dashed option.
+## Third method (accepted)
+"Enter my due date": the user enters the due date they were given and `lmpEquivalent = dueDate − 280`. In this mode the date field is labeled "Due date" and future dates are valid.
 
 ## Consequences
 - Changing the method after entry converts the stored date; the UI re-derives everything, nothing else is stored.
