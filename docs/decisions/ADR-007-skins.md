@@ -23,6 +23,7 @@ Light values are shown in `docs/mockups/screens.html`. Dark values are the build
 - Selection persists in settings (ADR-006). Dark/light follows `prefers-color-scheme` within the chosen skin.
 - The offline goose and the silhouettes use `currentColor`, so they follow the skin.
 - Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/__screenshots__`.
+- Precache/runtime split: the service worker precaches only the default skin's faces (Bricolage Grotesque, Atkinson Hyperlegible 400 and 700) plus the shared IBM Plex Mono, and a `CacheFirst` runtime rule with a one-year expiration keeps any other skin's faces from the first time it is selected, so a chosen skin still renders offline.
 
 ## Consequences
 - Adds fourteen font families to the repo (roughly 30–40 KB each subset). Acceptable for a PWA; the app shell caches them.
