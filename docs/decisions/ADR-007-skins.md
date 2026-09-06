@@ -22,7 +22,7 @@ Light values are shown in `docs/mockups/screens.html`. Dark values are the build
 - Fonts are self-hosted in `public/fonts/` (latin subset, woff2, weights actually used). Only the active skin's fonts are loaded; the others are preloaded lazily after first paint. Each skin declares fallback stacks.
 - Selection persists in settings (ADR-006). Dark/light follows `prefers-color-scheme` within the chosen skin.
 - The offline goose and the silhouettes use `currentColor`, so they follow the skin.
-- Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/__screenshots__`.
+- Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/__screenshots__`. It is a blocking CI step, and the baselines are generated on the GitHub runner by `.github/workflows/update-screenshots.yml` rather than locally, because text rasterizes differently between the two.
 - Precache/runtime split: the service worker precaches only the default skin's faces (Bricolage Grotesque, Atkinson Hyperlegible 400 and 700) plus the shared IBM Plex Mono, and a `CacheFirst` runtime rule with a one-year expiration keeps any other skin's faces from the first time it is selected, so a chosen skin still renders offline.
 
 ## Consequences

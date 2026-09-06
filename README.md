@@ -24,6 +24,12 @@ npm run typecheck
 npm run validate-data
 ```
 
+The per-skin screenshot baselines in `tests/e2e/__screenshots__` are pixel comparisons of text, so
+they have to be generated on the machine that checks them, which is the GitHub runner. Do not
+regenerate them locally: run the **Update the skin screenshots** workflow, either from the Actions
+tab or by pushing a commit whose message contains `[update-screenshots]`, and review the images it
+commits.
+
 `npm run fonts` re-downloads the self-hosted woff2 subsets, `npm run icons` regenerates the PWA
 icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor parameters, and
 `npm run check-links` verifies every outbound URL in the data (needs network).
