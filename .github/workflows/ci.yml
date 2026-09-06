@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+# Cancel a superseded run rather than paying for both.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, types, tests, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint (ESLint and the ADR-007 no-literal-colours rule)
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Validate data/comparisons.json
+        run: npm run validate-data
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Install the Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Playwright smoke and PWA tests
+        # The blocking gate: setup to today to timeline to the week card, plus
+        # installability, real offline operation, and the ADR-006 guarantee that
+        # a shared ?m=&d= link never reaches the cache.
+        run: npm run test:e2e:smoke
+
+      - name: Per-skin visual regression (ADR-007)
+        # Not blocking. The baselines in tests/e2e/__screenshots__ were generated
+        # in the build sandbox, and text rasterisation can differ between that
+        # and this runner even at the same Playwright and Chromium versions, so
+        # a diff here means "look at the artifact", not "the app is broken".
+        # Once a run has confirmed the baselines on this runner, drop
+        # continue-on-error and this becomes a real gate.
+        continue-on-error: true
+        run: npm run test:e2e:visual
+
+      - name: Upload the Playwright report when something fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

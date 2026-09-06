@@ -1,16 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "ES2023",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
@@ -22,9 +16,5 @@
     "noUnusedParameters": true,
     "skipLibCheck": true
   },
-  "include": [
-    "scripts",
-    "playwright.config.ts",
-    "tests/e2e"
-  ]
+  "include": ["scripts", "playwright.config.ts", "tests/e2e"]
 }
