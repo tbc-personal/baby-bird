@@ -27,7 +27,7 @@ test.beforeEach(async ({ page }) => {
   await pinClock(page);
 });
 
-test('setup and today', async ({ page }) => {
+test('setup, today, timeline and the week card', async ({ page }) => {
   await page.goto('/#/setup');
 
   await expect(page.getByRole('heading', { name: 'Nestling' })).toBeVisible();
@@ -54,6 +54,25 @@ test('setup and today', async ({ page }) => {
   // The date survives a reload (ADR-006).
   await page.reload();
   await expect(page.getByRole('heading', { level: 1 })).toContainText('23 weeks, 0 days');
+
+  // Timeline highlights the current week and opens scrolled to it.
+  await page.getByRole('link', { name: 'Timeline' }).click();
+  const current = page.locator('[data-current-week="true"]');
+  await expect(current).toContainText('Atlantic Puffin');
+  await expect(current).toContainText('this week');
+  await expect(current).toBeInViewport();
+
+  // The convention divider sits between weeks 20 and 21.
+  await expect(page.getByText('crown to rump · ▼ head to heel')).toBeAttached();
+
+  // Tapping the row opens that week's card.
+  await current.click();
+  await expect(page).toHaveURL(/#\/week\/23$/);
+  await expect(page.getByRole('heading', { level: 2 })).toContainText('Atlantic Puffin');
+
+  // And the deep link works on its own.
+  await page.goto('/#/week/42');
+  await expect(page.getByRole('heading', { level: 2 })).toContainText('Osprey');
 });
 
 test('the info panel opens and closes', async ({ page }) => {
