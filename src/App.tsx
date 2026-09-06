@@ -10,6 +10,7 @@ import { TimelineScreen } from './screens/Timeline';
 import { WeekScreen } from './screens/Week';
 import { LaborScreen } from './screens/Labor';
 import { AboutScreen } from './screens/About';
+import { applySkin } from './skins';
 import './styles/app.css';
 
 /**
@@ -44,8 +45,12 @@ function startOfLocalDay(date: Date): Date {
 export function App() {
   const route = useRoute();
   const today = useToday();
-  const { saved } = useAppState();
+  const { saved, settings } = useAppState();
   const hasDate = saved !== null;
+
+  useEffect(() => {
+    applySkin(settings.skin);
+  }, [settings.skin]);
 
   // A shared ?m=&d= link (ADR-006). Held in state so Setup can offer to replace
   // an existing saved date rather than silently overwriting it.

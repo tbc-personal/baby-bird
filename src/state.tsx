@@ -1,7 +1,11 @@
 /**
  * The whole application state: one date, one method, three settings (ADR-006).
- * Everything else on every screen is derived. The store is created once and
- * kept in a context so screens do not each re-read localStorage.
+ * Everything else on every screen is derived.
+ *
+ * `saved` and `settings` are held in one state object rather than two. They
+ * have to move together — writing settings has to update the persisted record —
+ * and splitting them meant one updater calling another, which React does not
+ * run reliably.
  */
 import { useCallback, useMemo, useState, type ReactNode } from 'react';
 import {
@@ -14,41 +18,42 @@ import {
 import type { DatingMethod, IsoDate } from './lib/gestation';
 import { AppStateContext, type AppState } from './stateContext';
 
+interface Model {
+  readonly saved: SavedState | null;
+  /** Kept separately so a skin choice survives "Forget my data" until reload. */
+  readonly settings: Settings;
+}
+
 export function AppStateProvider({ children }: { children: ReactNode }) {
   const store = useMemo(() => createLocalStore(), []);
-  const [saved, setSaved] = useState<SavedState | null>(() => store.read());
-  // Settings persist even with no date saved, so the skin survives a "forget".
-  const [settings, setSettings] = useState<Settings>(
-    () => store.read()?.settings ?? DEFAULT_SETTINGS,
-  );
+  const [model, setModel] = useState<Model>(() => {
+    const saved = store.read();
+    return { saved, settings: saved?.settings ?? DEFAULT_SETTINGS };
+  });
 
   const save = useCallback(
     (method: DatingMethod, inputDate: IsoDate) => {
-      setSaved((previous) => {
+      setModel((previous) => {
         const next: SavedState = {
           version: STATE_VERSION,
           method,
           inputDate,
-          settings: previous?.settings ?? settings,
+          settings: previous.settings,
         };
         store.write(next);
-        return next;
+        return { saved: next, settings: previous.settings };
       });
     },
-    [store, settings],
+    [store],
   );
 
   const updateSettings = useCallback(
     (patch: Partial<Settings>) => {
-      setSettings((previous) => {
-        const next = { ...previous, ...patch };
-        setSaved((current) => {
-          if (!current) return current;
-          const updated = { ...current, settings: next };
-          store.write(updated);
-          return updated;
-        });
-        return next;
+      setModel((previous) => {
+        const settings = { ...previous.settings, ...patch };
+        const saved = previous.saved ? { ...previous.saved, settings } : null;
+        if (saved) store.write(saved);
+        return { saved, settings };
       });
     },
     [store],
@@ -56,13 +61,18 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
   const forget = useCallback(() => {
     store.clear();
-    setSaved(null);
-    setSettings(DEFAULT_SETTINGS);
+    setModel({ saved: null, settings: DEFAULT_SETTINGS });
   }, [store]);
 
   const value = useMemo<AppState>(
-    () => ({ saved, settings, save, updateSettings, forget }),
-    [saved, settings, save, updateSettings, forget],
+    () => ({
+      saved: model.saved,
+      settings: model.settings,
+      save,
+      updateSettings,
+      forget,
+    }),
+    [model, save, updateSettings, forget],
   );
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;

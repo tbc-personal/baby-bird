@@ -5,3 +5,5 @@ dev-dist/
 coverage/
 playwright-report/
 test-results/
+tests/e2e/__screenshots__/*/*-actual.png
+tests/e2e/__screenshots__/*/*-diff.png
