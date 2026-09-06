@@ -18,7 +18,7 @@ const SKINS = [
 ] as const;
 
 async function openToday(page: Page, skin: string) {
-  // The string form is used deliberately: Playwright serialises a function
+  // The string form is used deliberately: Playwright serializes a function
   // argument, and the class syntax below survives that more reliably as text.
   await page.addInitScript(`{
     const fixed = ${FIXED_NOW};

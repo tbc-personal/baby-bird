@@ -5,7 +5,7 @@ import './SkinPicker.css';
 /**
  * The skin picker (ADR-007). A radio group, so arrow keys move between skins
  * and the choice is announced as one control rather than seven buttons. Each
- * swatch shows the skin's five named colours in the ADR's order.
+ * swatch shows the skin's five named colors in the ADR's order.
  */
 export function SkinPicker({
   value,
@@ -42,8 +42,8 @@ export function SkinPicker({
                 skin.light.accent,
                 skin.light.secondary,
                 skin.light.highlight,
-              ].map((colour, index) => (
-                <i key={index} style={{ background: colour }} />
+              ].map((color, index) => (
+                <i key={index} style={{ background: color }} />
               ))}
             </span>
           </label>

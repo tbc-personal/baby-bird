@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Lint (ESLint and the ADR-007 no-literal-colours rule)
+      - name: Lint (ESLint and the ADR-007 no-literal-colors rule)
         run: npm run lint
 
       - name: Typecheck

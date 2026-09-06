@@ -19,7 +19,7 @@ Datayze has no API and no reuse license, but documents its methodology in prose.
 The build prompt asked for three calibration constraints at once: median 283
 days, `P(D < 259)` equal to the cited CDC preterm share, and `P(D > 294)`
 around 6%. **No skew-normal satisfies all three.** This is a property of the
-family, not of the optimiser. `scripts/fit-labor-model.ts` prints the proof and
+family, not of the optimizer. `scripts/fit-labor-model.ts` prints the proof and
 `tests/unit/laborProbability.test.ts` asserts it:
 
 - Hold the median at 283 and the post-term share at 6% exactly, then sweep α.

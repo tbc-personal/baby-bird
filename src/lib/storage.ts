@@ -50,7 +50,7 @@ function readSettings(value: unknown): Settings {
 }
 
 /**
- * Parse whatever is in storage. Anything unrecognised yields null, which the app
+ * Parse whatever is in storage. Anything unrecognized yields null, which the app
  * treats as "no saved date" and shows Setup.
  */
 export function parseSavedState(json: string | null): SavedState | null {

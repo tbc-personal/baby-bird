@@ -3,7 +3,7 @@ import type { Skin } from './types';
 /**
  * Oriole — Baltimore Oriole (ADR-007).
  *
- * The five light colours named in the ADR table (ground, ink, accent,
+ * The five light colors named in the ADR table (ground, ink, accent,
  * secondary, highlight) are used exactly as given. Everything else, and the
  * whole dark set, is derived here.
  *

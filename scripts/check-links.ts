@@ -8,7 +8,7 @@
  *   - every Commons `sourceUrl` and `licenseUrl` returns 200
  *
  * Not part of `ci.yml`: it makes several dozen requests to Cornell and would be
- * a poor neighbour on every push, and a network failure is not a code failure.
+ * a poor neighbor on every push, and a network failure is not a code failure.
  * Run it by hand, or on a schedule, with `npm run check-links`.
  *
  * Exit code 1 if any URL does not resolve. `--verbose` lists the passes too.

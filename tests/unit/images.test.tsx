@@ -120,7 +120,7 @@ describe('MacaulayEmbed', () => {
    * six-second timeout above is the guarantee that actually matters, since a
    * cross-origin frame that is blocked or slow usually fires neither load nor
    * error. ADR-003's Playwright check (one real embed reaching `load`) is the
-   * place to cover the browser behaviour.
+   * place to cover the browser behavior.
    */
 
   it('goes back to the frame when the connection returns', async () => {

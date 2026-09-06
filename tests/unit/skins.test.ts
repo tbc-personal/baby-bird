@@ -121,7 +121,7 @@ const ALLOWED_SECONDARY: Record<string, { adr: string; used: string; why: string
   },
 };
 
-describe('the ADR-007 table colours are used as given', () => {
+describe('the ADR-007 table colors are used as given', () => {
   const TABLE: Record<
     string,
     Pick<Tokens, 'ground' | 'ink' | 'accent' | 'secondary' | 'highlight'>
@@ -186,7 +186,7 @@ describe('the ADR-007 table colours are used as given', () => {
     expect(skin.light.accent.toUpperCase()).toBe(row?.accent);
     expect(skin.light.highlight.toUpperCase()).toBe(row?.highlight);
     /*
-     * `secondary` is the one colour that can move, because it is link text and
+     * `secondary` is the one color that can move, because it is link text and
      * the value on the tile, so it has to clear 4.5:1 against paper and against
      * --secondary-soft. Three skins needed a nudge. Each is named here with the
      * measured reason, so a silent drift in a fourth skin fails this test.

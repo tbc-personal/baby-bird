@@ -1,7 +1,7 @@
 /**
  * generate-icons.ts
  *
- * Rasterises the Nestling puffin mark (public/favicon.svg) into every PNG the
+ * Rasterizes the Nestling puffin mark (public/favicon.svg) into every PNG the
  * app ships in public/icons/. Idempotent and CI-safe: it always re-renders
  * from the same source SVG, so re-running produces byte-identical output,
  * and it exits non-zero on any sharp failure or empty file so a broken
@@ -20,7 +20,7 @@ const ROOT = join(__dirname, '..');
 const FAVICON_SVG_PATH = join(ROOT, 'public', 'favicon.svg');
 const ICONS_DIR = join(ROOT, 'public', 'icons');
 
-/** The Puffin skin's ground colour — used as the opaque backdrop for every PNG. */
+/** The Puffin skin's ground color — used as the opaque backdrop for every PNG. */
 const GROUND = '#F6F4EF';
 
 interface IconSpec {
@@ -36,8 +36,8 @@ interface IconSpec {
 // inner circle whose diameter is 80% of the full canvas. Anything outside
 // that circle may be cropped away on some platforms. To guarantee the bird
 // is never clipped, we shrink the whole mark to 60% (comfortably inside the
-// 80% safe circle, leaving margin for rounding/anti-aliasing) and centre it,
-// letting the ground colour fill the rest of the canvas out to the edges.
+// 80% safe circle, leaving margin for rounding/anti-aliasing) and center it,
+// letting the ground color fill the rest of the canvas out to the edges.
 const MASKABLE_SAFE_SCALE = 0.6;
 
 const ICON_SPECS: readonly IconSpec[] = [
@@ -55,7 +55,7 @@ const VIEWBOX = 512;
 /**
  * Reads the source favicon.svg and, when markScale < 1, rewrites it so the
  * bird artwork (everything after the full-bleed ground <rect>) is scaled
- * down and re-centred, while the ground rect still fills the whole canvas.
+ * down and re-centered, while the ground rect still fills the whole canvas.
  * This keeps a single source of truth for the artwork instead of
  * duplicating path data for the maskable variant.
  */
@@ -83,8 +83,8 @@ function buildSvg(markScale: number): string {
   const artwork = rest.slice(0, svgCloseIndex);
   const tail = rest.slice(svgCloseIndex);
 
-  // Scale about the canvas centre: translate by half the shrunk-away
-  // distance so the mark stays centred rather than sliding toward origin.
+  // Scale about the canvas center: translate by half the shrunk-away
+  // distance so the mark stays centered rather than sliding toward origin.
   const translate = (VIEWBOX * (1 - markScale)) / 2;
 
   return `${head}<g transform="translate(${translate} ${translate}) scale(${markScale})">${artwork}</g>${tail}`;
@@ -96,7 +96,7 @@ async function renderIcon(spec: IconSpec): Promise<{ name: string; bytes: number
 
   await sharp(Buffer.from(svg), { density: 384 })
     .resize(spec.size, spec.size)
-    // Flatten onto the ground colour so every PNG is fully opaque — no
+    // Flatten onto the ground color so every PNG is fully opaque — no
     // alpha channel should leak through regardless of viewer/OS.
     .flatten({ background: GROUND })
     .png({ quality: 90, compressionLevel: 9 })

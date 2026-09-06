@@ -19,7 +19,7 @@ npm run dev          # http://localhost:5173
 npm run build        # production build; VITE_BASE=/repo/ for a project Pages URL
 npm run test         # unit tests
 npm run test:e2e     # Playwright, against the preview build
-npm run lint         # ESLint plus the ADR-007 no-literal-colours rule
+npm run lint         # ESLint plus the ADR-007 no-literal-colors rule
 npm run typecheck
 npm run validate-data
 ```
