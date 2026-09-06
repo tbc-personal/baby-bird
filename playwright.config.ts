@@ -36,8 +36,15 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `npx vite preview --port ${PORT} --strictPort`,
-    port: PORT,
+    /*
+     * --host 127.0.0.1 is load-bearing. Vite preview otherwise binds the name
+     * "localhost", which on the GitHub runner resolves to ::1 first. Playwright's
+     * readiness probe would then succeed over IPv6 while every test, using the
+     * IPv4 baseURL below, got ECONNREFUSED. Binding and probing the same literal
+     * address removes the ambiguity.
+     */
+    command: `npx vite preview --port ${PORT} --strictPort --host 127.0.0.1`,
+    url: `http://127.0.0.1:${PORT}/`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

@@ -132,3 +132,61 @@ turns out to be folklore:
 
 For each row: `https://www.allaboutbirds.org/guide/<allAboutBirdsSlug>/overview` returns 200, and
 `https://ebird.org/species/<ebirdSpeciesCode>` shows the expected species. `scripts/check-links.ts` automates this.
+
+## D. Interface copy to review for voice
+
+Everything below was written by the build session, not by the author. It is
+listed here for the same reason the facts are: it is content, not code, and it
+should sound like the author. None of it is load-bearing — editing any string is
+safe.
+
+The facts themselves are section B above and are not repeated here.
+
+### Setup
+- "Your baby's size, week by week, as a seed, an egg, then a bird." (tagline)
+- Method labels: "Last menstrual period", "Conception date", "Enter my due date"
+- Date-field labels: "Date of last period", "Date of conception", "Due date"
+- Preview labels: "Due date", "Counting from", "Today you are"
+- Button: "Start counting"
+- Shared-link sheet: "Replace your saved date with the shared one?" / "Use the shared date" / "Keep mine"
+- Validation: "Enter a date." / "Enter a date as year, month, day." / "That date is in the future." / "That date is more than 300 days ago." / "That due date is more than 280 days away."
+
+### Today
+- Too early: "Too early for a comparison" / "Counting starts from your period date, so the first two weeks are before conception." (the second line is from the mockup's state table)
+- Invalid: "That date has not arrived yet" / "Counting starts from the date you entered. Change it in Setup."
+- Past term: "Past 42 weeks. The card stays on the last row."
+- No row: "No comparison for this week" / "The table runs from week 2 to week 42."
+- After copying: "Link copied."
+
+### Comparison card
+- Convention note (weeks 20 and 21): "Length is measured crown to rump through week 20 and head to heel from week 21, which is why the number jumps."
+- Week 3: "This comparison is a proposal, not yet signed off."
+- Link labels: "More at All About Birds →", "More on Wikipedia →"
+- Size captions: "length, crown to rump", "length, head to heel", "weight (17.6 oz)", "weight, under 0.04 oz"
+
+### Timeline and week
+- "All 41 weeks", "Seeds 2–6 · Eggs 7–13 · Birds 14–42"
+- Convention divider: "▲ crown to rump · ▼ head to heel"
+- "Back to the timeline", "← All weeks"
+
+### Images
+- Tags: "Photo coming", "Photo needs a connection", "Loading photo"
+- Goose alt text: "A goose wearing a hat with a crossed-out wifi symbol"
+- Credit lines: "Photo: <name> / Macaulay Library at the Cornell Lab of Ornithology ML<id>." and "Photo: <author>, <license>, via Wikimedia Commons."
+
+### Labor panel
+- "chance labor starts on its own in the next 7 days, given you're still pregnant today"
+- Tile captions: "by your due date", "most likely single day"
+- "See the daily curve →", "Hide this panel"
+- Chart description: "Daily chance of spontaneous labor from 34 to 43 weeks. The curve rises to a peak just after the due date and falls away after it. About N per cent of pregnancies have started labor by today."
+- The three caveat paragraphs, including the one that states the post-term miss.
+
+### About
+- Section headings: "Display", "Limitations", "Where the numbers come from", "Credits", "Non-commercial", "Your data"
+- The limitations paragraph and the v1.1 "coming later" note
+- The three "where the numbers come from" bullets
+- The three credits bullets
+- The non-commercial paragraph
+- The privacy paragraph: "Your date and these settings are stored on this device only. There are no accounts, no analytics, and nothing is sent anywhere. The only network requests the app makes are the photo embeds."
+- "Forget my data" / "Forget your saved date and settings?" / "Forget it" / "Cancel"
+- Toggle label: "Show the labor chances panel from 34 weeks"
