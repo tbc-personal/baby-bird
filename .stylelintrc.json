@@ -1,0 +1,34 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-declaration-strict-value"],
+  "rules": {
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "/color/",
+        "fill",
+        "stroke",
+        "background",
+        "background-color",
+        "border-color",
+        "outline-color",
+        "box-shadow"
+      ],
+      {
+        "ignoreValues": [
+          "transparent",
+          "inherit",
+          "currentColor",
+          "none",
+          "unset",
+          "initial"
+        ],
+        "disableFix": true,
+        "message": "ADR-007: use a skin token (var(--ink), var(--accent), …), not a literal color."
+      }
+    ],
+    "custom-property-pattern": null,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
+  },
+  "ignoreFiles": ["src/styles/tokens.css", "src/styles/fonts.css"]
+}
