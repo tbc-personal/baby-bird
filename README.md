@@ -36,7 +36,7 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 | No Commons seed photos for weeks 2-6 | `docs/CURATION.md` |
 | The Macaulay embed `src` is an unverified guess, isolated in one constant | `docs/decisions/ADR-003-images.md` |
 | All 123 facts are `reviewed: false` and were written without opening their sources | `docs/CURATION.md` |
-| The labor model misses one of its three calibration targets, because no skew-normal can meet all three | `docs/decisions/ADR-005-datayze-derived-features.md` |
+| The labor model's weekly figure dips between 34 and 37 weeks, where the preterm component runs out | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
 ## What it will do (v1)
 - Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.

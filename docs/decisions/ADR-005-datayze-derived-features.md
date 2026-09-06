@@ -73,3 +73,87 @@ value whose post-term share comes closest to 6% while still leaving at least
 0.5% of pregnancies past 43 weeks; a curve that called 43 weeks impossible would
 be a worse error than missing a published percentage.
 
+
+## Follow-up addendum (2026-09-06): the family changes to a two-component mixture
+
+**This addendum supersedes the build-session addendum above, which is left in
+place as history.** The skew-normal is gone. The reason it had to go was not the
+missed post-term figure but what the skew put on screen: a left-skewed density
+has its mode to the right of its median, so the panel's "most likely single day"
+read 41w4d, eight days after the due date. That is the first thing a reader who
+knows their due date would check, and it looked wrong.
+
+### The family
+
+```
+D ~ π · Preterm + (1 − π) · Term
+Term    = Normal(μ_t, σ_t)
+Preterm = Normal(μ_p, σ_p) truncated to [140, 259)
+```
+
+Preterm labor is a physiologically distinct process rather than the tail of the
+term one, which is the honest reason to model it as its own component. It is
+also what makes the fit possible: the preterm mass no longer has to be bought
+with skew, so the term component can stay symmetric and keep the mode beside the
+median.
+
+### The four targets, all met
+
+| Target | Value | Tolerance | Fitted | Source |
+|---|---|---|---|---|
+| Median of `D` | 283 d | ±1 d | 283.00 d | Smith 2001 |
+| `P(D < 259)` | 0.067 | ±0.5 pt | 0.0670 | CDC/NCHS plus the two adjustments above |
+| `P(D > 294)` | 0.06 | ±1.5 pt | 0.0600 | Smith 2001 survival curve |
+| Mode of `D` | within 2 d of the median | | +0.60 d | on-screen requirement, not a published figure |
+
+Fitted parameters: `π = 0.066852`, `μ_t = 283.6145`, `σ_t = 6.8341`, with
+`μ_p = 245`, `σ_p = 14`. `P(D > 43w) = 0.0051`, so the curve still does not call
+43 weeks impossible.
+
+Because the whole preterm component sits below day 259, the three published
+targets separate: the median and post-term targets give `μ_t` and `σ_t` in
+closed form once `π` is known, and the preterm target gives `π` once they are.
+`scripts/fit-labor-model.ts` iterates that pair to a fixed point and prints the
+residuals.
+
+### The two preterm-component assumptions
+
+`μ_p = 245` (35w0d) and `σ_p = 14` are **assumptions, not fits**. The only
+constraints on the preterm component are that it carries share `π` and that all
+of it lands before 37 weeks, which leaves its shape free, and no source in
+`docs/research/datayze-features.md` pins it. The chosen values put the bulk of
+preterm onset in the late-preterm weeks, which is where most of it is observed.
+Nothing past 37 weeks depends on the choice.
+
+### What this costs: the 34–37 week readings
+
+The panel's headline figure is **not monotonic between 34 and 37 weeks**. It
+falls on 16 of those 21 days, from about 1.6% at 34w0d to 0.5% at 37w0d, then
+jumps to 5.5% at 38w0d. The preterm component runs out at 37w0d before the term
+component has begun.
+
+This is a property of the four targets, not of `μ_p` and `σ_p`: 6.7% of onsets
+have to fit below day 259 while the term component contributes almost nothing
+there, so the hazard has to fall somewhere in the late preterm weeks. Sweeping
+`μ_p` over [215, 245] and `σ_p` over [10, 26] moves the fall but never removes
+it; the fit script prints this. The old skew-normal had no dip, so this is a
+regression in on-screen behavior traded for a correct mode, and it is
+**the model's main open question for review**. Two ways out, neither taken here
+because both go beyond what the follow-up prompt asked for:
+
+1. Widen `σ_t` and accept a post-term share above the 1.5-point tolerance, on
+   the argument that the observed 6% is depressed by induction. This fills the
+   trough and is the change to make if the dip matters more than the figure.
+2. Start the panel at 37 weeks rather than 34, so the dip is never shown.
+
+`tests/unit/laborProbability.test.ts` pins the dip's size rather than asserting
+it away, and asserts monotonicity from 37 weeks on.
+
+### Verification status
+
+Unchanged, and still the first thing to check on review. The follow-up session
+had no more network access than the build session did: cdc.gov,
+ncbi.nlm.nih.gov and doi.org are all refused by the egress proxy, so no figure
+above has been read at its source. In particular `0.093 × 0.72 ≈ 0.067` is still
+two round numbers from general literature. **Confirm all of them before
+release.**

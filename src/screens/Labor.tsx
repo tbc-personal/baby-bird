@@ -2,7 +2,6 @@ import {
   cdf,
   conditionalProbabilityInWindow,
   CALIBRATION,
-  FIT_RESIDUALS,
   mostLikelyDayFrom,
 } from '../lib/laborProbability';
 import {
@@ -76,21 +75,18 @@ export function LaborScreen({ today }: { today: Date }) {
           advice.
         </p>
         <p>
-          The curve is a skew-normal fitted to two published figures: a median of{' '}
-          {CALIBRATION.medianDay} days after your period date (
-          <a href={CALIBRATION.medianSource}>Smith 2001</a>) and a{' '}
+          The curve is two overlaid bell curves, one for preterm labor and one for term
+          labor, fitted to three published figures: a median of {CALIBRATION.medianDay}{' '}
+          days after your period date (
+          <a href={CALIBRATION.medianSource}>Smith 2001</a>), a{' '}
           {(CALIBRATION.pretermShare * 100).toFixed(1)}% chance of labor before 37 weeks,
           derived from the <a href={CALIBRATION.cdcSource}>CDC preterm birth rate</a> for{' '}
           {CALIBRATION.cdcYear} by removing multiples and deliveries that were induced or
-          scheduled. Spread is consistent with{' '}
-          <a href={CALIBRATION.jukicSource}>Jukic 2013</a>.
-        </p>
-        <p>
-          One known limitation: the model puts{' '}
-          {(FIT_RESIDUALS.postTermShare * 100).toFixed(0)}% of pregnancies past 42 weeks,
-          against a published figure closer to 6%. No skew-normal can match all three
-          figures at once, and this is the one that gives. Because the model contains no
-          induction at all, it will overstate how long pregnancies actually run.
+          scheduled, and a {(CALIBRATION.postTermTargetShare * 100).toFixed(0)}% chance of
+          going past 42 weeks (<a href={CALIBRATION.postTermSource}>Smith 2001</a> again).
+          Because the model contains no induction at all, it runs a little narrow in the
+          last fortnight; <a href={CALIBRATION.jukicSource}>Jukic 2013</a> measures a wider
+          spread than the 42-week figure allows for here.
         </p>
         <p className="mono caveat__stat">
           {Math.round(cdf(gestationalDays) * 100)}% have started labor by this point.

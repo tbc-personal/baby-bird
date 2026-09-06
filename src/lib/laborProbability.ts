@@ -1,25 +1,35 @@
 /**
  * ADR-005: spontaneous-labor probability.
  *
- * The day of spontaneous labor onset, counted in days from the LMP, is modelled
- * as a skew-normal variable with location ξ, scale ω and shape α < 0. A plain
- * normal cannot be made to fit: matched to the observed median it predicts far
- * too few preterm births, which is the whole reason for the left skew.
+ * The day of spontaneous labor onset, counted in days from the LMP, is modeled
+ * as a two-component mixture:
  *
- * Nothing here is scraped from Datayze. The three constraints below come from
+ *   D ~ π · Preterm + (1 − π) · Term
+ *   Term    = Normal(μ_t, σ_t)
+ *   Preterm = Normal(μ_p, σ_p) truncated to [140, 259)
+ *
+ * Preterm labor is a physiologically distinct process, not the tail of the term
+ * one, which is the honest reason to give it its own component. It is also what
+ * makes the fit possible: a single skew-normal (the family used before the
+ * first follow-up, see the ADR-005 addenda) cannot meet the median, preterm and
+ * post-term targets at once, and its left skew put the mode eight days after
+ * the due date, which read as wrong on screen. A symmetric term component puts
+ * the mode back beside the median.
+ *
+ * Nothing here is scraped from Datayze. The constraints below come from
  * published sources; the parameters were fitted to them offline by
  * `scripts/fit-labor-model.ts` and hard-coded, so the app does no numerical
- * optimisation at runtime. Re-run that script to reproduce them.
+ * optimization at runtime. Re-run that script to reproduce them.
  *
  * Pure module: no clock, no state.
  */
 
 /**
- * The calibration targets, and the one that could not be met.
+ * The calibration targets.
  *
- * NOTE ON VERIFICATION: the build session could not open any of these pages.
- * Its egress proxy refuses cdc.gov, ncbi.nlm.nih.gov and datayze.com along with
- * everything else, so the figures are those recorded in
+ * NOTE ON VERIFICATION: no build session so far has been able to open any of
+ * these pages. The egress proxy refuses cdc.gov, ncbi.nlm.nih.gov and
+ * datayze.com along with everything else, so the figures are those recorded in
  * `docs/research/datayze-features.md` during planning, plus two adjustment
  * factors taken from general obstetric literature. Confirm all of them before
  * release. See docs/decisions/ADR-005-datayze-derived-features.md.
@@ -28,7 +38,7 @@ export const CALIBRATION = {
   /**
    * Smith GCS 2001, "Use of time to event analysis to estimate the normal
    * duration of human pregnancy", Hum Reprod: median non-elective delivery at
-   * 283 days after LMP. Met exactly by the fitted model.
+   * 283 days after LMP. Tolerance ±1 day.
    */
   medianDay: 283,
   medianSource: 'https://doi.org/10.1093/humrep/16.7.1497',
@@ -55,104 +65,118 @@ export const CALIBRATION = {
    *      singleton-only (ADR-005). The singleton preterm rate is roughly 9.3%.
    *   2. Provider-initiated delivery. Somewhere near 28% of preterm births are
    *      induced or delivered by scheduled caesarean for a medical indication,
-   *      not by spontaneous onset. Spontaneous labour and PPROM account for the
+   *      not by spontaneous onset. Spontaneous labor and PPROM account for the
    *      remaining ~72%.
    *
    *   0.093 x 0.72 = 0.067
    *
    * Both adjustment factors are round numbers from the general literature and
-   * are the least well-sourced input to this model. They are the first thing to
-   * check on review.
+   * are the least well-sourced input to this model. The first follow-up session
+   * had no more network access than the build session did, so neither could be
+   * improved on; they are still the first thing to check on review.
+   * Tolerance ±0.5 points.
    */
   pretermShare: 0.067,
 
   /**
-   * Post-term is delivery after 42w0d, i.e. after day 294. The build prompt
-   * asks for roughly 6%, from Smith's survival curve.
-   *
-   * THIS CONSTRAINT IS NOT MET, and cannot be. See INFEASIBILITY below.
+   * Post-term is delivery after 42w0d, i.e. after day 294. Roughly 6%, from
+   * Smith's survival curve. Tolerance ±1.5 points: the observed figure is
+   * depressed by induction, and this model contains no induction at all.
    */
   postTermDay: 294,
   postTermTargetShare: 0.06,
   postTermSource: 'https://doi.org/10.1093/humrep/16.7.1497',
 
   /**
+   * The mode must sit within two days of the median. This is not a published
+   * figure; it is an on-screen requirement, asserted so it cannot regress. The
+   * panel shows a "most likely single day", and a model whose most likely day
+   * falls a week and a half after the due date reads as broken to anyone who
+   * knows their due date.
+   */
+  modeWithinDaysOfMedian: 2,
+
+  /**
    * Jukic AM et al. 2013, "Length of human pregnancy and contributors to its
-   * natural variation", Hum Reprod. Not a fitted constraint; cited because it
-   * is the best direct measurement of the spread, and the fitted omega sits in
-   * its neighbourhood.
+   * natural variation", Hum Reprod. Not a fitted constraint, and the fitted
+   * term component is tighter than Jukic's measured spread: see the σ_t note on
+   * LABOR_MODEL.
    */
   jukicSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
 } as const;
 
+/** The preterm component is truncated to this half-open interval, in days. */
+export const PRETERM_SUPPORT = {
+  /** 20w0d. Before this a loss is not a preterm birth. */
+  firstDay: 140,
+  /** 37w0d, exclusive. Preterm is by definition before this. */
+  lastDayExclusive: CALIBRATION.pretermDay,
+} as const;
+
 /**
- * INFEASIBILITY: why the post-term constraint is missed.
- *
- * The build prompt asks for three constraints at once: median 283, P(D < 259)
- * equal to the cited preterm share, and P(D > 294) around 6%. No skew-normal
- * satisfies all three. This is a property of the family, not of the optimiser,
- * and `scripts/fit-labor-model.ts` prints the proof:
- *
- *   Hold the median at 283 and the post-term share at 6% exactly, and sweep
- *   alpha. The implied preterm share rises monotonically with |alpha| and
- *   saturates at 4.75% as alpha goes to minus infinity, where the skew-normal
- *   degenerates into a half-normal. 4.75% is below both 6.7% and 10.4%, so no
- *   member of the family reaches either.
- *
- *   From the other side: hold the median at 283 and the preterm share at 10.4%,
- *   and the post-term share is forced above 18.8%.
- *
- * The tension is in the published numbers themselves, not only in the family.
- * Any distribution with F(259) = 0.104 and F(294) = 0.94 puts 83.6% of its mass
- * in the 35 days between, which drags the median to about 276 rather than 283.
- * A sufficiently peaked unimodal density could still be made to fit; the
- * skew-normal's shape is too rigid.
- *
- * The deviation chosen is the smallest one that keeps ADR-005 intact. ADR-005
- * names exactly two constraints and their tolerances: the median within one day
- * of 283, and P(< 37w) within 0.5 points of "the CDC figure used". Both are met
- * exactly. The post-term figure appears only in the build prompt, is stated
- * there as an approximation, and is described in the research doc as a range of
- * roughly 5 to 7 per cent, so it is the one that yields.
- *
- * There is a substantive reading under which the miss is smaller than it looks:
- * the fitted 12.5% describes pregnancies left entirely alone, whereas the
- * observed 6% comes from a population where most pregnancies past 41 weeks are
- * induced. The model has no induction in it. That is an argument for the
- * direction of the gap, not for its size, and the gap is reported rather than
- * explained away. It is the main open question on this model.
+ * The residuals of the fit in `scripts/fit-labor-model.ts`. All four targets
+ * are met; these are the achieved values, pinned by the unit tests so a change
+ * to the numerics or the parameters shows up as a diff.
  */
 export const FIT_RESIDUALS = {
-  /** Met exactly. */
-  medianDay: 283,
-  /** Met exactly, against CALIBRATION.pretermShare. */
+  /** Target 283 ±1. */
+  medianDay: 283.0,
+  /** Target 0.067 ±0.005. */
   pretermShare: 0.067,
-  /** Missed: the model gives this against a target of about 0.06. */
-  postTermShare: 0.1247,
-  /** Kept deliberately non-zero so the curve does not claim 43 weeks is impossible. */
+  /** Target 0.06 ±0.015. */
+  postTermShare: 0.06,
+  /** Target: within 2 days of the median. */
+  modeDay: 284,
+  /** Not a target. Kept non-zero so the curve does not call 43 weeks impossible. */
   beyond43WeeksShare: 0.0051,
 } as const;
 
 /**
- * The fitted triple. Produced by `npm run fit-labor-model`, which solves for xi
- * and omega so the median and preterm constraints hold exactly at a given
- * alpha, then picks the alpha that brings the post-term share as close to 6% as
- * it can while leaving a real tail past 43 weeks. The app does no numerical
- * optimisation at runtime.
+ * A two-component mixture of labor-onset day, in days from the LMP.
  */
-export interface SkewNormalParams {
-  /** Location. Not the mean, and not the median, because the curve is skewed. */
-  readonly xi: number;
-  /** Scale, in days. */
-  readonly omega: number;
-  /** Shape. Negative is left-skewed, which is what the preterm tail needs. */
-  readonly alpha: number;
+export interface MixtureParams {
+  /** π: the share of pregnancies whose labor starts by the preterm process. */
+  readonly pretermWeight: number;
+  /** μ_p, before truncation. */
+  readonly pretermMean: number;
+  /** σ_p, before truncation. */
+  readonly pretermSd: number;
+  /** μ_t. Symmetric, so this is also the term component's median and mode. */
+  readonly termMean: number;
+  /** σ_t, in days. */
+  readonly termSd: number;
 }
 
-export const LABOR_MODEL: SkewNormalParams = {
-  xi: 296.9889,
-  omega: 20.74,
-  alpha: -6.75,
+/**
+ * The fitted mixture. Produced by `npm run fit-labor-model`.
+ *
+ * μ_t and σ_t are solved for: with π fixed by the preterm target, the median
+ * and post-term targets are two equations in two unknowns and have an exact
+ * solution. π then follows from the preterm target.
+ *
+ * μ_p and σ_p are assumptions, not fits. The two constraints the preterm
+ * component has to meet — that it carries share π and that all of it lands
+ * before 37 weeks — leave its shape free, and no source in
+ * `docs/research/datayze-features.md` pins it. 245 days (35w0d) with a 14-day
+ * spread puts the bulk of preterm onset in the late-preterm weeks, which is
+ * where most of it is observed. Nothing the app shows past 37 weeks depends on
+ * the choice, because the conditional probability re-normalizes; what it does
+ * change is the 34–37 week readings, and the sensitivity is documented in the
+ * second ADR-005 addendum.
+ *
+ * σ_t = 6.83 days is tighter than Jukic 2013 measures the spread of term
+ * gestation to be (roughly 10 to 13 days). It is forced by the post-term
+ * target: a wider term component puts far more than 6% past 42 weeks. Since the
+ * observed 6% is itself depressed by induction, the honest reading is that the
+ * fitted σ_t is the spread of *delivered* gestations rather than of untouched
+ * ones, and that this model runs slightly narrow past 41 weeks.
+ */
+export const LABOR_MODEL: MixtureParams = {
+  pretermWeight: 0.066852,
+  pretermMean: 245,
+  pretermSd: 14,
+  termMean: 283.6145,
+  termSd: 6.8341,
 };
 
 /** The panel appears from 34w0d (mockup 4). */
@@ -162,9 +186,8 @@ export const LABOR_PANEL_FROM_DAY = 34 * 7;
 export const CURVE_FIRST_DAY = 34 * 7;
 export const CURVE_LAST_DAY = 43 * 7;
 
-// --- normal and skew-normal primitives -------------------------------------
+// --- normal primitives ------------------------------------------------------
 
-const SQRT_2 = Math.SQRT2;
 const SQRT_2PI = Math.sqrt(2 * Math.PI);
 
 /**
@@ -188,60 +211,54 @@ export function normalPdf(z: number): number {
 }
 
 export function normalCdf(z: number): number {
-  return 0.5 * (1 + erf(z / SQRT_2));
+  return 0.5 * (1 + erf(z / Math.SQRT2));
 }
 
-/**
- * Owen's T function, by Simpson's rule on its defining integral:
- *   T(h, a) = (1 / 2π) ∫₀^a exp(-h²(1 + x²) / 2) / (1 + x²) dx
- * The integrand is smooth and bounded on [0, a], so a fixed fine grid is both
- * accurate and cheap. Symmetries reduce the argument first: T is even in h and
- * odd in a, and T(h, a) for |a| > 1 is reduced through the standard identity so
- * the integration range never gets long.
- */
-export function owenT(h: number, a: number): number {
-  if (a === 0) return 0;
-  const hh = Math.abs(h);
-  const sign = a < 0 ? -1 : 1;
-  const aa = Math.abs(a);
+// --- the mixture ------------------------------------------------------------
 
-  if (aa > 1) {
-    // T(h, a) = ½[Φ(h) + Φ(ah)] − Φ(h)Φ(ah) − T(ah, 1/a)
-    const value =
-      0.5 * (normalCdf(hh) + normalCdf(aa * hh)) -
-      normalCdf(hh) * normalCdf(aa * hh) -
-      owenT(aa * hh, 1 / aa);
-    return sign * value;
+/** The mass of the untruncated preterm normal that falls inside its support. */
+function pretermNormalizer(model: MixtureParams): number {
+  const { pretermMean: mean, pretermSd: sd } = model;
+  return (
+    normalCdf((PRETERM_SUPPORT.lastDayExclusive - mean) / sd) -
+    normalCdf((PRETERM_SUPPORT.firstDay - mean) / sd)
+  );
+}
+
+/** Density of the mixture at `day`, in probability per day. */
+export function pdf(day: number, model: MixtureParams = LABOR_MODEL): number {
+  const term =
+    ((1 - model.pretermWeight) / model.termSd) *
+    normalPdf((day - model.termMean) / model.termSd);
+  if (day < PRETERM_SUPPORT.firstDay || day >= PRETERM_SUPPORT.lastDayExclusive) {
+    return term;
   }
+  const preterm =
+    (model.pretermWeight / (model.pretermSd * pretermNormalizer(model))) *
+    normalPdf((day - model.pretermMean) / model.pretermSd);
+  return term + preterm;
+}
 
-  const steps = 200; // even, so Simpson applies
-  const step = aa / steps;
-  const f = (x: number) => Math.exp((-hh * hh * (1 + x * x)) / 2) / (1 + x * x);
-
-  let total = f(0) + f(aa);
-  for (let i = 1; i < steps; i += 1) {
-    total += f(i * step) * (i % 2 === 1 ? 4 : 2);
+/** Distribution function of the mixture: P(D ≤ day). */
+export function cdf(day: number, model: MixtureParams = LABOR_MODEL): number {
+  const term = (1 - model.pretermWeight) * normalCdf((day - model.termMean) / model.termSd);
+  let preterm: number;
+  if (day >= PRETERM_SUPPORT.lastDayExclusive) preterm = 1;
+  else if (day <= PRETERM_SUPPORT.firstDay) preterm = 0;
+  else {
+    preterm =
+      (normalCdf((day - model.pretermMean) / model.pretermSd) -
+        normalCdf((PRETERM_SUPPORT.firstDay - model.pretermMean) / model.pretermSd)) /
+      pretermNormalizer(model);
   }
-  return (sign * ((step / 3) * total)) / (2 * Math.PI);
-}
-
-/** Skew-normal density at `day`, in probability per day. */
-export function pdf(day: number, model: SkewNormalParams = LABOR_MODEL): number {
-  const z = (day - model.xi) / model.omega;
-  return (2 / model.omega) * normalPdf(z) * normalCdf(model.alpha * z);
-}
-
-/** Skew-normal distribution function: P(D ≤ day). */
-export function cdf(day: number, model: SkewNormalParams = LABOR_MODEL): number {
-  const z = (day - model.xi) / model.omega;
-  return clamp01(normalCdf(z) - 2 * owenT(z, model.alpha));
+  return clamp01(term + model.pretermWeight * preterm);
 }
 
 /** P(fromDay ≤ D ≤ toDay). */
 export function probabilityInWindow(
   fromDay: number,
   toDay: number,
-  model: SkewNormalParams = LABOR_MODEL,
+  model: MixtureParams = LABOR_MODEL,
 ): number {
   if (toDay <= fromDay) return 0;
   return clamp01(cdf(toDay, model) - cdf(fromDay, model));
@@ -249,13 +266,13 @@ export function probabilityInWindow(
 
 /**
  * P(fromDay ≤ D ≤ toDay | D ≥ fromDay). This is the number the panel leads
- * with: the chance of labour starting in the window given it has not started
+ * with: the chance of labor starting in the window given it has not started
  * yet, which is what someone still pregnant today actually wants.
  */
 export function conditionalProbabilityInWindow(
   fromDay: number,
   toDay: number,
-  model: SkewNormalParams = LABOR_MODEL,
+  model: MixtureParams = LABOR_MODEL,
 ): number {
   if (toDay <= fromDay) return 0;
   const stillPregnant = 1 - cdf(fromDay, model);
@@ -266,7 +283,7 @@ export function conditionalProbabilityInWindow(
 }
 
 /** The single most likely day of onset, to the day. */
-export function modeDay(model: SkewNormalParams = LABOR_MODEL): number {
+export function modeDay(model: MixtureParams = LABOR_MODEL): number {
   let best = CURVE_FIRST_DAY;
   let bestDensity = -1;
   for (let day = 200; day <= 320; day += 1) {
@@ -286,7 +303,7 @@ export function modeDay(model: SkewNormalParams = LABOR_MODEL): number {
  */
 export function mostLikelyDayFrom(
   fromDay: number,
-  model: SkewNormalParams = LABOR_MODEL,
+  model: MixtureParams = LABOR_MODEL,
 ): number {
   const mode = modeDay(model);
   return mode >= fromDay ? mode : fromDay;

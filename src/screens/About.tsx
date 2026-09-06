@@ -87,12 +87,13 @@ export function AboutScreen() {
             20 and head to heel from week 21, which is why it jumps between them.
           </li>
           <li>
-            Labor model: a skew-normal fit to Smith 2001 (median 283 days),{' '}
+            Labor model: a two-part fit, one bell curve for preterm labor and one for term
+            labor, calibrated to Smith 2001 (median 283 days, 6% past 42 weeks), the
+            CDC/NCHS preterm share, and{' '}
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/">
               Jukic et al. 2013
             </a>
-            , and the CDC/NCHS preterm share. Datayze inspired the feature; none of its data
-            is used.
+            . Datayze inspired the feature; none of its data is used.
           </li>
           <li>The bird comparisons are the author&rsquo;s own pairings.</li>
         </ul>
