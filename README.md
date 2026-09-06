@@ -1,0 +1,53 @@
+# Nestling
+
+A pregnancy tracker. Enter your last menstrual period, conception date, or due date and see each week's
+fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin at week 23, Osprey at week 42.
+
+Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
+
+Status: **planning**. No application code yet. This repository currently holds the plan, decision
+records, research, mockups, data, and the build prompt for the implementation session.
+
+## What it will do (v1)
+- Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.
+- See progress as weeks and days, days remaining, and trimester.
+- See this week's comparison with fetal length and weight, a Cornell Lab Macaulay Library photo embed,
+  two or three short original bird facts, and a link to the species on All About Birds.
+- Browse the full week-by-week timeline.
+- From 34 weeks, see the chance of going into labor in the next week, re-derived from published studies.
+- Seven skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
+- Works as an installable web app. Data stays on your device.
+
+## Naming
+| Candidate | Why |
+|---|---|
+| Nestling | A chick still in the nest. One word, literal for the theme, reads as a noun for the baby. |
+| Featherweight | The lightest weight class; the app's weekly weight readout. Warm without being cute. |
+| Hatch Day | The due date, reframed. Puns on birthday; works as a countdown ("47 days to hatch day"). |
+
+## Not medical advice
+Fetal sizes are population averages. Probability features are population statistics, not predictions
+about any individual pregnancy. Talk to your clinician.
+
+## Non-commercial
+This project uses Macaulay Library media embeds, which the Cornell Lab permits for non-commercial use only.
+The project has no ads, no paid tier, and must not be used commercially. See
+`docs/decisions/ADR-003-images.md`.
+
+## Repository map
+| Path | What |
+|---|---|
+| `docs/PLAN.md` | Scope, architecture, milestones, risks, testing |
+| `docs/decisions/` | Architecture decision records (ADR-001 … 007) |
+| `docs/research/` | Licensing findings; Datayze feature feasibility and sources |
+| `docs/CURATION.md` | Human checklist: image IDs, fact review, slug verification |
+| `docs/mockups/` | Static HTML mockups of the main screens and skins; offline goose SVG |
+| `data/comparisons.json` | Single source of truth for weeks, sizes, species, images, facts |
+| `data/size-comparisons.source.csv` | The original spreadsheet export |
+| `prompts/opus-build-prompt.md` | The prompt for the implementation session |
+
+## Sources and credits
+- Fetal length and weight table: the author's spreadsheet, drawn from datayze.com.
+- Bird comparisons: the author's own pairings.
+- Photos: Macaulay Library at the Cornell Lab of Ornithology (embedded, non-commercial); seed photos from Wikimedia Commons contributors (credited per image).
+- Labor probability model: Smith 2001, Jukic et al. 2013, CDC/NCHS natality data. See `docs/research/datayze-features.md`.
