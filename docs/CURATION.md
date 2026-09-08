@@ -37,17 +37,24 @@ describes the current environment. What is reachable now:
 | `www.allaboutbirds.org` | **still 403.** This one is not the egress proxy — Cornell serves a Cloudflare block to datacenter IPs. Opening the network policy further will not fix it. |
 | `web.archive.org` | not reachable through the proxy, so archived copies are not a way round the line above |
 
-**Task B has had a triage pass.** All 123 facts were checked against source text
-that was actually downloaded and read; see `docs/research/fact-check-summary.md`
-for the rollup and `docs/research/fact-check-<range>.md` for the per-fact
-evidence. Regenerate the evidence corpus with `npm run fact-sources` and audit
-the reports with `npm run verify-fact-check`.
+**Task B has had a triage pass, and its findings are applied.** All 123 facts were
+checked against source text that was actually downloaded and read; see
+`docs/research/fact-check-summary.md` for the rollup and
+`docs/research/fact-check-<range>.md` for the per-fact evidence. 85 citations were
+swapped and 9 facts rewritten, recorded change by change in
+`docs/research/fact-check-changeset.json` and applied by `npm run apply-fact-check`.
+No `sources[]` entry points at All About Birds any more; the `allAboutBirdsSlug`
+per row is untouched, since that drives the card link ADR-004 asks for and is not a
+citation. Regenerate the evidence corpus with `npm run fact-sources` and audit the
+reports with `npm run verify-fact-check`.
 
 That pass does **not** discharge the review below. It found 2 contradicted facts,
-21 partly supported, 1 unverifiable, and 62 facts whose `sources[]` should change
-— which is where your attention is best spent — but the 99 facts it marked
-supported have not been independently re-read, and `reviewed: true` is still a
-human act. The most-cited source, All About Birds (74 of 123 facts), is the one
+21 partly supported and 1 unverifiable, and all of those are now corrected — but the
+99 facts it marked supported have not been independently re-read, and `reviewed: true`
+is still a human act, which `apply-fact-check` deliberately cannot perform. Three
+facts remain only partly resolved; they are listed under "Still open after this pass"
+in the summary. Every rewritten sentence also wants a voice pass: they were written
+to be defensible against a source, not to sound like the author. The most-cited source, All About Birds (74 of 123 facts), is the one
 that stayed shut; those facts were verified against other sources, and each
 report records which source was actually read for each fact.
 

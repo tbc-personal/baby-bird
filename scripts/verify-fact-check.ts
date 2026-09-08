@@ -13,6 +13,11 @@
  * from the fixed vocabulary, and that no Evidence block cites All About Birds,
  * which cannot be opened from here at all.
  *
+ * Note: the reports describe the facts as they stood BEFORE `apply-fact-check` ran.
+ * Once the nine rewrites are in `data/comparisons.json`, regenerating the corpus and
+ * re-running this will report those nine as missing from the reports. That is expected
+ * — the reports are a snapshot of what was checked, not a description of the file now.
+ *
  * Run with `npm run verify-fact-check` after `npm run fact-sources`.
  * Exit code 1 if any report has a coverage, vocabulary, or citation problem;
  * untraceable quotes are reported but do not fail the run, since a legitimate

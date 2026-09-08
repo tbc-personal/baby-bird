@@ -3,9 +3,21 @@
 Rollup of the four range reports (`fact-check-2-12.md`, `-13-22`, `-23-32`, `-33-42`),
 which cover all 123 facts in `data/comparisons.json`. Run 2026-09-08.
 
-**Nothing here has been applied.** `data/comparisons.json` is untouched and every fact
-is still `reviewed: false`. Per `docs/CURATION.md`, setting `reviewed: true` is a human
-act; this pass narrows what that human has to look at from 123 rows to about 30.
+**Applied 2026-09-08.** 94 changes — 85 citation swaps and the 9 text fixes below — have
+been written into `data/comparisons.json` by `npm run apply-fact-check`, which reads
+`fact-check-changeset.json`. That file records every change and why it was made, so the
+content decisions can be reviewed apart from the diff, and the application re-run.
+
+94 is more than the 62 rows in the reports' own swap tables because several rows named
+two or three facts at once, one row covered seven weeks in a single line, and two facts
+(13.1, 18.1) were listed as needing no change when they in fact still cited All About
+Birds.
+
+**Every fact is still `reviewed: false`,** and the apply script deliberately cannot set
+it. Per `docs/CURATION.md` that is the author's act; a script that flipped it would be
+laundering a triage pass into a sign-off. No All About Birds URL remains in any
+`sources[]`. The `allAboutBirdsSlug` on each row is untouched — that drives the card's
+"More at All About Birds" link, which ADR-004 asks for, and is not a citation.
 
 ## Result
 
@@ -16,10 +28,12 @@ act; this pass narrows what that human has to look at from 123 rows to about 30.
 | Contradicted | 2 |
 | Unverifiable | 1 |
 
-Separately, **62 facts are recommended for a citation swap** — mostly because their
-`sources[]` points at All About Birds, which cannot be opened from this environment and
-whose text ADR-004 forbids reusing anyway. A handful cite a real, readable page that
-simply does not contain the claim.
+Separately, **85 facts had their `sources[]` changed** — mostly because they pointed at
+All About Birds, which cannot be opened from this environment and whose text ADR-004
+forbids reusing anyway. A dozen or so cited a real, readable page that simply does not
+contain the claim: week 22 cited `Structural_coloration`, which never mentions blue jays;
+week 30's crow face-recognition fact cited a Wikipedia article with no mention of faces,
+masks or Marzluff. Every replacement URL was checked to return HTTP 200.
 
 ## What changed since the work order was written
 
@@ -83,6 +97,16 @@ Five of the highest-stakes findings were then re-checked by hand against primary
 the kestrel UV literature, the heron nest-fidelity text, the Cliff Swallow mud-pellet
 attribution, Miller & Conover on gull begging, and Cornell & Marzluff 2011 on crow face
 recognition (*Proc. R. Soc. B* 279:1728 — correct paper, and the quoted passages match).
+
+## Still open after this pass
+
+Three facts were re-cited but not rewritten, and are the next thing worth your attention:
+
+| Week | Fact | What is unresolved |
+|---|---|---|
+| 10.3 | The female shapes the mud cup by pressing her breast into it and turning | The behaviour is real and well documented, but every good source for it is Cornell's own (All About Birds, Bird Academy), which are blocked here and reuse-restricted. Now cited to Wikipedia, which supports the mud cup but not the breast-pressing. |
+| 34.1 | Ring-billed Gulls return to within a few meters of where they hatched | Natal return is documented; "within a few meters" traces to adult nest-site fidelity across years, which is not the same claim. |
+| 13.1 | A Bald Eagle nest can reach two meters across and weigh a tonne | Supported, but those are the record nest's figures (2.5 m, 1 tonne), not a typical one. Whether the sentence should read as a record is a framing call, not a correctness one. |
 
 ## Caveat worth keeping
 
