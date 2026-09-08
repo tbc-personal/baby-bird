@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { act, render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { MacaulayEmbed, PhotoComing } from '../../src/components/MacaulayEmbed';
 import {
   EMBED_TIMEOUT_MS,
@@ -205,9 +206,16 @@ describe('CommonsImage and credits', () => {
     expect(img).toHaveAttribute('src', '/nestling/images/seeds/poppy.jpg');
   });
 
-  it('credits the author, the license by name with a link, and the source', () => {
+  it('credits the author, the license by name with a link, and the source', async () => {
+    const user = userEvent.setup();
     render(<ImageCredit image={commons} />);
-    expect(screen.getByText(/A\. Photographer/)).toBeInTheDocument();
+
+    // The credit is disclosed, not omitted: hidden until the corner "i" is
+    // pressed, but always reachable, which is what CC BY attribution needs.
+    expect(screen.getByText(/A\. Photographer/)).not.toBeVisible();
+    await user.click(screen.getByRole('button', { name: 'Show photo credit' }));
+
+    expect(screen.getByText(/A\. Photographer/)).toBeVisible();
     expect(screen.getByRole('link', { name: 'CC BY 4.0' })).toHaveAttribute(
       'href',
       commons.licenseUrl,
@@ -218,7 +226,14 @@ describe('CommonsImage and credits', () => {
     );
   });
 
-  it('credits a Macaulay asset with photographer, library and ML number', () => {
+  it('keeps the credit button on the photo even before it is opened', () => {
+    render(<ImageCredit image={commons} />);
+    const button = screen.getByRole('button', { name: 'Show photo credit' });
+    expect(button).toBeVisible();
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  it('credits a Macaulay asset with photographer, library and ML number', async () => {
     render(
       <ImageCredit
         image={{
@@ -236,8 +251,11 @@ describe('CommonsImage and credits', () => {
         }}
       />,
     );
-    expect(screen.getByText(/R\. Photographer/)).toBeInTheDocument();
-    expect(screen.getByText(/Macaulay Library at the Cornell Lab/)).toBeInTheDocument();
+    await userEvent
+      .setup()
+      .click(screen.getByRole('button', { name: 'Show photo credit' }));
+    expect(screen.getByText(/R\. Photographer/)).toBeVisible();
+    expect(screen.getByText(/Macaulay Library at the Cornell Lab/)).toBeVisible();
     expect(screen.getByRole('link', { name: 'ML633445471' })).toBeInTheDocument();
   });
 

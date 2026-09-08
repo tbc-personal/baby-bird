@@ -12,10 +12,13 @@ export function MacaulayEmbed({
   assetId,
   kind,
   altText,
+  credit,
 }: {
   assetId: string;
   kind: Kind;
   altText: string;
+  /** Rendered in the corner of the frame; see `ImageCredit`. */
+  credit?: React.ReactNode;
 }) {
   const online = useOnline();
   const [visible, setVisible] = useState(false);
@@ -90,7 +93,7 @@ export function MacaulayEmbed({
   }
 
   return (
-    <PhotoFrame tag={state === 'loaded' ? null : 'Loading photo'}>
+    <PhotoFrame tag={state === 'loaded' ? null : 'Loading photo'} credit={credit}>
       <div className="photo__holder" ref={attachHolder}>
         {shouldLoad ? (
           <iframe
@@ -122,15 +125,19 @@ export function MacaulayEmbed({
  */
 export function PhotoFrame({
   tag,
+  credit,
   children,
 }: {
   tag: string | null;
+  /** The credit disclosure, pinned to the bottom-right corner of the image. */
+  credit?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <div className="photo">
       {tag ? <span className="photo__tag mono">{tag}</span> : null}
       {children}
+      {credit}
     </div>
   );
 }

@@ -127,8 +127,6 @@ export function ComparisonCard({
             </a>
           </p>
         ) : null}
-
-        <ImageCredit image={row.image} />
       </div>
     </article>
   );
@@ -138,11 +136,20 @@ export function ComparisonCard({
     const kind = row.kind ?? 'bird';
     const alt = image?.altText ?? `${comparison}, photograph`;
 
+    const credit = <ImageCredit image={image} />;
+
     if (image?.provider === 'macaulay' && image.mlAssetId) {
-      return <MacaulayEmbed assetId={image.mlAssetId} kind={kind} altText={alt} />;
+      return (
+        <MacaulayEmbed
+          assetId={image.mlAssetId}
+          kind={kind}
+          altText={alt}
+          credit={credit}
+        />
+      );
     }
     if (image?.provider === 'commons' && image.file) {
-      return <CommonsImage image={image} base={base} />;
+      return <CommonsImage image={image} base={base} credit={credit} />;
     }
     // No asset curated yet: the kind silhouette, distinct from the offline goose.
     return <PhotoComing kind={kind} />;

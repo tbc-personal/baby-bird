@@ -90,6 +90,11 @@ report records which source was actually read for each fact.
 
 ## A. Image IDs (weeks 7–42: Macaulay Library; weeks 2–6: Wikimedia Commons)
 
+**See `docs/CURATING-PHOTOS.md` for the walkthrough** — how to verify the embed
+template first (do that before curating anything), what makes a photo work in
+the card's 150px letterbox crop, and how to check the result. The per-week
+search URLs below are the reference table it points at.
+
 For each species row, open the search page, pick a well-rated photo showing the whole bird (or the egg for
 weeks 7–13), open the asset, use **Embed**, and record the numeric asset ID (`ML` number) in `image.mlAssetId`
 and the photographer credit in `image.credit`. Record a second ID in `image.fallbackMlAssetId` if possible.
@@ -136,11 +141,13 @@ For eggs, add the age/behavior filter for eggs in the search UI (or search "egg"
 | 41 | Great Horned Owl | grhowl | https://search.macaulaylibrary.org/catalog?taxonCode=grhowl&mediaType=photo&sort=rating_rank_desc |
 | 42 | Osprey | osprey | https://search.macaulaylibrary.org/catalog?taxonCode=osprey&mediaType=photo&sort=rating_rank_desc |
 
-Seeds and grit (weeks 2–6): search Wikimedia Commons for "poppy seeds", "nyjer seed", "proso millet seed", "sunflower seed",
-pick a CC0 or CC BY file, download it to `public/images/seeds/`, and record `provider: "commons"`, `sourceUrl`,
-`author`, `license`, `licenseUrl` in `image`.
+Seeds (weeks 2, 4, 5, 6): **done.** The curated choices are in
+`docs/research/seed-images.json` and `npm run seed-images` fetches, checks the
+licence, downloads and records them. To swap a photo, change its `commonsTitle`
+and re-run.
 
-Week 3: proposed "Grain of grit" (`proposed: true` in the data). If accepted, source a Commons photo of gizzard grit or coarse sand alongside the seed photos.
+Week 3, proposed "Grain of grit" (`proposed: true` in the data): no photo, and
+no usable Commons candidate found. Settle whether the comparison stays first.
 
 ## B. Facts review
 
