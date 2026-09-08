@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import type { WeekRow } from '../lib/schema';
 import type { Units } from '../lib/storage';
 import {
@@ -13,15 +14,17 @@ import { CommonsImage } from './CommonsImage';
 import { FactList } from './FactList';
 import { ImageCredit } from './ImageCredit';
 import { MacaulayEmbed, PhotoComing } from './MacaulayEmbed';
+import { MeasureDialog, type Measure } from './MeasureDialog';
 import './ComparisonCard.css';
 
 /**
  * The week's card, shared by Today and by `#/week/:n` (mockup 2).
  *
- * Heading order, top to bottom: "Week N" in italics, the small lead line, the
- * comparison name large, then the scientific name. The article on the lead line
- * is derived from the comparison name, which already carries the "egg" suffix
- * for weeks 7–13 ("an American Robin egg").
+ * Heading order, top to bottom: the small lead line, the comparison name
+ * large, then the scientific name. The week number itself isn't repeated here
+ * — the screen header above the card already carries it. The article on the
+ * lead line is derived from the comparison name, which already carries the
+ * "egg" suffix for weeks 7–13 ("an American Robin egg").
  */
 export function ComparisonCard({
   row,
@@ -37,12 +40,17 @@ export function ComparisonCard({
   const comparison = row.comparison ?? 'this week';
   const article = indefiniteArticle(comparison);
 
+  // Which measurement's trend chart is open, if any, plus which button opened
+  // it so `MeasureDialog` can restore focus there on close.
+  const [openMeasure, setOpenMeasure] = useState<Measure | null>(null);
+  const lengthButtonRef = useRef<HTMLButtonElement>(null);
+  const weightButtonRef = useRef<HTMLButtonElement>(null);
+
   return (
     <article className="card">
       {renderPhoto()}
       <div className="card__body">
         <h2 className="card__heading">
-          <span className="card__week">Week {row.week}</span>
           <span className="card__lead">Your baby is roughly the size of {article}</span>
           {comparison}
           {row.scientificName ? (
@@ -52,13 +60,23 @@ export function ComparisonCard({
 
         <div className="dims">
           {row.lengthIn !== null ? (
-            <div className="dim">
+            <button
+              type="button"
+              className="dim"
+              ref={lengthButtonRef}
+              onClick={() => setOpenMeasure('length')}
+            >
               <b className="mono">{formatLength(row.lengthIn, units)}</b>
               <span>{lengthLabel(row.lengthMeasure)}</span>
-            </div>
+            </button>
           ) : null}
           {row.weightOz !== null ? (
-            <div className="dim">
+            <button
+              type="button"
+              className="dim"
+              ref={weightButtonRef}
+              onClick={() => setOpenMeasure('weight')}
+            >
               <b className="mono">{formatWeight(row.weightOz, units)}</b>
               <span>
                 {row.weightIsUpperBound
@@ -67,9 +85,19 @@ export function ComparisonCard({
                     ? `weight (${exactWeight(row.weightOz, units)})`
                     : 'weight'}
               </span>
-            </div>
+            </button>
           ) : null}
         </div>
+
+        {openMeasure ? (
+          <MeasureDialog
+            measure={openMeasure}
+            currentWeek={row.week}
+            units={units}
+            onClose={() => setOpenMeasure(null)}
+            triggerRef={openMeasure === 'length' ? lengthButtonRef : weightButtonRef}
+          />
+        ) : null}
 
         {isConventionSwitchWeek(row.week) ? (
           <p className="note">

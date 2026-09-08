@@ -1,0 +1,78 @@
+.measure-chart {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.measure-chart__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.measure-chart__axis,
+.measure-chart__grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.measure-chart__grid {
+  stroke-dasharray: 2 3;
+}
+
+.measure-chart__line {
+  fill: none;
+  stroke: var(--secondary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.measure-chart__break {
+  stroke: var(--ink-2);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.measure-chart__today {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.measure-chart__mark {
+  fill: var(--accent);
+  stroke: var(--paper);
+  stroke-width: 1;
+}
+
+.measure-chart__tick,
+.measure-chart__label {
+  fill: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.legend__today {
+  background: var(--accent);
+}
+
+.legend__break {
+  background: var(--ink-2);
+}
