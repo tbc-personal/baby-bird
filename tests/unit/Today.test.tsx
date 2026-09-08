@@ -44,7 +44,8 @@ describe('Today screen (mockup 2)', () => {
     expect(heading).toHaveTextContent('23 weeks, 0 days');
     expect(heading).toHaveTextContent('119 days to go');
 
-    expect(screen.getByText('Week 23')).toBeInTheDocument();
+    // "Week 23" is not repeated on the card itself — the heading above already
+    // carries the week number, so the card leads straight with the comparison.
     expect(screen.getByText('Your baby is roughly the size of an')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Atlantic Puffin');
     expect(screen.getByText('Fratercula arctica')).toBeInTheDocument();
