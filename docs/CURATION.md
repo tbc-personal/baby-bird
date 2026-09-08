@@ -119,13 +119,13 @@ turns out to be folklore:
 |---|---|---|
 | 3 | Grouse and doves take grit from roadsides | The whole week-3 comparison is `proposed: true` and needs the author's sign-off first. |
 | 5 | Proso millet ripens in 60–90 days | A range, quoted from memory. |
-| 13 | An eagle nest can reach two metres across and a tonne | Record-holder figures; confirm whether they describe a record or a typical nest. |
+| 13 | An eagle nest can reach two meters across and a tonne | Record-holder figures; confirm whether they describe a record or a typical nest. |
 | 21 | Kestrels see vole urine trails in ultraviolet | Real research, but the popular version overstates it. |
 | 27 | Nostril baffles let a Peregrine breathe in a stoop | Widely repeated and not firmly established; the sentence hedges with "thought to". |
 | 28 | Many Cooper's Hawks carry healed fractures | Comes from a specific skeletal survey; check the proportion before restating it. |
-| 30 | Crows recognise faces and pass the grudge on | From Marzluff's masked-researcher studies; check what the studies actually showed. |
+| 30 | Crows recognize faces and pass the grudge on | From Marzluff's masked-researcher studies; check what the studies actually showed. |
 | 34 | Ring-billed chicks peck at the parent's bill | The classic red-spot experiment is Herring Gull, not Ring-billed. |
-| 36 | Ducklings drop from as high as fifteen metres | Confirm the figure. |
+| 36 | Ducklings drop from as high as fifteen meters | Confirm the figure. |
 | 40 | Snowy Owl clutches run 3 to 11 with the lemming supply | A range, quoted from memory. |
 
 ## C. Verify slugs and codes

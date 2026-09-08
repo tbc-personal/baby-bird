@@ -9,10 +9,22 @@ import {
   mostLikelyDayFrom,
   normalCdf,
   normalPdf,
-  owenT,
   pdf,
   probabilityInWindow,
+  PRETERM_SUPPORT,
 } from '../../src/lib/laborProbability';
+
+/** The median, solved rather than read off, so its tolerance is in days. */
+function medianDay(): number {
+  let low = 250;
+  let high = 320;
+  for (let i = 0; i < 100; i += 1) {
+    const mid = (low + high) / 2;
+    if (cdf(mid) < 0.5) low = mid;
+    else high = mid;
+  }
+  return (low + high) / 2;
+}
 
 describe('normal primitives', () => {
   // Published values, so a transcription error in erf cannot pass silently.
@@ -36,29 +48,31 @@ describe('normal primitives', () => {
   });
 });
 
-describe("Owen's T", () => {
-  it('T(0, a) = atan(a) / 2pi', () => {
-    expect(owenT(0, 1)).toBeCloseTo(Math.PI / 4 / (2 * Math.PI), 8);
-    expect(owenT(0, 0.5)).toBeCloseTo(Math.atan(0.5) / (2 * Math.PI), 8);
-    expect(owenT(0, 3)).toBeCloseTo(Math.atan(3) / (2 * Math.PI), 6);
-  });
-
-  it('T(h, 1) = Phi(h)(1 - Phi(h)) / 2', () => {
-    for (const h of [0.25, 1, 2, 3]) {
-      expect(owenT(h, 1)).toBeCloseTo((normalCdf(h) * (1 - normalCdf(h))) / 2, 7);
+describe('the mixture', () => {
+  it('is the term component alone once the preterm support has closed', () => {
+    for (const day of [259, 266, 283, 300]) {
+      const term =
+        (1 - LABOR_MODEL.pretermWeight) *
+        normalCdf((day - LABOR_MODEL.termMean) / LABOR_MODEL.termSd);
+      expect(cdf(day)).toBeCloseTo(term + LABOR_MODEL.pretermWeight, 10);
     }
   });
 
-  it('is even in h and odd in a', () => {
-    expect(owenT(1.3, 0.7)).toBeCloseTo(owenT(-1.3, 0.7), 10);
-    expect(owenT(1.3, -0.7)).toBeCloseTo(-owenT(1.3, 0.7), 10);
-    expect(owenT(2, 0)).toBe(0);
+  it('places the whole preterm component before 37 weeks', () => {
+    // Everything the preterm component contributes has arrived by day 259.
+    expect(cdf(PRETERM_SUPPORT.lastDayExclusive)).toBeCloseTo(
+      LABOR_MODEL.pretermWeight +
+        (1 - LABOR_MODEL.pretermWeight) *
+          normalCdf(
+            (PRETERM_SUPPORT.lastDayExclusive - LABOR_MODEL.termMean) / LABOR_MODEL.termSd,
+          ),
+      10,
+    );
   });
-});
 
-describe('the skew-normal reduces to the normal at alpha = 0', () => {
-  it.each([-3, -1, 0, 1, 2, 3])('z = %i', (z) => {
-    expect(cdf(z, { xi: 0, omega: 1, alpha: 0 })).toBeCloseTo(normalCdf(z), 7);
+  it('gives the term component almost all of the mass', () => {
+    expect(LABOR_MODEL.pretermWeight).toBeGreaterThan(0.05);
+    expect(LABOR_MODEL.pretermWeight).toBeLessThan(0.08);
   });
 });
 
@@ -66,19 +80,19 @@ describe('the density is a proper density', () => {
   it('integrates to one over the plausible range', () => {
     let total = 0;
     const step = 0.01;
-    for (let day = 150; day <= 400; day += step) total += pdf(day) * step;
-    expect(total).toBeCloseTo(1, 4);
+    for (let day = 100; day <= 400; day += step) total += pdf(day) * step;
+    expect(total).toBeCloseTo(1, 3);
   });
 
   it('is never negative', () => {
-    for (let day = 150; day <= 400; day += 1) {
+    for (let day = 100; day <= 400; day += 1) {
       expect(pdf(day)).toBeGreaterThanOrEqual(0);
     }
   });
 
   it('the distribution function is non-decreasing and bounded', () => {
     let previous = 0;
-    for (let day = 150; day <= 400; day += 1) {
+    for (let day = 100; day <= 400; day += 1) {
       const value = cdf(day);
       expect(value).toBeGreaterThanOrEqual(previous - 1e-12);
       expect(value).toBeGreaterThanOrEqual(0);
@@ -91,88 +105,46 @@ describe('the density is a proper density', () => {
     for (const day of [250, 270, 283, 295]) {
       let total = 0;
       const step = 0.005;
-      for (let x = 150; x <= day; x += step) total += pdf(x) * step;
+      for (let x = 100; x <= day; x += step) total += pdf(x) * step;
       expect(total).toBeCloseTo(cdf(day), 3);
     }
   });
 });
 
-describe('the calibration constraints (ADR-005)', () => {
+describe('the calibration targets (ADR-005, second addendum)', () => {
   it('the median is within one day of 283 (Smith 2001)', () => {
-    // Solve F(d) = 0.5 rather than checking F(283), so the assertion is about
-    // the median itself and its tolerance is in days.
-    let low = 250;
-    let high = 320;
-    for (let i = 0; i < 100; i += 1) {
-      const mid = (low + high) / 2;
-      if (cdf(mid) < 0.5) low = mid;
-      else high = mid;
-    }
-    const median = (low + high) / 2;
-    expect(Math.abs(median - CALIBRATION.medianDay)).toBeLessThanOrEqual(1);
+    expect(Math.abs(medianDay() - CALIBRATION.medianDay)).toBeLessThanOrEqual(1);
+    expect(medianDay()).toBeCloseTo(FIT_RESIDUALS.medianDay, 2);
   });
 
   it('the preterm share is within 0.5 points of the figure used', () => {
     const got = cdf(CALIBRATION.pretermDay);
     expect(Math.abs(got - CALIBRATION.pretermShare)).toBeLessThanOrEqual(0.005);
+    expect(got).toBeCloseTo(FIT_RESIDUALS.pretermShare, 4);
+  });
+
+  it('the post-term share is within 1.5 points of 6%', () => {
+    const got = 1 - cdf(CALIBRATION.postTermDay);
+    expect(Math.abs(got - CALIBRATION.postTermTargetShare)).toBeLessThanOrEqual(0.015);
+    expect(got).toBeCloseTo(FIT_RESIDUALS.postTermShare, 4);
   });
 
   /**
-   * The third constraint is documented as missed. This test pins the size of
-   * the miss so it cannot drift unnoticed; it is not an endorsement of it.
-   * See the INFEASIBILITY note in src/lib/laborProbability.ts.
+   * The reason the family changed. A left-skewed curve puts its mode to the
+   * right of its median, which showed "most likely single day" eight days after
+   * the due date. A symmetric term component puts them back together.
    */
-  it('the post-term share is the documented miss, not something worse', () => {
-    const got = 1 - cdf(CALIBRATION.postTermDay);
-    expect(got).toBeCloseTo(FIT_RESIDUALS.postTermShare, 3);
-    expect(got).toBeGreaterThan(CALIBRATION.postTermTargetShare);
-  });
-
-  it('no skew-normal can satisfy all three, which is why one is missed', () => {
-    // Hold the median at 283 and the post-term share at 6%, and sweep alpha to
-    // its limit. The best achievable preterm share stays below both the CDC
-    // figure and the spontaneous one.
-    const xiForMedian = (omega: number, alpha: number) => {
-      let low = 150;
-      let high = 460;
-      for (let i = 0; i < 120; i += 1) {
-        const mid = (low + high) / 2;
-        if (cdf(283, { xi: mid, omega, alpha }) > 0.5) low = mid;
-        else high = mid;
-      }
-      return (low + high) / 2;
-    };
-    const omegaForPostTerm = (alpha: number) => {
-      let low = 1;
-      let high = 140;
-      for (let i = 0; i < 120; i += 1) {
-        const omega = (low + high) / 2;
-        const model = { xi: xiForMedian(omega, alpha), omega, alpha };
-        if (1 - cdf(294, model) < 0.06) low = omega;
-        else high = omega;
-      }
-      return (low + high) / 2;
-    };
-
-    let bestPreterm = 0;
-    for (const alpha of [-1, -3, -10, -100, -1000]) {
-      const omega = omegaForPostTerm(alpha);
-      const model = { xi: xiForMedian(omega, alpha), omega, alpha };
-      bestPreterm = Math.max(bestPreterm, cdf(259, model));
-    }
-    expect(bestPreterm).toBeLessThan(CALIBRATION.pretermShare);
-    expect(bestPreterm).toBeLessThan(CALIBRATION.cdcAllBirthsPretermShare);
-    expect(bestPreterm).toBeCloseTo(0.0475, 3);
+  it('the mode sits within two days of the median', () => {
+    const mode = modeDay();
+    expect(Math.abs(mode - medianDay())).toBeLessThanOrEqual(
+      CALIBRATION.modeWithinDaysOfMedian,
+    );
+    expect(mode).toBe(FIT_RESIDUALS.modeDay);
   });
 
   it('leaves real mass past 43 weeks rather than calling it impossible', () => {
     expect(1 - cdf(43 * 7)).toBeGreaterThan(0.003);
     expect(1 - cdf(43 * 7)).toBeCloseTo(FIT_RESIDUALS.beyond43WeeksShare, 3);
-  });
-
-  it('is left-skewed, as the model requires', () => {
-    expect(LABOR_MODEL.alpha).toBeLessThan(0);
-    expect(modeDay()).toBeGreaterThan(CALIBRATION.medianDay);
   });
 });
 
@@ -208,26 +180,37 @@ describe('conditionalProbabilityInWindow', () => {
   });
 
   /**
-   * The headline number on the panel. It has to rise, or hold, every single day
-   * of the last trimester: a number that dipped as the due date approached
-   * would read as the pregnancy going backwards.
+   * The headline number on the panel. From 37 weeks on it has to rise, or hold,
+   * every single day: a number that dipped as the due date approached would
+   * read as the pregnancy going backwards.
    */
-  it('is monotonically non-decreasing across the last trimester', () => {
+  it('is monotonically non-decreasing from 37 weeks to 43 weeks', () => {
     let previous = -1;
-    for (let day = 28 * 7; day <= 42 * 7; day += 1) {
+    for (let day = CALIBRATION.pretermDay; day <= 43 * 7; day += 1) {
       const value = conditionalProbabilityInWindow(day, day + 7);
       expect(value, `day ${day}`).toBeGreaterThanOrEqual(previous - 1e-9);
       previous = value;
     }
   });
 
-  it('is also non-decreasing from the day the panel first appears', () => {
-    let previous = -1;
-    for (let day = 34 * 7; day <= 43 * 7; day += 1) {
-      const value = conditionalProbabilityInWindow(day, day + 7);
-      expect(value, `day ${day}`).toBeGreaterThanOrEqual(previous - 1e-9);
-      previous = value;
+  /**
+   * Between 34 and 37 weeks it is NOT monotonic, and this test pins the size of
+   * the dip rather than pretending otherwise. The preterm component runs out at
+   * 37w0d before the term one has begun, so the hazard falls there. It is a
+   * property of the four calibration targets, not of the assumed preterm shape:
+   * 6.7% of onsets have to fit below day 259 while the term component
+   * contributes almost nothing there. See the second ADR-005 addendum; this is
+   * the model's main open question for review.
+   */
+  it('dips between 34 and 37 weeks, by the documented amount', () => {
+    const at = (day: number) => conditionalProbabilityInWindow(day, day + 7);
+    expect(at(34 * 7)).toBeGreaterThan(at(CALIBRATION.pretermDay));
+    // The whole dip stays inside a range that reads as "unlikely either way".
+    for (let day = 34 * 7; day <= CALIBRATION.pretermDay; day += 1) {
+      expect(at(day), `day ${day}`).toBeGreaterThan(0.004);
+      expect(at(day), `day ${day}`).toBeLessThan(0.02);
     }
+    expect(at(CALIBRATION.pretermDay)).toBeCloseTo(0.0048, 3);
   });
 
   it('stays a probability', () => {
@@ -248,15 +231,15 @@ describe('conditionalProbabilityInWindow', () => {
     expect(conditionalProbabilityInWindow(34 * 7, 34 * 7 + 7)).toBeGreaterThan(0.005);
     expect(conditionalProbabilityInWindow(34 * 7, 34 * 7 + 7)).toBeLessThan(0.05);
     expect(conditionalProbabilityInWindow(40 * 7, 40 * 7 + 7)).toBeGreaterThan(0.25);
-    expect(conditionalProbabilityInWindow(40 * 7, 40 * 7 + 7)).toBeLessThan(0.6);
+    expect(conditionalProbabilityInWindow(40 * 7, 40 * 7 + 7)).toBeLessThan(0.7);
   });
 });
 
 describe('mode helpers', () => {
-  it('the mode sits just after the due date', () => {
+  it('the mode sits beside the due date, not a week past it', () => {
     const mode = modeDay();
     expect(mode).toBeGreaterThan(280);
-    expect(mode).toBeLessThan(296);
+    expect(mode).toBeLessThan(287);
   });
 
   it('the most likely remaining day never precedes today', () => {

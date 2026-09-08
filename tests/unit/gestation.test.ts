@@ -437,7 +437,7 @@ describe('validateInput', () => {
 });
 
 describe('misc guards', () => {
-  it('recognises dating methods', () => {
+  it('recognizes dating methods', () => {
     expect(isDatingMethod('lmp')).toBe(true);
     expect(isDatingMethod('dueDate')).toBe(true);
     expect(isDatingMethod('ultrasound')).toBe(false);

@@ -1,8 +1,8 @@
 /*
- * The swatches are the one place a literal colour is legitimate: each one has
+ * The swatches are the one place a literal color is legitimate: each one has
  * to render *another* skin's palette, which cannot come from the active
- * skin's tokens. The colours are set inline from the skin data, never
- * hard-coded, so this file itself still holds no literal colours.
+ * skin's tokens. The colors are set inline from the skin data, never
+ * hard-coded, so this file itself still holds no literal colors.
  */
 .skins {
   border: 0;

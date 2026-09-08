@@ -119,3 +119,60 @@ test('no cross-origin request is made on load (ADR-003)', async ({ page }) => {
   // cross-origin traffic is a Macaulay embed frame, and no row carries one yet.
   expect(external).toEqual([]);
 });
+
+/**
+ * ADR-007: only the Puffin faces are precached, so a skin the reader picks has
+ * to survive going offline on the strength of the runtime CacheFirst rule
+ * alone. Cardinal is the furthest from the default: neither Instrument Serif
+ * nor Instrument Sans is in the precache manifest.
+ */
+test('a skin picked online still renders offline (ADR-007)', async ({ page, context }) => {
+  await page.addInitScript(`{
+    try { if (!localStorage.getItem('nestling.v1')) localStorage.setItem('nestling.v1', JSON.stringify({
+      version: 1, method: 'lmp', inputDate: '2026-03-29',
+      settings: { units: 'imperial', laborPanelEnabled: true, skin: 'puffin' } })); } catch {}
+  }`);
+  await page.goto('/#/about');
+  await page.evaluate(() => navigator.serviceWorker.ready);
+
+  await page.getByRole('radio', { name: /Cardinal/ }).check();
+  await expect(page.locator('html')).toHaveAttribute('data-skin', 'cardinal');
+
+  // Both Cardinal faces, fetched over the network and written to the runtime
+  // cache. document.fonts.load resolves once the file is in, so waiting on it
+  // is what makes the offline assertion below meaningful rather than racy.
+  const loaded = await page.evaluate(async () => {
+    await Promise.all([
+      document.fonts.load('400 16px "Instrument Serif"', 'Nestling'),
+      document.fonts.load('400 16px "Instrument Sans"', 'Nestling'),
+    ]);
+    return [
+      document.fonts.check('400 16px "Instrument Serif"', 'Nestling'),
+      document.fonts.check('400 16px "Instrument Sans"', 'Nestling'),
+    ];
+  });
+  expect(loaded, 'both Cardinal faces load while online').toEqual([true, true]);
+
+  const cachedOnline = await page.evaluate(async () => {
+    const cache = await caches.open('nestling-fonts');
+    return (await cache.keys()).map((request) => new URL(request.url).pathname).sort();
+  });
+  expect(cachedOnline).toContain('/fonts/instrument-serif-400.woff2');
+  expect(cachedOnline).toContain('/fonts/instrument-sans-400.woff2');
+
+  await context.setOffline(true);
+  await page.reload();
+
+  // The skin, the Today card and the display face all survive the reload.
+  await expect(page.locator('html')).toHaveAttribute('data-skin', 'cardinal');
+  await page.goto('/#/');
+  await expect(page.getByRole('heading', { level: 2 })).toContainText('Atlantic Puffin');
+
+  const offline = await page.evaluate(async () => {
+    await document.fonts.load('400 16px "Instrument Serif"', 'Nestling');
+    return document.fonts.check('400 16px "Instrument Serif"', 'Nestling');
+  });
+  expect(offline, 'the Cardinal display face resolves with the network cut off').toBe(true);
+
+  await context.setOffline(false);
+});

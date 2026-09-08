@@ -10,10 +10,10 @@ const TOP = 20;
 
 /**
  * The daily curve from mockup 4, drawn as inline SVG straight from the model:
- * no chart library, and no hard-coded path. Every colour is a skin token.
+ * no chart library, and no hard-coded path. Every color is a skin token.
  *
  * The y axis is the unconditional daily density, which is what makes the shape
- * read as "when labour happens" rather than as a hazard that only ever climbs.
+ * read as "when labor happens" rather than as a hazard that only ever climbs.
  */
 export function LaborCurve({
   gestationalDays,

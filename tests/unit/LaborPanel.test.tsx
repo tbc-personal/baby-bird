@@ -108,7 +108,8 @@ describe('the labor screen (mockup 4)', () => {
   it('names its sources and states the caveats', () => {
     save();
     renderLabor(261);
-    expect(screen.getByRole('link', { name: 'Smith 2001' })).toBeInTheDocument();
+    // Cited twice: once for the median, once for the 42-week figure.
+    expect(screen.getAllByRole('link', { name: 'Smith 2001' })).toHaveLength(2);
     expect(
       screen.getByRole('link', { name: 'CDC preterm birth rate' }),
     ).toBeInTheDocument();
@@ -119,10 +120,10 @@ describe('the labor screen (mockup 4)', () => {
     expect(screen.getByText(/not medical\s+advice/)).toBeInTheDocument();
   });
 
-  it('states the known limitation rather than burying it', () => {
+  it('says the model contains no induction rather than burying it', () => {
     save();
     renderLabor(261);
-    expect(screen.getByText(/One known limitation/)).toBeInTheDocument();
+    expect(screen.getByText(/contains no induction at all/)).toBeInTheDocument();
     expect(screen.getByText(/past 42 weeks/)).toBeInTheDocument();
   });
 

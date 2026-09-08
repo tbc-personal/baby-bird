@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Lint (ESLint and the ADR-007 no-literal-colours rule)
+      - name: Lint (ESLint and the ADR-007 no-literal-colors rule)
         run: npm run lint
 
       - name: Typecheck
@@ -49,13 +49,6 @@ jobs:
         run: npm run test:e2e:smoke
 
       - name: Per-skin visual regression (ADR-007)
-        # Not blocking. The baselines in tests/e2e/__screenshots__ were generated
-        # in the build sandbox, and text rasterisation can differ between that
-        # and this runner even at the same Playwright and Chromium versions, so
-        # a diff here means "look at the artifact", not "the app is broken".
-        # Once a run has confirmed the baselines on this runner, drop
-        # continue-on-error and this becomes a real gate.
-        continue-on-error: true
         run: npm run test:e2e:visual
 
       - name: Upload the Playwright report when something fails

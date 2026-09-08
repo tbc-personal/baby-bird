@@ -36,7 +36,7 @@ Accounts, sync, kick counters, contraction timers, ads, anything commercial.
 src/
   main.tsx, App.tsx             routing (hash router keeps GitHub Pages simple)
   lib/gestation.ts              ADR-002 math, pure functions
-  lib/laborProbability.ts       ADR-005 skew-normal model, pure functions
+  lib/laborProbability.ts       ADR-005 two-component mixture model, pure functions
   lib/storage.ts                versioned localStorage + URL share params (ADR-006)
   data/comparisons.ts           typed import of ../data/comparisons.json + schema validation at build
   components/

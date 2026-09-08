@@ -19,10 +19,16 @@ npm run dev          # http://localhost:5173
 npm run build        # production build; VITE_BASE=/repo/ for a project Pages URL
 npm run test         # unit tests
 npm run test:e2e     # Playwright, against the preview build
-npm run lint         # ESLint plus the ADR-007 no-literal-colours rule
+npm run lint         # ESLint plus the ADR-007 no-literal-colors rule
 npm run typecheck
 npm run validate-data
 ```
+
+The per-skin screenshot baselines in `tests/e2e/__screenshots__` are pixel comparisons of text, so
+they have to be generated on the machine that checks them, which is the GitHub runner. Do not
+regenerate them locally: run the **Update the skin screenshots** workflow, either from the Actions
+tab or by pushing a commit whose message contains `[update-screenshots]`, and review the images it
+commits.
 
 `npm run fonts` re-downloads the self-hosted woff2 subsets, `npm run icons` regenerates the PWA
 icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor parameters, and
@@ -36,7 +42,7 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 | No Commons seed photos for weeks 2-6 | `docs/CURATION.md` |
 | The Macaulay embed `src` is an unverified guess, isolated in one constant | `docs/decisions/ADR-003-images.md` |
 | All 123 facts are `reviewed: false` and were written without opening their sources | `docs/CURATION.md` |
-| The labor model misses one of its three calibration targets, because no skew-normal can meet all three | `docs/decisions/ADR-005-datayze-derived-features.md` |
+| The labor model's weekly figure dips between 34 and 37 weeks, where the preterm component runs out | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
 ## What it will do (v1)
 - Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.
