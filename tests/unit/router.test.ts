@@ -9,7 +9,9 @@ describe('parseHash', () => {
     ['#/setup', { name: 'setup' }],
     ['#/setup/', { name: 'setup' }],
     ['#/timeline', { name: 'timeline' }],
-    ['#/about', { name: 'about' }],
+    // About merged into Setup; its URL still resolves rather than falling
+    // through to Today, so old bookmarks keep working.
+    ['#/about', { name: 'setup' }],
     ['#/labor', { name: 'labor' }],
     ['#/week/23', { name: 'week', week: 23 }],
     ['#/week/2', { name: 'week', week: 2 }],
@@ -29,7 +31,6 @@ describe('hrefFor', () => {
     [{ name: 'today' }, '#/'],
     [{ name: 'setup' }, '#/setup'],
     [{ name: 'timeline' }, '#/timeline'],
-    [{ name: 'about' }, '#/about'],
     [{ name: 'labor' }, '#/labor'],
     [{ name: 'week', week: 23 }, '#/week/23'],
   ] as ReadonlyArray<readonly [Route, string]>)('%o → %s', (route, expected) => {
@@ -41,7 +42,6 @@ describe('hrefFor', () => {
       { name: 'setup' },
       { name: 'today' },
       { name: 'timeline' },
-      { name: 'about' },
       { name: 'labor' },
       { name: 'week', week: 42 },
     ];
@@ -56,7 +56,6 @@ describe('activeTab', () => {
     [{ name: 'setup' }, 'setup'],
     [{ name: 'today' }, 'today'],
     [{ name: 'timeline' }, 'timeline'],
-    [{ name: 'about' }, 'about'],
     // A week card and the labor detail keep the Today tab lit (mockup 4).
     [{ name: 'week', week: 23 }, 'today'],
     [{ name: 'labor' }, 'today'],

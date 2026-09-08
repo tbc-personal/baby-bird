@@ -17,6 +17,40 @@ export const CONCEPTION_TO_DUE_DAYS = 266;
 /** Days by which conception trails LMP on the gestational-age scale. */
 export const LMP_TO_CONCEPTION_DAYS = 14;
 
+/**
+ * Cycle length, in days, and the value Naegele's rule assumes.
+ *
+ * Naegele's rule adds 280 days to the first day of the last period, which is
+ * only right for a 28-day cycle. Ovulation sits about 14 days before the *next*
+ * period rather than 14 days after the last one, so a longer cycle means a later
+ * conception and a later due date. The adjusted rule is
+ *
+ *     EDD = LMP + 280 + (cycleLength − 28)
+ *
+ * A 35-day cycle moves the due date a week later; a 24-day cycle moves it four
+ * days earlier. Cycle length is not the same thing as period duration: how many
+ * days the bleeding lasts does not shift the due date at all, because the count
+ * starts on its first day either way.
+ *
+ * This correction applies to `lmp` only. In `conception` and `dueDate` mode the
+ * user has already told us something downstream of ovulation, so there is
+ * nothing left to correct.
+ */
+export const DEFAULT_CYCLE_DAYS = 28;
+export const MIN_CYCLE_DAYS = 21;
+export const MAX_CYCLE_DAYS = 45;
+
+/** Clamp a cycle length into the range the Setup control offers. */
+export function clampCycleLength(cycleLength: number): number {
+  if (!Number.isFinite(cycleLength)) return DEFAULT_CYCLE_DAYS;
+  return clamp(Math.round(cycleLength), MIN_CYCLE_DAYS, MAX_CYCLE_DAYS);
+}
+
+/** Days the due date moves relative to plain Naegele. Zero on a 28-day cycle. */
+export function cycleShift(cycleLength: number): number {
+  return clampCycleLength(cycleLength) - DEFAULT_CYCLE_DAYS;
+}
+
 /** The first and last week that carry a comparison row. */
 export const FIRST_COMPARISON_WEEK = 2;
 export const LAST_COMPARISON_WEEK = 42;
@@ -66,13 +100,33 @@ export function daysBetween(from: Date, to: Date): number {
 }
 
 /**
- * Reduce a (method, date) pair to `lmpEquivalent`: the date that is day 0 of
- * gestational age. Table in ADR-002.
+ * Everything needed to place a pregnancy on the calendar: what the user chose
+ * to count from, the date they gave, and their cycle length.
+ *
+ * This is one object rather than three positional arguments so that adding
+ * `cycleLength` breaks every call site at compile time. A defaulted trailing
+ * parameter would have let a screen quietly keep computing 28-day due dates.
  */
-export function toLmpEquivalent(method: DatingMethod, inputDate: Date): Date {
+export interface Dating {
+  readonly method: DatingMethod;
+  readonly inputDate: Date;
+  /** Typical cycle length in days. Ignored unless `method` is `lmp`. */
+  readonly cycleLength: number;
+}
+
+/**
+ * Reduce a dating to `lmpEquivalent`: the date that is day 0 of gestational
+ * age. Table in ADR-002, as amended for cycle length.
+ *
+ * The cycle correction is applied here, at the single point where a user's
+ * input becomes the gestational scale, so that every downstream value — due
+ * date, gestational days, trimester, the comparison week, the labor model —
+ * inherits it without knowing it exists.
+ */
+export function toLmpEquivalent({ method, inputDate, cycleLength }: Dating): Date {
   switch (method) {
     case 'lmp':
-      return inputDate;
+      return addDays(inputDate, cycleShift(cycleLength));
     case 'conception':
       return addDays(inputDate, -LMP_TO_CONCEPTION_DAYS);
     case 'dueDate':
@@ -80,16 +134,21 @@ export function toLmpEquivalent(method: DatingMethod, inputDate: Date): Date {
   }
 }
 
-/** Convert a stored date from one dating method to another, preserving the pregnancy. */
+/**
+ * Convert a stored date from one dating method to another, preserving the
+ * pregnancy. Switching away from `lmp` folds the cycle correction into the new
+ * date; switching back to `lmp` unfolds it, so a round trip is lossless.
+ */
 export function convertInputDate(
   from: DatingMethod,
   to: DatingMethod,
   inputDate: Date,
+  cycleLength: number,
 ): Date {
-  const lmpEquivalent = toLmpEquivalent(from, inputDate);
+  const lmpEquivalent = toLmpEquivalent({ method: from, inputDate, cycleLength });
   switch (to) {
     case 'lmp':
-      return lmpEquivalent;
+      return addDays(lmpEquivalent, -cycleShift(cycleLength));
     case 'conception':
       return addDays(lmpEquivalent, LMP_TO_CONCEPTION_DAYS);
     case 'dueDate':
@@ -152,12 +211,8 @@ export interface Progress {
  * Everything the UI needs, derived from one date and one method plus today.
  * `today` is a Date whose local calendar fields are the user's current day.
  */
-export function computeProgress(
-  method: DatingMethod,
-  inputDate: Date,
-  today: Date,
-): Progress {
-  const lmpEquivalent = toLmpEquivalent(method, inputDate);
+export function computeProgress(dating: Dating, today: Date): Progress {
+  const lmpEquivalent = toLmpEquivalent(dating);
   const dueDate = dueDateFrom(lmpEquivalent);
   const gestationalDays = daysBetween(lmpEquivalent, today);
   const daysUntilDue = GESTATION_DAYS - gestationalDays;
@@ -265,6 +320,33 @@ export const VALIDATION_MESSAGE: Record<ValidationError['kind'], string> = {
   tooLongAgo: 'That date is more than 300 days ago.',
   dueTooFar: 'That due date is more than 280 days away.',
 };
+
+/**
+ * The seven calendar days that gestational week `week` covers: day `week * 7`
+ * through `week * 7 + 6` counted from day 0 of the gestational scale. "23 weeks
+ * 0 days" is the first day of week 23, so the row labelled week 23 is the week
+ * you are in while the header reads 23w0d through 23w6d.
+ */
+export function weekDateRange(
+  lmpEquivalent: Date,
+  week: number,
+): { readonly start: Date; readonly end: Date } {
+  return {
+    start: addDays(lmpEquivalent, week * 7),
+    end: addDays(lmpEquivalent, week * 7 + 6),
+  };
+}
+
+/**
+ * "6 weeks ahead", "1 week ago". Returns null at offset 0, where the honest
+ * answer is "this week" and the header says something more useful instead.
+ */
+export function formatWeekOffset(offset: number): string | null {
+  if (offset === 0) return null;
+  const magnitude = Math.abs(offset);
+  const weeks = `${magnitude} ${magnitude === 1 ? 'week' : 'weeks'}`;
+  return offset > 0 ? `${weeks} ahead` : `${weeks} ago`;
+}
 
 /** True on the two weeks that straddle the crown-rump → crown-heel switch. */
 export function isConventionSwitchWeek(week: number): boolean {

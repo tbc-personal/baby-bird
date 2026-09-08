@@ -1,70 +1,23 @@
 import { useState } from 'react';
-import { SkinPicker } from '../components/SkinPicker';
 import { useAppState } from '../useAppState';
-import type { SkinId } from '../skins/ids';
-import './About.css';
+import './Settings.css';
 
 /**
- * About (mockup state table): skin picker, unit preference, labor panel toggle,
- * sources, credits, the non-commercial statement, the medical disclaimer, and
- * "Forget my data".
+ * Everything the old About screen said below the settings: limitations, where
+ * the numbers come from, credits, the non-commercial statement, and the privacy
+ * copy with "Forget my data".
+ *
+ * It sits at the bottom of Setup now. The privacy copy stays here and out of
+ * the date form above it (ADR-006): the form asks for the date, this explains
+ * what happens to it.
  */
-export function AboutScreen() {
-  const { settings, updateSettings, forget, saved } = useAppState();
+export function AboutContent() {
+  const { forget, saved } = useAppState();
   const [confirmingForget, setConfirmingForget] = useState(false);
 
   return (
     <>
-      <h1 className="appname about__title">About Nestling</h1>
-
-      <section className="about__section">
-        <h2>Display</h2>
-        <SkinPicker
-          value={settings.skin}
-          onChange={(skin: SkinId) => {
-            updateSettings({ skin });
-          }}
-        />
-
-        <div className="toggle">
-          <span className="field__head" id="units-label">
-            Units
-          </span>
-          <div className="segmented" role="group" aria-labelledby="units-label">
-            <button
-              type="button"
-              aria-pressed={settings.units === 'imperial'}
-              onClick={() => {
-                updateSettings({ units: 'imperial' });
-              }}
-            >
-              in / oz
-            </button>
-            <button
-              type="button"
-              aria-pressed={settings.units === 'metric'}
-              onClick={() => {
-                updateSettings({ units: 'metric' });
-              }}
-            >
-              cm / g
-            </button>
-          </div>
-        </div>
-
-        <label className="toggle toggle--check">
-          <input
-            type="checkbox"
-            checked={settings.laborPanelEnabled}
-            onChange={(event) => {
-              updateSettings({ laborPanelEnabled: event.target.checked });
-            }}
-          />
-          <span>Show the labor chances panel from 34 weeks</span>
-        </label>
-      </section>
-
-      <section className="about__section">
+      <section className="section">
         <h2>Limitations</h2>
         <p>
           Fetal sizes are population averages. The labor chances are population statistics
@@ -78,13 +31,18 @@ export function AboutScreen() {
         </p>
       </section>
 
-      <section className="about__section">
+      <section className="section">
         <h2>Where the numbers come from</h2>
         <ul>
           <li>
             Fetal length and weight: the author&rsquo;s own table, drawn from{' '}
             <a href="https://datayze.com/">Datayze</a>. Length is crown to rump through week
             20 and head to heel from week 21, which is why it jumps between them.
+          </li>
+          <li>
+            Due dates count 280 days from the first day of your last period, adjusted for
+            your cycle length: a cycle longer than 28 days means later ovulation and a later
+            due date (ADR-002).
           </li>
           <li>
             Labor model: a two-part fit, one bell curve for preterm labor and one for term
@@ -99,7 +57,7 @@ export function AboutScreen() {
         </ul>
       </section>
 
-      <section className="about__section">
+      <section className="section">
         <h2>Credits</h2>
         <ul>
           <li>
@@ -115,7 +73,7 @@ export function AboutScreen() {
         </ul>
       </section>
 
-      <section className="about__section">
+      <section className="section">
         <h2>Non-commercial</h2>
         <p>
           Macaulay Library media may be embedded for non-commercial purposes only. This app
@@ -123,12 +81,13 @@ export function AboutScreen() {
         </p>
       </section>
 
-      <section className="about__section">
+      <section className="section section--last">
         <h2>Your data</h2>
         <p>
           Your date and these settings are stored on this device only. There are no
           accounts, no analytics, and nothing is sent anywhere. The only network requests
-          the app makes are the photo embeds.
+          the app makes are the photo embeds. A link you copy above carries your due date
+          and nothing else.
         </p>
         {confirmingForget ? (
           <div className="sheet">

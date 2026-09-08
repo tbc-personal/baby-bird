@@ -7,8 +7,11 @@
   border: 1.5px solid var(--ink-2);
   background: transparent;
   color: var(--ink-2);
-  font-family: var(--font-mono);
-  font-size: 10px;
+
+  /* A letter, not a numeral, so it takes the body face; --font-mono is
+     reserved for numbers everywhere else in the app. */
+  font-family: var(--font-body);
+  font-size: 11px;
   line-height: 1;
   display: grid;
   place-items: center;
@@ -26,9 +29,18 @@
   border: 1px solid var(--line);
   background: var(--note);
   color: var(--ink);
-  font-size: 11.5px;
+  font-size: 12px;
   display: grid;
   gap: 4px;
+}
+
+.info__panel[hidden] {
+  /*
+   * `display: grid` above outranks the user-agent `[hidden] { display: none }`
+   * rule, so without this the panel stays visible and the info button appears
+   * to do nothing but change the spacing.
+   */
+  display: none;
 }
 
 .info__panel div {

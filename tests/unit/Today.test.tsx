@@ -20,10 +20,10 @@ function saveLmp(inputDate: string) {
   );
 }
 
-function renderToday(today: string) {
+function renderToday(today: string, week: number | null = null) {
   return render(
     <AppStateProvider>
-      <TodayScreen today={day(today)} />
+      <TodayScreen today={day(today)} week={week} />
     </AppStateProvider>,
   );
 }
@@ -44,7 +44,8 @@ describe('Today screen (mockup 2)', () => {
     expect(heading).toHaveTextContent('23 weeks, 0 days');
     expect(heading).toHaveTextContent('119 days to go');
 
-    expect(screen.getByText('Week 23')).toBeInTheDocument();
+    // "Week 23" is not repeated on the card itself — the heading above already
+    // carries the week number, so the card leads straight with the comparison.
     expect(screen.getByText('Your baby is roughly the size of an')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Atlantic Puffin');
     expect(screen.getByText('Fratercula arctica')).toBeInTheDocument();
@@ -54,12 +55,12 @@ describe('Today screen (mockup 2)', () => {
     expect(screen.getByText('weight (17.6 oz)')).toBeInTheDocument();
   });
 
-  it('uses the exact share-button wording', () => {
+  it('no longer carries the share button, which now lives on Setup', () => {
     saveLmp('2026-03-29');
     renderToday('2026-09-06');
     expect(
-      screen.getByRole('button', { name: 'Copy a shareable link' }),
-    ).toBeInTheDocument();
+      screen.queryByRole('button', { name: 'Copy a shareable link' }),
+    ).not.toBeInTheDocument();
   });
 
   it('shows the too-early state before week 2', () => {
@@ -168,5 +169,87 @@ describe('ComparisonCard', () => {
   it('says the seed weights are an upper bound', () => {
     card(2);
     expect(screen.getByText('weight, under 0.04 oz')).toBeInTheDocument();
+  });
+});
+
+describe('looking ahead and back', () => {
+  /** Week 23 on 2026-09-06, so there is room to step in both directions. */
+  const AT_WEEK_23 = '2026-09-06';
+
+  it('keeps days-to-go on the present week and shows no date range', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23);
+    expect(screen.getByText(/119 days to go/)).toBeInTheDocument();
+    expect(screen.queryByText(/back to this week/)).toBeNull();
+  });
+
+  it('points the arrows at the neighbouring weeks', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23);
+    expect(screen.getByRole('link', { name: 'Previous week' })).toHaveAttribute(
+      'href',
+      '#/week/22',
+    );
+    expect(screen.getByRole('link', { name: 'Next week' })).toHaveAttribute(
+      'href',
+      '#/week/24',
+    );
+  });
+
+  it('shows a future week, its offset and its calendar dates', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23, 24);
+
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 24');
+    expect(screen.getByText(/1 week ahead/)).toBeInTheDocument();
+    expect(screen.getByText(/September 13–19/)).toBeInTheDocument();
+    expect(screen.queryByText(/days to go/)).toBeNull();
+  });
+
+  it('shows a past week', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23, 21);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 21');
+    expect(screen.getByText(/2 weeks ago/)).toBeInTheDocument();
+  });
+
+  it("shows the browsed week's card, not the current one", () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23, 24);
+    expect(screen.queryByText('Atlantic Puffin')).toBeNull();
+    expect(screen.getByText(weekRow(24)?.comparison ?? '')).toBeInTheDocument();
+  });
+
+  it('offers a way back to the present week', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23, 24);
+    expect(screen.getByRole('link', { name: 'back to this week' })).toHaveAttribute(
+      'href',
+      '#/',
+    );
+  });
+
+  it('stops at the ends of the range without moving the heading', () => {
+    saveLmp('2026-03-29');
+    renderToday(AT_WEEK_23, 42);
+
+    // Rendered as a span, so it is not a link and not focusable, but the
+    // accessible name and the space it occupies both survive.
+    expect(screen.queryByRole('link', { name: 'Next week' })).toBeNull();
+    expect(screen.getByLabelText('Next week')).toHaveAttribute('aria-disabled', 'true');
+    expect(screen.getByRole('link', { name: 'Previous week' })).toHaveAttribute(
+      'href',
+      '#/week/41',
+    );
+  });
+
+  it('hides the labor panel while browsing, since it is about now', () => {
+    saveLmp('2026-03-29');
+    const present = renderToday('2026-12-01');
+    expect(screen.getByText(/chance labor starts/i)).toBeInTheDocument();
+    present.unmount();
+
+    renderToday('2026-12-01', 30);
+    expect(screen.queryByText(/chance labor starts/i)).toBeNull();
   });
 });

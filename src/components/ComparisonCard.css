@@ -20,17 +20,12 @@
   letter-spacing: -0.01em;
 }
 
-.card__week {
-  display: block;
-  font-family: var(--font-body);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 13px;
-  color: var(--ink-2);
-  letter-spacing: 0;
-  margin-bottom: 2px;
-}
-
+/*
+ * The lead line and scientific name split the vertical space "Week N" used to
+ * take (removed: the screen header above the card already shows the week
+ * number, so repeating it here was redundant) — a bit more margin on each
+ * rather than just letting the heading sit higher.
+ */
 .card__lead {
   display: block;
   font-family: var(--font-body);
@@ -38,7 +33,7 @@
   font-size: 12px;
   color: var(--ink-2);
   letter-spacing: 0;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .card__sci {
@@ -49,7 +44,7 @@
   font-size: 12px;
   color: var(--ink-2);
   letter-spacing: 0;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .dims {
@@ -58,10 +53,25 @@
   gap: 8px;
 }
 
+/* Each inset is a button: tapping it opens that measure's trend chart. */
 .dim {
   background: var(--secondary-soft);
+  border: none;
   border-radius: 8px;
   padding: 6px 8px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dim:hover {
+  background: var(--accent-soft);
+}
+
+.dim:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
 }
 
 .dim b {
@@ -78,7 +88,7 @@
 ul.facts {
   margin: 0;
   padding-left: 16px;
-  font-size: 12.5px;
+  font-size: 13px;
   display: grid;
   gap: 4px;
 }

@@ -24,6 +24,7 @@ const PAIRS: ReadonlyArray<readonly [string, keyof Tokens, keyof Tokens, number]
   ['heading on the photo area', 'ink', 'egg', AA],
   ['links on paper', 'secondary', 'paper', AA],
   ['tile value on the tile', 'secondary', 'secondarySoft', AA],
+  ['due-date pill on the accent tint', 'ink', 'accentSoft', AA],
   ['button label on the accent', 'onAccent', 'accent', AA],
   ['focus ring on paper', 'focus', 'paper', AA_LARGE],
   ['focus ring on ground', 'focus', 'ground', AA_LARGE],

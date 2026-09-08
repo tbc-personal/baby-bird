@@ -7,9 +7,7 @@ import { Tabs } from './components/Tabs';
 import { SetupScreen } from './screens/Setup';
 import { TodayScreen } from './screens/Today';
 import { TimelineScreen } from './screens/Timeline';
-import { WeekScreen } from './screens/Week';
 import { LaborScreen } from './screens/Labor';
-import { AboutScreen } from './screens/About';
 import { applySkin } from './skins';
 import './styles/app.css';
 
@@ -90,16 +88,15 @@ export function App() {
         return <SetupScreen today={today} shared={shared} />;
       case 'timeline':
         return <TimelineScreen today={today} />;
+      // A week other than the present one is the same screen, positioned.
       case 'week':
-        return <WeekScreen week={route.week} today={today} />;
+        return <TodayScreen today={today} week={route.week} />;
       case 'labor':
         return <LaborScreen today={today} />;
-      case 'about':
-        return <AboutScreen />;
       case 'today':
       default:
         return hasDate ? (
-          <TodayScreen today={today} />
+          <TodayScreen today={today} week={null} />
         ) : (
           <SetupScreen today={today} shared={shared} />
         );
