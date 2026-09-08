@@ -15,6 +15,23 @@ describe('the bottom tab bar', () => {
     expect(screen.queryByRole('link', { name: 'About' })).toBeNull();
   });
 
+  it('puts Today first and Setup last', () => {
+    renderTabs('#/');
+    const nav = screen.getByRole('navigation', { name: 'Sections' });
+    const names = [...nav.children].map(
+      (child) => child.getAttribute('aria-label') ?? child.textContent,
+    );
+    expect(names).toEqual(['Today', 'Timeline', 'Setup']);
+  });
+
+  it('lights the Today tab for a routed week', () => {
+    renderTabs('#/week/29');
+    expect(screen.getByRole('link', { name: 'Today' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    );
+  });
+
   it('gives the icon-only Setup tab an accessible name', () => {
     renderTabs('#/');
     const setup = screen.getByRole('link', { name: 'Setup' });

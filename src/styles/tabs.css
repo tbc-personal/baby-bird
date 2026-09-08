@@ -6,6 +6,19 @@
   padding: 8px 0 max(8px, env(safe-area-inset-bottom));
   position: sticky;
   bottom: 0;
+
+  /*
+   * Above page content, below the things that must sit above the bar.
+   *
+   * Without this the bar was z-index auto, and .skin input — the transparent
+   * full-card overlay on each skin swatch, z-index 1 — painted over it. On
+   * Setup that put an invisible radio on top of the tabs, so aiming at
+   * Timeline changed your skin instead.
+   *
+   * The ladder: content 0, in-content overlays 1, this bar 5, skip link 10,
+   * modal dialog 20.
+   */
+  z-index: 5;
 }
 
 .tabs a,

@@ -43,7 +43,7 @@ describe('the labor card on Today', () => {
   function renderToday(gestationalDay: number) {
     return render(
       <AppStateProvider>
-        <TodayScreen today={dayOfGestation(gestationalDay)} />
+        <TodayScreen today={dayOfGestation(gestationalDay)} week={null} />
       </AppStateProvider>,
     );
   }

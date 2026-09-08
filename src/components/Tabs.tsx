@@ -2,10 +2,15 @@ import { activeTab, hrefFor, type Route } from '../lib/router';
 import { SlidersIcon } from './SlidersIcon';
 import '../styles/tabs.css';
 
+/*
+ * Today first: it is where the app opens and where you spend your time. Setup
+ * sits last, on the right, which is where a settings affordance is looked for
+ * and the furthest from a thumb about to tap something it uses every day.
+ */
 const TABS = [
-  { id: 'setup', label: 'Setup', href: hrefFor({ name: 'setup' }), icon: true },
   { id: 'today', label: 'Today', href: hrefFor({ name: 'today' }), icon: false },
   { id: 'timeline', label: 'Timeline', href: hrefFor({ name: 'timeline' }), icon: false },
+  { id: 'setup', label: 'Setup', href: hrefFor({ name: 'setup' }), icon: true },
 ] as const;
 
 /**

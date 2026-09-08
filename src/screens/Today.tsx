@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import {
-  clamp,
   computeProgress,
   FIRST_COMPARISON_WEEK,
   formatDaysRemaining,
@@ -13,6 +11,7 @@ import {
   type Progress,
 } from '../lib/gestation';
 import { formatDateRange, formatShortDate } from '../lib/dates';
+import { hrefFor } from '../lib/router';
 import { datingFrom, isReviewMode } from '../lib/storage';
 import { weekRow } from '../data/comparisons';
 import { ComparisonCard } from '../components/ComparisonCard';
@@ -26,16 +25,20 @@ export const BASE_URL: string = import.meta.env.BASE_URL;
 
 /**
  * Mockup 2. Header with trimester and due date, the big weeks-and-days line,
- * a progress bar, and this week's card — plus arrows to look ahead or back.
+ * a progress bar, and a week's card — plus arrows to look ahead or back.
  *
- * Browsing is screen state, not a route: `#/week/:n` already exists for a
- * linkable week (it is what the timeline opens), and giving the same content
- * two addressable URLs would mean two things to keep in step. Stepping away
- * from the present week here is a glance, and it resets when you leave.
+ * The viewed week lives in the route, not in component state: `#/` is the week
+ * you are actually in, and `#/week/:n` is any other week, rendered by this same
+ * screen. That reverses the earlier decision to hold the offset in state. The
+ * timeline has to navigate somewhere, and once it does, state and route are two
+ * representations of one thing to keep in step. Routing it also gets the back
+ * button working through a browse, and keeps a week deep-linkable.
+ *
+ * `#/week/:n` used to render a separate, thinner screen with no header and no
+ * arrows, which is why tapping a timeline row felt like leaving the app.
  */
-export function TodayScreen({ today }: { today: Date }) {
+export function TodayScreen({ today, week }: { today: Date; week: number | null }) {
   const { saved, settings } = useAppState();
-  const [weekOffset, setWeekOffset] = useState(0);
   if (!saved) return null;
 
   const inputDate = parseIsoDate(saved.inputDate);
@@ -44,43 +47,51 @@ export function TodayScreen({ today }: { today: Date }) {
   const progress = computeProgress(datingFrom(saved, inputDate), today);
   const reviewMode = isReviewMode(window.location.href, import.meta.env.DEV);
 
-  // Only a week with a comparison row can be browsed; before conception and
-  // past 42 weeks there is nothing on either side to step to.
-  const currentWeek = progress.comparisonWeek;
-  const viewedWeek =
-    currentWeek === null
-      ? null
-      : clamp(currentWeek + weekOffset, FIRST_COMPARISON_WEEK, LAST_COMPARISON_WEEK);
-  // Re-derive the offset from the clamped week rather than trusting the raw
-  // state, so holding the arrow at either end cannot bank invisible steps.
-  const actualOffset = viewedWeek === null || currentWeek === null ? 0 : viewedWeek - currentWeek;
-
-  function step(by: number) {
-    if (currentWeek === null) return;
-    setWeekOffset(
-      clamp(currentWeek + actualOffset + by, FIRST_COMPARISON_WEEK, LAST_COMPARISON_WEEK) -
-        currentWeek,
+  // A week outside the table, reached by editing the URL by hand. Clamping it
+  // to 42 would silently show the wrong week, so say so instead — the same
+  // empty state the separate week screen used to give.
+  if (week !== null && (week < FIRST_COMPARISON_WEEK || week > LAST_COMPARISON_WEEK)) {
+    return (
+      <>
+        <EmptyState
+          title={`No comparison for week ${String(week)}`}
+          body="The table runs from week 2 to week 42."
+        />
+        <p className="small">
+          <a href={hrefFor({ name: 'timeline' })}>Back to the timeline</a>
+        </p>
+      </>
     );
   }
+
+  const currentWeek = progress.comparisonWeek;
+  const viewedWeek = week ?? currentWeek;
+
+  // Browsing means looking at a week other than the one you are in. A routed
+  // week that happens to be the current one is not browsing, so tapping your
+  // own row in the timeline lands you back on the live reading rather than on
+  // a "0 weeks ahead" version of it.
+  const browsing = week !== null && week !== currentWeek;
+  // The offset only means something when there is a current week to count
+  // from. Before conception there is not, and the header omits the phrase.
+  const offset =
+    browsing && currentWeek !== null && viewedWeek !== null ? viewedWeek - currentWeek : 0;
 
   return (
     <>
       <ProgressHeader
         progress={progress}
         viewedWeek={viewedWeek}
-        offset={actualOffset}
-        onStep={currentWeek === null ? null : step}
-        onReturn={() => {
-          setWeekOffset(0);
-        }}
+        browsing={browsing}
+        offset={offset}
       />
 
-      {progress.status === 'invalid' ? (
+      {!browsing && progress.status === 'invalid' ? (
         <EmptyState
           title="That date has not arrived yet"
           body="Counting starts from the date you entered. Change it in Setup."
         />
-      ) : progress.status === 'tooEarly' ? (
+      ) : !browsing && progress.status === 'tooEarly' ? (
         <EmptyState
           title="Too early for a comparison"
           body="Counting starts from your period date, so the first two weeks are before conception."
@@ -94,7 +105,7 @@ export function TodayScreen({ today }: { today: Date }) {
         days — so it stays behind while you browse other weeks.
       */}
       {settings.laborPanelEnabled &&
-      actualOffset === 0 &&
+      !browsing &&
       progress.gestationalDays >= LABOR_PANEL_FROM_DAY ? (
         <LaborPanelCard gestationalDays={progress.gestationalDays} />
       ) : null}
@@ -105,64 +116,48 @@ export function TodayScreen({ today }: { today: Date }) {
 export function ProgressHeader({
   progress,
   viewedWeek,
+  browsing,
   offset,
-  onStep,
-  onReturn,
 }: {
   progress: Progress;
   viewedWeek: number | null;
-  /** Weeks from the present one. Zero means you are looking at today. */
+  /** True when the viewed week is not the week you are actually in. */
+  browsing: boolean;
+  /**
+   * Weeks from the present one. Zero while not browsing, and also zero when
+   * there is no present week to count from, where the dates carry the meaning
+   * on their own.
+   */
   offset: number;
-  /** Null when there is no comparison week to step away from. */
-  onStep: ((by: number) => void) | null;
-  onReturn: () => void;
 }) {
-  const browsing = offset !== 0;
   const range =
-    browsing && viewedWeek !== null
-      ? weekDateRange(progress.lmpEquivalent, viewedWeek)
-      : null;
+    browsing && viewedWeek !== null ? weekDateRange(progress.lmpEquivalent, viewedWeek) : null;
 
   return (
     <>
-      {/*
-        Pills rather than plain grey text: the skins were barely visible on
-        Today, because almost everything above the card is ink on the page
-        ground. These two chips are the one place a tint costs nothing.
-      */}
       <div className="meta meta--pills">
         <span className="pill pill--trimester">
           {progress.trimester ? TRIMESTER_LABEL[progress.trimester] : 'Not started'}
         </span>
-        <span className="pill pill--due mono">
-          due {formatShortDate(progress.dueDate)}
-        </span>
+        <span className="pill pill--due mono">due {formatShortDate(progress.dueDate)}</span>
       </div>
 
       <div className="head">
-        <Arrow
-          direction="back"
-          onStep={onStep}
-          disabled={viewedWeek !== null && viewedWeek <= FIRST_COMPARISON_WEEK}
-        />
+        <Arrow direction="back" viewedWeek={viewedWeek} />
         <h1 className="big">
           {browsing ? `Week ${String(viewedWeek)}` : formatWeeksAndDays(progress)}{' '}
-          <small>{browsing ? formatWeekOffset(offset) : formatDaysRemaining(progress)}</small>
+          <small>
+            {browsing ? formatWeekOffset(offset) : formatDaysRemaining(progress)}
+          </small>
         </h1>
-        <Arrow
-          direction="forward"
-          onStep={onStep}
-          disabled={viewedWeek !== null && viewedWeek >= LAST_COMPARISON_WEEK}
-        />
+        <Arrow direction="forward" viewedWeek={viewedWeek} />
       </div>
 
       {range ? (
         <p className="head__range small">
           {formatDateRange(range.start, range.end)}
           {' · '}
-          <button type="button" className="linkish" onClick={onReturn}>
-            back to this week
-          </button>
+          <a href={hrefFor({ name: 'today' })}>back to this week</a>
         </p>
       ) : null}
 
@@ -176,27 +171,38 @@ export function ProgressHeader({
   );
 }
 
-/** One of the two header arrows. Rendered disabled rather than hidden, so the header does not reflow at the ends of the range. */
+/**
+ * One of the two header arrows. A link rather than a button, because it changes
+ * the route: it should middle-click, long-press and keyboard like navigation,
+ * which is what it now is.
+ *
+ * At either end of the range it renders as a span rather than vanishing, so the
+ * heading does not jump sideways on week 2 or week 42 — the same treatment the
+ * tab bar gives a tab you cannot reach yet.
+ */
 function Arrow({
   direction,
-  onStep,
-  disabled,
+  viewedWeek,
 }: {
   direction: 'back' | 'forward';
-  onStep: ((by: number) => void) | null;
-  disabled: boolean;
+  viewedWeek: number | null;
 }) {
   const back = direction === 'back';
+  const label = back ? 'Previous week' : 'Next week';
+  const glyph = back ? '\u2190' : '\u2192';
+  const target = viewedWeek === null ? null : viewedWeek + (back ? -1 : 1);
+
+  if (target === null || target < FIRST_COMPARISON_WEEK || target > LAST_COMPARISON_WEEK) {
+    return (
+      <span className="head__arrow" aria-disabled="true" aria-label={label}>
+        {glyph}
+      </span>
+    );
+  }
   return (
-    <button
-      type="button"
-      className="head__arrow"
-      aria-label={back ? 'Previous week' : 'Next week'}
-      disabled={onStep === null || disabled}
-      onClick={() => onStep?.(back ? -1 : 1)}
-    >
-      {back ? '\u2190' : '\u2192'}
-    </button>
+    <a className="head__arrow" href={hrefFor({ name: 'week', week: target })} aria-label={label}>
+      {glyph}
+    </a>
   );
 }
 
