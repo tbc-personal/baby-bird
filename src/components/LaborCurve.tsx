@@ -1,4 +1,5 @@
 import { cdf, CURVE_FIRST_DAY, CURVE_LAST_DAY, pdf } from '../lib/laborProbability';
+import './Legend.css';
 import './LaborCurve.css';
 
 const WIDTH = 264;

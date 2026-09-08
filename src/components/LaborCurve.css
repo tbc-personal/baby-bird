@@ -51,29 +51,8 @@
   font-size: 8px;
 }
 
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 11px;
-  color: var(--ink-2);
-}
-
-.legend i {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  margin-right: 4px;
-  vertical-align: -1px;
-}
-
 .legend__line {
   background: var(--secondary);
-}
-
-.legend__today {
-  background: var(--accent);
 }
 
 .legend__due {

@@ -7,6 +7,7 @@ import {
   FIRST_COMPARISON_WEEK,
   LAST_COMPARISON_WEEK,
 } from '../lib/gestation';
+import './Legend.css';
 import './MeasureChart.css';
 
 export type Measure = 'length' | 'weight';
