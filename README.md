@@ -44,14 +44,20 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 | All 123 facts are `reviewed: false` and were written without opening their sources | `docs/CURATION.md` |
 | The labor model's weekly figure dips between 34 and 37 weeks, where the preterm component runs out | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
-## What it will do (v1)
-- Choose how to count (last menstrual period, conception date, or a known due date) and enter the date.
+## What it does
+- Choose how to count (last menstrual period, conception date, or a known due date) and enter the
+  date. Counting from a period also asks your typical cycle length, because Naegele's 280 days
+  assumes a 28-day cycle and a longer one means later ovulation and a later due date (ADR-002).
 - See progress as weeks and days, days remaining, and trimester.
+- Look ahead or back a week at a time from Today, with the calendar dates that week covers.
+- Tap either measurement to see that measure plotted across weeks 2-42, this week marked.
 - See this week's comparison with fetal length and weight, a Cornell Lab Macaulay Library photo embed,
   two or three short original bird facts, and a link to the species on All About Birds.
 - Browse the full week-by-week timeline.
 - From 34 weeks, see the chance of going into labor in the next week, re-derived from published studies.
 - Seven skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
+- Setup and About are one page, reached from the sliders tab: the date first, then display settings,
+  sources, credits and "Forget my data".
 - Works as an installable web app. Data stays on your device.
 
 ## Naming
@@ -78,6 +84,8 @@ The project has no ads, no paid tier, and must not be used commercially. See
 | `docs/research/` | Licensing findings; Datayze feature feasibility and sources |
 | `docs/CURATION.md` | Human checklist: image IDs, fact review, slug verification |
 | `docs/mockups/` | Static HTML mockups of the main screens and skins; offline goose SVG |
+| `docs/V0.1.0-TRIAGE.md` | The v0.1.0 change list: what was done, what is deferred, and why |
+| `docs/research/font-audit.md` | Typography inventory; what is deliberately inconsistent |
 | `data/comparisons.json` | Single source of truth for weeks, sizes, species, images, facts |
 | `data/size-comparisons.source.csv` | The original spreadsheet export |
 | `prompts/opus-build-prompt.md` | The prompt for the implementation session |
