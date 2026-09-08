@@ -48,6 +48,36 @@ per row is untouched, since that drives the card link ADR-004 asks for and is no
 citation. Regenerate the evidence corpus with `npm run fact-sources` and audit the
 reports with `npm run verify-fact-check`.
 
+**Task A is half done.** The four seed weeks that have a usable Commons photo are
+sourced, downloaded and credited: week 2 poppy, week 4 nyjer, week 5 millet, week 6
+sunflower. The curated choices live in `docs/research/seed-images.json` with a note on
+why each was picked; `npm run seed-images` does the mechanical half — fetch the metadata,
+refuse any licence not on ADR-003's allowed list, download, resize, and write the `image`
+object. To swap a photo, change `commonsTitle` there and re-run. Attribution is never
+hand-typed: author, licence, licence URL and source URL all come from the Commons API.
+
+`vite.config.ts` now precaches `jpg` as well. Without it those four cards would have
+broken offline, which is the one case shipping the photos locally was meant to cover.
+
+Two parts of task A are **not** done, for different reasons:
+
+- **Week 3, the grit photo.** No suitable Commons image exists. Searches for poultry,
+  pigeon, gizzard and granite grit return only scanned pages from pre-1920 poultry
+  manuals; coarse-sand searches return beach and sandstone geology, which does not read
+  as something a bird swallows. This is moot until the comparison is settled anyway —
+  week 3 is still `proposed: true`, and the fact-check found its only citation never
+  mentions grouse, doves or roadsides. Decide the comparison first.
+- **Macaulay asset ids and the embed template, weeks 7–42.** Still yours, and now more
+  firmly so. `macaulaylibrary.org` and `search.macaulaylibrary.org` are behind
+  **Anubis**, a proof-of-work challenge whose own page says it is there "to protect the
+  server against the scourge of AI companies aggressively scraping websites". Every
+  HTTP 200 from those hosts is that challenge page, not content. A headless browser
+  would likely solve the challenge, but doing so to read Cornell's catalog is the
+  scraping the challenge exists to stop, so this session did not. ADR-003's verification
+  step is unchanged and small: one person, one asset page, one Embed dialog, compared
+  against `MACAULAY_EMBED_TEMPLATE`. Nothing is blocked meanwhile — no row carries an
+  `mlAssetId`, so those cards render the silhouette tagged "Photo coming".
+
 That pass does **not** discharge the review below. It found 2 contradicted facts,
 21 partly supported and 1 unverifiable, and all of those are now corrected — but the
 99 facts it marked supported have not been independently re-read, and `reviewed: true`

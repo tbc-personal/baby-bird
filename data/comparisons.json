@@ -31,11 +31,17 @@
       "wikipediaTitle": "Poppy_seed",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Poppy seeds magnified far past life size, each one kidney-shaped and covered in a fine honeycomb pattern.",
+        "file": "images/seeds/poppy-seed.jpg",
+        "author": "USGS Bee Inventory and Monitoring Lab",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Poppy_Seed_2016-10-31-16.12_(30659262306).jpg"
       },
       "facts": [
         {
@@ -121,11 +127,17 @@
       "wikipediaTitle": "Guizotia_abyssinica",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A round dish filled with nyjer seeds, thin black slivers packed tightly together.",
+        "file": "images/seeds/nyjer-seed.jpg",
+        "author": "Gaurav Dhwaj Khadka",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niger_Seed.jpg"
       },
       "facts": [
         {
@@ -166,11 +178,17 @@
       "wikipediaTitle": "Proso_millet",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A round dish of white proso millet, small pale round grains with a faint sheen.",
+        "file": "images/seeds/millet-seed.jpg",
+        "author": "Gaurav Dhwaj Khadka",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:White_Proso_Millet.jpg"
       },
       "facts": [
         {
@@ -211,11 +229,17 @@
       "wikipediaTitle": "Sunflower_seed",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
+        "file": "images/seeds/sunflower-seed.jpg",
+        "author": "Dmitry Makeev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunflower_seeds._img_004.jpg"
       },
       "facts": [
         {
@@ -1354,7 +1378,7 @@
       "week": 32,
       "lengthIn": 16.69,
       "lengthMeasure": "crown-heel",
-      "weightOz": 60.0,
+      "weightOz": 60,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Hooded Merganser",
@@ -1489,7 +1513,7 @@
       "week": 35,
       "lengthIn": 18.19,
       "lengthMeasure": "crown-heel",
-      "weightOz": 84.0,
+      "weightOz": 84,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Red-tailed Hawk",
@@ -1665,7 +1689,7 @@
       "week": 39,
       "lengthIn": 19.96,
       "lengthMeasure": "crown-heel",
-      "weightOz": 116.0,
+      "weightOz": 116,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Mallard",
@@ -1796,7 +1820,7 @@
     },
     {
       "week": 42,
-      "lengthIn": 21.0,
+      "lengthIn": 21,
       "lengthMeasure": "crown-heel",
       "weightOz": 129.92,
       "weightIsUpperBound": false,

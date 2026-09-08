@@ -17,6 +17,7 @@
     "fact-sources": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-fact-sources.ts",
     "verify-fact-check": "tsx scripts/verify-fact-check.ts",
     "apply-fact-check": "tsx scripts/apply-fact-check.ts",
+    "seed-images": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-seed-images.ts",
     "fit-labor-model": "tsx scripts/fit-labor-model.ts",
     "fonts": "tsx scripts/fetch-fonts.ts",
     "icons": "tsx scripts/generate-icons.ts",
