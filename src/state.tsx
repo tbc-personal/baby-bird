@@ -15,7 +15,7 @@ import {
   type SavedState,
   type Settings,
 } from './lib/storage';
-import type { DatingMethod, IsoDate } from './lib/gestation';
+import { clampCycleLength, type DatingMethod, type IsoDate } from './lib/gestation';
 import { AppStateContext, type AppState } from './stateContext';
 
 interface Model {
@@ -32,12 +32,13 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   });
 
   const save = useCallback(
-    (method: DatingMethod, inputDate: IsoDate) => {
+    (method: DatingMethod, inputDate: IsoDate, cycleLength: number) => {
       setModel((previous) => {
         const next: SavedState = {
           version: STATE_VERSION,
           method,
           inputDate,
+          cycleLength: clampCycleLength(cycleLength),
           settings: previous.settings,
         };
         store.write(next);

@@ -10,8 +10,7 @@ export type Route =
   | { readonly name: 'today' }
   | { readonly name: 'timeline' }
   | { readonly name: 'week'; readonly week: number }
-  | { readonly name: 'labor' }
-  | { readonly name: 'about' };
+  | { readonly name: 'labor' };
 
 export const DEFAULT_ROUTE: Route = { name: 'today' };
 
@@ -31,8 +30,11 @@ export function parseHash(hash: string): Route {
       return { name: 'timeline' };
     case 'labor':
       return { name: 'labor' };
+    // Setup absorbed About. The old URL keeps resolving rather than falling
+    // through to Today, so a bookmark or a shared #/about link still lands
+    // somewhere sensible.
     case 'about':
-      return { name: 'about' };
+      return { name: 'setup' };
     case 'week': {
       const week = Number(tail);
       if (!Number.isInteger(week)) return DEFAULT_ROUTE;
@@ -54,8 +56,8 @@ export function hrefFor(route: Route): string {
   }
 }
 
-/** Which of the four bottom tabs is lit. Labor is reached from Today (mockup 4). */
-export type TabId = 'setup' | 'today' | 'timeline' | 'about';
+/** Which of the three bottom tabs is lit. Labor is reached from Today (mockup 4). */
+export type TabId = 'setup' | 'today' | 'timeline';
 
 export function activeTab(route: Route): TabId {
   switch (route.name) {
@@ -63,8 +65,6 @@ export function activeTab(route: Route): TabId {
       return 'setup';
     case 'timeline':
       return 'timeline';
-    case 'about':
-      return 'about';
     // A week card and the labor detail both keep the Today tab selected.
     case 'today':
     case 'week':

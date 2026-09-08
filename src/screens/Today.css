@@ -1,11 +1,90 @@
-.today__share {
+/*
+ * The header row: an arrow, the big line, an arrow. The arrows keep their
+ * width whether or not they are usable, so stepping to either end of the
+ * range does not shift the heading sideways.
+ */
+.head {
   display: grid;
-  gap: 2px;
-  margin-top: 4px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
 }
 
-.today__share p {
-  min-height: 18px;
-  margin: 0;
-  text-align: center;
+.head .big {
+  min-width: 0;
+}
+
+/*
+ * The arrows narrow the heading enough that "23 weeks, 0 days · 119 days to
+ * go" wraps, which left the separator stranded at the start of the second
+ * line. The subline is its own row now, and the separator goes with it.
+ */
+.head .big small {
+  display: block;
+  margin-top: 2px;
+}
+
+.head__arrow {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.head__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.head__range {
+  margin: 4px 0 0;
+}
+
+/* A button that reads as a link: it changes what is on screen, not where you are. */
+.linkish {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--secondary);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*
+ * The trimester and due-date chips.
+ *
+ * Colour choice is constrained by the ADR-007 contrast gate, not by taste:
+ * accent on accent-soft measures as low as 2.11:1 in Oriole and Goldfinch
+ * light, so the tint carries the chip and a token that clears 4.5:1 in all
+ * seven skins carries the text. Both pairs are asserted in skins.test.ts.
+ */
+.meta--pills {
+  align-items: center;
+}
+
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pill--trimester {
+  background: var(--secondary-soft);
+  color: var(--secondary);
+}
+
+.pill--due {
+  background: var(--accent-soft);
+  color: var(--ink);
 }

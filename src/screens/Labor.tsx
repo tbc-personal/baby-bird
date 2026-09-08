@@ -14,6 +14,7 @@ import { formatShortDate } from '../lib/dates';
 import { hrefFor } from '../lib/router';
 import { LaborCurve } from '../components/LaborCurve';
 import { formatPercent } from '../lib/percent';
+import { datingFrom } from '../lib/storage';
 import { useAppState } from '../useAppState';
 import { addDays } from 'date-fns';
 import './Labor.css';
@@ -29,7 +30,7 @@ export function LaborScreen({ today }: { today: Date }) {
   const inputDate = parseIsoDate(saved.inputDate);
   if (!inputDate) return null;
 
-  const progress = computeProgress(saved.method, inputDate, today);
+  const progress = computeProgress(datingFrom(saved, inputDate), today);
   const { gestationalDays } = progress;
 
   const next7 = conditionalProbabilityInWindow(gestationalDays, gestationalDays + 7);

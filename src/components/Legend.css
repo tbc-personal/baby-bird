@@ -1,0 +1,30 @@
+/*
+ * The chart legend, shared by LaborCurve and MeasureChart.
+ *
+ * It lived in both of their stylesheets, identically. Two files defining the
+ * same class is a latent bug rather than a tidiness problem: the two blocks
+ * are not scoped to their components, so whichever bundled last was the one
+ * that applied to both, and editing the wrong copy would have looked like it
+ * had no effect. Base here, swatch colours with the chart that uses them.
+ */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+/* Both charts mark the current point in the accent. */
+.legend__today {
+  background: var(--accent);
+}

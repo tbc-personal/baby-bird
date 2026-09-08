@@ -42,6 +42,16 @@
   background: var(--paper);
 }
 
+/*
+ * The date box carries the same radius as the cards and the primary button.
+ * Only the control is ours; the calendar panel the browser opens on top of it
+ * is native chrome and cannot be restyled without replacing it outright.
+ */
+.ctl[type='date'] {
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+}
+
 .ctl[aria-invalid='true'] {
   border-color: var(--accent);
 }
@@ -85,4 +95,42 @@
 .sheet__actions {
   display: grid;
   gap: 8px;
+}
+
+.cycle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cycle__input {
+  width: 6em;
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+}
+
+.cycle__unit {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.field__help {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+/*
+ * "Copy a shareable link", moved here from Today. It is the tail of the date
+ * section rather than a section of its own, so it carries no top margin; the
+ * section rule below it provides the separation.
+ */
+.share {
+  display: grid;
+  gap: 2px;
+}
+
+.share p {
+  min-height: 18px;
+  margin: 0;
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import { TimelineScreen } from '../../src/screens/Timeline';
-import { WeekScreen } from '../../src/screens/Week';
+import { TodayScreen } from '../../src/screens/Today';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
 import { parseIsoDate } from '../../src/lib/gestation';
@@ -106,20 +106,48 @@ describe('Timeline (mockup 3)', () => {
   });
 });
 
-describe('Week screen', () => {
+/**
+ * `#/week/:n` is Today, positioned. It used to be a separate, thinner screen,
+ * which is what made tapping a timeline row feel like leaving the app.
+ */
+it('links each row to the week view', () => {
+  const { container } = renderTimeline();
+  const rows = [...container.querySelectorAll('a.row')];
+  expect(rows).toHaveLength(41);
+  expect(rows[0]).toHaveAttribute('href', '#/week/2');
+  expect(rows.at(-1)).toHaveAttribute('href', '#/week/42');
+});
+
+describe('a routed week', () => {
   function renderWeek(week: number) {
     return render(
       <AppStateProvider>
-        <WeekScreen week={week} today={day('2026-09-06')} />
+        <TodayScreen today={day('2026-09-06')} week={week} />
       </AppStateProvider>,
     );
   }
 
-  it('renders the same card as Today for any week 2–42', () => {
+  it('renders the full Today screen, not a stripped-down one', () => {
+    renderWeek(25);
+    // The card...
+    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(
+      'Belted Kingfisher',
+    );
+    // ...and the header that the old week screen did not have.
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 25');
+    expect(screen.getByText(/2 weeks ahead/)).toBeInTheDocument();
+    expect(screen.getByText(/September 20–26/)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Next week' })).toBeInTheDocument();
+    expect(screen.getByText('Second trimester')).toBeInTheDocument();
+  });
+
+  it('treats the present week as not browsing, so its own row lands on today', () => {
     renderWeek(23);
-    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Atlantic Puffin');
-    expect(screen.getByText('Your baby is roughly the size of an')).toBeInTheDocument();
-    expect(screen.getByText('week 23')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      '23 weeks, 0 days',
+    );
+    expect(screen.getByText(/119 days to go/)).toBeInTheDocument();
+    expect(screen.queryByText(/back to this week/)).toBeNull();
   });
 
   it.each([2, 3, 7, 20, 21, 42])('renders week %i', (week) => {
@@ -128,7 +156,7 @@ describe('Week screen', () => {
     view.unmount();
   });
 
-  it.each([1, 0, 43, 99, -1])('shows an empty state for week %i', (week) => {
+  it.each([1, 0, 43, 99, -1])('shows an empty state for week %i rather than clamping', (week) => {
     const view = renderWeek(week);
     expect(screen.getByText(`No comparison for week ${week}`)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Back to the timeline' })).toBeInTheDocument();
