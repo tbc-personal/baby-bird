@@ -2,34 +2,18 @@
  * ADR-003. Every Macaulay Library URL in the app is built from these two
  * templates and an asset id, so a change to Cornell's pattern is a one-line fix.
  *
- * VERIFIED 2026-09-08 against the Embed dialog on a live asset page. Cornell's
- * "Medium" option produces exactly:
+ * VERIFIED 2026-09-08 against the Embed dialog on a live asset page: the URL
+ * below is exactly what Cornell's markup uses.
  *
- *   <iframe src="https://macaulaylibrary.org/asset/664524507/embed"
- *           height="552" width="640" frameborder="0" allowfullscreen></iframe>
- *
- * so the URL below is right. The dimensions are the part that needed changing:
- * the frame is a 640x552 document — the photo with Cornell's own credit bar
- * beneath it — and the old fixed 150px height clipped almost all of it away.
+ * The route is nonetheless not shippable. macaulaylibrary.org sits behind
+ * Anubis, a proof-of-work bot challenge, and it runs *inside the frame* — every
+ * visitor watches a bot check where the photo should be. See ADR-003.
  */
 export const MACAULAY_EMBED_TEMPLATE = 'https://macaulaylibrary.org/asset/{id}/embed';
 export const MACAULAY_ASSET_URL = 'https://macaulaylibrary.org/asset/{id}';
 
-/**
- * Cornell's own embed dimensions, from the Embed dialog's "Medium" option. The
- * frame is scaled to the card's width and keeps this ratio, because the framed
- * document lays itself out for this shape: forcing the mockup's 150px strip on
- * it clipped the photo and hid the credit bar entirely.
- *
- * `Photo.css` holds the ratio; these are exported so the iframe carries the
- * width/height attributes Cornell's markup does, which fixes the frame's
- * intrinsic size before CSS applies and stops the card jumping as it loads.
- */
-export const EMBED_WIDTH = 640;
-export const EMBED_HEIGHT = 552;
-
-/** The silhouette and goose placeholders keep the mockup's original strip. */
-export const PLACEHOLDER_HEIGHT = 150;
+/** The mockup's photo area; the embed keeps that box so the card does not jump. */
+export const EMBED_HEIGHT = 150;
 
 /** How long to wait for the frame before showing the offline goose (ADR-003). */
 export const EMBED_TIMEOUT_MS = 6000;

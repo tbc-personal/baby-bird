@@ -20,47 +20,53 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
-## Resolved, 2026-09-08: the embed route works; two bugs were ours
+## Resolved, 2026-09-08: the Macaulay embed route is not shippable
 
-This section previously claimed Cornell had broken embeds with a bot challenge.
-That was wrong, twice over, and the corrections are worth keeping on the record.
+Three findings, in the order they were established. The middle one corrects a
+wrong claim this file previously carried, and that correction stands.
 
-**The template was always right.** The author opened the Embed dialog on a live
-asset. Cornell's "Medium" option produces:
+**1. The template was always right.** Cornell's Embed dialog produces an iframe
+pointing at exactly the URL `MACAULAY_EMBED_TEMPLATE` predicted, at 640x552.
 
-```html
-<iframe src="https://macaulaylibrary.org/asset/664524507/embed"
-        height="552" width="640" frameborder="0" allowfullscreen></iframe>
-```
+**2. Two bugs were ours, not Cornell's.** An earlier revision here claimed the
+endpoint was blocked, citing the author's home connection. That evidence was in
+fact our own bug: the lazy-load gate could hang, so no frame was created, no
+request was ever made, and with no frame the load timeout never started, leaving
+the card on "Loading photo" with no goose. Fixed with
+`EMBED_VISIBILITY_FALLBACK_MS`. The conclusion had also generalised from curl and
+a server-side fetcher, which were never evidence about browsers.
 
-— exactly the URL `MACAULAY_EMBED_TEMPLATE` had predicted. The embed link also
-opens normally in a browser, so the Anubis proof-of-work challenge on
-`macaulaylibrary.org` does what such a challenge is meant to do: it stops
-scripted clients like curl and blocks nothing for real visitors. The earlier
-conclusion generalised from non-browser probes and should not have.
+**3. With the frame actually loading, the route fails for a different reason.**
+`macaulaylibrary.org` sits behind Anubis, a proof-of-work bot challenge, and it
+runs **inside the frame, in real time**. Every visitor watches a bot check where
+the photo should be, on every card, before any image appears. Observed directly
+by the author once the frame was loading. This is not a latency problem to tune
+around: the app would be putting a third party's anti-abuse interstitial in front
+of its own content.
 
-Two bugs, both ours, kept the photo from appearing:
+So the embed route is abandoned, and the frame keeps the mockup's 150px strip.
+`MacaulayEmbed` and the template stay in the tree — they are correct, and if
+Cornell exempts the embed endpoint the route is a data change away — but no row
+should carry an `mlAssetId` while the challenge is in front of it.
 
-1. **The lazy-load gate could hang.** The card sat on "Loading photo" showing the
-   kind silhouette — the branch taken when the IntersectionObserver has not
-   reported. No frame was created, so no request was ever made, and because the
-   load timeout only starts once a frame exists, nothing timed out and no goose
-   arrived. Fixed with `EMBED_VISIBILITY_FALLBACK_MS`: the observer is an
-   optimisation and can no longer be the reason a photo fails to load.
-2. **The frame was the wrong shape.** The embed is a 640x552 document — the
-   photo with Cornell's own credit bar beneath it — and it lays itself out for
-   that. The mockup's fixed 150px strip clipped the photo and hid the credit bar
-   entirely, which matters: that bar is part of the attribution the
-   non-commercial embed permission is written around. The frame now scales to
-   the card's width and keeps Cornell's ratio.
+### Where that leaves images
 
-**Consequence for the design.** The photo area is no longer the mockup's 150px
-strip. At a 420px-wide card the frame renders about 382x329, so the card is
-substantially taller on the weeks that carry a Macaulay embed. The seed weeks,
-which use local Commons images rather than a framed document, keep the 150px
-crop. That inconsistency is deliberate for now and is the author's call to
-settle: the alternatives are to crop the embed and lose the credit bar, to ask
-Cornell for a smaller embed size, or to let the two providers differ.
+- **Wikimedia Commons is the route.** This ADR already named it as the fallback
+  if embedding broke, and `image.provider` was designed for the swap. Weeks 2,
+  4, 5 and 6 prove the path end to end.
+- **Audubon is not an option.** Their terms reserve all rights, apply no
+  Creative Commons licence, permit only personal non-commercial copying, and
+  forbid using materials "separate from the accompanying text". Using their
+  photos would need written permission.
+- **Coverage is sufficient but uneven.** A survey of Commons for all 36 species,
+  counting only files at least 900px wide under CC0 / public domain / CC BY /
+  CC BY-SA and excluding scanned book plates, found every bird week (14-42) with
+  18 or more candidates. The egg weeks are thinner and need per-week judgement:
+  American Robin 52 and Bald Eagle 37 are comfortable, Great Blue Heron 11 and
+  Black Tern 19 are workable, and **Wood Thrush has 3**. Some egg weeks will
+  have to show a nest with a clutch, or a bird on a nest, rather than a clean
+  egg photograph. One happy accident: a Commons file of a Wood Thrush nest
+  containing a cowbird egg would illustrate week 9's own cowbird fact exactly.
 
 ## Embed mechanics
 
