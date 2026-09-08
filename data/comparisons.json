@@ -947,10 +947,10 @@
       "wikipediaTitle": "Blue_jay",
       "allAboutBirdsSlug": "Blue_Jay",
       "image": {
-        "provider": null,
-        "mlAssetId": null,
+        "provider": "macaulay",
+        "mlAssetId": "664524507",
         "embedUrl": null,
-        "credit": null,
+        "credit": "Jim Merritt",
         "altText": null
       },
       "facts": [
