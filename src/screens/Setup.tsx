@@ -18,7 +18,9 @@ import { hrefFor } from '../lib/router';
 import type { SharedDate } from '../lib/storage';
 import { useAppState } from '../useAppState';
 import { navigate } from '../useRoute';
+import { AboutContent } from '../components/AboutContent';
 import { AppMark } from '../components/AppMark';
+import { SettingsPanel } from '../components/SettingsPanel';
 import { ShareLink } from '../components/ShareLink';
 import { useDisclosure } from '../components/useDisclosure';
 import '../components/InfoButton.css';
@@ -57,9 +59,13 @@ function methodInfo(id: DatingMethod) {
 }
 
 /**
- * Mockup 1. Three dating methods, one date, and a live preview of the due date
- * and current progress. There is no privacy copy on this screen; it lives in
- * About (ADR-006).
+ * Setup, which since v0.1.0 is also About: one page, four sections, in the order
+ * you need them. The date comes first because it is the only thing the app
+ * cannot work without; display settings, sources and credits sit underneath it,
+ * where they are reachable but not in the way.
+ *
+ * Merging the two screens is what turned the bottom bar from four tabs into
+ * three, and what turned this tab's label into the sliders mark.
  */
 export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate | null }) {
   const { saved, save } = useAppState();
@@ -145,7 +151,7 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
       ) : null}
 
       <form
-        className="setup__form"
+        className="setup__form section"
         onSubmit={(event) => {
           event.preventDefault();
           if (!canSubmit || !parsed) return;
@@ -260,7 +266,14 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
         </button>
       </form>
 
-      {saved && dating ? <ShareLink dating={dating} /> : null}
+      {saved && dating ? (
+        <div className="section">
+          <ShareLink dating={dating} />
+        </div>
+      ) : null}
+
+      <SettingsPanel />
+      <AboutContent />
     </>
   );
 }

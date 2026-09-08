@@ -62,10 +62,11 @@ for (const skin of SKINS) {
 
 test('the skin picker applies and persists a choice', async ({ page }) => {
   await openToday(page, 'puffin');
-  // Scoped to the tab bar: the card also carries an "All About Birds" link.
+  // The skin picker lives on Setup now that Setup and About are one page. The
+  // tab is the sliders mark, so it is found by its accessible name.
   await page
     .getByRole('navigation', { name: 'Sections' })
-    .getByRole('link', { name: 'About' })
+    .getByRole('link', { name: 'Setup' })
     .click();
 
   await expect(page.locator('html')).toHaveAttribute('data-skin', 'puffin');

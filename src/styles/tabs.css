@@ -1,6 +1,6 @@
 .tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line);
   background: var(--paper);
   padding: 8px 0 max(8px, env(safe-area-inset-bottom));
@@ -24,4 +24,13 @@
 
 .tabs span[aria-disabled='true'] {
   opacity: 0.4;
+}
+
+/*
+ * The Setup tab is a mark rather than a word, so it centres its glyph instead
+ * of its text. It keeps the same row height as the two labelled tabs.
+ */
+.tabs__icon {
+  display: grid;
+  place-items: center;
 }

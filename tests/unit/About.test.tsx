@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { AboutScreen } from '../../src/screens/About';
+import { SetupScreen } from '../../src/screens/Setup';
 import { AppStateProvider } from '../../src/state';
 import { parseSavedState, STORAGE_KEY } from '../../src/lib/storage';
 import { SKIN_LIST } from '../../src/skins';
@@ -13,10 +13,15 @@ function save() {
   );
 }
 
+/**
+ * About is no longer a screen: it is the lower half of Setup. These cases still
+ * live in their own file because what they cover — settings, credits, "Forget
+ * my data" — is a distinct concern from the date form above it.
+ */
 function renderAbout() {
   return render(
     <AppStateProvider>
-      <AboutScreen />
+      <SetupScreen today={new Date(2026, 8, 6)} shared={null} />
     </AppStateProvider>,
   );
 }
@@ -25,7 +30,7 @@ beforeEach(() => {
   window.localStorage.clear();
 });
 
-describe('About', () => {
+describe('About, as the lower half of Setup', () => {
   it('offers every skin', () => {
     save();
     renderAbout();

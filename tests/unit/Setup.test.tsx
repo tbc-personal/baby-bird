@@ -80,9 +80,15 @@ describe('Setup screen (mockup 1)', () => {
     expect(screen.getByText(/not how long\s+the bleeding lasts/)).toBeInTheDocument();
   });
 
-  it('carries no privacy copy', () => {
-    renderSetup();
-    expect(screen.queryByText(/privacy|your data|on your device/i)).toBeNull();
+  it('keeps the privacy copy out of the date form, not off the page', () => {
+    // Mockup 1 kept privacy copy off the date entry (ADR-006). Now that About
+    // is the lower half of this page the copy is present, but it must still sit
+    // below the form rather than inside it.
+    const { container } = renderSetup();
+    const form = container.querySelector('form');
+    expect(form).not.toBeNull();
+    expect(form?.textContent ?? '').not.toMatch(/privacy|your data|on your device/i);
+    expect(screen.getByText(/stored on this device only/)).toBeInTheDocument();
   });
 
   it('hides the calculation details until the info button is pressed', async () => {

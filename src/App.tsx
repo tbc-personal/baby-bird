@@ -9,7 +9,6 @@ import { TodayScreen } from './screens/Today';
 import { TimelineScreen } from './screens/Timeline';
 import { WeekScreen } from './screens/Week';
 import { LaborScreen } from './screens/Labor';
-import { AboutScreen } from './screens/About';
 import { applySkin } from './skins';
 import './styles/app.css';
 
@@ -94,8 +93,6 @@ export function App() {
         return <WeekScreen week={route.week} today={today} />;
       case 'labor':
         return <LaborScreen today={today} />;
-      case 'about':
-        return <AboutScreen />;
       case 'today':
       default:
         return hasDate ? (
