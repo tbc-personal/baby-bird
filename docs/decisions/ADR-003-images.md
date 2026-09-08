@@ -20,6 +20,37 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
+## Finding, 2026-09-08: the embed endpoint is behind a bot challenge
+
+The template was right. The route is blocked anyway.
+
+`MACAULAY_EMBED_TEMPLATE` (`https://macaulaylibrary.org/asset/{id}/embed`) is the
+correct pattern — search engines have long-indexed pages at exactly that shape,
+titled `ML<id> - <Species> - Macaulay Library`. It was never the problem.
+
+What is: Cornell has put **Anubis**, a proof-of-work bot challenge, in front of
+`macaulaylibrary.org`. Every request to an asset or embed URL now answers with
+the challenge page rather than the media. Verified against three different
+networks (this repo's CI sandbox, an Anthropic egress, and the author's own home
+connection), and against both a brand-new asset id and ML6050, indexed for
+years. It is the endpoint, not the id.
+
+An `<iframe>` cannot get past it. Anubis works by handing the visitor a
+JavaScript challenge and setting a cookie on success; in a third-party frame that
+cookie is cross-site, which browsers block by default, so the challenge can never
+persist. The card shows "Loading photo", then the offline goose at the six-second
+timeout — the failure is graceful, but it is total.
+
+The image CDN (`cdn.download.ams.birds.cornell.edu/api/v2/asset/<id>/1200`) is
+**not** behind the challenge and returns the JPEG directly. That is hotlinking,
+not embedding: it bypasses the credit line the embed renders, and the
+non-commercial permission this ADR rests on is written about embedding. Using it
+would need its own licensing decision, not an assumption.
+
+The alternative this ADR already named — Wikimedia Commons for every week — is
+proven: weeks 2, 4, 5 and 6 ship it, and `image.provider` was designed so the
+swap is a data change. See `docs/CURATING-PHOTOS.md`.
+
 ## Embed mechanics
 
 **Status after the build session (2026-09-06): NOT VERIFIED. Do not ship a

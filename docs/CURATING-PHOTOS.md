@@ -12,6 +12,15 @@ Budget roughly an hour for all 36, once you have a rhythm.
 
 ---
 
+> **Blocked as of 2026-09-08.** Step 0 has been done, and it failed. The embed
+> template was correct, but Cornell has put a proof-of-work bot challenge
+> (Anubis) in front of `macaulaylibrary.org`, and an `<iframe>` cannot get past
+> it — the challenge cookie is cross-site and browsers block it. Cards render
+> "Loading photo", then the offline goose. See the 2026-09-08 finding in
+> `docs/decisions/ADR-003-images.md`. **Do not curate 36 asset ids until the
+> image route is decided**; the rest of this guide is written for the Macaulay
+> route and holds only if that route comes back.
+
 ## Step 0 — verify the embed template, once
 
 **Do this before curating anything else.** `MACAULAY_EMBED_TEMPLATE` in
