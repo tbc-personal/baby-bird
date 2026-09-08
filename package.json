@@ -21,7 +21,7 @@
     "check-contrast": "tsx scripts/check-contrast.ts",
     "test:e2e:smoke": "playwright test tests/e2e/smoke.spec.ts tests/e2e/pwa.spec.ts",
     "test:e2e:visual": "playwright test tests/e2e/skins.spec.ts",
-    "test:e2e:update": "playwright test --update-snapshots"
+    "test:e2e:update": "playwright test --update-snapshots=all"
   },
   "dependencies": {
     "date-fns": "^4.4.0",

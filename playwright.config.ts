@@ -49,6 +49,17 @@ export default defineConfig({
     timeout: 120_000,
   },
   expect: {
-    toHaveScreenshot: { maxDiffPixelRatio: 0.01 },
+    /*
+     * The tolerance absorbs antialiasing jitter between runs on the same
+     * runner, and nothing more.
+     *
+     * It was 0.01 — one per cent of a 420x900 shot, about 3,800 pixels. That is
+     * larger than most components: reordering the whole bottom tab bar changed
+     * fewer pixels than that and sailed through the gate, and because the
+     * comparison passed, `--update-snapshots` then considered the baselines
+     * unchanged and left images in the repo that no longer matched the app.
+     * A gate that cannot see a navigation bar move is not gating anything.
+     */
+    toHaveScreenshot: { maxDiffPixelRatio: 0.002 },
   },
 });
