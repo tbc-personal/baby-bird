@@ -27,9 +27,16 @@
   place-items: center;
 }
 
+/*
+ * Cornell's embed is a 640x552 document — the photo with their credit bar under
+ * it — and it lays itself out for that shape. Scale it to the card's width and
+ * keep the ratio; the old fixed 150px height clipped the photo and hid the
+ * credit bar, which is part of what the non-commercial embed permission is for.
+ */
 .photo__frame {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 640 / 552;
+  height: auto;
   border: 0;
   display: block;
 }

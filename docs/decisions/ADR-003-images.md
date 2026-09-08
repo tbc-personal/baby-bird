@@ -20,57 +20,47 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
-## Finding, 2026-09-08: the embed route is unproven, not disproven
+## Resolved, 2026-09-08: the embed route works; two bugs were ours
 
-An earlier revision of this section claimed the embed endpoint was blocked and
-cited the author's own home connection as evidence. **That was wrong, and the
-correction matters more than the original claim.**
+This section previously claimed Cornell had broken embeds with a bot challenge.
+That was wrong, twice over, and the corrections are worth keeping on the record.
 
-What is established:
+**The template was always right.** The author opened the Embed dialog on a live
+asset. Cornell's "Medium" option produces:
 
-- **The template is correct.** `https://macaulaylibrary.org/asset/{id}/embed` is
-  the right shape; search engines have long-indexed pages at exactly it, titled
-  `ML<id> - <Species> - Macaulay Library`.
-- **`macaulaylibrary.org` is behind Anubis**, a proof-of-work bot challenge.
-  Every non-JavaScript client — curl, a server-side fetcher — gets the challenge
-  page instead of the media. That is precisely what Anubis is built to do, and
-  it says nothing about a real browser, which runs the challenge and passes.
-- **The first week-22 failure was ours, not Cornell's.** The card sat on
-  "Loading photo" showing the kind silhouette, which is the branch taken when
-  the IntersectionObserver never reports. No frame was created, so no request
-  ever reached Cornell, and with no frame the six-second timeout never started,
-  which is why no goose appeared either. Fixed by
-  `EMBED_VISIBILITY_FALLBACK_MS`, with a regression test.
+```html
+<iframe src="https://macaulaylibrary.org/asset/664524507/embed"
+        height="552" width="640" frameborder="0" allowfullscreen></iframe>
+```
 
-What is **not** established: whether a browser, having passed the challenge, can
-render the embed inside a third-party iframe. The open question is whether the
-Anubis cookie survives a cross-site frame; browsers block third-party cookies by
-default, and if the challenge cannot persist there the embed cannot resolve. This
-could not be tested from the build container — headless Chromium cannot reach
-the host through the egress proxy, which drops its tunnels.
+— exactly the URL `MACAULAY_EMBED_TEMPLATE` had predicted. The embed link also
+opens normally in a browser, so the Anubis proof-of-work challenge on
+`macaulaylibrary.org` does what such a challenge is meant to do: it stops
+scripted clients like curl and blocks nothing for real visitors. The earlier
+conclusion generalised from non-browser probes and should not have.
 
-**Settle it before curating 36 ids.** In an ordinary browser:
+Two bugs, both ours, kept the photo from appearing:
 
-1. Open `https://macaulaylibrary.org/asset/664524507/embed` as a normal tab. If
-   the photo appears, the endpoint is fine for browsers and only the framed case
-   is in doubt.
-2. On the asset page, use **Embed** and copy the markup Cornell actually
-   produces. If it is not a bare iframe to that URL — a script, a different
-   host, extra parameters — then the hand-rolled iframe in `MacaulayEmbed` is
-   the bug and the fix is that one template constant.
-3. With week 22 curated, load the card and watch the network panel for a request
-   to `macaulaylibrary.org`. A request that is made and refused is Cornell; no
-   request at all is us.
+1. **The lazy-load gate could hang.** The card sat on "Loading photo" showing the
+   kind silhouette — the branch taken when the IntersectionObserver has not
+   reported. No frame was created, so no request was ever made, and because the
+   load timeout only starts once a frame exists, nothing timed out and no goose
+   arrived. Fixed with `EMBED_VISIBILITY_FALLBACK_MS`: the observer is an
+   optimisation and can no longer be the reason a photo fails to load.
+2. **The frame was the wrong shape.** The embed is a 640x552 document — the
+   photo with Cornell's own credit bar beneath it — and it lays itself out for
+   that. The mockup's fixed 150px strip clipped the photo and hid the credit bar
+   entirely, which matters: that bar is part of the attribution the
+   non-commercial embed permission is written around. The frame now scales to
+   the card's width and keeps Cornell's ratio.
 
-The image CDN (`cdn.download.ams.birds.cornell.edu/api/v2/asset/<id>/1200`) is
-not behind the challenge and returns the JPEG directly. That is hotlinking
-rather than embedding: it bypasses the credit the embed renders, and the
-non-commercial permission this ADR rests on is written about embedding. It would
-need its own licensing decision, and is noted only so the option is on the record.
-
-The fallback this ADR already named — Wikimedia Commons for every week — is
-proven: weeks 2, 4, 5 and 6 ship it, and `image.provider` was designed so the
-swap is a data change.
+**Consequence for the design.** The photo area is no longer the mockup's 150px
+strip. At a 420px-wide card the frame renders about 382x329, so the card is
+substantially taller on the weeks that carry a Macaulay embed. The seed weeks,
+which use local Commons images rather than a framed document, keep the 150px
+crop. That inconsistency is deliberate for now and is the author's call to
+settle: the alternatives are to crop the embed and lose the credit bar, to ask
+Cornell for a smaller embed size, or to let the two providers differ.
 
 ## Embed mechanics
 

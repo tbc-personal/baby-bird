@@ -12,13 +12,10 @@ Budget roughly an hour for all 36, once you have a rhythm.
 
 ---
 
-> **Unproven as of 2026-09-08 — do Step 0 for real before curating 36 ids.**
-> The template is the right shape, but `macaulaylibrary.org` now sits behind a
-> proof-of-work bot challenge (Anubis) that blocks every non-browser client, and
-> whether a browser can carry that challenge into a third-party iframe is
-> untested. The first week-22 attempt failed for a different reason entirely — a
-> bug in our own lazy-load gate, since fixed — so it proved nothing about
-> Cornell. See the 2026-09-08 finding in `docs/decisions/ADR-003-images.md`.
+> **Step 0 is done — 2026-09-08.** The embed template is confirmed correct
+> against Cornell's own Embed dialog, and embeds render for real visitors. Two
+> bugs on our side were stopping the photo appearing and are fixed. Keep Step 0
+> below for the record, but you do not need to repeat it; start at Step 1.
 
 ## Step 0 — verify the embed template, once
 

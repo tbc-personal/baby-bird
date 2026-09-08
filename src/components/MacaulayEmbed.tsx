@@ -7,6 +7,7 @@ import {
   EMBED_HEIGHT,
   EMBED_TIMEOUT_MS,
   EMBED_VISIBILITY_FALLBACK_MS,
+  EMBED_WIDTH,
   macaulayEmbedUrl,
 } from './macaulay';
 import './Photo.css';
@@ -122,10 +123,11 @@ export function MacaulayEmbed({
             className="photo__frame"
             src={macaulayEmbedUrl(assetId)}
             title={altText}
+            width={EMBED_WIDTH}
             height={EMBED_HEIGHT}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            allow="fullscreen"
+            allowFullScreen
             onLoad={() => {
               setState('loaded');
             }}

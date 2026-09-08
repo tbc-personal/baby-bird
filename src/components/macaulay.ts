@@ -2,24 +2,34 @@
  * ADR-003. Every Macaulay Library URL in the app is built from these two
  * templates and an asset id, so a change to Cornell's pattern is a one-line fix.
  *
- * VERIFICATION STATUS: the exact embed `src` could NOT be confirmed against a
- * live asset page during the build session. The sandbox's egress proxy refuses
- * CONNECT to macaulaylibrary.org and search.macaulaylibrary.org (the gateway
- * answers HTTP 403), so the "Embed" dialog was unreachable and no request ever
- * left the machine. The template below is the form ADR-003 predicted and is
- * UNVERIFIED against the live site.
+ * VERIFIED 2026-09-08 against the Embed dialog on a live asset page. Cornell's
+ * "Medium" option produces exactly:
  *
- * It is also currently unexercised: no row in data/comparisons.json carries an
- * mlAssetId, so every card falls back to the "Photo coming" silhouette and the
- * app is fully usable without it. Verify the pattern from an asset page's Embed
- * dialog before shipping any curated id. See docs/decisions/ADR-003-images.md
- * under "Embed mechanics" and docs/CURATION.md.
+ *   <iframe src="https://macaulaylibrary.org/asset/664524507/embed"
+ *           height="552" width="640" frameborder="0" allowfullscreen></iframe>
+ *
+ * so the URL below is right. The dimensions are the part that needed changing:
+ * the frame is a 640x552 document — the photo with Cornell's own credit bar
+ * beneath it — and the old fixed 150px height clipped almost all of it away.
  */
 export const MACAULAY_EMBED_TEMPLATE = 'https://macaulaylibrary.org/asset/{id}/embed';
 export const MACAULAY_ASSET_URL = 'https://macaulaylibrary.org/asset/{id}';
 
-/** The mockup's photo area; the embed keeps that box so the card does not jump. */
-export const EMBED_HEIGHT = 150;
+/**
+ * Cornell's own embed dimensions, from the Embed dialog's "Medium" option. The
+ * frame is scaled to the card's width and keeps this ratio, because the framed
+ * document lays itself out for this shape: forcing the mockup's 150px strip on
+ * it clipped the photo and hid the credit bar entirely.
+ *
+ * `Photo.css` holds the ratio; these are exported so the iframe carries the
+ * width/height attributes Cornell's markup does, which fixes the frame's
+ * intrinsic size before CSS applies and stops the card jumping as it loads.
+ */
+export const EMBED_WIDTH = 640;
+export const EMBED_HEIGHT = 552;
+
+/** The silhouette and goose placeholders keep the mockup's original strip. */
+export const PLACEHOLDER_HEIGHT = 150;
 
 /** How long to wait for the frame before showing the offline goose (ADR-003). */
 export const EMBED_TIMEOUT_MS = 6000;
