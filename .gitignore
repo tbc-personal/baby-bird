@@ -8,3 +8,6 @@ test-results/
 tests/e2e/__screenshots__/*/*-actual.png
 tests/e2e/__screenshots__/*/*-diff.png
 coverage/
+
+# Fact-check evidence corpus (regenerate with `npm run fact-sources`)
+.fact-check/

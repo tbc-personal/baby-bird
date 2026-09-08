@@ -22,6 +22,35 @@ None of this blocks the code. `scripts/validate-data.ts` treats missing images
 and missing facts as warnings, not errors, so CI stays green while curation
 trails; it reports the outstanding counts on every run.
 
+## Update: network access, and the fact-check triage (2026-09-08)
+
+Network access was opened for a later session, so the paragraph above no longer
+describes the current environment. What is reachable now:
+
+| Source | Status |
+|---|---|
+| `en.wikipedia.org`, including the action API for full article text | open |
+| `commons.wikimedia.org`, `upload.wikimedia.org` | open — task A for the seed weeks is now doable |
+| `www.audubon.org` | open |
+| `birdsoftheworld.org` | open, but only the free introduction; the species account is paywalled |
+| `search.macaulaylibrary.org` | reachable, still a JavaScript catalog rather than a page that can be read |
+| `www.allaboutbirds.org` | **still 403.** This one is not the egress proxy — Cornell serves a Cloudflare block to datacenter IPs. Opening the network policy further will not fix it. |
+| `web.archive.org` | not reachable through the proxy, so archived copies are not a way round the line above |
+
+**Task B has had a triage pass.** All 123 facts were checked against source text
+that was actually downloaded and read; see `docs/research/fact-check-summary.md`
+for the rollup and `docs/research/fact-check-<range>.md` for the per-fact
+evidence. Regenerate the evidence corpus with `npm run fact-sources` and audit
+the reports with `npm run verify-fact-check`.
+
+That pass does **not** discharge the review below. It found 2 contradicted facts,
+21 partly supported, 1 unverifiable, and 62 facts whose `sources[]` should change
+— which is where your attention is best spent — but the 99 facts it marked
+supported have not been independently re-read, and `reviewed: true` is still a
+human act. The most-cited source, All About Birds (74 of 123 facts), is the one
+that stayed shut; those facts were verified against other sources, and each
+report records which source was actually read for each fact.
+
 ## A. Image IDs (weeks 7–42: Macaulay Library; weeks 2–6: Wikimedia Commons)
 
 For each species row, open the search page, pick a well-rated photo showing the whole bird (or the egg for
