@@ -24,6 +24,15 @@ export const EMBED_HEIGHT = 150;
 /** How long to wait for the frame before showing the offline goose (ADR-003). */
 export const EMBED_TIMEOUT_MS = 6000;
 
+/**
+ * How long to wait for the IntersectionObserver before loading the frame
+ * anyway. Lazy-loading is an optimisation, not a correctness requirement, and a
+ * card whose observer never reports leaves the photo area stuck on "Loading
+ * photo" for ever: with no frame there is nothing to time out, so the goose
+ * never arrives either.
+ */
+export const EMBED_VISIBILITY_FALLBACK_MS = 1500;
+
 export function macaulayEmbedUrl(assetId: string): string {
   return MACAULAY_EMBED_TEMPLATE.replace('{id}', encodeURIComponent(assetId));
 }

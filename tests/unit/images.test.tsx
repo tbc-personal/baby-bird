@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { MacaulayEmbed, PhotoComing } from '../../src/components/MacaulayEmbed';
 import {
   EMBED_TIMEOUT_MS,
+  EMBED_VISIBILITY_FALLBACK_MS,
   MACAULAY_EMBED_TEMPLATE,
   macaulayAssetUrl,
   macaulayEmbedUrl,
@@ -93,6 +94,48 @@ describe('MacaulayEmbed', () => {
     expect(screen.getByText('Photo needs a connection')).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /goose wearing a hat/ })).toBeInTheDocument();
     expect(screen.queryByTitle('A puffin')).toBeNull();
+  });
+
+  it('does not sit on "Loading photo" when the observer never reports', async () => {
+    // The failure the author hit on week 22: an IntersectionObserver that never
+    // fires means no frame, so nothing to time out, so no goose either — the
+    // card showed the kind silhouette under "Loading photo" indefinitely and
+    // never made a request at all.
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    class SilentObserver implements IntersectionObserver {
+      readonly root = null;
+      readonly rootMargin = '';
+      readonly thresholds: readonly number[] = [];
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+      takeRecords(): IntersectionObserverEntry[] {
+        return [];
+      }
+    }
+    vi.stubGlobal('IntersectionObserver', SilentObserver);
+    try {
+      render(<MacaulayEmbed assetId="123" kind="bird" altText="A bird" />);
+      expect(screen.queryByTitle('A bird')).toBeNull();
+
+      act(() => {
+        vi.advanceTimersByTime(EMBED_VISIBILITY_FALLBACK_MS + 10);
+      });
+      expect(await screen.findByTitle('A bird')).toBeInTheDocument();
+
+      // And from there the usual timeout still reaches the goose.
+      act(() => {
+        vi.advanceTimersByTime(EMBED_TIMEOUT_MS + 10);
+      });
+      await waitFor(() => {
+        expect(
+          screen.getByRole('img', { name: /goose wearing a hat/ }),
+        ).toBeInTheDocument();
+      });
+    } finally {
+      vi.unstubAllGlobals();
+      vi.useRealTimers();
+    }
   });
 
   it('shows the goose when the frame has not loaded within the timeout', async () => {

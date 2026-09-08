@@ -20,36 +20,57 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
-## Finding, 2026-09-08: the embed endpoint is behind a bot challenge
+## Finding, 2026-09-08: the embed route is unproven, not disproven
 
-The template was right. The route is blocked anyway.
+An earlier revision of this section claimed the embed endpoint was blocked and
+cited the author's own home connection as evidence. **That was wrong, and the
+correction matters more than the original claim.**
 
-`MACAULAY_EMBED_TEMPLATE` (`https://macaulaylibrary.org/asset/{id}/embed`) is the
-correct pattern — search engines have long-indexed pages at exactly that shape,
-titled `ML<id> - <Species> - Macaulay Library`. It was never the problem.
+What is established:
 
-What is: Cornell has put **Anubis**, a proof-of-work bot challenge, in front of
-`macaulaylibrary.org`. Every request to an asset or embed URL now answers with
-the challenge page rather than the media. Verified against three different
-networks (this repo's CI sandbox, an Anthropic egress, and the author's own home
-connection), and against both a brand-new asset id and ML6050, indexed for
-years. It is the endpoint, not the id.
+- **The template is correct.** `https://macaulaylibrary.org/asset/{id}/embed` is
+  the right shape; search engines have long-indexed pages at exactly it, titled
+  `ML<id> - <Species> - Macaulay Library`.
+- **`macaulaylibrary.org` is behind Anubis**, a proof-of-work bot challenge.
+  Every non-JavaScript client — curl, a server-side fetcher — gets the challenge
+  page instead of the media. That is precisely what Anubis is built to do, and
+  it says nothing about a real browser, which runs the challenge and passes.
+- **The first week-22 failure was ours, not Cornell's.** The card sat on
+  "Loading photo" showing the kind silhouette, which is the branch taken when
+  the IntersectionObserver never reports. No frame was created, so no request
+  ever reached Cornell, and with no frame the six-second timeout never started,
+  which is why no goose appeared either. Fixed by
+  `EMBED_VISIBILITY_FALLBACK_MS`, with a regression test.
 
-An `<iframe>` cannot get past it. Anubis works by handing the visitor a
-JavaScript challenge and setting a cookie on success; in a third-party frame that
-cookie is cross-site, which browsers block by default, so the challenge can never
-persist. The card shows "Loading photo", then the offline goose at the six-second
-timeout — the failure is graceful, but it is total.
+What is **not** established: whether a browser, having passed the challenge, can
+render the embed inside a third-party iframe. The open question is whether the
+Anubis cookie survives a cross-site frame; browsers block third-party cookies by
+default, and if the challenge cannot persist there the embed cannot resolve. This
+could not be tested from the build container — headless Chromium cannot reach
+the host through the egress proxy, which drops its tunnels.
+
+**Settle it before curating 36 ids.** In an ordinary browser:
+
+1. Open `https://macaulaylibrary.org/asset/664524507/embed` as a normal tab. If
+   the photo appears, the endpoint is fine for browsers and only the framed case
+   is in doubt.
+2. On the asset page, use **Embed** and copy the markup Cornell actually
+   produces. If it is not a bare iframe to that URL — a script, a different
+   host, extra parameters — then the hand-rolled iframe in `MacaulayEmbed` is
+   the bug and the fix is that one template constant.
+3. With week 22 curated, load the card and watch the network panel for a request
+   to `macaulaylibrary.org`. A request that is made and refused is Cornell; no
+   request at all is us.
 
 The image CDN (`cdn.download.ams.birds.cornell.edu/api/v2/asset/<id>/1200`) is
-**not** behind the challenge and returns the JPEG directly. That is hotlinking,
-not embedding: it bypasses the credit line the embed renders, and the
-non-commercial permission this ADR rests on is written about embedding. Using it
-would need its own licensing decision, not an assumption.
+not behind the challenge and returns the JPEG directly. That is hotlinking
+rather than embedding: it bypasses the credit the embed renders, and the
+non-commercial permission this ADR rests on is written about embedding. It would
+need its own licensing decision, and is noted only so the option is on the record.
 
-The alternative this ADR already named — Wikimedia Commons for every week — is
+The fallback this ADR already named — Wikimedia Commons for every week — is
 proven: weeks 2, 4, 5 and 6 ship it, and `image.provider` was designed so the
-swap is a data change. See `docs/CURATING-PHOTOS.md`.
+swap is a data change.
 
 ## Embed mechanics
 
