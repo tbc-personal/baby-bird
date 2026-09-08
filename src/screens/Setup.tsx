@@ -2,11 +2,15 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   computeProgress,
   convertInputDate,
+  DEFAULT_CYCLE_DAYS,
   formatIsoDate,
   formatWeeksAndDays,
+  MAX_CYCLE_DAYS,
+  MIN_CYCLE_DAYS,
   parseIsoDate,
   validateInput,
   VALIDATION_MESSAGE,
+  type Dating,
   type DatingMethod,
 } from '../lib/gestation';
 import { formatLongDate } from '../lib/dates';
@@ -15,6 +19,7 @@ import type { SharedDate } from '../lib/storage';
 import { useAppState } from '../useAppState';
 import { navigate } from '../useRoute';
 import { AppMark } from '../components/AppMark';
+import { ShareLink } from '../components/ShareLink';
 import { useDisclosure } from '../components/useDisclosure';
 import '../components/InfoButton.css';
 import './Setup.css';
@@ -28,8 +33,8 @@ const METHODS: ReadonlyArray<{
   {
     id: 'lmp',
     option: 'Last menstrual period',
-    dateLabel: 'Date of last period',
-    formula: 'due = date + 280 d',
+    dateLabel: 'First day of last period',
+    formula: 'due = date + 280 d + (cycle − 28)',
   },
   {
     id: 'conception',
@@ -66,6 +71,15 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
     () => shared?.inputDate ?? saved?.inputDate ?? '',
   );
   /**
+   * Cycle length, asked for in LMP mode only. Naegele's rule assumes 28 days;
+   * a longer cycle means later ovulation and a later due date. It is kept in
+   * state even when another method is selected so that switching to LMP and
+   * back does not lose it.
+   */
+  const [cycleLength, setCycleLength] = useState<number>(
+    () => saved?.cycleLength ?? DEFAULT_CYCLE_DAYS,
+  );
+  /**
    * A shared link that would overwrite an existing saved date asks first
    * (ADR-006). Declining restores what was already stored.
    */
@@ -75,14 +89,17 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
 
   const error = validateInput(method, rawDate, today);
   const parsed = error ? null : parseIsoDate(rawDate);
-  const progress = parsed ? computeProgress(method, parsed, today) : null;
+  const dating: Dating | null = parsed ? { method, inputDate: parsed, cycleLength } : null;
+  const progress = dating ? computeProgress(dating, today) : null;
 
   // Switching the method converts the date rather than clearing it, so the same
   // pregnancy stays selected (ADR-002 "Consequences").
   function changeMethod(next: DatingMethod) {
     const current = parseIsoDate(rawDate);
     setMethod(next);
-    if (current) setRawDate(formatIsoDate(convertInputDate(method, next, current)));
+    if (current) {
+      setRawDate(formatIsoDate(convertInputDate(method, next, current, cycleLength)));
+    }
   }
 
   const info = methodInfo(method);
@@ -132,7 +149,7 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
         onSubmit={(event) => {
           event.preventDefault();
           if (!canSubmit || !parsed) return;
-          save(method, formatIsoDate(parsed));
+          save(method, formatIsoDate(parsed), cycleLength);
           navigate(hrefFor({ name: 'today' }));
         }}
       >
@@ -195,6 +212,36 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
           ) : null}
         </div>
 
+        {method === 'lmp' ? (
+          <div className="field">
+            <label className="field__head" htmlFor="cycle">
+              Typical cycle length
+            </label>
+            <div className="cycle">
+              <input
+                id="cycle"
+                className="ctl cycle__input"
+                type="number"
+                inputMode="numeric"
+                min={MIN_CYCLE_DAYS}
+                max={MAX_CYCLE_DAYS}
+                step={1}
+                value={cycleLength}
+                aria-describedby="cycle-help"
+                onChange={(event) => {
+                  const next = Number(event.target.value);
+                  if (Number.isFinite(next)) setCycleLength(next);
+                }}
+              />
+              <span className="cycle__unit">days</span>
+            </div>
+            <p className="field__help small" id="cycle-help">
+              First day of one period to the first day of the next, not how long the
+              bleeding lasts. Leave it at 28 if you are not sure.
+            </p>
+          </div>
+        ) : null}
+
         <div className="preview">
           <div>
             <div className="preview__label">{derivedLine?.label ?? 'Due date'}</div>
@@ -209,9 +256,11 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
         </div>
 
         <button className="btn" type="submit" disabled={!canSubmit}>
-          Start counting
+          Show me my nestling
         </button>
       </form>
+
+      {saved && dating ? <ShareLink dating={dating} /> : null}
     </>
   );
 }

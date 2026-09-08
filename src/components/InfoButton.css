@@ -31,6 +31,15 @@
   gap: 4px;
 }
 
+.info__panel[hidden] {
+  /*
+   * `display: grid` above outranks the user-agent `[hidden] { display: none }`
+   * rule, so without this the panel stays visible and the info button appears
+   * to do nothing but change the spacing.
+   */
+  display: none;
+}
+
 .info__panel div {
   display: flex;
   justify-content: space-between;

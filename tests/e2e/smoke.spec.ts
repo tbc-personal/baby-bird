@@ -33,13 +33,13 @@ test('setup, today, timeline and the week card', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Nestling' })).toBeVisible();
 
   await page.getByLabel('Count from').selectOption('lmp');
-  await page.getByLabel('Date of last period').fill('2026-03-29');
+  await page.getByLabel('First day of last period').fill('2026-03-29');
 
   // The preview updates live, before anything is saved.
   await expect(page.getByText('January 3, 2027')).toBeVisible();
   await expect(page.getByText('23 weeks, 0 days').first()).toBeVisible();
 
-  await page.getByRole('button', { name: 'Start counting' }).click();
+  await page.getByRole('button', { name: 'Show me my nestling' }).click();
 
   // Today
   await expect(page).toHaveURL(/#\/$/);
@@ -79,15 +79,25 @@ test('the info panel opens and closes', async ({ page }) => {
   await page.goto('/#/setup');
   const info = page.getByRole('button', { name: 'How each method is calculated' });
 
+  const panel = page.getByText('due = date + 266 d');
+
+  // Assert on the panel itself, not only on aria-expanded. The original bug
+  // was CSS: `display: grid` outranked the user-agent `[hidden]` rule, so the
+  // panel stayed on screen while the attribute flipped correctly underneath it.
   await expect(info).toHaveAttribute('aria-expanded', 'false');
+  await expect(panel).toBeHidden();
+
   await info.click();
   await expect(info).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.getByText('due = date + 266 d')).toBeVisible();
+  await expect(panel).toBeVisible();
 
   await page.keyboard.press('Escape');
   await expect(info).toHaveAttribute('aria-expanded', 'false');
+  await expect(panel).toBeHidden();
 
   await info.click();
+  await expect(panel).toBeVisible();
   await page.getByText(/size, week by week/).click();
   await expect(info).toHaveAttribute('aria-expanded', 'false');
+  await expect(panel).toBeHidden();
 });

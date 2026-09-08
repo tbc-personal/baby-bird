@@ -1,8 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
+  clampCycleLength,
   computeProgress,
   convertInputDate,
+  cycleShift,
   daysBetween,
+  DEFAULT_CYCLE_DAYS,
   dueDateFrom,
   formatDaysRemaining,
   formatIsoDate,
@@ -10,10 +13,13 @@ import {
   isConventionSwitchWeek,
   isDatingMethod,
   parseIsoDate,
+  MAX_CYCLE_DAYS,
+  MIN_CYCLE_DAYS,
   toLmpEquivalent,
   trimesterFor,
   validateInput,
   VALIDATION_MESSAGE,
+  type Dating,
   type DatingMethod,
   type ProgressStatus,
 } from '../../src/lib/gestation';
@@ -23,6 +29,18 @@ function d(iso: string): Date {
   const parsed = parseIsoDate(iso);
   if (!parsed) throw new Error(`bad test date: ${iso}`);
   return parsed;
+}
+
+/**
+ * A dating with the 28-day cycle Naegele's rule assumes, which is what every
+ * case predating the cycle-length field expects.
+ */
+function dating(
+  method: DatingMethod,
+  inputDate: Date,
+  cycleLength: number = DEFAULT_CYCLE_DAYS,
+): Dating {
+  return { method, inputDate, cycleLength };
 }
 
 describe('parseIsoDate / formatIsoDate', () => {
@@ -92,15 +110,15 @@ describe('toLmpEquivalent and dueDateFrom (ADR-002 table)', () => {
   ];
 
   it.each(table)('$method $input', ({ method, input, lmpEquivalent, due }) => {
-    const eq = toLmpEquivalent(method, d(input));
+    const eq = toLmpEquivalent(dating(method, d(input)));
     expect(formatIsoDate(eq)).toBe(lmpEquivalent);
     expect(formatIsoDate(dueDateFrom(eq))).toBe(due);
   });
 
   it('conception + 266 days equals the due date', () => {
-    expect(formatIsoDate(dueDateFrom(toLmpEquivalent('conception', d('2026-04-12'))))).toBe(
-      formatIsoDate(d('2027-01-03')),
-    );
+    expect(
+      formatIsoDate(dueDateFrom(toLmpEquivalent(dating('conception', d('2026-04-12'))))),
+    ).toBe(formatIsoDate(d('2027-01-03')));
   });
 });
 
@@ -110,23 +128,27 @@ describe('convertInputDate', () => {
   it.each(methods)('round-trips through every other method from %s', (from) => {
     const original = d('2026-03-29');
     for (const to of methods) {
-      const converted = convertInputDate(from, to, original);
-      expect(formatIsoDate(convertInputDate(to, from, converted))).toBe(
+      const converted = convertInputDate(from, to, original, DEFAULT_CYCLE_DAYS);
+      expect(formatIsoDate(convertInputDate(to, from, converted, DEFAULT_CYCLE_DAYS))).toBe(
         formatIsoDate(original),
       );
     }
   });
 
   it('lmp 2026-03-29 becomes conception 2026-04-12', () => {
-    expect(formatIsoDate(convertInputDate('lmp', 'conception', d('2026-03-29')))).toBe(
-      '2026-04-12',
-    );
+    expect(
+      formatIsoDate(
+        convertInputDate('lmp', 'conception', d('2026-03-29'), DEFAULT_CYCLE_DAYS),
+      ),
+    ).toBe('2026-04-12');
   });
 
   it('lmp 2026-03-29 becomes due date 2027-01-03', () => {
-    expect(formatIsoDate(convertInputDate('lmp', 'dueDate', d('2026-03-29')))).toBe(
-      '2027-01-03',
-    );
+    expect(
+      formatIsoDate(
+        convertInputDate('lmp', 'dueDate', d('2026-03-29'), DEFAULT_CYCLE_DAYS),
+      ),
+    ).toBe('2027-01-03');
   });
 });
 
@@ -353,7 +375,7 @@ describe('computeProgress edge states (ADR-002)', () => {
   ];
 
   it.each(table)('$name', (row) => {
-    const p = computeProgress(row.method, d(row.input), d(row.today));
+    const p = computeProgress(dating(row.method, d(row.input)), d(row.today));
     expect(p.gestationalDays).toBe(row.gestationalDays);
     expect(p.weeks).toBe(row.weeks);
     expect(p.days).toBe(row.days);
@@ -363,11 +385,11 @@ describe('computeProgress edge states (ADR-002)', () => {
   });
 
   it('progressFraction is clamped to 0–1', () => {
-    const early = computeProgress('lmp', d('2026-09-10'), d('2026-09-06'));
+    const early = computeProgress(dating('lmp', d('2026-09-10')), d('2026-09-06'));
     expect(early.progressFraction).toBe(0);
-    const late = computeProgress('lmp', d('2026-03-29'), d('2027-06-01'));
+    const late = computeProgress(dating('lmp', d('2026-03-29')), d('2027-06-01'));
     expect(late.progressFraction).toBe(1);
-    const mid = computeProgress('lmp', d('2026-03-29'), d('2026-09-06'));
+    const mid = computeProgress(dating('lmp', d('2026-03-29')), d('2026-09-06'));
     expect(mid.progressFraction).toBeCloseTo(161 / 280, 10);
   });
 
@@ -376,7 +398,7 @@ describe('computeProgress edge states (ADR-002)', () => {
     let previous = -1;
     for (let i = 0; i <= 300; i += 1) {
       const today = new Date(2026, 2, 29 + i);
-      const p = computeProgress('lmp', d('2026-03-29'), today);
+      const p = computeProgress(dating('lmp', d('2026-03-29')), today);
       expect(p.gestationalDays).toBe(previous + 1);
       expect(p.weeks * 7 + p.days).toBe(p.gestationalDays);
       previous = p.gestationalDays;
@@ -386,7 +408,8 @@ describe('computeProgress edge states (ADR-002)', () => {
 
 describe('formatting', () => {
   it('formats weeks and days with correct singulars', () => {
-    const p = (input: string, today: string) => computeProgress('lmp', d(input), d(today));
+    const p = (input: string, today: string) =>
+      computeProgress(dating('lmp', d(input)), d(today));
     expect(formatWeeksAndDays(p('2026-03-29', '2026-09-06'))).toBe('23 weeks, 0 days');
     expect(formatWeeksAndDays(p('2026-03-29', '2026-09-07'))).toBe('23 weeks, 1 day');
     expect(formatWeeksAndDays(p('2026-03-29', '2026-04-05'))).toBe('1 week, 0 days');
@@ -394,7 +417,7 @@ describe('formatting', () => {
   });
 
   it('formats days remaining on both sides of the due date', () => {
-    const p = (today: string) => computeProgress('lmp', d('2026-03-29'), d(today));
+    const p = (today: string) => computeProgress(dating('lmp', d('2026-03-29')), d(today));
     expect(formatDaysRemaining(p('2026-09-06'))).toBe('119 days to go');
     expect(formatDaysRemaining(p('2027-01-02'))).toBe('1 day to go');
     expect(formatDaysRemaining(p('2027-01-03'))).toBe('due today');
@@ -449,5 +472,62 @@ describe('misc guards', () => {
     expect(isConventionSwitchWeek(20)).toBe(true);
     expect(isConventionSwitchWeek(21)).toBe(true);
     expect(isConventionSwitchWeek(22)).toBe(false);
+  });
+});
+
+describe('cycle length (adjusted Naegele)', () => {
+  const lmp = '2026-03-29';
+
+  it('a 28-day cycle is plain Naegele', () => {
+    expect(cycleShift(28)).toBe(0);
+    expect(formatIsoDate(dueDateFrom(toLmpEquivalent(dating('lmp', d(lmp), 28))))).toBe(
+      '2027-01-03',
+    );
+  });
+
+  it('a longer cycle moves the due date later, day for day', () => {
+    expect(cycleShift(35)).toBe(7);
+    expect(formatIsoDate(dueDateFrom(toLmpEquivalent(dating('lmp', d(lmp), 35))))).toBe(
+      '2027-01-10',
+    );
+  });
+
+  it('a shorter cycle moves the due date earlier', () => {
+    expect(cycleShift(24)).toBe(-4);
+    expect(formatIsoDate(dueDateFrom(toLmpEquivalent(dating('lmp', d(lmp), 24))))).toBe(
+      '2026-12-30',
+    );
+  });
+
+  it('shifts gestational age by the same amount', () => {
+    const today = d('2026-09-06');
+    const plain = computeProgress(dating('lmp', d(lmp), 28), today);
+    const long = computeProgress(dating('lmp', d(lmp), 35), today);
+    expect(plain.gestationalDays - long.gestationalDays).toBe(7);
+  });
+
+  it('does not apply to conception or due-date mode', () => {
+    for (const method of ['conception', 'dueDate'] as const) {
+      const at28 = toLmpEquivalent(dating(method, d('2026-04-12'), 28));
+      const at35 = toLmpEquivalent(dating(method, d('2026-04-12'), 35));
+      expect(formatIsoDate(at35)).toBe(formatIsoDate(at28));
+    }
+  });
+
+  it('round-trips lmp through every other method at a non-default cycle', () => {
+    const original = d(lmp);
+    for (const to of ['lmp', 'conception', 'dueDate'] as const) {
+      const converted = convertInputDate('lmp', to, original, 35);
+      expect(formatIsoDate(convertInputDate(to, 'lmp', converted, 35))).toBe(
+        formatIsoDate(original),
+      );
+    }
+  });
+
+  it('clamps out-of-range and non-finite values rather than throwing', () => {
+    expect(clampCycleLength(10)).toBe(MIN_CYCLE_DAYS);
+    expect(clampCycleLength(90)).toBe(MAX_CYCLE_DAYS);
+    expect(clampCycleLength(30.4)).toBe(30);
+    expect(clampCycleLength(Number.NaN)).toBe(DEFAULT_CYCLE_DAYS);
   });
 });

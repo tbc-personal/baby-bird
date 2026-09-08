@@ -8,11 +8,24 @@
  *
  * This module is pure with respect to the clock; it never calls `new Date()`.
  */
-import { isDatingMethod, parseIsoDate, type DatingMethod, type IsoDate } from './gestation';
+import {
+  clampCycleLength,
+  DEFAULT_CYCLE_DAYS,
+  dueDateFrom,
+  formatIsoDate,
+  isDatingMethod,
+  parseIsoDate,
+  toLmpEquivalent,
+  type Dating,
+  type DatingMethod,
+  type IsoDate,
+} from './gestation';
 import { SKIN_IDS, type SkinId } from '../skins/ids';
 
 export const STORAGE_KEY = 'nestling.v1';
-export const STATE_VERSION = 1;
+export const STATE_VERSION = 2;
+/** Versions `parseSavedState` can still read. v1 predates the cycle-length field. */
+const READABLE_VERSIONS: readonly number[] = [1, STATE_VERSION];
 
 export type Units = 'imperial' | 'metric';
 
@@ -26,7 +39,17 @@ export interface SavedState {
   readonly version: typeof STATE_VERSION;
   readonly method: DatingMethod;
   readonly inputDate: IsoDate;
+  /**
+   * Typical cycle length in days; only meaningful in `lmp` mode, but stored
+   * unconditionally so switching methods and switching back is lossless.
+   */
+  readonly cycleLength: number;
   readonly settings: Settings;
+}
+
+/** The saved record as the date math wants it. Throws nothing; the caller has already parsed. */
+export function datingFrom(saved: SavedState, inputDate: Date): Dating {
+  return { method: saved.method, inputDate, cycleLength: saved.cycleLength };
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -63,13 +86,22 @@ export function parseSavedState(json: string | null): SavedState | null {
   }
   if (typeof raw !== 'object' || raw === null) return null;
   const record = raw as Record<string, unknown>;
-  if (record.version !== STATE_VERSION) return null;
+  if (typeof record.version !== 'number' || !READABLE_VERSIONS.includes(record.version)) {
+    return null;
+  }
   if (!isDatingMethod(record.method)) return null;
   if (typeof record.inputDate !== 'string' || !parseIsoDate(record.inputDate)) return null;
   return {
     version: STATE_VERSION,
     method: record.method,
     inputDate: record.inputDate,
+    // A v1 record was written when every cycle was assumed to be 28 days, so
+    // defaulting to 28 reproduces exactly the due date that record already
+    // showed. Upgrading must never move someone's due date under them.
+    cycleLength:
+      typeof record.cycleLength === 'number'
+        ? clampCycleLength(record.cycleLength)
+        : DEFAULT_CYCLE_DAYS,
     settings: readSettings(record.settings),
   };
 }
@@ -154,14 +186,24 @@ export function shareParamsFromUrl(url: string): SharedDate | null {
   return parseShareParams(url.slice(inHash));
 }
 
-/** Build the link the Today screen copies. */
-export function buildShareLink(
-  origin: string,
-  method: DatingMethod,
-  inputDate: IsoDate,
-): string {
+/**
+ * Build the link Setup copies. Always emitted in due-date mode, whatever the
+ * sender counts from.
+ *
+ * Once cycle length exists, an `?m=lmp&d=…` link is ambiguous: the recipient's
+ * app would apply its own cycle length to the sender's period date and land on
+ * a different due date. Sending the derived due date instead is unambiguous and
+ * shares strictly less — the recipient learns the due date and nothing about
+ * the sender's period date or cycle, which is the direction ADR-006 pushes.
+ *
+ * Links written by older versions still parse: `parseShareParams` accepts any
+ * method, and an `lmp` link predates cycle length, so reading it with the
+ * default 28 reproduces the sender's due date.
+ */
+export function buildShareLink(origin: string, dating: Dating): string {
   const base = origin.split('#')[0]?.split('?')[0] ?? origin;
-  const params = new URLSearchParams({ m: method, d: inputDate });
+  const dueDate = dueDateFrom(toLmpEquivalent(dating));
+  const params = new URLSearchParams({ m: 'dueDate', d: formatIsoDate(dueDate) });
   return `${base}?${params.toString()}`;
 }
 

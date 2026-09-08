@@ -54,12 +54,12 @@ describe('Today screen (mockup 2)', () => {
     expect(screen.getByText('weight (17.6 oz)')).toBeInTheDocument();
   });
 
-  it('uses the exact share-button wording', () => {
+  it('no longer carries the share button, which now lives on Setup', () => {
     saveLmp('2026-03-29');
     renderToday('2026-09-06');
     expect(
-      screen.getByRole('button', { name: 'Copy a shareable link' }),
-    ).toBeInTheDocument();
+      screen.queryByRole('button', { name: 'Copy a shareable link' }),
+    ).not.toBeInTheDocument();
   });
 
   it('shows the too-early state before week 2', () => {

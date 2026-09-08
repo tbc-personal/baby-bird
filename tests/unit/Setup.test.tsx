@@ -42,12 +42,42 @@ describe('Setup screen (mockup 1)', () => {
   it('shows the due date and progress live, on separate lines', async () => {
     const user = userEvent.setup();
     renderSetup();
-    await user.type(screen.getByLabelText('Date of last period'), '2026-03-29');
+    await user.type(screen.getByLabelText('First day of last period'), '2026-03-29');
 
     expect(screen.getByText('Due date')).toBeInTheDocument();
     expect(screen.getByText('January 3, 2027')).toBeInTheDocument();
     expect(screen.getByText('Today you are')).toBeInTheDocument();
     expect(screen.getByText('23 weeks, 0 days')).toBeInTheDocument();
+  });
+
+  it('asks for cycle length in LMP mode only', async () => {
+    const user = userEvent.setup();
+    renderSetup();
+    expect(screen.getByLabelText('Typical cycle length')).toHaveValue(28);
+
+    await user.selectOptions(screen.getByLabelText('Count from'), 'conception');
+    expect(screen.queryByLabelText('Typical cycle length')).toBeNull();
+
+    await user.selectOptions(screen.getByLabelText('Count from'), 'dueDate');
+    expect(screen.queryByLabelText('Typical cycle length')).toBeNull();
+  });
+
+  it('moves the due date by the cycle correction', async () => {
+    const user = userEvent.setup();
+    renderSetup();
+    await user.type(screen.getByLabelText('First day of last period'), '2026-03-29');
+    expect(screen.getByText('January 3, 2027')).toBeInTheDocument();
+
+    const cycle = screen.getByLabelText('Typical cycle length');
+    await user.clear(cycle);
+    await user.type(cycle, '35');
+    // 35 − 28 = seven days later than plain Naegele.
+    expect(screen.getByText('January 10, 2027')).toBeInTheDocument();
+  });
+
+  it('says cycle length is not period duration', () => {
+    renderSetup();
+    expect(screen.getByText(/not how long\s+the bleeding lasts/)).toBeInTheDocument();
   });
 
   it('carries no privacy copy', () => {
@@ -61,13 +91,15 @@ describe('Setup screen (mockup 1)', () => {
     const info = screen.getByRole('button', { name: 'How each method is calculated' });
 
     expect(info).toHaveAttribute('aria-expanded', 'false');
+    // jsdom does not apply stylesheets, so this can only check the attribute.
+    // Whether the panel actually disappears is asserted in the e2e smoke spec.
     const panel = document.getElementById(info.getAttribute('aria-controls') ?? '');
     expect(panel).toHaveAttribute('hidden');
 
     await user.click(info);
     expect(info).toHaveAttribute('aria-expanded', 'true');
     expect(panel).not.toHaveAttribute('hidden');
-    expect(screen.getByText('due = date + 280 d')).toBeVisible();
+    expect(screen.getByText('due = date + 280 d + (cycle − 28)')).toBeVisible();
     expect(screen.getByText('due = date + 266 d')).toBeVisible();
     expect(screen.getByText('as given')).toBeVisible();
   });
@@ -90,7 +122,7 @@ describe('Setup screen (mockup 1)', () => {
   it('relabels the date field and derives the period date in due-date mode', async () => {
     const user = userEvent.setup();
     renderSetup();
-    await user.type(screen.getByLabelText('Date of last period'), '2026-03-29');
+    await user.type(screen.getByLabelText('First day of last period'), '2026-03-29');
     await user.selectOptions(screen.getByLabelText('Count from'), 'dueDate');
 
     // The stored date converts with the method, so the same pregnancy stays selected.
@@ -103,8 +135,8 @@ describe('Setup screen (mockup 1)', () => {
   it('blocks the button on an empty, future, or too-old date', async () => {
     const user = userEvent.setup();
     renderSetup();
-    const button = screen.getByRole('button', { name: 'Start counting' });
-    const date = screen.getByLabelText('Date of last period');
+    const button = screen.getByRole('button', { name: 'Show me my nestling' });
+    const date = screen.getByLabelText('First day of last period');
 
     expect(button).toBeDisabled();
 
@@ -126,18 +158,23 @@ describe('Setup screen (mockup 1)', () => {
   it('saves the date to storage on submit', async () => {
     const user = userEvent.setup();
     renderSetup();
-    await user.type(screen.getByLabelText('Date of last period'), '2026-03-29');
-    await user.click(screen.getByRole('button', { name: 'Start counting' }));
+    await user.type(screen.getByLabelText('First day of last period'), '2026-03-29');
+    await user.click(screen.getByRole('button', { name: 'Show me my nestling' }));
 
     const stored: unknown = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? 'null');
-    expect(stored).toMatchObject({ version: 1, method: 'lmp', inputDate: '2026-03-29' });
+    expect(stored).toMatchObject({
+      version: 2,
+      method: 'lmp',
+      cycleLength: 28,
+      inputDate: '2026-03-29',
+    });
   });
 });
 
 describe('a shared link (ADR-006)', () => {
   it('pre-fills setup when there is nothing saved', () => {
     renderSetup({ method: 'lmp', inputDate: '2026-03-29' });
-    expect(screen.getByLabelText('Date of last period')).toHaveValue('2026-03-29');
+    expect(screen.getByLabelText('First day of last period')).toHaveValue('2026-03-29');
     expect(screen.queryByRole('dialog')).toBeNull();
   });
 
@@ -153,11 +190,11 @@ describe('a shared link (ADR-006)', () => {
     const sheet = screen.getByRole('dialog');
     expect(sheet).toHaveTextContent('Replace your saved date with the shared one?');
     // The button is blocked while the question stands.
-    expect(screen.getByRole('button', { name: 'Start counting' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Show me my nestling' })).toBeDisabled();
 
     await user.click(screen.getByRole('button', { name: 'Keep mine' }));
     expect(screen.queryByRole('dialog')).toBeNull();
-    expect(screen.getByLabelText('Date of last period')).toHaveValue('2026-01-05');
+    expect(screen.getByLabelText('First day of last period')).toHaveValue('2026-01-05');
   });
 
   it('takes the shared date when asked to replace', async () => {
@@ -169,7 +206,7 @@ describe('a shared link (ADR-006)', () => {
 
     renderSetup({ method: 'lmp', inputDate: '2026-03-29' });
     await user.click(screen.getByRole('button', { name: 'Use the shared date' }));
-    expect(screen.getByLabelText('Date of last period')).toHaveValue('2026-03-29');
+    expect(screen.getByLabelText('First day of last period')).toHaveValue('2026-03-29');
   });
 
   it('does not ask when the shared date matches what is saved', () => {

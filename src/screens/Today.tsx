@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   computeProgress,
   formatDaysRemaining,
@@ -8,13 +7,12 @@ import {
   type Progress,
 } from '../lib/gestation';
 import { formatShortDate } from '../lib/dates';
-import { buildShareLink, isReviewMode } from '../lib/storage';
+import { datingFrom, isReviewMode } from '../lib/storage';
 import { weekRow } from '../data/comparisons';
 import { ComparisonCard } from '../components/ComparisonCard';
 import { LaborPanelCard } from '../components/LaborPanel';
 import { LABOR_PANEL_FROM_DAY } from '../lib/laborProbability';
 import { useAppState } from '../useAppState';
-import './Today.css';
 
 /** The app's base path, so a Commons image resolves under a project Pages URL. */
 export const BASE_URL: string = import.meta.env.BASE_URL;
@@ -30,7 +28,7 @@ export function TodayScreen({ today }: { today: Date }) {
   const inputDate = parseIsoDate(saved.inputDate);
   if (!inputDate) return null;
 
-  const progress = computeProgress(saved.method, inputDate, today);
+  const progress = computeProgress(datingFrom(saved, inputDate), today);
   const reviewMode = isReviewMode(window.location.href, import.meta.env.DEV);
 
   return (
@@ -58,8 +56,6 @@ export function TodayScreen({ today }: { today: Date }) {
       {settings.laborPanelEnabled && progress.gestationalDays >= LABOR_PANEL_FROM_DAY ? (
         <LaborPanelCard gestationalDays={progress.gestationalDays} />
       ) : null}
-
-      <ShareButton method={saved.method} inputDate={saved.inputDate} />
     </>
   );
 }
@@ -114,61 +110,4 @@ export function EmptyState({ title, body }: { title: string; body: string }) {
       <p>{body}</p>
     </div>
   );
-}
-
-function ShareButton({ method, inputDate }: { method: string; inputDate: string }) {
-  const [copied, setCopied] = useState(false);
-
-  return (
-    <div className="today__share">
-      <button
-        type="button"
-        className="btn btn--quiet"
-        onClick={() => {
-          const link = buildShareLink(
-            window.location.href,
-            method as Parameters<typeof buildShareLink>[1],
-            inputDate,
-          );
-          void copy(link).then((ok) => {
-            setCopied(ok);
-            window.setTimeout(() => {
-              setCopied(false);
-            }, 2500);
-          });
-        }}
-      >
-        Copy a shareable link
-      </button>
-      <p className="small" role="status">
-        {copied ? 'Link copied.' : ' '}
-      </p>
-    </div>
-  );
-}
-
-/**
- * `navigator.clipboard` needs a secure context and can be refused. The fallback
- * selects a temporary textarea, which works in every browser the app targets.
- */
-async function copy(text: string): Promise<boolean> {
-  try {
-    await navigator.clipboard.writeText(text);
-    return true;
-  } catch {
-    try {
-      const field = document.createElement('textarea');
-      field.value = text;
-      field.setAttribute('readonly', '');
-      field.style.position = 'fixed';
-      field.style.opacity = '0';
-      document.body.appendChild(field);
-      field.select();
-      const ok = document.execCommand('copy');
-      document.body.removeChild(field);
-      return ok;
-    } catch {
-      return false;
-    }
-  }
 }

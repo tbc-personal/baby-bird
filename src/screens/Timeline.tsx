@@ -8,6 +8,7 @@ import { hrefFor } from '../lib/router';
 import { formatLength, formatWeight } from '../lib/measures';
 import { COMPARISON_WEEKS } from '../data/comparisons';
 import { Silhouette } from '../components/Silhouette';
+import { datingFrom } from '../lib/storage';
 import { useAppState } from '../useAppState';
 import './Timeline.css';
 
@@ -23,7 +24,7 @@ export function TimelineScreen({ today }: { today: Date }) {
   const inputDate = saved ? parseIsoDate(saved.inputDate) : null;
   const currentWeek =
     saved && inputDate
-      ? computeProgress(saved.method, inputDate, today).comparisonWeek
+      ? computeProgress(datingFrom(saved, inputDate), today).comparisonWeek
       : null;
 
   useEffect(() => {
