@@ -16,6 +16,21 @@ export function formatShortDate(date: Date): string {
   return format(date, 'MMM d');
 }
 
+/**
+ * "October 18–24", or "October 30 – November 5" when the span crosses a month.
+ * Used on Today when you browse away from the present week and need to know
+ * which days that week actually covers.
+ *
+ * En dash, tight when the month is shared and spaced when it is not, which is
+ * the usual typographic convention for a range of dates.
+ */
+export function formatDateRange(start: Date, end: Date): string {
+  if (start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear()) {
+    return `${format(start, 'MMMM d')}\u2013${format(end, 'd')}`;
+  }
+  return `${format(start, 'MMMM d')} \u2013 ${format(end, 'MMMM d')}`;
+}
+
 /** "2026-03-29" for the <input type="date"> value. */
 export function formatInputDate(date: Date): string {
   return format(date, 'yyyy-MM-dd');

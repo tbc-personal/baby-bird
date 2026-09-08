@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { TodayScreen } from '../../src/screens/Today';
 import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
@@ -168,5 +169,89 @@ describe('ComparisonCard', () => {
   it('says the seed weights are an upper bound', () => {
     card(2);
     expect(screen.getByText('weight, under 0.04 oz')).toBeInTheDocument();
+  });
+});
+
+describe('looking ahead and back', () => {
+  /** Week 23 on 2026-09-06, so there is room to step in both directions. */
+  function openAtWeek23() {
+    saveLmp('2026-03-29');
+    renderToday('2026-09-06');
+    return userEvent.setup();
+  }
+
+  it('keeps days-to-go on the present week and shows no date range', () => {
+    openAtWeek23();
+    expect(screen.getByText(/119 days to go/)).toBeInTheDocument();
+    expect(screen.queryByText(/back to this week/)).toBeNull();
+  });
+
+  it('steps forward to a future week, its offset and its calendar dates', async () => {
+    const user = openAtWeek23();
+    await user.click(screen.getByRole('button', { name: 'Next week' }));
+
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 24');
+    expect(screen.getByText(/1 week ahead/)).toBeInTheDocument();
+    expect(screen.getByText(/September 13–19/)).toBeInTheDocument();
+    expect(screen.queryByText(/days to go/)).toBeNull();
+  });
+
+  it('steps back to a past week', async () => {
+    const user = openAtWeek23();
+    const back = screen.getByRole('button', { name: 'Previous week' });
+    await user.click(back);
+    await user.click(back);
+
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 21');
+    expect(screen.getByText(/2 weeks ago/)).toBeInTheDocument();
+  });
+
+  it('shows the browsed week\'s card, not the current one', async () => {
+    const user = openAtWeek23();
+    expect(screen.getByText('Atlantic Puffin')).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Next week' }));
+    expect(screen.queryByText('Atlantic Puffin')).toBeNull();
+    expect(screen.getByText(weekRow(24)?.comparison ?? '')).toBeInTheDocument();
+  });
+
+  it('returns to the present week', async () => {
+    const user = openAtWeek23();
+    await user.click(screen.getByRole('button', { name: 'Next week' }));
+    await user.click(screen.getByRole('button', { name: 'back to this week' }));
+
+    expect(screen.getByText(/119 days to go/)).toBeInTheDocument();
+    expect(screen.getByText('Atlantic Puffin')).toBeInTheDocument();
+  });
+
+  it('stops at week 42 rather than banking invisible steps', async () => {
+    saveLmp('2026-03-29');
+    // 41w0d, so one step forward reaches 42 and the arrow then disables.
+    renderToday('2027-01-10');
+    const user = userEvent.setup();
+    const forward = screen.getByRole('button', { name: 'Next week' });
+
+    await user.click(forward);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Week 42');
+    expect(forward).toBeDisabled();
+
+    // Stepping back must move exactly one week, not unwind clicks that never
+    // landed. One week back from 42 is the present week, so the header returns
+    // to the live reading rather than to "Week 41".
+    await user.click(screen.getByRole('button', { name: 'Previous week' }));
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      '41 weeks, 0 days',
+    );
+    expect(screen.queryByText(/back to this week/)).toBeNull();
+  });
+
+  it('hides the labor panel while browsing, since it is about now', async () => {
+    saveLmp('2026-03-29');
+    renderToday('2026-12-01');
+    const user = userEvent.setup();
+    expect(screen.getByText(/chance labor starts/i)).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Previous week' }));
+    expect(screen.queryByText(/chance labor starts/i)).toBeNull();
   });
 });

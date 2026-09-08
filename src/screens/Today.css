@@ -1,0 +1,50 @@
+/*
+ * The header row: an arrow, the big line, an arrow. The arrows keep their
+ * width whether or not they are usable, so stepping to either end of the
+ * range does not shift the heading sideways.
+ */
+.head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.head .big {
+  min-width: 0;
+}
+
+.head__arrow {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.head__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.head__range {
+  margin: 4px 0 0;
+}
+
+/* A button that reads as a link: it changes what is on screen, not where you are. */
+.linkish {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--secondary);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

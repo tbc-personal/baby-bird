@@ -321,6 +321,33 @@ export const VALIDATION_MESSAGE: Record<ValidationError['kind'], string> = {
   dueTooFar: 'That due date is more than 280 days away.',
 };
 
+/**
+ * The seven calendar days that gestational week `week` covers: day `week * 7`
+ * through `week * 7 + 6` counted from day 0 of the gestational scale. "23 weeks
+ * 0 days" is the first day of week 23, so the row labelled week 23 is the week
+ * you are in while the header reads 23w0d through 23w6d.
+ */
+export function weekDateRange(
+  lmpEquivalent: Date,
+  week: number,
+): { readonly start: Date; readonly end: Date } {
+  return {
+    start: addDays(lmpEquivalent, week * 7),
+    end: addDays(lmpEquivalent, week * 7 + 6),
+  };
+}
+
+/**
+ * "6 weeks ahead", "1 week ago". Returns null at offset 0, where the honest
+ * answer is "this week" and the header says something more useful instead.
+ */
+export function formatWeekOffset(offset: number): string | null {
+  if (offset === 0) return null;
+  const magnitude = Math.abs(offset);
+  const weeks = `${magnitude} ${magnitude === 1 ? 'week' : 'weeks'}`;
+  return offset > 0 ? `${weeks} ahead` : `${weeks} ago`;
+}
+
 /** True on the two weeks that straddle the crown-rump → crown-heel switch. */
 export function isConventionSwitchWeek(week: number): boolean {
   return week === CONVENTION_SWITCH_BEFORE_WEEK || week === CONVENTION_SWITCH_AFTER_WEEK;

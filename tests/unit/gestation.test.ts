@@ -13,8 +13,10 @@ import {
   isConventionSwitchWeek,
   isDatingMethod,
   parseIsoDate,
+  formatWeekOffset,
   MAX_CYCLE_DAYS,
   MIN_CYCLE_DAYS,
+  weekDateRange,
   toLmpEquivalent,
   trimesterFor,
   validateInput,
@@ -529,5 +531,36 @@ describe('cycle length (adjusted Naegele)', () => {
     expect(clampCycleLength(90)).toBe(MAX_CYCLE_DAYS);
     expect(clampCycleLength(30.4)).toBe(30);
     expect(clampCycleLength(Number.NaN)).toBe(DEFAULT_CYCLE_DAYS);
+  });
+});
+
+describe('browsing other weeks', () => {
+  it('spans the seven days of the gestational week', () => {
+    const lmp = d('2026-03-29');
+    // Week 23 begins on 23w0d, which is the day the header first reads 23 weeks.
+    const week23 = weekDateRange(lmp, 23);
+    expect(formatIsoDate(week23.start)).toBe('2026-09-06');
+    expect(formatIsoDate(week23.end)).toBe('2026-09-12');
+
+    const week24 = weekDateRange(lmp, 24);
+    expect(formatIsoDate(week24.start)).toBe('2026-09-13');
+    expect(daysBetween(week24.start, week24.end)).toBe(6);
+  });
+
+  it('picks up where the previous week left off, with no gap or overlap', () => {
+    const lmp = d('2026-03-29');
+    for (let week = 2; week < 42; week += 1) {
+      const here = weekDateRange(lmp, week);
+      const next = weekDateRange(lmp, week + 1);
+      expect(daysBetween(here.end, next.start)).toBe(1);
+    }
+  });
+
+  it('words the offset, and says nothing at all on the present week', () => {
+    expect(formatWeekOffset(0)).toBeNull();
+    expect(formatWeekOffset(1)).toBe('1 week ahead');
+    expect(formatWeekOffset(6)).toBe('6 weeks ahead');
+    expect(formatWeekOffset(-1)).toBe('1 week ago');
+    expect(formatWeekOffset(-3)).toBe('3 weeks ago');
   });
 });
