@@ -147,10 +147,7 @@ export function ProgressHeader({
         />
         <h1 className="big">
           {browsing ? `Week ${String(viewedWeek)}` : formatWeeksAndDays(progress)}{' '}
-          <small>
-            {'· '}
-            {browsing ? formatWeekOffset(offset) : formatDaysRemaining(progress)}
-          </small>
+          <small>{browsing ? formatWeekOffset(offset) : formatDaysRemaining(progress)}</small>
         </h1>
         <Arrow
           direction="forward"

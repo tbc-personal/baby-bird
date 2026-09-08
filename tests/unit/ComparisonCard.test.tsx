@@ -84,7 +84,9 @@ describe('ComparisonCard', () => {
         name: /line breaks between week 20 and week 21.*change of ruler, not growth/s,
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/crown-to-rump → head-to-heel, week 20→21/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/ruler changes at week 20: crown to rump, then head to heel/),
+    ).toBeInTheDocument();
   });
 
   it('does not mention a break on the weight chart', async () => {

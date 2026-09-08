@@ -14,6 +14,16 @@
   min-width: 0;
 }
 
+/*
+ * The arrows narrow the heading enough that "23 weeks, 0 days · 119 days to
+ * go" wraps, which left the separator stranded at the start of the second
+ * line. The subline is its own row now, and the separator goes with it.
+ */
+.head .big small {
+  display: block;
+  margin-top: 2px;
+}
+
 .head__arrow {
   width: 34px;
   height: 34px;

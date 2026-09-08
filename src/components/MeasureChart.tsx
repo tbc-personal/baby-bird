@@ -25,6 +25,21 @@ interface Point {
 }
 
 /**
+ * Three or four round gridline values covering zero to `max`, stepping on the
+ * 1 / 2 / 5 ladder so the labels read as numbers a person would say (5, 10, 20)
+ * rather than as arithmetic on the maximum (6.83, 13.67).
+ */
+function ticksUpTo(max: number): number[] {
+  const rough = max / 4;
+  const power = 10 ** Math.floor(Math.log10(rough));
+  const step = [1, 2, 5, 10].map((n) => n * power).find((n) => n >= rough) ?? power * 10;
+
+  const ticks: number[] = [];
+  for (let value = step; value <= max; value += step) ticks.push(value);
+  return ticks;
+}
+
+/**
  * Weeks 2–42 for one measure, dropping any row with no value for it (the
  * schema allows `null`; the current data never does, but the chart should not
  * assume that stays true).
@@ -40,12 +55,20 @@ function pointsFor(measure: Measure): Point[] {
  * The card's inset, opened. Weeks 2–42, one measure, plotted straight from
  * `COMPARISON_WEEKS` (no chart library, matching `LaborCurve`).
  *
- * Both measures span 3+ orders of magnitude over the 41 weeks (length: 0.014in
- * → 21in, ~1500×; weight: 0.04oz → 130oz, ~3200×). The task's complaint about
- * weight — early weeks collapsing onto the axis on a linear scale — is just as
- * true of length, only slightly less extreme by exponent. A log10 y axis is
- * used for both, so the size doublings of the first trimester stay visible
- * instead of flatlining against the baseline for two-thirds of the chart.
+ * The y axis is linear, from zero.
+ *
+ * A log axis was tried first, on the reasoning that both measures span three
+ * orders of magnitude (length 0.014in → 21in, weight 0.04oz → 130oz) and the
+ * first trimester otherwise sits on the baseline. It reads wrong. On a log
+ * axis the curve climbs steeply and then flattens from about week 22, which
+ * says "growth stops in the third trimester" — the opposite of what happens,
+ * and the third trimester is when most people are looking at this.
+ *
+ * Linear tells the truth: growth accelerates, and the early weeks really are
+ * that small. It is also what clinical fetal growth charts use, so the shape
+ * matches what a reader has seen at an appointment. The cost is that weeks 2
+ * to 12 hug the axis; the number is in the card above, so the chart does not
+ * have to carry it.
  */
 export function MeasureChart({
   measure,
@@ -59,16 +82,13 @@ export function MeasureChart({
   const points = pointsFor(measure);
   const format = measure === 'length' ? formatLength : formatWeight;
 
-  const values = points.map((point) => point.value);
-  const logMin = Math.log10(Math.min(...values));
-  const logMax = Math.log10(Math.max(...values));
+  const max = Math.max(...points.map((point) => point.value));
 
   const x = (week: number) =>
     LEFT +
     ((week - FIRST_COMPARISON_WEEK) / (LAST_COMPARISON_WEEK - FIRST_COMPARISON_WEEK)) *
       (RIGHT - LEFT);
-  const y = (value: number) =>
-    BASELINE - ((Math.log10(value) - logMin) / (logMax - logMin)) * (BASELINE - TOP);
+  const y = (value: number) => BASELINE - (value / max) * (BASELINE - TOP);
 
   const pathFor = (segment: Point[]) =>
     `M ${segment.map((point) => `${x(point.week).toFixed(1)} ${y(point.value).toFixed(1)}`).join(' L ')}`;
@@ -87,12 +107,7 @@ export function MeasureChart({
 
   const current = points.find((point) => point.week === currentWeek) ?? null;
 
-  // Gridlines at each power of ten the data actually spans; length and weight
-  // sit in different decades so this can't be a fixed list.
-  const gridValues: number[] = [];
-  for (let power = Math.ceil(logMin); power <= Math.floor(logMax); power += 1) {
-    gridValues.push(10 ** power);
-  }
+  const gridValues = ticksUpTo(max);
 
   const breakX =
     measure === 'length'
@@ -187,8 +202,8 @@ export function MeasureChart({
         </span>
         {measure === 'length' ? (
           <span>
-            <i className="legend__break" /> crown-to-rump → head-to-heel, week{' '}
-            {CONVENTION_SWITCH_BEFORE_WEEK}→{CONVENTION_SWITCH_AFTER_WEEK}
+            <i className="legend__break" /> ruler changes at week{' '}
+            {CONVENTION_SWITCH_BEFORE_WEEK}: crown to rump, then head to heel
           </span>
         ) : null}
       </figcaption>
@@ -213,7 +228,7 @@ function describe(
   const range =
     `${label} from week ${first.week} to week ${last.week}, ` +
     `${format(first.value, units)} to ${format(last.value, units)}, ` +
-    'plotted on a logarithmic scale because the early weeks are so much smaller than the later ones.';
+    'rising slowly at first and then faster through the third trimester.';
 
   const breakNote =
     measure === 'length'
