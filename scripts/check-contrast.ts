@@ -15,6 +15,7 @@ const PAIRS: ReadonlyArray<readonly [string, keyof Tokens, keyof Tokens]> = [
   ['accent / paper', 'accent', 'paper'],
   ['on-accent / accent', 'onAccent', 'accent'],
   ['secondary / secondary-soft', 'secondary', 'secondarySoft'],
+  ['ink / accent-soft', 'ink', 'accentSoft'],
   ['ink / note', 'ink', 'note'],
   ['ink / egg', 'ink', 'egg'],
   ['focus / paper', 'focus', 'paper'],

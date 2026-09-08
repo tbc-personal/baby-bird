@@ -48,3 +48,33 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+/*
+ * The trimester and due-date chips.
+ *
+ * Colour choice is constrained by the ADR-007 contrast gate, not by taste:
+ * accent on accent-soft measures as low as 2.11:1 in Oriole and Goldfinch
+ * light, so the tint carries the chip and a token that clears 4.5:1 in all
+ * seven skins carries the text. Both pairs are asserted in skins.test.ts.
+ */
+.meta--pills {
+  align-items: center;
+}
+
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pill--trimester {
+  background: var(--secondary-soft);
+  color: var(--secondary);
+}
+
+.pill--due {
+  background: var(--accent-soft);
+  color: var(--ink);
+}

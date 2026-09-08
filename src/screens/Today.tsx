@@ -125,11 +125,18 @@ export function ProgressHeader({
 
   return (
     <>
-      <div className="meta">
-        <span>
+      {/*
+        Pills rather than plain grey text: the skins were barely visible on
+        Today, because almost everything above the card is ink on the page
+        ground. These two chips are the one place a tint costs nothing.
+      */}
+      <div className="meta meta--pills">
+        <span className="pill pill--trimester">
           {progress.trimester ? TRIMESTER_LABEL[progress.trimester] : 'Not started'}
         </span>
-        <span className="mono">due {formatShortDate(progress.dueDate)}</span>
+        <span className="pill pill--due mono">
+          due {formatShortDate(progress.dueDate)}
+        </span>
       </div>
 
       <div className="head">
