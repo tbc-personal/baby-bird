@@ -226,6 +226,12 @@ function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
     ' ',
   );
   const cats = file.categories.join(' ');
+  // What the *file* is, as opposed to what its caption talks about. Commons
+  // descriptions often carry a species blurb — "it feeds on fish ... lays three
+  // to five eggs" — under a photograph of an adult bird, which put six adult
+  // Great Blue Herons at the top of week 12's egg shortlist. Titles and
+  // categories describe the file itself, so the egg test uses only those.
+  const subject = [file.title, cats].join(' ');
   let points = 0;
 
   if (/Featured pictures on Wikimedia Commons/i.test(cats)) {
@@ -266,8 +272,8 @@ function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
     // the shortlist, because the word nest was in every caption. An egg week
     // wants, in order: a nest with the clutch visible, a collection specimen,
     // and only then a nest whose caption does not say whether eggs are in it.
-    const egg = /\begg/i.test(haystack);
-    const nest = /\b(nest|clutch|brood)/i.test(haystack);
+    const egg = /\begg/i.test(subject);
+    const nest = /\b(nest|clutch|brood)/i.test(subject);
     if (egg && nest) {
       points += 60;
       notes.push('nest with a clutch');
@@ -410,7 +416,9 @@ for (const week of weeks) {
       for (const term of [
         `${week.scientificName!} egg`,
         `${week.comparison!.replace(/ egg$/i, '')} nest eggs`,
+        // The two museum egg collections that photograph well and licence cleanly.
         `${week.scientificName!} MHNT`,
+        `${week.scientificName!} MWNH`,
       ]) {
         const hits = (await api(
           {
