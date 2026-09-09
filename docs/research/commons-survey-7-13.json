@@ -1,0 +1,567 @@
+{
+  "generated": "2026-09-09T14:23:56.942Z",
+  "survey": [
+    {
+      "week": 7,
+      "kind": "egg",
+      "comparison": "House Wren egg",
+      "scientificName": "Troglodytes aedon",
+      "category": "Category:Troglodytes aedon",
+      "pool": 29,
+      "rejected": {
+        "too small": 3,
+        "not a photograph": 4,
+        "licence": 10,
+        "mime video/webm": 2,
+        "scored out": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:House wren in JBWR (50039).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50039).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/House_wren_in_JBWR_%2850039%29.jpg/500px-House_wren_in_JBWR_%2850039%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2869,
+          "height": 2418,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "House wren peeks out of its nest box in Jamaica Bay Wildlife Refuge",
+          "score": 211,
+          "notes": ["featured picture", "quality image"]
+        },
+        {
+          "commonsTitle": "File:House wren in JBWR (50187).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50187).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/House_wren_in_JBWR_%2850187%29.jpg/500px-House_wren_in_JBWR_%2850187%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "House wren peeks out of its nest box in Jamaica Bay Wildlife Refuge",
+          "score": 118,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:House wren in JBWR (50034).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50034).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/House_wren_in_JBWR_%2850034%29.jpg/500px-House_wren_in_JBWR_%2850034%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4015,
+          "height": 2964,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "House wren peeks out of its nest box in Jamaica Bay Wildlife Refuge",
+          "score": 116,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:House wren in JBWR (50041).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50041).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/House_wren_in_JBWR_%2850041%29.jpg/500px-House_wren_in_JBWR_%2850041%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 1797,
+          "height": 1320,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "House wren atop its nest box in Jamaica Bay Wildlife Refuge",
+          "score": 37,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:House-wren-7a.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House-wren-7a.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/House-wren-7a.jpg/500px-House-wren-7a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 1152,
+          "height": 739,
+          "license": "CC BY-SA 3.0",
+          "author": "William H. Majoros",
+          "description": "House wren emerging from nest box",
+          "score": 35,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:House wren (53832367786).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_wren_(53832367786).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/House_wren_%2853832367786%29.jpg/500px-House_wren_%2853832367786%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3647,
+          "height": 3573,
+          "license": "Public domain",
+          "author": "U.S. Fish and Wildlife Service - Midwest Region",
+          "description": "We spotted this house wren feeding its young in a nest box in Clinton County, Michigan. Photo by Jim Hudgins/USFWS.",
+          "score": 25,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "kind": "egg",
+      "comparison": "Barn Swallow egg",
+      "scientificName": "Hirundo rustica",
+      "category": "Category:Hirundo rustica",
+      "pool": 88,
+      "rejected": {
+        "too small": 10,
+        "scored out": 3,
+        "licence": 3,
+        "no author reported": 10,
+        "not a photograph": 9,
+        "mime video/webm": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Hirundo rustica MHNT.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirundo_rustica_MHNT.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Hirundo_rustica_MHNT.jpg/500px-Hirundo_rustica_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4543,
+          "height": 3161,
+          "license": "CC BY-SA 4.0",
+          "author": "Didier Descouens",
+          "description": "Egg of Barn Swallow . Collection of Jacques Perrin de Brichambaut.",
+          "score": 83,
+          "notes": ["valued image"]
+        },
+        {
+          "commonsTitle": "File:Boeren zwaluw.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boeren_zwaluw.JPG",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Boeren_zwaluw.JPG/500px-Boeren_zwaluw.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY-SA 4.0",
+          "author": "Peter van der Sluijs",
+          "description": "Boeren zwaluw",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Draaien zwaluw .JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Draaien_zwaluw_.JPG",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Draaien_zwaluw_.JPG/500px-Draaien_zwaluw_.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5008,
+          "height": 3058,
+          "license": "CC BY-SA 4.0",
+          "author": "Peter van der Sluijs",
+          "description": "zwaluw",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eten belangrijk zwaluw .jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eten_belangrijk_zwaluw_.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Eten_belangrijk_zwaluw_.jpg/500px-Eten_belangrijk_zwaluw_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5677,
+          "height": 3785,
+          "license": "CC BY-SA 4.0",
+          "author": "Peter van der Sluijs",
+          "description": "zwaluw",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barn Swallow (54060147375).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barn_Swallow_(54060147375).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Barn_Swallow_%2854060147375%29.jpg/500px-Barn_Swallow_%2854060147375%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8256,
+          "height": 5504,
+          "license": "Public domain",
+          "author": "ShenandoahNPS",
+          "description": "NPS | L Pfeiffer",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Hirundo rustica.001 - A Pobra do Caramiñal.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirundo_rustica.001_-_A_Pobra_do_Carami%C3%B1al.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Hirundo_rustica.001_-_A_Pobra_do_Carami%C3%B1al.jpg/500px-Hirundo_rustica.001_-_A_Pobra_do_Carami%C3%B1al.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5152,
+          "height": 3864,
+          "license": "CC BY-SA 4.0",
+          "author": "Fernando Losada Rodríguez",
+          "description": "Nido de Hirundo rustica (golondrina común), en A Pobra do Caramiñal, Galicia, España.",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "kind": "egg",
+      "comparison": "Wood Thrush egg",
+      "scientificName": "Hylocichla mustelina",
+      "category": "Category:Hylocichla mustelina",
+      "pool": 52,
+      "rejected": {
+        "too small": 1,
+        "licence": 20,
+        "not a photograph": 2,
+        "mime image/vnd.djvu": 1,
+        "mime application/pdf": 27
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Wood thrush nest patuxent research refuge north tract 7.6.23 DSC 2058.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wood_thrush_nest_patuxent_research_refuge_north_tract_7.6.23_DSC_2058.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Wood_thrush_nest_patuxent_research_refuge_north_tract_7.6.23_DSC_2058.jpg/500px-Wood_thrush_nest_patuxent_research_refuge_north_tract_7.6.23_DSC_2058.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3195,
+          "height": 3195,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Hylocichla mustelina",
+          "score": 23,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "kind": "egg",
+      "comparison": "American Robin egg",
+      "scientificName": "Turdus migratorius",
+      "category": "Category:Turdus migratorius",
+      "pool": 47,
+      "rejected": {
+        "too small": 2,
+        "licence": 5,
+        "not a photograph": 15,
+        "scored out": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:American robin with nesting material (83084).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_robin_with_nesting_material_(83084).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/American_robin_with_nesting_material_%2883084%29.jpg/500px-American_robin_with_nesting_material_%2883084%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5126,
+          "height": 3844,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "American robin with nesting material in Green-Wood Cemetery",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Robin Turdus migratorius Egg in Nest 8990 03.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 4.0",
+          "author": "ImagePerson",
+          "description": "Robin's Egg in Nest",
+          "score": 90,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Robin Turdus migratorius Egg in Nest 8990 01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 4.0",
+          "author": "ImagePerson",
+          "description": "Robin's Egg in Nest",
+          "score": 90,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Robin Turdus migratorius Egg in Nest 8990 02.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 4.0",
+          "author": "ImagePerson",
+          "description": "Robin's Egg in Nest",
+          "score": 90,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Robin nest DE neighborhood 4.24.22 DSC 0260.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robin_nest_DE_neighborhood_4.24.22_DSC_0260.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Robin_nest_DE_neighborhood_4.24.22_DSC_0260.jpg/500px-Robin_nest_DE_neighborhood_4.24.22_DSC_0260.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Turdus migratorius",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Turdus migratorius PP 04.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turdus_migratorius_PP_04.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Turdus_migratorius_PP_04.jpg/500px-Turdus_migratorius_PP_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5025,
+          "height": 3350,
+          "license": "CC BY-SA 4.0",
+          "author": "Cephas",
+          "description": "Merle d'Amérique ( Turdus migratorius ) dans son nid, Parc national de Plaisance, Québec",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "kind": "egg",
+      "comparison": "Black Tern egg",
+      "scientificName": "Chlidonias niger",
+      "category": "Category:Chlidonias niger",
+      "pool": 15,
+      "rejected": {
+        "too small": 1,
+        "not a photograph": 4,
+        "licence": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Scherenwelle eieren 2013-05-30 008 (6).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scherenwelle_eieren_2013-05-30_008_(6).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Scherenwelle_eieren_2013-05-30_008_%286%29.jpg/500px-Scherenwelle_eieren_2013-05-30_008_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4000,
+          "height": 3000,
+          "license": "CC BY-SA 3.0",
+          "author": "JanB46",
+          "description": "Zwartestern nest met drie eieren op vlotje in dode arm van de IJssel",
+          "score": 86,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Black Tern nest (7402341032).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_Tern_nest_(7402341032).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Black_Tern_nest_%287402341032%29.jpg/500px-Black_Tern_nest_%287402341032%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3166,
+          "height": 2111,
+          "license": "Public domain",
+          "author": "U. S. Fish and Wildlife Service - Northeast Region",
+          "description": "Black tern nest photographed at Missisquoi National Wildlife Refuge credit: Ken Sturm/USFWS",
+          "score": 83,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Drijvend nest van een zwarte stern bij het Naardermeer, RP-F-2000-11-146.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Drijvend_nest_van_een_zwarte_stern_bij_het_Naardermeer,_RP-F-2000-11-146.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Drijvend_nest_van_een_zwarte_stern_bij_het_Naardermeer%2C_RP-F-2000-11-146.jpg/500px-Drijvend_nest_van_een_zwarte_stern_bij_het_Naardermeer%2C_RP-F-2000-11-146.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5946,
+          "height": 4078,
+          "license": "CC0",
+          "author": "Rijksmuseum",
+          "description": "Identificatie Titel(s): Drijvend nest van een zwarte stern bij het Naardermeer Objecttype: foto Objectnummer: RP-F-2000-11-146 Opschriften / Merken: signatuur, verso, geschreven in potlood: ‘foto / R Tepe’annotatie, verso, geschreven in pot",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Bird-Lore-6-1 0021.png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bird-Lore-6-1_0021.png",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Bird-Lore-6-1_0021.png/500px-Bird-Lore-6-1_0021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 1493,
+          "height": 1040,
+          "license": "Public domain",
+          "author": "Frank M. Chapman",
+          "description": "YOUNG BLACK TERN IN NEST, from the article The Black Tern at Home Bird-Lore, Vol. VI, No. 1. Photograph taken on July 8, 1901.",
+          "score": 36,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Black Tern nest (7402337204).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_Tern_nest_(7402337204).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Black_Tern_nest_%287402337204%29.jpg/500px-Black_Tern_nest_%287402337204%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2024,
+          "height": 1612,
+          "license": "Public domain",
+          "author": "U. S. Fish and Wildlife Service - Northeast Region",
+          "description": "Black tern nest photographed at Missisquoi National Wildlife Refuge credit: Ken Sturm/USFWS",
+          "score": 18,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Bird-Lore-6-1 0020a.png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bird-Lore-6-1_0020a.png",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Bird-Lore-6-1_0020a.png/500px-Bird-Lore-6-1_0020a.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 1490,
+          "height": 1396,
+          "license": "Public domain",
+          "author": "Frank M. Chapman",
+          "description": "Black Tern Incubating, from the article The Black Tern at Home Bird-Lore, Vol. VI, No. 1. Photograph taken on June 20, 1901.",
+          "score": 16,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "kind": "egg",
+      "comparison": "Great Blue Heron egg",
+      "scientificName": "Ardea herodias",
+      "category": "Category:Ardea herodias",
+      "pool": 59,
+      "rejected": {
+        "too small": 4,
+        "not a photograph": 8,
+        "mime image/tiff": 2,
+        "licence": 10,
+        "scored out": 2,
+        "mime video/webm": 2
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Heron Nests (27546943540).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546943540).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Heron_Nests_%2827546943540%29.jpg/500px-Heron_Nests_%2827546943540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": ". Birds",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Heron Nests (27723703932).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27723703932).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Heron_Nests_%2827723703932%29.jpg/500px-Heron_Nests_%2827723703932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": "Birds",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Heron Nests (27546941230).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546941230).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Heron_Nests_%2827546941230%29.jpg/500px-Heron_Nests_%2827546941230%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": "Birds",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Heron Nests (27723698102).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27723698102).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Heron_Nests_%2827723698102%29.jpg/500px-Heron_Nests_%2827723698102%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": "Birds",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Heron Nests (27546929260).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546929260).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Heron_Nests_%2827546929260%29.jpg/500px-Heron_Nests_%2827546929260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": ". Birds",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Heron Nests (27546924170).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546924170).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Heron_Nests_%2827546924170%29.jpg/500px-Heron_Nests_%2827546924170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Jennifer C.",
+          "description": "Birds",
+          "score": 48,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "kind": "egg",
+      "comparison": "Bald Eagle egg",
+      "scientificName": "Haliaeetus leucocephalus",
+      "category": "Category:Haliaeetus leucocephalus",
+      "pool": 140,
+      "rejected": {
+        "licence": 25,
+        "no author reported": 1,
+        "too small": 16,
+        "scored out": 10,
+        "not a photograph": 11
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Haliaeetus leucocephalus MHNT.ZOO.2010.11.96.5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg/500px-Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4252,
+          "height": 2840,
+          "license": "CC BY-SA 4.0",
+          "author": "Roger Culos",
+          "description": "Eggs of bald eagle Two specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.",
+          "score": 97,
+          "notes": ["quality image", "valued image", "reads as captive or in-hand"]
+        },
+        {
+          "commonsTitle": "File:The Eagle's Nest.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Eagle%27s_Nest.JPG",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Eagle%27s_Nest.JPG/500px-The_Eagle%27s_Nest.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2682,
+          "height": 2640,
+          "license": "CC BY-SA 3.0",
+          "author": "The High Fin Sperm Whale",
+          "description": "A Bald Eagle Haliaeetus leucocephalus and its nest in a Grand Fir Abies grandis , near the Nicomekl River .",
+          "score": 91,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Nesting Bald Eagles Seedskadee NWR (16654071911).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nesting_Bald_Eagles_Seedskadee_NWR_(16654071911).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Nesting_Bald_Eagles_Seedskadee_NWR_%2816654071911%29.jpg/500px-Nesting_Bald_Eagles_Seedskadee_NWR_%2816654071911%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3176,
+          "height": 2218,
+          "license": "Public domain",
+          "author": "USFWS Mountain-Prairie",
+          "description": "Bald eagles begin nesting on Seedskadee NWR when winter still grips the landscape. This pair has been repairing its nest since early February and the famale started incubating its first egg about February 19th. She will lay an egg every 2 t",
+          "score": 83,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Southern Bald Eagles - GPN-2000-000739.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Southern_Bald_Eagles_-_GPN-2000-000739.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Southern_Bald_Eagles_-_GPN-2000-000739.jpg/500px-Southern_Bald_Eagles_-_GPN-2000-000739.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3000,
+          "height": 2000,
+          "license": "Public domain",
+          "author": "NASA",
+          "description": "This is one in a series of remarkable photos documenting the daily lives of two of KSC's most famous residents: The Southern Bald Eagles which inhabit an enormous nest on the Kennedy Parkway North. Each fall, the eagles take up winter resid",
+          "score": 82,
+          "notes": ["nest with a clutch"]
+        },
+        {
+          "commonsTitle": "File:Bald Eagle - Flickr - GregTheBusker (4).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bald_Eagle_-_Flickr_-_GregTheBusker_(4).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Bald_Eagle_-_Flickr_-_GregTheBusker_%284%29.jpg/500px-Bald_Eagle_-_Flickr_-_GregTheBusker_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Greg Schechter from San Francisco, USA",
+          "description": "Bald Eagle",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Aneaglenest.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aneaglenest.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Aneaglenest.jpg/500px-Aneaglenest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4928,
+          "height": 3264,
+          "license": "CC BY-SA 4.0",
+          "author": "FfTWISTER",
+          "description": "A bald eagle nest",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    }
+  ]
+}

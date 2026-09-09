@@ -1,6 +1,11 @@
-# ADR-003: Bird images via Macaulay Library embeds (non-commercial)
+# ADR-003: Images
 
-Status: accepted (2026-09-06). Chosen by the author over the recommended Wikimedia Commons option.
+Status: superseded in part (2026-09-09). Accepted 2026-09-06 as "bird images via
+Macaulay Library embeds"; the embed route was abandoned on 2026-09-08 for the
+reason recorded below, and **Wikimedia Commons is now the route for all 42
+weeks**. The original decision and its context are kept in full, because the
+non-commercial constraint it reasoned about is why the Commons licence list is
+what it is.
 
 ## Decision
 For weeks 7–42 (eggs and birds), each screen embeds one Macaulay Library asset using the library's official share/embed iframe. Asset IDs are curated once and stored in `data/comparisons.json` (`image.mlAssetId`). The app must remain non-commercial: no ads, no paid tier, no for-profit ownership.
@@ -58,6 +63,14 @@ should carry an `mlAssetId` while the challenge is in front of it.
   Creative Commons licence, permit only personal non-commercial copying, and
   forbid using materials "separate from the accompanying text". Using their
   photos would need written permission.
+- **Finding the files is now tooled.** `npm run survey-commons` walks each
+  species' Commons category, rejects everything unshippable (licence, no author,
+  under 1000px, engravings, museum skins, maps, sound), scores what is left on
+  signals the API reports — Featured/Quality/Valued badges, aspect ratio against
+  the 150px strip crop, whether an egg week's file actually shows an egg — and
+  writes a six-candidate shortlist with thumbnails. It never picks; choosing
+  between six photographs stays a human act, the same split as `reviewed` in
+  ADR-004. Responses cache under `.commons-survey/`.
 - **Coverage is sufficient but uneven.** A survey of Commons for all 36 species,
   counting only files at least 900px wide under CC0 / public domain / CC BY /
   CC BY-SA and excluding scanned book plates, found every bird week (14-42) with
@@ -70,8 +83,11 @@ should carry an `mlAssetId` while the challenge is in front of it.
 
 ## Embed mechanics
 
-**Status after the build session (2026-09-06): NOT VERIFIED. Do not ship a
-curated asset id until someone with a browser confirms the pattern below.**
+**Historical. Superseded by "Resolved, 2026-09-08" above.** The verification this
+section asks for was done, and the answer was that the route does not work. The
+text is left as written because it records what was and was not known at the
+time, including a claim about blocked egress that later turned out to be about
+this container rather than about Cornell.
 
 The build session was asked to confirm the exact `src` from a live asset page's
 Embed dialog. It could not. The sandbox's egress proxy refuses `CONNECT` to

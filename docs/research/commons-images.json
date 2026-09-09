@@ -1,5 +1,5 @@
 {
-  "$comment": "Curated Wikimedia Commons photos for the seed weeks (ADR-003, CURATION.md task A). Selection is a human/curation judgement and lives here; `npm run seed-images` does the mechanical part \u2014 fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
+  "$comment": "Curated Wikimedia Commons photos, one per week (ADR-003). Selection is a human/curation judgement and lives here; `npm run survey-commons` shortlists the candidates; `npm run commons-images` does the mechanical part \u2014 fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
   "targetWidth": 900,
   "jpegQuality": 80,
   "picks": [

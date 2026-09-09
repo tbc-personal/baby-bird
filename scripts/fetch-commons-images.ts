@@ -1,12 +1,15 @@
 /**
- * Fetch the curated Wikimedia Commons seed photos (ADR-003, CURATION.md task A).
+ * Fetch the curated Wikimedia Commons photos (ADR-003).
  *
- * Weeks 2-6 are seeds, which the Macaulay Library has no assets for, so ADR-003
- * puts CC0/CC BY photos from Commons in the repo instead. The photos are local
- * so the app never calls Commons at runtime and the cards work offline.
+ * Every week's photo comes from Commons. It started as a seed-week fallback,
+ * because the Macaulay Library has no seed assets; when the Macaulay embed route
+ * turned out to be unshippable it became the route for weeks 7-42 too. The files
+ * are downloaded into the repo, so the app never calls Commons at runtime and
+ * the cards work offline.
  *
  * Which photo to use is a curation judgement and lives in
- * `docs/research/seed-images.json`. This script does only the mechanical half:
+ * `docs/research/commons-images.json`; `npm run survey-commons` shortlists the
+ * candidates to choose between. This script does only the mechanical half:
  * read that file, fetch each image's metadata from the Commons API, refuse any
  * licence not on ADR-003's allowed list, download at the target width, re-encode
  * with sharp, and write the `image` object into `data/comparisons.json`.
@@ -16,7 +19,7 @@
  * URL all come from the API response, so the credit line under each card is
  * whatever Commons actually says.
  *
- * Run with `npm run seed-images`. `--dry-run` reports without writing.
+ * Run with `npm run commons-images`. `--dry-run` reports without writing.
  * Exit code 1 if any pick cannot be resolved or carries a disallowed licence.
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -27,7 +30,7 @@ import { ALLOWED_COMMONS_LICENSES, comparisonsSchema } from '../src/lib/schema.t
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = resolve(ROOT, 'data/comparisons.json');
-const PICKS = resolve(ROOT, 'docs/research/seed-images.json');
+const PICKS = resolve(ROOT, 'docs/research/commons-images.json');
 const PUBLIC = resolve(ROOT, 'public');
 const UA = 'baby-bird-curation/0.1 (https://github.com/tbc-personal/baby-bird)';
 const dryRun = process.argv.includes('--dry-run');

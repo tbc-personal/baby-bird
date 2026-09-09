@@ -50,8 +50,8 @@ reports with `npm run verify-fact-check`.
 
 **Task A is half done.** The four seed weeks that have a usable Commons photo are
 sourced, downloaded and credited: week 2 poppy, week 4 nyjer, week 5 millet, week 6
-sunflower. The curated choices live in `docs/research/seed-images.json` with a note on
-why each was picked; `npm run seed-images` does the mechanical half — fetch the metadata,
+sunflower. The curated choices live in `docs/research/commons-images.json` with a note on
+why each was picked; `npm run commons-images` does the mechanical half — fetch the metadata,
 refuse any licence not on ADR-003's allowed list, download, resize, and write the `image`
 object. To swap a photo, change `commonsTitle` there and re-run. Attribution is never
 hand-typed: author, licence, licence URL and source URL all come from the Commons API.
@@ -142,7 +142,7 @@ For eggs, add the age/behavior filter for eggs in the search UI (or search "egg"
 | 42 | Osprey | osprey | https://search.macaulaylibrary.org/catalog?taxonCode=osprey&mediaType=photo&sort=rating_rank_desc |
 
 Seeds (weeks 2, 4, 5, 6): **done.** The curated choices are in
-`docs/research/seed-images.json` and `npm run seed-images` fetches, checks the
+`docs/research/commons-images.json` and `npm run commons-images` fetches, checks the
 licence, downloads and records them. To swap a photo, change its `commonsTitle`
 and re-run.
 
