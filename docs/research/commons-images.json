@@ -1,0 +1,48 @@
+{
+  "$comment": "Curated Wikimedia Commons photos, one per week (ADR-003). Selection is a human/curation judgement and lives here; `npm run survey-commons` shortlists the candidates; `npm run commons-images` does the mechanical part \u2014 fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
+  "targetWidth": 900,
+  "jpegQuality": 80,
+  "picks": [
+    {
+      "week": 2,
+      "comparison": "Poppy seed",
+      "commonsTitle": "File:Poppy Seed 2016-10-31-16.12 (30659262306).jpg",
+      "file": "images/seeds/poppy-seed.jpg",
+      "altText": "Poppy seeds magnified far past life size, each one kidney-shaped and covered in a fine honeycomb pattern.",
+      "why": "A USGS Bee Inventory macro, public domain. The extreme magnification suits week 2, where the whole point is how small a poppy seed is; the honeycomb seed coat is only visible at this scale.",
+      "authorOverride": "USGS Bee Inventory and Monitoring Lab",
+      "authorOverrideWhy": "Commons carries the Flickr-import form, 'USGS Bee Inventory and Monitoring Lab from Beltsville, Maryland, USA', which wraps the credit line onto two lines. Same author, geographic suffix dropped."
+    },
+    {
+      "week": 4,
+      "comparison": "Thistle (nyjer) seed",
+      "commonsTitle": "File:Niger Seed.jpg",
+      "file": "images/seeds/nyjer-seed.jpg",
+      "altText": "A round dish filled with nyjer seeds, thin black slivers packed tightly together.",
+      "why": "Clean overhead shot with individual seeds legible. Same photographer and framing as the week 5 millet, so the two cards sit together well."
+    },
+    {
+      "week": 5,
+      "comparison": "Millet seed",
+      "commonsTitle": "File:White Proso Millet.jpg",
+      "file": "images/seeds/millet-seed.jpg",
+      "altText": "A round dish of white proso millet, small pale round grains with a faint sheen.",
+      "why": "Matches the week 4 nyjer shot in framing and lighting."
+    },
+    {
+      "week": 6,
+      "comparison": "Sunflower seed",
+      "commonsTitle": "File:Sunflower seeds. img 004.jpg",
+      "file": "images/seeds/sunflower-seed.jpg",
+      "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
+      "why": "Sharp macro of black oil sunflower specifically, which is what the week 6 fact is about."
+    }
+  ],
+  "notSourced": [
+    {
+      "week": 3,
+      "comparison": "Grain of grit",
+      "reason": "No suitable Commons photo found. Searches for poultry grit, pigeon grit, gizzard grit and granite grit return only scanned pages from pre-1920 poultry manuals; searches for coarse sand return beach and sandstone geology, which does not read as grit a bird would swallow. This is moot until the comparison itself is settled: week 3 is still `proposed: true`, and the P1 fact-check found its only citation (the Wikipedia Gizzard article) never mentions grouse, doves or roadsides. Decide the comparison first."
+    }
+  ]
+}

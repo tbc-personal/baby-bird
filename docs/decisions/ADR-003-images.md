@@ -1,6 +1,11 @@
-# ADR-003: Bird images via Macaulay Library embeds (non-commercial)
+# ADR-003: Images
 
-Status: accepted (2026-09-06). Chosen by the author over the recommended Wikimedia Commons option.
+Status: superseded in part (2026-09-09). Accepted 2026-09-06 as "bird images via
+Macaulay Library embeds"; the embed route was abandoned on 2026-09-08 for the
+reason recorded below, and **Wikimedia Commons is now the route for all 42
+weeks**. The original decision and its context are kept in full, because the
+non-commercial constraint it reasoned about is why the Commons licence list is
+what it is.
 
 ## Decision
 For weeks 7–42 (eggs and birds), each screen embeds one Macaulay Library asset using the library's official share/embed iframe. Asset IDs are curated once and stored in `data/comparisons.json` (`image.mlAssetId`). The app must remain non-commercial: no ads, no paid tier, no for-profit ownership.
@@ -20,10 +25,69 @@ Cornell's help center states embedding and sharing Macaulay Library media is for
 | Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
 | Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
 
+## Resolved, 2026-09-08: the Macaulay embed route is not shippable
+
+Three findings, in the order they were established. The middle one corrects a
+wrong claim this file previously carried, and that correction stands.
+
+**1. The template was always right.** Cornell's Embed dialog produces an iframe
+pointing at exactly the URL `MACAULAY_EMBED_TEMPLATE` predicted, at 640x552.
+
+**2. Two bugs were ours, not Cornell's.** An earlier revision here claimed the
+endpoint was blocked, citing the author's home connection. That evidence was in
+fact our own bug: the lazy-load gate could hang, so no frame was created, no
+request was ever made, and with no frame the load timeout never started, leaving
+the card on "Loading photo" with no goose. Fixed with
+`EMBED_VISIBILITY_FALLBACK_MS`. The conclusion had also generalised from curl and
+a server-side fetcher, which were never evidence about browsers.
+
+**3. With the frame actually loading, the route fails for a different reason.**
+`macaulaylibrary.org` sits behind Anubis, a proof-of-work bot challenge, and it
+runs **inside the frame, in real time**. Every visitor watches a bot check where
+the photo should be, on every card, before any image appears. Observed directly
+by the author once the frame was loading. This is not a latency problem to tune
+around: the app would be putting a third party's anti-abuse interstitial in front
+of its own content.
+
+So the embed route is abandoned, and the frame keeps the mockup's 150px strip.
+`MacaulayEmbed` and the template stay in the tree — they are correct, and if
+Cornell exempts the embed endpoint the route is a data change away — but no row
+should carry an `mlAssetId` while the challenge is in front of it.
+
+### Where that leaves images
+
+- **Wikimedia Commons is the route.** This ADR already named it as the fallback
+  if embedding broke, and `image.provider` was designed for the swap. Weeks 2,
+  4, 5 and 6 prove the path end to end.
+- **Audubon is not an option.** Their terms reserve all rights, apply no
+  Creative Commons licence, permit only personal non-commercial copying, and
+  forbid using materials "separate from the accompanying text". Using their
+  photos would need written permission.
+- **Finding the files is now tooled.** `npm run survey-commons` walks each
+  species' Commons category, rejects everything unshippable (licence, no author,
+  under 1000px, engravings, museum skins, maps, sound), scores what is left on
+  signals the API reports — Featured/Quality/Valued badges, aspect ratio against
+  the 150px strip crop, whether an egg week's file actually shows an egg — and
+  writes a six-candidate shortlist with thumbnails. It never picks; choosing
+  between six photographs stays a human act, the same split as `reviewed` in
+  ADR-004. Responses cache under `.commons-survey/`.
+- **Coverage is sufficient but uneven.** A survey of Commons for all 36 species,
+  counting only files at least 900px wide under CC0 / public domain / CC BY /
+  CC BY-SA and excluding scanned book plates, found every bird week (14-42) with
+  18 or more candidates. The egg weeks are thinner and need per-week judgement:
+  American Robin 52 and Bald Eagle 37 are comfortable, Great Blue Heron 11 and
+  Black Tern 19 are workable, and **Wood Thrush has 3**. Some egg weeks will
+  have to show a nest with a clutch, or a bird on a nest, rather than a clean
+  egg photograph. One happy accident: a Commons file of a Wood Thrush nest
+  containing a cowbird egg would illustrate week 9's own cowbird fact exactly.
+
 ## Embed mechanics
 
-**Status after the build session (2026-09-06): NOT VERIFIED. Do not ship a
-curated asset id until someone with a browser confirms the pattern below.**
+**Historical. Superseded by "Resolved, 2026-09-08" above.** The verification this
+section asks for was done, and the answer was that the route does not work. The
+text is left as written because it records what was and was not known at the
+time, including a claim about blocked egress that later turned out to be about
+this container rather than about Cornell.
 
 The build session was asked to confirm the exact `src` from a live asset page's
 Embed dialog. It could not. The sandbox's egress proxy refuses `CONNECT` to

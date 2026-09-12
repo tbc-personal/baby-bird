@@ -3,7 +3,12 @@ import { useOnline } from '../useOnline';
 import { OfflineGoose } from './OfflineGoose';
 import { Silhouette } from './Silhouette';
 import type { Kind } from '../lib/schema';
-import { EMBED_HEIGHT, EMBED_TIMEOUT_MS, macaulayEmbedUrl } from './macaulay';
+import {
+  EMBED_HEIGHT,
+  EMBED_TIMEOUT_MS,
+  EMBED_VISIBILITY_FALLBACK_MS,
+  macaulayEmbedUrl,
+} from './macaulay';
 import './Photo.css';
 
 type EmbedState = 'idle' | 'loading' | 'loaded' | 'failed';
@@ -12,10 +17,13 @@ export function MacaulayEmbed({
   assetId,
   kind,
   altText,
+  credit,
 }: {
   assetId: string;
   kind: Kind;
   altText: string;
+  /** Rendered in the corner of the frame; see `ImageCredit`. */
+  credit?: React.ReactNode;
 }) {
   const online = useOnline();
   const [visible, setVisible] = useState(false);
@@ -60,6 +68,23 @@ export function MacaulayEmbed({
     [],
   );
 
+  /*
+   * The observer is an optimisation, so never let it be the reason a photo
+   * fails to appear. If it has not reported by the fallback, load anyway: a
+   * card that never becomes `visible` creates no frame, and with no frame the
+   * load timeout below never starts, so the area sits on "Loading photo" with
+   * no goose and no request ever made.
+   */
+  useEffect(() => {
+    if (visible) return;
+    const timer = window.setTimeout(() => {
+      setVisible(true);
+    }, EMBED_VISIBILITY_FALLBACK_MS);
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [visible]);
+
   const shouldLoad = visible && online;
 
   useEffect(() => {
@@ -90,7 +115,7 @@ export function MacaulayEmbed({
   }
 
   return (
-    <PhotoFrame tag={state === 'loaded' ? null : 'Loading photo'}>
+    <PhotoFrame tag={state === 'loaded' ? null : 'Loading photo'} credit={credit}>
       <div className="photo__holder" ref={attachHolder}>
         {shouldLoad ? (
           <iframe
@@ -100,10 +125,15 @@ export function MacaulayEmbed({
             height={EMBED_HEIGHT}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            allow="fullscreen"
+            allowFullScreen
             onLoad={() => {
               setState('loaded');
             }}
+            /*
+             * Chrome does not fire this for an HTTP error inside a frame, so
+             * the timeout above is the real failure detector. Kept because a
+             * browser that does fire it should not wait six seconds.
+             */
             onError={() => {
               setState('failed');
             }}
@@ -122,15 +152,19 @@ export function MacaulayEmbed({
  */
 export function PhotoFrame({
   tag,
+  credit,
   children,
 }: {
   tag: string | null;
+  /** The credit disclosure, pinned to the bottom-right corner of the image. */
+  credit?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <div className="photo">
       {tag ? <span className="photo__tag mono">{tag}</span> : null}
       {children}
+      {credit}
     </div>
   );
 }

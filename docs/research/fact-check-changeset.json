@@ -1,0 +1,796 @@
+{
+  "$comment": "Citation swaps and text fixes from the P1 fact-check. Applied by `npm run apply-fact-check`. Each entry names the fact by week and 1-based index within that week's facts[]. `rewrite: true` means the fact text changes, not just its sources. Nothing here sets reviewed:true - that stays a human act (docs/CURATION.md).",
+  "reports": [
+    "docs/research/fact-check-summary.md",
+    "docs/research/fact-check-2-12.md",
+    "docs/research/fact-check-13-22.md",
+    "docs/research/fact-check-23-32.md",
+    "docs/research/fact-check-33-42.md"
+  ],
+  "changes": [
+    {
+      "week": 2,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Papaver"
+      ],
+      "why": "Papaver_somniferum does not describe the pore mechanism; the genus page does."
+    },
+    {
+      "week": 2,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Papaver"
+      ],
+      "why": "Same: the capsule-pore mechanism is on the genus page."
+    },
+    {
+      "week": 3,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grit_(supplement)"
+      ],
+      "why": "Gizzard never mentions grouse, doves or roadside grit."
+    },
+    {
+      "week": 4,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_goldfinch",
+        "https://en.wikipedia.org/wiki/Pine_siskin"
+      ],
+      "why": "Replaces the unopenable All About Birds page; siskin half needs its own source."
+    },
+    {
+      "week": 4,
+      "fact": 2,
+      "text": "Nyjer is not a thistle but an African daisy grown for oil, heat-treated so stray weed seed in the bag cannot sprout.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Guizotia_abyssinica"
+      ],
+      "why": "Cited source says the heat targets contaminant seed and that treated nyjer 'may germinate but would typically be stunted' - the old wording said it cannot sprout.",
+      "rewrite": true
+    },
+    {
+      "week": 4,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_goldfinch"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 5,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Proso_millet",
+        "https://www.agmrc.org/commodities-products/grains-oilseeds/proso-millet"
+      ],
+      "why": "Wikipedia gives different day-counts; an agricultural extension source carries the maturity range."
+    },
+    {
+      "week": 5,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mourning_dove"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 6,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black-capped_chickadee"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 7,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/house-wren"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 7,
+      "fact": 2,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/house-wren"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 7,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Northern_house_wren"
+      ],
+      "why": "The house wren was split in 2024; the old title is now a stub."
+    },
+    {
+      "week": 8,
+      "fact": 1,
+      "text": "A Barn Swallow builds its cup from mud pellets, and a pair needs about two weeks to finish one.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Barn_swallow"
+      ],
+      "why": "The 'thousand or more pellets' figure is a Cliff Swallow statistic (BirdNote), not Barn Swallow. Wikipedia supports the pellets and the two-week build.",
+      "rewrite": true
+    },
+    {
+      "week": 8,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Barn_swallow"
+      ],
+      "why": "Wikipedia states first-brood young assisting with the second brood."
+    },
+    {
+      "week": 9,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/wood-thrush"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 9,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wood_thrush",
+        "https://www.audubon.org/news/how-thrushes-produce-those-ethereal-flute-songs"
+      ],
+      "why": "Adds a source that actually describes the two-sided syrinx."
+    },
+    {
+      "week": 9,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/wood-thrush"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 10,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_robin"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 10,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_robin"
+      ],
+      "why": "Replaces the unopenable All About Birds page. NOTE: Wikipedia supports the mud cup but NOT the breast-pressing detail; no reachable source found for it. Flagged for the author."
+    },
+    {
+      "week": 11,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/black-tern"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 11,
+      "fact": 2,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/black-tern"
+      ],
+      "why": "Wikipedia never states egg colour; Audubon does."
+    },
+    {
+      "week": 11,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/black-tern"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 12,
+      "fact": 1,
+      "text": "Great Blue Herons nest in colonies high in dead trees, and a platform reused for years grows to over a metre across.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_blue_heron"
+      ],
+      "why": "Cited source contradicts 'a pair adds to the same platform': nests are reused for years, but herons re-mate annually and most males pick a different nest each year.",
+      "rewrite": true
+    },
+    {
+      "week": 12,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/great-blue-heron"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 13,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bald_eagle"
+      ],
+      "why": "Still cited the unopenable All About Birds page. Wikipedia carries the record nest figures (2.5 m wide, 1 metric ton). Whether the fact should read as a record or a typical nest is still open - see the report's 'needs a human decision'."
+    },
+    {
+      "week": 13,
+      "fact": 2,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/bald-eagle",
+        "https://avianreport.com/bald-eagle-eggs/"
+      ],
+      "why": "Wikipedia is thin on egg colour; these carry it."
+    },
+    {
+      "week": 13,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bald_eagle",
+        "https://avianreport.com/bald-eagle-eggs/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 14,
+      "fact": 1,
+      "sources": [
+        "https://www.fws.gov/story/2024-08/august-2024-bird-month-ruby-throated-hummingbird"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 14,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 15,
+      "fact": 1,
+      "text": "The clutch runs to twelve eggs, the largest of any North American songbird for its size.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet",
+        "https://birdsoftheworld.org/bow/species/ruckin/cur/introduction"
+      ],
+      "why": "'About as much as two paperclips' (~2 g) understates a 5-10 g bird by several times. Both sources state the clutch-for-its-size claim directly, which is the stronger fact anyway.",
+      "rewrite": true
+    },
+    {
+      "week": 15,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 16,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black-capped_chickadee"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 16,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black-capped_chickadee",
+        "https://www.smithsonianmag.com/science-nature/how-do-chickadees-remember-where-they-hid-their-food-180983203/"
+      ],
+      "why": "Replaces the unopenable All About Birds page; the Smithsonian piece covers cache recall."
+    },
+    {
+      "week": 17,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Carolina_wren",
+        "https://blog.nature.org/2021/02/10/carolina-wrens-will-nest-in-just-about-anything/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 17,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/carolina-wren"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 18,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tufted_titmouse"
+      ],
+      "why": "Still cited the unopenable All About Birds page. Wikipedia states the hair-plucking directly, and names it: kleptotrichy."
+    },
+    {
+      "week": 18,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tufted_titmouse"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 19,
+      "fact": 1,
+      "sources": [
+        "https://birdsoftheworld.org/bow/species/cedwax/cur/introduction"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 19,
+      "fact": 3,
+      "sources": [
+        "https://blog.nature.org/2017/02/27/waxwings-really-have-wax-wings/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 20,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/eastern-bluebird",
+        "https://sialis.org/whiteeggs.htm"
+      ],
+      "why": "Replaces the unopenable All About Birds page; sialis carries the white-egg rate."
+    },
+    {
+      "week": 20,
+      "fact": 3,
+      "sources": [
+        "https://avianreport.com/bluebirds-nests-and-eggs/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 21,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/american-kestrel",
+        "https://nestwatch.org/learn/all-about-birdhouses/birds/american-kestrel/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 21,
+      "fact": 2,
+      "text": "A kestrel lays three to seven eggs a day or two apart, each about a tenth bigger than its body size would predict.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_kestrel"
+      ],
+      "why": "The UV/vole-urine claim is about the EURASIAN kestrel and the cited American kestrel article never mentions UV or urine; Lind et al. 2013 (J. Exp. Biol. 216:1819) tested the mechanism and rejected it. Replaced with an egg fact the cited article does state.",
+      "rewrite": true
+    },
+    {
+      "week": 21,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_kestrel"
+      ],
+      "why": "Replaces the unopenable All About Birds page; the article describes hovering."
+    },
+    {
+      "week": 22,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blue_jay"
+      ],
+      "why": "Structural_coloration never mentions blue jays; the species article states the claim."
+    },
+    {
+      "week": 22,
+      "fact": 2,
+      "sources": [
+        "https://auduboncnc.org/oaks-and-jays/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 22,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blue_jay"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 23,
+      "fact": 1,
+      "sources": [
+        "https://www.birdnote.org/podcasts/birdnote-daily/all-those-fish-puffins-beak"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 23,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/atlantic-puffin"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 24,
+      "fact": 1,
+      "text": "Flickers are woodpeckers that feed mostly on the ground, hammering into ant nests the way others drill into wood.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Northern_flicker"
+      ],
+      "why": "'Barbed tongue' looks like drift from another woodpecker; sources describe the flicker's tongue as long and sticky, not barbed. Wikipedia states the ground-hammering directly.",
+      "rewrite": true
+    },
+    {
+      "week": 24,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Northern_flicker"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 25,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Belted_kingfisher"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 25,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/belted-kingfisher"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 26,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Common_tern"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 26,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Common_tern"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 27,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Peregrine_falcon"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 28,
+      "fact": 1,
+      "text": "Cooper's Hawks hunt through cover at speed, and hunting accidents often leave them with broken bones.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cooper's_hawk"
+      ],
+      "why": "'Many carry healed fractures' rests on a '23% of 300+ skeletons' figure with no traceable primary source. Wikipedia supports fractures from hunting accidents, which is what the sentence now says.",
+      "rewrite": true
+    },
+    {
+      "week": 28,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/coopers-hawk"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 29,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_barn_owl"
+      ],
+      "why": "The Barn_owl title is now a near-empty genus stub; the content is on American_barn_owl."
+    },
+    {
+      "week": 29,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_barn_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 29,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_barn_owl"
+      ],
+      "why": "The Barn_owl title is now a near-empty genus stub."
+    },
+    {
+      "week": 30,
+      "fact": 1,
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/"
+      ],
+      "why": "The cited Wikipedia article never mentions faces, masks or Marzluff. Cornell & Marzluff 2011 (Proc. R. Soc. B) documents both the years-long grudge and its spread, horizontally and to offspring."
+    },
+    {
+      "week": 30,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_crow"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 30,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/american-crow"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 31,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/pileated-woodpecker"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 31,
+      "fact": 3,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/pileated-woodpecker"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 32,
+      "fact": 1,
+      "sources": [
+        "https://www.audubon.org/field-guide/bird/hooded-merganser"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 32,
+      "fact": 2,
+      "sources": [
+        "https://birdsoftheworld.org/bow/species/hoomer/cur/introduction"
+      ],
+      "why": "The cited Wikipedia article never mentions egg dumping."
+    },
+    {
+      "week": 32,
+      "fact": 3,
+      "sources": [
+        "https://birdsoftheworld.org/bow/species/hoomer/cur/introduction"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 33,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Green_heron",
+        "https://www.pa.gov/agencies/pgc/wildlife/discover-pa-wildlife/herons/green-heron.html"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 33,
+      "fact": 2,
+      "sources": [
+        "https://www.audubon.org/magazine/more-you-ever-wanted-know-about-heron-necks"
+      ],
+      "why": "The cited Wikipedia article does not cover the folded-neck hunting posture."
+    },
+    {
+      "week": 33,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Green_heron"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 34,
+      "fact": 1,
+      "sources": [
+        "https://animaldiversity.org/accounts/Larus_delawarensis/",
+        "https://www.hww.ca/wildlife/birds/ring-billed-gull/"
+      ],
+      "why": "Replaces the unopenable All About Birds page. NOTE: the 'within a few meters' detail is still only weakly supported - flagged for the author."
+    },
+    {
+      "week": 34,
+      "fact": 2,
+      "text": "Chicks peck at a parent's bill and call to be fed, and it is the calling that brings the food back up.",
+      "sources": [
+        "https://digitalcommons.usf.edu/auk/vol96/iss2/6"
+      ],
+      "why": "Miller & Conover 1979 (Auk 96:284) found bill-pecking neither necessary nor sufficient in this species; chick calls trigger regurgitation. The classic red-spot experiment is Herring Gull, which this bird is not. Cited via the open-access SORA/Digital Commons record (the Oxford copy returns 403 here); title, authors and year confirmed on that page, the vocalization-vs-pecking finding from the paper's abstract.",
+      "rewrite": true
+    },
+    {
+      "week": 34,
+      "fact": 3,
+      "sources": [
+        "https://animaldiversity.org/accounts/Larus_delawarensis/",
+        "https://www.hww.ca/wildlife/birds/ring-billed-gull/"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 35,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Red-tailed_hawk"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 35,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Red-tailed_hawk"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 36,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wood_duck"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 36,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wood_duck"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 37,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Red-shouldered_hawk"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 37,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Red-shouldered_hawk"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 38,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Barred_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 38,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Barred_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 39,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mallard"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 39,
+      "fact": 2,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mallard",
+        "https://www.hww.ca/wildlife/birds/mallard/"
+      ],
+      "why": "Wikipedia does not mention the down lining; Hinterland Who's Who does."
+    },
+    {
+      "week": 39,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mallard"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 40,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Snowy_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 40,
+      "fact": 2,
+      "text": "Snowy Owls lay a very large clutch, often five to eleven eggs, and how many depends on the lemming supply.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Snowy_owl"
+      ],
+      "why": "Neither endpoint of 'three to eleven' matches the source, which says 'often from about 5 to 11' and ties breeding effort to lemming availability.",
+      "rewrite": true
+    },
+    {
+      "week": 40,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Snowy_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page."
+    },
+    {
+      "week": 41,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_horned_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 41,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_horned_owl"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 42,
+      "fact": 1,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Osprey"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    },
+    {
+      "week": 42,
+      "fact": 2,
+      "sources": [
+        "https://www.hawkmountain.org/raptors/osprey"
+      ],
+      "why": "The cited Wikipedia article does not cover the head-first fish carry."
+    },
+    {
+      "week": 42,
+      "fact": 3,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Osprey"
+      ],
+      "why": "Replaces the unopenable All About Birds page with the species article already cited by the paired fact."
+    }
+  ]
+}

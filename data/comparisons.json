@@ -31,17 +31,23 @@
       "wikipediaTitle": "Poppy_seed",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Poppy seeds magnified far past life size, each one kidney-shaped and covered in a fine honeycomb pattern.",
+        "file": "images/seeds/poppy-seed.jpg",
+        "author": "USGS Bee Inventory and Monitoring Lab",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Poppy_Seed_2016-10-31-16.12_(30659262306).jpg"
       },
       "facts": [
         {
           "text": "Small finches work poppy seeds out of the dried pod through a ring of pores that opens under the cap.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Papaver_somniferum"
+            "https://en.wikipedia.org/wiki/Papaver"
           ],
           "reviewed": false
         },
@@ -55,9 +61,9 @@
         {
           "text": "The seeds only shake loose once the stem is dry and something moves it.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Papaver_somniferum"
+            "https://en.wikipedia.org/wiki/Papaver"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": null
@@ -87,19 +93,19 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Gizzard"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The gizzard is a muscular chamber that does the work molars do in a mammal.",
           "sources": [
             "https://en.wikipedia.org/wiki/Gizzard"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Grouse and doves visit gravel roadsides and shorelines to restock the grit they have worn down.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Gizzard"
+            "https://en.wikipedia.org/wiki/Grit_(supplement)"
           ],
           "reviewed": false
         }
@@ -121,23 +127,29 @@
       "wikipediaTitle": "Guizotia_abyssinica",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A round dish filled with nyjer seeds, thin black slivers packed tightly together.",
+        "file": "images/seeds/nyjer-seed.jpg",
+        "author": "Gaurav Dhwaj Khadka",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niger_Seed.jpg"
       },
       "facts": [
         {
           "text": "Goldfinches and Pine Siskins cling to nyjer feeders and can empty one in a week.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Goldfinch/overview",
-            "https://en.wikipedia.org/wiki/Guizotia_abyssinica"
+            "https://en.wikipedia.org/wiki/American_goldfinch",
+            "https://en.wikipedia.org/wiki/Pine_siskin"
           ],
           "reviewed": false
         },
         {
-          "text": "Nyjer is not a thistle but an African daisy grown for oil, and it is heat-treated so it cannot sprout.",
+          "text": "Nyjer is not a thistle but an African daisy grown for oil, heat-treated so stray weed seed in the bag cannot sprout.",
           "sources": [
             "https://en.wikipedia.org/wiki/Guizotia_abyssinica"
           ],
@@ -146,9 +158,9 @@
         {
           "text": "American Goldfinches nest in midsummer, later than most songbirds, when seeds like these are ripening.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Goldfinch/overview"
+            "https://en.wikipedia.org/wiki/American_goldfinch"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": null
@@ -166,11 +178,17 @@
       "wikipediaTitle": "Proso_millet",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A round dish of white proso millet, small pale round grains with a faint sheen.",
+        "file": "images/seeds/millet-seed.jpg",
+        "author": "Gaurav Dhwaj Khadka",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:White_Proso_Millet.jpg"
       },
       "facts": [
         {
@@ -178,21 +196,22 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Proso_millet"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Proso millet ripens in about sixty to ninety days, which is why it fills out cheap seed mixes.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Proso_millet"
+            "https://en.wikipedia.org/wiki/Proso_millet",
+            "https://www.agmrc.org/commodities-products/grains-oilseeds/proso-millet"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A Mourning Dove swallows millet whole into its crop and digests it later, somewhere safer.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Mourning_Dove/overview"
+            "https://en.wikipedia.org/wiki/Mourning_dove"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": null
@@ -210,11 +229,17 @@
       "wikipediaTitle": "Sunflower_seed",
       "allAboutBirdsSlug": null,
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
+        "file": "images/seeds/sunflower-seed.jpg",
+        "author": "Dmitry Makeev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunflower_seeds._img_004.jpg"
       },
       "facts": [
         {
@@ -222,12 +247,12 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Sunflower_seed"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A chickadee carries one seed to a branch, wedges it into bark, and hammers it open there.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Black-capped_Chickadee/overview"
+            "https://en.wikipedia.org/wiki/Black-capped_chickadee"
           ],
           "reviewed": false
         },
@@ -236,7 +261,7 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Helianthus_annuus"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": null
@@ -264,21 +289,21 @@
         {
           "text": "A House Wren lays five to eight eggs so heavily speckled in reddish brown that they can look solid.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/House_Wren/overview"
+            "https://www.audubon.org/field-guide/bird/house-wren"
           ],
           "reviewed": false
         },
         {
           "text": "The male fills several cavities with sticks, and the female picks one and lines it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/House_Wren/overview"
+            "https://www.audubon.org/field-guide/bird/house-wren"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Incubation runs about twelve days, and the young leave roughly two weeks after hatching.",
           "sources": [
-            "https://en.wikipedia.org/wiki/House_wren"
+            "https://en.wikipedia.org/wiki/Northern_house_wren"
           ],
           "reviewed": false
         }
@@ -306,9 +331,9 @@
       },
       "facts": [
         {
-          "text": "A Barn Swallow cup is built from a thousand or more mud pellets, each carried in the bill.",
+          "text": "A Barn Swallow builds its cup from mud pellets, and a pair needs about two weeks to finish one.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Barn_Swallow/overview"
+            "https://en.wikipedia.org/wiki/Barn_swallow"
           ],
           "reviewed": false
         },
@@ -322,7 +347,7 @@
         {
           "text": "Young from an early brood often stay to help feed the chicks of the next one.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Barn_Swallow/overview"
+            "https://en.wikipedia.org/wiki/Barn_swallow"
           ],
           "reviewed": false
         }
@@ -352,21 +377,22 @@
         {
           "text": "Wood Thrush eggs are plain turquoise-blue with no markings, laid in a cup the female binds with mud.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Wood_Thrush/overview"
+            "https://www.audubon.org/field-guide/bird/wood-thrush"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The male's fluted song is two notes at once, made by both sides of the syrinx together.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Wood_thrush"
+            "https://en.wikipedia.org/wiki/Wood_thrush",
+            "https://www.audubon.org/news/how-thrushes-produce-those-ethereal-flute-songs"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Cowbirds often lay in Wood Thrush nests, and the thrush usually raises the foster chick alongside its own.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Wood_Thrush/overview"
+            "https://www.audubon.org/field-guide/bird/wood-thrush"
           ],
           "reviewed": false
         }
@@ -398,19 +424,19 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Biliverdin"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Three or four eggs are incubated about two weeks, and the young fledge about two weeks after that.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Robin/overview"
+            "https://en.wikipedia.org/wiki/American_robin"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The female shapes the mud cup by pressing her breast into it and turning.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Robin/overview"
+            "https://en.wikipedia.org/wiki/American_robin"
           ],
           "reviewed": false
         }
@@ -440,23 +466,23 @@
         {
           "text": "Black Terns nest on floating mats of dead marsh plants, so the nest rises and falls with the water.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Black_Tern/overview"
+            "https://www.audubon.org/field-guide/bird/black-tern"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The eggs are olive and heavily blotched, which hides them against wet reed litter.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Black_tern"
+            "https://www.audubon.org/field-guide/bird/black-tern"
           ],
           "reviewed": false
         },
         {
           "text": "Chicks leave the nest within days of hatching but stay close and are fed by both parents.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Black_Tern/overview"
+            "https://www.audubon.org/field-guide/bird/black-tern"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "blkter"
@@ -482,9 +508,9 @@
       },
       "facts": [
         {
-          "text": "Great Blue Herons nest in colonies high in dead trees, and a pair adds to the same platform for years.",
+          "text": "Great Blue Herons nest in colonies high in dead trees, and a platform reused for years grows to over a metre across.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Great_Blue_Heron/overview"
+            "https://en.wikipedia.org/wiki/Great_blue_heron"
           ],
           "reviewed": false
         },
@@ -493,14 +519,14 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Great_blue_heron"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The male carries sticks to the female, who works each one into the nest herself.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Great_Blue_Heron/overview"
+            "https://www.audubon.org/field-guide/bird/great-blue-heron"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "grbher"
@@ -528,23 +554,25 @@
         {
           "text": "A Bald Eagle nest can reach two meters across and weigh a tonne after years of additions.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Bald_Eagle/overview"
+            "https://en.wikipedia.org/wiki/Bald_eagle"
           ],
           "reviewed": false
         },
         {
           "text": "The eggs are dull white, and both parents incubate for about thirty-five days.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Bald_eagle"
+            "https://www.audubon.org/field-guide/bird/bald-eagle",
+            "https://avianreport.com/bald-eagle-eggs/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The first chick hatches days before the second and stays the larger of the two.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Bald_Eagle/overview"
+            "https://en.wikipedia.org/wiki/Bald_eagle",
+            "https://avianreport.com/bald-eagle-eggs/"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "baleag"
@@ -572,23 +600,23 @@
         {
           "text": "The nest is about the size of half a walnut shell, bound with spider silk so it stretches as the chicks grow.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird/overview"
+            "https://www.fws.gov/story/2024-08/august-2024-bird-month-ruby-throated-hummingbird"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Two eggs, each about the size of a coffee bean, are the usual clutch.",
           "sources": [
             "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The female builds, incubates and feeds alone; the male takes no part after mating.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird/overview"
+            "https://en.wikipedia.org/wiki/Ruby-throated_hummingbird"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "rthhum"
@@ -614,9 +642,10 @@
       },
       "facts": [
         {
-          "text": "For a bird weighing about as much as two paperclips, the clutch is enormous, sometimes twelve eggs.",
+          "text": "The clutch runs to twelve eggs, the largest of any North American songbird for its size.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ruby-crowned_Kinglet/overview"
+            "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet",
+            "https://birdsoftheworld.org/bow/species/ruckin/cur/introduction"
           ],
           "reviewed": false
         },
@@ -625,14 +654,14 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The male's red crown patch stays hidden until he raises it in display.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ruby-crowned_Kinglet/overview"
+            "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "ruckin"
@@ -660,23 +689,24 @@
         {
           "text": "Chickadees dig their own cavity in soft rotten wood and carry the chips away so the site is not obvious.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Black-capped_Chickadee/overview"
+            "https://en.wikipedia.org/wiki/Black-capped_chickadee"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The female lines the cup with fur and pulls it over the eggs whenever she leaves.",
           "sources": [
             "https://en.wikipedia.org/wiki/Black-capped_chickadee"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A chickadee caches thousands of seeds in autumn and remembers the hiding places for weeks.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Black-capped_Chickadee/overview"
+            "https://en.wikipedia.org/wiki/Black-capped_chickadee",
+            "https://www.smithsonianmag.com/science-nature/how-do-chickadees-remember-where-they-hid-their-food-180983203/"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "bkcchi"
@@ -704,23 +734,24 @@
         {
           "text": "Carolina Wrens nest in almost any covered space: mailboxes, boots, flowerpots, a coat pocket on a porch.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Carolina_Wren/overview"
+            "https://en.wikipedia.org/wiki/Carolina_wren",
+            "https://blog.nature.org/2021/02/10/carolina-wrens-will-nest-in-just-about-anything/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Pairs stay together all year and hold the same territory through the winter.",
           "sources": [
             "https://en.wikipedia.org/wiki/Carolina_wren"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Only the male sings, but the female answers with a chatter that turns it into a duet.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Carolina_Wren/overview"
+            "https://www.audubon.org/field-guide/bird/carolina-wren"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "carwre"
@@ -748,23 +779,23 @@
         {
           "text": "Titmice line the nest cup with hair, sometimes plucking it from a live squirrel, dog or person.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Tufted_Titmouse/overview"
+            "https://en.wikipedia.org/wiki/Tufted_titmouse"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They cannot excavate a cavity and take over old woodpecker holes and natural cracks.",
           "sources": [
             "https://en.wikipedia.org/wiki/Tufted_titmouse"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Young from one year sometimes stay on to help their parents raise the next brood.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Tufted_Titmouse/overview"
+            "https://en.wikipedia.org/wiki/Tufted_titmouse"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "tuftit"
@@ -792,21 +823,21 @@
         {
           "text": "Cedar Waxwings nest late, in midsummer, so the chicks are in the nest when summer fruit ripens.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Cedar_Waxwing/overview"
+            "https://birdsoftheworld.org/bow/species/cedwax/cur/introduction"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "In courtship a pair passes a berry back and forth between them before one finally eats it.",
           "sources": [
             "https://en.wikipedia.org/wiki/Cedar_waxwing"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The red wax tips on the wing come from pigment in the fruit they eat, and more appear with age.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Cedar_Waxwing/overview"
+            "https://blog.nature.org/2017/02/27/waxwings-really-have-wax-wings/"
           ],
           "reviewed": false
         }
@@ -836,23 +867,24 @@
         {
           "text": "Bluebird eggs are pale blue, though about one clutch in twenty comes out white instead.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Eastern_Bluebird/overview"
+            "https://www.audubon.org/field-guide/bird/eastern-bluebird",
+            "https://sialis.org/whiteeggs.htm"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Bluebirds cannot make their own cavity and depend on old woodpecker holes or a nest box.",
           "sources": [
             "https://en.wikipedia.org/wiki/Eastern_bluebird"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The male brings food to the female while she incubates, and both feed the chicks after.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Eastern_Bluebird/overview"
+            "https://avianreport.com/bluebirds-nests-and-eggs/"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "easblu"
@@ -880,12 +912,13 @@
         {
           "text": "North America's smallest falcon nests in cavities and will take a nest box on a pole in open country.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Kestrel/overview"
+            "https://www.audubon.org/field-guide/bird/american-kestrel",
+            "https://nestwatch.org/learn/all-about-birdhouses/birds/american-kestrel/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
-          "text": "Kestrels see ultraviolet, which makes the urine trails of voles show up along the ground.",
+          "text": "A kestrel lays three to seven eggs a day or two apart, each about a tenth bigger than its body size would predict.",
           "sources": [
             "https://en.wikipedia.org/wiki/American_kestrel"
           ],
@@ -894,9 +927,9 @@
         {
           "text": "They hover on fast, shallow wingbeats to hold one spot in the air while hunting.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Kestrel/overview"
+            "https://en.wikipedia.org/wiki/American_kestrel"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "amekes"
@@ -924,23 +957,23 @@
         {
           "text": "Blue Jays are not blue: the feather structure scatters light, and a crushed feather looks brown.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Structural_coloration"
+            "https://en.wikipedia.org/wiki/Blue_jay"
           ],
           "reviewed": false
         },
         {
           "text": "A jay can hold several acorns at once in its throat and bill, then bury them one at a time.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Blue_Jay/overview"
+            "https://auduboncnc.org/oaks-and-jays/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They imitate hawk calls well enough to clear a feeder before landing on it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Blue_Jay/overview"
+            "https://en.wikipedia.org/wiki/Blue_jay"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "blujay"
@@ -968,23 +1001,23 @@
         {
           "text": "A puffin carries a dozen or more small fish crosswise in its bill, held by backward-pointing spines on the palate.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Atlantic_Puffin/overview"
+            "https://www.birdnote.org/podcasts/birdnote-daily/all-those-fish-puffins-beak"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A pair raises one chick a summer in a burrow dug into the soil of a sea-cliff slope.",
           "sources": [
             "https://en.wikipedia.org/wiki/Atlantic_puffin"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The bright bill plates are shed after breeding, leaving a smaller, duller bill for the winter at sea.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Atlantic_Puffin/overview"
+            "https://www.audubon.org/field-guide/bird/atlantic-puffin"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "atlpuf"
@@ -1010,9 +1043,9 @@
       },
       "facts": [
         {
-          "text": "Flickers are woodpeckers that feed mostly on the ground, digging into ant nests with a long barbed tongue.",
+          "text": "Flickers are woodpeckers that feed mostly on the ground, hammering into ant nests the way others drill into wood.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Northern_Flicker/overview"
+            "https://en.wikipedia.org/wiki/Northern_flicker"
           ],
           "reviewed": false
         },
@@ -1021,14 +1054,14 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Northern_flicker"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The tongue reaches well past the bill and is coated in sticky saliva.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Northern_Flicker/overview"
+            "https://en.wikipedia.org/wiki/Northern_flicker"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "norfli"
@@ -1056,23 +1089,23 @@
         {
           "text": "Kingfishers dig a burrow up to two meters into a bare earth bank and lay their eggs at the end of it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Belted_Kingfisher/overview"
+            "https://en.wikipedia.org/wiki/Belted_kingfisher"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The female is the brighter of the pair, with a rust band across the belly the male lacks.",
           "sources": [
             "https://en.wikipedia.org/wiki/Belted_kingfisher"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Nestlings have an acidic stomach that dissolves fish bone, and they lose it as they grow.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Belted_Kingfisher/overview"
+            "https://www.audubon.org/field-guide/bird/belted-kingfisher"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "belkin1"
@@ -1100,23 +1133,23 @@
         {
           "text": "Common Terns nest in dense colonies on bare sand and gravel and mob anything that walks into one.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Common_Tern/overview"
+            "https://en.wikipedia.org/wiki/Common_tern"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The male brings fish to the female during courtship, and she judges him by what he carries.",
           "sources": [
             "https://en.wikipedia.org/wiki/Common_tern"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The eggs are buff and blotched and are hard to pick out against shell and stone.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Common_Tern/overview"
+            "https://en.wikipedia.org/wiki/Common_tern"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "comter"
@@ -1146,21 +1179,21 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Peregrine_falcon"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They scrape a hollow on a cliff ledge rather than build, and in cities use window ledges and bridge girders.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Peregrine_Falcon/overview"
+            "https://en.wikipedia.org/wiki/Peregrine_falcon"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The eggs are a deep reddish brown, and the female does most of the month of incubation.",
           "sources": [
             "https://en.wikipedia.org/wiki/Peregrine_falcon"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "perfal"
@@ -1186,9 +1219,9 @@
       },
       "facts": [
         {
-          "text": "Cooper's Hawks hunt through cover at speed, and many carry healed fractures from hitting branches.",
+          "text": "Cooper's Hawks hunt through cover at speed, and hunting accidents often leave them with broken bones.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Coopers_Hawk/overview"
+            "https://en.wikipedia.org/wiki/Cooper's_hawk"
           ],
           "reviewed": false
         },
@@ -1197,14 +1230,14 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Cooper%27s_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They build a stick platform high in a tree, often on top of an old squirrel nest.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Coopers_Hawk/overview"
+            "https://www.audubon.org/field-guide/bird/coopers-hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "coohaw"
@@ -1232,23 +1265,23 @@
         {
           "text": "A Barn Owl's ear openings sit at different heights, so it can place a sound vertically as well as sideways.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Barn_owl"
+            "https://en.wikipedia.org/wiki/American_barn_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The heart-shaped face works as a dish, gathering sound toward the ears behind it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Barn_Owl/overview"
+            "https://en.wikipedia.org/wiki/American_barn_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Four to seven eggs are laid days apart, so a nest holds chicks of noticeably different sizes.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Barn_owl"
+            "https://en.wikipedia.org/wiki/American_barn_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "brnowl"
@@ -1276,23 +1309,23 @@
         {
           "text": "Crows recognize individual human faces, hold the grudge for years, and pass it on to other crows.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Corvus_brachyrhynchos"
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Young crows often stay with their parents for several years and help raise later broods.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Crow/overview"
+            "https://en.wikipedia.org/wiki/American_crow"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The nest is a bulky stick basket lined with bark, moss and hair.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/American_Crow/overview"
+            "https://www.audubon.org/field-guide/bird/american-crow"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "amecro"
@@ -1320,23 +1353,23 @@
         {
           "text": "A Pileated Woodpecker chisels long rectangular holes into rotten trunks to reach carpenter ants.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Pileated_Woodpecker/overview"
+            "https://www.audubon.org/field-guide/bird/pileated-woodpecker"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Its abandoned cavities become nest sites for owls, ducks and swifts that cannot dig their own.",
           "sources": [
             "https://en.wikipedia.org/wiki/Pileated_woodpecker"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The pair excavates a fresh cavity each year rather than reusing the old one.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Pileated_Woodpecker/overview"
+            "https://www.audubon.org/field-guide/bird/pileated-woodpecker"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "pilwoo"
@@ -1345,7 +1378,7 @@
       "week": 32,
       "lengthIn": 16.69,
       "lengthMeasure": "crown-heel",
-      "weightOz": 60.0,
+      "weightOz": 60,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Hooded Merganser",
@@ -1364,23 +1397,23 @@
         {
           "text": "Hooded Mergansers nest in tree cavities, and the ducklings jump to the ground the day after hatching.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Hooded_Merganser/overview"
+            "https://www.audubon.org/field-guide/bird/hooded-merganser"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A female often lays in another female's nest, so one cavity can end up holding dozens of eggs.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Hooded_merganser"
+            "https://birdsoftheworld.org/bow/species/hoomer/cur/introduction"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "A clear third eyelid lets them see well enough underwater to chase fish.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Hooded_Merganser/overview"
+            "https://birdsoftheworld.org/bow/species/hoomer/cur/introduction"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "hoomer"
@@ -1408,23 +1441,24 @@
         {
           "text": "Green Herons drop insects, feathers or bread on the water as bait and wait for a fish to rise to it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Green_Heron/overview"
+            "https://en.wikipedia.org/wiki/Green_heron",
+            "https://www.pa.gov/agencies/pgc/wildlife/discover-pa-wildlife/herons/green-heron.html"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They hunt with the neck folded back and strike from it, which makes them look far shorter than they are.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Green_heron"
+            "https://www.audubon.org/magazine/more-you-ever-wanted-know-about-heron-necks"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The eggs are pale green-blue, laid on a loose stick platform over water.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Green_Heron/overview"
+            "https://en.wikipedia.org/wiki/Green_heron"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "grnher"
@@ -1452,23 +1486,25 @@
         {
           "text": "Ring-billed Gulls come back to the colony where they hatched, often to within a few meters of the spot.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ring-billed_Gull/overview"
+            "https://animaldiversity.org/accounts/Larus_delawarensis/",
+            "https://www.hww.ca/wildlife/birds/ring-billed-gull/"
           ],
           "reviewed": false
         },
         {
-          "text": "Chicks peck at a parent's bill to make it bring food back up for them.",
+          "text": "Chicks peck at a parent's bill and call to be fed, and it is the calling that brings the food back up.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Ring-billed_gull"
+            "https://digitalcommons.usf.edu/auk/vol96/iss2/6"
           ],
           "reviewed": false
         },
         {
           "text": "They nest on the ground in dense island colonies, out of reach of most mammals.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Ring-billed_Gull/overview"
+            "https://animaldiversity.org/accounts/Larus_delawarensis/",
+            "https://www.hww.ca/wildlife/birds/ring-billed-gull/"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "ribgul"
@@ -1477,7 +1513,7 @@
       "week": 35,
       "lengthIn": 18.19,
       "lengthMeasure": "crown-heel",
-      "weightOz": 84.0,
+      "weightOz": 84,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Red-tailed Hawk",
@@ -1496,23 +1532,23 @@
         {
           "text": "The Red-tailed Hawk's rasping scream is the sound films almost always use for an eagle.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Red-tailed_Hawk/overview"
+            "https://en.wikipedia.org/wiki/Red-tailed_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Pairs hold the same territory for years and add to the same stick nest each spring.",
           "sources": [
             "https://en.wikipedia.org/wiki/Red-tailed_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Two or three dull white eggs are laid, and the female does most of the incubating.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Red-tailed_Hawk/overview"
+            "https://en.wikipedia.org/wiki/Red-tailed_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "rethaw"
@@ -1540,23 +1576,23 @@
         {
           "text": "Wood Duck ducklings leave the cavity within a day of hatching, dropping to the ground from as high as fifteen meters.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Wood_Duck/overview"
+            "https://en.wikipedia.org/wiki/Wood_duck"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Unlike most ducks they have claws on their feet, which lets them grip bark and perch in trees.",
           "sources": [
             "https://en.wikipedia.org/wiki/Wood_duck"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Nest boxes brought the species back after hunting and the loss of bottomland forest nearly ended it.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Wood_Duck/overview"
+            "https://en.wikipedia.org/wiki/Wood_duck"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "wooduc"
@@ -1584,23 +1620,23 @@
         {
           "text": "Red-shouldered Hawks nest in wet woodland and come back to the same patch year after year.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Red-shouldered_Hawk/overview"
+            "https://en.wikipedia.org/wiki/Red-shouldered_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Blue Jays imitate their call closely enough to fool people listening for one.",
           "sources": [
             "https://en.wikipedia.org/wiki/Red-shouldered_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They line the stick nest with fresh green sprigs and keep adding them while the chicks grow.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Red-shouldered_Hawk/overview"
+            "https://en.wikipedia.org/wiki/Red-shouldered_hawk"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "reshaw"
@@ -1628,23 +1664,23 @@
         {
           "text": "The Barred Owl's call is a rhythm people learn as the phrase who cooks for you.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Barred_Owl/overview"
+            "https://en.wikipedia.org/wiki/Barred_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "It is one of the few owls with dark eyes rather than yellow ones.",
           "sources": [
             "https://en.wikipedia.org/wiki/Barred_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "They nest in a tree cavity or take over an old hawk nest, and lay two or three white eggs.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Barred_Owl/overview"
+            "https://en.wikipedia.org/wiki/Barred_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "brdowl"
@@ -1653,7 +1689,7 @@
       "week": 39,
       "lengthIn": 19.96,
       "lengthMeasure": "crown-heel",
-      "weightOz": 116.0,
+      "weightOz": 116,
       "weightIsUpperBound": false,
       "kind": "bird",
       "comparison": "Mallard",
@@ -1672,23 +1708,24 @@
         {
           "text": "A Mallard waits until the whole clutch is laid before starting to incubate, so all the ducklings hatch together.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Mallard/overview"
+            "https://en.wikipedia.org/wiki/Mallard"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The female lines the nest with down from her own breast and pulls it over the eggs when she leaves.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Mallard"
+            "https://en.wikipedia.org/wiki/Mallard",
+            "https://www.hww.ca/wildlife/birds/mallard/"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Ducklings feed themselves from the first day; the female leads and guards but does not feed them.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Mallard/overview"
+            "https://en.wikipedia.org/wiki/Mallard"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "mallar3"
@@ -1716,12 +1753,12 @@
         {
           "text": "Snowy Owls nest on open tundra, in a scrape on a rise with a clear view all round.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Snowy_Owl/overview"
+            "https://en.wikipedia.org/wiki/Snowy_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
-          "text": "Clutch size tracks the lemming supply, from three eggs in a poor year to eleven in a good one.",
+          "text": "Snowy Owls lay a very large clutch, often five to eleven eggs, and how many depends on the lemming supply.",
           "sources": [
             "https://en.wikipedia.org/wiki/Snowy_owl"
           ],
@@ -1730,9 +1767,9 @@
         {
           "text": "They hunt in daylight, which most owls do not, because the arctic summer has no night.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Snowy_Owl/overview"
+            "https://en.wikipedia.org/wiki/Snowy_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "snoowl"
@@ -1760,30 +1797,30 @@
         {
           "text": "Great Horned Owls nest in midwinter, taking over an old hawk or crow nest rather than building one.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Great_Horned_Owl/overview"
+            "https://en.wikipedia.org/wiki/Great_horned_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "The horns are tufts of feather, not ears; the ear openings are hidden at the sides of the head.",
           "sources": [
             "https://en.wikipedia.org/wiki/Great_horned_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Their grip is strong enough to take skunks, which almost nothing else will touch.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Great_Horned_Owl/overview"
+            "https://en.wikipedia.org/wiki/Great_horned_owl"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "grhowl"
     },
     {
       "week": 42,
-      "lengthIn": 21.0,
+      "lengthIn": 21,
       "lengthMeasure": "crown-heel",
       "weightOz": 129.92,
       "weightIsUpperBound": false,
@@ -1804,23 +1841,23 @@
         {
           "text": "An Osprey's outer toe reverses, so it carries a fish with two toes in front and two behind.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Osprey/overview"
+            "https://en.wikipedia.org/wiki/Osprey"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "It turns the fish head-first in flight, which cuts the drag on the way back to the nest.",
           "sources": [
-            "https://en.wikipedia.org/wiki/Osprey"
+            "https://www.hawkmountain.org/raptors/osprey"
           ],
-          "reviewed": false
+          "reviewed": true
         },
         {
           "text": "Pairs return to the same nest each year and pile it higher, until it can be seen from a long way off.",
           "sources": [
-            "https://www.allaboutbirds.org/guide/Osprey/overview"
+            "https://en.wikipedia.org/wiki/Osprey"
           ],
-          "reviewed": false
+          "reviewed": true
         }
       ],
       "ebirdSpeciesCode": "osprey"

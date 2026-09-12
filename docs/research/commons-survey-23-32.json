@@ -1,0 +1,915 @@
+{
+  "generated": "2026-09-12T00:30:34.012Z",
+  "survey": [
+    {
+      "week": 23,
+      "kind": "bird",
+      "comparison": "Atlantic Puffin",
+      "scientificName": "Fratercula arctica",
+      "category": "Category:Fratercula arctica",
+      "pool": 200,
+      "rejected": {
+        "too small": 25,
+        "mime application/ogg": 3,
+        "licence": 16,
+        "not a live bird": 2,
+        "mime video/webm": 2,
+        "mime image/svg+xml": 2,
+        "not a photograph": 13
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:02 Atlantic puffin on Treshnish Isles by Romaniviatores.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg/500px-02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6782,
+          "height": 4523,
+          "license": "CC BY-SA 4.0",
+          "author": "Romaniviatores",
+          "description": "Atlantic puffin on the Treshnish Isles .",
+          "score": 240,
+          "notes": ["featured picture", "quality image"]
+        },
+        {
+          "commonsTitle": "File:03 Couple of atlantic puffins on Treshnish Isles by Romaniviatores.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg/500px-03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6786,
+          "height": 4526,
+          "license": "CC BY-SA 4.0",
+          "author": "Romaniviatores",
+          "description": "Couple of atlantic puffins on Treshnish Isles by Romaniviatores",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Puffin (Fratercula arctica) in flight 3.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_in_flight_3.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Puffin_%28Fratercula_arctica%29_in_flight_3.jpg/500px-Puffin_%28Fratercula_arctica%29_in_flight_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3209,
+          "height": 2140,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "Puffin ( Fratercula arctica ) off Skomer Island, Pembrokeshire, Wales",
+          "score": 113,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Atlantic puffin (27946409202).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atlantic_puffin_(27946409202).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Atlantic_puffin_%2827946409202%29.jpg/500px-Atlantic_puffin_%2827946409202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Atlantic puffin",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:A Puffin Prepares to Fly.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Puffin_Prepares_to_Fly.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/A_Puffin_Prepares_to_Fly.jpg/500px-A_Puffin_Prepares_to_Fly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3783,
+          "license": "CC BY 2.0",
+          "author": "Charlie From Bristol",
+          "description": "This is one of the many puffins that I saw on Inner Farne Island. I only had one hour on the island and one of my regrets is that I didn't manage to catch the moment when a puffin takes to the air. This is the nearest I got.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Atlantic Puffin Acadia Puffin Tour DSC 4622.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg/500px-Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Fratercula arctica",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "kind": "bird",
+      "comparison": "Northern Flicker",
+      "scientificName": "Colaptes auratus",
+      "category": "Category:Colaptes auratus",
+      "pool": 200,
+      "rejected": {
+        "no author reported": 1,
+        "mime image/gif": 1,
+        "not the subject": 2,
+        "mime image/svg+xml": 3,
+        "not a photograph": 23,
+        "too small": 8,
+        "licence": 32,
+        "mime application/ogg": 1,
+        "not a live bird": 4
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Colaptes auratus MP2 NR.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colaptes_auratus_MP2_NR.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Colaptes_auratus_MP2_NR.jpg/500px-Colaptes_auratus_MP2_NR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3179,
+          "height": 2123,
+          "license": "CC BY-SA 3.0",
+          "author": "Cephas",
+          "description": "Northern Flicker , Réserve naturelle des Marais-du-Nord , Quebec, Canada.",
+          "score": 163,
+          "notes": ["featured picture"]
+        },
+        {
+          "commonsTitle": "File:Flicker hole in CP (31848).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flicker_hole_in_CP_(31848).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flicker_hole_in_CP_%2831848%29.jpg/500px-Flicker_hole_in_CP_%2831848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2420,
+          "height": 2431,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Male northern flicker, yellow-shafted variety ( Colaptes auratus auratus ) peeking out from its nest in Central Park, New York, United States.",
+          "score": 155,
+          "notes": [
+            "featured picture",
+            "quality image",
+            "portrait — crops badly in the strip"
+          ]
+        },
+        {
+          "commonsTitle": "File:Colaptes auratus MP2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colaptes_auratus_MP2.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Colaptes_auratus_MP2.jpg/500px-Colaptes_auratus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3179,
+          "height": 2123,
+          "license": "CC BY-SA 3.0",
+          "author": "Cephas",
+          "description": "Northern Flicker , Réserve naturelle des Marais-du-Nord , Quebec, Canada.",
+          "score": 113,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Flicker hole in CP (31838).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flicker_hole_in_CP_(31838).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flicker_hole_in_CP_%2831838%29.jpg/500px-Flicker_hole_in_CP_%2831838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2430,
+          "height": 1997,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Northern flicker in its nest in Central Park",
+          "score": 90,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:2020-05-30 Palmer Park - 107.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020-05-30_Palmer_Park_-_107.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/2020-05-30_Palmer_Park_-_107.jpg/500px-2020-05-30_Palmer_Park_-_107.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "mark byzewski",
+          "description": "Sunrise in Palmer Park. Colorado Springs, Colorado.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:2020-05-30 Palmer Park - 106.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020-05-30_Palmer_Park_-_106.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/2020-05-30_Palmer_Park_-_106.jpg/500px-2020-05-30_Palmer_Park_-_106.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "mark byzewski",
+          "description": "Sunrise in Palmer Park. Colorado Springs, Colorado.",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "kind": "bird",
+      "comparison": "Belted Kingfisher",
+      "scientificName": "Megaceryle alcyon",
+      "category": "Category:Megaceryle alcyon",
+      "pool": 200,
+      "rejected": {
+        "not the subject": 2,
+        "licence": 7,
+        "mime video/webm": 1,
+        "not a photograph": 37,
+        "too small": 7,
+        "mime image/svg+xml": 1,
+        "not a live bird": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Belted Kingfisher - Flickr - GregTheBusker.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg/500px-Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3456,
+          "license": "CC BY 2.0",
+          "author": "Greg Schechter from San Francisco, USA",
+          "description": "Belted Kingfisher",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Belted kingfisher 1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_kingfisher_1.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Belted_kingfisher_1.jpg/500px-Belted_kingfisher_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Megaceryle alcyon",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Belted kingfisher 10.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_kingfisher_10.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Belted_kingfisher_10.jpg/500px-Belted_kingfisher_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Megaceryle alcyon",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Belted kingfisher 11.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_kingfisher_11.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Belted_kingfisher_11.jpg/500px-Belted_kingfisher_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Megaceryle alcyon",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Belted kingfisher 12.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_kingfisher_12.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Belted_kingfisher_12.jpg/500px-Belted_kingfisher_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Megaceryle alcyon",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Belted kingfisher 13.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_kingfisher_13.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Belted_kingfisher_13.jpg/500px-Belted_kingfisher_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Megaceryle alcyon",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "kind": "bird",
+      "comparison": "Common Tern",
+      "scientificName": "Sterna hirundo",
+      "category": "Category:Sterna hirundo",
+      "pool": 200,
+      "rejected": {
+        "not a photograph": 55,
+        "too small": 19,
+        "not the subject": 3,
+        "licence": 18,
+        "not a live bird": 1,
+        "mime application/ogg": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Black-headed gull with Common tern 2025 06 20.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-headed_gull_with_Common_tern_2025_06_20.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Black-headed_gull_with_Common_tern_2025_06_20.jpg/500px-Black-headed_gull_with_Common_tern_2025_06_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6406,
+          "height": 4271,
+          "license": "CC BY 4.0",
+          "author": "Alexis Lours",
+          "description": "A black-headed gull in flight chased by a common tern.",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 02.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_02.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_02.jpg/500px-2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3600,
+          "height": 2700,
+          "license": "CC BY-SA 4.0",
+          "author": "MPF",
+          "description": "Common Tern Sterna hirundo , adult summer plumage, Killingworth Lake, Northumberland",
+          "score": 114,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Common tern (Sterna hirundo).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Common_tern_%28Sterna_hirundo%29.jpg/500px-Common_tern_%28Sterna_hirundo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2592,
+          "height": 1728,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "Common tern (Sterna hirundo), Hållö Island, Västra Götaland, Sweden",
+          "score": 110,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Common tern (Sterna hirundo) in flight 1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_in_flight_1.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Common_tern_%28Sterna_hirundo%29_in_flight_1.jpg/500px-Common_tern_%28Sterna_hirundo%29_in_flight_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2514,
+          "height": 1676,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "Common tern (Sterna hirundo) in flight, Hållö Island, Västra Götaland, Sweden",
+          "score": 110,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Sterna hirundo (adult).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sterna_hirundo_(adult).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sterna_hirundo_%28adult%29.jpg/500px-Sterna_hirundo_%28adult%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3792,
+          "height": 2844,
+          "license": "CC BY-SA 4.0",
+          "author": "Hans Hillewaert",
+          "description": "Common tern at the port of Oostende, Belgium",
+          "score": 80,
+          "notes": ["valued image"]
+        },
+        {
+          "commonsTitle": "File:20160507 - 11.37 Visdiefje (Sterna hirundo) 1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20160507_-_11.37_Visdiefje_(Sterna_hirundo)_1.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20160507_-_11.37_Visdiefje_%28Sterna_hirundo%29_1.jpg/500px-20160507_-_11.37_Visdiefje_%28Sterna_hirundo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5472,
+          "height": 3648,
+          "license": "CC BY-SA 4.0",
+          "author": "Rolf Tuinstra",
+          "description": "Fotowedstrijd SoortenNL2018 NL Voedseloverdracht,Buitendijks Wad",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "kind": "bird",
+      "comparison": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "category": "Category:Falco peregrinus",
+      "pool": 200,
+      "rejected": {
+        "too small": 24,
+        "licence": 5,
+        "not a photograph": 77,
+        "mime application/ogg": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Wanderfalke am Nest-20200411-RM-163331.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wanderfalke_am_Nest-20200411-RM-163331.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Wanderfalke_am_Nest-20200411-RM-163331.jpg/500px-Wanderfalke_am_Nest-20200411-RM-163331.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2243,
+          "height": 1682,
+          "license": "CC BY-SA 4.0",
+          "author": "Ermell",
+          "description": "Peregrine at the nest",
+          "score": 109,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Peregrine Falcon from Little Rann of Kutch, Gujarat 01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_01.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_01.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 3368,
+          "license": "CC BY-SA 4.0",
+          "author": "Gannu03",
+          "description": "Peregrine Falcon from Little Rann of Kutch, Gujarat, India.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Peregrine Falcon from Little Rann of Kutch, Gujarat 03.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_03.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_03.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 3368,
+          "license": "CC BY-SA 4.0",
+          "author": "Gannu03",
+          "description": "Peregrine Falcon from Little Rann of Kutch, Gujarat, India.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Peregrine Falcon from Little Rann of Kutch, Gujarat 04.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_04.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_04.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 3368,
+          "license": "CC BY-SA 4.0",
+          "author": "Gannu03",
+          "description": "Peregrine Falcon from Little Rann of Kutch, Gujarat, India.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Peregrine Falcon from Little Rann of Kutch, Gujarat 05.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_05.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_05.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 3368,
+          "license": "CC BY-SA 4.0",
+          "author": "Gannu03",
+          "description": "Peregrine Falcon from Little Rann of Kutch, Gujarat, India.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Peregrine Falcon from Little Rann of Kutch, Gujarat 06.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_06.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_06.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 3368,
+          "license": "CC BY-SA 4.0",
+          "author": "Gannu03",
+          "description": "Peregrine Falcon from Little Rann of Kutch, Gujarat, India.",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "kind": "bird",
+      "comparison": "Cooper's Hawk",
+      "scientificName": "Astur cooperii",
+      "category": "Category:Astur cooperii",
+      "pool": 200,
+      "rejected": {
+        "licence": 8,
+        "too small": 19,
+        "not a photograph": 42,
+        "mime application/ogg": 1,
+        "mime image/svg+xml": 2,
+        "mime audio/mpeg": 2,
+        "no author reported": 4,
+        "mime video/webm": 2
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:2016.04.11 18.51.32 DSC03266 - Flickr - andrey zharkikh.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4896,
+          "height": 3672,
+          "license": "CC BY 2.0",
+          "author": "Andrey Zharkikh from Salt Lake City, USA",
+          "description": "Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:2016.04.11 19.17.11 DSC03285 - Flickr - andrey zharkikh.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4896,
+          "height": 3672,
+          "license": "CC BY 2.0",
+          "author": "Andrey Zharkikh from Salt Lake City, USA",
+          "description": "Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:2016.04.11 19.16.47 DSC03284 - Flickr - andrey zharkikh.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4896,
+          "height": 3672,
+          "license": "CC BY 2.0",
+          "author": "Andrey Zharkikh from Salt Lake City, USA",
+          "description": "Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:A large bird with a brown back and a white front perched on a white fence. (0aac71cf-270a-43dc-8e4b-36771a3b747a).JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._(0aac71cf-270a-43dc-8e4b-36771a3b747a).JPG",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._%280aac71cf-270a-43dc-8e4b-36771a3b747a%29.JPG/500px-A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._%280aac71cf-270a-43dc-8e4b-36771a3b747a%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "Public domain",
+          "author": "NPS",
+          "description": "A large bird with a brown back and a white front perched on a white fence. Keywords: liho; Wildlife",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Cooper's hawk (19308923146).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_(19308923146).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Cooper%27s_hawk_%2819308923146%29.jpg/500px-Cooper%27s_hawk_%2819308923146%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Cooper's hawk",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Cooper's hawk (44053750844).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_(44053750844).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Cooper%27s_hawk_%2844053750844%29.jpg/500px-Cooper%27s_hawk_%2844053750844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Cooper's hawk",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "kind": "bird",
+      "comparison": "American Barn Owl",
+      "scientificName": "Tyto furcata",
+      "category": "Category:Tyto furcata",
+      "pool": 74,
+      "rejected": {
+        "licence": 8,
+        "too small": 10,
+        "not a photograph": 27,
+        "mime image/svg+xml": 1,
+        "mime audio/flac": 1,
+        "no author reported": 1,
+        "mime application/ogg": 1,
+        "mime audio/mpeg": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:American Barn Owl (Tyto furcata guatemalae), Orange Walk.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/500px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2362,
+          "height": 3544,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "American Barn Owl ( Tyto furcata guatemalae ), Orange Walk, Belize",
+          "score": 69,
+          "notes": ["quality image", "valued image", "portrait — crops badly in the strip"]
+        },
+        {
+          "commonsTitle": "File:A native barn owl. Photo taken at Bird Fest on December 5, 2015. (081bee84-1dd8-b71b-0bc1-bff011d933ed).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5,_2015._(081bee84-1dd8-b71b-0bc1-bff011d933ed).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5%2C_2015._%28081bee84-1dd8-b71b-0bc1-bff011d933ed%29.jpg/500px-A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5%2C_2015._%28081bee84-1dd8-b71b-0bc1-bff011d933ed%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5400,
+          "height": 3600,
+          "license": "Public domain",
+          "author": "NPS",
+          "description": "A woman holding a barn owl. A native barn owl. Photo taken at Bird Fest on December 5, 2015.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Tyto furcata.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tyto_furcata.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Tyto_furcata.jpg/500px-Tyto_furcata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3132,
+          "license": "CC0",
+          "author": "LubosHouska",
+          "description": "Suindara (Tyto furcata)",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barn Owl (35313791770).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barn_Owl_(35313791770).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Barn_Owl_%2835313791770%29.jpg/500px-Barn_Owl_%2835313791770%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4869,
+          "height": 3404,
+          "license": "CC BY 2.0",
+          "author": "Andy Reago & Chrissy McClarren",
+          "description": "7/3/17",
+          "score": 49,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barn Owl (Tyto furcata), Ohio (14450236077).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barn_Owl_(Tyto_furcata),_Ohio_(14450236077).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Barn_Owl_%28Tyto_furcata%29%2C_Ohio_%2814450236077%29.jpg/500px-Barn_Owl_%28Tyto_furcata%29%2C_Ohio_%2814450236077%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3072,
+          "license": "CC BY 2.0",
+          "author": "Andrew C",
+          "description": "Pickerington Ponds Metropark, Canal Winchester, Ohio",
+          "score": 48,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Lechuza de los campanarios (Tyto furcata).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lechuza_de_los_campanarios_(Tyto_furcata).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg/500px-Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3880,
+          "height": 2911,
+          "license": "CC BY-SA 4.0",
+          "author": "Faunasilvestre",
+          "description": "Lechuza de Campanario registrado en el Área Natural Protegida Florindo Donati, Argentina. Tyto furcata , Familia: Tytonidae Orden: Strigiformes Clase: Aves Filo: Chordata Reino: Animalia",
+          "score": 46,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "kind": "bird",
+      "comparison": "American Crow",
+      "scientificName": "Corvus brachyrhynchos",
+      "category": "Category:Corvus brachyrhynchos",
+      "pool": 184,
+      "rejected": {
+        "too small": 16,
+        "not the subject": 1,
+        "mime video/webm": 5,
+        "not a photograph": 19,
+        "licence": 8,
+        "mime image/svg+xml": 1,
+        "not a live bird": 2
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:PD106514-ARW american crow scavenges discarded christmas cookie from trash.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg/500px-PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3600,
+          "height": 2400,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "American Crow scavenges discarded Christmas cookie",
+          "score": 114,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:AMERICAN CROW.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:AMERICAN_CROW.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/AMERICAN_CROW.jpg/500px-AMERICAN_CROW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5156,
+          "height": 3443,
+          "license": "CC BY 2.0",
+          "author": "cuatrok77 hernandez",
+          "description": "FIELD MARKS-black,iridescent plumage overall long,heavy,black bill brown eyes black legs and feet",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Angry Crow.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angry_Crow.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Angry_Crow.jpg/500px-Angry_Crow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY-SA 4.0",
+          "author": "Regan Fernbrook",
+          "description": "American Crow sitting on a Douglas-fir branch screaming at the photographer. Seattle area, Washington.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:American crow (50577096673).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_crow_(50577096673).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/American_crow_%2850577096673%29.jpg/500px-American_crow_%2850577096673%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "American crow",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:American crow (50577823481).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_crow_(50577823481).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/American_crow_%2850577823481%29.jpg/500px-American_crow_%2850577823481%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "American crow",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:AMERICAN CROW (7753165286).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:AMERICAN_CROW_(7753165286).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/AMERICAN_CROW_%287753165286%29.jpg/500px-AMERICAN_CROW_%287753165286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5225,
+          "height": 2948,
+          "license": "CC BY 2.0",
+          "author": "cuatrok77",
+          "description": "FIELD MARKS-black,iridescent plumage overall long,heavy,black bill brown eyes black legs and feet",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 31,
+      "kind": "bird",
+      "comparison": "Pileated Woodpecker",
+      "scientificName": "Dryocopus pileatus",
+      "category": "Category:Dryocopus pileatus",
+      "pool": 200,
+      "rejected": {
+        "licence": 69,
+        "too small": 9,
+        "not a photograph": 28,
+        "mime video/webm": 2,
+        "not a live bird": 1,
+        "mime image/svg+xml": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Dryocopus pileatus MP2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dryocopus_pileatus_MP2.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dryocopus_pileatus_MP2.jpg/500px-Dryocopus_pileatus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2520,
+          "height": 2520,
+          "license": "CC BY-SA 3.0",
+          "author": "Cephas",
+          "description": "Pileated Woodpecker",
+          "score": 210,
+          "notes": ["featured picture", "quality image"]
+        },
+        {
+          "commonsTitle": "File:Pileated woodpecker (25842323631).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(25842323631).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Pileated_woodpecker_%2825842323631%29.jpg/500px-Pileated_woodpecker_%2825842323631%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Pileated woodpecker",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Pileated woodpecker (25816499382).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(25816499382).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Pileated_woodpecker_%2825816499382%29.jpg/500px-Pileated_woodpecker_%2825816499382%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Pileated woodpecker",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Pileated woodpecker (19179223905).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(19179223905).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Pileated_woodpecker_%2819179223905%29.jpg/500px-Pileated_woodpecker_%2819179223905%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4985,
+          "height": 3323,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Pileated woodpecker",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Pileated woodpecker (18991658928).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(18991658928).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Pileated_woodpecker_%2818991658928%29.jpg/500px-Pileated_woodpecker_%2818991658928%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Pileated woodpecker",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Pileated woodpecker (19179221845).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(19179221845).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Pileated_woodpecker_%2819179221845%29.jpg/500px-Pileated_woodpecker_%2819179221845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Pileated woodpecker",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 32,
+      "kind": "bird",
+      "comparison": "Hooded Merganser",
+      "scientificName": "Lophodytes cucullatus",
+      "category": "Category:Lophodytes cucullatus",
+      "pool": 200,
+      "rejected": {
+        "licence": 29,
+        "not a photograph": 23,
+        "too small": 6,
+        "mime video/webm": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Hooded merganser female in CP (40678).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(40678).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Hooded_merganser_female_in_CP_%2840678%29.jpg/500px-Hooded_merganser_female_in_CP_%2840678%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2753,
+          "height": 1952,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Hooded merganser female in the Central Park Reservoir",
+          "score": 231,
+          "notes": ["featured picture", "quality image"]
+        },
+        {
+          "commonsTitle": "File:Hooded merganser male in Central Park (95790).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95790).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hooded_merganser_male_in_Central_Park_%2895790%29.jpg/500px-Hooded_merganser_male_in_Central_Park_%2895790%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3314,
+          "height": 2421,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Hooded merganser male in the Central Park Reservoir",
+          "score": 148,
+          "notes": ["quality image", "valued image"]
+        },
+        {
+          "commonsTitle": "File:Hooded merganser female in CP (02185).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(02185).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Hooded_merganser_female_in_CP_%2802185%29.jpg/500px-Hooded_merganser_female_in_CP_%2802185%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2834,
+          "height": 2086,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Hooded merganser female in the Central Park Reservoir",
+          "score": 111,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Hooded merganser male in CP (40620).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_CP_(40620).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Hooded_merganser_male_in_CP_%2840620%29.jpg/500px-Hooded_merganser_male_in_CP_%2840620%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2854,
+          "height": 2007,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Hooded merganser male in the Central Park Reservoir",
+          "score": 111,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Hooded Merganser - male 1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_Merganser_-_male_1.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Hooded_Merganser_-_male_1.jpg/500px-Hooded_Merganser_-_male_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 1916,
+          "height": 1246,
+          "license": "CC BY-SA 3.0",
+          "author": "PumpkinSky",
+          "description": "Lophodytes cucullatus , Hooded Merganser, male, in Virginia Beach, Virginia.",
+          "score": 108,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Hooded merganser male in Central Park (95653).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95653).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Hooded_merganser_male_in_Central_Park_%2895653%29.jpg/500px-Hooded_merganser_male_in_Central_Park_%2895653%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2016,
+          "height": 1415,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Hooded merganser male in the Central Park Reservoir",
+          "score": 108,
+          "notes": ["quality image"]
+        }
+      ]
+    }
+  ]
+}

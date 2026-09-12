@@ -22,7 +22,78 @@ None of this blocks the code. `scripts/validate-data.ts` treats missing images
 and missing facts as warnings, not errors, so CI stays green while curation
 trails; it reports the outstanding counts on every run.
 
+## Update: network access, and the fact-check triage (2026-09-08)
+
+Network access was opened for a later session, so the paragraph above no longer
+describes the current environment. What is reachable now:
+
+| Source | Status |
+|---|---|
+| `en.wikipedia.org`, including the action API for full article text | open |
+| `commons.wikimedia.org`, `upload.wikimedia.org` | open — task A for the seed weeks is now doable |
+| `www.audubon.org` | open |
+| `birdsoftheworld.org` | open, but only the free introduction; the species account is paywalled |
+| `search.macaulaylibrary.org` | reachable, still a JavaScript catalog rather than a page that can be read |
+| `www.allaboutbirds.org` | **still 403.** This one is not the egress proxy — Cornell serves a Cloudflare block to datacenter IPs. Opening the network policy further will not fix it. |
+| `web.archive.org` | not reachable through the proxy, so archived copies are not a way round the line above |
+
+**Task B has had a triage pass, and its findings are applied.** All 123 facts were
+checked against source text that was actually downloaded and read; see
+`docs/research/fact-check-summary.md` for the rollup and
+`docs/research/fact-check-<range>.md` for the per-fact evidence. 85 citations were
+swapped and 9 facts rewritten, recorded change by change in
+`docs/research/fact-check-changeset.json` and applied by `npm run apply-fact-check`.
+No `sources[]` entry points at All About Birds any more; the `allAboutBirdsSlug`
+per row is untouched, since that drives the card link ADR-004 asks for and is not a
+citation. Regenerate the evidence corpus with `npm run fact-sources` and audit the
+reports with `npm run verify-fact-check`.
+
+**Task A is half done.** The four seed weeks that have a usable Commons photo are
+sourced, downloaded and credited: week 2 poppy, week 4 nyjer, week 5 millet, week 6
+sunflower. The curated choices live in `docs/research/commons-images.json` with a note on
+why each was picked; `npm run commons-images` does the mechanical half — fetch the metadata,
+refuse any licence not on ADR-003's allowed list, download, resize, and write the `image`
+object. To swap a photo, change `commonsTitle` there and re-run. Attribution is never
+hand-typed: author, licence, licence URL and source URL all come from the Commons API.
+
+`vite.config.ts` now precaches `jpg` as well. Without it those four cards would have
+broken offline, which is the one case shipping the photos locally was meant to cover.
+
+Two parts of task A are **not** done, for different reasons:
+
+- **Week 3, the grit photo.** No suitable Commons image exists. Searches for poultry,
+  pigeon, gizzard and granite grit return only scanned pages from pre-1920 poultry
+  manuals; coarse-sand searches return beach and sandstone geology, which does not read
+  as something a bird swallows. This is moot until the comparison is settled anyway —
+  week 3 is still `proposed: true`, and the fact-check found its only citation never
+  mentions grouse, doves or roadsides. Decide the comparison first.
+- **Macaulay asset ids and the embed template, weeks 7–42.** Still yours, and now more
+  firmly so. `macaulaylibrary.org` and `search.macaulaylibrary.org` are behind
+  **Anubis**, a proof-of-work challenge whose own page says it is there "to protect the
+  server against the scourge of AI companies aggressively scraping websites". Every
+  HTTP 200 from those hosts is that challenge page, not content. A headless browser
+  would likely solve the challenge, but doing so to read Cornell's catalog is the
+  scraping the challenge exists to stop, so this session did not. ADR-003's verification
+  step is unchanged and small: one person, one asset page, one Embed dialog, compared
+  against `MACAULAY_EMBED_TEMPLATE`. Nothing is blocked meanwhile — no row carries an
+  `mlAssetId`, so those cards render the silhouette tagged "Photo coming".
+
+That pass does **not** discharge the review below. It found 2 contradicted facts,
+21 partly supported and 1 unverifiable, and all of those are now corrected — but the
+99 facts it marked supported have not been independently re-read, and `reviewed: true`
+is still a human act, which `apply-fact-check` deliberately cannot perform. Three
+facts remain only partly resolved; they are listed under "Still open after this pass"
+in the summary. Every rewritten sentence also wants a voice pass: they were written
+to be defensible against a source, not to sound like the author. The most-cited source, All About Birds (74 of 123 facts), is the one
+that stayed shut; those facts were verified against other sources, and each
+report records which source was actually read for each fact.
+
 ## A. Image IDs (weeks 7–42: Macaulay Library; weeks 2–6: Wikimedia Commons)
+
+**See `docs/CURATING-PHOTOS.md` for the walkthrough** — how to verify the embed
+template first (do that before curating anything), what makes a photo work in
+the card's 150px letterbox crop, and how to check the result. The per-week
+search URLs below are the reference table it points at.
 
 For each species row, open the search page, pick a well-rated photo showing the whole bird (or the egg for
 weeks 7–13), open the asset, use **Embed**, and record the numeric asset ID (`ML` number) in `image.mlAssetId`
@@ -70,11 +141,13 @@ For eggs, add the age/behavior filter for eggs in the search UI (or search "egg"
 | 41 | Great Horned Owl | grhowl | https://search.macaulaylibrary.org/catalog?taxonCode=grhowl&mediaType=photo&sort=rating_rank_desc |
 | 42 | Osprey | osprey | https://search.macaulaylibrary.org/catalog?taxonCode=osprey&mediaType=photo&sort=rating_rank_desc |
 
-Seeds and grit (weeks 2–6): search Wikimedia Commons for "poppy seeds", "nyjer seed", "proso millet seed", "sunflower seed",
-pick a CC0 or CC BY file, download it to `public/images/seeds/`, and record `provider: "commons"`, `sourceUrl`,
-`author`, `license`, `licenseUrl` in `image`.
+Seeds (weeks 2, 4, 5, 6): **done.** The curated choices are in
+`docs/research/commons-images.json` and `npm run commons-images` fetches, checks the
+licence, downloads and records them. To swap a photo, change its `commonsTitle`
+and re-run.
 
-Week 3: proposed "Grain of grit" (`proposed: true` in the data). If accepted, source a Commons photo of gizzard grit or coarse sand alongside the seed photos.
+Week 3, proposed "Grain of grit" (`proposed: true` in the data): no photo, and
+no usable Commons candidate found. Settle whether the comparison stays first.
 
 ## B. Facts review
 

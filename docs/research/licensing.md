@@ -9,15 +9,15 @@ included for that purpose.
 
 ## Summary table
 
-| Source | Photos | Text ("Cool Facts" etc.) | API | Verdict for this app |
-|---|---|---|---|---|
-| All About Birds (Cornell Lab) | All rights reserved; photos are Macaulay Library assets | All rights reserved | None | Link out only. Do not copy images or text. |
-| Macaulay Library (Cornell Lab) | Contributor-owned; free for research and some education; embed widget allowed for non-commercial use; anything revenue-generating needs a license ticket | n/a | Search UI only, no public media API | Viable only if the app is strictly non-commercial, via the official embed iframe. Fragile. |
-| Audubon Guide to North American Birds | Personal, non-commercial copying only; other uses need written permission (support@audubon.org) | Same | Unofficial scrapers only | Link out only. |
-| Wikimedia Commons | Per-file CC0 / CC BY / CC BY-SA; license metadata available via API | n/a | MediaWiki API (`prop=imageinfo&iiprop=extmetadata`) | **Recommended image source.** Curate one file per comparison at build time, store attribution. |
-| Wikipedia | n/a | CC BY-SA 4.0; must attribute, link, and share-alike any derived text | REST `page/summary` endpoint returns extract plus a lead-image thumbnail | Usable for facts if we accept CC BY-SA on that text. |
-| iNaturalist | Default CC BY-NC; some CC BY / CC0 | n/a | Public API with license filter | Fallback image source; filter to CC BY / CC0 only. |
-| Datayze | n/a | Copyrighted site content; no reuse terms found | None | Do not scrape. Re-derive models from primary literature (see `datayze-features.md`). |
+| Source                                | Photos                                                                                                                                                   | Text ("Cool Facts" etc.)                                             | API                                                                      | Verdict for this app                                                                           |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| All About Birds (Cornell Lab)         | All rights reserved; photos are Macaulay Library assets                                                                                                  | All rights reserved                                                  | None                                                                     | Link out only. Do not copy images or text.                                                     |
+| Macaulay Library (Cornell Lab)        | Contributor-owned; free for research and some education; embed widget allowed for non-commercial use; anything revenue-generating needs a license ticket | n/a                                                                  | Search UI only, no public media API                                      | Viable only if the app is strictly non-commercial, via the official embed iframe. Fragile.     |
+| Audubon Guide to North American Birds | Personal, non-commercial copying only; other uses need written permission (support@audubon.org)                                                          | Same                                                                 | Unofficial scrapers only                                                 | Link out only.                                                                                 |
+| Wikimedia Commons                     | Per-file CC0 / CC BY / CC BY-SA; license metadata available via API                                                                                      | n/a                                                                  | MediaWiki API (`prop=imageinfo&iiprop=extmetadata`)                      | **Recommended image source.** Curate one file per comparison at build time, store attribution. |
+| Wikipedia                             | n/a                                                                                                                                                      | CC BY-SA 4.0; must attribute, link, and share-alike any derived text | REST `page/summary` endpoint returns extract plus a lead-image thumbnail | Usable for facts if we accept CC BY-SA on that text.                                           |
+| iNaturalist                           | Default CC BY-NC; some CC BY / CC0                                                                                                                       | n/a                                                                  | Public API with license filter                                           | Fallback image source; filter to CC BY / CC0 only.                                             |
+| Datayze                               | n/a                                                                                                                                                      | Copyrighted site content; no reuse terms found                       | None                                                                     | Do not scrape. Re-derive models from primary literature (see `datayze-features.md`).           |
 
 ## Cornell Lab of Ornithology / All About Birds
 
@@ -35,13 +35,50 @@ included for that purpose.
 
 ## Audubon
 
-- [Audubon terms of use](https://www.audubon.org/terms-use): users may copy and print content for personal, non-commercial use only, must keep copyright notices, must not modify. No permission is granted for any other use. Permission requests go to support@audubon.org.
-- Audubon guide photos are largely Audubon Photography Awards entries, all rights reserved to the photographers. Not usable.
+**Re-verified against the live page on 2026-09-12** (HTTP 200, full text read), so
+this section no longer carries the snippet caveat at the top of this file. The
+earlier verdict stands, and the terms are more restrictive than the summary table
+suggested.
+
+[Audubon terms of use](https://www.audubon.org/terms-use). Four clauses matter, and
+each one independently blocks this app:
+
+- **Copyrights.** "All rights reserved. Except as specifically provided in these
+  Terms of Use, no part of the Media may be reproduced, distributed, displayed,
+  transmitted, stored in a retrieval system or used to create derivative works
+  without prior consent of the copyright owner."
+- **Permitted Use of Media Materials** names photographs explicitly, then limits
+  any use to "personal and informational purposes only". A published app is not
+  personal use.
+- **"Materials may not be modified."** Downloading at 900px and re-encoding with
+  sharp is a modification.
+- **"No Materials may be used, copied or distributed separate from the
+  accompanying text."** A photograph on a card, next to the project's own writing,
+  is precisely that.
+
+There is no Creative Commons option anywhere on the site and no API. Permission
+requests go to support@audubon.org.
+
+One nuance the old note got wrong in the other direction: it said the photos are
+"all rights reserved to the photographers", implying Audubon could not grant
+permission even if asked. The Posting Content clause takes from contributors a
+"worldwide, royalty-free, non-exclusive, irrevocable, perpetual licence to use,
+reproduce, modify, publish ... **sublicense** and create derivative works", so for
+material that clause covers, Audubon does hold sublicensable rights. Whether
+Audubon Photography Awards entries fall under it or under separate contest rules
+has not been checked. Asking is therefore not obviously futile — but the ask is
+large: this repository is public, so any grant would have to permit onward
+redistribution by anyone who clones it, which is a sublicence, not a display
+permission.
+
+**Verdict unchanged: link out only.** Nothing here is usable without written
+permission, and Commons already covers the same weeks under licences that need no
+correspondence.
 
 ## Wikimedia Commons (recommended)
 
 - Every file carries machine-readable license metadata: `LicenseShortName`, `Artist`, `Credit`, `UsageTerms`, `AttributionRequired`, `LicenseUrl` under `extmetadata`.
-- Attribution requirements: name the author, name the license with a link, link to the source file. CC BY-SA on a *photo* does not force the app's code to be CC BY-SA; share-alike applies only to derivatives of the photo itself.
+- Attribution requirements: name the author, name the license with a link, link to the source file. CC BY-SA on a _photo_ does not force the app's code to be CC BY-SA; share-alike applies only to derivatives of the photo itself.
 - Reuse guidance: [Commons:Reusing content outside Wikimedia](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia).
 - Plan: a one-time curation script (or manual pass) picks one Commons file per week, resolves the metadata, and writes `data/images.json` with URL, thumbnail, author, license, license URL, and source link. The app never calls Commons at runtime. Images are downloaded into the repo (or a CDN) at build time so the app works offline and is not dependent on Commons hotlinking, which Commons discourages at scale.
 

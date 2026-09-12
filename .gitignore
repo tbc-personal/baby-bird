@@ -11,3 +11,9 @@ coverage/
 
 # Scratch git worktrees created by Claude Code subagents.
 .claude/worktrees/
+
+# Fact-check evidence corpus (regenerate with `npm run fact-sources`)
+.fact-check/
+
+# Cached Wikimedia Commons API responses (regenerate with `npm run survey-commons`)
+.commons-survey/

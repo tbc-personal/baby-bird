@@ -41,8 +41,82 @@
   display: block;
 }
 
-.credit {
+/*
+ * The photo credit (ADR-003), pinned to the bottom-right of the image.
+ *
+ * The button sits over an arbitrary photograph, so it cannot take its colours
+ * from the skin the way the rest of the app does: a dark scrim with a white
+ * glyph is the one combination that stays legible over a black seed macro and
+ * a pale millet dish alike. Same reasoning for the panel.
+ */
+.photo__credit {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+}
+
+.photo__credit-button {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--photo-edge);
+  background: var(--photo-scrim);
+  color: var(--on-photo);
+
+  /* A letter, not a numeral, so it takes the body face. */
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: none;
+}
+
+.photo__credit-button:hover {
+  background: var(--photo-scrim-hover);
+}
+
+.photo__credit-panel {
+  order: -1; /* above the button, so it opens into the image */
   margin: 0;
+  max-width: min(280px, calc(100vw - 64px));
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--photo-scrim-strong);
+  color: var(--on-photo);
   font-size: 10.5px;
-  color: var(--ink-2);
+  line-height: 1.35;
+  text-align: right;
+}
+
+.photo__credit-panel a {
+  color: var(--on-photo);
+  text-decoration: underline;
+}
+
+/*
+ * `display: grid` above outranks the user-agent `[hidden] { display: none }`
+ * rule, so without this the panel never hides.
+ */
+.photo__credit-panel[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .photo__credit-panel {
+    animation: photo-credit-in 120ms ease-out;
+  }
+}
+
+@keyframes photo-credit-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
 }
