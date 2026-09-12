@@ -1,0 +1,815 @@
+{
+  "generated": "2026-09-12T00:20:12.642Z",
+  "survey": [
+    {
+      "week": 14,
+      "kind": "bird",
+      "comparison": "Ruby-throated Hummingbird",
+      "scientificName": "Archilochus colubris",
+      "category": "Category:Archilochus colubris",
+      "pool": 200,
+      "rejected": {
+        "not a photograph": 69,
+        "mime video/webm": 3,
+        "no author reported": 2,
+        "not a live bird": 2,
+        "licence": 8,
+        "too small": 7,
+        "mime application/ogg": 1,
+        "mime image/svg+xml": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204954.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7100,
+          "height": 4733,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204955.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6326,
+          "height": 4217,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204970.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204970.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/20250813_ruby_throated_hummingbird_pleasant_valley_PD204970.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204970.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5836,
+          "height": 3283,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204971.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204971.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/20250813_ruby_throated_hummingbird_pleasant_valley_PD204971.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6400,
+          "height": 4267,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204982.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204982.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/20250813_ruby_throated_hummingbird_pleasant_valley_PD204982.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204982.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8236,
+          "height": 5490,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204983.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204983.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/20250813_ruby_throated_hummingbird_pleasant_valley_PD204983.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204983.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7624,
+          "height": 5083,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "kind": "bird",
+      "comparison": "Ruby-crowned Kinglet",
+      "scientificName": "Corthylio calendula",
+      "category": "Category:Corthylio calendula",
+      "pool": 200,
+      "rejected": {
+        "not a photograph": 58,
+        "too small": 4,
+        "licence": 19,
+        "mime image/svg+xml": 1,
+        "no author reported": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Ruby-crowned kinglet (14077).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_(14077).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Ruby-crowned_kinglet_%2814077%29.jpg/500px-Ruby-crowned_kinglet_%2814077%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3295,
+          "height": 2414,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Ruby-crowned kinglet in Prospect Park, Brooklyn, NY, USA",
+          "score": 233,
+          "notes": ["featured picture", "quality image"]
+        },
+        {
+          "commonsTitle": "File:20251015 ruby crowned kinglet matthei botanical garden PD204596.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg/500px-20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5978,
+          "height": 3985,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Ruby crowned Kinglet. Matthaei Botanical Gardens. Ann Arbor, MI USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Cromwell valley 10.6.20 ruby-crowned kinglet DSC 4174.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cromwell_valley_10.6.20_ruby-crowned_kinglet_DSC_4174.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Cromwell_valley_10.6.20_ruby-crowned_kinglet_DSC_4174.jpg/500px-Cromwell_valley_10.6.20_ruby-crowned_kinglet_DSC_4174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Regulus satrapa",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Regulus calendula DSC 7164.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Regulus_calendula_DSC_7164.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Regulus_calendula_DSC_7164.jpg/500px-Regulus_calendula_DSC_7164.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Regulus calendula",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Regulus calendula DSC 6527.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Regulus_calendula_DSC_6527.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Regulus_calendula_DSC_6527.jpg/500px-Regulus_calendula_DSC_6527.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Regulus calendula",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Regulus calendula DSC 6526.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Regulus_calendula_DSC_6526.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Regulus_calendula_DSC_6526.jpg/500px-Regulus_calendula_DSC_6526.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Regulus calendula",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "kind": "bird",
+      "comparison": "Black-capped Chickadee",
+      "scientificName": "Poecile atricapillus",
+      "category": "Category:Poecile atricapillus",
+      "pool": 200,
+      "rejected": {
+        "too small": 6,
+        "licence": 8,
+        "not a photograph": 29,
+        "not a live bird": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Black-capped chickadee (33729).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(33729).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Black-capped_chickadee_%2833729%29.jpg/500px-Black-capped_chickadee_%2833729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2961,
+          "height": 3208,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Black-capped chickadee at a feeder in Green-Wood Cemetery",
+          "score": 157,
+          "notes": [
+            "featured picture",
+            "quality image",
+            "portrait — crops badly in the strip"
+          ]
+        },
+        {
+          "commonsTitle": "File:20241004 black capped chickadee and american goldfinch pleasant valley PD207710.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg/500px-20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7972,
+          "height": 4484,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Black Capped Chickadee & American Goldfinch. Pleasant Valley Wildlife Sanctuary, Lenox, MA USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Black Capped Chickadee.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_Capped_Chickadee.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Black_Capped_Chickadee.jpg/500px-Black_Capped_Chickadee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY-SA 4.0",
+          "author": "John Stockla",
+          "description": "A black-capped chickadee in Connecticut.",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Black-capped chickadee (15014).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(15014).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Black-capped_chickadee_%2815014%29.jpg/500px-Black-capped_chickadee_%2815014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3129,
+          "height": 2237,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Black-capped chicadee",
+          "score": 113,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Black-capped chickadee (31171).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(31171).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Black-capped_chickadee_%2831171%29.jpg/500px-Black-capped_chickadee_%2831171%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2982,
+          "height": 2293,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Black-capped chickadee at a feeder in Green-Wood Cemetery",
+          "score": 112,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20231124 black capped chickadee housatonic valley wma PD100299top.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20231124_black_capped_chickadee_housatonic_valley_wma_PD100299top.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/20231124_black_capped_chickadee_housatonic_valley_wma_PD100299top.jpg/500px-20231124_black_capped_chickadee_housatonic_valley_wma_PD100299top.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3600,
+          "height": 3600,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Black capped chickadee Housatonic Valley WMA, New Lenox MA, USA",
+          "score": 94,
+          "notes": ["quality image"]
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "kind": "bird",
+      "comparison": "Carolina Wren",
+      "scientificName": "Thryothorus ludovicianus",
+      "category": "Category:Thryothorus ludovicianus",
+      "pool": 200,
+      "rejected": {
+        "licence": 16,
+        "mime image/svg+xml": 1,
+        "not a photograph": 15,
+        "mime video/webm": 2,
+        "too small": 4
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Carolina wren (14391).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(14391).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Carolina_wren_%2814391%29.jpg/500px-Carolina_wren_%2814391%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2964,
+          "height": 2310,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Carolina wren in Prospect Park",
+          "score": 92,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Carolina wren (25002278125).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(25002278125).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Carolina_wren_%2825002278125%29.jpg/500px-Carolina_wren_%2825002278125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Carolina wren",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Carolina wren (24375448953).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(24375448953).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Carolina_wren_%2824375448953%29.jpg/500px-Carolina_wren_%2824375448953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Carolina wren",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Carolina wren (24985050625).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(24985050625).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Carolina_wren_%2824985050625%29.jpg/500px-Carolina_wren_%2824985050625%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Carolina wren",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Carolina wren (21731884540).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(21731884540).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Carolina_wren_%2821731884540%29.jpg/500px-Carolina_wren_%2821731884540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Carolina wren",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Carolina wren (21064248658).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(21064248658).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Carolina_wren_%2821064248658%29.jpg/500px-Carolina_wren_%2821064248658%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Carolina wren",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "kind": "bird",
+      "comparison": "Tufted Titmouse",
+      "scientificName": "Baeolophus bicolor",
+      "category": "Category:Baeolophus bicolor",
+      "pool": 200,
+      "rejected": {
+        "licence": 27,
+        "too small": 7,
+        "mime image/svg+xml": 1,
+        "not a photograph": 20,
+        "not a live bird": 2
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Titmouse in GWC (71746).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Titmouse_in_GWC_(71746).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Titmouse_in_GWC_%2871746%29.jpg/500px-Titmouse_in_GWC_%2871746%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4608,
+          "height": 3456,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Tufted titmouse in Green-Wood Cemetery",
+          "score": 118,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Titmouse in GWC (71708).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Titmouse_in_GWC_(71708).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Titmouse_in_GWC_%2871708%29.jpg/500px-Titmouse_in_GWC_%2871708%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3812,
+          "height": 2924,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Tufted titmouse in Green-Wood Cemetery",
+          "score": 115,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Tufted titmouse (90309).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tufted_titmouse_(90309).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Tufted_titmouse_%2890309%29.jpg/500px-Tufted_titmouse_%2890309%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3196,
+          "height": 2278,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Tufted titmouse",
+          "score": 113,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Tufted titmouse (33712).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tufted_titmouse_(33712).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tufted_titmouse_%2833712%29.jpg/500px-Tufted_titmouse_%2833712%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3289,
+          "height": 2679,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Tufted titmouse at a feeder in Green-Wood Cemetery",
+          "score": 93,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Tufted titmouse (10092).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tufted_titmouse_(10092).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Tufted_titmouse_%2810092%29.jpg/500px-Tufted_titmouse_%2810092%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2967,
+          "height": 2376,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Tufted titmouse ( Baeolophus bicolor ) in Central Park.",
+          "score": 92,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Baeolophus bicolor DSC 0423.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baeolophus_bicolor_DSC_0423.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Baeolophus_bicolor_DSC_0423.jpg/500px-Baeolophus_bicolor_DSC_0423.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Baeolophus bicolor",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "kind": "bird",
+      "comparison": "Cedar Waxwing",
+      "scientificName": "Bombycilla cedrorum",
+      "category": "Category:Bombycilla cedrorum",
+      "pool": 200,
+      "rejected": {
+        "too small": 21,
+        "not a photograph": 33,
+        "licence": 23,
+        "not a live bird": 1,
+        "mime image/svg+xml": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 11.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_11.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/20240629_cedar_waxwing_gay_city_PD203316_11.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8437,
+          "height": 5625,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 13.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_13.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20240629_cedar_waxwing_gay_city_PD203316_13.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8508,
+          "height": 5672,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 14.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_14.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/20240629_cedar_waxwing_gay_city_PD203316_14.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8250,
+          "height": 5500,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20260830 cedar waxwing hammonasset beach sp PD06432.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260830_cedar_waxwing_hammonasset_beach_sp_PD06432.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20260830_cedar_waxwing_hammonasset_beach_sp_PD06432.jpg/500px-20260830_cedar_waxwing_hammonasset_beach_sp_PD06432.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6411,
+          "height": 4274,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar waxwing. Hammonasset Beach State Park. Madison, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 10.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_10.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/20240629_cedar_waxwing_gay_city_PD203316_10.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4743,
+          "height": 4743,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA",
+          "score": 99,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 01.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_01.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/20240629_cedar_waxwing_gay_city_PD203316_01.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3210,
+          "height": 3210,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA",
+          "score": 93,
+          "notes": ["quality image"]
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "kind": "bird",
+      "comparison": "Eastern Bluebird",
+      "scientificName": "Sialia sialis",
+      "category": "Category:Sialia sialis",
+      "pool": 200,
+      "rejected": {
+        "too small": 13,
+        "not the subject": 1,
+        "not a photograph": 63,
+        "licence": 8,
+        "mime video/webm": 4
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:DSC 4698patuxent north tract 5.2.20 eastern bluebird.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:DSC_4698patuxent_north_tract_5.2.20_eastern_bluebird.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/DSC_4698patuxent_north_tract_5.2.20_eastern_bluebird.jpg/500px-DSC_4698patuxent_north_tract_5.2.20_eastern_bluebird.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Sialia sialis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eastern bluebird (26917284207).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_bluebird_(26917284207).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Eastern_bluebird_%2826917284207%29.jpg/500px-Eastern_bluebird_%2826917284207%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4904,
+          "height": 3269,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Eastern bluebird",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eastern bluebird (39978254790).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_bluebird_(39978254790).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Eastern_bluebird_%2839978254790%29.jpg/500px-Eastern_bluebird_%2839978254790%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Eastern bluebird",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eastern bluebird (41068085444).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_bluebird_(41068085444).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Eastern_bluebird_%2841068085444%29.jpg/500px-Eastern_bluebird_%2841068085444%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Eastern bluebird",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eastern bluebird (50455751652).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_bluebird_(50455751652).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Eastern_bluebird_%2850455751652%29.jpg/500px-Eastern_bluebird_%2850455751652%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Eastern bluebird",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Eastern bluebird (50454882393).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_bluebird_(50454882393).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Eastern_bluebird_%2850454882393%29.jpg/500px-Eastern_bluebird_%2850454882393%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Eastern bluebird",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "kind": "bird",
+      "comparison": "American Kestrel",
+      "scientificName": "Falco sparverius",
+      "category": "Category:Falco sparverius",
+      "pool": 200,
+      "rejected": {
+        "too small": 12,
+        "mime image/svg+xml": 1,
+        "not a photograph": 25,
+        "mime audio/mpeg": 3,
+        "mime video/webm": 1,
+        "licence": 22
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:American kestrel (Falco sparverius sparveroides) female white morph.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_female_white_morph.JPG",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/American_kestrel_%28Falco_sparverius_sparveroides%29_female_white_morph.JPG/500px-American_kestrel_%28Falco_sparverius_sparveroides%29_female_white_morph.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2106,
+          "height": 1404,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "American kestrel ( Falco sparverius sparveroides ) female white morph, Cuba",
+          "score": 143,
+          "notes": ["quality image", "valued image"]
+        },
+        {
+          "commonsTitle": "File:American kestrel (Falco sparverius tropicalis) female in flight Cayo.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_tropicalis)_female_in_flight_Cayo.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/American_kestrel_%28Falco_sparverius_tropicalis%29_female_in_flight_Cayo.jpg/500px-American_kestrel_%28Falco_sparverius_tropicalis%29_female_in_flight_Cayo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2435,
+          "height": 1624,
+          "license": "CC BY-SA 4.0",
+          "author": "Charles J. Sharp",
+          "description": "American kestrel ( Falco sparverius tropicalis ) female in flight, Near San Ignacio, Cayo Department, Belize",
+          "score": 75,
+          "notes": ["valued image"]
+        },
+        {
+          "commonsTitle": "File:Kestrel (7731170296).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kestrel_(7731170296).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Kestrel_%287731170296%29.jpg/500px-Kestrel_%287731170296%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4928,
+          "height": 3264,
+          "license": "CC BY 2.0",
+          "author": "CheepShot",
+          "description": "50mm",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:American kestrel (50577825526).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_kestrel_(50577825526).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/American_kestrel_%2850577825526%29.jpg/500px-American_kestrel_%2850577825526%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "American kestrel",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:American kestrel blackwater 12.26.21 DSC 3642.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_kestrel_blackwater_12.26.21_DSC_3642.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/American_kestrel_blackwater_12.26.21_DSC_3642.jpg/500px-American_kestrel_blackwater_12.26.21_DSC_3642.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Falco sparverius",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:What a View (15235036797).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:What_a_View_(15235036797).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/What_a_View_%2815235036797%29.jpg/500px-What_a_View_%2815235036797%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "Public domain",
+          "author": "USFWS Mountain Prairie",
+          "description": "This Kestrel knew where to go to get a great view of the area. Perching high in a tree allows them to hunt insects, small rodents, birds, snakes, lizards, and frogs. The American Kestrel is the smallest North American falcon. Photo Credit: ",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "kind": "bird",
+      "comparison": "Blue Jay",
+      "scientificName": "Cyanocitta cristata",
+      "category": "Category:Cyanocitta cristata",
+      "pool": 200,
+      "rejected": {
+        "too small": 10,
+        "not a photograph": 11,
+        "licence": 6,
+        "mime image/svg+xml": 2,
+        "mime video/webm": 1,
+        "mime application/ogg": 1,
+        "not the subject": 3
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Cyanocitta cristata in my yard 1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanocitta_cristata_in_my_yard_1.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Cyanocitta_cristata_in_my_yard_1.jpg/500px-Cyanocitta_cristata_in_my_yard_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6016,
+          "height": 4016,
+          "license": "CC BY-SA 4.0",
+          "author": "Sixflashphoto",
+          "description": "To my surprise when coming home from a hike I found this Blue jay \"(Cyanocitta cristata)\" laying in the grass in my yard. It would not fly away regardless of how close I approached. I never did try to make physical contact. After photograph",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Cyanocitta cristata in my yard 3.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanocitta_cristata_in_my_yard_3.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Cyanocitta_cristata_in_my_yard_3.jpg/500px-Cyanocitta_cristata_in_my_yard_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5585,
+          "height": 3602,
+          "license": "CC BY-SA 4.0",
+          "author": "Sixflashphoto",
+          "description": "To my surprise when coming home from a hike I found this Blue jay \"(Cyanocitta cristata)\" laying in the grass in my yard. It would not fly away regardless of how close I approached. I never did try to make physical contact. After photograph",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Cyanocitta cristata in my yard 5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanocitta_cristata_in_my_yard_5.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Cyanocitta_cristata_in_my_yard_5.jpg/500px-Cyanocitta_cristata_in_my_yard_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6016,
+          "height": 4016,
+          "license": "CC BY-SA 4.0",
+          "author": "Sixflashphoto",
+          "description": "To my surprise when coming home from a hike I found this Blue jay \"(Cyanocitta cristata)\" laying in the grass in my yard. It would not fly away regardless of how close I approached. I never did try to make physical contact. After photograph",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Blue jay with food in BBG (32675).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_jay_with_food_in_BBG_(32675).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Blue_jay_with_food_in_BBG_%2832675%29.jpg/500px-Blue_jay_with_food_in_BBG_%2832675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4347,
+          "height": 3250,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Blue jay with food in BBG",
+          "score": 117,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Blue Jay (32224389828).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Jay_(32224389828).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Blue_Jay_%2832224389828%29.jpg/500px-Blue_Jay_%2832224389828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "Andy Reago & Chrissy McClarren",
+          "description": "Blue Jay",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Blue jay (50003379192).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_jay_(50003379192).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Blue_jay_%2850003379192%29.jpg/500px-Blue_jay_%2850003379192%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Blue jay",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
