@@ -1,5 +1,5 @@
 {
-  "$comment": "Curated Wikimedia Commons photos, one per week (ADR-003). Selection is a human/curation judgement and lives here; `npm run survey-commons` shortlists the candidates; `npm run commons-images` does the mechanical part \u2014 fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
+  "$comment": "Curated Wikimedia Commons photos, one per week (ADR-003). Selection is a human/curation judgement and lives here; `npm run survey-commons` shortlists the candidates; `npm run commons-images` does the mechanical part — fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
   "targetWidth": 900,
   "jpegQuality": 80,
   "picks": [
@@ -36,6 +36,30 @@
       "file": "images/seeds/sunflower-seed.jpg",
       "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
       "why": "Sharp macro of black oil sunflower specifically, which is what the week 6 fact is about."
+    },
+    {
+      "week": 8,
+      "comparison": "Barn Swallow egg",
+      "commonsTitle": "File:Hirundo rustica gutturalis nest and 4 eggs.jpg",
+      "file": "images/eggs/barn-swallow-egg.jpg",
+      "altText": "Four small speckled pink eggs in a barn swallow's nest of dried grass and mud, lined with white feathers.",
+      "why": "A real clutch, close enough that the speckling reads, and the eggs sit near the middle of a landscape frame — which is what the 150px strip crop needs. Chosen from the shortlist over the museum specimen plate."
+    },
+    {
+      "week": 10,
+      "comparison": "American Robin egg",
+      "commonsTitle": "File:American Robin nest and eggs.JPG",
+      "file": "images/eggs/american-robin-egg.jpg",
+      "altText": "Three turquoise-blue American Robin eggs resting in a deep nest of dried grass and mud.",
+      "why": "The colour is the whole point of a robin's egg and it is unmistakable here. Used on fourteen Wikimedia pages. The eggs sit low in the frame, so check the crop."
+    },
+    {
+      "week": 11,
+      "comparison": "Black Tern egg",
+      "commonsTitle": "File:Black Tern nest (7402341032).jpg",
+      "file": "images/eggs/black-tern-egg.jpg",
+      "altText": "Three heavily blotched Black Tern eggs on a floating nest of reeds and stems at the surface of a marsh.",
+      "why": "Shows the floating marsh nest the week's fact is about, not just the eggs. Public domain, USFWS. Foreground leaves intrude at the edges."
     }
   ],
   "notSourced": [

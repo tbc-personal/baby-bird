@@ -323,11 +323,17 @@
       "wikipediaTitle": "Barn_swallow",
       "allAboutBirdsSlug": "Barn_Swallow",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Four small speckled pink eggs in a barn swallow's nest of dried grass and mud, lined with white feathers.",
+        "file": "images/eggs/barn-swallow-egg.jpg",
+        "author": "Alpsdake",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg"
       },
       "facts": [
         {
@@ -412,11 +418,17 @@
       "wikipediaTitle": "American_robin",
       "allAboutBirdsSlug": "American_Robin",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Three turquoise-blue American Robin eggs resting in a deep nest of dried grass and mud.",
+        "file": "images/eggs/american-robin-egg.jpg",
+        "author": "Dima Sergiyenko; Please attribute this image as the work of \" DiscoverWithDima .\"",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Robin_nest_and_eggs.JPG"
       },
       "facts": [
         {
@@ -456,11 +468,17 @@
       "wikipediaTitle": "Black_tern",
       "allAboutBirdsSlug": "Black_Tern",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Three heavily blotched Black Tern eggs on a floating nest of reeds and stems at the surface of a marsh.",
+        "file": "images/eggs/black-tern-egg.jpg",
+        "author": "U. S. Fish and Wildlife Service - Northeast Region",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_Tern_nest_(7402341032).jpg"
       },
       "facts": [
         {
