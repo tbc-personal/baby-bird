@@ -67,6 +67,26 @@
       "week": 3,
       "comparison": "Grain of grit",
       "reason": "No suitable Commons photo found. Searches for poultry grit, pigeon grit, gizzard grit and granite grit return only scanned pages from pre-1920 poultry manuals; searches for coarse sand return beach and sandstone geology, which does not read as grit a bird would swallow. This is moot until the comparison itself is settled: week 3 is still `proposed: true`, and the P1 fact-check found its only citation (the Wikipedia Gizzard article) never mentions grouse, doves or roadsides. Decide the comparison first."
+    },
+    {
+      "week": 7,
+      "comparison": "House Wren egg",
+      "reason": "Commons has no House Wren egg photograph. There is no 'Troglodytes aedon eggs' category at all — checked directly, not inferred from the shortlist — and the species category's egg/nest shortlist is six frames of an adult wren at a nest box, one of them a Featured Picture. A bird on a nest box is not an egg. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 9,
+      "comparison": "Wood Thrush egg",
+      "reason": "One shippable candidate in the whole category, and it is a thrush on a nest shot through heavy foliage — unreadable once cropped to the 150px strip. No 'Hylocichla mustelina eggs' category exists. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 12,
+      "comparison": "Great Blue Heron egg",
+      "reason": "No 'Ardea herodias eggs' category exists. The nest candidates are all rookery shots taken from below, backlit against bright sky, with the nests reading as silhouettes and no eggs visible. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 13,
+      "comparison": "Bald Eagle egg",
+      "reason": "Unlike weeks 7, 9 and 12 this one has shippable candidates — a Muséum de Toulouse specimen plate and several nest-with-clutch frames — but the author reviewed them on 2026-09-13 and none shows the egg alone in a natural context: the specimen is on a black studio background, and in the nest shots the eggs are incidental to an adult bird. Needs a source other than Commons, not a better Commons search. Leave it as 'Photo coming'."
     }
   ]
 }
