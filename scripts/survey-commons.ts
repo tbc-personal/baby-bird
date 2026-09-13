@@ -48,9 +48,17 @@ const SHORTLIST = 6;
  * Not photographs of a living bird. The 19th-century book plates are the ones
  * that matter: Commons species categories are full of them, they carry clean
  * public-domain licences, and a coverage count that includes them is a lie.
+ *
+ * Two terms were removed after they were measured rather than assumed. "birds
+ * of" was meant to catch *Birds of America*; it matched "Category:Birds of
+ * Maryland" and every other geographic category, and was discarding 208 of 594
+ * Eastern Bluebird files — about a third of every bird week's pool, silently,
+ * since the first survey. "audubon" matched photographs taken at Audubon
+ * sanctuaries. Both kinds of plate are still caught structurally, by plate,
+ * lithograph, engraving, illustration and the rest.
  */
 const NOT_A_PHOTOGRAPH =
-  /\b(plate|lithograph|engrav|etching|drawing|drawn|illustration|painting|painted|watercolou?r|sketch|woodcut|chromolith|print|artwork|diagram|icon|logo|stamp|coin|banknote|cover|book|handbook|manual|birds of|iconograph|nederlandsche|naumann|gould|audubon)\b/i;
+  /\b(plate|lithograph|engrav|etching|drawing|drawn|illustration|painting|painted|watercolou?r|sketch|woodcut|chromolith|print|artwork|diagram|icon|logo|stamp|coin|banknote|cover|book|handbook|manual|iconograph|nederlandsche|naumann|gould)\b/i;
 /** Dead, mounted, or otherwise not what a reader should be shown. */
 const NOT_A_LIVE_BIRD =
   /\b(taxiderm|specimen|skeleton|skull|bone|mount(ed)?|museum|collection|dead|roadkill|carcass|wing detail|feather|plumage detail|pellet|dropping|scat|track|footprint|egg tooth|nhmuk|naturalis|zoolog(y|ical) museum)\b/i;
@@ -261,7 +269,12 @@ async function globalUsage(
   for (let i = 0; i < titles.length; i += 50) {
     const batch = titles.slice(i, i + 50);
     let cont: string | undefined;
-    do {
+    // Four pages of 500 usage records per 50 files, and no more. Exhausting the
+    // list is unnecessary — scoring needs two booleans and a count it caps at 20
+    // — and a file used on thousands of pages would otherwise page for ever.
+    // Callers filter unshippable files out first, which is what keeps those out
+    // of the batches; this cap is the backstop.
+    for (let page_ = 0; page_ < 4; page_++) {
       const page = (await api(
         {
           action: 'query',
@@ -298,7 +311,8 @@ async function globalUsage(
         out.set(p.title, seen);
       }
       cont = page.continue?.gucontinue;
-    } while (cont);
+      if (!cont) break;
+    }
   }
   return out;
 }
@@ -451,7 +465,27 @@ function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
 }
 
 /** Files this project cannot ship at all, whatever they look like. */
-function shippable(file: FileInfo, kind: 'egg' | 'bird'): string | null {
+/**
+ * A pattern that the file has to match somewhere to count as being about this
+ * species: the genus, the full scientific name, or the common name.
+ *
+ * Needed because `articleImages` reads Wikipedia's whole image list for the
+ * article, and that list is not just the article's photographs — it carries the
+ * page furniture too. The Eastern Bluebird article contributed a fritillary
+ * butterfly, an elk and a caribou, none of which any other filter here would
+ * have caught, and any of which could have surfaced in a shortlist carrying
+ * somebody else's Featured Picture badge.
+ */
+function subjectPattern(scientificName: string, comparison: string): RegExp {
+  const words = [scientificName, comparison.replace(/ egg$/i, '')]
+    .flatMap((name) => name.split(/[\s_-]+/))
+    .map((word) => word.trim())
+    .filter((word) => word.length > 3)
+    .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  return new RegExp(words.join('|'), 'i');
+}
+
+function shippable(file: FileInfo, kind: 'egg' | 'bird', subject: RegExp): string | null {
   if (!/^image\/(jpeg|png)$/.test(file.mime)) return `mime ${file.mime}`;
   if (file.width < MIN_WIDTH) return `${file.width}px wide`;
   if (!file.license) return 'no licence reported';
@@ -465,6 +499,8 @@ function shippable(file: FileInfo, kind: 'egg' | 'bird'): string | null {
   if (NOT_THE_SUBJECT.test(haystack)) return 'not the subject';
   // Egg weeks want museum clutch trays; bird weeks do not want mounted skins.
   if (kind === 'bird' && NOT_A_LIVE_BIRD.test(haystack)) return 'not a live bird';
+  if (!subject.test([file.title, file.categories.join(' ')].join(' ')))
+    return 'not this species';
   return null;
 }
 
@@ -608,13 +644,19 @@ for (const week of weeks) {
     const fromArticle = await articleImages(week.wikipediaTitle, refresh);
     titles = [...new Set([...fromArticle, ...titles])].slice(0, MAX_CANDIDATES);
 
+    const subject = subjectPattern(week.scientificName!, week.comparison!);
     const files = await fileInfo(titles, refresh);
-    const usage = await globalUsage(titles, week.wikipediaTitle, refresh);
-    for (const file of files) file.usage = usage.get(file.title);
+
+    // Reject before asking about usage, not after. Global usage is paged per
+    // *batch* of 50 files rather than per file, so one heavily-used file starves
+    // the other 49: a butterfly portal icon from Wikipedia's article-image list
+    // has thousands of usages, and the batch it sat in never paged far enough to
+    // report anybody else's. Filtering first removes the hogs — they are never
+    // shippable anyway — and cuts the number of usage queries roughly in half.
     const rejected: Record<string, number> = {};
-    const kept: Scored[] = [];
+    const shippableFiles: FileInfo[] = [];
     for (const file of files) {
-      const why = shippable(file, kind);
+      const why = shippable(file, kind, subject);
       if (why) {
         const bucket = why
           .replace(/\d+px wide/, 'too small')
@@ -622,6 +664,18 @@ for (const week of weeks) {
         rejected[bucket] = (rejected[bucket] ?? 0) + 1;
         continue;
       }
+      shippableFiles.push(file);
+    }
+
+    const usage = await globalUsage(
+      shippableFiles.map((f) => f.title),
+      week.wikipediaTitle,
+      refresh,
+    );
+    for (const file of shippableFiles) file.usage = usage.get(file.title);
+
+    const kept: Scored[] = [];
+    for (const file of shippableFiles) {
       const s = score(file, kind);
       if (s.notes.includes('no egg or nest in the subject') || s.score < -100) {
         rejected['scored out'] = (rejected['scored out'] ?? 0) + 1;
