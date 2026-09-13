@@ -60,6 +60,78 @@
       "file": "images/eggs/black-tern-egg.jpg",
       "altText": "Three heavily blotched Black Tern eggs on a floating nest of reeds and stems at the surface of a marsh.",
       "why": "Shows the floating marsh nest the week's fact is about, not just the eggs. Public domain, USFWS. Foreground leaves intrude at the edges."
+    },
+    {
+      "week": 14,
+      "comparison": "Ruby-throated Hummingbird",
+      "commonsTitle": "File:20250813 ruby throated hummingbird pleasant valley PD204970.jpg",
+      "file": "images/birds/ruby-throated-hummingbird.jpg",
+      "altText": "A Ruby-throated Hummingbird hovering beside a spray of pale yellow flowers, its wings blurred with motion.",
+      "why": "Author's pick (14F). A Quality Image with the bird in flight. The bird is small in the frame, so check it still reads at 150px."
+    },
+    {
+      "week": 15,
+      "comparison": "Ruby-crowned Kinglet",
+      "commonsTitle": "File:Ruby-crowned kinglet (14077).jpg",
+      "file": "images/birds/ruby-crowned-kinglet.jpg",
+      "altText": "A Ruby-crowned Kinglet perched on a thin bare twig, its olive back and white wing bar lit from the side.",
+      "why": "Author's pick (15A). Featured Picture, and the one Wikipedia uses. Bird centred, background clean."
+    },
+    {
+      "week": 16,
+      "comparison": "Black-capped Chickadee",
+      "commonsTitle": "File:20241004 black capped chickadee and american goldfinch pleasant valley PD207710.jpg",
+      "file": "images/birds/black-capped-chickadee.jpg",
+      "altText": "A Black-capped Chickadee perched among tall yellow catkins, with an American Goldfinch lower in the frame.",
+      "why": "Author's pick (16D). A Quality Image, but both birds are small and there are two species in the frame — worth a second look for a card about one bird's size."
+    },
+    {
+      "week": 17,
+      "comparison": "Carolina Wren",
+      "commonsTitle": "File:Carolina wren (14391).jpg",
+      "file": "images/birds/carolina-wren.jpg",
+      "altText": "A Carolina Wren on a bare branch with its tail cocked upward, the white stripe over its eye clearly marked.",
+      "why": "Author's pick (17A). Quality Image, used in the species' Wikipedia article. Large, centred, unambiguous."
+    },
+    {
+      "week": 18,
+      "comparison": "Tufted Titmouse",
+      "commonsTitle": "File:Tufted titmouse in Prospect Park (53493).jpg",
+      "file": "images/birds/tufted-titmouse.jpg",
+      "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
+      "why": "Author's pick (18A). Featured Picture, used in the species' Wikipedia article. The plain background is ideal for the strip."
+    },
+    {
+      "week": 19,
+      "comparison": "Cedar Waxwing",
+      "commonsTitle": "File:20240629 cedar waxwing gay city PD203316 13.jpg",
+      "file": "images/birds/cedar-waxwing.jpg",
+      "altText": "Three Cedar Waxwings perched among green vine leaves, their smooth crests and black eye masks visible.",
+      "why": "Author's pick (19E). Quality Image. Busier than the other cards — three birds and heavy foliage."
+    },
+    {
+      "week": 20,
+      "comparison": "Eastern Bluebird",
+      "commonsTitle": "File:Eastern Bluebird (2022).jpg",
+      "file": "images/birds/eastern-bluebird.jpg",
+      "altText": "An Eastern Bluebird perched on a thin branch among new spring leaves, its blue back and rust-coloured breast turned to the camera.",
+      "why": "Author's pick (20F), taken under protest — the whole week 20 shortlist is weak. See the note in the survey; nothing in the Sialia sialis pool carried a Featured or Quality badge."
+    },
+    {
+      "week": 21,
+      "comparison": "American Kestrel",
+      "commonsTitle": "File:American kestrel (Falco sparverius sparveroides) female white morph.JPG",
+      "file": "images/birds/american-kestrel.jpg",
+      "altText": "A pale female American Kestrel perched on a bare twig, finely streaked below, with the dark facial markings of the species.",
+      "why": "Author's pick (21C). Quality and Valued image — but it is the Cuban subspecies in its white morph, which looks little like the kestrel a North American reader pictures. Flagged for reconsideration."
+    },
+    {
+      "week": 22,
+      "comparison": "Blue Jay",
+      "commonsTitle": "File:Cyanocitta cristata cyanotephra, Lubbock, Texas 2.jpg",
+      "file": "images/birds/blue-jay.jpg",
+      "altText": "A Blue Jay in sharp profile on a branch, its barred blue wing, white face and black neck ring all clear.",
+      "why": "Author's pick (22E). A western subspecies but it reads as the textbook Blue Jay, and the wide 2:1 frame suits the strip crop better than the taller candidates."
     }
   ],
   "notSourced": [

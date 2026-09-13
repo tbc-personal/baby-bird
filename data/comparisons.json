@@ -608,11 +608,17 @@
       "wikipediaTitle": "Ruby-throated_hummingbird",
       "allAboutBirdsSlug": "Ruby-throated_Hummingbird",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Ruby-throated Hummingbird hovering beside a spray of pale yellow flowers, its wings blurred with motion.",
+        "file": "images/birds/ruby-throated-hummingbird.jpg",
+        "author": "Paul Danese",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204970.jpg"
       },
       "facts": [
         {
@@ -652,11 +658,17 @@
       "wikipediaTitle": "Ruby-crowned_kinglet",
       "allAboutBirdsSlug": "Ruby-crowned_Kinglet",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Ruby-crowned Kinglet perched on a thin bare twig, its olive back and white wing bar lit from the side.",
+        "file": "images/birds/ruby-crowned-kinglet.jpg",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_(14077).jpg"
       },
       "facts": [
         {
@@ -697,11 +709,17 @@
       "wikipediaTitle": "Black-capped_chickadee",
       "allAboutBirdsSlug": "Black-capped_Chickadee",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Black-capped Chickadee perched among tall yellow catkins, with an American Goldfinch lower in the frame.",
+        "file": "images/birds/black-capped-chickadee.jpg",
+        "author": "Paul Danese",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg"
       },
       "facts": [
         {
@@ -742,11 +760,17 @@
       "wikipediaTitle": "Carolina_wren",
       "allAboutBirdsSlug": "Carolina_Wren",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Carolina Wren on a bare branch with its tail cocked upward, the white stripe over its eye clearly marked.",
+        "file": "images/birds/carolina-wren.jpg",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carolina_wren_(14391).jpg"
       },
       "facts": [
         {
@@ -787,11 +811,17 @@
       "wikipediaTitle": "Tufted_titmouse",
       "allAboutBirdsSlug": "Tufted_Titmouse",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
+        "file": "images/birds/tufted-titmouse.jpg",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tufted_titmouse_in_Prospect_Park_(53493).jpg"
       },
       "facts": [
         {
@@ -831,11 +861,17 @@
       "wikipediaTitle": "Cedar_waxwing",
       "allAboutBirdsSlug": "Cedar_Waxwing",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "Three Cedar Waxwings perched among green vine leaves, their smooth crests and black eye masks visible.",
+        "file": "images/birds/cedar-waxwing.jpg",
+        "author": "Paul Danese",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_13.jpg"
       },
       "facts": [
         {
@@ -875,11 +911,17 @@
       "wikipediaTitle": "Eastern_bluebird",
       "allAboutBirdsSlug": "Eastern_Bluebird",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "An Eastern Bluebird perched on a thin branch among new spring leaves, its blue back and rust-coloured breast turned to the camera.",
+        "file": "images/birds/eastern-bluebird.jpg",
+        "author": "Wildreturn",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(2022).jpg"
       },
       "facts": [
         {
@@ -920,11 +962,17 @@
       "wikipediaTitle": "American_kestrel",
       "allAboutBirdsSlug": "American_Kestrel",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A pale female American Kestrel perched on a bare twig, finely streaked below, with the dark facial markings of the species.",
+        "file": "images/birds/american-kestrel.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_female_white_morph.JPG"
       },
       "facts": [
         {
@@ -965,11 +1013,17 @@
       "wikipediaTitle": "Blue_jay",
       "allAboutBirdsSlug": "Blue_Jay",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Blue Jay in sharp profile on a branch, its barred blue wing, white face and black neck ring all clear.",
+        "file": "images/birds/blue-jay.jpg",
+        "author": "catherine_g",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cyanocitta_cristata_cyanotephra,_Lubbock,_Texas_2.jpg"
       },
       "facts": [
         {
