@@ -158,6 +158,28 @@ interface FileInfo {
   author: string | null;
   description: string | null;
   categories: string[];
+  /** Where else on Wikimedia this file is used. Filled in by `globalUsage`. */
+  usage?: FileUsage;
+}
+
+/**
+ * How the Wikimedia projects themselves use a file.
+ *
+ * This is the only quality signal that works on an ordinary photograph. Most
+ * Commons files carry no Featured/Quality/Valued badge, so scoring on badges and
+ * pixel dimensions left 15 of the 29 bird weeks with a shortlist that was an
+ * arbitrary six out of a hundred-odd equally-scored files. A file that editors
+ * put in the species' own encyclopaedia article is one the community has already
+ * judged to be a good, representative photograph of that bird — which is exactly
+ * the judgement this script otherwise cannot make.
+ */
+interface FileUsage {
+  /** Total uses across all Wikimedia wikis. */
+  count: number;
+  /** Used in an article (namespace 0) on the English Wikipedia. */
+  inEnglishArticle: boolean;
+  /** Used in the species' own English Wikipedia article. */
+  inSpeciesArticle: boolean;
 }
 
 async function fileInfo(titles: string[], refresh: boolean): Promise<FileInfo[]> {
@@ -213,6 +235,124 @@ async function fileInfo(titles: string[], refresh: boolean): Promise<FileInfo[]>
   return out;
 }
 
+/**
+ * Read global usage for a batch of files.
+ *
+ * Deliberately a separate query from `fileInfo` rather than another `prop` on
+ * it: adding a property changes that request's URL, which would invalidate every
+ * cached imageinfo response and force the whole survey to be re-crawled against
+ * the rate limit. This way the existing cache stays good and only the usage data
+ * is new.
+ */
+async function globalUsage(
+  titles: string[],
+  speciesArticle: string | null,
+  refresh: boolean,
+): Promise<Map<string, FileUsage>> {
+  const out = new Map<string, FileUsage>();
+  // Wikipedia titles use underscores in some responses and spaces in others;
+  // globalusage returns "Blue_jay" while the data file may hold either. Compare
+  // both sides normalised, or the strongest signal here silently never fires.
+  const norm = (t: string) => t.replace(/_/g, ' ').trim().toLowerCase();
+  const wanted = speciesArticle ? norm(speciesArticle) : null;
+
+  for (let i = 0; i < titles.length; i += 50) {
+    const batch = titles.slice(i, i + 50);
+    let cont: string | undefined;
+    do {
+      const page = (await api(
+        {
+          action: 'query',
+          titles: batch.join('|'),
+          prop: 'globalusage',
+          guprop: 'namespace',
+          gulimit: '500',
+          ...(cont ? { gucontinue: cont } : {}),
+        },
+        refresh,
+      )) as {
+        query?: {
+          pages?: {
+            title: string;
+            globalusage?: { wiki: string; title: string; ns?: string | number }[];
+          }[];
+        };
+        continue?: { gucontinue?: string };
+      };
+      for (const p of page.query?.pages ?? []) {
+        const seen = out.get(p.title) ?? {
+          count: 0,
+          inEnglishArticle: false,
+          inSpeciesArticle: false,
+        };
+        for (const use of p.globalusage ?? []) {
+          seen.count++;
+          const article = use.wiki === 'en.wikipedia.org' && String(use.ns ?? '0') === '0';
+          if (article) {
+            seen.inEnglishArticle = true;
+            if (wanted && norm(use.title) === wanted) seen.inSpeciesArticle = true;
+          }
+        }
+        out.set(p.title, seen);
+      }
+      cont = page.continue?.gucontinue;
+    } while (cont);
+  }
+  return out;
+}
+
+/**
+ * The files illustrating the species' own English Wikipedia article.
+ *
+ * Scoring on global usage only helps if the community's chosen photograph is in
+ * the candidate pool to begin with, and often it is not: the pool comes from the
+ * Commons species category, and a lead image frequently sits in a subcategory
+ * this script skips for bird weeks. So ask Wikipedia directly what it uses.
+ */
+async function articleImages(
+  wikipediaTitle: string | null,
+  refresh: boolean,
+): Promise<string[]> {
+  if (!wikipediaTitle) return [];
+  const url = `https://en.wikipedia.org/w/api.php?${new URLSearchParams({
+    format: 'json',
+    formatversion: '2',
+    action: 'query',
+    titles: wikipediaTitle.replace(/_/g, ' '),
+    prop: 'images',
+    imlimit: '200',
+  })}`;
+  const key = resolve(CACHE, `${createHash('sha1').update(url).digest('hex')}.json`);
+  let body: string | null = null;
+  if (!refresh && existsSync(key)) {
+    body = readFileSync(key, 'utf8');
+  } else {
+    for (let i = 0; i < 6 && body === null; i++) {
+      try {
+        const res = await fetch(url, { headers: { 'user-agent': UA } });
+        const text = await res.text();
+        if (res.ok && text.trimStart().startsWith('{')) {
+          mkdirSync(CACHE, { recursive: true });
+          writeFileSync(key, text);
+          body = text;
+          await sleep(1100);
+          break;
+        }
+      } catch {
+        /* fall through to the backoff */
+      }
+      await sleep(Math.min(2500 * 2 ** i, 60_000));
+    }
+  }
+  if (body === null) return [];
+  const parsed = JSON.parse(body) as {
+    query?: { pages?: { images?: { title: string }[] }[] };
+  };
+  return (parsed.query?.pages?.[0]?.images ?? [])
+    .map((i) => i.title)
+    .filter((t) => /\.(jpe?g|png)$/i.test(t));
+}
+
 // ------------------------------------------------------------------- scoring
 
 interface Scored extends FileInfo {
@@ -257,6 +397,23 @@ function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
   }
 
   points += Math.min(file.width, 5000) / 250;
+
+  // Wikimedia's own use of the file. Weighted above every other signal here,
+  // because it is the only one that reflects a person looking at the picture.
+  const usage = file.usage;
+  if (usage?.inSpeciesArticle) {
+    points += 110;
+    notes.push("in the species' Wikipedia article");
+  } else if (usage?.inEnglishArticle) {
+    points += 55;
+    notes.push('used in an English Wikipedia article');
+  }
+  if (usage?.count) {
+    points += Math.min(usage.count, 20) * 3;
+    if (!usage.inEnglishArticle) {
+      notes.push(`used on ${usage.count} Wikimedia page${usage.count === 1 ? '' : 's'}`);
+    }
+  }
 
   if (kind === 'bird' && CAPTIVE.test(haystack)) {
     points -= 55;
@@ -338,6 +495,7 @@ const data = raw as {
     kind: string | null;
     comparison: string | null;
     scientificName: string | null;
+    wikipediaTitle: string | null;
     image: { provider?: string | null; file?: string | null } | null;
   }[];
 };
@@ -438,9 +596,14 @@ for (const week of weeks) {
       }
     }
 
-    titles = [...new Set(titles)].slice(0, MAX_CANDIDATES);
+    // Put Wikipedia's own choices at the front, where the candidate cap cannot
+    // trim them away.
+    const fromArticle = await articleImages(week.wikipediaTitle, refresh);
+    titles = [...new Set([...fromArticle, ...titles])].slice(0, MAX_CANDIDATES);
 
     const files = await fileInfo(titles, refresh);
+    const usage = await globalUsage(titles, week.wikipediaTitle, refresh);
+    for (const file of files) file.usage = usage.get(file.title);
     const rejected: Record<string, number> = {};
     const kept: Scored[] = [];
     for (const file of files) {

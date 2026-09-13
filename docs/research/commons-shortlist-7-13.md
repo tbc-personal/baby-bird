@@ -19,7 +19,7 @@ _Troglodytes aedon_ · [Category:Troglodytes aedon](https://commons.wikimedia.or
 
 ![House Wren egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/House_wren_in_JBWR_%2850039%29.jpg/500px-House_wren_in_JBWR_%2850039%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[House wren in JBWR (50039).jpg](<https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50039).jpg>) · 2869×2418 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, nest, but the caption never mentions an egg
+[House wren in JBWR (50039).jpg](<https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50039).jpg>) · 2869×2418 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used in an English Wikipedia article, nest, but the caption never mentions an egg
 
 > House wren peeks out of its nest box in Jamaica Bay Wildlife Refuge
 
@@ -41,19 +41,19 @@ _Troglodytes aedon_ · [Category:Troglodytes aedon](https://commons.wikimedia.or
 
 ### 7D
 
-![House Wren egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/House_wren_in_JBWR_%2850041%29.jpg/500px-House_wren_in_JBWR_%2850041%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![House Wren egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/House-wren-7a.jpg/500px-House-wren-7a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[House-wren-7a.jpg](https://commons.wikimedia.org/wiki/File:House-wren-7a.jpg) · 1152×739 · CC BY-SA 3.0 · William H. Majoros · used on 1 Wikimedia page, nest, but the caption never mentions an egg
+
+> House wren emerging from nest box
+
+### 7E
+
+![House Wren egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/House_wren_in_JBWR_%2850041%29.jpg/500px-House_wren_in_JBWR_%2850041%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [House wren in JBWR (50041).jpg](<https://commons.wikimedia.org/wiki/File:House_wren_in_JBWR_(50041).jpg>) · 1797×1320 · CC BY-SA 4.0 · Rhododendrites · nest, but the caption never mentions an egg
 
 > House wren atop its nest box in Jamaica Bay Wildlife Refuge
-
-### 7E
-
-![House Wren egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/House-wren-7a.jpg/500px-House-wren-7a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[House-wren-7a.jpg](https://commons.wikimedia.org/wiki/File:House-wren-7a.jpg) · 1152×739 · CC BY-SA 3.0 · William H. Majoros · nest, but the caption never mentions an egg
-
-> House wren emerging from nest box
 
 ### 7F
 
@@ -65,59 +65,59 @@ _Troglodytes aedon_ · [Category:Troglodytes aedon](https://commons.wikimedia.or
 
 ## Week 8 — Barn Swallow egg
 
-_Hirundo rustica_ · [Category:Hirundo rustica](https://commons.wikimedia.org/wiki/Category%3AHirundo%20rustica) · 144 files examined, 6 shortlisted
+_Hirundo rustica_ · [Category:Hirundo rustica](https://commons.wikimedia.org/wiki/Category%3AHirundo%20rustica) · 156 files examined, 6 shortlisted
 
 ### 8A
 
-![Barn Swallow egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Draaien_zwaluw_.JPG/500px-Draaien_zwaluw_.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barn Swallow egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Hirundo_rustica_MHNT.jpg/500px-Hirundo_rustica_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Hirundo rustica MHNT.jpg](https://commons.wikimedia.org/wiki/File:Hirundo_rustica_MHNT.jpg) · 4543×3161 · CC BY-SA 4.0 · Didier Descouens · valued image, in the species' Wikipedia article, egg, probably a specimen
+
+> Egg of Barn Swallow . Collection of Jacques Perrin de Brichambaut.
+
+### 8B
+
+![Barn Swallow egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Swallow_August_2013-2.jpg/500px-Swallow_August_2013-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Swallow August 2013-2.jpg](https://commons.wikimedia.org/wiki/File:Swallow_August_2013-2.jpg) · 2169×1413 · CC BY-SA 3.0 · Alvesgaspar · featured picture, in the species' Wikipedia article, nest, but the caption never mentions an egg
+
+> Juvenile Barn Swallows ( Hirundo rustica ) in the nest. Porto Covo, Portugal
+
+### 8C
+
+![Barn Swallow egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Nest41.JPG/500px-Nest41.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Nest41.JPG](https://commons.wikimedia.org/wiki/File:Nest41.JPG) · 2048×1536 · Public domain · Tambe at English Wikipedia · used on 18 Wikimedia pages, nest with a clutch
+
+> This is a picture taken by me.
+
+### 8D
+
+![Barn Swallow egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg/500px-Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Hirundo rustica gutturalis nest and 4 eggs.jpg](https://commons.wikimedia.org/wiki/File:Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg) · 5184×3456 · CC BY-SA 4.0 · Alpsdake · used on 1 Wikimedia page, nest with a clutch
+
+> Barn Swallow ( Hirundo rustica gutturalis ), nest with 4 eggs in Aichi Prefecture, Japan.
+
+### 8E
+
+![Barn Swallow egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Draaien_zwaluw_.JPG/500px-Draaien_zwaluw_.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Draaien zwaluw .JPG](https://commons.wikimedia.org/wiki/File:Draaien_zwaluw_.JPG) · 5008×3058 · CC BY-SA 4.0 · Peter van der Sluijs · nest with a clutch
 
 > zwaluw
 
-### 8B
+### 8F
 
-![Barn Swallow egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg/500px-Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Hirundo rustica gutturalis nest and 4 eggs.jpg](https://commons.wikimedia.org/wiki/File:Hirundo_rustica_gutturalis_nest_and_4_eggs.jpg) · 5184×3456 · CC BY-SA 4.0 · Alpsdake · nest with a clutch
-
-> Barn Swallow ( Hirundo rustica gutturalis ), nest with 4 eggs in Aichi Prefecture, Japan.
-
-### 8C
-
-![Barn Swallow egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Snel_uit_de_hoek_zaluw.JPG/500px-Snel_uit_de_hoek_zaluw.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barn Swallow egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Snel_uit_de_hoek_zaluw.JPG/500px-Snel_uit_de_hoek_zaluw.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Snel uit de hoek zaluw.JPG](https://commons.wikimedia.org/wiki/File:Snel_uit_de_hoek_zaluw.JPG) · 4993×3329 · CC BY-SA 4.0 · Peter van der Sluijs · nest with a clutch
 
 > zwaluw
 
-### 8D
-
-![Barn Swallow egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Hirundo_rustica_gutturalis_%282_chicks_and_3_eggs_in_nest%29.jpg/500px-Hirundo_rustica_gutturalis_%282_chicks_and_3_eggs_in_nest%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Hirundo rustica gutturalis (2 chicks and 3 eggs in nest).jpg](<https://commons.wikimedia.org/wiki/File:Hirundo_rustica_gutturalis_(2_chicks_and_3_eggs_in_nest).jpg>) · 6000×4000 · CC BY-SA 4.0 · Alpsdake · nest with a clutch
-
-> 2 chicks and 3 eggs in nest of Hirundo rustica gutturalis in Japan.
-
-### 8E
-
-![Barn Swallow egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Hirundo_rustica_MHNT.jpg/500px-Hirundo_rustica_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Hirundo rustica MHNT.jpg](https://commons.wikimedia.org/wiki/File:Hirundo_rustica_MHNT.jpg) · 4543×3161 · CC BY-SA 4.0 · Didier Descouens · valued image, egg, probably a specimen
-
-> Egg of Barn Swallow . Collection of Jacques Perrin de Brichambaut.
-
-### 8F
-
-![Barn Swallow egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Die_zweiten_f%C3%BCnf_Rauschschwalben_2013.JPG/500px-Die_zweiten_f%C3%BCnf_Rauschschwalben_2013.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Die zweiten fünf Rauschschwalben 2013.JPG](https://commons.wikimedia.org/wiki/File:Die_zweiten_f%C3%BCnf_Rauschschwalben_2013.JPG) · 4608×3456 · CC BY-SA 3.0 · Zeitblick · nest with a clutch
-
-> Hirundo rustica eggs
-
 ## Week 9 — Wood Thrush egg
 
-_Hylocichla mustelina_ · [Category:Hylocichla mustelina](https://commons.wikimedia.org/wiki/Category%3AHylocichla%20mustelina) · 79 files examined, 1 shortlisted
+_Hylocichla mustelina_ · [Category:Hylocichla mustelina](https://commons.wikimedia.org/wiki/Category%3AHylocichla%20mustelina) · 82 files examined, 1 shortlisted
 
 ### 9A
 
@@ -129,99 +129,99 @@ _Hylocichla mustelina_ · [Category:Hylocichla mustelina](https://commons.wikime
 
 ## Week 10 — American Robin egg
 
-_Turdus migratorius_ · [Category:Turdus migratorius](https://commons.wikimedia.org/wiki/Category%3ATurdus%20migratorius) · 109 files examined, 6 shortlisted
+_Turdus migratorius_ · [Category:Turdus migratorius](https://commons.wikimedia.org/wiki/Category%3ATurdus%20migratorius) · 121 files examined, 6 shortlisted
 
 ### 10A
 
-![American Robin egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg/500px-Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Robin%27s_Nest_-_Charlotte_NC.jpg/500px-Robin%27s_Nest_-_Charlotte_NC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Turdus migratorius MHNT.ZOO.2010.11.189.14.jpg](https://commons.wikimedia.org/wiki/File:Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg) · 2362×2362 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, egg, probably a specimen
+[Robin's Nest - Charlotte NC.jpg](https://commons.wikimedia.org/wiki/File:Robin%27s_Nest_-_Charlotte_NC.jpg) · 3888×2592 · CC BY-SA 3.0 · Dmarquard · in the species' Wikipedia article, nest with a clutch
 
-> Eggs of American robin ; collection of Jacques Perrin de Brichambaut.
+> A newly hatched American robin among unhatched eggs in a nest in Charlotte , North Carolina .
 
 ### 10B
 
-![American Robin egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg/500px-Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Robin Turdus migratorius Egg in Nest 8990 03.jpg](https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_03.jpg) · 6000×4000 · CC BY 4.0 · ImagePerson · nest with a clutch
+[Turdus migratorius MHNT.ZOO.2010.11.189.14.jpg](https://commons.wikimedia.org/wiki/File:Turdus_migratorius_MHNT.ZOO.2010.11.189.14.jpg) · 2362×2362 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, used on 25 Wikimedia pages, egg, probably a specimen
 
-> Robin's Egg in Nest
+> Eggs of American robin ; collection of Jacques Perrin de Brichambaut.
 
 ### 10C
 
-![American Robin egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Robin_eggs_flying_in_3_weeks_-_by_Volkan_Yuksel.jpg/500px-Robin_eggs_flying_in_3_weeks_-_by_Volkan_Yuksel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Robin Turdus migratorius Egg in Nest 8990 01.jpg](https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_01.jpg) · 6000×4000 · CC BY 4.0 · ImagePerson · nest with a clutch
+[Robin eggs flying in 3 weeks - by Volkan Yuksel.jpg](https://commons.wikimedia.org/wiki/File:Robin_eggs_flying_in_3_weeks_-_by_Volkan_Yuksel.jpg) · 2048×2656 · CC BY-SA 3.0 · Volkan Yuksel · portrait — crops badly in the strip, in the species' Wikipedia article, nest with a clutch
 
-> Robin's Egg in Nest
+> Progress of robin eggs and flying in 3 weeks - by Volkan Yuksel
 
 ### 10D
 
-![American Robin egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg/500px-Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/American_Robin_nest.jpg/500px-American_Robin_nest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Robin Turdus migratorius Egg in Nest 8990 02.jpg](https://commons.wikimedia.org/wiki/File:Robin_Turdus_migratorius_Egg_in_Nest_8990_02.jpg) · 6000×4000 · CC BY 4.0 · ImagePerson · nest with a clutch
+[American Robin nest.jpg](https://commons.wikimedia.org/wiki/File:American_Robin_nest.jpg) · 2048×1536 · Public domain · ZeWrestler at English Wikipedia · used on 15 Wikimedia pages, nest with a clutch
 
-> Robin's Egg in Nest
+> Single egg in the nest of a American robin . Taken July 14 , 2005 in New Jersey with a Canon digital camera .
 
 ### 10E
 
-![American Robin egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Robin_Egg_on_Ground.jpg/500px-Robin_Egg_on_Ground.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/American_Robin_nest_and_eggs.JPG/500px-American_Robin_nest_and_eggs.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Robin Egg on Ground.jpg](https://commons.wikimedia.org/wiki/File:Robin_Egg_on_Ground.jpg) · 5152×3864 · CC BY-SA 4.0 · ChasingFeathers · nest with a clutch
+[American Robin nest and eggs.JPG](https://commons.wikimedia.org/wiki/File:American_Robin_nest_and_eggs.JPG) · 2048×1536 · CC BY-SA 4.0 · Dima Sergiyenko; Please attribute this image as the work of " DiscoverWithDima ." · used on 14 Wikimedia pages, nest with a clutch
 
-> This file represents a picture that I took of an abandoned robin's egg.
+> Three blue American Robin eggs in a nest. Taken in Munster, Indiana .
 
 ### 10F
 
-![American Robin egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Turdus_migratorius_egg_in_nest_IMG_2416.jpg/500px-Turdus_migratorius_egg_in_nest_IMG_2416.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Robin egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Turdus_migratorius_MWNH_1784.JPG/500px-Turdus_migratorius_MWNH_1784.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Turdus migratorius egg in nest IMG 2416.jpg](https://commons.wikimedia.org/wiki/File:Turdus_migratorius_egg_in_nest_IMG_2416.jpg) · 4752×3168 · CC BY-SA 4.0 · Captain-tucker · nest with a clutch
+[Turdus migratorius MWNH 1784.JPG](https://commons.wikimedia.org/wiki/File:Turdus_migratorius_MWNH_1784.JPG) · 2848×4288 · CC BY-SA 3.0 · Klaus Rassinger und Gerhard Cammerer , Museum Wiesbaden · portrait — crops badly in the strip, in the species' Wikipedia article, egg, probably a specimen
 
-> Turdus migratorius egg in nest.
+> American robin Turdus migratorius , egg, Coll. Museum Wiesbaden
 
 ## Week 11 — Black Tern egg
 
-_Chlidonias niger_ · [Category:Chlidonias niger](https://commons.wikimedia.org/wiki/Category%3AChlidonias%20niger) · 90 files examined, 6 shortlisted
+_Chlidonias niger_ · [Category:Chlidonias niger](https://commons.wikimedia.org/wiki/Category%3AChlidonias%20niger) · 97 files examined, 6 shortlisted
 
 ### 11A
 
 ![Black Tern egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Chlidonias_niger_niger_MHNT.ZOO.2010.11.132.9.jpg/500px-Chlidonias_niger_niger_MHNT.ZOO.2010.11.132.9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Chlidonias niger niger MHNT.ZOO.2010.11.132.9.jpg](https://commons.wikimedia.org/wiki/File:Chlidonias_niger_niger_MHNT.ZOO.2010.11.132.9.jpg) · 4252×2835 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, egg, probably a specimen
+[Chlidonias niger niger MHNT.ZOO.2010.11.132.9.jpg](https://commons.wikimedia.org/wiki/File:Chlidonias_niger_niger_MHNT.ZOO.2010.11.132.9.jpg) · 4252×2835 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, in the species' Wikipedia article, egg, probably a specimen
 
 > Eggs of Eurasian black tern Three specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.
 
 ### 11B
 
-![Black Tern egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Scherenwelle_eieren_2013-05-30_008_%286%29.jpg/500px-Scherenwelle_eieren_2013-05-30_008_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Black Tern egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Chlidonias_niger_MWNH_2170.JPG/500px-Chlidonias_niger_MWNH_2170.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Scherenwelle eieren 2013-05-30 008 (6).jpg](<https://commons.wikimedia.org/wiki/File:Scherenwelle_eieren_2013-05-30_008_(6).jpg>) · 4000×3000 · CC BY-SA 3.0 · JanB46 · nest with a clutch
+[Chlidonias niger MWNH 2170.JPG](https://commons.wikimedia.org/wiki/File:Chlidonias_niger_MWNH_2170.JPG) · 3028×2288 · CC BY-SA 3.0 · Klaus Rassinger und Gerhard Cammerer , Museum Wiesbaden · in the species' Wikipedia article, egg, probably a specimen
 
-> Zwartestern nest met drie eieren op vlotje in dode arm van de IJssel
+> black tern Chlidonias niger , egg, Coll. Museum Wiesbaden , Origin: Emmerich, Lower Rhineland, Germany, 1967, leg. W. Abelmann
 
 ### 11C
 
-![Black Tern egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Black_Tern_nest_%287402341032%29.jpg/500px-Black_Tern_nest_%287402341032%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Black Tern egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Scherenwelle_eieren_2013-05-30_008_%286%29.jpg/500px-Scherenwelle_eieren_2013-05-30_008_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Black Tern nest (7402341032).jpg](<https://commons.wikimedia.org/wiki/File:Black_Tern_nest_(7402341032).jpg>) · 3166×2111 · Public domain · U. S. Fish and Wildlife Service - Northeast Region · nest with a clutch
+[Scherenwelle eieren 2013-05-30 008 (6).jpg](<https://commons.wikimedia.org/wiki/File:Scherenwelle_eieren_2013-05-30_008_(6).jpg>) · 4000×3000 · CC BY-SA 3.0 · JanB46 · used on 3 Wikimedia pages, nest with a clutch
 
-> Black tern nest photographed at Missisquoi National Wildlife Refuge credit: Ken Sturm/USFWS
+> Zwartestern nest met drie eieren op vlotje in dode arm van de IJssel
 
 ### 11D
 
-![Black Tern egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Arctic_tern_nest_with_eggs_-_DPLA_-_b8f4be4781905f8e2e6b02bf9891654b.jpg/500px-Arctic_tern_nest_with_eggs_-_DPLA_-_b8f4be4781905f8e2e6b02bf9891654b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Black Tern egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Black_Tern_nest_%287402341032%29.jpg/500px-Black_Tern_nest_%287402341032%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Black Tern nest (7402341032).jpg](<https://commons.wikimedia.org/wiki/File:Black_Tern_nest_(7402341032).jpg>) · 3166×2111 · Public domain · U. S. Fish and Wildlife Service - Northeast Region · used on 1 Wikimedia page, nest with a clutch
+
+> Black tern nest photographed at Missisquoi National Wildlife Refuge credit: Ken Sturm/USFWS
+
+### 11E
+
+![Black Tern egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Arctic_tern_nest_with_eggs_-_DPLA_-_b8f4be4781905f8e2e6b02bf9891654b.jpg/500px-Arctic_tern_nest_with_eggs_-_DPLA_-_b8f4be4781905f8e2e6b02bf9891654b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Arctic tern nest with eggs - DPLA - b8f4be4781905f8e2e6b02bf9891654b.jpg](https://commons.wikimedia.org/wiki/File:Arctic_tern_nest_with_eggs_-_DPLA_-_b8f4be4781905f8e2e6b02bf9891654b.jpg) · 1500×1000 · CC BY-SA 4.0 · Garst, Warren, 1922-2016, photographer · nest with a clutch
 
 > 35 mm slide; color. Scientific Classification: Kingdom: Animalia; Phylum: Chordata; Class: Aves; Order: Charadriiformes; Family: Laridae; Genus: Sterna; Genus species: Sterna paradisaea. Animal characteristics: Head-Body Length: 36-43 cm; I
-
-### 11E
-
-![Black Tern egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Chlidonias_niger_MWNH_2170.JPG/500px-Chlidonias_niger_MWNH_2170.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Chlidonias niger MWNH 2170.JPG](https://commons.wikimedia.org/wiki/File:Chlidonias_niger_MWNH_2170.JPG) · 3028×2288 · CC BY-SA 3.0 · Klaus Rassinger und Gerhard Cammerer , Museum Wiesbaden · egg, probably a specimen
-
-> black tern Chlidonias niger , egg, Coll. Museum Wiesbaden , Origin: Emmerich, Lower Rhineland, Germany, 1967, leg. W. Abelmann
 
 ### 11F
 
@@ -237,51 +237,51 @@ _Ardea herodias_ · [Category:Ardea herodias](https://commons.wikimedia.org/wiki
 
 ### 12A
 
-![Great Blue Heron egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Heron_Nests_%2827546943540%29.jpg/500px-Heron_Nests_%2827546943540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Blue Heron egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Carp_Ridge_2010-04.JPG/500px-Carp_Ridge_2010-04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Carp Ridge 2010-04.JPG](https://commons.wikimedia.org/wiki/File:Carp_Ridge_2010-04.JPG) · 2592×1728 · CC BY-SA 4.0 · P199 · used in an English Wikipedia article, nest, but the caption never mentions an egg
+
+> Great Blue Heron ( Ardea herodias ) rookery on Carp Ridge, Ottawa, Ontario, Canada
+
+### 12B
+
+![Great Blue Heron egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Heron_Nests_%2827546943540%29.jpg/500px-Heron_Nests_%2827546943540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Heron Nests (27546943540).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546943540).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
 
 > . Birds
 
-### 12B
+### 12C
 
-![Great Blue Heron egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Heron_Nests_%2827723703932%29.jpg/500px-Heron_Nests_%2827723703932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Blue Heron egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Heron_Nests_%2827723703932%29.jpg/500px-Heron_Nests_%2827723703932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Heron Nests (27723703932).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27723703932).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
 
 > Birds
 
-### 12C
+### 12D
 
-![Great Blue Heron egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Heron_Nests_%2827546941230%29.jpg/500px-Heron_Nests_%2827546941230%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Blue Heron egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Heron_Nests_%2827546941230%29.jpg/500px-Heron_Nests_%2827546941230%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Heron Nests (27546941230).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546941230).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
 
 > Birds
 
-### 12D
+### 12E
 
-![Great Blue Heron egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Heron_Nests_%2827723698102%29.jpg/500px-Heron_Nests_%2827723698102%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Blue Heron egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Heron_Nests_%2827723698102%29.jpg/500px-Heron_Nests_%2827723698102%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Heron Nests (27723698102).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27723698102).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
 
 > Birds
 
-### 12E
+### 12F
 
-![Great Blue Heron egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Heron_Nests_%2827546929260%29.jpg/500px-Heron_Nests_%2827546929260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Blue Heron egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Heron_Nests_%2827546929260%29.jpg/500px-Heron_Nests_%2827546929260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Heron Nests (27546929260).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546929260).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
 
 > . Birds
-
-### 12F
-
-![Great Blue Heron egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Heron_Nests_%2827546924170%29.jpg/500px-Heron_Nests_%2827546924170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Heron Nests (27546924170).jpg](<https://commons.wikimedia.org/wiki/File:Heron_Nests_(27546924170).jpg>) · 4608×3456 · CC BY 2.0 · Jennifer C. · nest, but the caption never mentions an egg
-
-> Birds
 
 ## Week 13 — Bald Eagle egg
 
@@ -291,46 +291,46 @@ _Haliaeetus leucocephalus_ · [Category:Haliaeetus leucocephalus](https://common
 
 ![Bald Eagle egg candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg/500px-Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Haliaeetus leucocephalus MHNT.ZOO.2010.11.96.5.jpg](https://commons.wikimedia.org/wiki/File:Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg) · 4252×2840 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, egg, probably a specimen
+[Haliaeetus leucocephalus MHNT.ZOO.2010.11.96.5.jpg](https://commons.wikimedia.org/wiki/File:Haliaeetus_leucocephalus_MHNT.ZOO.2010.11.96.5.jpg) · 4252×2840 · CC BY-SA 4.0 · Roger Culos · quality image, valued image, used on 57 Wikimedia pages, egg, probably a specimen
 
 > Eggs of bald eagle Two specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.
 
 ### 13B
 
-![Bald Eagle egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/First_bald_eagle_egg_of_2019_%2832391378047%29.jpg/500px-First_bald_eagle_egg_of_2019_%2832391378047%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Bald Eagle egg candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Haliaeetus_leucocephalus_MWNH_0839.JPG/500px-Haliaeetus_leucocephalus_MWNH_0839.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[First bald eagle egg of 2019 (32391378047).jpg](<https://commons.wikimedia.org/wiki/File:First_bald_eagle_egg_of_2019_(32391378047).jpg>) · 2047×1115 · Public domain · San Bernardino Nat'l Forest · nest with a clutch
+[Haliaeetus leucocephalus MWNH 0839.JPG](https://commons.wikimedia.org/wiki/File:Haliaeetus_leucocephalus_MWNH_0839.JPG) · 3350×2602 · CC BY-SA 3.0 · Klaus Rassinger und Gerhard Cammerer , Museum Wiesbaden · in the species' Wikipedia article, egg, probably a specimen
 
-> Shortly after it was laid, the parents examine an egg laid at a nest in Big Bear, Calif. on March 6, 2019. This was the first of two eggs laid at this nest, where a webcam has been placed. (Photo Courtesy Friends of Big Bear Valley)
+> Bald eagle Haliaeetus leucocephalus , egg, Coll. Museum Wiesbaden
 
 ### 13C
 
-![Bald Eagle egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/DecorahFirstEgg2014.png/500px-DecorahFirstEgg2014.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Bald Eagle egg candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/First_bald_eagle_egg_of_2019_%2832391378047%29.jpg/500px-First_bald_eagle_egg_of_2019_%2832391378047%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[DecorahFirstEgg2014.png](https://commons.wikimedia.org/wiki/File:DecorahFirstEgg2014.png) · 1009×764 · CC BY-SA 3.0 · Petrarchan47 · nest with a clutch
+[First bald eagle egg of 2019 (32391378047).jpg](<https://commons.wikimedia.org/wiki/File:First_bald_eagle_egg_of_2019_(32391378047).jpg>) · 2047×1115 · Public domain · San Bernardino Nat'l Forest · used in an English Wikipedia article, nest with a clutch
 
-> Bald Eagle in Decorah Iowa sits on her first egg of the season; live-streamed by Raptor Resource Project and Ustream.tv http://www.ustream.tv/decoraheagles
+> Shortly after it was laid, the parents examine an egg laid at a nest in Big Bear, Calif. on March 6, 2019. This was the first of two eggs laid at this nest, where a webcam has been placed. (Photo Courtesy Friends of Big Bear Valley)
 
 ### 13D
 
 ![Bald Eagle egg candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Decorah_Eagles_first_hatch_of_2014_%28D18%29.png/500px-Decorah_Eagles_first_hatch_of_2014_%28D18%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Decorah Eagles first hatch of 2014 (D18).png](<https://commons.wikimedia.org/wiki/File:Decorah_Eagles_first_hatch_of_2014_(D18).png>) · 1385×1080 · CC BY-SA 3.0 · Petrarchan47 · nest with a clutch
+[Decorah Eagles first hatch of 2014 (D18).png](<https://commons.wikimedia.org/wiki/File:Decorah_Eagles_first_hatch_of_2014_(D18).png>) · 1385×1080 · CC BY-SA 3.0 · Petrarchan47 · used in an English Wikipedia article, nest with a clutch
 
 > Decorah Bald Eagles UStream channel shows couples' 18th eaglet hatched on camera
 
 ### 13E
 
-![Bald Eagle egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Haliaeetus_leucocephalus_MWNH_0839.JPG/500px-Haliaeetus_leucocephalus_MWNH_0839.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Bald Eagle egg candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Bald_Eagle_Chick%2C_NPSPhoto%2C_Lori_Oberhofner_%289101506540%29.jpg/500px-Bald_Eagle_Chick%2C_NPSPhoto%2C_Lori_Oberhofner_%289101506540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Haliaeetus leucocephalus MWNH 0839.JPG](https://commons.wikimedia.org/wiki/File:Haliaeetus_leucocephalus_MWNH_0839.JPG) · 3350×2602 · CC BY-SA 3.0 · Klaus Rassinger und Gerhard Cammerer , Museum Wiesbaden · egg, probably a specimen
+[Bald Eagle Chick, NPSPhoto, Lori Oberhofner (9101506540).jpg](<https://commons.wikimedia.org/wiki/File:Bald_Eagle_Chick,_NPSPhoto,_Lori_Oberhofner_(9101506540).jpg>) · 2323×1866 · Public domain · Everglades NPS from Homestead, Florida, United States · in the species' Wikipedia article, nest, but the caption never mentions an egg
 
-> Bald eagle Haliaeetus leucocephalus , egg, Coll. Museum Wiesbaden
+> Bald Eagle Chick, NPSPhoto, Lori Oberhofner
 
 ### 13F
 
-![Bald Eagle egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Eagle%27s_Nest.JPG/500px-The_Eagle%27s_Nest.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Bald Eagle egg candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/EaglesNesting.JPG/500px-EaglesNesting.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[The Eagle's Nest.JPG](https://commons.wikimedia.org/wiki/File:The_Eagle%27s_Nest.JPG) · 2682×2640 · CC BY-SA 3.0 · The High Fin Sperm Whale · quality image, nest, but the caption never mentions an egg
+[EaglesNesting.JPG](https://commons.wikimedia.org/wiki/File:EaglesNesting.JPG) · 3681×2454 · CC BY-SA 3.0 · DashaSalt · used in an English Wikipedia article, nest, but the caption never mentions an egg
 
-> A Bald Eagle Haliaeetus leucocephalus and its nest in a Grand Fir Abies grandis , near the Nicomekl River .
+> Two mature Bald Eagles watching over their nest in Chippewa National Forest, on the shores of Leech Lake
