@@ -53,7 +53,7 @@ const NOT_A_PHOTOGRAPH =
   /\b(plate|lithograph|engrav|etching|drawing|drawn|illustration|painting|painted|watercolou?r|sketch|woodcut|chromolith|print|artwork|diagram|icon|logo|stamp|coin|banknote|cover|book|handbook|manual|birds of|iconograph|nederlandsche|naumann|gould|audubon)\b/i;
 /** Dead, mounted, or otherwise not what a reader should be shown. */
 const NOT_A_LIVE_BIRD =
-  /\b(taxiderm|specimen|skeleton|skull|bone|mount(ed)?|museum|collection|dead|roadkill|carcass|wing detail|feather detail|pellet|dropping|scat|track|footprint|nhmuk|naturalis|zoolog(y|ical) museum)\b/i;
+  /\b(taxiderm|specimen|skeleton|skull|bone|mount(ed)?|museum|collection|dead|roadkill|carcass|wing detail|feather|plumage detail|pellet|dropping|scat|track|footprint|egg tooth|nhmuk|naturalis|zoolog(y|ical) museum)\b/i;
 /** Not the subject: maps, sound, charts. */
 const NOT_THE_SUBJECT =
   /\b(map|distribution|range|sonogram|spectrogram|waveform|chart|graph|sign|signage|plaque|banner|mural|statue|sculpture|carving|decoy|toy|model)\b/i;

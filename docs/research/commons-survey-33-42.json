@@ -1,0 +1,909 @@
+{
+  "generated": "2026-09-13T00:01:38.428Z",
+  "survey": [
+    {
+      "week": 33,
+      "kind": "bird",
+      "comparison": "Green Heron",
+      "scientificName": "Butorides virescens",
+      "category": "Category:Butorides virescens",
+      "pool": 200,
+      "rejected": {
+        "too small": 13,
+        "not a photograph": 50,
+        "licence": 22,
+        "mime image/svg+xml": 1,
+        "not a live bird": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 2DSC 0090.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_2DSC_0090.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Birding_elkhorn_8.6.17_group_2DSC_0090.jpg/500px-Birding_elkhorn_8.6.17_group_2DSC_0090.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 2DSC 0039.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_2DSC_0039.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Birding_elkhorn_8.6.17_group_2DSC_0039.jpg/500px-Birding_elkhorn_8.6.17_group_2DSC_0039.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 1DSC 0977.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0977.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Birding_elkhorn_8.6.17_group_1DSC_0977.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0977.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 1DSC 0971.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0971.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Birding_elkhorn_8.6.17_group_1DSC_0971.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 1DSC 0948.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0948.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Birding_elkhorn_8.6.17_group_1DSC_0948.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0948.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Birding elkhorn 8.6.17 group 1DSC 0817.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0817.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Birding_elkhorn_8.6.17_group_1DSC_0817.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Butorides virescens",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 34,
+      "kind": "bird",
+      "comparison": "Ring-billed Gull",
+      "scientificName": "Larus delawarensis",
+      "category": "Category:Larus delawarensis",
+      "pool": 200,
+      "rejected": {
+        "too small": 1,
+        "not a photograph": 60,
+        "mime image/svg+xml": 1,
+        "licence": 9
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Larus delawarensis-Beach.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Larus_delawarensis-Beach.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Larus_delawarensis-Beach.jpg/500px-Larus_delawarensis-Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4288,
+          "height": 2848,
+          "license": "CC BY-SA 4.0",
+          "author": "Sixflashphoto",
+          "description": "Larus delawarensis on the beach of Delaware State Park, Ohio.",
+          "score": 117,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:2026-02-02 Ring-billed gull in VA.png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026-02-02_Ring-billed_gull_in_VA.png",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/2026-02-02_Ring-billed_gull_in_VA.png/500px-2026-02-02_Ring-billed_gull_in_VA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4161,
+          "height": 3121,
+          "license": "CC BY-SA 4.0",
+          "author": "Satvrnine",
+          "description": "Adult ring-billed gull in flight, showing wing-tip pattern and eponymous black-ringed bill. Photographed in southeastern Virginia by Saturnine (Ethan Ray).",
+          "score": 62,
+          "notes": ["quality image", "reads as captive or in-hand"]
+        },
+        {
+          "commonsTitle": "File:Batch 1 ring-billed gull 14 assateague 11.2019.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_14_assateague_11.2019.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Batch_1_ring-billed_gull_14_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_14_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Larus delawarensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Batch 1 ring-billed gull 13 assateague 11.2019.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_13_assateague_11.2019.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Batch_1_ring-billed_gull_13_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_13_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Larus delawarensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Batch 1 ring-billed gull 12 assateague 11.2019.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_12_assateague_11.2019.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Batch_1_ring-billed_gull_12_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_12_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Larus delawarensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Batch 1 ring-billed gull 11 assateague 11.2019.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_11_assateague_11.2019.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Batch_1_ring-billed_gull_11_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_11_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Larus delawarensis",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 35,
+      "kind": "bird",
+      "comparison": "Red-tailed Hawk",
+      "scientificName": "Buteo jamaicensis",
+      "category": "Category:Buteo jamaicensis",
+      "pool": 200,
+      "rejected": {
+        "too small": 19,
+        "mime application/ogg": 1,
+        "not a photograph": 44,
+        "mime audio/mpeg": 1,
+        "mime image/svg+xml": 1,
+        "mime video/webm": 2,
+        "licence": 13
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Red-tailed hawk (23114).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-tailed_hawk_(23114).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Red-tailed_hawk_%2823114%29.jpg/500px-Red-tailed_hawk_%2823114%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3269,
+          "height": 3354,
+          "license": "CC BY-SA 4.0",
+          "author": "Rhododendrites",
+          "description": "Red-tailed hawk in Carroll Park",
+          "score": 158,
+          "notes": [
+            "featured picture",
+            "quality image",
+            "portrait — crops badly in the strip"
+          ]
+        },
+        {
+          "commonsTitle": "File:Buteo jamaicensis DSC 0992.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_0992.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Buteo_jamaicensis_DSC_0992.jpg/500px-Buteo_jamaicensis_DSC_0992.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Buteo jamaicensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Buteo jamaicensis DSC 0995.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_0995.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Buteo_jamaicensis_DSC_0995.jpg/500px-Buteo_jamaicensis_DSC_0995.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Buteo jamaicensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Neighborhood Red-Tailed Hawk (53414455884).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neighborhood_Red-Tailed_Hawk_(53414455884).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Neighborhood_Red-Tailed_Hawk_%2853414455884%29.jpg/500px-Neighborhood_Red-Tailed_Hawk_%2853414455884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6423,
+          "height": 4282,
+          "license": "CC BY 2.0",
+          "author": "Larry Lamsa",
+          "description": "Taking off",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Buteo jamaicensis DSC 1005.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_1005.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Buteo_jamaicensis_DSC_1005.jpg/500px-Buteo_jamaicensis_DSC_1005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Buteo jamaicensis",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Red-Tailed Hawk (23367515602).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-Tailed_Hawk_(23367515602).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Red-Tailed_Hawk_%2823367515602%29.jpg/500px-Red-Tailed_Hawk_%2823367515602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Red-Tailed Hawk",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 36,
+      "kind": "bird",
+      "comparison": "Wood Duck",
+      "scientificName": "Aix sponsa",
+      "category": "Category:Aix sponsa",
+      "pool": 200,
+      "rejected": {
+        "not the subject": 1,
+        "too small": 10,
+        "not a photograph": 64,
+        "mime video/webm": 4,
+        "mime image/svg+xml": 1,
+        "licence": 34,
+        "no author reported": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:20250804 wood duck keeney cove flip PD203483.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250804_wood_duck_keeney_cove_flip_PD203483.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/20250804_wood_duck_keeney_cove_flip_PD203483.jpg/500px-20250804_wood_duck_keeney_cove_flip_PD203483.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6771,
+          "height": 3809,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Reflected image of Wood Duck. Keeney Cove. Glastonbury, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Diever Feb 2020 - 43.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_43.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Diever_Feb_2020_-_43.jpg/500px-Diever_Feb_2020_-_43.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3888,
+          "license": "CC BY-SA 4.0",
+          "author": "NeoMeesje",
+          "description": "Some birds at a pond in Diever, Drenthe, the Netherlands",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Diever Feb 2020 - 44.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_44.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Diever_Feb_2020_-_44.jpg/500px-Diever_Feb_2020_-_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3888,
+          "license": "CC BY-SA 4.0",
+          "author": "NeoMeesje",
+          "description": "Some birds at a pond in Diever, Drenthe, the Netherlands",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Diever Feb 2020 - 45.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_45.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diever_Feb_2020_-_45.jpg/500px-Diever_Feb_2020_-_45.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3888,
+          "license": "CC BY-SA 4.0",
+          "author": "NeoMeesje",
+          "description": "Some birds at a pond in Diever, Drenthe, the Netherlands",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Duck (51182599856).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Duck_(51182599856).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Duck_%2851182599856%29.jpg/500px-Duck_%2851182599856%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6240,
+          "height": 4160,
+          "license": "CC BY 2.0",
+          "author": "Guilhem Vellut from Annecy, France",
+          "description": "Duck",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Wood duck with young (54607933232).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wood_duck_with_young_(54607933232).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Wood_duck_with_young_%2854607933232%29.jpg/500px-Wood_duck_with_young_%2854607933232%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6200,
+          "height": 4133,
+          "license": "Public domain",
+          "author": "U.S. Fish and Wildlife Service - Midwest Region",
+          "description": "We spotted this wood duck hen with eight young following along on a pond in Hennepin County, Minnesota. Photo by Courtney Celley/USFWS.",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 37,
+      "kind": "bird",
+      "comparison": "Red-shouldered Hawk",
+      "scientificName": "Buteo lineatus",
+      "category": "Category:Buteo lineatus",
+      "pool": 200,
+      "rejected": {
+        "too small": 11,
+        "mime application/ogg": 1,
+        "not a photograph": 53,
+        "licence": 13,
+        "not the subject": 1,
+        "mime audio/mpeg": 1,
+        "mime video/webm": 4,
+        "mime image/svg+xml": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:2026-03-14 Red-shouldered hawk in VA.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026-03-14_Red-shouldered_hawk_in_VA.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/2026-03-14_Red-shouldered_hawk_in_VA.jpg/500px-2026-03-14_Red-shouldered_hawk_in_VA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4090,
+          "height": 3068,
+          "license": "CC BY-SA 4.0",
+          "author": "Satvrnine",
+          "description": "An adult red-shouldered hawk perching. Photographed in eastern Virginia by Saturnine (Ethan Ray).",
+          "score": 116,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Migrating Hawks.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Migrating_Hawks.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Migrating_Hawks.jpg/500px-Migrating_Hawks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "CC BY 4.0",
+          "author": "Cdwarren01",
+          "description": "wildlife is a struggle for survival",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Red-shouldered Hawk (Buteo lineatus) at Black Prong Trailhead, Florida.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(Buteo_lineatus)_at_Black_Prong_Trailhead,_Florida.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Red-shouldered_Hawk_%28Buteo_lineatus%29_at_Black_Prong_Trailhead%2C_Florida.jpg/500px-Red-shouldered_Hawk_%28Buteo_lineatus%29_at_Black_Prong_Trailhead%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3456,
+          "license": "CC BY-SA 4.0",
+          "author": "RobertJBanach",
+          "description": "IMG 8581 FL Black Prong Animals Birds Buteo lineatus Red-shouldered Hawk",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Red-shouldered Hawk (53053977475).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(53053977475).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Red-shouldered_Hawk_%2853053977475%29.jpg/500px-Red-shouldered_Hawk_%2853053977475%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7565,
+          "height": 5403,
+          "license": "CC BY 2.0",
+          "author": "Channel City Camera Club from Santa Barbara, US",
+          "description": "Lake Los Carneros Photo by Sue Cook",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Red-shouldered Hawk (49867008773).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(49867008773).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Red-shouldered_Hawk_%2849867008773%29.jpg/500px-Red-shouldered_Hawk_%2849867008773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "Public domain",
+          "author": "evergladesnps",
+          "description": "NPS Photo by Patty Palma",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Red-shouldered Hawk (54058811122).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(54058811122).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Red-shouldered_Hawk_%2854058811122%29.jpg/500px-Red-shouldered_Hawk_%2854058811122%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6742,
+          "height": 4761,
+          "license": "Public domain",
+          "author": "ShenandoahNPS",
+          "description": "NPS | L Pfeiffer",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 38,
+      "kind": "bird",
+      "comparison": "Barred Owl",
+      "scientificName": "Strix varia",
+      "category": "Category:Strix varia",
+      "pool": 200,
+      "rejected": {
+        "too small": 11,
+        "licence": 9,
+        "not a photograph": 21,
+        "mime image/svg+xml": 1,
+        "not a live bird": 5,
+        "mime video/webm": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Barred owl (19133697084).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(19133697084).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Barred_owl_%2819133697084%29.jpg/500px-Barred_owl_%2819133697084%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5616,
+          "height": 3744,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barred owl (30946247067).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(30946247067).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Barred_owl_%2830946247067%29.jpg/500px-Barred_owl_%2830946247067%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barred owl (27043469572).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(27043469572).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Barred_owl_%2827043469572%29.jpg/500px-Barred_owl_%2827043469572%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barred owl (26534191093).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(26534191093).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Barred_owl_%2826534191093%29.jpg/500px-Barred_owl_%2826534191093%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barred owl (32097951944).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(32097951944).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Barred_owl_%2832097951944%29.jpg/500px-Barred_owl_%2832097951944%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Barred owl (32941532325).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barred_owl_(32941532325).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Barred_owl_%2832941532325%29.jpg/500px-Barred_owl_%2832941532325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Barred owl",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 39,
+      "kind": "bird",
+      "comparison": "Mallard",
+      "scientificName": "Anas platyrhynchos",
+      "category": "Category:Anas platyrhynchos",
+      "pool": 200,
+      "rejected": {
+        "licence": 5,
+        "not a photograph": 62,
+        "mime video/webm": 5,
+        "too small": 2
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200497.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7789,
+          "height": 5193,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200614.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5170,
+          "height": 3447,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200619.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6258,
+          "height": 3520,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200628.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6709,
+          "height": 3774,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200630.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6872,
+          "height": 3865,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:20240614 mallard hen and ducklings wethersfield cove PD200631.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6972,
+          "height": 3922,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA",
+          "score": 120,
+          "notes": ["quality image"]
+        }
+      ]
+    },
+    {
+      "week": 40,
+      "kind": "bird",
+      "comparison": "Snowy Owl",
+      "scientificName": "Bubo scandiacus",
+      "category": "Category:Bubo scandiacus",
+      "pool": 200,
+      "rejected": {
+        "mime image/svg+xml": 2,
+        "not a photograph": 41,
+        "too small": 23,
+        "licence": 21,
+        "not a live bird": 2,
+        "no author reported": 1,
+        "mime image/tiff": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:QP8A2342.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:QP8A2342.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/QP8A2342.jpg/500px-QP8A2342.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY-SA 4.0",
+          "author": "Nixette",
+          "description": "Национальный парк Русская Арктика: северная часть архипелага Новая Земля,Новая Земля, Архангельская область",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Snowy Owl (51358007984).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_Owl_(51358007984).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Snowy_Owl_%2851358007984%29.jpg/500px-Snowy_Owl_%2851358007984%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 8192,
+          "height": 5464,
+          "license": "Public domain",
+          "author": "USFWSAlaska",
+          "description": "Snowy owl takes a pause on the arctic tundra. Credit: USFWS",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Snowy owl (51101442402).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_owl_(51101442402).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Snowy_owl_%2851101442402%29.jpg/500px-Snowy_owl_%2851101442402%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5562,
+          "height": 3573,
+          "license": "Public domain",
+          "author": "USFWSAlaska",
+          "description": "A snowy owl perched on a hummock in the tundra. Photo by Peter Pearsall/USFWS",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Snowy owl (53554877412).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_owl_(53554877412).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Snowy_owl_%2853554877412%29.jpg/500px-Snowy_owl_%2853554877412%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4001,
+          "license": "Public domain",
+          "author": "U.S. Fish and Wildlife Service - Midwest Region",
+          "description": "We spotted this snowy owl perched in a tree in St. Louis County, Minnesota. Photo by Courtney Celley/USFWS.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Snowy owl (53556116894).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_owl_(53556116894).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Snowy_owl_%2853556116894%29.jpg/500px-Snowy_owl_%2853556116894%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6000,
+          "height": 4000,
+          "license": "Public domain",
+          "author": "USFWS Midwest Region from Midwest Region, United States",
+          "description": "We spotted this snowy owl perched in a tree in Minnesota. Photo by Courtney Celley/USFWS.",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Snowy owl (54266584638).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Snowy_owl_(54266584638).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Snowy_owl_%2854266584638%29.jpg/500px-Snowy_owl_%2854266584638%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 7700,
+          "height": 5134,
+          "license": "Public domain",
+          "author": "U.S. Fish and Wildlife Service - Midwest Region",
+          "description": "We spotted this snowy owl perched on a utility pole in St. Louis County, Minnesota. Photo by Courtney Celley/USFWS.",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 41,
+      "kind": "bird",
+      "comparison": "Great Horned Owl",
+      "scientificName": "Bubo virginianus",
+      "category": "Category:Bubo virginianus",
+      "pool": 200,
+      "rejected": {
+        "too small": 6,
+        "not a photograph": 23,
+        "licence": 16,
+        "not a live bird": 4,
+        "mime video/webm": 5
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:20260808 great horned owl cedar hill cemetery PD03701.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg/500px-20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4039,
+          "height": 4039,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Great horned owl. Cedar Hill Cemetery. Hartford, CT USA",
+          "score": 96,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Blackwater nwr 4.17.21 DSC 8835.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8835.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Blackwater_nwr_4.17.21_DSC_8835.jpg/500px-Blackwater_nwr_4.17.21_DSC_8835.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Bubo virginianus",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Blackwater nwr 4.17.21 DSC 9109.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_9109.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Blackwater_nwr_4.17.21_DSC_9109.jpg/500px-Blackwater_nwr_4.17.21_DSC_9109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Bubo virginianus",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Blackwater nwr 4.17.21 DSC 8893.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8893.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Blackwater_nwr_4.17.21_DSC_8893.jpg/500px-Blackwater_nwr_4.17.21_DSC_8893.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Bubo virginianus",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Blackwater nwr 4.17.21 DSC 9069.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_9069.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Blackwater_nwr_4.17.21_DSC_9069.jpg/500px-Blackwater_nwr_4.17.21_DSC_9069.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Bubo virginianus",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Blackwater nwr 4.17.21 DSC 8925.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8925.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Blackwater_nwr_4.17.21_DSC_8925.jpg/500px-Blackwater_nwr_4.17.21_DSC_8925.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5568,
+          "height": 3712,
+          "license": "CC BY 2.0",
+          "author": "lwolfartist",
+          "description": "Bubo virginianus",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    },
+    {
+      "week": 42,
+      "kind": "bird",
+      "comparison": "Osprey",
+      "scientificName": "Pandion haliaetus",
+      "category": "Category:Pandion haliaetus",
+      "pool": 200,
+      "rejected": {
+        "mime video/webm": 2,
+        "too small": 19,
+        "licence": 18,
+        "not a live bird": 4,
+        "not a photograph": 22,
+        "not the subject": 3,
+        "mime application/pdf": 1
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Balbuzard pecheur Lac de Tunis.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Balbuzard_pecheur_Lac_de_Tunis.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Balbuzard_pecheur_Lac_de_Tunis.jpg/500px-Balbuzard_pecheur_Lac_de_Tunis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 4384,
+          "height": 2923,
+          "license": "CC BY-SA 4.0",
+          "author": "El Golli Mohamed",
+          "description": "Balbuzard pêcheur (Pandion haliaetus) au lac sud de Tunis",
+          "score": 273,
+          "notes": ["featured picture", "quality image", "valued image"]
+        },
+        {
+          "commonsTitle": "File:20250724 osprey wethersfield cove201445.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250724_osprey_wethersfield_cove201445.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/20250724_osprey_wethersfield_cove201445.jpg/500px-20250724_osprey_wethersfield_cove201445.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5635,
+          "height": 5635,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Osprey. Wethersfield Cove. Wethersfield, CT USA",
+          "score": 100,
+          "notes": ["quality image"]
+        },
+        {
+          "commonsTitle": "File:Bird osprey in nest Flatty Creek trail Goose Creek State Park Kristie Gianopulos (89).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_(89).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_%2889%29.jpg/500px-Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_%2889%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5184,
+          "height": 3888,
+          "license": "CC BY 2.0",
+          "author": "ncwetlands.org",
+          "description": "Goose Creek State Park",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Osprey (24638852089).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osprey_(24638852089).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Osprey_%2824638852089%29.jpg/500px-Osprey_%2824638852089%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5389,
+          "height": 3592,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Osprey",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Osprey (24913187711).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osprey_(24913187711).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Osprey_%2824913187711%29.jpg/500px-Osprey_%2824913187711%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Osprey",
+          "score": 50,
+          "notes": []
+        },
+        {
+          "commonsTitle": "File:Osprey (24638471119).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osprey_(24638471119).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Osprey_%2824638471119%29.jpg/500px-Osprey_%2824638471119%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5760,
+          "height": 3840,
+          "license": "CC BY 2.0",
+          "author": "Melissa McMasters from Memphis, TN, United States",
+          "description": "Osprey",
+          "score": 50,
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
