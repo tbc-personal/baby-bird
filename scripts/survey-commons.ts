@@ -62,6 +62,8 @@ const CAPTIVE =
   /\b(zoo|aviary|captive|falconry|falconer|cage|caged|rehab|banded|banding|ringed|ringing|in hand|held|handler|glove)\b/i;
 
 const EGG_SUBJECT = /\b(egg|eggs|nest|nests|nesting|clutch|brood)\b/i;
+/** Commons collects a species' badged photographs in their own subcategories. */
+const BADGE_SUBCAT = /\b(quality images?|featured pictures?|valued images?)\b/i;
 
 // ------------------------------------------------------------------ plumbing
 
@@ -549,10 +551,15 @@ for (const week of weeks) {
     // One level of subcategories. Egg weeks live in them ("Nests of ...", "Eggs
     // of ..."); bird weeks are better off without them, since most subcategories
     // are plates, museum skins, or a single locality's photos.
+    // Bird weeks take the badge subcategories as well as the descriptive ones.
+    // Commons files a species' best photographs under "Quality images of <Sci>",
+    // and the earlier filter skipped it: week 20's shortlist came back with no
+    // badged Eastern Bluebird in it at all, while "Category:Quality images of
+    // Sialia sialis" sat there holding eight.
     const wanted = subcats.filter((c) =>
       kind === 'egg'
         ? EGG_SUBJECT.test(c)
-        : /\b(adult|flight|portrait|male|female)\b/i.test(c),
+        : BADGE_SUBCAT.test(c) || /\b(adult|flight|portrait|male|female)\b/i.test(c),
     );
     const fromSubcat: string[] = [];
     for (const sub of wanted) {
@@ -565,7 +572,7 @@ for (const week of weeks) {
     let titles =
       kind === 'egg'
         ? [...fromSubcat, ...direct.filter((t) => EGG_SUBJECT.test(t))]
-        : [...direct, ...fromSubcat];
+        : [...fromSubcat, ...direct];
 
     // Thin species — Wood Thrush and Great Blue Heron were the two that failed the
     // first coverage survey — have no egg subcategory worth the name. Fall back to
