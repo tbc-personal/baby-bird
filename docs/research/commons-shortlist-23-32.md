@@ -17,51 +17,51 @@ _Fratercula arctica_ · [Category:Fratercula arctica](https://commons.wikimedia.
 
 ### 23A
 
-![Atlantic Puffin candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg/500px-02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Puffin_%28Fratercula_arctica%29_with_lesser_sand_eels_%28Ammodytes_tobianus%29.jpg/500px-Puffin_%28Fratercula_arctica%29_with_lesser_sand_eels_%28Ammodytes_tobianus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[02 Atlantic puffin on Treshnish Isles by Romaniviatores.jpg](https://commons.wikimedia.org/wiki/File:02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg) · 6782×4523 · CC BY-SA 4.0 · Romaniviatores · featured picture, quality image
+[Puffin (Fratercula arctica) with lesser sand eels (Ammodytes tobianus).jpg](<https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_with_lesser_sand_eels_(Ammodytes_tobianus).jpg>) · 5472×3648 · CC BY-SA 4.0 · Charles J. Sharp · featured picture, quality image, valued image, in the species' Wikipedia article
 
-> Atlantic puffin on the Treshnish Isles .
+> Puffin ( Fratercula arctica grabae ) on the cliff above The Wick (Y Wig) on Skomer Island, Pembrokeshire, Wales. Approaching its burrow with a mouth full of lesser sand eels ( Ammodytes tobianus )
 
 ### 23B
 
-![Atlantic Puffin candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg/500px-03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg/500px-027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[03 Couple of atlantic puffins on Treshnish Isles by Romaniviatores.jpg](https://commons.wikimedia.org/wiki/File:03_Couple_of_atlantic_puffins_on_Treshnish_Isles_by_Romaniviatores.jpg) · 6786×4526 · CC BY-SA 4.0 · Romaniviatores · quality image
+[027 Atlantic puffin in flight with mouth full of fishes Photo by Giles Laurent.jpg](https://commons.wikimedia.org/wiki/File:027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg) · 4357×2905 · CC BY-SA 4.0 · Giles Laurent · featured picture, quality image, valued image, in the species' Wikipedia article
 
-> Couple of atlantic puffins on Treshnish Isles by Romaniviatores
+> Atlantic puffin ( Fratercula arctica ) in flight with mouth full of fishes at Friðland í Flatey (Iceland). The Atlantic puffin can catch several small fish at once. Its muscular, grooved tongue and inverted serrations enable it to hold its
 
 ### 23C
 
-![Atlantic Puffin candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Puffin_%28Fratercula_arctica%29_in_flight_3.jpg/500px-Puffin_%28Fratercula_arctica%29_in_flight_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Puffin_%28Fratercula_arctica%29.jpg/500px-Puffin_%28Fratercula_arctica%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Puffin (Fratercula arctica) in flight 3.jpg](<https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica)_in_flight_3.jpg>) · 3209×2140 · CC BY-SA 4.0 · Charles J. Sharp · quality image
+[Puffin (Fratercula arctica).jpg](<https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica).jpg>) · 3317×3317 · CC BY-SA 4.0 · Charles J. Sharp · featured picture, quality image, valued image, in the species' Wikipedia article
 
-> Puffin ( Fratercula arctica ) off Skomer Island, Pembrokeshire, Wales
+> Atlantic puffin ( Fratercula arctica grabae ) on the North Coast of Skomer Island, Pembrokeshire, Wales
 
 ### 23D
 
-![Atlantic Puffin candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Atlantic_puffin_%2827946409202%29.jpg/500px-Atlantic_puffin_%2827946409202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg/500px-02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Atlantic puffin (27946409202).jpg](<https://commons.wikimedia.org/wiki/File:Atlantic_puffin_(27946409202).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[02 Atlantic puffin on Treshnish Isles by Romaniviatores.jpg](https://commons.wikimedia.org/wiki/File:02_Atlantic_puffin_on_Treshnish_Isles_by_Romaniviatores.jpg) · 6782×4523 · CC BY-SA 4.0 · Romaniviatores · featured picture, quality image, in the species' Wikipedia article
 
-> Atlantic puffin
+> Atlantic puffin on the Treshnish Isles .
 
 ### 23E
 
-![Atlantic Puffin candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/A_Puffin_Prepares_to_Fly.jpg/500px-A_Puffin_Prepares_to_Fly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Papageitaucher_Fratercula_arctica.jpg/500px-Papageitaucher_Fratercula_arctica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[A Puffin Prepares to Fly.jpg](https://commons.wikimedia.org/wiki/File:A_Puffin_Prepares_to_Fly.jpg) · 5184×3783 · CC BY 2.0 · Charlie From Bristol
+[Papageitaucher Fratercula arctica.jpg](https://commons.wikimedia.org/wiki/File:Papageitaucher_Fratercula_arctica.jpg) · 3702×2468 · CC BY-SA 3.0 · Richard Bartz · featured picture, quality image, used in an English Wikipedia article
 
-> This is one of the many puffins that I saw on Inner Farne Island. I only had one hour on the island and one of my regrets is that I didn't manage to catch the moment when a puffin takes to the air. This is the nearest I got.
+> Puffin ( Fratercula arctica ) at Látrabjarg, Iceland.
 
 ### 23F
 
-![Atlantic Puffin candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg/500px-Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Atlantic Puffin candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Fratercula_arctica_in_flight%2C_Borgarfj%C3%B6r%C3%B0ur_eystri%2C_Iceland%2C_20240717_1136_1678.jpg/500px-Fratercula_arctica_in_flight%2C_Borgarfj%C3%B6r%C3%B0ur_eystri%2C_Iceland%2C_20240717_1136_1678.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Atlantic Puffin Acadia Puffin Tour DSC 4622.jpg](https://commons.wikimedia.org/wiki/File:Atlantic_Puffin_Acadia_Puffin_Tour_DSC_4622.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[Fratercula arctica in flight, Borgarfjörður eystri, Iceland, 20240717 1136 1678.jpg](https://commons.wikimedia.org/wiki/File:Fratercula_arctica_in_flight,_Borgarfj%C3%B6r%C3%B0ur_eystri,_Iceland,_20240717_1136_1678.jpg) · 1936×2656 · CC BY 4.0 · Jakub Hałun · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
 
-> Fratercula arctica
+> Atlantic puffin ( Fratercula arctica ) approaching for landing in a colony in Bakkagerði, Iceland
 
 ## Week 24 — Northern Flicker
 
@@ -69,51 +69,51 @@ _Colaptes auratus_ · [Category:Colaptes auratus](https://commons.wikimedia.org/
 
 ### 24A
 
-![Northern Flicker candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Colaptes_auratus_MP2_NR.jpg/500px-Colaptes_auratus_MP2_NR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Northern Flicker candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flicker_hole_in_CP_%2831848%29.jpg/500px-Flicker_hole_in_CP_%2831848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Colaptes auratus MP2 NR.jpg](https://commons.wikimedia.org/wiki/File:Colaptes_auratus_MP2_NR.jpg) · 3179×2123 · CC BY-SA 3.0 · Cephas · featured picture
-
-> Northern Flicker , Réserve naturelle des Marais-du-Nord , Quebec, Canada.
-
-### 24B
-
-![Northern Flicker candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flicker_hole_in_CP_%2831848%29.jpg/500px-Flicker_hole_in_CP_%2831848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Flicker hole in CP (31848).jpg](<https://commons.wikimedia.org/wiki/File:Flicker_hole_in_CP_(31848).jpg>) · 2420×2431 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip
+[Flicker hole in CP (31848).jpg](<https://commons.wikimedia.org/wiki/File:Flicker_hole_in_CP_(31848).jpg>) · 2420×2431 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
 
 > Male northern flicker, yellow-shafted variety ( Colaptes auratus auratus ) peeking out from its nest in Central Park, New York, United States.
 
+### 24B
+
+![Northern Flicker candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Northern_flicker_%2833729%29.jpg/500px-Northern_flicker_%2833729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Northern flicker (33729).jpg](<https://commons.wikimedia.org/wiki/File:Northern_flicker_(33729).jpg>) · 3622×2931 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used in an English Wikipedia article
+
+> Northern flicker, northern yellow-shafted flickr subspecies, Colaptes auratus luteus , male
+
 ### 24C
 
-![Northern Flicker candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Colaptes_auratus_MP2.jpg/500px-Colaptes_auratus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Northern Flicker candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Colaptes_auratus_deformed_beak_CT.jpg/500px-Colaptes_auratus_deformed_beak_CT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Colaptes auratus MP2.jpg](https://commons.wikimedia.org/wiki/File:Colaptes_auratus_MP2.jpg) · 3179×2123 · CC BY-SA 3.0 · Cephas · quality image
+[Colaptes auratus deformed beak CT.jpg](https://commons.wikimedia.org/wiki/File:Colaptes_auratus_deformed_beak_CT.jpg) · 2866×1911 · CC BY-SA 3.0 · Cephas · featured picture, quality image, used on 8 Wikimedia pages
 
-> Northern Flicker , Réserve naturelle des Marais-du-Nord , Quebec, Canada.
+> Northern Flicker ( Colaptes auratus ) with a deformed beak, Cap Tourmente National Wildlife Area , Quebec, Canada
 
 ### 24D
 
-![Northern Flicker candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flicker_hole_in_CP_%2831838%29.jpg/500px-Flicker_hole_in_CP_%2831838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Northern Flicker candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Colaptes_auratus_MP2_NR.jpg/500px-Colaptes_auratus_MP2_NR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Flicker hole in CP (31838).jpg](<https://commons.wikimedia.org/wiki/File:Flicker_hole_in_CP_(31838).jpg>) · 2430×1997 · CC BY-SA 4.0 · Rhododendrites · quality image
+[Colaptes auratus MP2 NR.jpg](https://commons.wikimedia.org/wiki/File:Colaptes_auratus_MP2_NR.jpg) · 3179×2123 · CC BY-SA 3.0 · Cephas · featured picture, used in an English Wikipedia article
 
-> Northern flicker in its nest in Central Park
+> Northern Flicker , Réserve naturelle des Marais-du-Nord , Quebec, Canada.
 
 ### 24E
 
-![Northern Flicker candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/2020-05-30_Palmer_Park_-_107.jpg/500px-2020-05-30_Palmer_Park_-_107.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Northern Flicker candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Northern_flicker_%28Colaptes_auratus_chrysocaulosus%29_female.JPG/500px-Northern_flicker_%28Colaptes_auratus_chrysocaulosus%29_female.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2020-05-30 Palmer Park - 107.jpg](https://commons.wikimedia.org/wiki/File:2020-05-30_Palmer_Park_-_107.jpg) · 6000×4000 · CC BY 2.0 · mark byzewski
+[Northern flicker (Colaptes auratus chrysocaulosus) female.JPG](<https://commons.wikimedia.org/wiki/File:Northern_flicker_(Colaptes_auratus_chrysocaulosus)_female.JPG>) · 2578×1719 · CC BY-SA 4.0 · Charles J. Sharp · valued image, in the species' Wikipedia article
 
-> Sunrise in Palmer Park. Colorado Springs, Colorado.
+> Northern flicker ( Colaptes auratus chrysocaulosus ) female, Cuba
 
 ### 24F
 
-![Northern Flicker candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/2020-05-30_Palmer_Park_-_106.jpg/500px-2020-05-30_Palmer_Park_-_106.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Northern Flicker candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Colaptes_auratus_mexicanoides_84221588.jpg/500px-Colaptes_auratus_mexicanoides_84221588.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2020-05-30 Palmer Park - 106.jpg](https://commons.wikimedia.org/wiki/File:2020-05-30_Palmer_Park_-_106.jpg) · 6000×4000 · CC BY 2.0 · mark byzewski
+[Colaptes auratus mexicanoides 84221588.jpg](https://commons.wikimedia.org/wiki/File:Colaptes_auratus_mexicanoides_84221588.jpg) · 2048×1638 · CC BY-SA 4.0 · Grete Pasch · in the species' Wikipedia article
 
-> Sunrise in Palmer Park. Colorado Springs, Colorado.
+> Guatemalan Flicker ( Colaptes auratus mexicanoides )
 
 ## Week 25 — Belted Kingfisher
 
@@ -121,51 +121,51 @@ _Megaceryle alcyon_ · [Category:Megaceryle alcyon](https://commons.wikimedia.or
 
 ### 25A
 
-![Belted Kingfisher candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg/500px-Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Megaceryle_alcyon_femelle.jpg/500px-Megaceryle_alcyon_femelle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted Kingfisher - Flickr - GregTheBusker.jpg](https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_-_Flickr_-_GregTheBusker.jpg) · 5184×3456 · CC BY 2.0 · Greg Schechter from San Francisco, USA
+[Megaceryle alcyon femelle.jpg](https://commons.wikimedia.org/wiki/File:Megaceryle_alcyon_femelle.jpg) · 4800×3600 · CC BY 2.0 · mikebaird · in the species' Wikipedia article
 
-> Belted Kingfisher
+> Female Belted Kingfisher Megaceryle alcyon , Morro Bay, California, USA.
 
 ### 25B
 
-![Belted Kingfisher candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Belted_kingfisher_1.jpg/500px-Belted_kingfisher_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/BeltedKingfisherJG_Male.jpg/500px-BeltedKingfisherJG_Male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted kingfisher 1.jpg](https://commons.wikimedia.org/wiki/File:Belted_kingfisher_1.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[BeltedKingfisherJG Male.jpg](https://commons.wikimedia.org/wiki/File:BeltedKingfisherJG_Male.jpg) · 3655×2742 · CC BY-SA 4.0 · JeffreyGammon · in the species' Wikipedia article
 
-> Megaceryle alcyon
+> A Belted Kingfisher perched atop a wooden branch at Lake Apopka, Florida.
 
 ### 25C
 
-![Belted Kingfisher candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Belted_kingfisher_10.jpg/500px-Belted_kingfisher_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Belted_Kingfisher_with_prey.jpg/500px-Belted_Kingfisher_with_prey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted kingfisher 10.jpg](https://commons.wikimedia.org/wiki/File:Belted_kingfisher_10.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Belted Kingfisher with prey.jpg](https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_with_prey.jpg) · 1023×837 · CC BY 2.0 · Teddy Llovet · in the species' Wikipedia article
 
-> Megaceryle alcyon
+> Belted Kingfisher (female) with a fish in its beak
 
 ### 25D
 
-![Belted Kingfisher candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Belted_kingfisher_11.jpg/500px-Belted_kingfisher_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Belted_Kingfisher_-_Ceryle_alcyon%2C_Big_Cypress_National_Preserve%2C_Ochopee%2C_Florida.jpg/500px-Belted_Kingfisher_-_Ceryle_alcyon%2C_Big_Cypress_National_Preserve%2C_Ochopee%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted kingfisher 11.jpg](https://commons.wikimedia.org/wiki/File:Belted_kingfisher_11.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Belted Kingfisher - Ceryle alcyon, Big Cypress National Preserve, Ochopee, Florida.jpg](https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_-_Ceryle_alcyon,_Big_Cypress_National_Preserve,_Ochopee,_Florida.jpg) · 4752×3168 · CC BY 2.0 · Judy Gallagher · used in an English Wikipedia article
 
-> Megaceryle alcyon
+> Belted Kingfisher - Ceryle alcyon, Big Cypress National Preserve, Ochopee, Florida.
 
 ### 25E
 
-![Belted Kingfisher candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Belted_kingfisher_12.jpg/500px-Belted_kingfisher_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Belted_Kingfisher_-_Megaceryle_alcyon%2C_Big_Cypress_National_Preserve%2C_Ochopee%2C_Florida%2C_December_10%2C_2023.jpg/500px-Belted_Kingfisher_-_Megaceryle_alcyon%2C_Big_Cypress_National_Preserve%2C_Ochopee%2C_Florida%2C_December_10%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted kingfisher 12.jpg](https://commons.wikimedia.org/wiki/File:Belted_kingfisher_12.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Belted Kingfisher - Megaceryle alcyon, Big Cypress National Preserve, Ochopee, Florida, December 10, 2023.jpg](https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_-_Megaceryle_alcyon,_Big_Cypress_National_Preserve,_Ochopee,_Florida,_December_10,_2023.jpg) · 2293×1494 · CC BY 2.0 · Judy Gallagher · used in an English Wikipedia article
 
-> Megaceryle alcyon
+> Belted Kingfisher - Megaceryle alcyon, Big Cypress National Preserve, Ochopee, Florida, December 10, 2023
 
 ### 25F
 
-![Belted Kingfisher candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Belted_kingfisher_13.jpg/500px-Belted_kingfisher_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Belted Kingfisher candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/BELTED_KINGFISHER_%288317907757%29.jpg/500px-BELTED_KINGFISHER_%288317907757%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Belted kingfisher 13.jpg](https://commons.wikimedia.org/wiki/File:Belted_kingfisher_13.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[BELTED KINGFISHER (8317907757).jpg](<https://commons.wikimedia.org/wiki/File:BELTED_KINGFISHER_(8317907757).jpg>) · 5234×3506 · CC BY 2.0 · cuatrok77
 
-> Megaceryle alcyon
+> BELTED KINGFISHER
 
 ## Week 26 — Common Tern
 
@@ -173,51 +173,51 @@ _Sterna hirundo_ · [Category:Sterna hirundo](https://commons.wikimedia.org/wiki
 
 ### 26A
 
-![Common Tern candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Black-headed_gull_with_Common_tern_2025_06_20.jpg/500px-Black-headed_gull_with_Common_tern_2025_06_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Common Tern candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Common_tern_%28Sterna_hirundo%29_with_common_roach_%28Rutilus_rutilus%29_Haff_Reimech.jpg/500px-Common_tern_%28Sterna_hirundo%29_with_common_roach_%28Rutilus_rutilus%29_Haff_Reimech.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Black-headed gull with Common tern 2025 06 20.jpg](https://commons.wikimedia.org/wiki/File:Black-headed_gull_with_Common_tern_2025_06_20.jpg) · 6406×4271 · CC BY 4.0 · Alexis Lours · quality image
+[Common tern (Sterna hirundo) with common roach (Rutilus rutilus) Haff Reimech.jpg](<https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_with_common_roach_(Rutilus_rutilus)_Haff_Reimech.jpg>) · 4679×3119 · CC BY-SA 4.0 · Charles J. Sharp · featured picture, quality image, valued image, in the species' Wikipedia article
 
-> A black-headed gull in flight chased by a common tern.
+> Common tern ( Sterna hirundo ) with common roach ( Rutilus rutilus ) Haff Réimech, Luxembourg
 
 ### 26B
 
 ![Common Tern candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_02.jpg/500px-2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 02.jpg](https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_02.jpg) · 3600×2700 · CC BY-SA 4.0 · MPF · quality image
+[2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 02.jpg](https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_02.jpg) · 3600×2700 · CC BY-SA 4.0 · MPF · quality image, in the species' Wikipedia article
 
 > Common Tern Sterna hirundo , adult summer plumage, Killingworth Lake, Northumberland
 
 ### 26C
 
-![Common Tern candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Common_tern_%28Sterna_hirundo%29.jpg/500px-Common_tern_%28Sterna_hirundo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Common Tern candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Common_terns_%28Sterna_hirundo%29_fighting_Haff_Reimech.jpg/500px-Common_terns_%28Sterna_hirundo%29_fighting_Haff_Reimech.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Common tern (Sterna hirundo).jpg](<https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg>) · 2592×1728 · CC BY-SA 4.0 · Charles J. Sharp · quality image
+[Common terns (Sterna hirundo) fighting Haff Reimech.jpg](<https://commons.wikimedia.org/wiki/File:Common_terns_(Sterna_hirundo)_fighting_Haff_Reimech.jpg>) · 5748×3832 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
 
-> Common tern (Sterna hirundo), Hållö Island, Västra Götaland, Sweden
+> Common terns ( Sterna hirundo ) fighting, Haff Réimech, Luxembourg
 
 ### 26D
 
-![Common Tern candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Common_tern_%28Sterna_hirundo%29_in_flight_1.jpg/500px-Common_tern_%28Sterna_hirundo%29_in_flight_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Common Tern candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Common_tern_%28Sterna_hirundo%29_fledgling_Danube_delta.jpg/500px-Common_tern_%28Sterna_hirundo%29_fledgling_Danube_delta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Common tern (Sterna hirundo) in flight 1.jpg](<https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_in_flight_1.jpg>) · 2514×1676 · CC BY-SA 4.0 · Charles J. Sharp · quality image
+[Common tern (Sterna hirundo) fledgling Danube delta.jpg](<https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_fledgling_Danube_delta.jpg>) · 1756×1756 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
 
-> Common tern (Sterna hirundo) in flight, Hållö Island, Västra Götaland, Sweden
+> Common tern ( Sterna hirundo ) fledgling, Danube delta, Romania. The nest is on floating vegetation.
 
 ### 26E
 
-![Common Tern candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sterna_hirundo_%28adult%29.jpg/500px-Sterna_hirundo_%28adult%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Common Tern candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Sterna_hirundo_in_Finland.jpg/500px-Sterna_hirundo_in_Finland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Sterna hirundo (adult).jpg](<https://commons.wikimedia.org/wiki/File:Sterna_hirundo_(adult).jpg>) · 3792×2844 · CC BY-SA 4.0 · Hans Hillewaert · valued image
+[Sterna hirundo in Finland.jpg](https://commons.wikimedia.org/wiki/File:Sterna_hirundo_in_Finland.jpg) · 1017×687 · CC BY-SA 3.0 · Tiia Monto · in the species' Wikipedia article
 
-> Common tern at the port of Oostende, Belgium
+> Common Tern (Sterna hirundo) in harbour of Jyväskylä, Finland.
 
 ### 26F
 
-![Common Tern candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20160507_-_11.37_Visdiefje_%28Sterna_hirundo%29_1.jpg/500px-20160507_-_11.37_Visdiefje_%28Sterna_hirundo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Common Tern candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_04.jpg/500px-2014-05-18_Sterna_hirundo%2C_Killingworth_Lake%2C_Northumberland_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20160507 - 11.37 Visdiefje (Sterna hirundo) 1.jpg](<https://commons.wikimedia.org/wiki/File:20160507_-_11.37_Visdiefje_(Sterna_hirundo)_1.jpg>) · 5472×3648 · CC BY-SA 4.0 · Rolf Tuinstra
+[2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 04.jpg](https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_04.jpg) · 3600×2700 · CC BY-SA 4.0 · MPF · in the species' Wikipedia article
 
-> Fotowedstrijd SoortenNL2018 NL Voedseloverdracht,Buitendijks Wad
+> Common Tern Sterna hirundo , adult summer plumage, Killingworth Lake, Northumberland
 
 ## Week 27 — Peregrine Falcon
 
@@ -225,51 +225,51 @@ _Falco peregrinus_ · [Category:Falco peregrinus](https://commons.wikimedia.org/
 
 ### 27A
 
-![Peregrine Falcon candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Wanderfalke_am_Nest-20200411-RM-163331.jpg/500px-Wanderfalke_am_Nest-20200411-RM-163331.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg/500px-African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Wanderfalke am Nest-20200411-RM-163331.jpg](https://commons.wikimedia.org/wiki/File:Wanderfalke_am_Nest-20200411-RM-163331.jpg) · 2243×1682 · CC BY-SA 4.0 · Ermell · quality image
+[African peregrine falcon (Falco peregrinus minor) Arusha.jpg](<https://commons.wikimedia.org/wiki/File:African_peregrine_falcon_(Falco_peregrinus_minor)_Arusha.jpg>) · 3692×2462 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
 
-> Peregrine at the nest
+> African peregrine falcon ( Falco peregrinus minor ), Arusha National Park, Tanzania
 
 ### 27B
 
-![Peregrine Falcon candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_01.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Peregrine_Falcon_La_Ca%C3%B1ada.jpg/500px-Peregrine_Falcon_La_Ca%C3%B1ada.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Peregrine Falcon from Little Rann of Kutch, Gujarat 01.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_01.jpg) · 6000×3368 · CC BY-SA 4.0 · Gannu03
+[Peregrine Falcon La Cañada.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_La_Ca%C3%B1ada.jpg) · 1938×1938 · CC BY-SA 3.0 · Juan Lacruz · quality image, in the species' Wikipedia article
 
-> Peregrine Falcon from Little Rann of Kutch, Gujarat, India.
+> Peregrine Falcon
 
 ### 27C
 
-![Peregrine Falcon candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_03.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Faucon_pelerin_7_mai.jpg/500px-Faucon_pelerin_7_mai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Peregrine Falcon from Little Rann of Kutch, Gujarat 03.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_03.jpg) · 6000×3368 · CC BY-SA 4.0 · Gannu03
+[Faucon pelerin 7 mai.jpg](https://commons.wikimedia.org/wiki/File:Faucon_pelerin_7_mai.jpg) · 1027×720 · CC BY-SA 3.0 · Georges Lignier (georges.lignier@wanadoo.fr) · in the species' Wikipedia article
 
-> Peregrine Falcon from Little Rann of Kutch, Gujarat, India.
+> Adult with young near Montbelliard - France
 
 ### 27D
 
-![Peregrine Falcon candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_04.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Falco_peregrinus_nest_USFWS.jpg/500px-Falco_peregrinus_nest_USFWS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Peregrine Falcon from Little Rann of Kutch, Gujarat 04.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_04.jpg) · 6000×3368 · CC BY-SA 4.0 · Gannu03
+[Falco peregrinus nest USFWS.jpg](https://commons.wikimedia.org/wiki/File:Falco_peregrinus_nest_USFWS.jpg) · 3498×2898 · Public domain · USFWS photo · in the species' Wikipedia article
 
-> Peregrine Falcon from Little Rann of Kutch, Gujarat, India.
+> Falco peregrinus tundrius at nest, Alaska - USFWS photo
 
 ### 27E
 
-![Peregrine Falcon candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_05.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Peregrine_Falcon_%28male%29.jpg/500px-Peregrine_Falcon_%28male%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Peregrine Falcon from Little Rann of Kutch, Gujarat 05.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_05.jpg) · 6000×3368 · CC BY-SA 4.0 · Gannu03
+[Peregrine Falcon (male).jpg](<https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male).jpg>) · 6019×3386 · CC BY-SA 4.0 · Sumeet Moghe · in the species' Wikipedia article
 
-> Peregrine Falcon from Little Rann of Kutch, Gujarat, India.
+> Peregrine Falcon (male) at the Little Rann of Kutch
 
 ### 27F
 
-![Peregrine Falcon candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_06.jpg/500px-Peregrine_Falcon_from_Little_Rann_of_Kutch%2C_Gujarat_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Peregrine Falcon candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Peregrine_Falcon_in_flight.jpg/500px-Peregrine_Falcon_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Peregrine Falcon from Little Rann of Kutch, Gujarat 06.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_from_Little_Rann_of_Kutch,_Gujarat_06.jpg) · 6000×3368 · CC BY-SA 4.0 · Gannu03
+[Peregrine Falcon in flight.jpg](https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_in_flight.jpg) · 3888×2592 · CC BY 2.0 · Kevin Cole from Pacific Coast, USA · used in an English Wikipedia article
 
-> Peregrine Falcon from Little Rann of Kutch, Gujarat, India.
+> Peregrine Falcon Falco peregrinus in flight across Morro Rock in Morro Bay California.
 
 ## Week 28 — Cooper's Hawk
 
@@ -277,155 +277,155 @@ _Astur cooperii_ · [Category:Astur cooperii](https://commons.wikimedia.org/wiki
 
 ### 28A
 
-![Cooper's Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Cooper%27s_hawk_in_Prospect_Park_%2822513%29.jpg/500px-Cooper%27s_hawk_in_Prospect_Park_%2822513%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2016.04.11 18.51.32 DSC03266 - Flickr - andrey zharkikh.jpg](https://commons.wikimedia.org/wiki/File:2016.04.11_18.51.32_DSC03266_-_Flickr_-_andrey_zharkikh.jpg) · 4896×3672 · CC BY 2.0 · Andrey Zharkikh from Salt Lake City, USA
+[Cooper's hawk in Prospect Park (22513).jpg](<https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_in_Prospect_Park_(22513).jpg>) · 3179×4396 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, valued image, portrait — crops badly in the strip, in the species' Wikipedia article
 
-> Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.
+> Juvenile cooper's hawk in Prospect Park, Brooklyn, New York.
 
 ### 28B
 
-![Cooper's Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg/500px-Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2016.04.11 19.17.11 DSC03285 - Flickr - andrey zharkikh.jpg](https://commons.wikimedia.org/wiki/File:2016.04.11_19.17.11_DSC03285_-_Flickr_-_andrey_zharkikh.jpg) · 4896×3672 · CC BY 2.0 · Andrey Zharkikh from Salt Lake City, USA
+[Accipiter cooperii m Sam Smith Toronto3.jpg](https://commons.wikimedia.org/wiki/File:Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg) · 3128×2370 · CC BY-SA 3.0 · Mykola Swarnyk · in the species' Wikipedia article
 
-> Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.
+> A male Cooper's hawk (Accipiter cooperii) with prey at Colonel Samuel Smith Park in Toronto
 
 ### 28C
 
-![Cooper's Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg/500px-2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Cooper%27s_hawk_feeding.jpg/500px-Cooper%27s_hawk_feeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2016.04.11 19.16.47 DSC03284 - Flickr - andrey zharkikh.jpg](https://commons.wikimedia.org/wiki/File:2016.04.11_19.16.47_DSC03284_-_Flickr_-_andrey_zharkikh.jpg) · 4896×3672 · CC BY 2.0 · Andrey Zharkikh from Salt Lake City, USA
+[Cooper's hawk feeding.jpg](https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_feeding.jpg) · 5184×3456 · CC BY-SA 4.0 · Proudpakistani11 · in the species' Wikipedia article
 
-> Cooper's Hawk (Accipiter cooperii), Hawks family (Accipitridae). Red Butte Garden, Salt Lake City, Utah.
+> Hawk (possibly Accipiter badius ?) feeding on a small bird; unknown location, possibly Pakistan
 
 ### 28D
 
-![Cooper's Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._%280aac71cf-270a-43dc-8e4b-36771a3b747a%29.JPG/500px-A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._%280aac71cf-270a-43dc-8e4b-36771a3b747a%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Cooper%27s_Hawk_Eating_a_Finch.jpg/500px-Cooper%27s_Hawk_Eating_a_Finch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[A large bird with a brown back and a white front perched on a white fence. (0aac71cf-270a-43dc-8e4b-36771a3b747a).JPG](<https://commons.wikimedia.org/wiki/File:A_large_bird_with_a_brown_back_and_a_white_front_perched_on_a_white_fence._(0aac71cf-270a-43dc-8e4b-36771a3b747a).JPG>) · 6000×4000 · Public domain · NPS
+[Cooper's Hawk Eating a Finch.jpg](https://commons.wikimedia.org/wiki/File:Cooper%27s_Hawk_Eating_a_Finch.jpg) · 2432×1824 · CC BY-SA 3.0 · Peter Wallack · in the species' Wikipedia article
 
-> A large bird with a brown back and a white front perched on a white fence. Keywords: liho; Wildlife
+> Put out a feeder and you may also end up feeding bird predators.
 
 ### 28E
 
-![Cooper's Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Cooper%27s_hawk_%2819308923146%29.jpg/500px-Cooper%27s_hawk_%2819308923146%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Cooper%27s_Hawk_bathing_on_a_city_street_%2847930519353%29.jpg/500px-Cooper%27s_Hawk_bathing_on_a_city_street_%2847930519353%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cooper's hawk (19308923146).jpg](<https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_(19308923146).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Cooper's Hawk bathing on a city street (47930519353).jpg](<https://commons.wikimedia.org/wiki/File:Cooper%27s_Hawk_bathing_on_a_city_street_(47930519353).jpg>) · 3840×2880 · CC BY 2.0 · Andy Reago & Chrissy McClarren · in the species' Wikipedia article
 
-> Cooper's hawk
+> Cooper's Hawk bathing on a city street
 
 ### 28F
 
-![Cooper's Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Cooper%27s_hawk_%2844053750844%29.jpg/500px-Cooper%27s_hawk_%2844053750844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cooper's Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Cooper%27s_Hawk_with_kill.jpg/500px-Cooper%27s_Hawk_with_kill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cooper's hawk (44053750844).jpg](<https://commons.wikimedia.org/wiki/File:Cooper%27s_hawk_(44053750844).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Cooper's Hawk with kill.jpg](https://commons.wikimedia.org/wiki/File:Cooper%27s_Hawk_with_kill.jpg) · 2027×1427 · Public domain · Sagamore66 · in the species' Wikipedia article
 
-> Cooper's hawk
+> Cooper's Hawk Accipiter cooperii with kill
 
 ## Week 29 — American Barn Owl
 
-_Tyto furcata_ · [Category:Tyto furcata](https://commons.wikimedia.org/wiki/Category%3ATyto%20furcata) · 74 files examined, 6 shortlisted
+_Tyto furcata_ · [Category:Tyto furcata](https://commons.wikimedia.org/wiki/Category%3ATyto%20furcata) · 80 files examined, 6 shortlisted
 
 ### 29A
 
-![American Barn Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/500px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Barn Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Owlets.jpg/500px-Owlets.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American Barn Owl (Tyto furcata guatemalae), Orange Walk.jpg](<https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg>) · 2362×3544 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, portrait — crops badly in the strip
+[Owlets.jpg](https://commons.wikimedia.org/wiki/File:Owlets.jpg) · 1024×683 · CC BY 2.0 · chdwckvnstrsslhm · in the species' Wikipedia article
 
-> American Barn Owl ( Tyto furcata guatemalae ), Orange Walk, Belize
+> A friend had a nest of American Barn Owls on their property at Rainbow, California ... Needless to say, I took advantage of this rare event.
 
 ### 29B
 
-![American Barn Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5%2C_2015._%28081bee84-1dd8-b71b-0bc1-bff011d933ed%29.jpg/500px-A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5%2C_2015._%28081bee84-1dd8-b71b-0bc1-bff011d933ed%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Barn Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/American_Barn_Owl%2C_Bear_River%2C_Utah_%289637780911%29.jpg/500px-American_Barn_Owl%2C_Bear_River%2C_Utah_%289637780911%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[A native barn owl. Photo taken at Bird Fest on December 5, 2015. (081bee84-1dd8-b71b-0bc1-bff011d933ed).jpg](<https://commons.wikimedia.org/wiki/File:A_native_barn_owl._Photo_taken_at_Bird_Fest_on_December_5,_2015._(081bee84-1dd8-b71b-0bc1-bff011d933ed).jpg>) · 5400×3600 · Public domain · NPS
+[American Barn Owl, Bear River, Utah (9637780911).jpg](<https://commons.wikimedia.org/wiki/File:American_Barn_Owl,_Bear_River,_Utah_(9637780911).jpg>) · 3563×2375 · Public domain · USFWS Mountain-Prairie · in the species' Wikipedia article
 
-> A woman holding a barn owl. A native barn owl. Photo taken at Bird Fest on December 5, 2015.
+> Barn owl at Bear River Migratory Bird Refuge in Utah. Photo Credit: Brian Ferguson
 
 ### 29C
 
-![American Barn Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Tyto_furcata.jpg/500px-Tyto_furcata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Barn Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/500px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Tyto furcata.jpg](https://commons.wikimedia.org/wiki/File:Tyto_furcata.jpg) · 5568×3132 · CC0 · LubosHouska
+[American Barn Owl (Tyto furcata guatemalae), Orange Walk.jpg](<https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg>) · 2362×3544 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, portrait — crops badly in the strip, used in an English Wikipedia article
 
-> Suindara (Tyto furcata)
+> American Barn Owl ( Tyto furcata guatemalae ), Orange Walk, Belize
 
 ### 29D
 
-![American Barn Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Barn_Owl_%2835313791770%29.jpg/500px-Barn_Owl_%2835313791770%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Barn Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg/500px-Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barn Owl (35313791770).jpg](<https://commons.wikimedia.org/wiki/File:Barn_Owl_(35313791770).jpg>) · 4869×3404 · CC BY 2.0 · Andy Reago & Chrissy McClarren
-
-> 7/3/17
-
-### 29E
-
-![American Barn Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Barn_Owl_%28Tyto_furcata%29%2C_Ohio_%2814450236077%29.jpg/500px-Barn_Owl_%28Tyto_furcata%29%2C_Ohio_%2814450236077%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Barn Owl (Tyto furcata), Ohio (14450236077).jpg](<https://commons.wikimedia.org/wiki/File:Barn_Owl_(Tyto_furcata),_Ohio_(14450236077).jpg>) · 4608×3072 · CC BY 2.0 · Andrew C
-
-> Pickerington Ponds Metropark, Canal Winchester, Ohio
-
-### 29F
-
-![American Barn Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg/500px-Lechuza_de_los_campanarios_%28Tyto_furcata%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Lechuza de los campanarios (Tyto furcata).jpg](<https://commons.wikimedia.org/wiki/File:Lechuza_de_los_campanarios_(Tyto_furcata).jpg>) · 3880×2911 · CC BY-SA 4.0 · Faunasilvestre
+[Lechuza de los campanarios (Tyto furcata).jpg](<https://commons.wikimedia.org/wiki/File:Lechuza_de_los_campanarios_(Tyto_furcata).jpg>) · 3880×2911 · CC BY-SA 4.0 · Faunasilvestre · used in an English Wikipedia article
 
 > Lechuza de Campanario registrado en el Área Natural Protegida Florindo Donati, Argentina. Tyto furcata , Familia: Tytonidae Orden: Strigiformes Clase: Aves Filo: Chordata Reino: Animalia
 
+### 29E
+
+![American Barn Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Barn_Owl_1_Santa_Cruz_Island_2011.jpg/500px-Barn_Owl_1_Santa_Cruz_Island_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Barn Owl 1 Santa Cruz Island 2011.jpg](https://commons.wikimedia.org/wiki/File:Barn_Owl_1_Santa_Cruz_Island_2011.jpg) · 1714×3050 · CC BY 2.0 · claumoho from USA · portrait — crops badly in the strip, in the species' Wikipedia article
+
+> Galapagos Barn Owl Tyto alba punctatissima , Santa Cruz Island, Galapagos Islands.
+
+### 29F
+
+![American Barn Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Barn_Owl_Pyramid_Lake_1.jpg/500px-Barn_Owl_Pyramid_Lake_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Barn Owl Pyramid Lake 1.jpg](https://commons.wikimedia.org/wiki/File:Barn_Owl_Pyramid_Lake_1.jpg) · 1916×1185 · CC BY 2.0 · Tim from Ithaca · used in an English Wikipedia article
+
+> Barn Owl Tyto furcata pratincola , Pyramid Lake, Washoe County, Nevada, USA.
+
 ## Week 30 — American Crow
 
-_Corvus brachyrhynchos_ · [Category:Corvus brachyrhynchos](https://commons.wikimedia.org/wiki/Category%3ACorvus%20brachyrhynchos) · 184 files examined, 6 shortlisted
+_Corvus brachyrhynchos_ · [Category:Corvus brachyrhynchos](https://commons.wikimedia.org/wiki/Category%3ACorvus%20brachyrhynchos) · 196 files examined, 6 shortlisted
 
 ### 30A
 
-![American Crow candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg/500px-PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Crows_chasing_away_a_dangerous_red_tailed_hawk.jpg/500px-Crows_chasing_away_a_dangerous_red_tailed_hawk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[PD106514-ARW american crow scavenges discarded christmas cookie from trash.jpg](https://commons.wikimedia.org/wiki/File:PD106514-ARW_american_crow_scavenges_discarded_christmas_cookie_from_trash.jpg) · 3600×2400 · CC BY-SA 4.0 · Paul Danese · quality image
+[Crows chasing away a dangerous red tailed hawk.jpg](https://commons.wikimedia.org/wiki/File:Crows_chasing_away_a_dangerous_red_tailed_hawk.jpg) · 3456×2304 · CC BY-SA 4.0 · NikkyPA1 · in the species' Wikipedia article
 
-> American Crow scavenges discarded Christmas cookie
+> jijijiiji
 
 ### 30B
 
-![American Crow candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/AMERICAN_CROW.jpg/500px-AMERICAN_CROW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/American_Crow_imported_from_iNaturalist_photo_250510645_on_5_December_2024.jpg/500px-American_Crow_imported_from_iNaturalist_photo_250510645_on_5_December_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[AMERICAN CROW.jpg](https://commons.wikimedia.org/wiki/File:AMERICAN_CROW.jpg) · 5156×3443 · CC BY 2.0 · cuatrok77 hernandez
+[American Crow imported from iNaturalist photo 250510645 on 5 December 2024.jpg](https://commons.wikimedia.org/wiki/File:American_Crow_imported_from_iNaturalist_photo_250510645_on_5_December_2024.jpg) · 1941×1456 · CC BY 4.0 · (c) Justin Flint, some rights reserved (CC BY) · in the species' Wikipedia article
 
-> FIELD MARKS-black,iridescent plumage overall long,heavy,black bill brown eyes black legs and feet
+> Photo of American Crow uploaded from iNaturalist .
 
 ### 30C
 
-![American Crow candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Angry_Crow.jpg/500px-Angry_Crow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/American_crow_%28Corvus_brachyrhynchos_caurinus%29_in_flight_Quatsino.jpg/500px-American_crow_%28Corvus_brachyrhynchos_caurinus%29_in_flight_Quatsino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Angry Crow.jpg](https://commons.wikimedia.org/wiki/File:Angry_Crow.jpg) · 6000×4000 · CC BY-SA 4.0 · Regan Fernbrook
+[American crow (Corvus brachyrhynchos caurinus) in flight Quatsino.jpg](<https://commons.wikimedia.org/wiki/File:American_crow_(Corvus_brachyrhynchos_caurinus)_in_flight_Quatsino.jpg>) · 2825×1883 · CC BY-SA 4.0 · Charles J. Sharp · in the species' Wikipedia article
 
-> American Crow sitting on a Douglas-fir branch screaming at the photographer. Seattle area, Washington.
+> American crow ( Corvus brachyrhynchos caurinus ), Quatsino Sound, Vancouver Island, BC, Canada
 
 ### 30D
 
-![American Crow candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/American_crow_%2850577096673%29.jpg/500px-American_crow_%2850577096673%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/2014-04-29_02_Northwestern_crow_%28Corvus_brachyrhynchos_caurinus%29.jpg/500px-2014-04-29_02_Northwestern_crow_%28Corvus_brachyrhynchos_caurinus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American crow (50577096673).jpg](<https://commons.wikimedia.org/wiki/File:American_crow_(50577096673).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[2014-04-29 02 Northwestern crow (Corvus brachyrhynchos caurinus).jpg](<https://commons.wikimedia.org/wiki/File:2014-04-29_02_Northwestern_crow_(Corvus_brachyrhynchos_caurinus).jpg>) · 4898×3265 · CC BY-SA 4.0 · Gordon Leggett · quality image, used on 2 Wikimedia pages
 
-> American crow
+> Northwestern crow (Corvus brachyrhynchos caurinus - hybrid intergrades between Corvus brachyrhynchos and Corvus caurinus species of the American crow), adult, at Steveston Harbor, British Columbia, Canada on April 29, 2014. The original pro
 
 ### 30E
 
-![American Crow candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/American_crow_%2850577823481%29.jpg/500px-American_crow_%2850577823481%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/American_crow_in_Marine_Park_%2802333%29.jpg/500px-American_crow_in_Marine_Park_%2802333%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American crow (50577823481).jpg](<https://commons.wikimedia.org/wiki/File:American_crow_(50577823481).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[American crow in Marine Park (02333).jpg](<https://commons.wikimedia.org/wiki/File:American_crow_in_Marine_Park_(02333).jpg>) · 4826×3401 · CC BY-SA 4.0 · Rhododendrites · quality image
 
-> American crow
+> American crow in Marine Park, Brooklyn
 
 ### 30F
 
-![American Crow candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/AMERICAN_CROW_%287753165286%29.jpg/500px-AMERICAN_CROW_%287753165286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![American Crow candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/American_Crows%2C_Victoria%2C_British_Columbia%2C_Canada_04.jpg/500px-American_Crows%2C_Victoria%2C_British_Columbia%2C_Canada_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[AMERICAN CROW (7753165286).jpg](<https://commons.wikimedia.org/wiki/File:AMERICAN_CROW_(7753165286).jpg>) · 5225×2948 · CC BY 2.0 · cuatrok77
+[American Crows, Victoria, British Columbia, Canada 04.jpg](https://commons.wikimedia.org/wiki/File:American_Crows,_Victoria,_British_Columbia,_Canada_04.jpg) · 3854×2065 · CC BY-SA 4.0 · Michal Klajban · quality image, used on 1 Wikimedia page
 
-> FIELD MARKS-black,iridescent plumage overall long,heavy,black bill brown eyes black legs and feet
+> A couple of American Crows ( Corvus brachyrhynchos ), Victoria, British Columbia, Canada
 
 ## Week 31 — Pileated Woodpecker
 
@@ -435,49 +435,49 @@ _Dryocopus pileatus_ · [Category:Dryocopus pileatus](https://commons.wikimedia.
 
 ![Pileated Woodpecker candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dryocopus_pileatus_MP2.jpg/500px-Dryocopus_pileatus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Dryocopus pileatus MP2.jpg](https://commons.wikimedia.org/wiki/File:Dryocopus_pileatus_MP2.jpg) · 2520×2520 · CC BY-SA 3.0 · Cephas · featured picture, quality image
+[Dryocopus pileatus MP2.jpg](https://commons.wikimedia.org/wiki/File:Dryocopus_pileatus_MP2.jpg) · 2520×2520 · CC BY-SA 3.0 · Cephas · featured picture, quality image, used in an English Wikipedia article
 
 > Pileated Woodpecker
 
 ### 31B
 
-![Pileated Woodpecker candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Pileated_woodpecker_%2825842323631%29.jpg/500px-Pileated_woodpecker_%2825842323631%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Pileated Woodpecker candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/PileatedWoodpeckerPair.jpg/500px-PileatedWoodpeckerPair.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Pileated woodpecker (25842323631).jpg](<https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(25842323631).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[PileatedWoodpeckerPair.jpg](https://commons.wikimedia.org/wiki/File:PileatedWoodpeckerPair.jpg) · 1024×506 · Public domain · AndrewBrownsword · in the species' Wikipedia article
 
-> Pileated woodpecker
+> Mated pair of Pileated Woodpeckers.
 
 ### 31C
 
-![Pileated Woodpecker candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Pileated_woodpecker_%2825816499382%29.jpg/500px-Pileated_woodpecker_%2825816499382%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Pileated Woodpecker candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/PileatedWoodpeckerNest.jpg/500px-PileatedWoodpeckerNest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Pileated woodpecker (25816499382).jpg](<https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(25816499382).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[PileatedWoodpeckerNest.jpg](https://commons.wikimedia.org/wiki/File:PileatedWoodpeckerNest.jpg) · 2421×1615 · CC BY-SA 3.0 · Pwieland · in the species' Wikipedia article
 
-> Pileated woodpecker
+> Pileated Woodpecker chicks in a nest
 
 ### 31D
 
-![Pileated Woodpecker candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Pileated_woodpecker_%2819179223905%29.jpg/500px-Pileated_woodpecker_%2819179223905%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Pileated Woodpecker candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/PileatedWoodpeckerOnLog1.jpg/500px-PileatedWoodpeckerOnLog1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Pileated woodpecker (19179223905).jpg](<https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(19179223905).jpg>) · 4985×3323 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[PileatedWoodpeckerOnLog1.jpg](https://commons.wikimedia.org/wiki/File:PileatedWoodpeckerOnLog1.jpg) · 1062×678 · Public domain · AndrewBrownsword · in the species' Wikipedia article
 
-> Pileated woodpecker
+> Female Pileated Woodpecker ( Dryocopus pileatus ) looking for ants on a felled tree
 
 ### 31E
 
-![Pileated Woodpecker candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Pileated_woodpecker_%2818991658928%29.jpg/500px-Pileated_woodpecker_%2818991658928%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Pileated Woodpecker candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/20240227_pileated_woodpecker_keeney_cove_PD200574.jpg/500px-20240227_pileated_woodpecker_keeney_cove_PD200574.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Pileated woodpecker (18991658928).jpg](<https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(18991658928).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[20240227 pileated woodpecker keeney cove PD200574.jpg](https://commons.wikimedia.org/wiki/File:20240227_pileated_woodpecker_keeney_cove_PD200574.jpg) · 3236×3236 · CC BY-SA 4.0 · Paul Danese · in the species' Wikipedia article
 
-> Pileated woodpecker
+> Pileated woodpecker, Keeney Cove, Glastonbury, CT USA
 
 ### 31F
 
-![Pileated Woodpecker candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Pileated_woodpecker_%2819179221845%29.jpg/500px-Pileated_woodpecker_%2819179221845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Pileated Woodpecker candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/PileatedWoodpeckerFeedingonTree%2C_crop.jpg/500px-PileatedWoodpeckerFeedingonTree%2C_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Pileated woodpecker (19179221845).jpg](<https://commons.wikimedia.org/wiki/File:Pileated_woodpecker_(19179221845).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[PileatedWoodpeckerFeedingonTree, crop.jpg](https://commons.wikimedia.org/wiki/File:PileatedWoodpeckerFeedingonTree,_crop.jpg) · 1754×1944 · CC BY-SA 3.0 · Joshlaymon · portrait — crops badly in the strip, in the species' Wikipedia article
 
-> Pileated woodpecker
+> A male Pileated woodpecker foraging on a tree
 
 ## Week 32 — Hooded Merganser
 
@@ -485,48 +485,48 @@ _Lophodytes cucullatus_ · [Category:Lophodytes cucullatus](https://commons.wiki
 
 ### 32A
 
-![Hooded Merganser candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Hooded_merganser_female_in_CP_%2840678%29.jpg/500px-Hooded_merganser_female_in_CP_%2840678%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Hooded Merganser candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hooded_merganser_male_in_Central_Park_%2895790%29.jpg/500px-Hooded_merganser_male_in_Central_Park_%2895790%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Hooded merganser female in CP (40678).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(40678).jpg>) · 2753×1952 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image
-
-> Hooded merganser female in the Central Park Reservoir
-
-### 32B
-
-![Hooded Merganser candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hooded_merganser_male_in_Central_Park_%2895790%29.jpg/500px-Hooded_merganser_male_in_Central_Park_%2895790%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Hooded merganser male in Central Park (95790).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95790).jpg>) · 3314×2421 · CC BY-SA 4.0 · Rhododendrites · quality image, valued image
+[Hooded merganser male in Central Park (95790).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95790).jpg>) · 3314×2421 · CC BY-SA 4.0 · Rhododendrites · quality image, valued image, in the species' Wikipedia article
 
 > Hooded merganser male in the Central Park Reservoir
 
+### 32B
+
+![Hooded Merganser candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Hooded_merganser_female_in_CP_%2840678%29.jpg/500px-Hooded_merganser_female_in_CP_%2840678%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Hooded merganser female in CP (40678).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(40678).jpg>) · 2753×1952 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used on 1 Wikimedia page
+
+> Hooded merganser female in the Central Park Reservoir
+
 ### 32C
 
-![Hooded Merganser candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Hooded_merganser_female_in_CP_%2802185%29.jpg/500px-Hooded_merganser_female_in_CP_%2802185%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Hooded Merganser candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Hooded_merganser_female_in_CP_%2840676%29.jpg/500px-Hooded_merganser_female_in_CP_%2840676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Hooded merganser female in CP (02185).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(02185).jpg>) · 2834×2086 · CC BY-SA 4.0 · Rhododendrites · quality image
+[Hooded merganser female in CP (40676).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_female_in_CP_(40676).jpg>) · 1897×1484 · CC BY-SA 4.0 · Rhododendrites · valued image, in the species' Wikipedia article
 
 > Hooded merganser female in the Central Park Reservoir
 
 ### 32D
 
-![Hooded Merganser candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Hooded_merganser_male_in_CP_%2840620%29.jpg/500px-Hooded_merganser_male_in_CP_%2840620%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Hooded Merganser candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Hooded_Merganser_pair.JPG/500px-Hooded_Merganser_pair.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Hooded merganser male in CP (40620).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_CP_(40620).jpg>) · 2854×2007 · CC BY-SA 4.0 · Rhododendrites · quality image
+[Hooded Merganser pair.JPG](https://commons.wikimedia.org/wiki/File:Hooded_Merganser_pair.JPG) · 1412×1059 · CC BY-SA 3.0 · Footwarrior · in the species' Wikipedia article
 
-> Hooded merganser male in the Central Park Reservoir
+> Hooded Merganser pair, female in front, male in back
 
 ### 32E
 
-![Hooded Merganser candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Hooded_Merganser_-_male_1.jpg/500px-Hooded_Merganser_-_male_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Hooded Merganser candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Hooded_merganser_huntley_meadows_4.10.21_DSC_7702.jpg/500px-Hooded_merganser_huntley_meadows_4.10.21_DSC_7702.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Hooded Merganser - male 1.jpg](https://commons.wikimedia.org/wiki/File:Hooded_Merganser_-_male_1.jpg) · 1916×1246 · CC BY-SA 3.0 · PumpkinSky · quality image
+[Hooded merganser huntley meadows 4.10.21 DSC 7702.jpg](https://commons.wikimedia.org/wiki/File:Hooded_merganser_huntley_meadows_4.10.21_DSC_7702.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist · in the species' Wikipedia article
 
-> Lophodytes cucullatus , Hooded Merganser, male, in Virginia Beach, Virginia.
+> Lophodytes cucullatus
 
 ### 32F
 
-![Hooded Merganser candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Hooded_merganser_male_in_Central_Park_%2895653%29.jpg/500px-Hooded_merganser_male_in_Central_Park_%2895653%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Hooded Merganser candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Hooded_Merganser_family_%2835575980776%29.jpg/500px-Hooded_Merganser_family_%2835575980776%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Hooded merganser male in Central Park (95653).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95653).jpg>) · 2016×1415 · CC BY-SA 4.0 · Rhododendrites · quality image
+[Hooded Merganser family (35575980776).jpg](<https://commons.wikimedia.org/wiki/File:Hooded_Merganser_family_(35575980776).jpg>) · 2407×1532 · CC BY 2.0 · Andy Reago & Chrissy McClarren · in the species' Wikipedia article
 
-> Hooded merganser male in the Central Park Reservoir
+> Hooded Merganser family

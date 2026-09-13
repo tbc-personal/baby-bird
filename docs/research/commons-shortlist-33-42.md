@@ -17,51 +17,51 @@ _Butorides virescens_ · [Category:Butorides virescens](https://commons.wikimedi
 
 ### 33A
 
-![Green Heron candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Birding_elkhorn_8.6.17_group_2DSC_0090.jpg/500px-Birding_elkhorn_8.6.17_group_2DSC_0090.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Green_heron_in_PP_%2814296%29.jpg/500px-Green_heron_in_PP_%2814296%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 2DSC 0090.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_2DSC_0090.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Green heron in PP (14296).jpg](<https://commons.wikimedia.org/wiki/File:Green_heron_in_PP_(14296).jpg>) · 3298×3368 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
 
-> Butorides virescens
+> Green heron ( Butorides virescens ) in Prospect Park (Brooklyn, New York, USA)
 
 ### 33B
 
-![Green Heron candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Birding_elkhorn_8.6.17_group_2DSC_0039.jpg/500px-Birding_elkhorn_8.6.17_group_2DSC_0039.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Green_Heron4.jpg/500px-Green_Heron4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 2DSC 0039.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_2DSC_0039.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Green Heron4.jpg](https://commons.wikimedia.org/wiki/File:Green_Heron4.jpg) · 2006×1779 · Public domain · MONGO · in the species' Wikipedia article
 
-> Butorides virescens
+> Green Heron
 
 ### 33C
 
-![Green Heron candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Birding_elkhorn_8.6.17_group_1DSC_0977.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0977.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Green_heron_%28Butorides_virescens_virescens%29_young_adult.jpg/500px-Green_heron_%28Butorides_virescens_virescens%29_young_adult.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 1DSC 0977.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0977.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Green heron (Butorides virescens virescens) young adult.jpg](<https://commons.wikimedia.org/wiki/File:Green_heron_(Butorides_virescens_virescens)_young_adult.jpg>) · 4743×3162 · CC BY-SA 4.0 · Charles J. Sharp · in the species' Wikipedia article
 
-> Butorides virescens
+> Green heron (Butorides virescens virescens) young adult, Tobago
 
 ### 33D
 
-![Green Heron candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Birding_elkhorn_8.6.17_group_1DSC_0971.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Green_heron_%28Butorides_virescens%29%2C_South_Padre_Island%2C_Texas%2C_USA.jpg/500px-Green_heron_%28Butorides_virescens%29%2C_South_Padre_Island%2C_Texas%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 1DSC 0971.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0971.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Green heron (Butorides virescens), South Padre Island, Texas, USA.jpg](<https://commons.wikimedia.org/wiki/File:Green_heron_(Butorides_virescens),_South_Padre_Island,_Texas,_USA.jpg>) · 6587×4392 · CC BY-SA 4.0 · Chuck Homler d/b/a Focus On Wildlife · quality image, used in an English Wikipedia article
 
-> Butorides virescens
+> A Green Heron perched over the Laguna Madre is South Padre Island, Texas.
 
 ### 33E
 
-![Green Heron candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Birding_elkhorn_8.6.17_group_1DSC_0948.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0948.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Green_Heron_nestlings.jpg/500px-Green_Heron_nestlings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 1DSC 0948.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0948.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Green Heron nestlings.jpg](https://commons.wikimedia.org/wiki/File:Green_Heron_nestlings.jpg) · 2685×2015 · CC BY-SA 3.0 · Agathman · in the species' Wikipedia article
 
-> Butorides virescens
+> Nest of Green Heron, Butorides virescens, with two baby herons. On a mangrove tree near Isla Damas, Costa Rica.
 
 ### 33F
 
-![Green Heron candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Birding_elkhorn_8.6.17_group_1DSC_0817.jpg/500px-Birding_elkhorn_8.6.17_group_1DSC_0817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Green Heron candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Butorides_virescens_070506_GWADA.jpg/500px-Butorides_virescens_070506_GWADA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Birding elkhorn 8.6.17 group 1DSC 0817.jpg](https://commons.wikimedia.org/wiki/File:Birding_elkhorn_8.6.17_group_1DSC_0817.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Butorides virescens 070506 GWADA.jpg](https://commons.wikimedia.org/wiki/File:Butorides_virescens_070506_GWADA.jpg) · 2416×1611 · CC BY-SA 3.0 · Pascal Aleixandre · in the species' Wikipedia article
 
-> Butorides virescens
+> Green Heron ( Butorides virescens ) - Photographed at Pointe Noire, Guadeloupe
 
 ## Week 34 — Ring-billed Gull
 
@@ -69,51 +69,51 @@ _Larus delawarensis_ · [Category:Larus delawarensis](https://commons.wikimedia.
 
 ### 34A
 
-![Ring-billed Gull candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Larus_delawarensis-Beach.jpg/500px-Larus_delawarensis-Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Ring-billed_gull_in_Red_Hook_%2842799%29.jpg/500px-Ring-billed_gull_in_Red_Hook_%2842799%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Larus delawarensis-Beach.jpg](https://commons.wikimedia.org/wiki/File:Larus_delawarensis-Beach.jpg) · 4288×2848 · CC BY-SA 4.0 · Sixflashphoto · quality image
+[Ring-billed gull in Red Hook (42799).jpg](<https://commons.wikimedia.org/wiki/File:Ring-billed_gull_in_Red_Hook_(42799).jpg>) · 4273×3259 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Larus delawarensis on the beach of Delaware State Park, Ohio.
+> Ring-billed gull ( Larus delawarensis ), breeding adult, in Red Hook, Brooklyn, New York.
 
 ### 34B
 
-![Ring-billed Gull candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/2026-02-02_Ring-billed_gull_in_VA.png/500px-2026-02-02_Ring-billed_gull_in_VA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Ring-billed_gull_and_a_rainbow_%2852910%29.jpg/500px-Ring-billed_gull_and_a_rainbow_%2852910%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2026-02-02 Ring-billed gull in VA.png](https://commons.wikimedia.org/wiki/File:2026-02-02_Ring-billed_gull_in_VA.png) · 4161×3121 · CC BY-SA 4.0 · Satvrnine · quality image, reads as captive or in-hand
+[Ring-billed gull and a rainbow (52910).jpg](<https://commons.wikimedia.org/wiki/File:Ring-billed_gull_and_a_rainbow_(52910).jpg>) · 4608×3456 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used in an English Wikipedia article
 
-> Adult ring-billed gull in flight, showing wing-tip pattern and eponymous black-ringed bill. Photographed in southeastern Virginia by Saturnine (Ethan Ray).
+> Ring-billed gull and a rainbow over the Niagara River
 
 ### 34C
 
-![Ring-billed Gull candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Batch_1_ring-billed_gull_14_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_14_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Larus_delawarensis_flight_2.jpg/500px-Larus_delawarensis_flight_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Batch 1 ring-billed gull 14 assateague 11.2019.jpg](https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_14_assateague_11.2019.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Larus delawarensis flight 2.jpg](https://commons.wikimedia.org/wiki/File:Larus_delawarensis_flight_2.jpg) · 3654×2449 · CC BY-SA 3.0 · Ianaré Sévi · featured picture, quality image, used on 17 Wikimedia pages
 
-> Larus delawarensis
+> Ring-billed Gull ( Larus delawarensis ) in a hovering glide, the wind providing enough lift.
 
 ### 34D
 
-![Ring-billed Gull candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Batch_1_ring-billed_gull_13_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_13_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Larus-delawarensis-021.jpg/500px-Larus-delawarensis-021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Batch 1 ring-billed gull 13 assateague 11.2019.jpg](https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_13_assateague_11.2019.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Larus-delawarensis-021.jpg](https://commons.wikimedia.org/wiki/File:Larus-delawarensis-021.jpg) · 3504×2336 · CC BY-SA 3.0 · User:Mdf · quality image, in the species' Wikipedia article
 
-> Larus delawarensis
+> breeding adult Ring-billed Gull ( Larus delawarensis ) in Toronto, Ontario, Canada
 
 ### 34E
 
-![Ring-billed Gull candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Batch_1_ring-billed_gull_12_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_12_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ring-Billed_Gull_Winter.jpg/500px-Ring-Billed_Gull_Winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Batch 1 ring-billed gull 12 assateague 11.2019.jpg](https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_12_assateague_11.2019.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Ring-Billed Gull Winter.jpg](https://commons.wikimedia.org/wiki/File:Ring-Billed_Gull_Winter.jpg) · 5222×3730 · CC BY-SA 4.0 · Polinova · quality image, in the species' Wikipedia article
 
-> Larus delawarensis
+> A ring-billed gull in non-breeding winter plumage at Sandy Point State Park, Maryland.
 
 ### 34F
 
-![Ring-billed Gull candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Batch_1_ring-billed_gull_11_assateague_11.2019.jpg/500px-Batch_1_ring-billed_gull_11_assateague_11.2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ring-billed Gull candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Ring-billed_gull_in_flight_%2894615%29_%28cropped%29.jpg/500px-Ring-billed_gull_in_flight_%2894615%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Batch 1 ring-billed gull 11 assateague 11.2019.jpg](https://commons.wikimedia.org/wiki/File:Batch_1_ring-billed_gull_11_assateague_11.2019.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Ring-billed gull in flight (94615) (cropped).jpg](<https://commons.wikimedia.org/wiki/File:Ring-billed_gull_in_flight_(94615)_(cropped).jpg>) · 4450×2044 · CC BY-SA 4.0 · Rhododendrites · in the species' Wikipedia article
 
-> Larus delawarensis
+> Ring-billed gull in flight in Red Hook, Brooklyn
 
 ## Week 35 — Red-tailed Hawk
 
@@ -121,51 +121,51 @@ _Buteo jamaicensis_ · [Category:Buteo jamaicensis](https://commons.wikimedia.or
 
 ### 35A
 
-![Red-tailed Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Red-tailed_hawk_%2823114%29.jpg/500px-Red-tailed_hawk_%2823114%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Red-tailed_hawk_in_Central_Park_%2824796%29.jpg/500px-Red-tailed_hawk_in_Central_Park_%2824796%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-tailed hawk (23114).jpg](<https://commons.wikimedia.org/wiki/File:Red-tailed_hawk_(23114).jpg>) · 3269×3354 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip
+[Red-tailed hawk in Central Park (24796).jpg](<https://commons.wikimedia.org/wiki/File:Red-tailed_hawk_in_Central_Park_(24796).jpg>) · 4608×3456 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Red-tailed hawk in Carroll Park
+> Red-tailed hawk in the Central Park Ramble
 
 ### 35B
 
-![Red-tailed Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Buteo_jamaicensis_DSC_0992.jpg/500px-Buteo_jamaicensis_DSC_0992.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Buteo_jamaicensis_in_flight_at_Llano_Seco-1520.jpg/500px-Buteo_jamaicensis_in_flight_at_Llano_Seco-1520.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Buteo jamaicensis DSC 0992.jpg](https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_0992.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Buteo jamaicensis in flight at Llano Seco-1520.jpg](https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_in_flight_at_Llano_Seco-1520.jpg) · 6650×3118 · CC BY-SA 4.0 · Frank Schulenburg · featured picture, quality image, used on 24 Wikimedia pages
 
-> Buteo jamaicensis
+> Red-tailed Hawk ( Buteo jamaicensis ), juvenile in flight at the Llano Seco Unit of the Sacramento National Wildlife Refuge Complex in Butte County, California
 
 ### 35C
 
-![Red-tailed Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Buteo_jamaicensis_DSC_0995.jpg/500px-Buteo_jamaicensis_DSC_0995.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Red-tailed_Hawk_%2845812546121%29.jpg/500px-Red-tailed_Hawk_%2845812546121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Buteo jamaicensis DSC 0995.jpg](https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_0995.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Red-tailed Hawk (45812546121).jpg](<https://commons.wikimedia.org/wiki/File:Red-tailed_Hawk_(45812546121).jpg>) · 4426×2951 · CC BY 2.0 · Becky Matsubara from El Sobrante, California · quality image, in the species' Wikipedia article
 
-> Buteo jamaicensis
+> Sobrante Ridge Regional Preserve, Richmond, Contra Costa County, California
 
 ### 35D
 
-![Red-tailed Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Neighborhood_Red-Tailed_Hawk_%2853414455884%29.jpg/500px-Neighborhood_Red-Tailed_Hawk_%2853414455884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Buteo_jamaicensis_-Pillar_Point_Harbor%2C_California%2C_USA-8.jpg/500px-Buteo_jamaicensis_-Pillar_Point_Harbor%2C_California%2C_USA-8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Neighborhood Red-Tailed Hawk (53414455884).jpg](<https://commons.wikimedia.org/wiki/File:Neighborhood_Red-Tailed_Hawk_(53414455884).jpg>) · 6423×4282 · CC BY 2.0 · Larry Lamsa
+[Buteo jamaicensis -Pillar Point Harbor, California, USA-8.jpg](https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_-Pillar_Point_Harbor,_California,_USA-8.jpg) · 4373×3120 · CC BY 2.0 · Jason Crotty · in the species' Wikipedia article
 
-> Taking off
+> An immature Red-tailed Hawk at Pillar Point Harbor, California, USA.
 
 ### 35E
 
-![Red-tailed Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Buteo_jamaicensis_DSC_1005.jpg/500px-Buteo_jamaicensis_DSC_1005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Red-Tailed_Hawk_%2829478965112%29.jpg/500px-Red-Tailed_Hawk_%2829478965112%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Buteo jamaicensis DSC 1005.jpg](https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_DSC_1005.jpg) · 6000×4000 · CC BY 2.0 · lwolfartist
+[Red-Tailed Hawk (29478965112).jpg](<https://commons.wikimedia.org/wiki/File:Red-Tailed_Hawk_(29478965112).jpg>) · 4909×3273 · CC BY 2.0 · Jon Nelson from Bend, Oregon, USA · in the species' Wikipedia article
 
 > Buteo jamaicensis
 
 ### 35F
 
-![Red-tailed Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Red-Tailed_Hawk_%2823367515602%29.jpg/500px-Red-Tailed_Hawk_%2823367515602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-tailed Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Red-tailed_Hawk_imported_from_iNaturalist_photo_3663761_on_2_December_2024.jpg/500px-Red-tailed_Hawk_imported_from_iNaturalist_photo_3663761_on_2_December_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-Tailed Hawk (23367515602).jpg](<https://commons.wikimedia.org/wiki/File:Red-Tailed_Hawk_(23367515602).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Red-tailed Hawk imported from iNaturalist photo 3663761 on 2 December 2024.jpg](https://commons.wikimedia.org/wiki/File:Red-tailed_Hawk_imported_from_iNaturalist_photo_3663761_on_2_December_2024.jpg) · 2048×1365 · CC0 · no rights reserved · in the species' Wikipedia article
 
-> Red-Tailed Hawk
+> Photo of Red-tailed Hawk uploaded from iNaturalist .
 
 ## Week 36 — Wood Duck
 
@@ -173,51 +173,51 @@ _Aix sponsa_ · [Category:Aix sponsa](https://commons.wikimedia.org/wiki/Categor
 
 ### 36A
 
-![Wood Duck candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/20250804_wood_duck_keeney_cove_flip_PD203483.jpg/500px-20250804_wood_duck_keeney_cove_flip_PD203483.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Wood_duck_drake_vocalizing_in_Central_Park_%2886815%29.jpg/500px-Wood_duck_drake_vocalizing_in_Central_Park_%2886815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20250804 wood duck keeney cove flip PD203483.jpg](https://commons.wikimedia.org/wiki/File:20250804_wood_duck_keeney_cove_flip_PD203483.jpg) · 6771×3809 · CC BY-SA 4.0 · Paul Danese · quality image
+[Wood duck drake vocalizing in Central Park (86815).jpg](<https://commons.wikimedia.org/wiki/File:Wood_duck_drake_vocalizing_in_Central_Park_(86815).jpg>) · 4106×2951 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Reflected image of Wood Duck. Keeney Cove. Glastonbury, CT USA
+> Wood duck ( Aix sponsa ) drake in the Central Park Ramble
 
 ### 36B
 
-![Wood Duck candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Diever_Feb_2020_-_43.jpg/500px-Diever_Feb_2020_-_43.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Wood_duck_female_%2873468%29.jpg/500px-Wood_duck_female_%2873468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Diever Feb 2020 - 43.jpg](https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_43.jpg) · 5184×3888 · CC BY-SA 4.0 · NeoMeesje
+[Wood duck female (73468).jpg](<https://commons.wikimedia.org/wiki/File:Wood_duck_female_(73468).jpg>) · 4292×2870 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Some birds at a pond in Diever, Drenthe, the Netherlands
+> A female wood duck
 
 ### 36C
 
-![Wood Duck candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Diever_Feb_2020_-_44.jpg/500px-Diever_Feb_2020_-_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Male_Aix_sponsa_portrait.jpg/500px-Male_Aix_sponsa_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Diever Feb 2020 - 44.jpg](https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_44.jpg) · 5184×3888 · CC BY-SA 4.0 · NeoMeesje
+[Male Aix sponsa portrait.jpg](https://commons.wikimedia.org/wiki/File:Male_Aix_sponsa_portrait.jpg) · 3536×2357 · CC BY-SA 3.0 · Francis C. Franklin · featured picture, quality image, in the species' Wikipedia article, reads as captive or in-hand
 
-> Some birds at a pond in Diever, Drenthe, the Netherlands
+> Male Wood duck , Aix sponsa
 
 ### 36D
 
-![Wood Duck candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Diever_Feb_2020_-_45.jpg/500px-Diever_Feb_2020_-_45.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Wood_Duck_Wissahickon_Creek.png/500px-Wood_Duck_Wissahickon_Creek.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Diever Feb 2020 - 45.jpg](https://commons.wikimedia.org/wiki/File:Diever_Feb_2020_-_45.jpg) · 5184×3888 · CC BY-SA 4.0 · NeoMeesje
+[Wood Duck Wissahickon Creek.png](https://commons.wikimedia.org/wiki/File:Wood_Duck_Wissahickon_Creek.png) · 5371×3581 · CC BY-SA 4.0 · Chuck Homler d/b/a FocusOnwWildlife · quality image, in the species' Wikipedia article
 
-> Some birds at a pond in Diever, Drenthe, the Netherlands
+> A Drake Wood Duck in the Wissahickon Creek, Philadelphia, PA.
 
 ### 36E
 
-![Wood Duck candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Duck_%2851182599856%29.jpg/500px-Duck_%2851182599856%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Wood_duck_female_with_ducklings_%2873499%29.jpg/500px-Wood_duck_female_with_ducklings_%2873499%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Duck (51182599856).jpg](<https://commons.wikimedia.org/wiki/File:Duck_(51182599856).jpg>) · 6240×4160 · CC BY 2.0 · Guilhem Vellut from Annecy, France
+[Wood duck female with ducklings (73499).jpg](<https://commons.wikimedia.org/wiki/File:Wood_duck_female_with_ducklings_(73499).jpg>) · 3956×2795 · CC BY-SA 4.0 · Rhododendrites · quality image, in the species' Wikipedia article
 
-> Duck
+> Wood duck female with ducklings in Prospect Park
 
 ### 36F
 
-![Wood Duck candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Wood_duck_with_young_%2854607933232%29.jpg/500px-Wood_duck_with_young_%2854607933232%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Wood Duck candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Hen_Wood_Duck.png/500px-Hen_Wood_Duck.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Wood duck with young (54607933232).jpg](<https://commons.wikimedia.org/wiki/File:Wood_duck_with_young_(54607933232).jpg>) · 6200×4133 · Public domain · U.S. Fish and Wildlife Service - Midwest Region
+[Hen Wood Duck.png](https://commons.wikimedia.org/wiki/File:Hen_Wood_Duck.png) · 7481×4988 · CC BY-SA 4.0 · Chuck Homler d/b/a FocusOnwWildlife · in the species' Wikipedia article
 
-> We spotted this wood duck hen with eight young following along on a pond in Hennepin County, Minnesota. Photo by Courtney Celley/USFWS.
+> A Hen Wood Duck in the Wissahickon Creek, Philadelphia, PA.
 
 ## Week 37 — Red-shouldered Hawk
 
@@ -225,51 +225,51 @@ _Buteo lineatus_ · [Category:Buteo lineatus](https://commons.wikimedia.org/wiki
 
 ### 37A
 
-![Red-shouldered Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/2026-03-14_Red-shouldered_hawk_in_VA.jpg/500px-2026-03-14_Red-shouldered_hawk_in_VA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Red-shouldered-hawk_1.jpg/500px-Red-shouldered-hawk_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[2026-03-14 Red-shouldered hawk in VA.jpg](https://commons.wikimedia.org/wiki/File:2026-03-14_Red-shouldered_hawk_in_VA.jpg) · 4090×3068 · CC BY-SA 4.0 · Satvrnine · quality image
+[Red-shouldered-hawk 1.jpg](https://commons.wikimedia.org/wiki/File:Red-shouldered-hawk_1.jpg) · 1508×1131 · CC BY 2.0 · Mike Baird from Morro Bay, USA · in the species' Wikipedia article
 
-> An adult red-shouldered hawk perching. Photographed in eastern Virginia by Saturnine (Ethan Ray).
+> Red-shouldered Hawk (bird) ( Buteo lineatus ) in the Cloisters City Park in Morro Bay, CA - Hollister Peak is shown in the background.
 
 ### 37B
 
-![Red-shouldered Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Migrating_Hawks.jpg/500px-Migrating_Hawks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Kanapaha-2008_04_09-IMG_0128.JPG/500px-Kanapaha-2008_04_09-IMG_0128.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Migrating Hawks.jpg](https://commons.wikimedia.org/wiki/File:Migrating_Hawks.jpg) · 6000×4000 · CC BY 4.0 · Cdwarren01
+[Kanapaha-2008 04 09-IMG 0128.JPG](https://commons.wikimedia.org/wiki/File:Kanapaha-2008_04_09-IMG_0128.JPG) · 2296×1636 · CC BY-SA 4.0 · Sfullenwider · in the species' Wikipedia article
 
-> wildlife is a struggle for survival
+> Red Shouldered Hawk at Kanapaha Botanical Gardens Gainesville, Fl
 
 ### 37C
 
-![Red-shouldered Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Red-shouldered_Hawk_%28Buteo_lineatus%29_at_Black_Prong_Trailhead%2C_Florida.jpg/500px-Red-shouldered_Hawk_%28Buteo_lineatus%29_at_Black_Prong_Trailhead%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Juvenile_buteo_lineatus_elegans%2C_Presidio.jpg/500px-Juvenile_buteo_lineatus_elegans%2C_Presidio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-shouldered Hawk (Buteo lineatus) at Black Prong Trailhead, Florida.jpg](<https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(Buteo_lineatus)_at_Black_Prong_Trailhead,_Florida.jpg>) · 5184×3456 · CC BY-SA 4.0 · RobertJBanach
+[Juvenile buteo lineatus elegans, Presidio.jpg](https://commons.wikimedia.org/wiki/File:Juvenile_buteo_lineatus_elegans,_Presidio.jpg) · 2883×4324 · CC BY-SA 4.0 · Frank Schulenburg · featured picture, quality image, portrait — crops badly in the strip, used on 4 Wikimedia pages
 
-> IMG 8581 FL Black Prong Animals Birds Buteo lineatus Red-shouldered Hawk
+> Juvenile red-shouldered hawk ( Buteo lineatus elegans ) at the Presidio, San Francisco, California.
 
 ### 37D
 
-![Red-shouldered Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Red-shouldered_Hawk_%2853053977475%29.jpg/500px-Red-shouldered_Hawk_%2853053977475%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Red-shoulderedHawk-13DEC2017.jpg/500px-Red-shoulderedHawk-13DEC2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-shouldered Hawk (53053977475).jpg](<https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(53053977475).jpg>) · 7565×5403 · CC BY 2.0 · Channel City Camera Club from Santa Barbara, US
+[Red-shoulderedHawk-13DEC2017.jpg](https://commons.wikimedia.org/wiki/File:Red-shoulderedHawk-13DEC2017.jpg) · 2779×2046 · CC BY 4.0 · ADJ82 · in the species' Wikipedia article
 
-> Lake Los Carneros Photo by Sue Cook
+> Red-shouldered Hawk in Placer County, California
 
 ### 37E
 
-![Red-shouldered Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Red-shouldered_Hawk_%2849867008773%29.jpg/500px-Red-shouldered_Hawk_%2849867008773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Red-shouldered_Hawk%2C_Everglades_Nat%27l._Park.png/500px-Red-shouldered_Hawk%2C_Everglades_Nat%27l._Park.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-shouldered Hawk (49867008773).jpg](<https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(49867008773).jpg>) · 6000×4000 · Public domain · evergladesnps
+[Red-shouldered Hawk, Everglades Nat'l. Park.png](https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk,_Everglades_Nat%27l._Park.png) · 2201×1331 · CC BY-SA 4.0 · FlightEditor · in the species' Wikipedia article
 
-> NPS Photo by Patty Palma
+> Red-shouldered Hawk, Everglades Nat'l. Park.
 
 ### 37F
 
-![Red-shouldered Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Red-shouldered_Hawk_%2854058811122%29.jpg/500px-Red-shouldered_Hawk_%2854058811122%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Red-shouldered Hawk candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Red-tailed_Hawk_imported_from_iNaturalist_photo_234593554_on_5_December_2024.jpg/500px-Red-tailed_Hawk_imported_from_iNaturalist_photo_234593554_on_5_December_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Red-shouldered Hawk (54058811122).jpg](<https://commons.wikimedia.org/wiki/File:Red-shouldered_Hawk_(54058811122).jpg>) · 6742×4761 · Public domain · ShenandoahNPS
+[Red-tailed Hawk imported from iNaturalist photo 234593554 on 5 December 2024.jpg](https://commons.wikimedia.org/wiki/File:Red-tailed_Hawk_imported_from_iNaturalist_photo_234593554_on_5_December_2024.jpg) · 2048×1366 · CC BY 4.0 · (c) Jonathan Eisen, some rights reserved (CC BY) · in the species' Wikipedia article
 
-> NPS | L Pfeiffer
+> Photo of Red-tailed Hawk chasing a red-shouldered hawk uploaded from iNaturalist .
 
 ## Week 38 — Barred Owl
 
@@ -277,51 +277,51 @@ _Strix varia_ · [Category:Strix varia](https://commons.wikimedia.org/wiki/Categ
 
 ### 38A
 
-![Barred Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Barred_owl_%2819133697084%29.jpg/500px-Barred_owl_%2819133697084%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Strix-varia-005.jpg/500px-Strix-varia-005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (19133697084).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(19133697084).jpg>) · 5616×3744 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Strix-varia-005.jpg](https://commons.wikimedia.org/wiki/File:Strix-varia-005.jpg) · 3072×2048 · CC BY-SA 3.0 · Mdf · featured picture, quality image, in the species' Wikipedia article
 
-> Barred owl
+> Barred Owl ( Strix varia ) – Whitby, Ontario (Canada)
 
 ### 38B
 
-![Barred Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Barred_owl_%2830946247067%29.jpg/500px-Barred_owl_%2830946247067%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Strix_varia_DM1.jpg/500px-Strix_varia_DM1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (30946247067).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(30946247067).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Strix varia DM1.jpg](https://commons.wikimedia.org/wiki/File:Strix_varia_DM1.jpg) · 3064×2592 · CC BY-SA 3.0 · Cephas · featured picture, in the species' Wikipedia article
 
-> Barred owl
+> Barred Owl ( Strix varia ) yawning, Domaine Maizerets , Quebec City , Canada
 
 ### 38C
 
-![Barred Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Barred_owl_%2827043469572%29.jpg/500px-Barred_owl_%2827043469572%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Barred_owl.jpg/500px-Barred_owl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (27043469572).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(27043469572).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Barred owl.jpg](https://commons.wikimedia.org/wiki/File:Barred_owl.jpg) · 1800×1800 · CC BY-SA 3.0 · D. Gordon E. Robertson · in the species' Wikipedia article
 
-> Barred owl
+> Barred Owl ( Strix varia ) taken in Gatineau Park, Quebec.
 
 ### 38D
 
-![Barred Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Barred_owl_%2826534191093%29.jpg/500px-Barred_owl_%2826534191093%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Barred-Owl_9052.jpg/500px-Barred-Owl_9052.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (26534191093).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(26534191093).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Barred-Owl 9052.jpg](https://commons.wikimedia.org/wiki/File:Barred-Owl_9052.jpg) · 2880×1920 · CC BY-SA 3.0 · Alannyiri · in the species' Wikipedia article
 
-> Barred owl
+> Barred Owl "winking"
 
 ### 38E
 
-![Barred Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Barred_owl_%2832097951944%29.jpg/500px-Barred_owl_%2832097951944%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Barred-owl-chick-17b.jpg/500px-Barred-owl-chick-17b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (32097951944).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(32097951944).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Barred-owl-chick-17b.jpg](https://commons.wikimedia.org/wiki/File:Barred-owl-chick-17b.jpg) · 1029×661 · CC BY-SA 3.0 · William H. Majoros · in the species' Wikipedia article
 
-> Barred owl
+> Barred owl chicks at nest just prior to fledging
 
 ### 38F
 
-![Barred Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Barred_owl_%2832941532325%29.jpg/500px-Barred_owl_%2832941532325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Barred Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Barred-Owl_9146.jpg/500px-Barred-Owl_9146.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Barred owl (32941532325).jpg](<https://commons.wikimedia.org/wiki/File:Barred_owl_(32941532325).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Barred-Owl 9146.jpg](https://commons.wikimedia.org/wiki/File:Barred-Owl_9146.jpg) · 2880×1920 · CC BY-SA 3.0 · Alannyiri · in the species' Wikipedia article
 
-> Barred owl
+> Barred owl in flight, landing on a fence post. Note tail used as air dam and brake.
 
 ## Week 39 — Mallard
 
@@ -329,51 +329,51 @@ _Anas platyrhynchos_ · [Category:Anas platyrhynchos](https://commons.wikimedia.
 
 ### 39A
 
-![Mallard candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/2015_Kaczka_krzy%C5%BCowka_w_wodzie_%28samiec%29.jpg/500px-2015_Kaczka_krzy%C5%BCowka_w_wodzie_%28samiec%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200497.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200497.jpg) · 7789×5193 · CC BY-SA 4.0 · Paul Danese · quality image
+[2015 Kaczka krzyżowka w wodzie (samiec).jpg](<https://commons.wikimedia.org/wiki/File:2015_Kaczka_krzy%C5%BCowka_w_wodzie_(samiec).jpg>) · 3722×2353 · CC BY-SA 4.0 · Jacek Halicki · featured picture, quality image, valued image, used in an English Wikipedia article
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Mallard ( Anas platyrhynchos ) on the water (male) in Poland
 
 ### 39B
 
-![Mallard candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Male_mallard_duck_2.jpg/500px-Male_mallard_duck_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200614.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200614.jpg) · 5170×3447 · CC BY-SA 4.0 · Paul Danese · quality image
+[Male mallard duck 2.jpg](https://commons.wikimedia.org/wiki/File:Male_mallard_duck_2.jpg) · 2000×1339 · CC BY 3.0 · Acarpentier · featured picture, quality image, used in an English Wikipedia article
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Male mallard duck
 
 ### 39C
 
-![Mallard candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Red-eared_sliders_and_Mallard_in_Golden_Gate_Park_1.jpg/500px-Red-eared_sliders_and_Mallard_in_Golden_Gate_Park_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200619.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200619.jpg) · 6258×3520 · CC BY-SA 4.0 · Paul Danese · quality image
+[Red-eared sliders and Mallard in Golden Gate Park 1.jpg](https://commons.wikimedia.org/wiki/File:Red-eared_sliders_and_Mallard_in_Golden_Gate_Park_1.jpg) · 2000×1645 · CC BY-SA 3.0 · Brocken Inaglory · featured picture, quality image, used in an English Wikipedia article
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Red-eared slider , Trachemys scripta elegans and male Mallard in Golden Gate Park , USA.
 
 ### 39D
 
-![Mallard candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/%D0%A3%D1%82%D0%BA%D0%B8_%D0%BD%D0%B0_%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_-_2.jpg/500px-%D0%A3%D1%82%D0%BA%D0%B8_%D0%BD%D0%B0_%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200628.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200628.jpg) · 6709×3774 · CC BY-SA 4.0 · Paul Danese · quality image
+[Утки на Набережной - 2.jpg](https://commons.wikimedia.org/wiki/File:%D0%A3%D1%82%D0%BA%D0%B8_%D0%BD%D0%B0_%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_-_2.jpg) · 4969×3313 · CC BY-SA 4.0 · Alexander Novikov · featured picture, quality image, used on 21 Wikimedia pages
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Tezikov Bridge in Tambov, Russia
 
 ### 39E
 
-![Mallard candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Female_Mallard_Duck_Rest_3.jpg/500px-Female_Mallard_Duck_Rest_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200630.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200630.jpg) · 6872×3865 · CC BY-SA 4.0 · Paul Danese · quality image
+[Female Mallard Duck Rest 3.jpg](https://commons.wikimedia.org/wiki/File:Female_Mallard_Duck_Rest_3.jpg) · 2000×1451 · CC BY 3.0 · Acarpentier · featured picture, quality image, used on 42 Wikimedia pages
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Female mallard duck resting
 
 ### 39F
 
-![Mallard candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg/500px-20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Mallard candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Domestic_duck_bathing_and_splashing_in_a_pond_at_golden_hour_in_Don_Det_Laos_-_side_view.jpg/500px-Domestic_duck_bathing_and_splashing_in_a_pond_at_golden_hour_in_Don_Det_Laos_-_side_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20240614 mallard hen and ducklings wethersfield cove PD200631.jpg](https://commons.wikimedia.org/wiki/File:20240614_mallard_hen_and_ducklings_wethersfield_cove_PD200631.jpg) · 6972×3922 · CC BY-SA 4.0 · Paul Danese · quality image
+[Domestic duck bathing and splashing in a pond at golden hour in Don Det Laos - side view.jpg](https://commons.wikimedia.org/wiki/File:Domestic_duck_bathing_and_splashing_in_a_pond_at_golden_hour_in_Don_Det_Laos_-_side_view.jpg) · 4835×3626 · CC BY-SA 4.0 · Basile Morin · featured picture, quality image, used on 5 Wikimedia pages
 
-> Mallard Hen and ducklings, Wethersfield Cove, Wethersfield, CT USA
+> Domestic duck ( Anas platyrhynchos ) bathing and splashing in a pond at golden hour in Don Det , Si Phan Don , Laos - side view.
 
 ## Week 40 — Snowy Owl
 
@@ -381,51 +381,51 @@ _Bubo scandiacus_ · [Category:Bubo scandiacus](https://commons.wikimedia.org/wi
 
 ### 40A
 
-![Snowy Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/QP8A2342.jpg/500px-QP8A2342.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/SnowyOwlAmericanBlackDuck.jpg/500px-SnowyOwlAmericanBlackDuck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[QP8A2342.jpg](https://commons.wikimedia.org/wiki/File:QP8A2342.jpg) · 5760×3840 · CC BY-SA 4.0 · Nixette
+[SnowyOwlAmericanBlackDuck.jpg](https://commons.wikimedia.org/wiki/File:SnowyOwlAmericanBlackDuck.jpg) · 2319×1545 · CC BY-SA 3.0 · Chuck Homler d/b/a Focus On Wildlife · featured picture, quality image, in the species' Wikipedia article
 
-> Национальный парк Русская Арктика: северная часть архипелага Новая Земля,Новая Земля, Архангельская область
+> A Snowy Owl carries its kill, an American Black Duck, in "the pool" in Biddeford Pool, Maine . (Low Tide)
 
 ### 40B
 
-![Snowy Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Snowy_Owl_%2851358007984%29.jpg/500px-Snowy_Owl_%2851358007984%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/B%C3%BAho_nival_%28Bubo_scandiacus%29%2C_Arcos_de_la_Frontera%2C_C%C3%A1diz%2C_Espa%C3%B1a%2C_2015-12-08%2C_DD_03.JPG/500px-B%C3%BAho_nival_%28Bubo_scandiacus%29%2C_Arcos_de_la_Frontera%2C_C%C3%A1diz%2C_Espa%C3%B1a%2C_2015-12-08%2C_DD_03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Snowy Owl (51358007984).jpg](<https://commons.wikimedia.org/wiki/File:Snowy_Owl_(51358007984).jpg>) · 8192×5464 · Public domain · USFWSAlaska
+[Búho nival (Bubo scandiacus), Arcos de la Frontera, Cádiz, España, 2015-12-08, DD 03.JPG](<https://commons.wikimedia.org/wiki/File:B%C3%BAho_nival_(Bubo_scandiacus),_Arcos_de_la_Frontera,_C%C3%A1diz,_Espa%C3%B1a,_2015-12-08,_DD_03.JPG>) · 4270×2786 · CC BY-SA 4.0 · Diego Delso · featured picture, quality image, used on 41 Wikimedia pages, reads as captive or in-hand
 
-> Snowy owl takes a pause on the arctic tundra. Credit: USFWS
+> Portrait of a female Snowy owl ( Bubo scandiacus ), Arcos de la Frontera , Cádiz, Spain. The example is captive; snowy owls are native to Arctic regions of North America and Eurasia.
 
 ### 40C
 
-![Snowy Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Snowy_owl_%2851101442402%29.jpg/500px-Snowy_owl_%2851101442402%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Bubo_scandiacus_-_Karlsruhe_Zoo_01.jpg/500px-Bubo_scandiacus_-_Karlsruhe_Zoo_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Snowy owl (51101442402).jpg](<https://commons.wikimedia.org/wiki/File:Snowy_owl_(51101442402).jpg>) · 5562×3573 · Public domain · USFWSAlaska
+[Bubo scandiacus - Karlsruhe Zoo 01.jpg](https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_-_Karlsruhe_Zoo_01.jpg) · 4610×2482 · CC BY-SA 3.0 · H. Zell · featured picture, quality image, used on 11 Wikimedia pages, reads as captive or in-hand
 
-> A snowy owl perched on a hummock in the tundra. Photo by Peter Pearsall/USFWS
+> Bubo scandiacus (Linnaeus, 1758) , Snowy owl; Zoologischer Stadtgarten Karlsruhe , Karlsruhe , Germany . Deutsch: Bubo scandiacus (Linnaeus, 1758) , Schnee-Eule; Zoologischer Stadtgarten Karlsruhe , Karlsruhe , Deutschland .
 
 ### 40D
 
-![Snowy Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Snowy_owl_%2853554877412%29.jpg/500px-Snowy_owl_%2853554877412%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Snowy_Owl_%28240866707%29.jpeg/500px-Snowy_Owl_%28240866707%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Snowy owl (53554877412).jpg](<https://commons.wikimedia.org/wiki/File:Snowy_owl_(53554877412).jpg>) · 6000×4001 · Public domain · U.S. Fish and Wildlife Service - Midwest Region
+[Snowy Owl (240866707).jpeg](<https://commons.wikimedia.org/wiki/File:Snowy_Owl_(240866707).jpeg>) · 2048×1463 · CC BY 3.0 · Jongsun Lee · in the species' Wikipedia article
 
-> We spotted this snowy owl perched in a tree in St. Louis County, Minnesota. Photo by Courtney Celley/USFWS.
+> 500px provided description: Snowy Owl is Rare bird in New Jersey. This snowy owl has an electronic tracking device on their back. So I assume she is Higbee or Island Beach. The male is all white and larger then the female. The female has br
 
 ### 40E
 
-![Snowy Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Snowy_owl_%2853556116894%29.jpg/500px-Snowy_owl_%2853556116894%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Snowy_owl_%28Bubo_scandiacus%29%2C_Vlieland%2C_Netherlands.jpg/500px-Snowy_owl_%28Bubo_scandiacus%29%2C_Vlieland%2C_Netherlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Snowy owl (53556116894).jpg](<https://commons.wikimedia.org/wiki/File:Snowy_owl_(53556116894).jpg>) · 6000×4000 · Public domain · USFWS Midwest Region from Midwest Region, United States
+[Snowy owl (Bubo scandiacus), Vlieland, Netherlands.jpg](<https://commons.wikimedia.org/wiki/File:Snowy_owl_(Bubo_scandiacus),_Vlieland,_Netherlands.jpg>) · 3815×2543 · CC BY 2.0 · Frank Vassen · in the species' Wikipedia article
 
-> We spotted this snowy owl perched in a tree in Minnesota. Photo by Courtney Celley/USFWS.
+> Snowy owl ( Bubo scandiacus ) at Vlieland, Netherlands. Photograph taken by digiscoping with Swarovski ATM 80 HD 30 X, Nikon1 V1 + 11-27,5 mm lens (Adapter DCB)
 
 ### 40F
 
-![Snowy Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Snowy_owl_%2854266584638%29.jpg/500px-Snowy_owl_%2854266584638%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Snowy Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Snowy_Owl_Black_Duck_Wings_Open.png/500px-Snowy_Owl_Black_Duck_Wings_Open.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Snowy owl (54266584638).jpg](<https://commons.wikimedia.org/wiki/File:Snowy_owl_(54266584638).jpg>) · 7700×5134 · Public domain · U.S. Fish and Wildlife Service - Midwest Region
+[Snowy Owl Black Duck Wings Open.png](https://commons.wikimedia.org/wiki/File:Snowy_Owl_Black_Duck_Wings_Open.png) · 3077×2051 · CC BY-SA 4.0 · Chuck Homler d/b/a Focus On Wildlife · quality image, used in an English Wikipedia article
 
-> We spotted this snowy owl perched on a utility pole in St. Louis County, Minnesota. Photo by Courtney Celley/USFWS.
+> A Snowy Owl with an American Black Duck in Biddeford, ME.
 
 ## Week 41 — Great Horned Owl
 
@@ -433,51 +433,51 @@ _Bubo virginianus_ · [Category:Bubo virginianus](https://commons.wikimedia.org/
 
 ### 41A
 
-![Great Horned Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg/500px-20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/004_Great_horned_owl_under_a_Pink_Ip%C3%AA_tree_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg/500px-004_Great_horned_owl_under_a_Pink_Ip%C3%AA_tree_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20260808 great horned owl cedar hill cemetery PD03701.jpg](https://commons.wikimedia.org/wiki/File:20260808_great_horned_owl_cedar_hill_cemetery_PD03701.jpg) · 4039×4039 · CC BY-SA 4.0 · Paul Danese · quality image
+[004 Great horned owl under a Pink Ipê tree in Encontro das Águas State Park Photo by Giles Laurent.jpg](https://commons.wikimedia.org/wiki/File:004_Great_horned_owl_under_a_Pink_Ip%C3%AA_tree_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg) · 4588×3059 · CC BY-SA 4.0 · Giles Laurent · featured picture, quality image, used on 7 Wikimedia pages
 
-> Great horned owl. Cedar Hill Cemetery. Hartford, CT USA
+> Great Horned Owl standing under a Pink Ipê tree in Parque Estadual Encontro das Águas, Brazil
 
 ### 41B
 
-![Great Horned Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Blackwater_nwr_4.17.21_DSC_8835.jpg/500px-Blackwater_nwr_4.17.21_DSC_8835.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/0_Bubo_virginianus_-_Grand-duc_d%27Am%C3%A9rique_%281%29.JPG/500px-0_Bubo_virginianus_-_Grand-duc_d%27Am%C3%A9rique_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blackwater nwr 4.17.21 DSC 8835.jpg](https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8835.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[0 Bubo virginianus - Grand-duc d'Amérique (1).JPG](<https://commons.wikimedia.org/wiki/File:0_Bubo_virginianus_-_Grand-duc_d%27Am%C3%A9rique_(1).JPG>) · 5184×3456 · CC BY 4.0 · Jean-Pol GRANDMONT · quality image, in the species' Wikipedia article, reads as captive or in-hand
 
-> Bubo virginianus
+> Bubo virginianus - Grand-duc d'Amérique ou Grand-duc de Virginie.
 
 ### 41C
 
-![Great Horned Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Blackwater_nwr_4.17.21_DSC_9109.jpg/500px-Blackwater_nwr_4.17.21_DSC_9109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Great_Horned_Owl.jpg/500px-Great_Horned_Owl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blackwater nwr 4.17.21 DSC 9109.jpg](https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_9109.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[Great Horned Owl.jpg](https://commons.wikimedia.org/wiki/File:Great_Horned_Owl.jpg) · 4800×3200 · CC BY-SA 3.0 · Anton Bielousov · in the species' Wikipedia article
 
-> Bubo virginianus
+> A Coastal Great Horned Owl close-up (Grouse Mountain, Vancouver, BC), B. v. saturatus
 
 ### 41D
 
-![Great Horned Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Blackwater_nwr_4.17.21_DSC_8893.jpg/500px-Blackwater_nwr_4.17.21_DSC_8893.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Bubo_virginianus_-near_Tule_Lake_National_Wildlife_Refuge%2C_Oregan%2C_USA_-juvenile-8.jpg/500px-Bubo_virginianus_-near_Tule_Lake_National_Wildlife_Refuge%2C_Oregan%2C_USA_-juvenile-8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blackwater nwr 4.17.21 DSC 8893.jpg](https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8893.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[Bubo virginianus -near Tule Lake National Wildlife Refuge, Oregan, USA -juvenile-8.jpg](https://commons.wikimedia.org/wiki/File:Bubo_virginianus_-near_Tule_Lake_National_Wildlife_Refuge,_Oregan,_USA_-juvenile-8.jpg) · 1024×683 · CC BY 2.0 · Alan Vernon · in the species' Wikipedia article
 
-> Bubo virginianus
+> Juvenile Great Horned Owls near Tule Lake National Wildlife Refuge, Oregon, USA.
 
 ### 41E
 
-![Great Horned Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Blackwater_nwr_4.17.21_DSC_9069.jpg/500px-Blackwater_nwr_4.17.21_DSC_9069.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Great_Horned_Owl_at_twilight%2C_Mojave_Desert.jpg/500px-Great_Horned_Owl_at_twilight%2C_Mojave_Desert.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blackwater nwr 4.17.21 DSC 9069.jpg](https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_9069.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[Great Horned Owl at twilight, Mojave Desert.jpg](https://commons.wikimedia.org/wiki/File:Great_Horned_Owl_at_twilight,_Mojave_Desert.jpg) · 1599×1141 · CC BY-SA 4.0 · Jessie Eastland · in the species' Wikipedia article
 
-> Bubo virginianus
+> Great horned owl at twilight, sitting on a Joshua tree in the Mojave desert, USA.
 
 ### 41F
 
-![Great Horned Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Blackwater_nwr_4.17.21_DSC_8925.jpg/500px-Blackwater_nwr_4.17.21_DSC_8925.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Great Horned Owl candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/PSM_V41_D334_Great_horned_and_snowdon_owls.jpg/500px-PSM_V41_D334_Great_horned_and_snowdon_owls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blackwater nwr 4.17.21 DSC 8925.jpg](https://commons.wikimedia.org/wiki/File:Blackwater_nwr_4.17.21_DSC_8925.jpg) · 5568×3712 · CC BY 2.0 · lwolfartist
+[PSM V41 D334 Great horned and snowdon owls.jpg](https://commons.wikimedia.org/wiki/File:PSM_V41_D334_Great_horned_and_snowdon_owls.jpg) · 1560×973 · Public domain · Unknown author Unknown author · in the species' Wikipedia article
 
-> Bubo virginianus
+> Great horned and Snowdon owls
 
 ## Week 42 — Osprey
 
@@ -485,48 +485,48 @@ _Pandion haliaetus_ · [Category:Pandion haliaetus](https://commons.wikimedia.or
 
 ### 42A
 
-![Osprey candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Balbuzard_pecheur_Lac_de_Tunis.jpg/500px-Balbuzard_pecheur_Lac_de_Tunis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ospreys_in_Sandy_Hook_%2870331%29.jpg/500px-Ospreys_in_Sandy_Hook_%2870331%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Balbuzard pecheur Lac de Tunis.jpg](https://commons.wikimedia.org/wiki/File:Balbuzard_pecheur_Lac_de_Tunis.jpg) · 4384×2923 · CC BY-SA 4.0 · El Golli Mohamed · featured picture, quality image, valued image
+[Ospreys in Sandy Hook (70331).jpg](<https://commons.wikimedia.org/wiki/File:Ospreys_in_Sandy_Hook_(70331).jpg>) · 3564×2352 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Balbuzard pêcheur (Pandion haliaetus) au lac sud de Tunis
+> Ospreys on a platform in Sandy Hook, New Jersey
 
 ### 42B
 
-![Osprey candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/20250724_osprey_wethersfield_cove201445.jpg/500px-20250724_osprey_wethersfield_cove201445.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Osprey_on_nest.jpg/500px-Osprey_on_nest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20250724 osprey wethersfield cove201445.jpg](https://commons.wikimedia.org/wiki/File:20250724_osprey_wethersfield_cove201445.jpg) · 5635×5635 · CC BY-SA 4.0 · Paul Danese · quality image
+[Osprey on nest.jpg](https://commons.wikimedia.org/wiki/File:Osprey_on_nest.jpg) · 4269×3080 · CC BY-SA 4.0 · RoySmith · quality image, in the species' Wikipedia article
 
-> Osprey. Wethersfield Cove. Wethersfield, CT USA
+> Osprey (Pandion haliaetus) standing on nest. City Island, Bronx, New York
 
 ### 42C
 
-![Osprey candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_%2889%29.jpg/500px-Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_%2889%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Osprey_Perched_Snag_Heislerville.jpg/500px-Osprey_Perched_Snag_Heislerville.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Bird osprey in nest Flatty Creek trail Goose Creek State Park Kristie Gianopulos (89).jpg](<https://commons.wikimedia.org/wiki/File:Bird_osprey_in_nest_Flatty_Creek_trail_Goose_Creek_State_Park_Kristie_Gianopulos_(89).jpg>) · 5184×3888 · CC BY 2.0 · ncwetlands.org
+[Osprey Perched Snag Heislerville.jpg](https://commons.wikimedia.org/wiki/File:Osprey_Perched_Snag_Heislerville.jpg) · 3362×2241 · CC BY-SA 4.0 · Chuck Homler / Focus On Wildlife · quality image, in the species' Wikipedia article
 
-> Goose Creek State Park
+> OspreySnagHeislervilleWMA
 
 ### 42D
 
-![Osprey candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Osprey_%2824638852089%29.jpg/500px-Osprey_%2824638852089%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Pandion_haliaetus_-San_Francisco_Bay%2C_California%2C_USA_-head-8.jpg/500px-Pandion_haliaetus_-San_Francisco_Bay%2C_California%2C_USA_-head-8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Osprey (24638852089).jpg](<https://commons.wikimedia.org/wiki/File:Osprey_(24638852089).jpg>) · 5389×3592 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Pandion haliaetus -San Francisco Bay, California, USA -head-8.jpg](https://commons.wikimedia.org/wiki/File:Pandion_haliaetus_-San_Francisco_Bay,_California,_USA_-head-8.jpg) · 3421×2308 · CC BY 2.0 · Simon Carrasco from Alameda, CA · in the species' Wikipedia article
 
-> Osprey
+> An Osprey in San Francisco Bay, California, USA.
 
 ### 42E
 
-![Osprey candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Osprey_%2824913187711%29.jpg/500px-Osprey_%2824913187711%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Osprey_prepare_to_mate.jpg/500px-Osprey_prepare_to_mate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Osprey (24913187711).jpg](<https://commons.wikimedia.org/wiki/File:Osprey_(24913187711).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Osprey prepare to mate.jpg](https://commons.wikimedia.org/wiki/File:Osprey_prepare_to_mate.jpg) · 2104×1504 · CC BY 3.0 · Matt edmonds at en.wikipedia · in the species' Wikipedia article
 
-> Osprey
+> Osprey prepare to mate on their nest. Florida.
 
 ### 42F
 
-![Osprey candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Osprey_%2824638471119%29.jpg/500px-Osprey_%2824638471119%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Osprey candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Osprey_Fish_Nictitating.png/500px-Osprey_Fish_Nictitating.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Osprey (24638471119).jpg](<https://commons.wikimedia.org/wiki/File:Osprey_(24638471119).jpg>) · 5760×3840 · CC BY 2.0 · Melissa McMasters from Memphis, TN, United States
+[Osprey Fish Nictitating.png](https://commons.wikimedia.org/wiki/File:Osprey_Fish_Nictitating.png) · 7000×5000 · CC BY-SA 4.0 · Charles Homler d/b/a FocusOnWildlife · in the species' Wikipedia article
 
-> Osprey
+> An Osprey with an American Gizzard Shad caught in the Maurice River. Note that while shaking off water the osprey protected its eyes with its nictitating membrane, still visible.

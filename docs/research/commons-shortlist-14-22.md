@@ -13,65 +13,65 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ## Week 14 — Ruby-throated Hummingbird
 
-*Archilochus colubris* · [Category:Archilochus colubris](https://commons.wikimedia.org/wiki/Category%3AArchilochus%20colubris) · 200 files examined, 6 shortlisted
+_Archilochus colubris_ · [Category:Archilochus colubris](https://commons.wikimedia.org/wiki/Category%3AArchilochus%20colubris) · 200 files examined, 6 shortlisted
 
 ### 14A
 
 ![Ruby-throated Hummingbird candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Archilochus_colubris_%28Male%29.jpg/500px-Archilochus_colubris_%28Male%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Archilochus colubris (Male).jpg](https://commons.wikimedia.org/wiki/File:Archilochus_colubris_(Male).jpg) · 2862×1968 · CC BY 3.0 · Joe Schneid , Louisville, Kentucky · featured picture, quality image, valued image, used in an English Wikipedia article
+[Archilochus colubris (Male).jpg](<https://commons.wikimedia.org/wiki/File:Archilochus_colubris_(Male).jpg>) · 2862×1968 · CC BY 3.0 · Joe Schneid , Louisville, Kentucky · featured picture, quality image, valued image, used in an English Wikipedia article
 
 > Male ruby-throated hummingbird ( Archilochus colubris ) guarding his territory from the top of a tomato stake. He will chase off any other hummingbirds that try to feed in "his" area.
 
 ### 14B
 
-![Ruby-throated Hummingbird candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Ruby-throated_hummingbird_%28Archilochus_colubris%29_female_Palopo.jpg/500px-Ruby-throated_hummingbird_%28Archilochus_colubris%29_female_Palopo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-throated Hummingbird candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/RubyThroatedHummingbird%28Crop%29.jpg/500px-RubyThroatedHummingbird%28Crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Ruby-throated hummingbird (Archilochus colubris) female Palopo.jpg](https://commons.wikimedia.org/wiki/File:Ruby-throated_hummingbird_(Archilochus_colubris)_female_Palopo.jpg) · 3834×3834 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
+[RubyThroatedHummingbird(Crop).jpg](<https://commons.wikimedia.org/wiki/File:RubyThroatedHummingbird(Crop).jpg>) · 2873×2052 · CC BY 3.0 · Joe Schneid , Louisville, Kentucky · quality image, valued image, in the species' Wikipedia article
 
-> Ruby-throated hummingbird ( Archilochus colubris ) female, Casa Palopó, Suchitepéquez Department, Guatemala
+> A female ruby-throated hummingbird ( Archilochus colubris ) sipping nectar from scarlet beebalm ( Monarda didyma ).
 
 ### 14C
 
-![Ruby-throated Hummingbird candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Ruby-throated_Hummingbird%2C_Macdonald%2C_Meredith_and_Aberdeen_Additional%2C_ON%2C_Canada_imported_from_iNaturalist_photo_314800928_%28cropped%29.jpg/500px-Ruby-throated_Hummingbird%2C_Macdonald%2C_Meredith_and_Aberdeen_Additional%2C_ON%2C_Canada_imported_from_iNaturalist_photo_314800928_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-throated Hummingbird candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Archilochus_colubris_CT2.jpg/500px-Archilochus_colubris_CT2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Ruby-throated Hummingbird, Macdonald, Meredith and Aberdeen Additional, ON, Canada imported from iNaturalist photo 314800928 (cropped).jpg](https://commons.wikimedia.org/wiki/File:Ruby-throated_Hummingbird,_Macdonald,_Meredith_and_Aberdeen_Additional,_ON,_Canada_imported_from_iNaturalist_photo_314800928_(cropped).jpg) · 1638×1229 · CC0 · no rights reserved · in the species' Wikipedia article
+[Archilochus colubris CT2.jpg](https://commons.wikimedia.org/wiki/File:Archilochus_colubris_CT2.jpg) · 2388×1592 · CC BY-SA 3.0 · Cephas · featured picture, quality image, used on 10 Wikimedia pages
 
-> Photo of Ruby-throated Hummingbird (undefined) uploaded from iNaturalist .
+> Ruby-throated Hummingbird ( Archilochus colubris ), male, Cap Tourmente National Wildlife Area , Quebec, Canada.
 
 ### 14D
 
-![Ruby-throated Hummingbird candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Ruby-throated_hummingbird_on_nest_01.jpg/500px-Ruby-throated_hummingbird_on_nest_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-throated Hummingbird candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Ruby-throated_hummingbird_%28Archilochus_colubris%29_female_Palopo.jpg/500px-Ruby-throated_hummingbird_%28Archilochus_colubris%29_female_Palopo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Ruby-throated hummingbird on nest 01.jpg](https://commons.wikimedia.org/wiki/File:Ruby-throated_hummingbird_on_nest_01.jpg) · 1709×1388 · CC BY-SA 4.0 · Lorie Shaull · in the species' Wikipedia article
+[Ruby-throated hummingbird (Archilochus colubris) female Palopo.jpg](<https://commons.wikimedia.org/wiki/File:Ruby-throated_hummingbird_(Archilochus_colubris)_female_Palopo.jpg>) · 3834×3834 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
 
-> A female Ruby-throated hummingbird in the process of nest building in Aitkin, Minnesota
+> Ruby-throated hummingbird ( Archilochus colubris ) female, Casa Palopó, Suchitepéquez Department, Guatemala
 
 ### 14E
 
-![Ruby-throated Hummingbird candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-throated Hummingbird candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Ruby-throated_Hummingbird_%28Archilochus_colubris%29_RWD4.jpg/500px-Ruby-throated_Hummingbird_%28Archilochus_colubris%29_RWD4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20250813 ruby throated hummingbird pleasant valley PD204954.jpg](https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204954.jpg) · 7100×4733 · CC BY-SA 4.0 · Paul Danese · quality image
+[Ruby-throated Hummingbird (Archilochus colubris) RWD4.jpg](<https://commons.wikimedia.org/wiki/File:Ruby-throated_Hummingbird_(Archilochus_colubris)_RWD4.jpg>) · 1919×1439 · CC BY-SA 3.0 · Dick Daniels ( http://carolinabirds.org/ ) · in the species' Wikipedia article
 
-> Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA
+> Ruby-throated Hummingbird (Archilochus colubris) at the flower gardens of the Biltmore Estate in Asheville, North Carolina
 
 ### 14F
 
-![Ruby-throated Hummingbird candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg/500px-20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-throated Hummingbird candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Ruby-Throated_Hummingbird.png/500px-Ruby-Throated_Hummingbird.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[20250813 ruby throated hummingbird pleasant valley PD204955.jpg](https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204955.jpg) · 6326×4217 · CC BY-SA 4.0 · Paul Danese · quality image
+[Ruby-Throated Hummingbird.png](https://commons.wikimedia.org/wiki/File:Ruby-Throated_Hummingbird.png) · 2075×2075 · CC BY-SA 4.0 · Henley Quadling · in the species' Wikipedia article
 
-> Ruby-throated Hummingbird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA
+> Ruby-Throated Hummingbird perched on a branch, captured at Lake Winnsboro in East Texas.
 
 ## Week 15 — Ruby-crowned Kinglet
 
-*Corthylio calendula* · [Category:Corthylio calendula](https://commons.wikimedia.org/wiki/Category%3ACorthylio%20calendula) · 200 files examined, 6 shortlisted
+_Corthylio calendula_ · [Category:Corthylio calendula](https://commons.wikimedia.org/wiki/Category%3ACorthylio%20calendula) · 200 files examined, 6 shortlisted
 
 ### 15A
 
 ![Ruby-crowned Kinglet candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Ruby-crowned_kinglet_%2814077%29.jpg/500px-Ruby-crowned_kinglet_%2814077%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Ruby-crowned kinglet (14077).jpg](https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_(14077).jpg) · 3295×2414 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
+[Ruby-crowned kinglet (14077).jpg](<https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_(14077).jpg>) · 3295×2414 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
 > Ruby-crowned kinglet in Prospect Park, Brooklyn, NY, USA
 
@@ -79,103 +79,103 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![Ruby-crowned Kinglet candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Ruby-crowned_kinglet_in_Green-Wood_Cemetery_%2855761%29.jpg/500px-Ruby-crowned_kinglet_in_Green-Wood_Cemetery_%2855761%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Ruby-crowned kinglet in Green-Wood Cemetery (55761).jpg](https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_in_Green-Wood_Cemetery_(55761).jpg) · 3582×2597 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used in an English Wikipedia article
+[Ruby-crowned kinglet in Green-Wood Cemetery (55761).jpg](<https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_in_Green-Wood_Cemetery_(55761).jpg>) · 3582×2597 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, used in an English Wikipedia article
 
 > Ruby-crowned Kinglet, male, in Green-Wood Cemetery
 
 ### 15C
 
-![Ruby-crowned Kinglet candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Regulus_calendula_Dobak.jpg/500px-Regulus_calendula_Dobak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-crowned Kinglet candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Ruby-crowned_Kinglet.jpg/500px-Ruby-crowned_Kinglet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Ruby-crowned Kinglet.jpg](https://commons.wikimedia.org/wiki/File:Ruby-crowned_Kinglet.jpg) · 1723×1280 · CC BY-SA 4.0 · TonyCastro · in the species' Wikipedia article
+
+> Twin Falls area - Idaho
+
+### 15D
+
+![Ruby-crowned Kinglet candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Regulus_calendula-perching.jpg/500px-Regulus_calendula-perching.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Regulus calendula-perching.jpg](https://commons.wikimedia.org/wiki/File:Regulus_calendula-perching.jpg) · 1200×900 · CC BY-SA 4.0 · Peterwchen · in the species' Wikipedia article
+
+> Ruby-crowned kinglet at Mark Twain Park, Chicago , Illinois
+
+### 15E
+
+![Ruby-crowned Kinglet candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Regulus_calendula_Dobak.jpg/500px-Regulus_calendula_Dobak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Regulus calendula Dobak.jpg](https://commons.wikimedia.org/wiki/File:Regulus_calendula_Dobak.jpg) · 1011×850 · CC BY 2.0 · dobak on Flickr · in the species' Wikipedia article
 
 > Regulus calendula
 
-### 15D
+### 15F
 
-![Ruby-crowned Kinglet candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Regulus_calendula_MP_3.jpg/500px-Regulus_calendula_MP_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Ruby-crowned Kinglet candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Regulus_calendula_MP_3.jpg/500px-Regulus_calendula_MP_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Regulus calendula MP 3.jpg](https://commons.wikimedia.org/wiki/File:Regulus_calendula_MP_3.jpg) · 2856×2856 · CC BY-SA 4.0 · Cephas · in the species' Wikipedia article
 
 > Ruby-crowned kinglet, Réserve naturelle du Marais-Léon-Provancher, Quebec, Canada
 
-### 15E
-
-![Ruby-crowned Kinglet candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg/500px-20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[20251015 ruby crowned kinglet matthei botanical garden PD204596.jpg](https://commons.wikimedia.org/wiki/File:20251015_ruby_crowned_kinglet_matthei_botanical_garden_PD204596.jpg) · 5978×3985 · CC BY-SA 4.0 · Paul Danese · quality image
-
-> Ruby crowned Kinglet. Matthaei Botanical Gardens. Ann Arbor, MI USA
-
-### 15F
-
-![Ruby-crowned Kinglet candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Ruby-crowned_kinglet_in_Green-Wood_Cemetery_%2855764%29.jpg/500px-Ruby-crowned_kinglet_in_Green-Wood_Cemetery_%2855764%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Ruby-crowned kinglet in Green-Wood Cemetery (55764).jpg](https://commons.wikimedia.org/wiki/File:Ruby-crowned_kinglet_in_Green-Wood_Cemetery_(55764).jpg) · 3119×2199 · CC BY-SA 4.0 · Rhododendrites · quality image
-
-> Ruby-crowned kinglet in Green-Wood Cemetery
-
 ## Week 16 — Black-capped Chickadee
 
-*Poecile atricapillus* · [Category:Poecile atricapillus](https://commons.wikimedia.org/wiki/Category%3APoecile%20atricapillus) · 200 files examined, 6 shortlisted
+_Poecile atricapillus_ · [Category:Poecile atricapillus](https://commons.wikimedia.org/wiki/Category%3APoecile%20atricapillus) · 200 files examined, 6 shortlisted
 
 ### 16A
 
-![Black-capped Chickadee candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Black-capped_chickadee_%2833729%29.jpg/500px-Black-capped_chickadee_%2833729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Black-capped Chickadee candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Black-capped_chickadee_%2841417%29.jpg/500px-Black-capped_chickadee_%2841417%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Black-capped chickadee (33729).jpg](https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(33729).jpg) · 2961×3208 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+[Black-capped chickadee (41417).jpg](<https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(41417).jpg>) · 3604×2461 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Black-capped chickadee at a feeder in Green-Wood Cemetery
+> Black-capped chickadee foraging in Central Park
 
 ### 16B
 
-![Black-capped Chickadee candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Black-capped_Chickadee_Stratham_NH%2C_Aug_2013.jpg/500px-Black-capped_Chickadee_Stratham_NH%2C_Aug_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Black-capped Chickadee candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Black-capped_chickadee_%2833729%29.jpg/500px-Black-capped_chickadee_%2833729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Black-capped chickadee (33729).jpg](<https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(33729).jpg>) · 2961×3208 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+
+> Black-capped chickadee at a feeder in Green-Wood Cemetery
+
+### 16C
+
+![Black-capped Chickadee candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Poecile-atricapilla-001.jpg/500px-Poecile-atricapilla-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Poecile-atricapilla-001.jpg](https://commons.wikimedia.org/wiki/File:Poecile-atricapilla-001.jpg) · 1024×1024 · CC BY-SA 3.0 · No machine-readable author provided. Mdf assumed (based on copyright claims). · in the species' Wikipedia article
+
+> Black-capped Chickadee ( Poecile atricapillus ) in Algonquin Provincial Park, Canada
+
+### 16D
+
+![Black-capped Chickadee candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Poecile_atricapillus_CT3.jpg/500px-Poecile_atricapillus_CT3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Poecile atricapillus CT3.jpg](https://commons.wikimedia.org/wiki/File:Poecile_atricapillus_CT3.jpg) · 3096×2193 · CC BY-SA 3.0 · Cephas · quality image, used in an English Wikipedia article
+
+> Black-capped Chickadee , Cap Tourmente National Wildlife Area , Quebec, Canada
+
+### 16E
+
+![Black-capped Chickadee candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/20240316_black_capped_chickadee_casa_PD204423.jpg/500px-20240316_black_capped_chickadee_casa_PD204423.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[20240316 black capped chickadee casa PD204423.jpg](https://commons.wikimedia.org/wiki/File:20240316_black_capped_chickadee_casa_PD204423.jpg) · 3946×3946 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
+
+> black capped chickadee, Glastonbury, CT USA
+
+### 16F
+
+![Black-capped Chickadee candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Black-capped_Chickadee_Stratham_NH%2C_Aug_2013.jpg/500px-Black-capped_Chickadee_Stratham_NH%2C_Aug_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Black-capped Chickadee Stratham NH, Aug 2013.jpg](https://commons.wikimedia.org/wiki/File:Black-capped_Chickadee_Stratham_NH,_Aug_2013.jpg) · 2814×1876 · CC BY-SA 4.0 · Self. · in the species' Wikipedia article
 
 > Photograph of a Black-capped Chickadee clinging to a wire.
 
-### 16C
-
-![Black-capped Chickadee candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Black_capped_chickadee_hatchlings.jpg/500px-Black_capped_chickadee_hatchlings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Black capped chickadee hatchlings.jpg](https://commons.wikimedia.org/wiki/File:Black_capped_chickadee_hatchlings.jpg) · 2048×1153 · CC BY 4.0 · dan_macneal · in the species' Wikipedia article
-
-> Two hatchlings with no feathers
-
-### 16D
-
-![Black-capped Chickadee candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Black_Capped_Chickadee.jpg/500px-Black_Capped_Chickadee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Black Capped Chickadee.jpg](https://commons.wikimedia.org/wiki/File:Black_Capped_Chickadee.jpg) · 6000×4000 · CC BY-SA 4.0 · John Stockla · quality image
-
-> A black-capped chickadee in Connecticut.
-
-### 16E
-
-![Black-capped Chickadee candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg/500px-20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[20241004 black capped chickadee and american goldfinch pleasant valley PD207710.jpg](https://commons.wikimedia.org/wiki/File:20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg) · 7972×4484 · CC BY-SA 4.0 · Paul Danese · quality image
-
-> Black Capped Chickadee & American Goldfinch. Pleasant Valley Wildlife Sanctuary, Lenox, MA USA
-
-### 16F
-
-![Black-capped Chickadee candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Black-capped_chickadee_%2815014%29.jpg/500px-Black-capped_chickadee_%2815014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Black-capped chickadee (15014).jpg](https://commons.wikimedia.org/wiki/File:Black-capped_chickadee_(15014).jpg) · 3129×2237 · CC BY-SA 4.0 · Rhododendrites · quality image
-
-> Black-capped chicadee
-
 ## Week 17 — Carolina Wren
 
-*Thryothorus ludovicianus* · [Category:Thryothorus ludovicianus](https://commons.wikimedia.org/wiki/Category%3AThryothorus%20ludovicianus) · 200 files examined, 6 shortlisted
+_Thryothorus ludovicianus_ · [Category:Thryothorus ludovicianus](https://commons.wikimedia.org/wiki/Category%3AThryothorus%20ludovicianus) · 200 files examined, 6 shortlisted
 
 ### 17A
 
 ![Carolina Wren candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Carolina_wren_%2814391%29.jpg/500px-Carolina_wren_%2814391%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Carolina wren (14391).jpg](https://commons.wikimedia.org/wiki/File:Carolina_wren_(14391).jpg) · 2964×2310 · CC BY-SA 4.0 · Rhododendrites · quality image, in the species' Wikipedia article
+[Carolina wren (14391).jpg](<https://commons.wikimedia.org/wiki/File:Carolina_wren_(14391).jpg>) · 2964×2310 · CC BY-SA 4.0 · Rhododendrites · quality image, in the species' Wikipedia article
 
 > Carolina wren in Prospect Park
 
@@ -207,7 +207,7 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![Carolina Wren candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Carolina_Wren_%287318066894%29.jpg/500px-Carolina_Wren_%287318066894%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Carolina Wren (7318066894).jpg](https://commons.wikimedia.org/wiki/File:Carolina_Wren_(7318066894).jpg) · 1516×1082 · CC BY 2.0 · CheepShot · in the species' Wikipedia article
+[Carolina Wren (7318066894).jpg](<https://commons.wikimedia.org/wiki/File:Carolina_Wren_(7318066894).jpg>) · 1516×1082 · CC BY 2.0 · CheepShot · in the species' Wikipedia article
 
 > Rutland Township Forest Preserve off of Big Timber Rd. east of RT. 47 and northwest of RT. 72
 
@@ -221,65 +221,65 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ## Week 18 — Tufted Titmouse
 
-*Baeolophus bicolor* · [Category:Baeolophus bicolor](https://commons.wikimedia.org/wiki/Category%3ABaeolophus%20bicolor) · 200 files examined, 6 shortlisted
+_Baeolophus bicolor_ · [Category:Baeolophus bicolor](https://commons.wikimedia.org/wiki/Category%3ABaeolophus%20bicolor) · 200 files examined, 6 shortlisted
 
 ### 18A
 
-![Tufted Titmouse candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Tufted_titmouse_in_Prospect_Park_%2853493%29.jpg/500px-Tufted_titmouse_in_Prospect_Park_%2853493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Tufted Titmouse candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Tufted_titmouse_%2884917%29.jpg/500px-Tufted_titmouse_%2884917%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Tufted titmouse in Prospect Park (53493).jpg](https://commons.wikimedia.org/wiki/File:Tufted_titmouse_in_Prospect_Park_(53493).jpg) · 2884×2279 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
+[Tufted titmouse (84917).jpg](<https://commons.wikimedia.org/wiki/File:Tufted_titmouse_(84917).jpg>) · 4255×3103 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Tufted titmouse in Prospect Park
+> Tufted titmouse in Central Park
 
 ### 18B
 
-![Tufted Titmouse candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Tufted_titmouse_fluffed_up_%2846418%29crop.jpg/500px-Tufted_titmouse_fluffed_up_%2846418%29crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Tufted Titmouse candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Tufted_titmouse_in_Prospect_Park_%2853493%29.jpg/500px-Tufted_titmouse_in_Prospect_Park_%2853493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Tufted titmouse fluffed up (46418)crop.jpg](https://commons.wikimedia.org/wiki/File:Tufted_titmouse_fluffed_up_(46418)crop.jpg) · 2572×2870 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+[Tufted titmouse in Prospect Park (53493).jpg](<https://commons.wikimedia.org/wiki/File:Tufted_titmouse_in_Prospect_Park_(53493).jpg>) · 2884×2279 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Tufted titmouse fluffed up with beak open in the Central Park Ramble (New York City, NY, USA)
+> Tufted titmouse in Prospect Park
 
 ### 18C
 
-![Tufted Titmouse candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/A_tufted_titmouse_eating_an_insect.jpg/500px-A_tufted_titmouse_eating_an_insect.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Tufted Titmouse candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Tufted_titmouse_fluffed_up_%2846418%29crop.jpg/500px-Tufted_titmouse_fluffed_up_%2846418%29crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Tufted titmouse fluffed up (46418)crop.jpg](<https://commons.wikimedia.org/wiki/File:Tufted_titmouse_fluffed_up_(46418)crop.jpg>) · 2572×2870 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+
+> Tufted titmouse fluffed up with beak open in the Central Park Ramble (New York City, NY, USA)
+
+### 18D
+
+![Tufted Titmouse candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/A_tufted_titmouse_eating_an_insect.jpg/500px-A_tufted_titmouse_eating_an_insect.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [A tufted titmouse eating an insect.jpg](https://commons.wikimedia.org/wiki/File:A_tufted_titmouse_eating_an_insect.jpg) · 4485×2993 · CC BY 4.0 · Wcedmisten · in the species' Wikipedia article
 
 > A tufted titmouse eating an insect, in Charlottesville, Virginia
 
-### 18D
+### 18E
 
-![Tufted Titmouse candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/I_am_addicted_to_their_eyes%21_%283986659743%29.jpg/500px-I_am_addicted_to_their_eyes%21_%283986659743%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Tufted Titmouse candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/I_am_addicted_to_their_eyes%21_%283986659743%29.jpg/500px-I_am_addicted_to_their_eyes%21_%283986659743%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[I am addicted to their eyes! (3986659743).jpg](https://commons.wikimedia.org/wiki/File:I_am_addicted_to_their_eyes!_(3986659743).jpg) · 1686×1393 · CC BY 2.0 · Dawn Huczek from USA · in the species' Wikipedia article
+[I am addicted to their eyes! (3986659743).jpg](<https://commons.wikimedia.org/wiki/File:I_am_addicted_to_their_eyes!_(3986659743).jpg>) · 1686×1393 · CC BY 2.0 · Dawn Huczek from USA · in the species' Wikipedia article
 
 > The theme for this weeks FeatheryFriday’s bragging thread is “facing forward”. I will post three pictures, then i have to decide by thursday which to add to the thread. Anyone can join the bragging thread on FF, it is lots of fun. the threa
 
-### 18E
-
-![Tufted Titmouse candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Titmouse_in_GWC_%2871746%29.jpg/500px-Titmouse_in_GWC_%2871746%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Titmouse in GWC (71746).jpg](https://commons.wikimedia.org/wiki/File:Titmouse_in_GWC_(71746).jpg) · 4608×3456 · CC BY-SA 4.0 · Rhododendrites · quality image
-
-> Tufted titmouse in Green-Wood Cemetery
-
 ### 18F
 
-![Tufted Titmouse candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Tufted_titmouse_in_Central_Park_%2815535%29.jpg/500px-Tufted_titmouse_in_Central_Park_%2815535%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Tufted Titmouse candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/TuftedTitmouse_Gam.jpg/500px-TuftedTitmouse_Gam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Tufted titmouse in Central Park (15535).jpg](https://commons.wikimedia.org/wiki/File:Tufted_titmouse_in_Central_Park_(15535).jpg) · 4608×3456 · CC BY-SA 4.0 · Rhododendrites · quality image
+[TuftedTitmouse Gam.jpg](https://commons.wikimedia.org/wiki/File:TuftedTitmouse_Gam.jpg) · 2140×2140 · CC BY-SA 4.0 · JeffreyGammon · in the species' Wikipedia article
 
-> Tufted titmouse in Central Park
+> Tufted Titmouse visiting a birdfeeder in Orlando Florida, US
 
 ## Week 19 — Cedar Waxwing
 
-*Bombycilla cedrorum* · [Category:Bombycilla cedrorum](https://commons.wikimedia.org/wiki/Category%3ABombycilla%20cedrorum) · 200 files examined, 6 shortlisted
+_Bombycilla cedrorum_ · [Category:Bombycilla cedrorum](https://commons.wikimedia.org/wiki/Category%3ABombycilla%20cedrorum) · 200 files examined, 6 shortlisted
 
 ### 19A
 
 ![Cedar Waxwing candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Cedar_waxwing_in_Green-Wood_Cemetery_%2855650%29.jpg/500px-Cedar_waxwing_in_Green-Wood_Cemetery_%2855650%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cedar waxwing in Green-Wood Cemetery (55650).jpg](https://commons.wikimedia.org/wiki/File:Cedar_waxwing_in_Green-Wood_Cemetery_(55650).jpg) · 1876×2078 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, used in an English Wikipedia article
+[Cedar waxwing in Green-Wood Cemetery (55650).jpg](<https://commons.wikimedia.org/wiki/File:Cedar_waxwing_in_Green-Wood_Cemetery_(55650).jpg>) · 1876×2078 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, used in an English Wikipedia article
 
 > Cedar waxwing in Green-Wood Cemetery.
 
@@ -287,51 +287,103 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![Cedar Waxwing candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Cedar_waxwing_in_pokeweed_%2810132%29.jpg/500px-Cedar_waxwing_in_pokeweed_%2810132%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cedar waxwing in pokeweed (10132).jpg](https://commons.wikimedia.org/wiki/File:Cedar_waxwing_in_pokeweed_(10132).jpg) · 3709×2824 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image
+[Cedar waxwing in pokeweed (10132).jpg](<https://commons.wikimedia.org/wiki/File:Cedar_waxwing_in_pokeweed_(10132).jpg>) · 3709×2824 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image
 
 > Cedar waxwing in pokeweed
 
 ### 19C
 
-![Cedar Waxwing candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/20240629_cedar_waxwing_gay_city_PD203316_09.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cedar Waxwing candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/20230608_cedar_waxwing_PD26635.jpg/500px-20230608_cedar_waxwing_PD26635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[20230608 cedar waxwing PD26635.jpg](https://commons.wikimedia.org/wiki/File:20230608_cedar_waxwing_PD26635.jpg) · 3739×2496 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
+
+> Cedar Waxwing, perched near berries
+
+### 19D
+
+![Cedar Waxwing candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Bombycilla_cedrorum_CT2.jpg/500px-Bombycilla_cedrorum_CT2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Bombycilla cedrorum CT2.jpg](https://commons.wikimedia.org/wiki/File:Bombycilla_cedrorum_CT2.jpg) · 2772×1848 · CC BY-SA 3.0 · Cephas · quality image, used in an English Wikipedia article
+
+> Cedar Waxwing , Cap Tourmente National Wildlife Area , Quebec, Canada
+
+### 19E
+
+![Cedar Waxwing candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/20240629_cedar_waxwing_gay_city_PD203316_09.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [20240629 cedar waxwing gay city PD203316 09.jpg](https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_09.jpg) · 2816×2816 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
 
 > Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA
 
-### 19D
+### 19F
 
-![Cedar Waxwing candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Cedar_waxwing_%28Bombycilla_cedrorum%29_Prince%27s_Island.jpg/500px-Cedar_waxwing_%28Bombycilla_cedrorum%29_Prince%27s_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Cedar Waxwing candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Cedar_waxwing_%28Bombycilla_cedrorum%29_Prince%27s_Island.jpg/500px-Cedar_waxwing_%28Bombycilla_cedrorum%29_Prince%27s_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cedar waxwing (Bombycilla cedrorum) Prince's Island.jpg](https://commons.wikimedia.org/wiki/File:Cedar_waxwing_(Bombycilla_cedrorum)_Prince%27s_Island.jpg) · 8222×5481 · CC BY-SA 4.0 · Charles J. Sharp · in the species' Wikipedia article
+[Cedar waxwing (Bombycilla cedrorum) Prince's Island.jpg](<https://commons.wikimedia.org/wiki/File:Cedar_waxwing_(Bombycilla_cedrorum)_Prince%27s_Island.jpg>) · 8222×5481 · CC BY-SA 4.0 · Charles J. Sharp · in the species' Wikipedia article
 
 > Cedar waxwing ( Bombycilla cedrorum ), a young bird, Prince’s Island, Calgary, AB, Canada
 
-### 19E
+## Week 20 — Eastern Bluebird
 
-![Cedar Waxwing candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/20240629_cedar_waxwing_gay_city_PD203316_12.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+_Sialia sialis_ · [Category:Sialia sialis](https://commons.wikimedia.org/wiki/Category%3ASialia%20sialis) · 200 files examined, 6 shortlisted
 
-[20240629 cedar waxwing gay city PD203316 12.jpg](https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_12.jpg) · 3213×3213 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
+### 20A
 
-> Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA
+![Eastern Bluebird candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Sialia_sialis_-Michigan%2C_USA_-pair-8c.jpg/500px-Sialia_sialis_-Michigan%2C_USA_-pair-8c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-### 19F
+[Sialia sialis -Michigan, USA -pair-8c.jpg](https://commons.wikimedia.org/wiki/File:Sialia_sialis_-Michigan,_USA_-pair-8c.jpg) · 1909×1468 · CC BY 2.0 · Sandysphotos2009 · in the species' Wikipedia article
 
-![Cedar Waxwing candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/20240629_cedar_waxwing_gay_city_PD203316_11.jpg/500px-20240629_cedar_waxwing_gay_city_PD203316_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+> A pair of Eastern Bluebirds in Michigan, USA.
 
-[20240629 cedar waxwing gay city PD203316 11.jpg](https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_11.jpg) · 8437×5625 · CC BY-SA 4.0 · Paul Danese · quality image
+### 20B
 
-> Cedar Waxwing, Gay City State Park, Hebron/Bolton, CT USA
+![Eastern Bluebird candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/20241201_eastern_bluebird_bolton_notch_sp_PD205470.jpg/500px-20241201_eastern_bluebird_bolton_notch_sp_PD205470.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[20241201 eastern bluebird bolton notch sp PD205470.jpg](https://commons.wikimedia.org/wiki/File:20241201_eastern_bluebird_bolton_notch_sp_PD205470.jpg) · 6991×4661 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
+
+> Eastern Bluebird regurgitates food. Bolton Notch State Park. Bolton, CT USA
+
+### 20C
+
+![Eastern Bluebird candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/20250511_eastern_bluebird_pleasant_valley_PD209871.jpg/500px-20250511_eastern_bluebird_pleasant_valley_PD209871.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[20250511 eastern bluebird pleasant valley PD209871.jpg](https://commons.wikimedia.org/wiki/File:20250511_eastern_bluebird_pleasant_valley_PD209871.jpg) · 5618×3745 · CC BY-SA 4.0 · Paul Danese · quality image, used in an English Wikipedia article
+
+> Eastern Bluebird. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA
+
+### 20D
+
+![Eastern Bluebird candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Eastern_Bluebird_%28Sialia_sialis_bermudensis%29_in_Bermuda%2C_from_below.jpg/500px-Eastern_Bluebird_%28Sialia_sialis_bermudensis%29_in_Bermuda%2C_from_below.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Eastern Bluebird (Sialia sialis bermudensis) in Bermuda, from below.jpg](<https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(Sialia_sialis_bermudensis)_in_Bermuda,_from_below.jpg>) · 4608×3456 · CC BY-SA 4.0 · Seán Pòl Ó Creachmhaoil · in the species' Wikipedia article
+
+> An Eastern Bluebird (Sialia sialis bermudensis) in the British Overseas Territory of Bermuda in the North Atlantic Ocean , seen from below. This is a young bird, still changing to its adult colouration.
+
+### 20E
+
+![Eastern Bluebird candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg/500px-Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Male and Female Eastern Bluebirds at a nesting box.jpg](https://commons.wikimedia.org/wiki/File:Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg) · 6244×4168 · CC BY 4.0 · Wcedmisten · in the species' Wikipedia article
+
+> Male and Female Eastern Bluebirds at a nesting box in Albemarle County, Virginia
+
+### 20F
+
+![Eastern Bluebird candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Sialia_sialis_-Michigan%2C_USA_-female-8.jpg/500px-Sialia_sialis_-Michigan%2C_USA_-female-8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Sialia sialis -Michigan, USA -female-8.jpg](https://commons.wikimedia.org/wiki/File:Sialia_sialis_-Michigan,_USA_-female-8.jpg) · 2592×1726 · CC BY 2.0 · Sandysphotos2009 · in the species' Wikipedia article
+
+> A female Eastern Bluebird in Michigan, USA.
 
 ## Week 21 — American Kestrel
 
-*Falco sparverius* · [Category:Falco sparverius](https://commons.wikimedia.org/wiki/Category%3AFalco%20sparverius) · 200 files examined, 6 shortlisted
+_Falco sparverius_ · [Category:Falco sparverius](https://commons.wikimedia.org/wiki/Category%3AFalco%20sparverius) · 200 files examined, 6 shortlisted
 
 ### 21A
 
 ![American Kestrel candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg/500px-American_kestrel_%28Falco_sparverius_cinnamominus%29_male_Leona_Amarga.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American kestrel (Falco sparverius cinnamominus) male Leona Amarga.jpg](https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_cinnamominus)_male_Leona_Amarga.jpg) · 4526×3018 · CC BY-SA 4.0 · Charles J. Sharp · featured picture, quality image, valued image, in the species' Wikipedia article
+[American kestrel (Falco sparverius cinnamominus) male Leona Amarga.jpg](<https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_cinnamominus)_male_Leona_Amarga.jpg>) · 4526×3018 · CC BY-SA 4.0 · Charles J. Sharp · featured picture, quality image, valued image, in the species' Wikipedia article
 
 > American kestrel ( Falco sparverius cinnamominus ) juvenile male, Leona Amarga, Torres del Paine, Chile
 
@@ -339,7 +391,7 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![American Kestrel candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/American_kestrel_%2844273%29.jpg/500px-American_kestrel_%2844273%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American kestrel (44273).jpg](https://commons.wikimedia.org/wiki/File:American_kestrel_(44273).jpg) · 4608×3386 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, valued image, in the species' Wikipedia article, reads as captive or in-hand
+[American kestrel (44273).jpg](<https://commons.wikimedia.org/wiki/File:American_kestrel_(44273).jpg>) · 4608×3386 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, valued image, in the species' Wikipedia article, reads as captive or in-hand
 
 > A rehabilitated male American kestrel at Raptor Fest, a wildlife conservation event held by NYC Parks in Central Park. The "ambassador" birds are all rehabilitated animals that cannot be released into the wild.
 
@@ -347,7 +399,7 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![American Kestrel candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/American_kestrel_%28Falco_sparverius_sparveroides%29_female_white_morph.JPG/500px-American_kestrel_%28Falco_sparverius_sparveroides%29_female_white_morph.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American kestrel (Falco sparverius sparveroides) female white morph.JPG](https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_female_white_morph.JPG) · 2106×1404 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
+[American kestrel (Falco sparverius sparveroides) female white morph.JPG](<https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_female_white_morph.JPG>) · 2106×1404 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, in the species' Wikipedia article
 
 > American kestrel ( Falco sparverius sparveroides ) female white morph, Cuba
 
@@ -355,7 +407,7 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![American Kestrel candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kestrel_by_Gravesend_Bay_%2882125%29.jpg/500px-Kestrel_by_Gravesend_Bay_%2882125%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Kestrel by Gravesend Bay (82125).jpg](https://commons.wikimedia.org/wiki/File:Kestrel_by_Gravesend_Bay_(82125).jpg) · 2761×1886 · CC BY-SA 4.0 · Rhododendrites · quality image, in the species' Wikipedia article
+[Kestrel by Gravesend Bay (82125).jpg](<https://commons.wikimedia.org/wiki/File:Kestrel_by_Gravesend_Bay_(82125).jpg>) · 2761×1886 · CC BY-SA 4.0 · Rhododendrites · quality image, in the species' Wikipedia article
 
 > American kestrel by the Belt Parkway and Gravesend Bay
 
@@ -363,7 +415,7 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![American Kestrel candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/American_kestrel_%28Falco_sparverius%29.jpg/500px-American_kestrel_%28Falco_sparverius%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American kestrel (Falco sparverius).jpg](https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius).jpg) · 2951×1967 · CC BY-SA 4.0 · Charles J. Sharp · valued image, in the species' Wikipedia article
+[American kestrel (Falco sparverius).jpg](<https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius).jpg>) · 2951×1967 · CC BY-SA 4.0 · Charles J. Sharp · valued image, in the species' Wikipedia article
 
 > American kestrel (Falco sparverius dominicensis), Jamaica
 
@@ -371,58 +423,58 @@ Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".
 
 ![American Kestrel candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/American_kestrel_%28Falco_sparverius_sparveroides%29_male_red_morph.JPG/500px-American_kestrel_%28Falco_sparverius_sparveroides%29_male_red_morph.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[American kestrel (Falco sparverius sparveroides) male red morph.JPG](https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_male_red_morph.JPG) · 2027×3041 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, portrait — crops badly in the strip, in the species' Wikipedia article
+[American kestrel (Falco sparverius sparveroides) male red morph.JPG](<https://commons.wikimedia.org/wiki/File:American_kestrel_(Falco_sparverius_sparveroides)_male_red_morph.JPG>) · 2027×3041 · CC BY-SA 4.0 · Charles J. Sharp · quality image, valued image, portrait — crops badly in the strip, in the species' Wikipedia article
 
 > American kestrel ( Falco sparverius sparveroides ) male red morph, Cuba
 
 ## Week 22 — Blue Jay
 
-*Cyanocitta cristata* · [Category:Cyanocitta cristata](https://commons.wikimedia.org/wiki/Category%3ACyanocitta%20cristata) · 200 files examined, 6 shortlisted
+_Cyanocitta cristata_ · [Category:Cyanocitta cristata](https://commons.wikimedia.org/wiki/Category%3ACyanocitta%20cristata) · 200 files examined, 6 shortlisted
 
 ### 22A
 
-![Blue Jay candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Blue_jay_fledgling_%2853513%29.jpg/500px-Blue_jay_fledgling_%2853513%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Blue Jay candidate A](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cyanocitta-cristata-004.jpg/500px-Cyanocitta-cristata-004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blue jay fledgling (53513).jpg](https://commons.wikimedia.org/wiki/File:Blue_jay_fledgling_(53513).jpg) · 3579×2772 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
+[Cyanocitta-cristata-004.jpg](https://commons.wikimedia.org/wiki/File:Cyanocitta-cristata-004.jpg) · 3072×2048 · CC BY-SA 3.0 · Mdf · featured picture, quality image, valued image, used in an English Wikipedia article
 
-> Fledgling blue jay ( Cyanocitta cristata ) in Green-Wood Cemetery
+> Blue Jay ( Cyanocitta cristata ) in Algonquin Provincial Park , Canada
 
 ### 22B
 
-![Blue Jay candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Blue_jay_in_PP_%2830960%29.jpg/500px-Blue_jay_in_PP_%2830960%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Blue Jay candidate B](https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Blue_jay_fledgling_%2853513%29.jpg/500px-Blue_jay_fledgling_%2853513%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Blue jay in PP (30960).jpg](https://commons.wikimedia.org/wiki/File:Blue_jay_in_PP_(30960).jpg) · 3319×4526 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+[Blue jay fledgling (53513).jpg](<https://commons.wikimedia.org/wiki/File:Blue_jay_fledgling_(53513).jpg>) · 3579×2772 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, in the species' Wikipedia article
 
-> Blue jay in Prospect Park, Brooklyn.
+> Fledgling blue jay ( Cyanocitta cristata ) in Green-Wood Cemetery
 
 ### 22C
 
-![Blue Jay candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Blue_Jay_Ash_RWD5.jpg/500px-Blue_Jay_Ash_RWD5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Blue Jay candidate C](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Blue_jay_in_PP_%2830960%29.jpg/500px-Blue_jay_in_PP_%2830960%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Blue jay in PP (30960).jpg](<https://commons.wikimedia.org/wiki/File:Blue_jay_in_PP_(30960).jpg>) · 3319×4526 · CC BY-SA 4.0 · Rhododendrites · featured picture, quality image, portrait — crops badly in the strip, in the species' Wikipedia article
+
+> Blue jay in Prospect Park, Brooklyn.
+
+### 22D
+
+![Blue Jay candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Bluejay_%28Cyanocitta_cristata%29_%281547%29_-_Relic38.jpg/500px-Bluejay_%28Cyanocitta_cristata%29_%281547%29_-_Relic38.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+[Bluejay (Cyanocitta cristata) (1547) - Relic38.jpg](<https://commons.wikimedia.org/wiki/File:Bluejay_(Cyanocitta_cristata)_(1547)_-_Relic38.jpg>) · 3000×2000 · CC BY-SA 3.0 · Darren Swim · quality image, used in an English Wikipedia article
+
+> Blue Jay ( Cyanocitta cristata ) – Ontario , Canada
+
+### 22E
+
+![Blue Jay candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Blue_Jay_Ash_RWD5.jpg/500px-Blue_Jay_Ash_RWD5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
 [Blue Jay Ash RWD5.jpg](https://commons.wikimedia.org/wiki/File:Blue_Jay_Ash_RWD5.jpg) · 3787×2840 · CC BY-SA 3.0 · DickDaniels ( http://theworldbirds.org/ ) · in the species' Wikipedia article
 
 > Blue Jay ( Cyanocitta cristata ) - Ash, North Carolina. This is subspecies Cyanocitta c. cristata.
 
-### 22D
-
-![Blue Jay candidate D](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Blue_jay_in_Central_Park_%2816465%29.jpg/500px-Blue_jay_in_Central_Park_%2816465%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Blue jay in Central Park (16465).jpg](https://commons.wikimedia.org/wiki/File:Blue_jay_in_Central_Park_(16465).jpg) · 4428×3236 · CC BY-SA 4.0 · Rhododendrites · in the species' Wikipedia article
-
-> Blue jay in Central Park
-
-### 22E
-
-![Blue Jay candidate E](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Blue_Jay_2010-05-09.jpg/500px-Blue_Jay_2010-05-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-
-[Blue Jay 2010-05-09.jpg](https://commons.wikimedia.org/wiki/File:Blue_Jay_2010-05-09.jpg) · 2840×1898 · CC BY 3.0 · Letartean · quality image, used on 32 Wikimedia pages
-
-> A blue jay ( Cyanocitta cristata ) in it's wild habitat. Taken in St-Irénée (Canada).
-
 ### 22F
 
-![Blue Jay candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Cyanocitta_cristata_cyanotephra%2C_Lubbock%2C_Texas_2.jpg/500px-Cyanocitta_cristata_cyanotephra%2C_Lubbock%2C_Texas_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+![Blue Jay candidate F](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Blue_jay_in_Central_Park_%2816465%29.jpg/500px-Blue_jay_in_Central_Park_%2816465%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
 
-[Cyanocitta cristata cyanotephra, Lubbock, Texas 2.jpg](https://commons.wikimedia.org/wiki/File:Cyanocitta_cristata_cyanotephra,_Lubbock,_Texas_2.jpg) · 2048×1039 · CC BY 4.0 · catherine_g · in the species' Wikipedia article
+[Blue jay in Central Park (16465).jpg](<https://commons.wikimedia.org/wiki/File:Blue_jay_in_Central_Park_(16465).jpg>) · 4428×3236 · CC BY-SA 4.0 · Rhododendrites · in the species' Wikipedia article
 
-> Blue Jay Cyanocitta cristata cyanotephra , Lubbock, Texas, USA.
+> Blue jay in Central Park
