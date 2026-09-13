@@ -24,7 +24,9 @@ describe('ComparisonCard', () => {
 
     const dialog = screen.getByRole('dialog', { name: 'Length by week' });
     expect(dialog).toBeInTheDocument();
-    expect(within(dialog).getByRole('img', { name: /^Length from week 2/ })).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole('img', { name: /^Length from week 2/ }),
+    ).toBeInTheDocument();
   });
 
   it('opens the weight chart from the weight inset', async () => {
@@ -35,7 +37,9 @@ describe('ComparisonCard', () => {
 
     const dialog = screen.getByRole('dialog', { name: 'Weight by week' });
     expect(dialog).toBeInTheDocument();
-    expect(within(dialog).getByRole('img', { name: /^Weight from week 2/ })).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole('img', { name: /^Weight from week 2/ }),
+    ).toBeInTheDocument();
   });
 
   it('closes on Escape and returns focus to the inset that opened it', async () => {
@@ -95,7 +99,11 @@ describe('ComparisonCard', () => {
 
     await user.click(screen.getByRole('button', { name: /weight/ }));
 
-    const description = screen.getByRole('img').getAttribute('aria-label');
+    // Name the chart. An unqualified img query matched the only image on the
+    // card until week 21 got a photograph, and then matched two.
+    const description = screen
+      .getByRole('img', { name: /This week, week 21,/ })
+      .getAttribute('aria-label');
     expect(description).not.toMatch(/break/);
   });
 });

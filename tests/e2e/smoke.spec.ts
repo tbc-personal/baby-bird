@@ -1,4 +1,5 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test } from '@playwright/test';
+import { pinClock } from './clock';
 
 /**
  * The happy path from the build prompt: setup → today → timeline → week card.
@@ -6,22 +7,6 @@ import { expect, test, type Page } from '@playwright/test';
  * the app reads the clock in exactly one place (`useToday` in App.tsx), which
  * is what makes a fixed clock enough.
  */
-const FIXED_NOW = new Date('2026-09-06T12:00:00-04:00').valueOf();
-
-async function pinClock(page: Page) {
-  await page.addInitScript(`{
-    const fixed = ${FIXED_NOW};
-    const RealDate = Date;
-    class FakeDate extends RealDate {
-      constructor(...args) {
-        if (args.length === 0) super(fixed);
-        else super(...args);
-      }
-      static now() { return fixed; }
-    }
-    globalThis.Date = FakeDate;
-  }`);
-}
 
 test.beforeEach(async ({ page }) => {
   await pinClock(page);
@@ -147,7 +132,9 @@ test('the tab bar is the hit target where it overlaps a skin swatch', async ({ p
     return { checked, misses: [...new Set(misses)] };
   });
 
-  expect(overlapped.checked, 'no skin swatch ever sat under the tab bar').toBeGreaterThan(0);
+  expect(overlapped.checked, 'no skin swatch ever sat under the tab bar').toBeGreaterThan(
+    0,
+  );
   expect(overlapped.misses, 'a tap on the bar would hit the page underneath').toEqual([]);
 });
 

@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { pinClock } from './clock';
 
 /**
  * Installability, checked against the criteria themselves.
@@ -10,6 +11,12 @@ import { expect, test } from '@playwright/test';
  * handler. Checking them directly is also stricter than a category score, since
  * a failure names the missing field.
  */
+// Two tests below assert the reader is on week 23. Without this they passed
+// only while the real date said so.
+test.beforeEach(async ({ page }) => {
+  await pinClock(page);
+});
+
 test('the manifest meets the installability criteria', async ({ page, request }) => {
   await page.goto('/');
 
