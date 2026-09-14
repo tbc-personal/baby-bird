@@ -1,8 +1,12 @@
 name: CI
 
+# Branch pushes are covered by the pull_request run, so `push` is only for the
+# default branch. Running both meant 38 of this branch's 42 commits were built
+# twice: the two events produce different `github.ref` values, so the
+# concurrency group below never collapsed them.
 on:
   push:
-    branches: ['**']
+    branches: [main]
   pull_request:
 
 # Cancel a superseded run rather than paying for both.
@@ -39,8 +43,22 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Downloading Chromium was the single longest step in the job, longer than
+      # every test put together.
+      - name: Cache the Playwright browser
+        id: playwright
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
       - name: Install the Playwright browser
+        if: steps.playwright.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
+
+      - name: Install the browser's system dependencies
+        if: steps.playwright.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
 
       - name: Playwright smoke and PWA tests
         # The blocking gate: setup to today to timeline to the week card, plus

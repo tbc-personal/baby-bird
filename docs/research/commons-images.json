@@ -68,8 +68,8 @@
       "file": "images/birds/ruby-throated-hummingbird.jpg",
       "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
       "why": "Author asked for a male: the ruby throat is the feature the species is named for, and the previous pick was a female. Top of the shortlist under --prefer '\\bmale\\b'. The crown sits close to the top of the strip crop.",
-      "objectPosition": "center 40%",
-      "objectPositionWhy": "Bill and crown sit right on the top edge of a centred crop."
+      "objectPosition": "center 13%",
+      "objectPositionWhy": "The bird occupies 11-62% of the frame and the rest is fencepost; this centres him with headroom above the bill."
     },
     {
       "week": 15,
@@ -104,8 +104,8 @@
       "file": "images/birds/tufted-titmouse.jpg",
       "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
       "why": "Author's pick (18A). Featured Picture, used in the species' Wikipedia article. The plain background is ideal for the strip.",
-      "objectPosition": "center 42%",
-      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+      "objectPosition": "center 60%",
+      "objectPositionWhy": "Feet at 82%, crest at 22%: 60 points of bird in a 55-point window, so it cannot hold both. Set to keep the feet, per the author; the crest tip is clipped."
     },
     {
       "week": 19,
@@ -163,7 +163,9 @@
       "commonsTitle": "File:Belted Kingfisher - Megaceryle alcyon, Big Cypress National Preserve, Ochopee, Florida, December 10, 2023.jpg",
       "file": "images/birds/belted-kingfisher.jpg",
       "altText": "A Belted Kingfisher perched on a bare branch with its shaggy crest raised, showing a white collar and a rust-coloured band across the belly.",
-      "why": "Author's pick (25E). Week 25 is one of the three weeks with no badged candidates, so this was chosen from ordinary photographs. The crown clips at the top of the strip crop."
+      "why": "Author's pick (25E). Week 25 is one of the three weeks with no badged candidates, so this was chosen from ordinary photographs. The crown clips at the top of the strip crop.",
+      "objectPosition": "center 44%",
+      "objectPositionWhy": "Crest at 18%, tail at 78%. Centres the bird and stops the crest being cut."
     },
     {
       "week": 26,
@@ -212,8 +214,8 @@
       "file": "images/birds/pileated-woodpecker.jpg",
       "altText": "A Pileated Woodpecker clinging to a wooden post, its red crest raised above a black back and white neck stripe.",
       "why": "Author's pick (31A). Featured Picture. Held back once because the centred crop removed the red crest, which is the whole identity of the bird; restored with an objectPosition.",
-      "objectPosition": "center 30%",
-      "objectPositionWhy": "A centred crop removed the red crest, which is the whole identity of the bird. At 200px the window is taller, so 20% left dead space above the woodpecker and cut its feet."
+      "objectPosition": "center 11%",
+      "objectPositionWhy": "The bird spans 9-85% in a 44-point window, so only part of it can show. Set to the head and shoulders, because the red crest is the bird."
     },
     {
       "week": 32,
@@ -261,7 +263,9 @@
       "commonsTitle": "File:Kanapaha-2008 04 09-IMG 0128.JPG",
       "file": "images/birds/red-shouldered-hawk.jpg",
       "altText": "A Red-shouldered Hawk perched in the open, rusty barred underparts and boldly banded tail showing.",
-      "why": "Author's pick (37B). In the species' Wikipedia article. Week 37 has no badged candidates, so this is an ordinary photograph chosen on its merits."
+      "why": "Author's pick (37B). In the species' Wikipedia article. Week 37 has no badged candidates, so this is an ordinary photograph chosen on its merits.",
+      "objectPosition": "center 31%",
+      "objectPositionWhy": "Head at 17%, feet at 90%, window 61 points. Set to the head; the feet fall outside."
     },
     {
       "week": 38,
@@ -270,8 +274,8 @@
       "file": "images/birds/barred-owl.jpg",
       "altText": "A Barred Owl facing forward with dark eyes and a pale, finely barred face.",
       "why": "Author's pick (38A). Featured Picture, in the species' Wikipedia article.",
-      "objectPosition": "center 45%",
-      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+      "objectPosition": "center 40%",
+      "objectPositionWhy": "Head at 18%, tail at 88%, window 65 points. Set to keep the whole head with a little headroom; the tail tip falls outside."
     },
     {
       "week": 39,

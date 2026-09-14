@@ -28,8 +28,14 @@ import { comparisonsSchema } from '../src/lib/schema.ts';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = resolve(ROOT, '.crop-preview');
-/** `--screen-max` is 460px and the e2e viewport is 420px. */
-const CARD_WIDTH = 420;
+/**
+ * The widest the card gets, from `--screen-max` in tokens.css. The e2e viewport
+ * is 420px and a phone is narrower still, but a wider card means a *shorter*
+ * window in proportion to the photograph, so 460 is the tightest crop any
+ * reader sees and the one worth designing against. Using 420 here flattered
+ * every photograph by four or five points of height.
+ */
+const CARD_WIDTH = 460;
 /** `.photo__img` height in `src/components/Photo.css`. */
 const STRIP_HEIGHT = 200;
 const TILE_W = 360;
@@ -109,7 +115,15 @@ function overlay(
 
 mkdirSync(OUT, { recursive: true });
 const tiles: Buffer[] = [];
-const gains: { week: number; comparison: string; now: number; then: number }[] = [];
+const gains: {
+  week: number;
+  comparison: string;
+  now: number;
+  then: number;
+  top: number;
+  bottom: number;
+  position: string | null;
+}[] = [];
 
 for (const row of rows) {
   const file = resolve(ROOT, 'public', row.image!.file!);
@@ -147,12 +161,30 @@ for (const row of rows) {
       ])
       .toBuffer(),
   );
+  const w = windowFor(STRIP_HEIGHT);
   gains.push({
     week: row.week,
     comparison: row.comparison ?? '',
     now: shareOf(STRIP_HEIGHT),
     then: compareHeight ? shareOf(compareHeight) : 0,
+    top: w.top / tileH,
+    bottom: (w.top + w.height) / tileH,
+    position: pos,
   });
+}
+
+// Where the window actually sits, as a share of the photograph's height. Read
+// the bird's extent off the sheet, then pick an objectPosition from these
+// numbers rather than by eye: the gridlines are 10 points apart and a crest is
+// often worth less than that.
+console.log('\nWindow, as a share of each photograph from its top edge:\n');
+for (const g of gains) {
+  console.log(
+    `  wk ${String(g.week).padStart(2)} ${g.comparison.padEnd(26)} ` +
+      `${(g.top * 100).toFixed(0).padStart(3)}% – ${(g.bottom * 100).toFixed(0).padStart(3)}%` +
+      `  (${(g.bottom * 100 - g.top * 100).toFixed(0)} points tall)` +
+      `${g.position ? `  @ ${g.position}` : ''}`,
+  );
 }
 
 for (let start = 0, sheet = 1; start < tiles.length; start += PER_SHEET, sheet++) {
