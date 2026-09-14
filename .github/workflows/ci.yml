@@ -1,8 +1,12 @@
 name: CI
 
+# Branch pushes are covered by the pull_request run, so `push` is only for the
+# default branch. Running both meant 38 of this branch's 42 commits were built
+# twice: the two events produce different `github.ref` values, so the
+# concurrency group below never collapsed them.
 on:
   push:
-    branches: ['**']
+    branches: [main]
   pull_request:
 
 # Cancel a superseded run rather than paying for both.
@@ -39,8 +43,22 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Downloading Chromium was the single longest step in the job, longer than
+      # every test put together.
+      - name: Cache the Playwright browser
+        id: playwright
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
       - name: Install the Playwright browser
+        if: steps.playwright.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
+
+      - name: Install the browser's system dependencies
+        if: steps.playwright.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
 
       - name: Playwright smoke and PWA tests
         # The blocking gate: setup to today to timeline to the week card, plus
@@ -48,7 +66,35 @@ jobs:
         # a shared ?m=&d= link never reaches the cache.
         run: npm run test:e2e:smoke
 
+      # A commit that deliberately changes how the app looks marks itself
+      # `[update-screenshots]`, and `update-screenshots.yml` regenerates the
+      # baselines and commits them. That workflow runs alongside this one rather
+      # than before it, so comparing against the old baselines here only ever
+      # produces a red run that a bot commit then fixes. Skip the comparison on
+      # those commits and let the regenerated baselines be checked by the next
+      # push that does not carry the marker.
+      - name: Does this commit regenerate the baselines?
+        id: baselines
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # On a pull_request run, HEAD is a merge commit whose message is
+          # GitHub's, not the author's; the PR head is the commit to ask about.
+          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          # The subject line only. A commit that merely mentions the marker in its
+          # body is talking about it, not asking for it — which is exactly what the
+          # commit introducing this step did: it skipped its own visual check and
+          # set a pointless baseline regeneration running.
+          subject="$(gh api "repos/${{ github.repository }}/commits/$SHA" --jq '.commit.message' | head -n 1)"
+          if printf '%s' "$subject" | grep -qF '[update-screenshots]'; then
+            echo 'regenerating=true' >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping the visual regression: $SHA asks for new baselines."
+          else
+            echo 'regenerating=false' >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Per-skin visual regression (ADR-007)
+        if: steps.baselines.outputs.regenerating != 'true'
         run: npm run test:e2e:visual
 
       - name: Upload the Playwright report when something fails

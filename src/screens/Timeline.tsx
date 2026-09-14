@@ -13,9 +13,13 @@ import { useAppState } from '../useAppState';
 import './Timeline.css';
 
 /**
- * Mockup 3. All 41 rows, weeks 2–42, opened scrolled to the current week. Rows
+ * Mockup 3. Every comparison row, opened scrolled to the current week. Rows
  * carry a small kind silhouette rather than a photo thumbnail (ADR-003), and a
  * divider marks the crown-rump → crown-heel switch between weeks 20 and 21.
+ *
+ * The count in the heading is derived, not written down. It said "All 41 weeks"
+ * until the author dropped the grain-of-grit comparison, at which point the
+ * heading was simply wrong and nothing failed.
  */
 export function TimelineScreen({ today }: { today: Date }) {
   const { saved, settings } = useAppState();
@@ -33,9 +37,9 @@ export function TimelineScreen({ today }: { today: Date }) {
 
   return (
     <>
-      <h1 className="appname timeline__title">All 41 weeks</h1>
+      <h1 className="appname timeline__title">All {COMPARISON_WEEKS.length} weeks</h1>
       <div className="meta">
-        <span>Seeds 2&ndash;6 · Eggs 7&ndash;13 · Birds 14&ndash;42</span>
+        <span>Seeds 3&ndash;6 · Eggs 7&ndash;13 · Birds 14&ndash;42</span>
         <span className="mono">{settings.units === 'metric' ? 'cm / g' : 'in / oz'}</span>
       </div>
 

@@ -50,10 +50,14 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // App shell only. ADR-003: never cache cross-origin frames.
+        // App shell, plus the seed photos. ADR-003: never cache cross-origin
+        // frames, but the Commons seed images (weeks 2-6) are local files and
+        // are only local so the cards work offline, so `jpg` belongs here --
+        // without it those four cards would break in exactly the case shipping
+        // them locally was meant to cover. Four files, ~360 KB.
         // ADR-006: never cache URLs carrying query strings, so a shared
         // ?m=&d= link cannot leak between users of a shared machine.
-        globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}', ...DEFAULT_SKIN_FONTS],
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,webmanifest}', ...DEFAULT_SKIN_FONTS],
         navigateFallback: `${base}index.html`,
         navigateFallbackDenylist: [/\?/],
         ignoreURLParametersMatching: [/.*/],

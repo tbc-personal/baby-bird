@@ -27,17 +27,17 @@ export function AboutContent() {
         <p className="small">
           A &ldquo;chance of continuing&rdquo; panel for early pregnancy is planned but not
           built. It is deferred to a later version and will be opt-in and permanently
-          hideable (ADR-005), coming later.
+          hideable, coming later.
         </p>
       </section>
 
       <section className="section">
-        <h2>Where the numbers come from</h2>
+        <h2>Data sources</h2>
         <ul>
           <li>
             Fetal length and weight: the author&rsquo;s own table, drawn from{' '}
-            <a href="https://datayze.com/">Datayze</a>. Length is crown to rump through week
-            20 and head to heel from week 21, which is why it jumps between them.
+            <a href="https://datayze.com/">Datayze</a>. Fetal length is measured
+            crown-to-rump through week 20 and head-to-heel from week 21.
           </li>
           <li>
             Due dates count 280 days from the first day of your last period, adjusted for
@@ -61,12 +61,7 @@ export function AboutContent() {
         <h2>Credits</h2>
         <ul>
           <li>
-            Bird photographs:{' '}
-            <a href="https://www.macaulaylibrary.org/">Macaulay Library</a> at the Cornell
-            Lab of Ornithology, embedded with credit to each photographer.
-          </li>
-          <li>
-            Seed photographs: Wikimedia Commons contributors, credited and licensed on each
+            Photographs: Wikimedia Commons contributors, credited and licensed on each
             image.
           </li>
           <li>Bird facts are original text written for this app.</li>
@@ -84,10 +79,9 @@ export function AboutContent() {
       <section className="section section--last">
         <h2>Your data</h2>
         <p>
-          Your date and these settings are stored on this device only. There are no
-          accounts, no analytics, and nothing is sent anywhere. The only network requests
-          the app makes are the photo embeds. A link you copy above carries your due date
-          and nothing else.
+          Your date and your settings are stored on your device only. There are no accounts,
+          no analytics, and no data transmission. The link you copy above only encodes your
+          due date.
         </p>
         {confirmingForget ? (
           <div className="sheet">

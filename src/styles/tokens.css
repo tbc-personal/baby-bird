@@ -24,6 +24,19 @@
   --focus: #2f6f73;
   --on-accent: #2a1206;
 
+  /*
+   * Overlay colors for controls drawn on top of a photograph. Deliberately NOT
+   * skin tokens and never overwritten by applySkin(): they sit over an
+   * arbitrary image, where a skin's palette says nothing about what will be
+   * legible. White on a dark scrim is the one pairing that holds over both a
+   * near-black seed macro and a pale millet dish, in either theme.
+   */
+  --on-photo: #ffffff;
+  --photo-scrim: rgb(0 0 0 / 55%);
+  --photo-scrim-strong: rgb(0 0 0 / 78%);
+  --photo-scrim-hover: rgb(0 0 0 / 72%);
+  --photo-edge: rgb(255 255 255 / 55%);
+
   --font-display: 'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif;
   --font-body: 'Atkinson Hyperlegible', 'Helvetica Neue', arial, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, sfmono-regular, menlo, monospace;

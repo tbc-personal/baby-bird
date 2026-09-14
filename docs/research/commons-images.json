@@ -1,0 +1,339 @@
+{
+  "$comment": "Curated Wikimedia Commons photos, one per week (ADR-003). Selection is a human/curation judgement and lives here; `npm run survey-commons` shortlists the candidates; `npm run commons-images` does the mechanical part — fetch metadata, check the licence against ALLOWED_COMMONS_LICENSES, download, resize, and write the `image` object into data/comparisons.json. To change a photo, change the `commonsTitle` here and re-run. `authorOverride` exists only to trim obvious import noise from the Commons Artist field (a Flickr geographic suffix, say); it must still name the same author, and the script refuses one that does not.",
+  "targetWidth": 900,
+  "jpegQuality": 80,
+  "picks": [
+    {
+      "week": 3,
+      "comparison": "Poppy seed",
+      "commonsTitle": "File:2012-12-11 18-41-07-papaver-seeds-39f.jpg",
+      "file": "images/seeds/poppy-seed.jpg",
+      "altText": "Hundreds of poppy seeds spread in a single layer, each a brown kidney shape barely a millimetre across.",
+      "why": "Replaces the USGS macro, which the author found too magnified: eight seeds the size of walnuts on black read as odd lumps rather than as something tiny. This is a focus-stacked field of hundreds of seeds — individual seeds and their honeycomb coats are still legible, but the count is what carries the smallness. Commons has little else: the alternatives are seed pods on the plant, poppy-seed baking, production maps, and phone snapshots of seeds in a white bowl, all portrait."
+    },
+    {
+      "week": 4,
+      "comparison": "Thistle (nyjer) seed",
+      "commonsTitle": "File:Niger Seed.jpg",
+      "file": "images/seeds/nyjer-seed.jpg",
+      "altText": "A round dish filled with nyjer seeds, thin black slivers packed tightly together.",
+      "why": "Clean overhead shot with individual seeds legible. Same photographer and framing as the week 5 millet, so the two cards sit together well."
+    },
+    {
+      "week": 5,
+      "comparison": "Millet seed",
+      "commonsTitle": "File:White Proso Millet.jpg",
+      "file": "images/seeds/millet-seed.jpg",
+      "altText": "A round dish of white proso millet, small pale round grains with a faint sheen.",
+      "why": "Matches the week 4 nyjer shot in framing and lighting."
+    },
+    {
+      "week": 6,
+      "comparison": "Sunflower seed",
+      "commonsTitle": "File:Sunflower seeds. img 004.jpg",
+      "file": "images/seeds/sunflower-seed.jpg",
+      "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
+      "why": "Sharp macro of black oil sunflower specifically, which is what the week 6 fact is about."
+    },
+    {
+      "week": 8,
+      "comparison": "Barn Swallow egg",
+      "commonsTitle": "File:Hirundo rustica gutturalis nest and 4 eggs.jpg",
+      "file": "images/eggs/barn-swallow-egg.jpg",
+      "altText": "Four small speckled pink eggs in a barn swallow's nest of dried grass and mud, lined with white feathers.",
+      "why": "A real clutch, close enough that the speckling reads, and the eggs sit near the middle of a landscape frame — which is what the 150px strip crop needs. Chosen from the shortlist over the museum specimen plate."
+    },
+    {
+      "week": 10,
+      "comparison": "American Robin egg",
+      "commonsTitle": "File:American Robin nest and eggs.JPG",
+      "file": "images/eggs/american-robin-egg.jpg",
+      "altText": "Three turquoise-blue American Robin eggs resting in a deep nest of dried grass and mud.",
+      "why": "The colour is the whole point of a robin's egg and it is unmistakable here. Used on fourteen Wikimedia pages. The eggs sit low in the frame, so check the crop.",
+      "objectPosition": "center 85%",
+      "objectPositionWhy": "The eggs sit in the bottom third, so a centred crop showed nest material and no eggs at all."
+    },
+    {
+      "week": 11,
+      "comparison": "Black Tern egg",
+      "commonsTitle": "File:Black Tern nest (7402341032).jpg",
+      "file": "images/eggs/black-tern-egg.jpg",
+      "altText": "Three heavily blotched Black Tern eggs on a floating nest of reeds and stems at the surface of a marsh.",
+      "why": "Shows the floating marsh nest the week's fact is about, not just the eggs. Public domain, USFWS. Foreground leaves intrude at the edges."
+    },
+    {
+      "week": 14,
+      "comparison": "Ruby-throated Hummingbird",
+      "commonsTitle": "File:Archilochus colubris (Male).jpg",
+      "file": "images/birds/ruby-throated-hummingbird.jpg",
+      "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
+      "why": "Author asked for a male: the ruby throat is the feature the species is named for, and the previous pick was a female. Top of the shortlist under --prefer '\\bmale\\b'. The crown sits close to the top of the strip crop.",
+      "objectPosition": "center 13%",
+      "objectPositionWhy": "The bird occupies 11-62% of the frame and the rest is fencepost; this centres him with headroom above the bill."
+    },
+    {
+      "week": 15,
+      "comparison": "Ruby-crowned Kinglet",
+      "commonsTitle": "File:Ruby-crowned kinglet (14077).jpg",
+      "file": "images/birds/ruby-crowned-kinglet.jpg",
+      "altText": "A Ruby-crowned Kinglet perched on a thin bare twig, its olive back and white wing bar lit from the side.",
+      "why": "Author's pick (15A). Featured Picture, and the one Wikipedia uses. Bird centred, background clean."
+    },
+    {
+      "week": 16,
+      "comparison": "Black-capped Chickadee",
+      "commonsTitle": "File:Poecile atricapillus CT3.jpg",
+      "file": "images/birds/black-capped-chickadee.jpg",
+      "altText": "A Black-capped Chickadee perched on a branch stub, its black cap and bib sharp against a soft green background.",
+      "why": "Author's second-pass pick (16D). One bird, dead centre, clean background — the first pick had a goldfinch in it as well, on a card about one bird's size.",
+      "objectPosition": "center 42%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+    },
+    {
+      "week": 17,
+      "comparison": "Carolina Wren",
+      "commonsTitle": "File:Carolina wren (14391).jpg",
+      "file": "images/birds/carolina-wren.jpg",
+      "altText": "A Carolina Wren on a bare branch with its tail cocked upward, the white stripe over its eye clearly marked.",
+      "why": "Author's pick (17A). Quality Image, used in the species' Wikipedia article. Large, centred, unambiguous."
+    },
+    {
+      "week": 18,
+      "comparison": "Tufted Titmouse",
+      "commonsTitle": "File:Tufted titmouse in Prospect Park (53493).jpg",
+      "file": "images/birds/tufted-titmouse.jpg",
+      "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
+      "why": "Author's pick (18A). Featured Picture, used in the species' Wikipedia article. The plain background is ideal for the strip.",
+      "objectPosition": "center 60%",
+      "objectPositionWhy": "Feet at 82%, crest at 22%: 60 points of bird in a 55-point window, so it cannot hold both. Set to keep the feet, per the author; the crest tip is clipped."
+    },
+    {
+      "week": 19,
+      "comparison": "Cedar Waxwing",
+      "commonsTitle": "File:20230608 cedar waxwing PD26635.jpg",
+      "file": "images/birds/cedar-waxwing.jpg",
+      "altText": "A Cedar Waxwing perched among serviceberry leaves and green berries, its crest smooth and its black mask clear.",
+      "why": "Author's second-pass pick (19C). One bird rather than three, and the berries are the subject of the week's fact."
+    },
+    {
+      "week": 20,
+      "comparison": "Eastern Bluebird",
+      "commonsTitle": "File:Eastern Bluebird (male) (43818012330).jpg",
+      "file": "images/birds/eastern-bluebird.jpg",
+      "altText": "A male Eastern Bluebird facing the camera from a bare branch, deep blue above and rust-orange across the breast.",
+      "why": "Author's pick (20D) from the male-preferred shortlist. Shows both the blue and the orange, bird centred, background clean. Public domain, NPS."
+    },
+    {
+      "week": 21,
+      "comparison": "American Kestrel",
+      "commonsTitle": "File:American kestrel (Falco sparverius sparveroides) female white morph.JPG",
+      "file": "images/birds/american-kestrel.jpg",
+      "altText": "A pale female American Kestrel perched on a bare twig, finely streaked below, with the dark facial markings of the species.",
+      "why": "Author's pick (21C). Quality and Valued image — but it is the Cuban subspecies in its white morph, which looks little like the kestrel a North American reader pictures. Flagged for reconsideration."
+    },
+    {
+      "week": 22,
+      "comparison": "Blue Jay",
+      "commonsTitle": "File:Cyanocitta cristata cyanotephra, Lubbock, Texas 2.jpg",
+      "file": "images/birds/blue-jay.jpg",
+      "altText": "A Blue Jay in sharp profile on a branch, its barred blue wing, white face and black neck ring all clear.",
+      "why": "Author's pick (22E). A western subspecies but it reads as the textbook Blue Jay, and the wide 2:1 frame suits the strip crop better than the taller candidates."
+    },
+    {
+      "week": 23,
+      "comparison": "Atlantic Puffin",
+      "commonsTitle": "File:Papageitaucher Fratercula arctica.jpg",
+      "file": "images/birds/atlantic-puffin.jpg",
+      "altText": "An Atlantic Puffin standing on a grassy clifftop, its striped orange bill and orange feet bright against black and white plumage.",
+      "why": "Author's pick (23E). Featured Picture. The crown sits near the top edge of the strip crop — worth a look on the card."
+    },
+    {
+      "week": 24,
+      "comparison": "Northern Flicker",
+      "commonsTitle": "File:Northern flicker (33729).jpg",
+      "file": "images/birds/northern-flicker.jpg",
+      "altText": "A male Northern Flicker perched on a stump, its barred brown back and heavily spotted breast turned to the camera.",
+      "why": "Author's pick (24B). Featured Picture. Held back once because the centred strip crop cut the head off; restored with an objectPosition.",
+      "objectPosition": "center 28%",
+      "objectPositionWhy": "A centred crop cut the head off entirely and left a spotted breast. At 200px the window is taller, so 15% left dead space above the flicker and cut its tail."
+    },
+    {
+      "week": 25,
+      "comparison": "Belted Kingfisher",
+      "commonsTitle": "File:Belted Kingfisher - Megaceryle alcyon, Big Cypress National Preserve, Ochopee, Florida, December 10, 2023.jpg",
+      "file": "images/birds/belted-kingfisher.jpg",
+      "altText": "A Belted Kingfisher perched on a bare branch with its shaggy crest raised, showing a white collar and a rust-coloured band across the belly.",
+      "why": "Author's pick (25E). Week 25 is one of the three weeks with no badged candidates, so this was chosen from ordinary photographs. The crown clips at the top of the strip crop.",
+      "objectPosition": "center 44%",
+      "objectPositionWhy": "Crest at 18%, tail at 78%. Centres the bird and stops the crest being cut."
+    },
+    {
+      "week": 26,
+      "comparison": "Common Tern",
+      "commonsTitle": "File:2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 02.jpg",
+      "file": "images/birds/common-tern.jpg",
+      "altText": "A Common Tern standing at the water's edge in summer plumage, black cap, red bill and pale grey wings.",
+      "why": "Author's pick (26B). Quality Image, in the species' Wikipedia article. Whole bird survives the strip crop cleanly."
+    },
+    {
+      "week": 27,
+      "comparison": "Peregrine Falcon",
+      "commonsTitle": "File:Peregrine Falcon (male).jpg",
+      "file": "images/birds/peregrine-falcon.jpg",
+      "altText": "A Peregrine Falcon standing on open ground against a pale sky, its dark hood and finely barred underparts clear.",
+      "why": "Author's pick (27E). In the species' Wikipedia article. The bird is smaller in the frame than most, but survives the crop whole."
+    },
+    {
+      "week": 28,
+      "comparison": "Cooper's Hawk",
+      "commonsTitle": "File:Accipiter cooperii m Sam Smith Toronto3.jpg",
+      "file": "images/birds/coopers-hawk.jpg",
+      "altText": "A male Cooper's Hawk standing on a rock, slate-grey above with a finely rust-barred breast, its prey beneath its feet.",
+      "why": "Author's pick (28B). In the species' Wikipedia article. Note there is prey under the bird's feet, visible at card size."
+    },
+    {
+      "week": 29,
+      "comparison": "American Barn Owl",
+      "commonsTitle": "File:Barn Owl Pyramid Lake 1.jpg",
+      "file": "images/birds/american-barn-owl.jpg",
+      "altText": "An American Barn Owl in flight with wings spread, its pale heart-shaped face turned toward the camera.",
+      "why": "Author's pick (29F). Week 29 has the smallest pool of any bird week and no badged candidates. The plain background makes the bird read well at 150px despite the modest resolution."
+    },
+    {
+      "week": 30,
+      "comparison": "American Crow",
+      "commonsTitle": "File:2014-04-29 02 Northwestern crow (Corvus brachyrhynchos caurinus).jpg",
+      "file": "images/birds/american-crow.jpg",
+      "altText": "An American Crow standing on pavement in profile, glossy black with a heavy bill.",
+      "why": "Author's pick (30D). Quality Image. Filed under the northwestern subspecies, which was lumped into American Crow in 2020, so the species is right."
+    },
+    {
+      "week": 31,
+      "comparison": "Pileated Woodpecker",
+      "commonsTitle": "File:Dryocopus pileatus MP2.jpg",
+      "file": "images/birds/pileated-woodpecker.jpg",
+      "altText": "A Pileated Woodpecker clinging to a wooden post, its red crest raised above a black back and white neck stripe.",
+      "why": "Author's pick (31A). Featured Picture. Held back once because the centred crop removed the red crest, which is the whole identity of the bird; restored with an objectPosition.",
+      "objectPosition": "center 11%",
+      "objectPositionWhy": "The bird spans 9-85% in a 44-point window, so only part of it can show. Set to the head and shoulders, because the red crest is the bird."
+    },
+    {
+      "week": 32,
+      "comparison": "Hooded Merganser",
+      "commonsTitle": "File:Hooded merganser male in Central Park (95790).jpg",
+      "file": "images/birds/hooded-merganser.jpg",
+      "altText": "A male Hooded Merganser swimming with its white-and-black fan-shaped crest raised.",
+      "why": "Author's pick (32A). Quality and Valued image, in the species' Wikipedia article. The crest is the point of the bird and it is fully raised here."
+    },
+    {
+      "week": 33,
+      "comparison": "Green Heron",
+      "commonsTitle": "File:Green heron (Butorides virescens), South Padre Island, Texas, USA.jpg",
+      "file": "images/birds/green-heron.jpg",
+      "altText": "A Green Heron crouched low with its neck drawn in, chestnut throat and dark green back against reeds.",
+      "why": "Author's pick (33D). Quality Image, used in an English Wikipedia article."
+    },
+    {
+      "week": 34,
+      "comparison": "Ring-billed Gull",
+      "commonsTitle": "File:Ring-Billed Gull Winter.jpg",
+      "file": "images/birds/ring-billed-gull.jpg",
+      "altText": "A Ring-billed Gull in winter plumage, its yellow bill marked with the dark ring the bird is named for.",
+      "why": "Author's pick (34E). Quality Image, in the species' Wikipedia article. The bill ring is legible, which is the point of the name."
+    },
+    {
+      "week": 35,
+      "comparison": "Red-tailed Hawk",
+      "commonsTitle": "File:Red-tailed Hawk (45812546121).jpg",
+      "file": "images/birds/red-tailed-hawk.jpg",
+      "altText": "A Red-tailed Hawk perched with its pale streaked breast toward the camera and its rust-coloured tail visible behind.",
+      "why": "Author's pick (35C). Quality Image, in the species' Wikipedia article."
+    },
+    {
+      "week": 36,
+      "comparison": "Wood Duck",
+      "commonsTitle": "File:Wood Duck Wissahickon Creek.png",
+      "file": "images/birds/wood-duck.jpg",
+      "altText": "A male Wood Duck on the water, its green-and-white patterned head, red eye and chestnut breast in full colour.",
+      "why": "Author's pick (36D). Quality Image, in the species' Wikipedia article. The drake's head pattern is the whole appeal of this bird."
+    },
+    {
+      "week": 37,
+      "comparison": "Red-shouldered Hawk",
+      "commonsTitle": "File:Kanapaha-2008 04 09-IMG 0128.JPG",
+      "file": "images/birds/red-shouldered-hawk.jpg",
+      "altText": "A Red-shouldered Hawk perched in the open, rusty barred underparts and boldly banded tail showing.",
+      "why": "Author's pick (37B). In the species' Wikipedia article. Week 37 has no badged candidates, so this is an ordinary photograph chosen on its merits.",
+      "objectPosition": "center 31%",
+      "objectPositionWhy": "Head at 17%, feet at 90%, window 61 points. Set to the head; the feet fall outside."
+    },
+    {
+      "week": 38,
+      "comparison": "Barred Owl",
+      "commonsTitle": "File:Strix-varia-005.jpg",
+      "file": "images/birds/barred-owl.jpg",
+      "altText": "A Barred Owl facing forward with dark eyes and a pale, finely barred face.",
+      "why": "Author's pick (38A). Featured Picture, in the species' Wikipedia article.",
+      "objectPosition": "center 40%",
+      "objectPositionWhy": "Head at 18%, tail at 88%, window 65 points. Set to keep the whole head with a little headroom; the tail tip falls outside."
+    },
+    {
+      "week": 39,
+      "comparison": "Mallard",
+      "commonsTitle": "File:2015 Kaczka krzyżowka w wodzie (samiec).jpg",
+      "file": "images/birds/mallard.jpg",
+      "altText": "A male Mallard swimming, his iridescent green head and yellow bill bright above a white collar.",
+      "why": "Author's pick (39A). Featured, Quality and Valued image — the only candidate in this batch carrying all three."
+    },
+    {
+      "week": 40,
+      "comparison": "Snowy Owl",
+      "commonsTitle": "File:Snowy Owl (240866707).jpeg",
+      "file": "images/birds/snowy-owl.jpg",
+      "altText": "A Snowy Owl, white with fine dark barring, looking directly at the camera with yellow eyes.",
+      "why": "Author's pick (40D). In the species' Wikipedia article. Week 40 had no badged candidates.",
+      "objectPosition": "center 45%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+    },
+    {
+      "week": 41,
+      "comparison": "Great Horned Owl",
+      "commonsTitle": "File:004 Great horned owl under a Pink Ipê tree in Encontro das Águas State Park Photo by Giles Laurent.jpg",
+      "file": "images/birds/great-horned-owl.jpg",
+      "altText": "A Great Horned Owl perched beneath pink blossom, its ear tufts raised and yellow eyes wide.",
+      "why": "Author's pick (41A). Featured Picture, used on seven Wikimedia pages."
+    },
+    {
+      "week": 42,
+      "comparison": "Osprey",
+      "commonsTitle": "File:Osprey Fish Nictitating.png",
+      "file": "images/birds/osprey.jpg",
+      "altText": "An Osprey gripping a fish, its white head and dark eye stripe sharp against the sky.",
+      "why": "Author's pick (42F). In the species' Wikipedia article. Note the bird is carrying prey, and its nictitating membrane is drawn across the eye.",
+      "objectPosition": "center 30%",
+      "objectPositionWhy": "Wingtips were clipped; the spread wings are the majestic part."
+    }
+  ],
+  "notSourced": [
+    {
+      "week": 7,
+      "comparison": "House Wren egg",
+      "reason": "Commons has no House Wren egg photograph. There is no 'Troglodytes aedon eggs' category at all — checked directly, not inferred from the shortlist — and the species category's egg/nest shortlist is six frames of an adult wren at a nest box, one of them a Featured Picture. A bird on a nest box is not an egg. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 9,
+      "comparison": "Wood Thrush egg",
+      "reason": "One shippable candidate in the whole category, and it is a thrush on a nest shot through heavy foliage — unreadable once cropped to the 150px strip. No 'Hylocichla mustelina eggs' category exists. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 12,
+      "comparison": "Great Blue Heron egg",
+      "reason": "No 'Ardea herodias eggs' category exists. The nest candidates are all rookery shots taken from below, backlit against bright sky, with the nests reading as silhouettes and no eggs visible. Author's call, 2026-09-13: leave it as 'Photo coming'."
+    },
+    {
+      "week": 13,
+      "comparison": "Bald Eagle egg",
+      "reason": "Unlike weeks 7, 9 and 12 this one has shippable candidates — a Muséum de Toulouse specimen plate and several nest-with-clutch frames — but the author reviewed them on 2026-09-13 and none shows the egg alone in a natural context: the specimen is on a black studio background, and in the nest shots the eggs are incidental to an adult bird. Needs a source other than Commons, not a better Commons search. Leave it as 'Photo coming'."
+    }
+  ]
+}

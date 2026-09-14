@@ -17,7 +17,7 @@ export const ALL_WEEKS: readonly WeekRow[] = [...parsed.weeks].sort(
   (a, b) => a.week - b.week,
 );
 
-/** Only the rows that have something to show: weeks 2–42. */
+/** Only the rows that have something to show: weeks 3–42. */
 export const COMPARISON_WEEKS: readonly WeekRow[] = ALL_WEEKS.filter(
   (row) => row.week >= FIRST_COMPARISON_WEEK && row.week <= LAST_COMPARISON_WEEK,
 );

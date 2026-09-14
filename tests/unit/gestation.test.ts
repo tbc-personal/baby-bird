@@ -231,16 +231,30 @@ describe('computeProgress edge states (ADR-002)', () => {
       daysUntilDue: 267,
     },
     {
-      name: 'day 14 is the first comparison day, week 2',
+      // Conception, but still nothing to compare: the comparisons start at week
+      // 3 now that grain of grit is gone and the poppy seed has moved down.
+      name: 'day 14 is conception, and still too early for a comparison',
       method: 'lmp',
       input: '2026-03-29',
       today: '2026-04-12',
       gestationalDays: 14,
       weeks: 2,
       days: 0,
-      status: 'normal',
-      comparisonWeek: 2,
+      status: 'tooEarly',
+      comparisonWeek: null,
       daysUntilDue: 266,
+    },
+    {
+      name: 'day 21 is the first comparison day, week 3',
+      method: 'lmp',
+      input: '2026-03-29',
+      today: '2026-04-19',
+      gestationalDays: 21,
+      weeks: 3,
+      days: 0,
+      status: 'normal',
+      comparisonWeek: 3,
+      daysUntilDue: 259,
     },
     {
       name: 'week 3 has a proposed row and renders normally',

@@ -381,7 +381,11 @@ describe('validateComparisons: warnings vs errors', () => {
     // that alone produces no errors, only warnings.
     const report = validateComparisons(makeFile());
     expect(report.errors).toEqual([]);
-    expect(report.warnings.some((w) => w.includes('week 2 has no image yet'))).toBe(true);
+    expect(
+      report.warnings.some((w) =>
+        w.includes(`week ${FIRST_COMPARISON_WEEK} has no image yet`),
+      ),
+    ).toBe(true);
   });
 
   it('computes stats correctly against a controlled fixture', () => {
@@ -395,16 +399,20 @@ describe('validateComparisons: warnings vs errors', () => {
     const report = validateComparisons(makeFile({ weeks }));
     expect(report.errors).toEqual([]);
 
-    // weeks 2..42 each start with 2 facts (82 total); week 5 has 0 (-2),
-    // week 6 has 1 (-1) => 82 - 2 - 1 = 79.
+    // Weeks FIRST_COMPARISON_WEEK..42 each start with 2 facts; week 5 has 0
+    // (-2) and week 6 has 1 (-1). Derived rather than written down, because the
+    // first comparison week moved from 2 to 3 once grain of grit was dropped.
+    const counted = (LAST_COMPARISON_WEEK - FIRST_COMPARISON_WEEK + 1) * 2 - 2 - 1;
     expect(report.stats.weeks).toBe(42);
-    expect(report.stats.facts).toBe(79);
+    expect(report.stats.facts).toBe(counted);
     // Only week 6's single fact was marked unreviewed.
     expect(report.stats.unreviewedFacts).toBe(1);
     // Weeks with < 2 facts: week 5 (0) and week 6 (1).
     expect(report.stats.weeksMissingFacts).toBe(2);
-    // All 41 data-carrying weeks lack an image except week 30, which now has one.
-    expect(report.stats.weeksMissingImage).toBe(40);
+    // Every data-carrying week lacks an image except week 30, which now has one.
+    expect(report.stats.weeksMissingImage).toBe(
+      LAST_COMPARISON_WEEK - FIRST_COMPARISON_WEEK,
+    );
   });
 });
 
@@ -442,6 +450,6 @@ describe('sanity: fixture matches the gestation constants', () => {
     const weeks = makeFile().weeks;
     expect(weeks[0]?.week).toBe(1);
     expect(weeks[weeks.length - 1]?.week).toBe(LAST_COMPARISON_WEEK);
-    expect(FIRST_COMPARISON_WEEK).toBe(2);
+    expect(FIRST_COMPARISON_WEEK).toBe(3);
   });
 });

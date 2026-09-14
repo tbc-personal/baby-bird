@@ -77,9 +77,8 @@ export function LaborScreen({ today }: { today: Date }) {
         </p>
         <p>
           The curve is two overlaid bell curves, one for preterm labor and one for term
-          labor, fitted to three published figures: a median of {CALIBRATION.medianDay}{' '}
-          days after your period date (
-          <a href={CALIBRATION.medianSource}>Smith 2001</a>), a{' '}
+          labor, fitted to three published figures: a median of {CALIBRATION.medianDay} days
+          after your period date (<a href={CALIBRATION.medianSource}>Smith 2001</a>), a{' '}
           {(CALIBRATION.pretermShare * 100).toFixed(1)}% chance of labor before 37 weeks,
           derived from the <a href={CALIBRATION.cdcSource}>CDC preterm birth rate</a> for{' '}
           {CALIBRATION.cdcYear} by removing multiples and deliveries that were induced or

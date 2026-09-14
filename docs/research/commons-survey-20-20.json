@@ -1,0 +1,97 @@
+{
+  "generated": "2026-09-14T01:25:22.754Z",
+  "survey": [
+    {
+      "week": 20,
+      "kind": "bird",
+      "comparison": "Eastern Bluebird",
+      "scientificName": "Sialia sialis",
+      "category": "Category:Sialia sialis",
+      "pool": 200,
+      "rejected": {
+        "too small": 15,
+        "licence": 11,
+        "not the subject": 1,
+        "mime video/webm": 4
+      },
+      "candidates": [
+        {
+          "commonsTitle": "File:Male and Female Eastern Bluebirds at a nesting box.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg/500px-Male_and_Female_Eastern_Bluebirds_at_a_nesting_box.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 6244,
+          "height": 4168,
+          "license": "CC BY 4.0",
+          "author": "Wcedmisten",
+          "description": "Male and Female Eastern Bluebirds at a nesting box in Albemarle County, Virginia",
+          "score": 363,
+          "notes": ["in the species' Wikipedia article", "matches --prefer \\bmale\\b"]
+        },
+        {
+          "commonsTitle": "File:20250511 eastern bluebird pleasant valley PD209911.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250511_eastern_bluebird_pleasant_valley_PD209911.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/20250511_eastern_bluebird_pleasant_valley_PD209911.jpg/500px-20250511_eastern_bluebird_pleasant_valley_PD209911.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5811,
+          "height": 3874,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Female eastern bluebird with nesting material and male. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 323,
+          "notes": [
+            "quality image",
+            "used on 1 Wikimedia page",
+            "matches --prefer \\bmale\\b"
+          ]
+        },
+        {
+          "commonsTitle": "File:20250511 eastern bluebird pleasant valley PD209915.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250511_eastern_bluebird_pleasant_valley_PD209915.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/20250511_eastern_bluebird_pleasant_valley_PD209915.jpg/500px-20250511_eastern_bluebird_pleasant_valley_PD209915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 5729,
+          "height": 3819,
+          "license": "CC BY-SA 4.0",
+          "author": "Paul Danese",
+          "description": "Female eastern bluebird with nesting material and male. Pleasant Valley Wildlife Sanctuary. Lenox, MA USA",
+          "score": 320,
+          "notes": ["quality image", "matches --prefer \\bmale\\b"]
+        },
+        {
+          "commonsTitle": "File:Eastern Bluebird (male) (43818012330).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(male)_(43818012330).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Eastern_Bluebird_%28male%29_%2843818012330%29.jpg/500px-Eastern_Bluebird_%28male%29_%2843818012330%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3877,
+          "height": 2585,
+          "license": "Public domain",
+          "author": "ShenandoahNPS",
+          "description": "NPS | N. Lewis Sialia sialis",
+          "score": 246,
+          "notes": ["matches --prefer \\bmale\\b"]
+        },
+        {
+          "commonsTitle": "File:Eastern Bluebird (male) (45635800071).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(male)_(45635800071).jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Eastern_Bluebird_%28male%29_%2845635800071%29.jpg/500px-Eastern_Bluebird_%28male%29_%2845635800071%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 3009,
+          "height": 2232,
+          "license": "Public domain",
+          "author": "ShenandoahNPS",
+          "description": "NPS | N. Lewis Sialia sialis",
+          "score": 242,
+          "notes": ["matches --prefer \\bmale\\b"]
+        },
+        {
+          "commonsTitle": "File:Bluebirds in winter at Mastodon SP - 47177608032.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bluebirds_in_winter_at_Mastodon_SP_-_47177608032.jpg",
+          "thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Bluebirds_in_winter_at_Mastodon_SP_-_47177608032.jpg/500px-Bluebirds_in_winter_at_Mastodon_SP_-_47177608032.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "width": 2665,
+          "height": 1967,
+          "license": "CC BY 2.0",
+          "author": "Wildreturn",
+          "description": "A male Eastern bluebird in winter at Mastodon State Historic Site, Imperial, Missouri, USA",
+          "score": 241,
+          "notes": ["matches --prefer \\bmale\\b"]
+        }
+      ]
+    }
+  ]
+}

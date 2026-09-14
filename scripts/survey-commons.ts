@@ -1,0 +1,809 @@
+/**
+ * Shortlist Wikimedia Commons candidates for the bird and egg weeks (ADR-003).
+ *
+ * ADR-003 originally sent weeks 7-42 to the Macaulay Library and kept Commons
+ * for the seed weeks. The Macaulay route turned out to be unshippable, so every
+ * week now needs a Commons file, and the expensive half of that is *finding*
+ * one: Commons holds tens of thousands of bird photos, most of them wrong for a
+ * 150px-tall strip that gets centre-cropped.
+ *
+ * This script does the finding mechanically so the only human step left is
+ * looking at a handful of thumbnails. For each week it walks the species'
+ * Commons category, drops anything the project cannot ship (wrong licence, no
+ * author, too small, an engraving rather than a photograph), scores what's left
+ * on signals the API actually reports, and writes a ranked shortlist.
+ *
+ * It never picks. The chosen file goes in `docs/research/commons-images.json`
+ * by hand, and `npm run commons-images` applies it. That split is deliberate:
+ * scoring is repeatable and belongs in code, judging a photograph is not.
+ *
+ *   npm run survey-commons -- --weeks 7-13     shortlist those weeks
+ *   npm run survey-commons -- --weeks 7-13 --sheet   ...and write the review sheet
+ *   npm run survey-commons -- --refresh        ignore the on-disk API cache
+ *
+ * Responses are cached under `.commons-survey/`, so re-running to re-score or
+ * re-render the sheet costs no network at all.
+ */
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { createHash } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+import { ALLOWED_COMMONS_LICENSES, comparisonsSchema } from '../src/lib/schema.ts';
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const DATA = resolve(ROOT, 'data/comparisons.json');
+const CACHE = resolve(ROOT, '.commons-survey');
+const UA = 'baby-bird-curation/0.1 (https://github.com/tbc-personal/baby-bird)';
+
+/** The card crops to a 200px-tall strip, so shortlists want wide files. */
+const MIN_WIDTH = 1000;
+/** How many files to pull metadata for per week. Bounds the request count. */
+const MAX_CANDIDATES = 200;
+/** How many survive into the shortlist. */
+const SHORTLIST = 6;
+
+// ---------------------------------------------------------------- exclusions
+
+/**
+ * Not photographs of a living bird. The 19th-century book plates are the ones
+ * that matter: Commons species categories are full of them, they carry clean
+ * public-domain licences, and a coverage count that includes them is a lie.
+ *
+ * Two terms were removed after they were measured rather than assumed. "birds
+ * of" was meant to catch *Birds of America*; it matched "Category:Birds of
+ * Maryland" and every other geographic category, and was discarding 208 of 594
+ * Eastern Bluebird files — about a third of every bird week's pool, silently,
+ * since the first survey. "audubon" matched photographs taken at Audubon
+ * sanctuaries. Both kinds of plate are still caught structurally, by plate,
+ * lithograph, engraving, illustration and the rest.
+ */
+const NOT_A_PHOTOGRAPH =
+  /\b(plate|lithograph|engrav|etching|drawing|drawn|illustration|painting|painted|watercolou?r|sketch|woodcut|chromolith|print|artwork|diagram|icon|logo|stamp|coin|banknote|cover|book|handbook|manual|iconograph|nederlandsche|naumann|gould)\b/i;
+/** Dead, mounted, or otherwise not what a reader should be shown. */
+const NOT_A_LIVE_BIRD =
+  /\b(taxiderm|specimen|skeleton|skull|bone|mount(ed)?|museum|collection|dead|roadkill|carcass|wing detail|feather|plumage detail|pellet|dropping|scat|track|footprint|egg tooth|nhmuk|naturalis|zoolog(y|ical) museum)\b/i;
+/** Not the subject: maps, sound, charts. */
+const NOT_THE_SUBJECT =
+  /\b(map|distribution|range|sonogram|spectrogram|waveform|chart|graph|sign|signage|plaque|banner|mural|statue|sculpture|carving|decoy|toy|model)\b/i;
+/** Captive birds read wrong in a card about wild species. */
+const CAPTIVE =
+  /\b(zoo|aviary|captive|falconry|falconer|cage|caged|rehab|banded|banding|ringed|ringing|in hand|held|handler|glove)\b/i;
+
+const EGG_SUBJECT = /\b(egg|eggs|nest|nests|nesting|clutch|brood)\b/i;
+/** Commons collects a species' badged photographs in their own subcategories. */
+const BADGE_SUBCAT = /\b(quality images?|featured pictures?|valued images?)\b/i;
+
+// ------------------------------------------------------------------ plumbing
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Commons puts HTML fragments in extmetadata; scoring wants plain text. */
+function plain(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const text = value
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return text || null;
+}
+
+/**
+ * GET with the project's usual backoff. Wikimedia rate-limits shared datacentre
+ * addresses and answers a limited request with a 200 and a plain-text body, so
+ * a status check alone is not enough — the body has to parse as JSON.
+ */
+async function api(params: Record<string, string>, refresh: boolean): Promise<unknown> {
+  const url = `https://commons.wikimedia.org/w/api.php?${new URLSearchParams({
+    format: 'json',
+    formatversion: '2',
+    ...params,
+  })}`;
+  const key = resolve(CACHE, `${createHash('sha1').update(url).digest('hex')}.json`);
+  if (!refresh && existsSync(key)) return JSON.parse(readFileSync(key, 'utf8'));
+
+  for (let i = 0; i < 9; i++) {
+    try {
+      const res = await fetch(url, { headers: { 'user-agent': UA } });
+      const body = await res.text();
+      if (res.ok && body.trimStart().startsWith('{')) {
+        mkdirSync(CACHE, { recursive: true });
+        writeFileSync(key, body);
+        await sleep(1100);
+        return JSON.parse(body);
+      }
+    } catch {
+      /* fall through to the backoff */
+    }
+    await sleep(Math.min(2500 * 2 ** i, 60_000));
+  }
+  throw new Error(`Commons API gave up on ${url}`);
+}
+
+interface CategoryMember {
+  title: string;
+  ns: number;
+}
+
+async function categoryMembers(
+  category: string,
+  type: 'file' | 'subcat',
+  refresh: boolean,
+): Promise<string[]> {
+  const titles: string[] = [];
+  let cont: string | undefined;
+  do {
+    const page = (await api(
+      {
+        action: 'query',
+        list: 'categorymembers',
+        cmtitle: category,
+        cmtype: type,
+        cmlimit: '500',
+        ...(cont ? { cmcontinue: cont } : {}),
+      },
+      refresh,
+    )) as {
+      query?: { categorymembers?: CategoryMember[] };
+      continue?: { cmcontinue?: string };
+    };
+    for (const m of page.query?.categorymembers ?? []) titles.push(m.title);
+    cont = page.continue?.cmcontinue;
+  } while (cont && titles.length < 2000);
+  return titles;
+}
+
+interface FileInfo {
+  title: string;
+  url: string;
+  descriptionurl: string;
+  thumburl?: string;
+  width: number;
+  height: number;
+  mime: string;
+  license: string | null;
+  author: string | null;
+  description: string | null;
+  categories: string[];
+  /** Where else on Wikimedia this file is used. Filled in by `globalUsage`. */
+  usage?: FileUsage;
+}
+
+/**
+ * How the Wikimedia projects themselves use a file.
+ *
+ * This is the only quality signal that works on an ordinary photograph. Most
+ * Commons files carry no Featured/Quality/Valued badge, so scoring on badges and
+ * pixel dimensions left 15 of the 29 bird weeks with a shortlist that was an
+ * arbitrary six out of a hundred-odd equally-scored files. A file that editors
+ * put in the species' own encyclopaedia article is one the community has already
+ * judged to be a good, representative photograph of that bird — which is exactly
+ * the judgement this script otherwise cannot make.
+ */
+interface FileUsage {
+  /** Total uses across all Wikimedia wikis. */
+  count: number;
+  /** Used in an article (namespace 0) on the English Wikipedia. */
+  inEnglishArticle: boolean;
+  /** Used in the species' own English Wikipedia article. */
+  inSpeciesArticle: boolean;
+}
+
+async function fileInfo(titles: string[], refresh: boolean): Promise<FileInfo[]> {
+  const out: FileInfo[] = [];
+  for (let i = 0; i < titles.length; i += 50) {
+    const batch = titles.slice(i, i + 50);
+    const page = (await api(
+      {
+        action: 'query',
+        titles: batch.join('|'),
+        prop: 'imageinfo|categories',
+        iiprop: 'url|size|mime|extmetadata',
+        iiurlwidth: '400',
+        cllimit: '500',
+      },
+      refresh,
+    )) as {
+      query?: {
+        pages?: {
+          title: string;
+          imageinfo?: {
+            url: string;
+            descriptionurl: string;
+            thumburl?: string;
+            width: number;
+            height: number;
+            mime: string;
+            extmetadata?: Record<string, { value?: unknown }>;
+          }[];
+          categories?: { title: string }[];
+        }[];
+      };
+    };
+    for (const p of page.query?.pages ?? []) {
+      const info = p.imageinfo?.[0];
+      if (!info) continue;
+      const meta = info.extmetadata ?? {};
+      out.push({
+        title: p.title,
+        url: info.url,
+        descriptionurl: info.descriptionurl,
+        thumburl: info.thumburl,
+        width: info.width,
+        height: info.height,
+        mime: info.mime,
+        license: plain(meta.LicenseShortName?.value),
+        author: plain(meta.Artist?.value),
+        description: plain(meta.ImageDescription?.value),
+        categories: (p.categories ?? []).map((c) => c.title),
+      });
+    }
+  }
+  return out;
+}
+
+/**
+ * Read global usage for a batch of files.
+ *
+ * Deliberately a separate query from `fileInfo` rather than another `prop` on
+ * it: adding a property changes that request's URL, which would invalidate every
+ * cached imageinfo response and force the whole survey to be re-crawled against
+ * the rate limit. This way the existing cache stays good and only the usage data
+ * is new.
+ */
+async function globalUsage(
+  titles: string[],
+  speciesArticle: string | null,
+  refresh: boolean,
+): Promise<Map<string, FileUsage>> {
+  const out = new Map<string, FileUsage>();
+  // Wikipedia titles use underscores in some responses and spaces in others;
+  // globalusage returns "Blue_jay" while the data file may hold either. Compare
+  // both sides normalised, or the strongest signal here silently never fires.
+  const norm = (t: string) => t.replace(/_/g, ' ').trim().toLowerCase();
+  const wanted = speciesArticle ? norm(speciesArticle) : null;
+
+  for (let i = 0; i < titles.length; i += 50) {
+    const batch = titles.slice(i, i + 50);
+    let cont: string | undefined;
+    // Four pages of 500 usage records per 50 files, and no more. Exhausting the
+    // list is unnecessary — scoring needs two booleans and a count it caps at 20
+    // — and a file used on thousands of pages would otherwise page for ever.
+    // Callers filter unshippable files out first, which is what keeps those out
+    // of the batches; this cap is the backstop.
+    for (let page_ = 0; page_ < 4; page_++) {
+      const page = (await api(
+        {
+          action: 'query',
+          titles: batch.join('|'),
+          prop: 'globalusage',
+          guprop: 'namespace',
+          gulimit: '500',
+          ...(cont ? { gucontinue: cont } : {}),
+        },
+        refresh,
+      )) as {
+        query?: {
+          pages?: {
+            title: string;
+            globalusage?: { wiki: string; title: string; ns?: string | number }[];
+          }[];
+        };
+        continue?: { gucontinue?: string };
+      };
+      for (const p of page.query?.pages ?? []) {
+        const seen = out.get(p.title) ?? {
+          count: 0,
+          inEnglishArticle: false,
+          inSpeciesArticle: false,
+        };
+        for (const use of p.globalusage ?? []) {
+          seen.count++;
+          const article = use.wiki === 'en.wikipedia.org' && String(use.ns ?? '0') === '0';
+          if (article) {
+            seen.inEnglishArticle = true;
+            if (wanted && norm(use.title) === wanted) seen.inSpeciesArticle = true;
+          }
+        }
+        out.set(p.title, seen);
+      }
+      cont = page.continue?.gucontinue;
+      if (!cont) break;
+    }
+  }
+  return out;
+}
+
+/**
+ * The files illustrating the species' own English Wikipedia article.
+ *
+ * Scoring on global usage only helps if the community's chosen photograph is in
+ * the candidate pool to begin with, and often it is not: the pool comes from the
+ * Commons species category, and a lead image frequently sits in a subcategory
+ * this script skips for bird weeks. So ask Wikipedia directly what it uses.
+ */
+async function articleImages(
+  wikipediaTitle: string | null,
+  refresh: boolean,
+): Promise<string[]> {
+  if (!wikipediaTitle) return [];
+  const url = `https://en.wikipedia.org/w/api.php?${new URLSearchParams({
+    format: 'json',
+    formatversion: '2',
+    action: 'query',
+    titles: wikipediaTitle.replace(/_/g, ' '),
+    prop: 'images',
+    imlimit: '200',
+  })}`;
+  const key = resolve(CACHE, `${createHash('sha1').update(url).digest('hex')}.json`);
+  let body: string | null = null;
+  if (!refresh && existsSync(key)) {
+    body = readFileSync(key, 'utf8');
+  } else {
+    for (let i = 0; i < 6 && body === null; i++) {
+      try {
+        const res = await fetch(url, { headers: { 'user-agent': UA } });
+        const text = await res.text();
+        if (res.ok && text.trimStart().startsWith('{')) {
+          mkdirSync(CACHE, { recursive: true });
+          writeFileSync(key, text);
+          body = text;
+          await sleep(1100);
+          break;
+        }
+      } catch {
+        /* fall through to the backoff */
+      }
+      await sleep(Math.min(2500 * 2 ** i, 60_000));
+    }
+  }
+  if (body === null) return [];
+  const parsed = JSON.parse(body) as {
+    query?: { pages?: { images?: { title: string }[] }[] };
+  };
+  return (parsed.query?.pages?.[0]?.images ?? [])
+    .map((i) => i.title)
+    .filter((t) => /\.(jpe?g|png)$/i.test(t));
+}
+
+// ------------------------------------------------------------------- scoring
+
+interface Scored extends FileInfo {
+  score: number;
+  notes: string[];
+}
+
+function score(file: FileInfo, kind: 'egg' | 'bird', prefer: RegExp | null): Scored {
+  const notes: string[] = [];
+  const haystack = [file.title, file.description ?? '', file.categories.join(' ')].join(
+    ' ',
+  );
+  const cats = file.categories.join(' ');
+  // What the *file* is, as opposed to what its caption talks about. Commons
+  // descriptions often carry a species blurb — "it feeds on fish ... lays three
+  // to five eggs" — under a photograph of an adult bird, which put six adult
+  // Great Blue Herons at the top of week 12's egg shortlist. Titles and
+  // categories describe the file itself, so the egg test uses only those.
+  const subject = [file.title, cats].join(' ');
+  let points = 0;
+
+  if (/Featured pictures on Wikimedia Commons/i.test(cats)) {
+    points += 120;
+    notes.push('featured picture');
+  }
+  if (/Quality images/i.test(cats)) {
+    points += 70;
+    notes.push('quality image');
+  }
+  if (/Valued images/i.test(cats)) {
+    points += 35;
+    notes.push('valued image');
+  }
+
+  // The card crops to a 200px strip, so a tall file loses much of its subject.
+  const aspect = file.width / file.height;
+  if (aspect >= 1.3) points += 30;
+  else if (aspect >= 1.0) points += 10;
+  else {
+    points -= 45;
+    notes.push('portrait — crops badly in the strip');
+  }
+
+  points += Math.min(file.width, 5000) / 250;
+
+  // Wikimedia's own use of the file. Weighted above every other signal here,
+  // because it is the only one that reflects a person looking at the picture.
+  const usage = file.usage;
+  if (usage?.inSpeciesArticle) {
+    points += 110;
+    notes.push("in the species' Wikipedia article");
+  } else if (usage?.inEnglishArticle) {
+    points += 55;
+    notes.push('used in an English Wikipedia article');
+  }
+  if (usage?.count) {
+    points += Math.min(usage.count, 20) * 3;
+    if (!usage.inEnglishArticle) {
+      notes.push(`used on ${usage.count} Wikimedia page${usage.count === 1 ? '' : 's'}`);
+    }
+  }
+
+  if (kind === 'bird' && CAPTIVE.test(haystack)) {
+    points -= 55;
+    notes.push('reads as captive or in-hand');
+  }
+  if (kind === 'bird' && NOT_A_LIVE_BIRD.test(haystack)) {
+    points -= 120;
+    notes.push('not a live bird');
+  }
+  if (kind === 'egg') {
+    // "Nest" alone is not an egg week. The first pass over weeks 7-13 put six
+    // photographs of an adult House Wren sitting on its nest box at the top of
+    // the shortlist, because the word nest was in every caption. An egg week
+    // wants, in order: a nest with the clutch visible, a collection specimen,
+    // and only then a nest whose caption does not say whether eggs are in it.
+    const egg = /\begg/i.test(subject);
+    const nest = /\b(nest|clutch|brood)/i.test(subject);
+    if (egg && nest) {
+      points += 60;
+      notes.push('nest with a clutch');
+    } else if (egg) {
+      points += 25;
+      notes.push('egg, probably a specimen');
+    } else if (nest) {
+      points -= 80;
+      notes.push('nest, but the caption never mentions an egg');
+    } else {
+      points -= 200;
+      notes.push('no egg or nest in the subject');
+    }
+  }
+  if (prefer) {
+    const hay = [file.title, file.description ?? '', cats].join(' ');
+    if (prefer.test(hay)) {
+      points += 200;
+      notes.push(`matches --prefer ${prefer.source}`);
+    }
+  }
+  return { ...file, score: Math.round(points), notes };
+}
+
+/** Files this project cannot ship at all, whatever they look like. */
+/**
+ * A pattern that the file has to match somewhere to count as being about this
+ * species: the genus, the full scientific name, or the common name.
+ *
+ * Needed because `articleImages` reads Wikipedia's whole image list for the
+ * article, and that list is not just the article's photographs — it carries the
+ * page furniture too. The Eastern Bluebird article contributed a fritillary
+ * butterfly, an elk and a caribou, none of which any other filter here would
+ * have caught, and any of which could have surfaced in a shortlist carrying
+ * somebody else's Featured Picture badge.
+ */
+function subjectPattern(scientificName: string, comparison: string): RegExp {
+  const words = [scientificName, comparison.replace(/ egg$/i, '')]
+    .flatMap((name) => name.split(/[\s_-]+/))
+    .map((word) => word.trim())
+    .filter((word) => word.length > 3)
+    .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  return new RegExp(words.join('|'), 'i');
+}
+
+function shippable(file: FileInfo, kind: 'egg' | 'bird', subject: RegExp): string | null {
+  if (!/^image\/(jpeg|png)$/.test(file.mime)) return `mime ${file.mime}`;
+  if (file.width < MIN_WIDTH) return `${file.width}px wide`;
+  if (!file.license) return 'no licence reported';
+  if (!(ALLOWED_COMMONS_LICENSES as readonly string[]).includes(file.license))
+    return `licence ${file.license}`;
+  if (!file.author) return 'no author reported';
+  const haystack = [file.title, file.description ?? '', file.categories.join(' ')].join(
+    ' ',
+  );
+  if (NOT_A_PHOTOGRAPH.test(haystack)) return 'not a photograph';
+  if (NOT_THE_SUBJECT.test(haystack)) return 'not the subject';
+  // Egg weeks want museum clutch trays; bird weeks do not want mounted skins.
+  if (kind === 'bird' && NOT_A_LIVE_BIRD.test(haystack)) return 'not a live bird';
+  if (!subject.test([file.title, file.categories.join(' ')].join(' ')))
+    return 'not this species';
+  return null;
+}
+
+// ---------------------------------------------------------------------- main
+
+const args = process.argv.slice(2);
+const refresh = args.includes('--refresh');
+const wantSheet = args.includes('--sheet');
+const weekArg = args[args.indexOf('--weeks') + 1];
+/**
+ * `--prefer <regex>` lifts candidates matching it to the top of the shortlist.
+ *
+ * Scoring knows about badges, crops and usage; it knows nothing about which bird
+ * the author wants to look at. Week 20 is the case it was added for: every
+ * Eastern Bluebird candidate was shippable and well-ranked, and the author
+ * wanted the male, whose colour is the point of the card. `--prefer '\bmale\b'`
+ * says so once, repeatably, instead of hand-picking down a list. Note that
+ * `\bmale\b` does not match "female" — the b before the m is not a boundary.
+ */
+const preferArg = args[args.indexOf('--prefer') + 1];
+const prefer = preferArg && !preferArg.startsWith('--') ? new RegExp(preferArg, 'i') : null;
+
+function parseWeeks(spec: string | undefined): number[] | null {
+  if (!spec || spec.startsWith('--')) return null;
+  const weeks = new Set<number>();
+  for (const part of spec.split(',')) {
+    const range = /^(\d+)-(\d+)$/.exec(part.trim());
+    if (range) {
+      for (let w = Number(range[1]); w <= Number(range[2]); w++) weeks.add(w);
+    } else if (/^\d+$/.test(part.trim())) {
+      weeks.add(Number(part.trim()));
+    }
+  }
+  return [...weeks].sort((a, b) => a - b);
+}
+
+const raw: unknown = JSON.parse(readFileSync(DATA, 'utf8'));
+comparisonsSchema.parse(raw);
+const data = raw as {
+  weeks: {
+    week: number;
+    kind: string | null;
+    comparison: string | null;
+    scientificName: string | null;
+    wikipediaTitle: string | null;
+    image: { provider?: string | null; file?: string | null } | null;
+  }[];
+};
+
+const requested = parseWeeks(weekArg);
+const weeks = data.weeks.filter(
+  (w) =>
+    (w.kind === 'bird' || w.kind === 'egg') &&
+    w.scientificName &&
+    (requested ? requested.includes(w.week) : !w.image?.file),
+);
+
+if (!weeks.length) {
+  console.error('No weeks matched. Pass --weeks 7-13, or check the data file.');
+  process.exit(1);
+}
+
+interface WeekSurvey {
+  week: number;
+  kind: string;
+  comparison: string;
+  scientificName: string;
+  category: string;
+  pool: number;
+  rejected: Record<string, number>;
+  candidates: {
+    commonsTitle: string;
+    sourceUrl: string;
+    thumbUrl: string | null;
+    width: number;
+    height: number;
+    license: string;
+    author: string;
+    description: string | null;
+    score: number;
+    notes: string[];
+  }[];
+}
+
+const survey: WeekSurvey[] = [];
+
+const failed: number[] = [];
+
+for (const week of weeks) {
+  try {
+    const kind = week.kind as 'egg' | 'bird';
+    const category = `Category:${week.scientificName!}`;
+    const subcats = await categoryMembers(category, 'subcat', refresh).catch(() => []);
+    const direct = await categoryMembers(category, 'file', refresh).catch(() => []);
+
+    // One level of subcategories. Egg weeks live in them ("Nests of ...", "Eggs
+    // of ..."); bird weeks are better off without them, since most subcategories
+    // are plates, museum skins, or a single locality's photos.
+    // Bird weeks take the badge subcategories as well as the descriptive ones.
+    // Commons files a species' best photographs under "Quality images of <Sci>",
+    // and the earlier filter skipped it: week 20's shortlist came back with no
+    // badged Eastern Bluebird in it at all, while "Category:Quality images of
+    // Sialia sialis" sat there holding eight.
+    const wanted = subcats.filter((c) =>
+      kind === 'egg'
+        ? EGG_SUBJECT.test(c)
+        : BADGE_SUBCAT.test(c) || /\b(adult|flight|portrait|male|female)\b/i.test(c),
+    );
+    const fromSubcat: string[] = [];
+    for (const sub of wanted) {
+      fromSubcat.push(...(await categoryMembers(sub, 'file', refresh).catch(() => [])));
+    }
+
+    // A file in "Nests of Turdus migratorius" is on-subject whatever it is called;
+    // a file sitting loose in the species category only counts if its own title
+    // says egg or nest, or the whole category floods the shortlist with portraits.
+    let titles =
+      kind === 'egg'
+        ? [...fromSubcat, ...direct.filter((t) => EGG_SUBJECT.test(t))]
+        : [...fromSubcat, ...direct];
+
+    // Thin species — Wood Thrush and Great Blue Heron were the two that failed the
+    // first coverage survey — have no egg subcategory worth the name. Fall back to
+    // a site-wide search before declaring the week unsourceable.
+    if (kind === 'egg') {
+      for (const term of [
+        `${week.scientificName!} egg`,
+        `${week.comparison!.replace(/ egg$/i, '')} nest eggs`,
+        // The two museum egg collections that photograph well and licence cleanly.
+        `${week.scientificName!} MHNT`,
+        `${week.scientificName!} MWNH`,
+      ]) {
+        const hits = (await api(
+          {
+            action: 'query',
+            list: 'search',
+            srsearch: term,
+            srnamespace: '6',
+            srlimit: '40',
+          },
+          refresh,
+        ).catch(() => ({}))) as { query?: { search?: { title: string }[] } };
+        // No title filter here. The museum egg collections file under an accession
+        // number ("Troglodytes aedon MHNT.ZOO.2010.11.19.1.jpg") and say "egg"
+        // only in the description, so filtering on the title drops exactly the
+        // files this search exists to find. Scoring rejects the off-subject ones.
+        titles.push(...(hits.query?.search ?? []).map((h) => h.title));
+      }
+    }
+
+    // Put Wikipedia's own choices at the front, where the candidate cap cannot
+    // trim them away.
+    const fromArticle = await articleImages(week.wikipediaTitle, refresh);
+    titles = [...new Set([...fromArticle, ...titles])].slice(0, MAX_CANDIDATES);
+
+    const subject = subjectPattern(week.scientificName!, week.comparison!);
+    const files = await fileInfo(titles, refresh);
+
+    // Reject before asking about usage, not after. Global usage is paged per
+    // *batch* of 50 files rather than per file, so one heavily-used file starves
+    // the other 49: a butterfly portal icon from Wikipedia's article-image list
+    // has thousands of usages, and the batch it sat in never paged far enough to
+    // report anybody else's. Filtering first removes the hogs — they are never
+    // shippable anyway — and cuts the number of usage queries roughly in half.
+    const rejected: Record<string, number> = {};
+    const shippableFiles: FileInfo[] = [];
+    for (const file of files) {
+      const why = shippable(file, kind, subject);
+      if (why) {
+        const bucket = why
+          .replace(/\d+px wide/, 'too small')
+          .replace(/^licence .*/, 'licence');
+        rejected[bucket] = (rejected[bucket] ?? 0) + 1;
+        continue;
+      }
+      shippableFiles.push(file);
+    }
+
+    const usage = await globalUsage(
+      shippableFiles.map((f) => f.title),
+      week.wikipediaTitle,
+      refresh,
+    );
+    for (const file of shippableFiles) file.usage = usage.get(file.title);
+
+    const kept: Scored[] = [];
+    for (const file of shippableFiles) {
+      const s = score(file, kind, prefer);
+      if (s.notes.includes('no egg or nest in the subject') || s.score < -100) {
+        rejected['scored out'] = (rejected['scored out'] ?? 0) + 1;
+        continue;
+      }
+      kept.push(s);
+    }
+    kept.sort((a, b) => b.score - a.score);
+
+    survey.push({
+      week: week.week,
+      kind,
+      comparison: week.comparison!,
+      scientificName: week.scientificName!,
+      category,
+      pool: files.length,
+      rejected,
+      candidates: kept.slice(0, SHORTLIST).map((c) => ({
+        commonsTitle: c.title,
+        sourceUrl: c.descriptionurl,
+        thumbUrl: c.thumburl ?? null,
+        width: c.width,
+        height: c.height,
+        license: c.license!,
+        author: c.author!,
+        description: c.description ? c.description.slice(0, 240) : null,
+        score: c.score,
+        notes: c.notes,
+      })),
+    });
+
+    console.log(
+      `week ${String(week.week).padStart(2)} ${week.comparison!.padEnd(28)} ` +
+        `pool ${String(files.length).padStart(3)} → ${kept.length} shippable, ` +
+        `top ${kept[0]?.score ?? 0}`,
+    );
+  } catch (err) {
+    // Wikimedia rate-limits this address hard enough that a week can run out of
+    // retries. Losing one week is survivable; losing the eight already surveyed
+    // to an exception on the ninth is not. Responses are cached, so re-running
+    // the same command picks up where this left off.
+    failed.push(week.week);
+    console.error(
+      `week ${String(week.week).padStart(2)} FAILED: ${(err as Error).message.slice(0, 90)}`,
+    );
+  }
+}
+
+const range = requested ? `${requested[0]}-${requested[requested.length - 1]}` : 'all';
+const out = resolve(ROOT, `docs/research/commons-survey-${range}.json`);
+mkdirSync(dirname(out), { recursive: true });
+writeFileSync(
+  out,
+  JSON.stringify({ generated: new Date().toISOString(), survey }, null, 2) + '\n',
+);
+console.log(`\nShortlists written to ${out}.`);
+if (failed.length) {
+  console.error(
+    `Incomplete: weeks ${failed.join(', ')} ran out of retries. Re-run the same command.`,
+  );
+}
+
+if (wantSheet) {
+  const sheetPath = resolve(ROOT, `docs/research/commons-shortlist-${range}.md`);
+  const lines: string[] = [
+    `# Commons shortlist — weeks ${range}`,
+    '',
+    'Generated by `npm run survey-commons`. Every candidate below is already',
+    'licence-checked against ADR-003, at least 1000px wide, and has a named author,',
+    'so any of them is shippable. What is left is the part a script cannot do:',
+    'deciding which photograph is the right one.',
+    '',
+    'The card crops each photo to a **200px-tall strip across the full card width**,',
+    'so a shot whose subject sits dead centre and reads at a glance beats a prettier',
+    'one that loses its bird to the crop.',
+    '',
+    'Reply with the week and the letter, e.g. "7A, 8C, 9 none of these".',
+    '',
+  ];
+  for (const w of survey) {
+    lines.push(`## Week ${w.week} — ${w.comparison}`);
+    lines.push('');
+    lines.push(
+      `*${w.scientificName}* · [${w.category}](https://commons.wikimedia.org/wiki/${encodeURIComponent(w.category)}) · ` +
+        `${w.pool} files examined, ${w.candidates.length} shortlisted`,
+    );
+    lines.push('');
+    if (!w.candidates.length) {
+      lines.push('**Nothing shippable found.** Rejections: ' + JSON.stringify(w.rejected));
+      lines.push('');
+      continue;
+    }
+    w.candidates.forEach((c, i) => {
+      const letter = String.fromCharCode(65 + i);
+      lines.push(`### ${w.week}${letter}`);
+      lines.push('');
+      if (c.thumbUrl) lines.push(`![${w.comparison} candidate ${letter}](${c.thumbUrl})`);
+      lines.push('');
+      lines.push(
+        `[${c.commonsTitle.replace(/^File:/, '')}](${c.sourceUrl}) · ${c.width}×${c.height} · ` +
+          `${c.license} · ${c.author}${c.notes.length ? ` · ${c.notes.join(', ')}` : ''}`,
+      );
+      if (c.description) {
+        lines.push('');
+        lines.push(`> ${c.description}`);
+      }
+      lines.push('');
+    });
+  }
+  writeFileSync(sheetPath, lines.join('\n'));
+  console.log(`Review sheet written to ${sheetPath}.`);
+}

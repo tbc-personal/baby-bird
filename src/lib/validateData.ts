@@ -116,7 +116,12 @@ export function validateComparisons(raw: unknown): ValidationReport {
   let weeksMissingImage = 0;
 
   for (const row of weeks) {
-    if (row.week === 1) continue; // week 1 carries no data, by design
+    // Weeks before the first comparison week carry no data, by design. That
+    // used to mean week 1 alone; the author dropped the grain-of-grit
+    // comparison and moved the poppy seed to week 3, because gestational weeks
+    // 1 and 2 precede conception. `FIRST_COMPARISON_WEEK` is the one place that
+    // says where the comparisons start, so this reads it rather than a literal.
+    if (row.week < FIRST_COMPARISON_WEEK) continue;
     if (!row.comparison) errors.push(`week ${row.week} has no comparison`);
     if (!row.kind) errors.push(`week ${row.week} has no kind`);
     if (row.lengthIn === null) errors.push(`week ${row.week} has no length`);

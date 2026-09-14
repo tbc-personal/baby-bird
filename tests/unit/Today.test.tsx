@@ -5,7 +5,7 @@ import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
 import { parseIsoDate } from '../../src/lib/gestation';
-import { weekRow } from '../../src/data/comparisons';
+import { COMPARISON_WEEKS, weekRow } from '../../src/data/comparisons';
 
 function day(iso: string): Date {
   const parsed = parseIsoDate(iso);
@@ -63,7 +63,7 @@ describe('Today screen (mockup 2)', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('shows the too-early state before week 2', () => {
+  it('shows the too-early state before week 3', () => {
     saveLmp('2026-09-01');
     renderToday('2026-09-06');
     expect(screen.getByText('Too early for a comparison')).toBeInTheDocument();
@@ -73,11 +73,13 @@ describe('Today screen (mockup 2)', () => {
     expect(screen.queryByText(/Your baby is roughly the size of/)).toBeNull();
   });
 
-  it('renders the proposed week 3 row normally', () => {
+  it('renders week 3, the first comparison week', () => {
     saveLmp('2026-08-16'); // 21 days before 2026-09-06 → 3w0d
     renderToday('2026-09-06');
-    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Grain of grit');
-    expect(screen.getByText(/proposal, not yet signed off/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Poppy seed');
+    // Nothing is proposed any more: grain of grit was dropped rather than
+    // signed off, and the poppy seed moved down from week 2 to take its place.
+    expect(screen.queryByText(/proposal, not yet signed off/)).toBeNull();
   });
 
   it('clamps past 42 weeks to the Osprey row', () => {
@@ -128,16 +130,21 @@ describe('ComparisonCard', () => {
   });
 
   it('notes the measurement convention on weeks 20 and 21 only', () => {
+    // Matched loosely on purpose. What this test is about is which weeks carry
+    // the note, not how it is worded, and it broke once on an edit that only
+    // hyphenated "crown to rump".
+    const note = /crown.?to.?rump.+week 20/i;
+
     const twenty = card(20);
-    expect(screen.getByText(/crown to rump through week 20/)).toBeInTheDocument();
+    expect(screen.getByText(note)).toBeInTheDocument();
     twenty.unmount();
 
     const twentyOne = card(21);
-    expect(screen.getByText(/crown to rump through week 20/)).toBeInTheDocument();
+    expect(screen.getByText(note)).toBeInTheDocument();
     twentyOne.unmount();
 
     card(19);
-    expect(screen.queryByText(/crown to rump through week 20/)).toBeNull();
+    expect(screen.queryByText(note)).toBeNull();
   });
 
   it('shows the crown-to-rump label before the switch', () => {
@@ -154,7 +161,7 @@ describe('ComparisonCard', () => {
   });
 
   it('falls back to Wikipedia for seed rows, which have no All About Birds page', () => {
-    card(2);
+    card(3);
     expect(screen.getByRole('link', { name: /More on Wikipedia/ })).toHaveAttribute(
       'href',
       'https://en.wikipedia.org/wiki/Poppy_seed',
@@ -162,12 +169,17 @@ describe('ComparisonCard', () => {
   });
 
   it('shows the "Photo coming" silhouette when no asset is curated', () => {
-    card(23);
+    // Ask the data which week that is rather than naming one. This test used to
+    // say week 23, and broke the day the Atlantic Puffin got a photograph — the
+    // same way the PWA specs broke when the real calendar moved past week 23.
+    const uncurated = COMPARISON_WEEKS.find((row) => !row.image?.file);
+    if (!uncurated) throw new Error('every week has a photo; this test is obsolete');
+    card(uncurated.week);
     expect(screen.getByText('Photo coming')).toBeInTheDocument();
   });
 
   it('says the seed weights are an upper bound', () => {
-    card(2);
+    card(3);
     expect(screen.getByText('weight, under 0.04 oz')).toBeInTheDocument();
   });
 });

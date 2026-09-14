@@ -88,7 +88,7 @@ describe('Setup screen (mockup 1)', () => {
     const form = container.querySelector('form');
     expect(form).not.toBeNull();
     expect(form?.textContent ?? '').not.toMatch(/privacy|your data|on your device/i);
-    expect(screen.getByText(/stored on this device only/)).toBeInTheDocument();
+    expect(screen.getByText(/stored on (your|this) device only/i)).toBeInTheDocument();
   });
 
   it('hides the calculation details until the info button is pressed', async () => {
@@ -112,7 +112,7 @@ describe('Setup screen (mockup 1)', () => {
 
   it('closes the details on Escape and on an outside click', async () => {
     const user = userEvent.setup();
-    renderSetup();
+    const { container } = renderSetup();
     const info = screen.getByRole('button', { name: 'How each method is calculated' });
 
     await user.click(info);
@@ -121,7 +121,11 @@ describe('Setup screen (mockup 1)', () => {
 
     await user.click(info);
     expect(info).toHaveAttribute('aria-expanded', 'true');
-    await user.click(screen.getByText(/size, week by week/));
+    // The tagline, by class rather than by its words: this test only needs
+    // somewhere outside the panel to click, and it broke once on a copy edit.
+    const outside = container.querySelector('.setup__tagline');
+    if (!outside) throw new Error('no tagline to click outside the panel');
+    await user.click(outside);
     expect(info).toHaveAttribute('aria-expanded', 'false');
   });
 

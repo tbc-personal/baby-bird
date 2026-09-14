@@ -131,7 +131,9 @@ export function ProgressHeader({
   offset: number;
 }) {
   const range =
-    browsing && viewedWeek !== null ? weekDateRange(progress.lmpEquivalent, viewedWeek) : null;
+    browsing && viewedWeek !== null
+      ? weekDateRange(progress.lmpEquivalent, viewedWeek)
+      : null;
 
   return (
     <>
@@ -200,7 +202,11 @@ function Arrow({
     );
   }
   return (
-    <a className="head__arrow" href={hrefFor({ name: 'week', week: target })} aria-label={label}>
+    <a
+      className="head__arrow"
+      href={hrefFor({ name: 'week', week: target })}
+      aria-label={label}
+    >
       {glyph}
     </a>
   );

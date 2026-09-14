@@ -3,13 +3,14 @@
 Status: accepted (2026-09-06)
 
 ## Decision
+
 The user picks one dating method from a dropdown and enters one date. Both methods reduce to a single canonical value stored in state: `lmpEquivalentDate` (the date that would be day 0 of gestational age).
 
-| Method | Input | `lmpEquivalent` | Due date |
-|---|---|---|---|
-| Last menstrual period (LMP) | LMP date | LMP | LMP + 280 days |
-| Conception date | conception date | conception − 14 days | conception + 266 days |
-| Enter my due date | due date | due − 280 days | as entered |
+| Method                      | Input           | `lmpEquivalent`      | Due date              |
+| --------------------------- | --------------- | -------------------- | --------------------- |
+| Last menstrual period (LMP) | LMP date        | LMP                  | LMP + 280 days        |
+| Conception date             | conception date | conception − 14 days | conception + 266 days |
+| Enter my due date           | due date        | due − 280 days       | as entered            |
 
 Derived values, computed on every render from `lmpEquivalent` and today's local date:
 
@@ -20,6 +21,7 @@ Derived values, computed on every render from `lmpEquivalent` and today's local 
 - Trimester boundaries: 1st through 13w6d, 2nd 14w0d to 27w6d, 3rd from 28w0d.
 
 ## Edge states the UI must handle
+
 - `gestationalDays < 14`: before conception on the LMP scale. Show a "too early to compare" state, not week 1/3 rows (which have no comparison).
 - `weeks == 3`: the source CSV had no comparison; the data now carries a proposed one (`proposed: true`). Rows flagged proposed render normally.
 - `weeks > 42`: clamp to the Osprey row and show "past 42 weeks".
@@ -27,9 +29,11 @@ Derived values, computed on every render from `lmpEquivalent` and today's local 
 - Week 20 → 21: length jumps from 6.46 in to 10.51 in because the measurement convention changes from crown-rump to crown-heel. Show a one-line note on weeks 20 and 21.
 
 ## Third method (accepted)
+
 "Enter my due date": the user enters the due date they were given and `lmpEquivalent = dueDate − 280`. In this mode the date field is labeled "Due date" and future dates are valid.
 
 ## Consequences
+
 - Changing the method after entry converts the stored date; the UI re-derives everything, nothing else is stored.
 - All math lives in `src/lib/gestation.ts` with table-driven tests covering the edge states above and a DST-crossing date.
 
@@ -37,7 +41,7 @@ Derived values, computed on every render from `lmpEquivalent` and today's local 
 
 Naegele's rule, as recorded in the table above, adds 280 days to the first day
 of the last period. That is correct only for a 28-day cycle. Ovulation sits
-roughly 14 days before the *next* period rather than 14 days after the last one,
+roughly 14 days before the _next_ period rather than 14 days after the last one,
 so a longer cycle means a later conception and a later due date:
 
 ```

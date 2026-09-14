@@ -132,7 +132,7 @@ export function SetupScreen({ today, shared }: { today: Date; shared: SharedDate
         Nestling
       </h1>
       <p className="small setup__tagline">
-        Your baby&rsquo;s size, week by week, as a seed, an egg, then a bird.
+        The pregnancy tracking app for bird lovers.
       </p>
 
       {askingToReplace && shared && saved ? (
