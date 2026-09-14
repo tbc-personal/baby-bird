@@ -1,7 +1,7 @@
 # Nestling
 
 A pregnancy tracker. Enter your last menstrual period, conception date, or due date and see each week's
-fetal size as a seed, an egg, then a bird: poppy seed at week 2, Atlantic Puffin at week 23, Osprey at week 42.
+fetal size as a seed, an egg, then a bird: a poppy seed at week 3, Atlantic Puffin at week 23, Osprey at week 42.
 
 Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
