@@ -154,8 +154,8 @@
       "file": "images/birds/northern-flicker.jpg",
       "altText": "A male Northern Flicker perched on a stump, its barred brown back and heavily spotted breast turned to the camera.",
       "why": "Author's pick (24B). Featured Picture. Held back once because the centred strip crop cut the head off; restored with an objectPosition.",
-      "objectPosition": "center 15%",
-      "objectPositionWhy": "A centred crop cut the head off entirely and left a spotted breast."
+      "objectPosition": "center 28%",
+      "objectPositionWhy": "A centred crop cut the head off entirely and left a spotted breast. At 200px the window is taller, so 15% left dead space above the flicker and cut its tail."
     },
     {
       "week": 25,
@@ -212,8 +212,8 @@
       "file": "images/birds/pileated-woodpecker.jpg",
       "altText": "A Pileated Woodpecker clinging to a wooden post, its red crest raised above a black back and white neck stripe.",
       "why": "Author's pick (31A). Featured Picture. Held back once because the centred crop removed the red crest, which is the whole identity of the bird; restored with an objectPosition.",
-      "objectPosition": "center 20%",
-      "objectPositionWhy": "A centred crop removed the red crest, which is the whole identity of the bird."
+      "objectPosition": "center 30%",
+      "objectPositionWhy": "A centred crop removed the red crest, which is the whole identity of the bird. At 200px the window is taller, so 20% left dead space above the woodpecker and cut its feet."
     },
     {
       "week": 32,

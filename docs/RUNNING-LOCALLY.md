@@ -87,13 +87,13 @@ source reload in the browser straight away.
 
 Only `npm run dev` is needed to look at the app. The rest are what CI runs:
 
-| Command | What it does |
-|---|---|
-| `npm run test` | Unit tests. Fast. |
-| `npm run lint` | ESLint, plus the ADR-007 rule banning literal colors |
-| `npm run typecheck` | TypeScript, no output produced |
-| `npm run build` | The production build, into `dist/` |
-| `npm run preview` | Serves the production build, to check it as shipped |
+| Command                  | What it does                                                             |
+| ------------------------ | ------------------------------------------------------------------------ |
+| `npm run test`           | Unit tests. Fast.                                                        |
+| `npm run lint`           | ESLint, plus the ADR-007 rule banning literal colors                     |
+| `npm run typecheck`      | TypeScript, no output produced                                           |
+| `npm run build`          | The production build, into `dist/`                                       |
+| `npm run preview`        | Serves the production build, to check it as shipped                      |
 | `npm run test:e2e:smoke` | Playwright browser tests. Needs `npx playwright install chromium` first. |
 
 Do **not** run `npm run test:e2e:update` to fix failing screenshot tests. Those baselines are
@@ -102,9 +102,9 @@ be generated on the GitHub runner that checks them. See the README.
 
 ## If something goes wrong
 
-| What you see | What it means |
-|---|---|
-| `npm: command not found` | Node did not install, or you need a freshly opened terminal |
+| What you see                                             | What it means                                                                                |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `npm: command not found`                                 | Node did not install, or you need a freshly opened terminal                                  |
 | `ENOENT: no such file or directory, open 'package.json'` | Wrong folder. Redo step 3, and make sure you dragged the unpacked folder rather than the zip |
-| `Port 5173 is in use` | It is already running in another terminal. Vite picks 5174 and says so |
-| A blank white page | Check the terminal for a red error; it usually names the file |
+| `Port 5173 is in use`                                    | It is already running in another terminal. Vite picks 5174 and says so                       |
+| A blank white page                                       | Check the terminal for a red error; it usually names the file                                |

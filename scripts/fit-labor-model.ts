@@ -65,8 +65,7 @@ function fit(pretermMean: number, pretermSd: number): MixtureParams {
     // preterm component contributes all of its mass below day 259, so it enters
     // this equation as 1.
     const termBelowPreterm = normalCdf((PRETERM_DAY - termMean) / termSd);
-    pretermWeight =
-      (CALIBRATION.pretermShare - termBelowPreterm) / (1 - termBelowPreterm);
+    pretermWeight = (CALIBRATION.pretermShare - termBelowPreterm) / (1 - termBelowPreterm);
 
     // μ_t and σ_t from the median and post-term targets, given π.
     const zMedian = probit((0.5 - pretermWeight) / (1 - pretermWeight));
@@ -184,7 +183,9 @@ console.log(
 // 2. The sanity table, as the panel would read it.
 // ---------------------------------------------------------------------------
 
-console.log('\nday   weeks    P(started by)   P(next 7 d | still pregnant)   most likely day');
+console.log(
+  '\nday   weeks    P(started by)   P(next 7 d | still pregnant)   most likely day',
+);
 for (const day of [238, 259, 266, 273, 280, 287, 294]) {
   const weeks = `${Math.floor(day / 7)}w${day % 7}d`;
   const started = cdf(day, fitted);
@@ -215,7 +216,9 @@ for (let day = CALIBRATION.pretermDay - 21; day <= CALIBRATION.pretermDay; day +
 }
 console.log(
   `  falls on ${dips.length} of the 21 days from 34w0d to 37w0d` +
-    (dips.length > 0 ? `, first on day ${dips[0]} (${Math.floor(dips[0] / 7)}w${dips[0] % 7}d)` : ''),
+    (dips.length > 0
+      ? `, first on day ${dips[0]} (${Math.floor(dips[0] / 7)}w${dips[0] % 7}d)`
+      : ''),
 );
 console.log(
   '  It is a property of the four targets, not of μ_p and σ_p: 6.7% of onsets\n' +

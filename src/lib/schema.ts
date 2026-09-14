@@ -55,7 +55,7 @@ export const imageSchema = z
     /** Commons rows only: the file under `public/images/`, relative to the app base. */
     file: z.string().nullable().optional().default(null),
     /**
-     * Where the 150px strip crop takes its window from, as a CSS
+     * Where the 200px strip crop takes its window from, as a CSS
      * `object-position` value. Null centres it.
      *
      * The card is a wide, short letterbox — nearer 2.6:1 than the 16:9 a

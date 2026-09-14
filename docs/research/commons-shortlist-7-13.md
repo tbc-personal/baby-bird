@@ -5,7 +5,7 @@ licence-checked against ADR-003, at least 1000px wide, and has a named author,
 so any of them is shippable. What is left is the part a script cannot do:
 deciding which photograph is the right one.
 
-The card crops each photo to a **150px-tall strip across the full card width**,
+The card crops each photo to a **200px-tall strip across the full card width**,
 so a shot whose subject sits dead centre and reads at a glance beats a prettier
 one that loses its bird to the crop.
 

@@ -8,22 +8,25 @@ non-commercial constraint it reasoned about is why the Commons licence list is
 what it is.
 
 ## Decision
+
 For weeks 7–42 (eggs and birds), each screen embeds one Macaulay Library asset using the library's official share/embed iframe. Asset IDs are curated once and stored in `data/comparisons.json` (`image.mlAssetId`). The app must remain non-commercial: no ads, no paid tier, no for-profit ownership.
 
 For weeks 2–6 (seeds), the Macaulay Library has no assets. Use Wikimedia Commons CC0 / CC BY photos, downloaded into the repo with attribution stored in the same JSON `image` object (`provider: "commons"`).
 
 ## Context
+
 Cornell's help center states embedding and sharing Macaulay Library media is for non-commercial purposes only; any revenue-generating use needs a helpdesk ticket and license. All About Birds photos are Macaulay Library assets, so this is the closest permitted route to "the bird photo from All About Birds". See `docs/research/licensing.md`.
 
 ## Constraints and mitigations
-| Risk | Mitigation |
-|---|---|
-| Iframe markup or URL pattern changes on Cornell's side | Isolate in one component (`MacaulayEmbed`). Store the asset ID, not the markup; build the iframe from a single template constant. Add a smoke test that loads one embed in CI via Playwright and fails if it renders empty. |
-| No offline support for embeds | Service worker does not cache cross-origin frames. Show the offline goose (`docs/mockups/goose-offline.svg`: a line-drawn goose in a hat with a no-wifi symbol) with the tag "Photo needs a connection" when `navigator.onLine` is false or the frame fails to load within a timeout. |
-| Third-party script weight on every screen | Lazy-load the iframe only for the current week's card; timeline rows use small kind silhouettes (seed / egg / bird), not photos. |
-| No asset ID curated yet | Render the kind silhouette with the tag "Photo coming". Distinct from the offline goose. |
-| Contributor deletes an asset | Curate two IDs per species (primary, fallback). Quarterly link check script. |
-| Commercial drift | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request. |
+
+| Risk                                                   | Mitigation                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Iframe markup or URL pattern changes on Cornell's side | Isolate in one component (`MacaulayEmbed`). Store the asset ID, not the markup; build the iframe from a single template constant. Add a smoke test that loads one embed in CI via Playwright and fails if it renders empty.                                                           |
+| No offline support for embeds                          | Service worker does not cache cross-origin frames. Show the offline goose (`docs/mockups/goose-offline.svg`: a line-drawn goose in a hat with a no-wifi symbol) with the tag "Photo needs a connection" when `navigator.onLine` is false or the frame fails to load within a timeout. |
+| Third-party script weight on every screen              | Lazy-load the iframe only for the current week's card; timeline rows use small kind silhouettes (seed / egg / bird), not photos.                                                                                                                                                      |
+| No asset ID curated yet                                | Render the kind silhouette with the tag "Photo coming". Distinct from the offline goose.                                                                                                                                                                                              |
+| Contributor deletes an asset                           | Curate two IDs per species (primary, fallback). Quarterly link check script.                                                                                                                                                                                                          |
+| Commercial drift                                       | README and LICENSE state the non-commercial constraint. Any monetization requires re-doing this ADR and filing a Macaulay Library license request.                                                                                                                                    |
 
 ## Resolved, 2026-09-08: the Macaulay embed route is not shippable
 
@@ -49,7 +52,8 @@ by the author once the frame was loading. This is not a latency problem to tune
 around: the app would be putting a third party's anti-abuse interstitial in front
 of its own content.
 
-So the embed route is abandoned, and the frame keeps the mockup's 150px strip.
+So the embed route is abandoned. The frame kept the mockup's 150px strip at
+first; it is 200px now (see "The strip is 200px" below).
 `MacaulayEmbed` and the template stay in the tree — they are correct, and if
 Cornell exempts the embed endpoint the route is a data change away — but no row
 should carry an `mlAssetId` while the challenge is in front of it.
@@ -67,7 +71,7 @@ should carry an `mlAssetId` while the challenge is in front of it.
   species' Commons category, rejects everything unshippable (licence, no author,
   under 1000px, engravings, museum skins, maps, sound), scores what is left on
   signals the API reports — Featured/Quality/Valued badges, aspect ratio against
-  the 150px strip crop, whether an egg week's file actually shows an egg — and
+  the strip crop, whether an egg week's file actually shows an egg — and
   writes a six-candidate shortlist with thumbnails. It never picks; choosing
   between six photographs stays a human act, the same split as `reviewed` in
   ADR-004. Responses cache under `.commons-survey/`.
@@ -114,6 +118,7 @@ below is unchanged from the planning guess and is recorded as a guess.
 - Each card also deep-links to `https://www.allaboutbirds.org/guide/<slug>/overview`.
 
 ### Failure handling as built
+
 - `navigator.onLine` false, or no `load` within **6 seconds**: the offline goose,
   tagged "Photo needs a connection".
 - No `mlAssetId` curated: the kind silhouette, tagged "Photo coming". Distinct
@@ -123,5 +128,33 @@ below is unchanged from the planning guess and is recorded as a guess.
   offline still attaches its observer when the connection returns.
 
 ## Alternatives rejected
+
 - Wikimedia Commons for all weeks: no permission needed, offline-capable, but not Cornell's photos. Remains the fallback if the embed route breaks; the `image.provider` field is designed so the swap is a data change.
 - Requesting a Cornell license for downloaded images: cheap to ask, uncertain timeline. Can be pursued in parallel; not a v1 dependency.
+
+## The strip is 200px, not the mockup's 150px (2026-09-14)
+
+The photo window was 150px tall across the card, about 2.8:1, and showed roughly
+half of each photograph's height. Two things followed from that. Birds sitting
+in the upper part of their frame lost their heads to a centred crop — the
+Northern Flicker and the Pileated Woodpecker both reached the data that way —
+and even correctly-cropped cards clipped a puffin's feet and a kingfisher's bill.
+
+Two changes, in order:
+
+- **`image.objectPosition`**, curated per photograph. Which part of a photograph
+  holds the bird is a judgement about that photograph, not something the code
+  can derive, so it is data like everything else here. Nine weeks carry one.
+  Week 10 is the clearest case: the robin's eggs sit in the bottom third, and
+  the card had been showing an empty nest.
+- **200px**, at the author's direction. Measured across all 36 curated weeks
+  with `npm run crop-preview -- --compare 200`: the share of each photograph's
+  height that reaches the card goes from a mean of 52% to 69%. Four to six weeks
+  gain something identifiable — the puffin's orange feet, the kingfisher's bill
+  tip, the bluebird's tail, the crow's feet. The rest gain context. As the
+  author put it, this is the pregnancy tracker for bird lovers, and the bird is
+  a central part of the fun.
+
+`npm run crop-preview` is the tool for both: it draws each curated photograph
+whole with the card's real window marked on it and a percentage scale down the
+side. The review sheets cannot show this, because their thumbnails are 16:9.

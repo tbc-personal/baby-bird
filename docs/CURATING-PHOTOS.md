@@ -22,7 +22,7 @@ and book plates, museum skins, maps, sound files — scores what is left, and
 writes a shortlist of six with thumbnails.
 
 **Choosing between six photographs is not mechanical**, so you do it. The script
-never picks. It cannot tell whether a bird reads at 150px or whether the crop
+never picks. It cannot tell whether a bird reads at 200px or whether the crop
 cuts its head off.
 
 ```bash
@@ -39,9 +39,11 @@ re-render a sheet costs no network. Add `--refresh` to ignore the cache.
 
 ## What makes a good photo _for this app_
 
-The card crops to a **150px-tall, full-width strip** (`object-fit: cover`,
-centred). That is a wide letterbox, and it is the whole of the aesthetic
-problem:
+The card crops to a **200px-tall, full-width strip** (`object-fit: cover`).
+That is a wide letterbox — about 2.1:1 — and it is the whole of the aesthetic
+problem. It was 150px until the author raised it: measured across all 36
+curated weeks, 150 showed 52% of each photograph's height and 200 shows 69%.
+`npm run crop-preview` draws the window on each photo so you can see it.
 
 - **The subject must be near the vertical centre.** A bird in the top third of
   the frame is cropped out entirely.
@@ -49,7 +51,7 @@ problem:
   but a 4:3 shot of a bird standing tall still loses its head and feet.
 - **One bird, filling a decent share of the frame.** A distant bird on a branch
   is a smudge at this size.
-- **Quiet background.** At 150px the bird has to separate from what is behind
+- **Quiet background.** At 200px the bird still has to separate from what is behind
   it or the card reads as mush.
 - **Egg weeks: an egg has to be visible.** A nest with a clutch in it is the
   target. A bird sitting on a nest is not an egg photo, however charming.
@@ -82,6 +84,11 @@ Add an entry to `docs/research/commons-images.json`:
   is in the frame, not why it matters. One sentence. Write it from the photo,
   not from the Commons caption, which is often wrong about the crop.
 - **`why`** — one line, for whoever revisits this choice.
+- **`objectPosition`** — a CSS `object-position` such as `center 30%`, for a
+  photograph whose subject is not in the middle of its frame. Omit it to crop
+  from the centre. `npm run crop-preview` shows where the window lands and is
+  how these are chosen; `--compare <px>` answers what a different strip height
+  would show.
 - **`authorOverride`** — only to trim import noise from the Commons Artist field
   (a Flickr geographic suffix, say). It must be a prefix of the real author
   string or the script refuses it. It cannot be used to credit somebody else.

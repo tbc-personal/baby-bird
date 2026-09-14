@@ -1,8 +1,18 @@
+/*
+ * The photo strip is 200px tall, not the mockup's 150px.
+ *
+ * At 150 the window was about 2.8:1 against the card's width, and it showed
+ * roughly half of each photograph's height — enough that a puffin lost the top
+ * of its head and a kingfisher the tip of its bill even after their crop points
+ * were tuned. At 200 it shows about 69% on average, measured across all 36
+ * curated weeks with `npm run crop-preview -- --compare 200`. This is a bird
+ * app; the bird is the point.
+ */
 .photo {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 150px;
+  min-height: 200px;
   background: var(--egg);
   color: var(--ink);
   overflow: hidden;
@@ -22,21 +32,21 @@
 
 .photo__holder {
   width: 100%;
-  min-height: 150px;
+  min-height: 200px;
   display: grid;
   place-items: center;
 }
 
 .photo__frame {
   width: 100%;
-  height: 150px;
+  height: 200px;
   border: 0;
   display: block;
 }
 
 .photo__img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }

@@ -22,38 +22,38 @@ see Weeks 27 and 28 below.
 
 ## Summary table
 
-| Week | Comparison | Claim (truncated) | Verdict | Evidence source |
-|---|---|---|---|---|
-| 23 | Atlantic Puffin | A puffin carries a dozen or more small fish crosswise… backward-pointing spines on the palate | Supported | BirdNote (web) |
-| 23 | Atlantic Puffin | A pair raises one chick a summer in a burrow dug into the soil of a sea-cliff slope | Supported | Wikipedia (cited) |
-| 23 | Atlantic Puffin | Bright bill plates are shed after breeding, leaving a smaller, duller bill for winter | Supported | Audubon Field Guide, Wikipedia |
-| 24 | Northern Flicker | Feed mostly on the ground, digging into ant nests with a long barbed tongue | Partly supported | Wikipedia (cited); American Bird Conservancy (web) |
-| 24 | Northern Flicker | Both parents excavate the cavity and share about eleven days of incubation | Supported | Wikipedia (cited); Birdfact.com (web) |
-| 24 | Northern Flicker | The tongue reaches well past the bill and is coated in sticky saliva | Supported | Wikipedia (cited, reach); American Bird Conservancy (web, saliva) |
-| 25 | Belted Kingfisher | Kingfishers dig a burrow up to two meters into a bare earth bank | Supported | Wikipedia, Audubon Field Guide, Audubon News (web) |
-| 25 | Belted Kingfisher | The female is brighter, with a rust band the male lacks | Supported | Wikipedia (cited) |
-| 25 | Belted Kingfisher | Nestlings have an acidic stomach that dissolves fish bone | Supported | Audubon Field Guide |
-| 26 | Common Tern | Nest in dense colonies on bare sand/gravel and mob anything that walks in | Supported | Wikipedia |
-| 26 | Common Tern | The male brings fish to the female during courtship, she judges him | Supported | Wikipedia (cited) |
-| 26 | Common Tern | Eggs are buff and blotched, hard to pick out against shell and stone | Supported | Wikipedia |
-| 27 | Peregrine Falcon | Stooping Peregrine is fastest animal; nostril baffles thought to let it breathe | Supported (hedge is load-bearing) | Wikipedia (cited); ResearchGate/ScienceOfBirds (web) |
-| 27 | Peregrine Falcon | Scrape a hollow on a cliff ledge; cities use window ledges and bridge girders | Supported | Wikipedia, Audubon Field Guide |
-| 27 | Peregrine Falcon | Eggs deep reddish brown; female does most of the month of incubation | Supported | Wikipedia (cited) |
-| 28 | Cooper's Hawk | Hunt through cover at speed, many carry healed fractures | Partly supported / unverifiable statistic | Wikipedia (general injury claim); no primary study found for "many" |
-| 28 | Cooper's Hawk | Female about a third larger than male, he approaches nest carefully | Supported | Birds of the World, Wikipedia (cited) |
-| 28 | Cooper's Hawk | Stick platform high in a tree, often on an old squirrel nest | Supported | Audubon Field Guide |
-| 29 | American Barn Owl | Ear openings at different heights, places sound vertically and sideways | Supported | Wikipedia/American_barn_owl (not the cited page) |
-| 29 | American Barn Owl | Heart-shaped face works as a dish, gathering sound to the ears | Supported | Wikipedia/American_barn_owl |
-| 29 | American Barn Owl | Four to seven eggs laid days apart, chicks of noticeably different sizes | Supported | Wikipedia/American_barn_owl; multiple web sources |
-| 30 | American Crow | Recognize faces, hold the grudge for years, pass it on to other crows | Supported (wrong citation) | Cornell & Marzluff 2011, Proc. R. Soc. B (via PMC) |
-| 30 | American Crow | Young crows stay with parents for years, help raise later broods | Supported | Wikipedia, Birds of the World |
-| 30 | American Crow | Nest is a bulky stick basket lined with bark, moss and hair | Supported | Audubon Field Guide; corvidresearch.blog (web) |
-| 31 | Pileated Woodpecker | Chisels long rectangular holes into rotten trunks for carpenter ants | Supported | Audubon Field Guide, Wikipedia |
-| 31 | Pileated Woodpecker | Abandoned cavities become nest sites for owls, ducks and swifts | Supported | Wikipedia; Audubon News (web) |
-| 31 | Pileated Woodpecker | The pair excavates a fresh cavity each year rather than reusing | Supported | Audubon Field Guide |
-| 32 | Hooded Merganser | Nest in tree cavities, ducklings jump to ground the day after hatching | Supported | Audubon Field Guide |
-| 32 | Hooded Merganser | A female often lays in another's nest, one cavity can hold dozens of eggs | Supported (wrong citation) | Birds of the World, Audubon Field Guide; web (up to ~40 eggs) |
-| 32 | Hooded Merganser | A clear third eyelid lets them see well enough underwater to chase fish | Supported | Birds of the World; Kern Audubon Society (web) |
+| Week | Comparison          | Claim (truncated)                                                                             | Verdict                                   | Evidence source                                                     |
+| ---- | ------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------- |
+| 23   | Atlantic Puffin     | A puffin carries a dozen or more small fish crosswise… backward-pointing spines on the palate | Supported                                 | BirdNote (web)                                                      |
+| 23   | Atlantic Puffin     | A pair raises one chick a summer in a burrow dug into the soil of a sea-cliff slope           | Supported                                 | Wikipedia (cited)                                                   |
+| 23   | Atlantic Puffin     | Bright bill plates are shed after breeding, leaving a smaller, duller bill for winter         | Supported                                 | Audubon Field Guide, Wikipedia                                      |
+| 24   | Northern Flicker    | Feed mostly on the ground, digging into ant nests with a long barbed tongue                   | Partly supported                          | Wikipedia (cited); American Bird Conservancy (web)                  |
+| 24   | Northern Flicker    | Both parents excavate the cavity and share about eleven days of incubation                    | Supported                                 | Wikipedia (cited); Birdfact.com (web)                               |
+| 24   | Northern Flicker    | The tongue reaches well past the bill and is coated in sticky saliva                          | Supported                                 | Wikipedia (cited, reach); American Bird Conservancy (web, saliva)   |
+| 25   | Belted Kingfisher   | Kingfishers dig a burrow up to two meters into a bare earth bank                              | Supported                                 | Wikipedia, Audubon Field Guide, Audubon News (web)                  |
+| 25   | Belted Kingfisher   | The female is brighter, with a rust band the male lacks                                       | Supported                                 | Wikipedia (cited)                                                   |
+| 25   | Belted Kingfisher   | Nestlings have an acidic stomach that dissolves fish bone                                     | Supported                                 | Audubon Field Guide                                                 |
+| 26   | Common Tern         | Nest in dense colonies on bare sand/gravel and mob anything that walks in                     | Supported                                 | Wikipedia                                                           |
+| 26   | Common Tern         | The male brings fish to the female during courtship, she judges him                           | Supported                                 | Wikipedia (cited)                                                   |
+| 26   | Common Tern         | Eggs are buff and blotched, hard to pick out against shell and stone                          | Supported                                 | Wikipedia                                                           |
+| 27   | Peregrine Falcon    | Stooping Peregrine is fastest animal; nostril baffles thought to let it breathe               | Supported (hedge is load-bearing)         | Wikipedia (cited); ResearchGate/ScienceOfBirds (web)                |
+| 27   | Peregrine Falcon    | Scrape a hollow on a cliff ledge; cities use window ledges and bridge girders                 | Supported                                 | Wikipedia, Audubon Field Guide                                      |
+| 27   | Peregrine Falcon    | Eggs deep reddish brown; female does most of the month of incubation                          | Supported                                 | Wikipedia (cited)                                                   |
+| 28   | Cooper's Hawk       | Hunt through cover at speed, many carry healed fractures                                      | Partly supported / unverifiable statistic | Wikipedia (general injury claim); no primary study found for "many" |
+| 28   | Cooper's Hawk       | Female about a third larger than male, he approaches nest carefully                           | Supported                                 | Birds of the World, Wikipedia (cited)                               |
+| 28   | Cooper's Hawk       | Stick platform high in a tree, often on an old squirrel nest                                  | Supported                                 | Audubon Field Guide                                                 |
+| 29   | American Barn Owl   | Ear openings at different heights, places sound vertically and sideways                       | Supported                                 | Wikipedia/American_barn_owl (not the cited page)                    |
+| 29   | American Barn Owl   | Heart-shaped face works as a dish, gathering sound to the ears                                | Supported                                 | Wikipedia/American_barn_owl                                         |
+| 29   | American Barn Owl   | Four to seven eggs laid days apart, chicks of noticeably different sizes                      | Supported                                 | Wikipedia/American_barn_owl; multiple web sources                   |
+| 30   | American Crow       | Recognize faces, hold the grudge for years, pass it on to other crows                         | Supported (wrong citation)                | Cornell & Marzluff 2011, Proc. R. Soc. B (via PMC)                  |
+| 30   | American Crow       | Young crows stay with parents for years, help raise later broods                              | Supported                                 | Wikipedia, Birds of the World                                       |
+| 30   | American Crow       | Nest is a bulky stick basket lined with bark, moss and hair                                   | Supported                                 | Audubon Field Guide; corvidresearch.blog (web)                      |
+| 31   | Pileated Woodpecker | Chisels long rectangular holes into rotten trunks for carpenter ants                          | Supported                                 | Audubon Field Guide, Wikipedia                                      |
+| 31   | Pileated Woodpecker | Abandoned cavities become nest sites for owls, ducks and swifts                               | Supported                                 | Wikipedia; Audubon News (web)                                       |
+| 31   | Pileated Woodpecker | The pair excavates a fresh cavity each year rather than reusing                               | Supported                                 | Audubon Field Guide                                                 |
+| 32   | Hooded Merganser    | Nest in tree cavities, ducklings jump to ground the day after hatching                        | Supported                                 | Audubon Field Guide                                                 |
+| 32   | Hooded Merganser    | A female often lays in another's nest, one cavity can hold dozens of eggs                     | Supported (wrong citation)                | Birds of the World, Audubon Field Guide; web (up to ~40 eggs)       |
+| 32   | Hooded Merganser    | A clear third eyelid lets them see well enough underwater to chase fish                       | Supported                                 | Birds of the World; Kern Audubon Society (web)                      |
 
 30 facts: **26 supported, 3 partly supported, 0 contradicted, 1 unverifiable component**
 (the Cooper's Hawk fracture-rate fact is counted as "partly supported" above but its
@@ -64,15 +64,17 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 ### Week 23 — Atlantic Puffin
 
 #### Fact 23.1
+
 > A puffin carries a dozen or more small fish crosswise in its bill, held by backward-pointing spines on the palate.
 
 **Verdict:** Supported.
 **Evidence:** "Both the strong tongue and the roof of the mouth are heavily lined with backward-angled spines." — BirdNote, "All Those Fish in a Puffin's Beak." Wikipedia (opened, in corpus) corroborates the mechanism loosely: "The two mandibles are hinged... and these are also retained by inward-facing serrations on the edges of the beak," and Audubon's field guide (opened, in corpus) gives the "carrying a dozen small fish lined up in its bill" number.
 **Source:** https://www.birdnote.org/podcasts/birdnote-daily/all-those-fish-puffins-beak (BirdNote); https://en.wikipedia.org/wiki/Atlantic_puffin; https://www.audubon.org/field-guide/bird/atlantic-puffin
-**Cited source status:** Cited AAB, unopenable. Wikipedia (open) supports "dozen+ fish crosswise" and a spine/serration mechanism but says the retaining structure is on the *beak edges*, not specifically "the palate" — BirdNote is the only opened source that names the palate/roof-of-mouth explicitly.
+**Cited source status:** Cited AAB, unopenable. Wikipedia (open) supports "dozen+ fish crosswise" and a spine/serration mechanism but says the retaining structure is on the _beak edges_, not specifically "the palate" — BirdNote is the only opened source that names the palate/roof-of-mouth explicitly.
 **Note:** Leave as is. The palate detail is real (BirdNote), just not literally present in the corpus's Wikipedia text — swap the citation to BirdNote or Audubon rather than AAB.
 
 #### Fact 23.2
+
 > A pair raises one chick a summer in a burrow dug into the soil of a sea-cliff slope.
 
 **Verdict:** Supported.
@@ -82,6 +84,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is.
 
 #### Fact 23.3
+
 > The bright bill plates are shed after breeding, leaving a smaller, duller bill for the winter at sea.
 
 **Verdict:** Supported.
@@ -93,6 +96,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 ### Week 24 — Northern Flicker
 
 #### Fact 24.1
+
 > Flickers are woodpeckers that feed mostly on the ground, digging into ant nests with a long barbed tongue.
 
 **Verdict:** Partly supported.
@@ -102,6 +106,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Tighten: drop or hedge "barbed" — the ant-digging, ground-feeding claim is solid, but calling the tongue barbed may be species drift from a different woodpecker.
 
 #### Fact 24.2
+
 > Both parents excavate the cavity and share about eleven days of incubation.
 
 **Verdict:** Supported.
@@ -111,6 +116,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is.
 
 #### Fact 24.3
+
 > The tongue reaches well past the bill and is coated in sticky saliva.
 
 **Verdict:** Supported.
@@ -122,6 +128,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 ### Week 25 — Belted Kingfisher
 
 #### Fact 25.1
+
 > Kingfishers dig a burrow up to two meters into a bare earth bank and lay their eggs at the end of it.
 
 **Verdict:** Supported.
@@ -131,6 +138,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is.
 
 #### Fact 25.2
+
 > The female is the brighter of the pair, with a rust band across the belly the male lacks.
 
 **Verdict:** Supported.
@@ -140,6 +148,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is.
 
 #### Fact 25.3
+
 > Nestlings have an acidic stomach that dissolves fish bone, and they lose it as they grow.
 
 **Verdict:** Supported.
@@ -151,6 +160,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 ### Week 26 — Common Tern
 
 #### Fact 26.1
+
 > Common Terns nest in dense colonies on bare sand and gravel and mob anything that walks into one.
 
 **Verdict:** Supported.
@@ -160,6 +170,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is; swap citation to Wikipedia.
 
 #### Fact 26.2
+
 > The male brings fish to the female during courtship, and she judges him by what he carries.
 
 **Verdict:** Supported.
@@ -169,6 +180,7 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 **Note:** Leave as is.
 
 #### Fact 26.3
+
 > The eggs are buff and blotched and are hard to pick out against shell and stone.
 
 **Verdict:** Supported.
@@ -180,16 +192,18 @@ central number is unverifiable — see Week 28 for why it isn't simply "supporte
 ### Week 27 — Peregrine Falcon (flagged)
 
 #### Fact 27.1
+
 > A stooping Peregrine is the fastest animal, and baffles in its nostrils are thought to let it keep breathing at that speed.
 
 **Verdict:** Supported — but the hedge is the whole ballgame, and a human should understand exactly how much weight "thought to" is carrying.
 **Evidence:** "small bony tubercles on a falcon's nostrils are theorized to guide the powerful airflow away from the nostrils, enabling the bird to breathe more easily while diving by reducing the change in air pressure" and "Some sources state that the peregrine falcon can reach over 320 km/h (200 mph) during its stoop, which would make it the fastest animal on the planet." (Wikipedia, cited — both hedged, matching the fact's own hedging almost word for word).
-Independent digging past Wikipedia: this is a genuinely contested claim, not settled science made to sound uncertain out of caution. "No study of a realistic geometry of the tubercle had been conducted [before 2017] to prove this hypothesis," and even the more recent aerodynamic/CFD modelling that does show some pressure-damping effect runs into a real problem — every member of Falconidae has the tubercle regardless of how fast it flies, so "we do not fully understand why the bony tubercles... appear in the Falconidae and what adaptive purpose (if any) it may serve" (summarized from ResearchGate abstracts of the 2017/2019/2022 tubercle aerodynamics papers, and scienceofbirds.com). Separately, the popular story that peregrine nostrils *inspired* jet-engine inlet cones is unsubstantiated folklore with no documented evidence engineers ever studied falcon anatomy (curioussengi.wordpress.com) — the fact under review doesn't make that leap, which is the right call.
+Independent digging past Wikipedia: this is a genuinely contested claim, not settled science made to sound uncertain out of caution. "No study of a realistic geometry of the tubercle had been conducted [before 2017] to prove this hypothesis," and even the more recent aerodynamic/CFD modelling that does show some pressure-damping effect runs into a real problem — every member of Falconidae has the tubercle regardless of how fast it flies, so "we do not fully understand why the bony tubercles... appear in the Falconidae and what adaptive purpose (if any) it may serve" (summarized from ResearchGate abstracts of the 2017/2019/2022 tubercle aerodynamics papers, and scienceofbirds.com). Separately, the popular story that peregrine nostrils _inspired_ jet-engine inlet cones is unsubstantiated folklore with no documented evidence engineers ever studied falcon anatomy (curioussengi.wordpress.com) — the fact under review doesn't make that leap, which is the right call.
 **Source:** https://en.wikipedia.org/wiki/Peregrine_falcon (cited, opened); https://www.researchgate.net/publication/361791649 and https://www.researchgate.net/publication/318276489 (tubercle aerodynamics, via WebSearch abstract text); https://www.scienceofbirds.com/blog/the-peregrine-falcon
 **Cited source status:** Cited source opened and supports it almost verbatim, hedge for hedge.
 **Note:** Leave the text as is — do not remove "thought to," and do not let anyone strengthen this to a plain statement of fact later. The tubercle's respiratory role remains a live, unresolved question in the literature (family-wide presence across falcons of very different flight styles is the sticking point), and the "inspired jet engines" version (not present here, but common in the wild) should never be added.
 
 #### Fact 27.2
+
 > They scrape a hollow on a cliff ledge rather than build, and in cities use window ledges and bridge girders.
 
 **Verdict:** Supported.
@@ -199,6 +213,7 @@ Independent digging past Wikipedia: this is a genuinely contested claim, not set
 **Note:** Leave as is; swap citation to Wikipedia.
 
 #### Fact 27.3
+
 > The eggs are a deep reddish brown, and the female does most of the month of incubation.
 
 **Verdict:** Supported.
@@ -210,6 +225,7 @@ Independent digging past Wikipedia: this is a genuinely contested claim, not set
 ### Week 28 — Cooper's Hawk (flagged)
 
 #### Fact 28.1
+
 > Cooper's Hawks hunt through cover at speed, and many carry healed fractures from hitting branches.
 
 **Verdict:** Partly supported — hunting style is solid, the "many carry healed fractures" figure could not be traced to a primary study.
@@ -220,6 +236,7 @@ On the specific "many carry healed fractures" framing: this traces to a single s
 **Note:** Do not restate "23%" or "300 skeletons" anywhere, since no one — including this pass — could verify them against a primary source. "Many...carry healed fractures" is defensible as a qualitative claim (Wikipedia confirms fractures are a real, frequent hazard of this hunting style) but the fact as drafted implies a specific, verified statistic that may not exist in the literature at all. Tighten to something Wikipedia actually supports (fractures are a known hazard of hunting through cover) or drop the "many" framing.
 
 #### Fact 28.2
+
 > The female is about a third larger than the male, and he approaches the nest carefully.
 
 **Verdict:** Supported.
@@ -229,6 +246,7 @@ On the specific "many carry healed fractures" framing: this traces to a single s
 **Note:** Leave as is.
 
 #### Fact 28.3
+
 > They build a stick platform high in a tree, often on top of an old squirrel nest.
 
 **Verdict:** Supported.
@@ -240,15 +258,17 @@ On the specific "many carry healed fractures" framing: this traces to a single s
 ### Week 29 — American Barn Owl
 
 #### Fact 29.1
+
 > A Barn Owl's ear openings sit at different heights, so it can place a sound vertically as well as sideways.
 
 **Verdict:** Supported.
 **Evidence:** "It has acute hearing, with ears placed asymmetrically. This improves detection of sound position and distance... The facial disc plays a part in this process, as is shown by the fact that with the ruff feathers removed, the bird can still locate the source in azimuth but fails to do so in elevation." (Wikipedia, "American barn owl").
 **Source:** https://en.wikipedia.org/wiki/American_barn_owl
-**Cited source status:** Cited page is `en.wikipedia.org/wiki/Barn_owl`, opened — but that page has been reduced to a ~1,000-character genus-level stub listing the species in *Tyto* with zero content on hearing, anatomy, or breeding. None of the cited page's actual text supports this fact; the real content lives on the separate "American barn owl" species article.
+**Cited source status:** Cited page is `en.wikipedia.org/wiki/Barn_owl`, opened — but that page has been reduced to a ~1,000-character genus-level stub listing the species in _Tyto_ with zero content on hearing, anatomy, or breeding. None of the cited page's actual text supports this fact; the real content lives on the separate "American barn owl" species article.
 **Note:** Swap the citation from `Barn_owl` to `American_barn_owl` — the fact itself is fine, but the citation currently points at a page that says nothing relevant.
 
 #### Fact 29.2
+
 > The heart-shaped face works as a dish, gathering sound toward the ears behind it.
 
 **Verdict:** Supported.
@@ -258,6 +278,7 @@ On the specific "many carry healed fractures" framing: this traces to a single s
 **Note:** Leave as is; swap citation to American_barn_owl Wikipedia article.
 
 #### Fact 29.3
+
 > Four to seven eggs are laid days apart, so a nest holds chicks of noticeably different sizes.
 
 **Verdict:** Supported.
@@ -269,18 +290,21 @@ On the specific "many carry healed fractures" framing: this traces to a single s
 ### Week 30 — American Crow (flagged)
 
 #### Fact 30.1
+
 > Crows recognize individual human faces, hold the grudge for years, and pass it on to other crows.
 
 **Verdict:** Supported — by real, peer-reviewed research, not by the cited page.
-**Evidence:** From the actual study (Cornell & Marzluff, 2011, *Proceedings of the Royal Society B*, "Social learning spreads knowledge about dangerous humans among American crows," read via PMC):
+**Evidence:** From the actual study (Cornell & Marzluff, 2011, _Proceedings of the Royal Society B_, "Social learning spreads knowledge about dangerous humans among American crows," read via PMC):
+
 > "An immediate scolding response to the dangerous mask by previously captured crows demonstrates individual learning, while an immediate response by crows that were not captured probably represents conditioning to the trapping scene by the mob of birds that assembled during the capture... Later recognition of dangerous masks by lone crows that were never captured is consistent with horizontal social learning."
 > "Young crows that never witnessed the capture of their parents by people wearing the dangerous mask learned to scold the dangerous mask by observing and participating in mobs with their parents... fledglings who had observed their parents scold the dangerous mask were significantly more likely to scold the dangerous mask."
-Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 years to about 66% at nearly 3 years post-trapping — a documented, years-long "grudge," and a later informal follow-up (2023, ~17.5 years on) reported the mask finally stopped drawing scolding, per UW/press coverage.
-**Source:** https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/ (Cornell & Marzluff 2011, Proc. R. Soc. B); corroborated by University of Washington's own summary at https://washington.edu/news/2010/10/21/etc-campus-news-notes-131
-**Cited source status:** Cited page, `en.wikipedia.org/wiki/Corvus_brachyrhynchos` (and the equivalent `American_crow`, which is the same article — confirmed by fetching the live Wikipedia action API for both titles), was opened and contains **zero** occurrences of "face," "recogni-," "Marzluff," "grudge," or "mask." The cited source does not support this fact at all; it isn't a matter of a missing nuance, the topic simply isn't on that page.
-**Note:** This is the citation most in need of fixing in the whole batch. The claim itself holds up extremely well against the primary literature — both the "recognizes faces / holds a grudge for years" part and the "passes it on" part are directly documented, and "passes it on" is true in both senses (horizontally to unrelated adult crows that never experienced trapping, and vertically to offspring who watched their parents scold the mask). Swap the citation to the Royal Society paper (or a reachable secondary write-up of it) — Wikipedia's American Crow article is simply the wrong page.
+> Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 years to about 66% at nearly 3 years post-trapping — a documented, years-long "grudge," and a later informal follow-up (2023, ~17.5 years on) reported the mask finally stopped drawing scolding, per UW/press coverage.
+> **Source:** https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/ (Cornell & Marzluff 2011, Proc. R. Soc. B); corroborated by University of Washington's own summary at https://washington.edu/news/2010/10/21/etc-campus-news-notes-131
+> **Cited source status:** Cited page, `en.wikipedia.org/wiki/Corvus_brachyrhynchos` (and the equivalent `American_crow`, which is the same article — confirmed by fetching the live Wikipedia action API for both titles), was opened and contains **zero** occurrences of "face," "recogni-," "Marzluff," "grudge," or "mask." The cited source does not support this fact at all; it isn't a matter of a missing nuance, the topic simply isn't on that page.
+> **Note:** This is the citation most in need of fixing in the whole batch. The claim itself holds up extremely well against the primary literature — both the "recognizes faces / holds a grudge for years" part and the "passes it on" part are directly documented, and "passes it on" is true in both senses (horizontally to unrelated adult crows that never experienced trapping, and vertically to offspring who watched their parents scold the mask). Swap the citation to the Royal Society paper (or a reachable secondary write-up of it) — Wikipedia's American Crow article is simply the wrong page.
 
 #### Fact 30.2
+
 > Young crows often stay with their parents for several years and help raise later broods.
 
 **Verdict:** Supported.
@@ -290,6 +314,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 **Note:** Leave as is; swap citation to Wikipedia.
 
 #### Fact 30.3
+
 > The nest is a bulky stick basket lined with bark, moss and hair.
 
 **Verdict:** Supported.
@@ -301,6 +326,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 ### Week 31 — Pileated Woodpecker
 
 #### Fact 31.1
+
 > A Pileated Woodpecker chisels long rectangular holes into rotten trunks to reach carpenter ants.
 
 **Verdict:** Supported.
@@ -310,6 +336,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 **Note:** Leave as is; swap citation to Audubon.
 
 #### Fact 31.2
+
 > Its abandoned cavities become nest sites for owls, ducks and swifts that cannot dig their own.
 
 **Verdict:** Supported.
@@ -319,6 +346,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 **Note:** Leave as is.
 
 #### Fact 31.3
+
 > The pair excavates a fresh cavity each year rather than reusing the old one.
 
 **Verdict:** Supported.
@@ -330,6 +358,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 ### Week 32 — Hooded Merganser
 
 #### Fact 32.1
+
 > Hooded Mergansers nest in tree cavities, and the ducklings jump to the ground the day after hatching.
 
 **Verdict:** Supported.
@@ -339,6 +368,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 **Note:** Leave as is; swap citation to Audubon.
 
 #### Fact 32.2
+
 > A female often lays in another female's nest, so one cavity can end up holding dozens of eggs.
 
 **Verdict:** Supported.
@@ -348,6 +378,7 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 **Note:** Swap the citation from Wikipedia to Birds of the World or Audubon Field Guide — Wikipedia's Hooded Merganser article simply doesn't cover this behavior.
 
 #### Fact 32.3
+
 > A clear third eyelid lets them see well enough underwater to chase fish.
 
 **Verdict:** Supported.
@@ -358,29 +389,29 @@ Scolding of the dangerous mask rose from 30.4% of encountered crows at 1.25 year
 
 ## Recommended citation changes
 
-| Week | Comparison | Fact (truncated) | Current citation | Replace with |
-|---|---|---|---|---|
-| 23 | Atlantic Puffin | Backward-pointing spines on the palate | AAB (unopenable) | BirdNote — https://www.birdnote.org/podcasts/birdnote-daily/all-those-fish-puffins-beak |
-| 23 | Atlantic Puffin | Bill plates shed for winter | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/atlantic-puffin |
-| 24 | Northern Flicker | Ground-feeding / ant nests | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Northern_flicker |
-| 24 | Northern Flicker | Sticky saliva | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Northern_flicker |
-| 25 | Belted Kingfisher | Burrow length | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Belted_kingfisher |
-| 25 | Belted Kingfisher | Acidic nestling stomach | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/belted-kingfisher |
-| 26 | Common Tern | Colony mobbing | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Common_tern |
-| 26 | Common Tern | Egg camouflage | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Common_tern |
-| 27 | Peregrine Falcon | Cliff ledge / urban nesting | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/Peregrine_falcon |
-| 28 | Cooper's Hawk | Stick platform on squirrel nest | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/coopers-hawk |
-| 29 | American Barn Owl | Asymmetric ear placement | `Barn_owl` (content-free stub) | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl |
-| 29 | American Barn Owl | Heart-shaped face as dish | AAB (unopenable) | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl |
-| 29 | American Barn Owl | Eggs laid days apart | `Barn_owl` (content-free stub) | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl |
-| 30 | American Crow | Face recognition / grudge / social spread | Wikipedia (topic absent from page) | Cornell & Marzluff 2011, *Proc. R. Soc. B* — https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/ |
-| 30 | American Crow | Young help raise later broods | AAB (unopenable) | Wikipedia — https://en.wikipedia.org/wiki/American_crow |
-| 30 | American Crow | Nest lining materials | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/american-crow |
-| 31 | Pileated Woodpecker | Rectangular excavation holes | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/pileated-woodpecker |
-| 31 | Pileated Woodpecker | New cavity each year | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/pileated-woodpecker |
-| 32 | Hooded Merganser | Ducklings jump day after hatching | AAB (unopenable) | Audubon Field Guide — https://www.audubon.org/field-guide/bird/hooded-merganser |
-| 32 | Hooded Merganser | Egg dumping / dozens of eggs | Wikipedia (topic absent from page) | Birds of the World — https://birdsoftheworld.org/bow/species/hoomer/cur/introduction |
-| 32 | Hooded Merganser | Third eyelid, underwater vision | AAB (unopenable) | Birds of the World — https://birdsoftheworld.org/bow/species/hoomer/cur/introduction |
+| Week | Comparison          | Fact (truncated)                          | Current citation                   | Replace with                                                                                   |
+| ---- | ------------------- | ----------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 23   | Atlantic Puffin     | Backward-pointing spines on the palate    | AAB (unopenable)                   | BirdNote — https://www.birdnote.org/podcasts/birdnote-daily/all-those-fish-puffins-beak        |
+| 23   | Atlantic Puffin     | Bill plates shed for winter               | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/atlantic-puffin                 |
+| 24   | Northern Flicker    | Ground-feeding / ant nests                | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Northern_flicker                                     |
+| 24   | Northern Flicker    | Sticky saliva                             | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Northern_flicker                                     |
+| 25   | Belted Kingfisher   | Burrow length                             | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Belted_kingfisher                                    |
+| 25   | Belted Kingfisher   | Acidic nestling stomach                   | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/belted-kingfisher               |
+| 26   | Common Tern         | Colony mobbing                            | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Common_tern                                          |
+| 26   | Common Tern         | Egg camouflage                            | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Common_tern                                          |
+| 27   | Peregrine Falcon    | Cliff ledge / urban nesting               | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/Peregrine_falcon                                     |
+| 28   | Cooper's Hawk       | Stick platform on squirrel nest           | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/coopers-hawk                    |
+| 29   | American Barn Owl   | Asymmetric ear placement                  | `Barn_owl` (content-free stub)     | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl                |
+| 29   | American Barn Owl   | Heart-shaped face as dish                 | AAB (unopenable)                   | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl                |
+| 29   | American Barn Owl   | Eggs laid days apart                      | `Barn_owl` (content-free stub)     | Wikipedia "American barn owl" — https://en.wikipedia.org/wiki/American_barn_owl                |
+| 30   | American Crow       | Face recognition / grudge / social spread | Wikipedia (topic absent from page) | Cornell & Marzluff 2011, _Proc. R. Soc. B_ — https://pmc.ncbi.nlm.nih.gov/articles/PMC3234554/ |
+| 30   | American Crow       | Young help raise later broods             | AAB (unopenable)                   | Wikipedia — https://en.wikipedia.org/wiki/American_crow                                        |
+| 30   | American Crow       | Nest lining materials                     | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/american-crow                   |
+| 31   | Pileated Woodpecker | Rectangular excavation holes              | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/pileated-woodpecker             |
+| 31   | Pileated Woodpecker | New cavity each year                      | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/pileated-woodpecker             |
+| 32   | Hooded Merganser    | Ducklings jump day after hatching         | AAB (unopenable)                   | Audubon Field Guide — https://www.audubon.org/field-guide/bird/hooded-merganser                |
+| 32   | Hooded Merganser    | Egg dumping / dozens of eggs              | Wikipedia (topic absent from page) | Birds of the World — https://birdsoftheworld.org/bow/species/hoomer/cur/introduction           |
+| 32   | Hooded Merganser    | Third eyelid, underwater vision           | AAB (unopenable)                   | Birds of the World — https://birdsoftheworld.org/bow/species/hoomer/cur/introduction           |
 
 (Facts already citing an open, on-topic source — Puffin 23.2, Flicker 24.2, Kingfisher
 25.2, Tern 26.2, Peregrine 27.1/27.3, Cooper's Hawk 28.2 — are not listed; their

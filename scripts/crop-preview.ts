@@ -1,9 +1,9 @@
 /**
  * Render curated photographs the way the card will crop them (ADR-003).
  *
- * The card's photo strip is a wide, short letterbox — 150px tall across the
- * full card width, nearer 2.8:1 than the 16:9 a review sheet's thumbnails
- * suggest. A centred crop therefore decapitates any bird sitting in the upper
+ * The card's photo strip is a wide, short letterbox — 200px tall across the
+ * full card width, so about 2.1:1, rather than the 16:9 a review sheet's
+ * thumbnails suggest. A centred crop therefore decapitates any bird sitting in the upper
  * part of its frame, and neither the shortlist's score nor its thumbnail shows
  * that happening. Two picks reached `commons-images.json` with their heads cut
  * off before this existed, and week 10's card showed an empty nest for a day
@@ -31,7 +31,7 @@ const OUT = resolve(ROOT, '.crop-preview');
 /** `--screen-max` is 460px and the e2e viewport is 420px. */
 const CARD_WIDTH = 420;
 /** `.photo__img` height in `src/components/Photo.css`. */
-const STRIP_HEIGHT = 150;
+const STRIP_HEIGHT = 200;
 const TILE_W = 360;
 const COLS = 3;
 const PER_SHEET = 12;

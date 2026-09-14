@@ -77,7 +77,7 @@ Commons' Featured/Quality badges to rank by. The `faves_count` field is the only
 quality signal and it is sparse — the best House Wren egg observation has one
 favourite.
 
-Portrait is the specific problem: the card crops to a 150px-tall full-width
+Portrait is the specific problem: the card crops to a 200px-tall full-width
 strip, and the Commons survey already penalises portrait files heavily for that
 reason. A source that is mostly portrait phone photos fights the layout.
 
@@ -103,7 +103,7 @@ none of the backoff machinery that makes the Commons crawl take an hour.
    username, and the licence link differs. One more branch in `ImageCredit`.
 4. **Lower the width floor, or don't.** At 900px target and a 1000px floor, a
    good 769px photograph is rejected. Either the floor drops for this provider —
-   and the strip is only 150px tall, so 769px is honestly fine — or week 7's best
+   and the strip is only 200px tall, so 769px is honestly fine — or week 7's best
    candidate is excluded on a technicality.
 
 **Not needed.** No permission correspondence, no licence negotiation, no change

@@ -13,7 +13,7 @@ export const MACAULAY_EMBED_TEMPLATE = 'https://macaulaylibrary.org/asset/{id}/e
 export const MACAULAY_ASSET_URL = 'https://macaulaylibrary.org/asset/{id}';
 
 /** The mockup's photo area; the embed keeps that box so the card does not jump. */
-export const EMBED_HEIGHT = 150;
+export const EMBED_HEIGHT = 200;
 
 /** How long to wait for the frame before showing the offline goose (ADR-003). */
 export const EMBED_TIMEOUT_MS = 6000;

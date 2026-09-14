@@ -35,7 +35,7 @@ const DATA = resolve(ROOT, 'data/comparisons.json');
 const CACHE = resolve(ROOT, '.commons-survey');
 const UA = 'baby-bird-curation/0.1 (https://github.com/tbc-personal/baby-bird)';
 
-/** The card crops to a 150px-tall strip, so shortlists want wide files. */
+/** The card crops to a 200px-tall strip, so shortlists want wide files. */
 const MIN_WIDTH = 1000;
 /** How many files to pull metadata for per week. Bounds the request count. */
 const MAX_CANDIDATES = 200;
@@ -403,7 +403,7 @@ function score(file: FileInfo, kind: 'egg' | 'bird', prefer: RegExp | null): Sco
     notes.push('valued image');
   }
 
-  // The card crops to a 150px strip, so a tall file loses most of its subject.
+  // The card crops to a 200px strip, so a tall file loses much of its subject.
   const aspect = file.width / file.height;
   if (aspect >= 1.3) points += 30;
   else if (aspect >= 1.0) points += 10;
@@ -767,7 +767,7 @@ if (wantSheet) {
     'so any of them is shippable. What is left is the part a script cannot do:',
     'deciding which photograph is the right one.',
     '',
-    'The card crops each photo to a **150px-tall strip across the full card width**,',
+    'The card crops each photo to a **200px-tall strip across the full card width**,',
     'so a shot whose subject sits dead centre and reads at a glance beats a prettier',
     'one that loses its bird to the crop.',
     '',
