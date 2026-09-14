@@ -42,6 +42,8 @@ interface Pick {
   file: string;
   altText: string;
   why: string;
+  /** CSS object-position for the strip crop; omitted means centred. */
+  objectPosition?: string;
   /** Trims import noise from the Commons Artist field. Must name the same author. */
   authorOverride?: string;
 }
@@ -86,7 +88,7 @@ async function commons(title: string, width: number): Promise<ImageInfo | null> 
     iiprop: 'url|extmetadata|size',
     iiurlwidth: String(width),
   });
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
     try {
       const res = await fetch(`https://commons.wikimedia.org/w/api.php?${q}`, {
         headers: { 'user-agent': UA },
@@ -105,7 +107,7 @@ async function commons(title: string, width: number): Promise<ImageInfo | null> 
     } catch {
       /* fall through to the backoff */
     }
-    await sleep(2000 * 2 ** i);
+    await sleep(Math.min(2000 * 2 ** i, 60_000));
   }
   return null;
 }
@@ -220,6 +222,7 @@ for (const pick of picks.picks) {
     embedUrl: null,
     credit: null,
     altText: pick.altText,
+    objectPosition: pick.objectPosition ?? null,
     file: pick.file,
     author: credited,
     license,

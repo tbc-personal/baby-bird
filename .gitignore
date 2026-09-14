@@ -17,3 +17,6 @@ coverage/
 
 # Cached Wikimedia Commons API responses (regenerate with `npm run survey-commons`)
 .commons-survey/
+
+# Crop preview sheets (regenerate with `npm run crop-preview`)
+.crop-preview/

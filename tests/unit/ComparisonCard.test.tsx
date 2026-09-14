@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
+import { FIRST_COMPARISON_WEEK } from '../../src/lib/gestation';
 import userEvent from '@testing-library/user-event';
 import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { weekRow } from '../../src/data/comparisons';
@@ -25,7 +26,9 @@ describe('ComparisonCard', () => {
     const dialog = screen.getByRole('dialog', { name: 'Length by week' });
     expect(dialog).toBeInTheDocument();
     expect(
-      within(dialog).getByRole('img', { name: /^Length from week 2/ }),
+      within(dialog).getByRole('img', {
+        name: new RegExp(`^Length from week ${FIRST_COMPARISON_WEEK}`),
+      }),
     ).toBeInTheDocument();
   });
 
@@ -38,7 +41,9 @@ describe('ComparisonCard', () => {
     const dialog = screen.getByRole('dialog', { name: 'Weight by week' });
     expect(dialog).toBeInTheDocument();
     expect(
-      within(dialog).getByRole('img', { name: /^Weight from week 2/ }),
+      within(dialog).getByRole('img', {
+        name: new RegExp(`^Weight from week ${FIRST_COMPARISON_WEEK}`),
+      }),
     ).toBeInTheDocument();
   });
 

@@ -23,16 +23,18 @@ describe('every comparison week carries facts that follow ADR-004', () => {
   );
 
   it('signs off only the facts the fact-check found plainly supported', () => {
+    // 123 until the grain-of-grit comparison was dropped, which took its three
+    // facts (two signed off, one not) with it.
     const all = COMPARISON_WEEKS.flatMap((row) => row.facts);
-    expect(all).toHaveLength(123);
+    expect(all).toHaveLength(120);
 
     // `npm run mark-reviewed` derives these from the report summary tables.
     // Anything the pass called partly supported, contradicted or unverifiable —
     // and every fact it rewrote — stays unreviewed, so the draft chip in review
     // mode shows exactly the rows still wanting the author's eye.
     const unreviewed = all.filter((fact) => !fact.reviewed);
-    expect(all.length - unreviewed.length).toBe(98);
-    expect(unreviewed).toHaveLength(25);
+    expect(all.length - unreviewed.length).toBe(96);
+    expect(unreviewed).toHaveLength(24);
 
     // Spot-check the ones that must never be signed off by a blanket flip.
     const held = (week: number, index: number) =>
@@ -59,9 +61,10 @@ describe('every comparison week carries facts that follow ADR-004', () => {
     }
   });
 
-  it('gives week 3 a fact about gizzard grit', () => {
+  it('gives week 3, now the poppy seed, facts about poppy seeds', () => {
     const week3 = COMPARISON_WEEKS.find((row) => row.week === 3);
-    expect(week3?.facts.some((fact) => /gizzard|grit/i.test(fact.text))).toBe(true);
+    expect(week3?.comparison).toBe('Poppy seed');
+    expect(week3?.facts.some((fact) => /poppy|seed/i.test(fact.text))).toBe(true);
   });
 });
 

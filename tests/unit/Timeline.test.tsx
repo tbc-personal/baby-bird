@@ -4,7 +4,11 @@ import { TimelineScreen } from '../../src/screens/Timeline';
 import { TodayScreen } from '../../src/screens/Today';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
-import { parseIsoDate } from '../../src/lib/gestation';
+import {
+  FIRST_COMPARISON_WEEK,
+  LAST_COMPARISON_WEEK,
+  parseIsoDate,
+} from '../../src/lib/gestation';
 import { COMPARISON_WEEKS } from '../../src/data/comparisons';
 
 function day(iso: string): Date {
@@ -32,12 +36,15 @@ beforeEach(() => {
 });
 
 describe('Timeline (mockup 3)', () => {
-  it('lists all 41 comparison rows, weeks 2 through 42', () => {
+  it('lists every comparison row and counts them in the heading', () => {
     renderTimeline();
-    const rows = screen.getAllByRole('listitem');
-    expect(rows).toHaveLength(41);
-    expect(COMPARISON_WEEKS).toHaveLength(41);
-    expect(screen.getByText('All 41 weeks')).toBeInTheDocument();
+    // Against the data rather than a literal: the count changed once already,
+    // when the grain-of-grit comparison was dropped.
+    const expected = LAST_COMPARISON_WEEK - FIRST_COMPARISON_WEEK + 1;
+    expect(COMPARISON_WEEKS).toHaveLength(expected);
+    expect(COMPARISON_WEEKS[0]?.week).toBe(FIRST_COMPARISON_WEEK);
+    expect(screen.getAllByRole('listitem')).toHaveLength(expected);
+    expect(screen.getByText(`All ${expected} weeks`)).toBeInTheDocument();
   });
 
   it('marks the current week and says so', () => {
@@ -66,19 +73,21 @@ describe('Timeline (mockup 3)', () => {
   it('links every row to its week card', () => {
     renderTimeline();
     const links = screen.getAllByRole('link');
-    expect(links).toHaveLength(41);
-    expect(links[0]).toHaveAttribute('href', '#/week/2');
-    expect(links.at(-1)).toHaveAttribute('href', '#/week/42');
+    expect(links).toHaveLength(COMPARISON_WEEKS.length);
+    expect(links[0]).toHaveAttribute('href', `#/week/${FIRST_COMPARISON_WEEK}`);
+    expect(links.at(-1)).toHaveAttribute('href', `#/week/${LAST_COMPARISON_WEEK}`);
   });
 
   it('shows a kind silhouette per row, not a photo', () => {
     const { container } = renderTimeline();
     expect(container.querySelectorAll('img')).toHaveLength(0);
     expect(container.querySelectorAll('iframe')).toHaveLength(0);
-    expect(container.querySelectorAll('.row__mark svg')).toHaveLength(41);
+    expect(container.querySelectorAll('.row__mark svg')).toHaveLength(
+      COMPARISON_WEEKS.length,
+    );
   });
 
-  it('has no current row before week 2', () => {
+  it('has no current row before the first comparison week', () => {
     window.localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({ version: 1, method: 'lmp', inputDate: '2026-09-01' }),
@@ -113,8 +122,8 @@ describe('Timeline (mockup 3)', () => {
 it('links each row to the week view', () => {
   const { container } = renderTimeline();
   const rows = [...container.querySelectorAll('a.row')];
-  expect(rows).toHaveLength(41);
-  expect(rows[0]).toHaveAttribute('href', '#/week/2');
+  expect(rows).toHaveLength(COMPARISON_WEEKS.length);
+  expect(rows[0]).toHaveAttribute('href', `#/week/${FIRST_COMPARISON_WEEK}`);
   expect(rows.at(-1)).toHaveAttribute('href', '#/week/42');
 });
 
@@ -143,9 +152,7 @@ describe('a routed week', () => {
 
   it('treats the present week as not browsing, so its own row lands on today', () => {
     renderWeek(23);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      '23 weeks, 0 days',
-    );
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('23 weeks, 0 days');
     expect(screen.getByText(/119 days to go/)).toBeInTheDocument();
     expect(screen.queryByText(/back to this week/)).toBeNull();
   });
@@ -156,10 +163,15 @@ describe('a routed week', () => {
     view.unmount();
   });
 
-  it.each([1, 0, 43, 99, -1])('shows an empty state for week %i rather than clamping', (week) => {
-    const view = renderWeek(week);
-    expect(screen.getByText(`No comparison for week ${week}`)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Back to the timeline' })).toBeInTheDocument();
-    view.unmount();
-  });
+  it.each([1, 0, 43, 99, -1])(
+    'shows an empty state for week %i rather than clamping',
+    (week) => {
+      const view = renderWeek(week);
+      expect(screen.getByText(`No comparison for week ${week}`)).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: 'Back to the timeline' }),
+      ).toBeInTheDocument();
+      view.unmount();
+    },
+  );
 });

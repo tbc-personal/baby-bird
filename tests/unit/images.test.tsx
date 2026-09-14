@@ -233,6 +233,7 @@ describe('CommonsImage and credits', () => {
     provider: 'commons' as const,
     mlAssetId: null,
     fallbackMlAssetId: null,
+    objectPosition: null,
     embedUrl: null,
     credit: null,
     altText: 'A pile of poppy seeds',
@@ -247,6 +248,22 @@ describe('CommonsImage and credits', () => {
     render(<CommonsImage image={commons} base="/nestling/" />);
     const img = screen.getByRole('img', { name: 'A pile of poppy seeds' });
     expect(img).toHaveAttribute('src', '/nestling/images/seeds/poppy.jpg');
+  });
+
+  it('crops from the centre when no objectPosition is curated', () => {
+    render(<CommonsImage image={commons} base="/" />);
+    expect(screen.getByRole('img', { name: 'A pile of poppy seeds' })).not.toHaveStyle({
+      objectPosition: 'center 30%',
+    });
+  });
+
+  it('crops from the curated objectPosition when one is set', () => {
+    // The card is a wide, short strip, so a bird high in its frame loses its
+    // head to a centred crop. This is the escape hatch for that.
+    render(<CommonsImage image={{ ...commons, objectPosition: 'center 30%' }} base="/" />);
+    expect(screen.getByRole('img', { name: 'A pile of poppy seeds' })).toHaveStyle({
+      objectPosition: 'center 30%',
+    });
   });
 
   it('credits the author, the license by name with a link, and the source', async () => {
@@ -283,6 +300,7 @@ describe('CommonsImage and credits', () => {
           provider: 'macaulay',
           mlAssetId: '633445471',
           fallbackMlAssetId: null,
+          objectPosition: null,
           embedUrl: null,
           credit: 'R. Photographer',
           altText: null,

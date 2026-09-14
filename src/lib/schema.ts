@@ -54,6 +54,26 @@ export const imageSchema = z
     altText: z.string().nullable().optional().default(null),
     /** Commons rows only: the file under `public/images/`, relative to the app base. */
     file: z.string().nullable().optional().default(null),
+    /**
+     * Where the 150px strip crop takes its window from, as a CSS
+     * `object-position` value. Null centres it.
+     *
+     * The card is a wide, short letterbox — nearer 2.6:1 than the 16:9 a
+     * contact sheet suggests — so a centred crop decapitates any bird that sits
+     * in the upper part of its frame. The Northern Flicker and the Pileated
+     * Woodpecker both lost their heads that way. Which part of a photograph
+     * holds the bird is a judgement about that photograph, so it is curated
+     * data rather than something the code can derive.
+     */
+    objectPosition: z
+      .string()
+      .regex(
+        /^[a-z0-9 %.-]+$/i,
+        'objectPosition is a plain CSS object-position value, e.g. "center 30%"',
+      )
+      .nullable()
+      .optional()
+      .default(null),
     author: z.string().nullable().optional().default(null),
     license: z.string().nullable().optional().default(null),
     licenseUrl: z.string().url().nullable().optional().default(null),

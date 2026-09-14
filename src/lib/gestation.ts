@@ -52,7 +52,7 @@ export function cycleShift(cycleLength: number): number {
 }
 
 /** The first and last week that carry a comparison row. */
-export const FIRST_COMPARISON_WEEK = 2;
+export const FIRST_COMPARISON_WEEK = 3;
 export const LAST_COMPARISON_WEEK = 42;
 
 /** Length convention changes between these two weeks (ADR-002). */
@@ -224,7 +224,13 @@ export function computeProgress(dating: Dating, today: Date): Progress {
 
   let status: ProgressStatus;
   if (gestationalDays < 0) status = 'invalid';
-  else if (gestationalDays < LMP_TO_CONCEPTION_DAYS) status = 'tooEarly';
+  // Too early means "before there is anything to compare", which is the first
+  // comparison week — not conception. The two used to be a week apart and the
+  // gap showed: at 2w0d the card clamped up to week 2's comparison while the
+  // copy underneath said the first two weeks are before conception. The author
+  // then dropped the grain-of-grit comparison and moved the poppy seed to week
+  // 3, so comparisons now start where the copy always said they should.
+  else if (weeks < FIRST_COMPARISON_WEEK) status = 'tooEarly';
   else if (weeks > LAST_COMPARISON_WEEK) status = 'pastTerm';
   else status = 'normal';
 

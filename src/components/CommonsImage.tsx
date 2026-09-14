@@ -26,6 +26,9 @@ export function CommonsImage({
         alt={image.altText ?? ''}
         loading="lazy"
         decoding="async"
+        // Curated per photograph; see `objectPosition` in the schema for why
+        // the centre of the file is so often the wrong place to crop from.
+        style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
       />
     </PhotoFrame>
   );

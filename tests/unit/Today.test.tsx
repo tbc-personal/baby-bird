@@ -63,7 +63,7 @@ describe('Today screen (mockup 2)', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('shows the too-early state before week 2', () => {
+  it('shows the too-early state before week 3', () => {
     saveLmp('2026-09-01');
     renderToday('2026-09-06');
     expect(screen.getByText('Too early for a comparison')).toBeInTheDocument();
@@ -73,11 +73,13 @@ describe('Today screen (mockup 2)', () => {
     expect(screen.queryByText(/Your baby is roughly the size of/)).toBeNull();
   });
 
-  it('renders the proposed week 3 row normally', () => {
+  it('renders week 3, the first comparison week', () => {
     saveLmp('2026-08-16'); // 21 days before 2026-09-06 → 3w0d
     renderToday('2026-09-06');
-    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Grain of grit');
-    expect(screen.getByText(/proposal, not yet signed off/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Poppy seed');
+    // Nothing is proposed any more: grain of grit was dropped rather than
+    // signed off, and the poppy seed moved down from week 2 to take its place.
+    expect(screen.queryByText(/proposal, not yet signed off/)).toBeNull();
   });
 
   it('clamps past 42 weeks to the Osprey row', () => {
@@ -154,7 +156,7 @@ describe('ComparisonCard', () => {
   });
 
   it('falls back to Wikipedia for seed rows, which have no All About Birds page', () => {
-    card(2);
+    card(3);
     expect(screen.getByRole('link', { name: /More on Wikipedia/ })).toHaveAttribute(
       'href',
       'https://en.wikipedia.org/wiki/Poppy_seed',
@@ -172,7 +174,7 @@ describe('ComparisonCard', () => {
   });
 
   it('says the seed weights are an upper bound', () => {
-    card(2);
+    card(3);
     expect(screen.getByText('weight, under 0.04 oz')).toBeInTheDocument();
   });
 });

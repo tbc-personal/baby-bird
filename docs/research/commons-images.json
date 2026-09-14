@@ -4,12 +4,12 @@
   "jpegQuality": 80,
   "picks": [
     {
-      "week": 2,
+      "week": 3,
       "comparison": "Poppy seed",
       "commonsTitle": "File:Poppy Seed 2016-10-31-16.12 (30659262306).jpg",
       "file": "images/seeds/poppy-seed.jpg",
       "altText": "Poppy seeds magnified far past life size, each one kidney-shaped and covered in a fine honeycomb pattern.",
-      "why": "A USGS Bee Inventory macro, public domain. The extreme magnification suits week 2, where the whole point is how small a poppy seed is; the honeycomb seed coat is only visible at this scale.",
+      "why": "Moved from week 2 to week 3 by the author, who dropped the grain-of-grit comparison entirely: gestational weeks 1 and 2 precede conception, so the comparisons now start at week 3. The seed is also a closer match there — a poppy seed is about a millimetre, and week 3's crown-rump length is 0.027in against week 2's 0.014in.",
       "authorOverride": "USGS Bee Inventory and Monitoring Lab",
       "authorOverrideWhy": "Commons carries the Flickr-import form, 'USGS Bee Inventory and Monitoring Lab from Beltsville, Maryland, USA', which wraps the credit line onto two lines. Same author, geographic suffix dropped."
     },
@@ -51,7 +51,9 @@
       "commonsTitle": "File:American Robin nest and eggs.JPG",
       "file": "images/eggs/american-robin-egg.jpg",
       "altText": "Three turquoise-blue American Robin eggs resting in a deep nest of dried grass and mud.",
-      "why": "The colour is the whole point of a robin's egg and it is unmistakable here. Used on fourteen Wikimedia pages. The eggs sit low in the frame, so check the crop."
+      "why": "The colour is the whole point of a robin's egg and it is unmistakable here. Used on fourteen Wikimedia pages. The eggs sit low in the frame, so check the crop.",
+      "objectPosition": "center 85%",
+      "objectPositionWhy": "The eggs sit in the bottom third, so a centred crop showed nest material and no eggs at all."
     },
     {
       "week": 11,
@@ -67,7 +69,9 @@
       "commonsTitle": "File:Archilochus colubris (Male).jpg",
       "file": "images/birds/ruby-throated-hummingbird.jpg",
       "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
-      "why": "Author asked for a male: the ruby throat is the feature the species is named for, and the previous pick was a female. Top of the shortlist under --prefer '\\bmale\\b'. The crown sits close to the top of the strip crop."
+      "why": "Author asked for a male: the ruby throat is the feature the species is named for, and the previous pick was a female. Top of the shortlist under --prefer '\\bmale\\b'. The crown sits close to the top of the strip crop.",
+      "objectPosition": "center 40%",
+      "objectPositionWhy": "Bill and crown sit right on the top edge of a centred crop."
     },
     {
       "week": 15,
@@ -83,7 +87,9 @@
       "commonsTitle": "File:Poecile atricapillus CT3.jpg",
       "file": "images/birds/black-capped-chickadee.jpg",
       "altText": "A Black-capped Chickadee perched on a branch stub, its black cap and bib sharp against a soft green background.",
-      "why": "Author's second-pass pick (16D). One bird, dead centre, clean background — the first pick had a goldfinch in it as well, on a card about one bird's size."
+      "why": "Author's second-pass pick (16D). One bird, dead centre, clean background — the first pick had a goldfinch in it as well, on a card about one bird's size.",
+      "objectPosition": "center 42%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
     },
     {
       "week": 17,
@@ -99,7 +105,9 @@
       "commonsTitle": "File:Tufted titmouse in Prospect Park (53493).jpg",
       "file": "images/birds/tufted-titmouse.jpg",
       "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
-      "why": "Author's pick (18A). Featured Picture, used in the species' Wikipedia article. The plain background is ideal for the strip."
+      "why": "Author's pick (18A). Featured Picture, used in the species' Wikipedia article. The plain background is ideal for the strip.",
+      "objectPosition": "center 42%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
     },
     {
       "week": 19,
@@ -140,6 +148,16 @@
       "file": "images/birds/atlantic-puffin.jpg",
       "altText": "An Atlantic Puffin standing on a grassy clifftop, its striped orange bill and orange feet bright against black and white plumage.",
       "why": "Author's pick (23E). Featured Picture. The crown sits near the top edge of the strip crop — worth a look on the card."
+    },
+    {
+      "week": 24,
+      "comparison": "Northern Flicker",
+      "commonsTitle": "File:Northern flicker (33729).jpg",
+      "file": "images/birds/northern-flicker.jpg",
+      "altText": "A male Northern Flicker perched on a stump, its barred brown back and heavily spotted breast turned to the camera.",
+      "why": "Author's pick (24B). Featured Picture. Held back once because the centred strip crop cut the head off; restored with an objectPosition.",
+      "objectPosition": "center 15%",
+      "objectPositionWhy": "A centred crop cut the head off entirely and left a spotted breast."
     },
     {
       "week": 25,
@@ -190,20 +208,111 @@
       "why": "Author's pick (30D). Quality Image. Filed under the northwestern subspecies, which was lumped into American Crow in 2020, so the species is right."
     },
     {
+      "week": 31,
+      "comparison": "Pileated Woodpecker",
+      "commonsTitle": "File:Dryocopus pileatus MP2.jpg",
+      "file": "images/birds/pileated-woodpecker.jpg",
+      "altText": "A Pileated Woodpecker clinging to a wooden post, its red crest raised above a black back and white neck stripe.",
+      "why": "Author's pick (31A). Featured Picture. Held back once because the centred crop removed the red crest, which is the whole identity of the bird; restored with an objectPosition.",
+      "objectPosition": "center 20%",
+      "objectPositionWhy": "A centred crop removed the red crest, which is the whole identity of the bird."
+    },
+    {
       "week": 32,
       "comparison": "Hooded Merganser",
       "commonsTitle": "File:Hooded merganser male in Central Park (95790).jpg",
       "file": "images/birds/hooded-merganser.jpg",
       "altText": "A male Hooded Merganser swimming with its white-and-black fan-shaped crest raised.",
       "why": "Author's pick (32A). Quality and Valued image, in the species' Wikipedia article. The crest is the point of the bird and it is fully raised here."
+    },
+    {
+      "week": 33,
+      "comparison": "Green Heron",
+      "commonsTitle": "File:Green heron (Butorides virescens), South Padre Island, Texas, USA.jpg",
+      "file": "images/birds/green-heron.jpg",
+      "altText": "A Green Heron crouched low with its neck drawn in, chestnut throat and dark green back against reeds.",
+      "why": "Author's pick (33D). Quality Image, used in an English Wikipedia article."
+    },
+    {
+      "week": 34,
+      "comparison": "Ring-billed Gull",
+      "commonsTitle": "File:Ring-Billed Gull Winter.jpg",
+      "file": "images/birds/ring-billed-gull.jpg",
+      "altText": "A Ring-billed Gull in winter plumage, its yellow bill marked with the dark ring the bird is named for.",
+      "why": "Author's pick (34E). Quality Image, in the species' Wikipedia article. The bill ring is legible, which is the point of the name."
+    },
+    {
+      "week": 35,
+      "comparison": "Red-tailed Hawk",
+      "commonsTitle": "File:Red-tailed Hawk (45812546121).jpg",
+      "file": "images/birds/red-tailed-hawk.jpg",
+      "altText": "A Red-tailed Hawk perched with its pale streaked breast toward the camera and its rust-coloured tail visible behind.",
+      "why": "Author's pick (35C). Quality Image, in the species' Wikipedia article."
+    },
+    {
+      "week": 36,
+      "comparison": "Wood Duck",
+      "commonsTitle": "File:Wood Duck Wissahickon Creek.png",
+      "file": "images/birds/wood-duck.jpg",
+      "altText": "A male Wood Duck on the water, its green-and-white patterned head, red eye and chestnut breast in full colour.",
+      "why": "Author's pick (36D). Quality Image, in the species' Wikipedia article. The drake's head pattern is the whole appeal of this bird."
+    },
+    {
+      "week": 37,
+      "comparison": "Red-shouldered Hawk",
+      "commonsTitle": "File:Kanapaha-2008 04 09-IMG 0128.JPG",
+      "file": "images/birds/red-shouldered-hawk.jpg",
+      "altText": "A Red-shouldered Hawk perched in the open, rusty barred underparts and boldly banded tail showing.",
+      "why": "Author's pick (37B). In the species' Wikipedia article. Week 37 has no badged candidates, so this is an ordinary photograph chosen on its merits."
+    },
+    {
+      "week": 38,
+      "comparison": "Barred Owl",
+      "commonsTitle": "File:Strix-varia-005.jpg",
+      "file": "images/birds/barred-owl.jpg",
+      "altText": "A Barred Owl facing forward with dark eyes and a pale, finely barred face.",
+      "why": "Author's pick (38A). Featured Picture, in the species' Wikipedia article.",
+      "objectPosition": "center 45%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+    },
+    {
+      "week": 39,
+      "comparison": "Mallard",
+      "commonsTitle": "File:2015 Kaczka krzyżowka w wodzie (samiec).jpg",
+      "file": "images/birds/mallard.jpg",
+      "altText": "A male Mallard swimming, his iridescent green head and yellow bill bright above a white collar.",
+      "why": "Author's pick (39A). Featured, Quality and Valued image — the only candidate in this batch carrying all three."
+    },
+    {
+      "week": 40,
+      "comparison": "Snowy Owl",
+      "commonsTitle": "File:Snowy Owl (240866707).jpeg",
+      "file": "images/birds/snowy-owl.jpg",
+      "altText": "A Snowy Owl, white with fine dark barring, looking directly at the camera with yellow eyes.",
+      "why": "Author's pick (40D). In the species' Wikipedia article. Week 40 had no badged candidates.",
+      "objectPosition": "center 45%",
+      "objectPositionWhy": "Head sits right on the top edge of a centred crop."
+    },
+    {
+      "week": 41,
+      "comparison": "Great Horned Owl",
+      "commonsTitle": "File:004 Great horned owl under a Pink Ipê tree in Encontro das Águas State Park Photo by Giles Laurent.jpg",
+      "file": "images/birds/great-horned-owl.jpg",
+      "altText": "A Great Horned Owl perched beneath pink blossom, its ear tufts raised and yellow eyes wide.",
+      "why": "Author's pick (41A). Featured Picture, used on seven Wikimedia pages."
+    },
+    {
+      "week": 42,
+      "comparison": "Osprey",
+      "commonsTitle": "File:Osprey Fish Nictitating.png",
+      "file": "images/birds/osprey.jpg",
+      "altText": "An Osprey gripping a fish, its white head and dark eye stripe sharp against the sky.",
+      "why": "Author's pick (42F). In the species' Wikipedia article. Note the bird is carrying prey, and its nictitating membrane is drawn across the eye.",
+      "objectPosition": "center 30%",
+      "objectPositionWhy": "Wingtips were clipped; the spread wings are the majestic part."
     }
   ],
   "notSourced": [
-    {
-      "week": 3,
-      "comparison": "Grain of grit",
-      "reason": "No suitable Commons photo found. Searches for poultry grit, pigeon grit, gizzard grit and granite grit return only scanned pages from pre-1920 poultry manuals; searches for coarse sand return beach and sandstone geology, which does not read as grit a bird would swallow. This is moot until the comparison itself is settled: week 3 is still `proposed: true`, and the P1 fact-check found its only citation (the Wikipedia Gizzard article) never mentions grouse, doves or roadsides. Decide the comparison first."
-    },
     {
       "week": 7,
       "comparison": "House Wren egg",
