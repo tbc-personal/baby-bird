@@ -72,9 +72,8 @@ Fetal sizes are population averages. Probability features are population statist
 about any individual pregnancy. Talk to your clinician.
 
 ## Non-commercial
-This project uses Macaulay Library media embeds, which the Cornell Lab permits for non-commercial use only.
-The project has no ads, no paid tier, and must not be used commercially. See
-`docs/decisions/ADR-003-images.md`.
+This project uses Wikimedia Commons media embeds.
+The project has no ads, no paid tier, and must not be used commercially.
 
 ## Repository map
 | Path | What |
