@@ -1,8 +1,8 @@
 # Curating the photos
 
-How to get a photograph onto every week's card. All 42 weeks come from Wikimedia
-Commons; weeks 2, 4, 5 and 6 are done, week 3 has no usable photo, and weeks
-7–42 are the work.
+How to get a photograph onto every week's card. All weeks come from Wikimedia
+Commons; weeks 3, 4, 5 and 6 are done, and weeks 7, 9, 12 and 13 are the
+remaining work — every other bird week (14–42) already has a curated photo.
 
 The Macaulay Library route this document used to describe is dead. Cornell put
 `macaulaylibrary.org` behind a proof-of-work bot challenge that runs _inside the

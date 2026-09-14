@@ -66,10 +66,18 @@ Two things follow, and both are recorded in `src/lib/laborProbability.ts`:
 
 ### Verification status
 
-The build session could not open cdc.gov, ncbi.nlm.nih.gov or datayze.com; its
-egress proxy refuses them. Every figure above is as recorded in
+At build time, the egress proxy refused cdc.gov, ncbi.nlm.nih.gov and
+datayze.com, so every figure above was recorded from
 `docs/research/datayze-features.md` during planning, plus the two adjustment
-factors. **Confirm all of them against live sources before release.**
+factors, without opening a live source.
+
+**Update (2026-09-14):** network access has since been opened. A prior session
+recorded that `www.cdc.gov`, `pmc.ncbi.nlm.nih.gov` and `datayze.com` return
+real content from this environment, checked with `curl` through the agent
+proxy — not the browser check this repo's CLAUDE.md asks for, so treat even
+that as provisional. Either way, reachability is not verification: no figure
+above has actually been read at its source, and every one of them, plus the
+two adjustment factors, **still needs to be confirmed before release.**
 
 Fitted parameters: `ξ = 296.9889, ω = 20.74, α = −6.75`. α is chosen as the
 value whose post-term share comes closest to 6% while still leaving at least
@@ -153,9 +161,16 @@ it away, and asserts monotonicity from 37 weeks on.
 
 ### Verification status
 
-Unchanged, and still the first thing to check on review. The follow-up session
-had no more network access than the build session did: cdc.gov,
-ncbi.nlm.nih.gov and doi.org are all refused by the egress proxy, so no figure
-above has been read at its source. In particular `0.093 × 0.72 ≈ 0.067` is still
-two round numbers from general literature. **Confirm all of them before
-release.**
+Still the first thing to check on review. At the time of the follow-up
+session, cdc.gov, ncbi.nlm.nih.gov and doi.org were all refused by the egress
+proxy, same as during the build session, so no figure above had been read at
+its source.
+
+**Update (2026-09-14):** network access has since been opened, and a prior
+session recorded `www.cdc.gov` and `pmc.ncbi.nlm.nih.gov` as returning real
+content from this environment (checked with `curl`, not a browser — see the
+first Verification status section above for the caveat that follows from
+that). `doi.org` itself is not among the hosts checked. None of this amounts
+to verification: no figure above has actually been read at its source, and in
+particular `0.093 × 0.72 ≈ 0.067` **remains** two round numbers from general
+literature. **Confirm all of them before release.**

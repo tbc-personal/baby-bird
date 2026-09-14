@@ -4,7 +4,7 @@ Status: accepted (2026-09-06)
 
 ## Decision
 
-The user picks one of seven skins in About. A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
+The user picks one of seven skins in About. (About was merged into Setup in v0.1.0 — see `docs/V0.1.0-TRIAGE.md` — so this is reached from the sliders tab, on Setup, not a separate About screen.) A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
 
 | Skin        | Bird               | Ground / Ink / Accent / Secondary / Highlight (light) | Display / Body                              |
 | ----------- | ------------------ | ----------------------------------------------------- | ------------------------------------------- |
@@ -23,8 +23,8 @@ Light values are shown in `docs/mockups/screens.html`. Dark values are the build
 - Skins are data: `src/skins/<name>.ts` exporting `{ id, label, bird, light: Tokens, dark: Tokens, fonts: { display, body } }`. A single `applySkin()` sets CSS custom properties on `:root` and a `data-skin` attribute. Components use only the token names (`--ground`, `--paper`, `--ink`, `--ink-2`, `--line`, `--accent`, `--accent-soft`, `--secondary`, `--highlight`, `--egg`, `--note`, `--focus`).
 - Fonts are self-hosted in `public/fonts/` (latin subset, woff2, weights actually used). Only the active skin's fonts are loaded; the others are preloaded lazily after first paint. Each skin declares fallback stacks.
 - Selection persists in settings (ADR-006). Dark/light follows `prefers-color-scheme` within the chosen skin.
-- The offline goose and the silhouettes use `currentColor`, so they follow the skin.
-- Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/__screenshots__`. It is a blocking CI step, and the baselines are generated on the GitHub runner by `.github/workflows/update-screenshots.yml` rather than locally, because text rasterizes differently between the two.
+- The silhouettes use `currentColor`, so they follow the skin. (This line originally also named the offline goose; that component was reachable only through the Macaulay embed's failure states, which no longer exist, and it has been deleted — see ADR-003.)
+- Visual regression: one Playwright screenshot of Today per skin in light and dark, checked into `tests/e2e/__screenshots__`. It is a blocking CI step, and the baselines are generated on the GitHub runner by `.github/workflows/update-screenshots.yml` rather than locally, because text rasterizes differently between the two.
 - Precache/runtime split: the service worker precaches only the default skin's faces (Bricolage Grotesque, Atkinson Hyperlegible 400 and 700) plus the shared IBM Plex Mono, and a `CacheFirst` runtime rule with a one-year expiration keeps any other skin's faces from the first time it is selected, so a chosen skin still renders offline.
 
 ## Consequences

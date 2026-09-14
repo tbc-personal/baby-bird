@@ -1,5 +1,12 @@
 # Nestling: development plan
 
+> **This is the original build plan, kept as a record of what was scoped and why.** Several of the
+> decisions below were later superseded — most visibly, the Macaulay Library embed route in §2, §5
+> and §6, which was abandoned and had its code removed (ADR-003), and the "41 rows, weeks 2–42"
+> comparison table, which is actually 40 rows, weeks 3–42. See `docs/V0.1.0-TRIAGE.md` and
+> `docs/decisions/` for what actually shipped and changed since. Where this file and those disagree,
+> trust the ADRs and the triage doc, not this one.
+
 A pregnancy tracker that compares fetal size each week to a seed, an egg, or a bird.
 Decisions are recorded in `docs/decisions/`; research in `docs/research/`; the build prompt for the
 implementation session is `prompts/opus-build-prompt.md`.
@@ -14,7 +21,7 @@ implementation session is `prompts/opus-build-prompt.md`.
 2. Today screen: weeks + days, days to due date, trimester, progress bar, this week's comparison card
    ("Your baby is roughly the size of" + comparison name, fetal length and weight, Macaulay Library embed or Commons image,
    2–3 facts, All About Birds link), "Copy a shareable link".
-3. Timeline screen: all 41 comparison rows (weeks 2–42) as a scrollable list; tapping opens that week's card.
+3. Timeline screen: all 40 comparison rows (weeks 3–42) as a scrollable list; tapping opens that week's card.
 4. Labor probability panel (from 34w0d): chance of spontaneous labor in the next 7 days given still pregnant, with daily curve and caveats.
 5. About screen: skin picker, unit preference, labor panel toggle, sources, credits, non-commercial statement, limitations, "forget my data".
    5a. Seven skins (ADR-007): Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
@@ -38,21 +45,30 @@ Accounts, sync, kick counters, contraction timers, ads, anything commercial.
 ```
 src/
   main.tsx, App.tsx             routing (hash router keeps GitHub Pages simple)
+  state.tsx, useAppState.ts, useRoute.ts   app state and routing hooks
   lib/gestation.ts              ADR-002 math, pure functions
   lib/laborProbability.ts       ADR-005 two-component mixture model, pure functions
   lib/storage.ts                versioned localStorage + URL share params (ADR-006)
+  lib/schema.ts, validateData.ts   zod schema and validation rules, shared with scripts/validate-data.ts
   data/comparisons.ts           typed import of ../data/comparisons.json + schema validation at build
   components/
-    SetupForm, TodayCard, ComparisonCard, MacaulayEmbed, CommonsImage,
-    Silhouette, OfflineGoose, FactList, Timeline, LaborPanel, About, SkinPicker, UnitToggle
+    ComparisonCard, CommonsImage, PhotoFrame, ImageCredit, Silhouette, FactList,
+    MeasureChart, MeasureDialog, LaborCurve, LaborPanel, SettingsPanel, AboutContent,
+    SkinPicker, ShareLink, Tabs, SlidersIcon, AppMark
   skins/                        one file per skin (ADR-007) + applySkin()
-  screens/ Setup, Today, Timeline, Week, Labor, About
+  screens/ Setup, Today, Timeline, Labor
 data/comparisons.json           single source of truth (see §3)
 scripts/
   validate-data.ts              schema + gap check, runs in CI
-  check-links.ts                quarterly: embed IDs still resolve, AAB slugs 200
+  check-links.ts                quarterly: AAB slugs, eBird species codes, and Commons source/license URLs still resolve
 docs/                           plans, ADRs, research, mockups
 ```
+
+(As built, there is no separate `SetupForm`, `TodayCard`, `UnitToggle`, `Week`, or `About` file —
+those responsibilities live inside `screens/Setup.tsx`, `screens/Today.tsx` and
+`components/SettingsPanel.tsx`/`AboutContent.tsx`; the `week` route reuses `TodayScreen`, positioned
+on a different week. `MacaulayEmbed` and `OfflineGoose`, which this list once named, were built and
+later deleted — see ADR-003.)
 
 State model: `{ version: 1, method: 'lmp' | 'conception' | 'dueDate', inputDate: 'YYYY-MM-DD', units: 'imperial' | 'metric', laborPanelEnabled: boolean, skin: SkinId }`. Everything else derived.
 
@@ -60,10 +76,15 @@ State model: `{ version: 1, method: 'lmp' | 'conception' | 'dueDate', inputDate:
 
 One row per week 1–42. Fields: `week`, `lengthIn`, `lengthMeasure` (crown-rump ≤20, crown-heel ≥21), `weightOz`,
 `weightIsUpperBound`, `kind` (seed | egg | bird), `comparison`, `scientificName`, `wikipediaTitle`,
-`allAboutBirdsSlug`, `ebirdSpeciesCode`, `image { provider, mlAssetId, embedUrl, credit, altText }`, `facts[] { text, sources[], reviewed }`.
+`allAboutBirdsSlug`, `ebirdSpeciesCode`, `image { provider, credit, altText, file, objectPosition, author, license, licenseUrl, sourceUrl }`, `facts[] { text, sources[], reviewed }`.
+(The `mlAssetId`/`embedUrl` fields planned here were built, then removed along with the Macaulay embed code — see ADR-003.)
 
-Known gaps: week 1 (no data, by design). Week 3 carries a proposed comparison (grain of grit) pending the author's sign-off. Names, slugs and codes were filled during
-planning and must be verified (see `docs/CURATION.md`).
+Known gaps, as of this writing: weeks 1 and 2 carry no comparison (there is no fetus yet; every
+field is null), so the comparison table runs weeks 3–42, 40 rows, not 1–42. Four of those 40 weeks
+(7, 9, 12, 13) have no Commons photo curated yet. The week-3 "grain of grit" comparison this plan
+originally proposed was dropped rather than signed off; no row in the data is `proposed: true`.
+24 of 120 facts are still unreviewed. Names, slugs and codes were filled during planning and must be
+verified (see `docs/CURATION.md`).
 
 ## 4. Milestones for the build session
 
@@ -90,5 +111,7 @@ planning and must be verified (see `docs/CURATION.md`).
 
 - Vitest for `lib/*` (aim: 100% branch coverage on gestation math).
 - Fixed-date tests: pass `today` explicitly; never call `new Date()` inside lib code.
-- Playwright: one happy-path smoke test on the built site plus one test that a Macaulay embed iframe reaches `load`.
-- `scripts/validate-data.ts` fails CI on schema errors, duplicate weeks, or missing facts for weeks 2–42 .
+- Playwright: one happy-path smoke test on the built site. (This plan originally also asked for a
+  test that a Macaulay embed iframe reaches `load`; the embed route was abandoned and its code
+  removed — ADR-003 — so that test does not exist and will not.)
+- `scripts/validate-data.ts` fails CI on schema errors, duplicate weeks, or missing facts for weeks 3–42.

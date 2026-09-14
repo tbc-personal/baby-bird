@@ -16,7 +16,7 @@ All About Birds "Cool Facts" are Cornell copyright with no reuse license. Wikipe
 - Length: one sentence, ≤ 160 characters. Voice: warm, plain, no exclamation marks.
 - Prefer facts that tie back to babies, eggs, nests, size, or growth when they exist (incubation length, clutch size, how the chick is fed), since that is the app's theme.
 - Every generated fact is flagged for the author's review before release. The build session marks unreviewed facts with `"reviewed": false`.
-- Seeds (weeks 2–6) get one fact each about which birds eat them.
+- Seeds (weeks 3–6) get three facts each, at least one of them about which birds eat them. (Originally one fact each; the count grew to three to match the bird weeks.)
 
 ## Consequences
 

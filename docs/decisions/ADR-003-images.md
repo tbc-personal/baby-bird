@@ -1,17 +1,23 @@
 # ADR-003: Images
 
-Status: superseded in part (2026-09-09). Accepted 2026-09-06 as "bird images via
-Macaulay Library embeds"; the embed route was abandoned on 2026-09-08 for the
-reason recorded below, and **Wikimedia Commons is now the route for all 42
-weeks**. The original decision and its context are kept in full, because the
-non-commercial constraint it reasoned about is why the Commons licence list is
-what it is.
+Status: superseded in part (2026-09-09); embed code removed 2026-09-14 (commit
+`2e695cf`). Accepted 2026-09-06 as "bird images via Macaulay Library embeds";
+the embed route was abandoned on 2026-09-08 for the reason recorded below, and
+**Wikimedia Commons is now the route for weeks 3–42**. `MacaulayEmbed.tsx`,
+`macaulay.ts`, `useOnline.ts` and `OfflineGoose.tsx` have since been deleted
+from the tree, along with the `mlAssetId` / `fallbackMlAssetId` / `embedUrl`
+schema fields and data keys — see "The embed code is gone" below. Coverage is
+not yet complete: as of this correction (2026-09-14), 36 of the 40 comparison
+weeks have a curated Commons photo; weeks 7, 9, 12 and 13 still show the "Photo
+coming" silhouette. The original decision and its context are kept in full,
+because the non-commercial constraint it reasoned about is why the Commons
+licence list is what it is.
 
 ## Decision
 
 For weeks 7–42 (eggs and birds), each screen embeds one Macaulay Library asset using the library's official share/embed iframe. Asset IDs are curated once and stored in `data/comparisons.json` (`image.mlAssetId`). The app must remain non-commercial: no ads, no paid tier, no for-profit ownership.
 
-For weeks 2–6 (seeds), the Macaulay Library has no assets. Use Wikimedia Commons CC0 / CC BY photos, downloaded into the repo with attribution stored in the same JSON `image` object (`provider: "commons"`).
+For weeks 3–6 (seeds), the Macaulay Library has no assets. Use Wikimedia Commons CC0 / CC BY photos, downloaded into the repo with attribution stored in the same JSON `image` object (`provider: "commons"`).
 
 ## Context
 
@@ -54,14 +60,18 @@ of its own content.
 
 So the embed route is abandoned. The frame kept the mockup's 150px strip at
 first; it is 200px now (see "The strip is 200px" below).
-`MacaulayEmbed` and the template stay in the tree — they are correct, and if
-Cornell exempts the embed endpoint the route is a data change away — but no row
-should carry an `mlAssetId` while the challenge is in front of it.
+`MacaulayEmbed` and the template stayed in the tree at first — they were correct,
+and if Cornell exempts the embed endpoint the route would have been a data
+change away — but no row was to carry an `mlAssetId` while the challenge sat in
+front of it. **That code has since been deleted outright** (commit `2e695cf`,
+2026-09-14): see "The embed code is gone" below. If Cornell ever exempts the
+embed endpoint, the route would need to be rebuilt, not just re-enabled with
+data.
 
 ### Where that leaves images
 
 - **Wikimedia Commons is the route.** This ADR already named it as the fallback
-  if embedding broke, and `image.provider` was designed for the swap. Weeks 2,
+  if embedding broke, and `image.provider` was designed for the swap. Weeks 3,
   4, 5 and 6 prove the path end to end.
 - **Audubon is not an option.** Their terms reserve all rights, apply no
   Creative Commons licence, permit only personal non-commercial copying, and
@@ -84,6 +94,25 @@ should carry an `mlAssetId` while the challenge is in front of it.
   have to show a nest with a clutch, or a bird on a nest, rather than a clean
   egg photograph. One happy accident: a Commons file of a Wood Thrush nest
   containing a cowbird egg would illustrate week 9's own cowbird fact exactly.
+
+## The embed code is gone (2026-09-14, commit `2e695cf`)
+
+Everything below this point that describes `MacaulayEmbed`, `useOnline`,
+`OfflineGoose`, `macaulay.ts`, or the `mlAssetId` / `fallbackMlAssetId` /
+`embedUrl` fields is describing code and data that no longer exist. It is kept
+as history of what was built and why it was later removed, not as a
+description of the current app. `src/components/MacaulayEmbed.tsx`,
+`src/components/OfflineGoose.tsx`, `src/components/macaulay.ts`, and
+`src/useOnline.ts` have all been deleted (commit `2e695cf`), along with the
+corresponding schema fields and every `mlAssetId`/`embedUrl` key in
+`data/comparisons.json`.
+
+There is no offline goose any more — it was reachable only through the embed's
+failure states, and those states no longer exist. Every photo is downloaded
+into `public/images/` and served locally, so there is nothing left for an
+"offline" or "failed to load" image state to handle. Weeks with no curated
+photo (currently 7, 9, 12, 13) render the plain kind silhouette, tagged "Photo
+coming", the same as before — that part of the design did not change.
 
 ## Embed mechanics
 

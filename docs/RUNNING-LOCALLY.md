@@ -78,8 +78,9 @@ source reload in the browser straight away.
 
 - It opens on **Setup**, because no date is saved yet. Enter one and press **Show me my
   nestling**.
-- **Every card shows a bird silhouette tagged "Photo coming."** That is expected, not a bug:
-  no image has been curated yet. See `docs/CURATION.md`.
+- **36 of the 40 cards show a real photo**, served from `public/images/`. The four egg weeks —
+  **7, 9, 12, and 13** — show a bird silhouette tagged "Photo coming" instead: those are the only
+  weeks with no Commons photo curated yet. See `docs/CURATING-PHOTOS.md`.
 - Dark mode follows your operating system's setting, so flip your OS theme to check both.
 - Your date lives in that browser only. Clearing site data resets the app to Setup.
 

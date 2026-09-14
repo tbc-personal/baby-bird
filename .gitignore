@@ -7,7 +7,7 @@ playwright-report/
 test-results/
 tests/e2e/__screenshots__/*/*-actual.png
 tests/e2e/__screenshots__/*/*-diff.png
-coverage/
+*.tsbuildinfo
 
 # Scratch git worktrees created by Claude Code subagents.
 .claude/worktrees/
