@@ -64,10 +64,10 @@
     {
       "week": 14,
       "comparison": "Ruby-throated Hummingbird",
-      "commonsTitle": "File:RubyThroatedHummingbird(Crop).jpg",
+      "commonsTitle": "File:Archilochus colubris (Male).jpg",
       "file": "images/birds/ruby-throated-hummingbird.jpg",
-      "altText": "A Ruby-throated Hummingbird hovering at a scarlet beebalm flower, wings blurred, its green back catching the light.",
-      "why": "Author's second-pass pick (14B). Quality and Valued image, used in the species' Wikipedia article. The bird is large in the frame, which the first pick was not. It is a female, so there is no ruby throat."
+      "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
+      "why": "Author asked for a male: the ruby throat is the feature the species is named for, and the previous pick was a female. Top of the shortlist under --prefer '\\bmale\\b'. The crown sits close to the top of the strip crop."
     },
     {
       "week": 15,
@@ -112,10 +112,10 @@
     {
       "week": 20,
       "comparison": "Eastern Bluebird",
-      "commonsTitle": "File:Eastern Bluebird (2022).jpg",
+      "commonsTitle": "File:Eastern Bluebird (male) (43818012330).jpg",
       "file": "images/birds/eastern-bluebird.jpg",
-      "altText": "An Eastern Bluebird perched on a thin branch among new spring leaves, its blue back and rust-coloured breast turned to the camera.",
-      "why": "Author's pick (20F), taken under protest — the whole week 20 shortlist is weak. See the note in the survey; nothing in the Sialia sialis pool carried a Featured or Quality badge."
+      "altText": "A male Eastern Bluebird facing the camera from a bare branch, deep blue above and rust-orange across the breast.",
+      "why": "Author's pick (20D) from the male-preferred shortlist. Shows both the blue and the orange, bird centred, background clean. Public domain, NPS."
     },
     {
       "week": 21,
@@ -132,6 +132,70 @@
       "file": "images/birds/blue-jay.jpg",
       "altText": "A Blue Jay in sharp profile on a branch, its barred blue wing, white face and black neck ring all clear.",
       "why": "Author's pick (22E). A western subspecies but it reads as the textbook Blue Jay, and the wide 2:1 frame suits the strip crop better than the taller candidates."
+    },
+    {
+      "week": 23,
+      "comparison": "Atlantic Puffin",
+      "commonsTitle": "File:Papageitaucher Fratercula arctica.jpg",
+      "file": "images/birds/atlantic-puffin.jpg",
+      "altText": "An Atlantic Puffin standing on a grassy clifftop, its striped orange bill and orange feet bright against black and white plumage.",
+      "why": "Author's pick (23E). Featured Picture. The crown sits near the top edge of the strip crop — worth a look on the card."
+    },
+    {
+      "week": 25,
+      "comparison": "Belted Kingfisher",
+      "commonsTitle": "File:Belted Kingfisher - Megaceryle alcyon, Big Cypress National Preserve, Ochopee, Florida, December 10, 2023.jpg",
+      "file": "images/birds/belted-kingfisher.jpg",
+      "altText": "A Belted Kingfisher perched on a bare branch with its shaggy crest raised, showing a white collar and a rust-coloured band across the belly.",
+      "why": "Author's pick (25E). Week 25 is one of the three weeks with no badged candidates, so this was chosen from ordinary photographs. The crown clips at the top of the strip crop."
+    },
+    {
+      "week": 26,
+      "comparison": "Common Tern",
+      "commonsTitle": "File:2014-05-18 Sterna hirundo, Killingworth Lake, Northumberland 02.jpg",
+      "file": "images/birds/common-tern.jpg",
+      "altText": "A Common Tern standing at the water's edge in summer plumage, black cap, red bill and pale grey wings.",
+      "why": "Author's pick (26B). Quality Image, in the species' Wikipedia article. Whole bird survives the strip crop cleanly."
+    },
+    {
+      "week": 27,
+      "comparison": "Peregrine Falcon",
+      "commonsTitle": "File:Peregrine Falcon (male).jpg",
+      "file": "images/birds/peregrine-falcon.jpg",
+      "altText": "A Peregrine Falcon standing on open ground against a pale sky, its dark hood and finely barred underparts clear.",
+      "why": "Author's pick (27E). In the species' Wikipedia article. The bird is smaller in the frame than most, but survives the crop whole."
+    },
+    {
+      "week": 28,
+      "comparison": "Cooper's Hawk",
+      "commonsTitle": "File:Accipiter cooperii m Sam Smith Toronto3.jpg",
+      "file": "images/birds/coopers-hawk.jpg",
+      "altText": "A male Cooper's Hawk standing on a rock, slate-grey above with a finely rust-barred breast, its prey beneath its feet.",
+      "why": "Author's pick (28B). In the species' Wikipedia article. Note there is prey under the bird's feet, visible at card size."
+    },
+    {
+      "week": 29,
+      "comparison": "American Barn Owl",
+      "commonsTitle": "File:Barn Owl Pyramid Lake 1.jpg",
+      "file": "images/birds/american-barn-owl.jpg",
+      "altText": "An American Barn Owl in flight with wings spread, its pale heart-shaped face turned toward the camera.",
+      "why": "Author's pick (29F). Week 29 has the smallest pool of any bird week and no badged candidates. The plain background makes the bird read well at 150px despite the modest resolution."
+    },
+    {
+      "week": 30,
+      "comparison": "American Crow",
+      "commonsTitle": "File:2014-04-29 02 Northwestern crow (Corvus brachyrhynchos caurinus).jpg",
+      "file": "images/birds/american-crow.jpg",
+      "altText": "An American Crow standing on pavement in profile, glossy black with a heavy bill.",
+      "why": "Author's pick (30D). Quality Image. Filed under the northwestern subspecies, which was lumped into American Crow in 2020, so the species is right."
+    },
+    {
+      "week": 32,
+      "comparison": "Hooded Merganser",
+      "commonsTitle": "File:Hooded merganser male in Central Park (95790).jpg",
+      "file": "images/birds/hooded-merganser.jpg",
+      "altText": "A male Hooded Merganser swimming with its white-and-black fan-shaped crest raised.",
+      "why": "Author's pick (32A). Quality and Valued image, in the species' Wikipedia article. The crest is the point of the bird and it is fully raised here."
     }
   ],
   "notSourced": [

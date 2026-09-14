@@ -613,12 +613,12 @@
         "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": "A Ruby-throated Hummingbird hovering at a scarlet beebalm flower, wings blurred, its green back catching the light.",
+        "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
         "file": "images/birds/ruby-throated-hummingbird.jpg",
         "author": "Joe Schneid , Louisville, Kentucky",
         "license": "CC BY 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:RubyThroatedHummingbird(Crop).jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Archilochus_colubris_(Male).jpg"
       },
       "facts": [
         {
@@ -916,12 +916,12 @@
         "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": "An Eastern Bluebird perched on a thin branch among new spring leaves, its blue back and rust-coloured breast turned to the camera.",
+        "altText": "A male Eastern Bluebird facing the camera from a bare branch, deep blue above and rust-orange across the breast.",
         "file": "images/birds/eastern-bluebird.jpg",
-        "author": "Wildreturn",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(2022).jpg"
+        "author": "ShenandoahNPS",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Bluebird_(male)_(43818012330).jpg"
       },
       "facts": [
         {
@@ -1063,11 +1063,17 @@
       "wikipediaTitle": "Atlantic_puffin",
       "allAboutBirdsSlug": "Atlantic_Puffin",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "An Atlantic Puffin standing on a grassy clifftop, its striped orange bill and orange feet bright against black and white plumage.",
+        "file": "images/birds/atlantic-puffin.jpg",
+        "author": "Richard Bartz",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papageitaucher_Fratercula_arctica.jpg"
       },
       "facts": [
         {
@@ -1151,11 +1157,17 @@
       "wikipediaTitle": "Belted_kingfisher",
       "allAboutBirdsSlug": "Belted_Kingfisher",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Belted Kingfisher perched on a bare branch with its shaggy crest raised, showing a white collar and a rust-coloured band across the belly.",
+        "file": "images/birds/belted-kingfisher.jpg",
+        "author": "Judy Gallagher",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Belted_Kingfisher_-_Megaceryle_alcyon,_Big_Cypress_National_Preserve,_Ochopee,_Florida,_December_10,_2023.jpg"
       },
       "facts": [
         {
@@ -1195,11 +1207,17 @@
       "wikipediaTitle": "Common_tern",
       "allAboutBirdsSlug": "Common_Tern",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Common Tern standing at the water's edge in summer plumage, black cap, red bill and pale grey wings.",
+        "file": "images/birds/common-tern.jpg",
+        "author": "MPF",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_02.jpg"
       },
       "facts": [
         {
@@ -1239,11 +1257,17 @@
       "wikipediaTitle": "Peregrine_falcon",
       "allAboutBirdsSlug": "Peregrine_Falcon",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A Peregrine Falcon standing on open ground against a pale sky, its dark hood and finely barred underparts clear.",
+        "file": "images/birds/peregrine-falcon.jpg",
+        "author": "Sumeet Moghe",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male).jpg"
       },
       "facts": [
         {
@@ -1283,11 +1307,17 @@
       "wikipediaTitle": "Cooper's_hawk",
       "allAboutBirdsSlug": "Coopers_Hawk",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A male Cooper's Hawk standing on a rock, slate-grey above with a finely rust-barred breast, its prey beneath its feet.",
+        "file": "images/birds/coopers-hawk.jpg",
+        "author": "Mykola Swarnyk",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Accipiter_cooperii_m_Sam_Smith_Toronto3.jpg"
       },
       "facts": [
         {
@@ -1327,11 +1357,17 @@
       "wikipediaTitle": "American_barn_owl",
       "allAboutBirdsSlug": "Barn_Owl",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "An American Barn Owl in flight with wings spread, its pale heart-shaped face turned toward the camera.",
+        "file": "images/birds/american-barn-owl.jpg",
+        "author": "Tim from Ithaca",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barn_Owl_Pyramid_Lake_1.jpg"
       },
       "facts": [
         {
@@ -1371,11 +1407,17 @@
       "wikipediaTitle": "American_crow",
       "allAboutBirdsSlug": "American_Crow",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "An American Crow standing on pavement in profile, glossy black with a heavy bill.",
+        "file": "images/birds/american-crow.jpg",
+        "author": "Gordon Leggett",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-04-29_02_Northwestern_crow_(Corvus_brachyrhynchos_caurinus).jpg"
       },
       "facts": [
         {
@@ -1459,11 +1501,17 @@
       "wikipediaTitle": "Hooded_merganser",
       "allAboutBirdsSlug": "Hooded_Merganser",
       "image": {
-        "provider": null,
+        "provider": "commons",
         "mlAssetId": null,
+        "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": null
+        "altText": "A male Hooded Merganser swimming with its white-and-black fan-shaped crest raised.",
+        "file": "images/birds/hooded-merganser.jpg",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hooded_merganser_male_in_Central_Park_(95790).jpg"
       },
       "facts": [
         {

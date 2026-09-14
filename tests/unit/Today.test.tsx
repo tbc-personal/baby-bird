@@ -5,7 +5,7 @@ import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
 import { parseIsoDate } from '../../src/lib/gestation';
-import { weekRow } from '../../src/data/comparisons';
+import { COMPARISON_WEEKS, weekRow } from '../../src/data/comparisons';
 
 function day(iso: string): Date {
   const parsed = parseIsoDate(iso);
@@ -162,7 +162,12 @@ describe('ComparisonCard', () => {
   });
 
   it('shows the "Photo coming" silhouette when no asset is curated', () => {
-    card(23);
+    // Ask the data which week that is rather than naming one. This test used to
+    // say week 23, and broke the day the Atlantic Puffin got a photograph — the
+    // same way the PWA specs broke when the real calendar moved past week 23.
+    const uncurated = COMPARISON_WEEKS.find((row) => !row.image?.file);
+    if (!uncurated) throw new Error('every week has a photo; this test is obsolete');
+    card(uncurated.week);
     expect(screen.getByText('Photo coming')).toBeInTheDocument();
   });
 
