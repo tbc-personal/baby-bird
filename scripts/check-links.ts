@@ -1,15 +1,14 @@
 /**
- * Quarterly link check (PLAN §2, ADR-003 "contributor deletes an asset").
+ * Quarterly link check (PLAN §2).
  *
  * Verifies, for every row in `data/comparisons.json`:
  *   - `https://www.allaboutbirds.org/guide/<slug>/overview` returns 200
  *   - `https://ebird.org/species/<code>` returns 200
- *   - `https://macaulaylibrary.org/asset/<mlAssetId>` returns 200
  *   - every Commons `sourceUrl` and `licenseUrl` returns 200
  *
- * Not part of `ci.yml`: it makes several dozen requests to Cornell and would be
- * a poor neighbor on every push, and a network failure is not a code failure.
- * Run it by hand, or on a schedule, with `npm run check-links`.
+ * Not part of `ci.yml`: it makes several dozen requests and would be a poor
+ * neighbor on every push, and a network failure is not a code failure. Run it
+ * by hand, or on a schedule, with `npm run check-links`.
  *
  * Exit code 1 if any URL does not resolve. `--verbose` lists the passes too.
  */
@@ -45,18 +44,6 @@ for (const row of data.weeks) {
     });
   }
   const image = row.image;
-  if (image?.mlAssetId) {
-    checks.push({
-      label: `week ${row.week} Macaulay asset`,
-      url: `https://macaulaylibrary.org/asset/${image.mlAssetId}`,
-    });
-  }
-  if (image?.fallbackMlAssetId) {
-    checks.push({
-      label: `week ${row.week} Macaulay fallback asset`,
-      url: `https://macaulaylibrary.org/asset/${image.fallbackMlAssetId}`,
-    });
-  }
   if (image?.sourceUrl) {
     checks.push({ label: `week ${row.week} image source`, url: image.sourceUrl });
   }
@@ -68,7 +55,7 @@ for (const row of data.weeks) {
 /** One request at a time with a short pause; this is a courtesy check, not a load test. */
 const failures: string[] = [];
 for (const check of checks) {
-  const status = await head(check.url);
+  const status = await statusOf(check.url);
   const ok = status >= 200 && status < 400;
   if (!ok) failures.push(`${check.label}: ${status} ${check.url}`);
   if (verbose || !ok) console.log(`${ok ? 'ok  ' : 'FAIL'} ${status} ${check.label}`);
@@ -81,7 +68,7 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-async function head(url: string): Promise<number> {
+async function statusOf(url: string): Promise<number> {
   try {
     const response = await fetch(url, { method: 'GET', redirect: 'follow' });
     return response.status;

@@ -48,9 +48,6 @@
       "allAboutBirdsSlug": null,
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "Hundreds of poppy seeds spread in a single layer, each a brown kidney shape barely a millimetre across.",
         "objectPosition": null,
@@ -93,9 +90,6 @@
       "allAboutBirdsSlug": null,
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A round dish filled with nyjer seeds, thin black slivers packed tightly together.",
         "objectPosition": null,
@@ -141,9 +135,6 @@
       "allAboutBirdsSlug": null,
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A round dish of white proso millet, small pale round grains with a faint sheen.",
         "objectPosition": null,
@@ -189,9 +180,6 @@
       "allAboutBirdsSlug": null,
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "Black oil sunflower seeds close up, teardrop-shaped shells with fine pale stripes.",
         "objectPosition": null,
@@ -234,8 +222,6 @@
       "allAboutBirdsSlug": "House_Wren",
       "image": {
         "provider": null,
-        "mlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": null
       },
@@ -272,9 +258,6 @@
       "allAboutBirdsSlug": "Barn_Swallow",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "Four small speckled pink eggs in a barn swallow's nest of dried grass and mud, lined with white feathers.",
         "objectPosition": null,
@@ -317,8 +300,6 @@
       "allAboutBirdsSlug": "Wood_Thrush",
       "image": {
         "provider": null,
-        "mlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": null
       },
@@ -358,9 +339,6 @@
       "allAboutBirdsSlug": "American_Robin",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "Three turquoise-blue American Robin eggs resting in a deep nest of dried grass and mud.",
         "objectPosition": "center 85%",
@@ -403,9 +381,6 @@
       "allAboutBirdsSlug": "Black_Tern",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "Three heavily blotched Black Tern eggs on a floating nest of reeds and stems at the surface of a marsh.",
         "objectPosition": null,
@@ -448,8 +423,6 @@
       "allAboutBirdsSlug": "Great_Blue_Heron",
       "image": {
         "provider": null,
-        "mlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": null
       },
@@ -486,8 +459,6 @@
       "allAboutBirdsSlug": "Bald_Eagle",
       "image": {
         "provider": null,
-        "mlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": null
       },
@@ -530,9 +501,6 @@
       "allAboutBirdsSlug": "Ruby-throated_Hummingbird",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Ruby-throated Hummingbird perched on a weathered post, its iridescent red throat patch catching the light.",
         "objectPosition": "center 13%",
@@ -577,9 +545,6 @@
       "allAboutBirdsSlug": "Ruby-crowned_Kinglet",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Ruby-crowned Kinglet perched on a thin bare twig, its olive back and white wing bar lit from the side.",
         "objectPosition": null,
@@ -625,9 +590,6 @@
       "allAboutBirdsSlug": "Black-capped_Chickadee",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Black-capped Chickadee perched on a branch stub, its black cap and bib sharp against a soft green background.",
         "objectPosition": "center 42%",
@@ -673,9 +635,6 @@
       "allAboutBirdsSlug": "Carolina_Wren",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Carolina Wren on a bare branch with its tail cocked upward, the white stripe over its eye clearly marked.",
         "objectPosition": null,
@@ -721,9 +680,6 @@
       "allAboutBirdsSlug": "Tufted_Titmouse",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Tufted Titmouse standing on a pale branch against a plain background, its grey crest raised.",
         "objectPosition": "center 60%",
@@ -766,9 +722,6 @@
       "allAboutBirdsSlug": "Cedar_Waxwing",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Cedar Waxwing perched among serviceberry leaves and green berries, its crest smooth and its black mask clear.",
         "objectPosition": null,
@@ -811,9 +764,6 @@
       "allAboutBirdsSlug": "Eastern_Bluebird",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Eastern Bluebird facing the camera from a bare branch, deep blue above and rust-orange across the breast.",
         "objectPosition": null,
@@ -859,9 +809,6 @@
       "allAboutBirdsSlug": "American_Kestrel",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A pale female American Kestrel perched on a bare twig, finely streaked below, with the dark facial markings of the species.",
         "objectPosition": null,
@@ -907,9 +854,6 @@
       "allAboutBirdsSlug": "Blue_Jay",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Blue Jay in sharp profile on a branch, its barred blue wing, white face and black neck ring all clear.",
         "objectPosition": null,
@@ -952,9 +896,6 @@
       "allAboutBirdsSlug": "Atlantic_Puffin",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "An Atlantic Puffin standing on a grassy clifftop, its striped orange bill and orange feet bright against black and white plumage.",
         "objectPosition": null,
@@ -999,9 +940,6 @@
       "allAboutBirdsSlug": "Northern_Flicker",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Northern Flicker perched on a stump, its barred brown back and heavily spotted breast turned to the camera.",
         "objectPosition": "center 28%",
@@ -1044,9 +982,6 @@
       "allAboutBirdsSlug": "Belted_Kingfisher",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Belted Kingfisher perched on a bare branch with its shaggy crest raised, showing a white collar and a rust-coloured band across the belly.",
         "objectPosition": "center 44%",
@@ -1089,9 +1024,6 @@
       "allAboutBirdsSlug": "Common_Tern",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Common Tern standing at the water's edge in summer plumage, black cap, red bill and pale grey wings.",
         "objectPosition": null,
@@ -1134,9 +1066,6 @@
       "allAboutBirdsSlug": "Peregrine_Falcon",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Peregrine Falcon standing on open ground against a pale sky, its dark hood and finely barred underparts clear.",
         "objectPosition": null,
@@ -1179,9 +1108,6 @@
       "allAboutBirdsSlug": "Coopers_Hawk",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Cooper's Hawk standing on a rock, slate-grey above with a finely rust-barred breast, its prey beneath its feet.",
         "objectPosition": null,
@@ -1224,9 +1150,6 @@
       "allAboutBirdsSlug": "Barn_Owl",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "An American Barn Owl in flight with wings spread, its pale heart-shaped face turned toward the camera.",
         "objectPosition": null,
@@ -1269,9 +1192,6 @@
       "allAboutBirdsSlug": "American_Crow",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "An American Crow standing on pavement in profile, glossy black with a heavy bill.",
         "objectPosition": null,
@@ -1314,9 +1234,6 @@
       "allAboutBirdsSlug": "Pileated_Woodpecker",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Pileated Woodpecker clinging to a wooden post, its red crest raised above a black back and white neck stripe.",
         "objectPosition": "center 11%",
@@ -1359,9 +1276,6 @@
       "allAboutBirdsSlug": "Hooded_Merganser",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Hooded Merganser swimming with its white-and-black fan-shaped crest raised.",
         "objectPosition": null,
@@ -1404,9 +1318,6 @@
       "allAboutBirdsSlug": "Green_Heron",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Green Heron crouched low with its neck drawn in, chestnut throat and dark green back against reeds.",
         "objectPosition": null,
@@ -1454,9 +1365,6 @@
       "allAboutBirdsSlug": "Ring-billed_Gull",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Ring-billed Gull in winter plumage, its yellow bill marked with the dark ring the bird is named for.",
         "objectPosition": null,
@@ -1505,9 +1413,6 @@
       "allAboutBirdsSlug": "Red-tailed_Hawk",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Red-tailed Hawk perched with its pale streaked breast toward the camera and its rust-coloured tail visible behind.",
         "objectPosition": null,
@@ -1550,9 +1455,6 @@
       "allAboutBirdsSlug": "Wood_Duck",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Wood Duck on the water, its green-and-white patterned head, red eye and chestnut breast in full colour.",
         "objectPosition": null,
@@ -1595,9 +1497,6 @@
       "allAboutBirdsSlug": "Red-shouldered_Hawk",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Red-shouldered Hawk perched in the open, rusty barred underparts and boldly banded tail showing.",
         "objectPosition": "center 31%",
@@ -1640,9 +1539,6 @@
       "allAboutBirdsSlug": "Barred_Owl",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Barred Owl facing forward with dark eyes and a pale, finely barred face.",
         "objectPosition": "center 40%",
@@ -1685,9 +1581,6 @@
       "allAboutBirdsSlug": "Mallard",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A male Mallard swimming, his iridescent green head and yellow bill bright above a white collar.",
         "objectPosition": null,
@@ -1733,9 +1626,6 @@
       "allAboutBirdsSlug": "Snowy_Owl",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Snowy Owl, white with fine dark barring, looking directly at the camera with yellow eyes.",
         "objectPosition": "center 45%",
@@ -1778,9 +1668,6 @@
       "allAboutBirdsSlug": "Great_Horned_Owl",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "A Great Horned Owl perched beneath pink blossom, its ear tufts raised and yellow eyes wide.",
         "objectPosition": null,
@@ -1823,9 +1710,6 @@
       "allAboutBirdsSlug": "Osprey",
       "image": {
         "provider": "commons",
-        "mlAssetId": null,
-        "fallbackMlAssetId": null,
-        "embedUrl": null,
         "credit": null,
         "altText": "An Osprey gripping a fish, its white head and dark eye stripe sharp against the sky.",
         "objectPosition": "center 30%",

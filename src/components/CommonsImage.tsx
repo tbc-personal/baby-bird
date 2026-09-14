@@ -1,5 +1,5 @@
 import type { ComparisonImage } from '../lib/schema';
-import { PhotoFrame } from './MacaulayEmbed';
+import { PhotoFrame } from './PhotoFrame';
 
 /**
  * A Wikimedia Commons photo shipped in `public/images/` (ADR-003, weeks 2–6).

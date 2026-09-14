@@ -13,9 +13,8 @@ export const LENGTH_MEASURES = ['crown-rump', 'crown-heel'] as const;
 export const lengthMeasureSchema = z.enum(LENGTH_MEASURES);
 export type LengthMeasure = z.infer<typeof lengthMeasureSchema>;
 
-export const IMAGE_PROVIDERS = ['macaulay', 'commons'] as const;
+export const IMAGE_PROVIDERS = ['commons'] as const;
 export const imageProviderSchema = z.enum(IMAGE_PROVIDERS);
-export type ImageProvider = z.infer<typeof imageProviderSchema>;
 
 /** Licenses this project will ship. Anything else is rejected (ADR-003). */
 export const ALLOWED_COMMONS_LICENSES = [
@@ -44,12 +43,6 @@ export type Fact = z.infer<typeof factSchema>;
 export const imageSchema = z
   .object({
     provider: imageProviderSchema.nullable(),
-    /** Macaulay Library numeric asset id, as a string of digits. */
-    mlAssetId: z.string().regex(/^\d+$/).nullable().optional().default(null),
-    /** A second curated id in case the primary asset is deleted (ADR-003). */
-    fallbackMlAssetId: z.string().regex(/^\d+$/).nullable().optional().default(null),
-    /** Present only for historical data; the app builds embed URLs from the id. */
-    embedUrl: z.string().url().nullable().optional().default(null),
     credit: z.string().nullable().optional().default(null),
     altText: z.string().nullable().optional().default(null),
     /** Commons rows only: the file under `public/images/`, relative to the app base. */
@@ -106,13 +99,6 @@ export const imageSchema = z
           message: `license ${image.license} is not on the allowed list (CC0 / CC BY / CC BY-SA)`,
         });
       }
-    }
-    if (image.provider === 'macaulay' && !image.mlAssetId) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['mlAssetId'],
-        message: 'a macaulay image needs an asset id',
-      });
     }
   });
 export type ComparisonImage = z.infer<typeof imageSchema>;

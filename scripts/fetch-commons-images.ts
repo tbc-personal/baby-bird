@@ -217,9 +217,6 @@ for (const pick of picks.picks) {
 
   row.image = {
     provider: 'commons',
-    mlAssetId: null,
-    fallbackMlAssetId: null,
-    embedUrl: null,
     credit: null,
     altText: pick.altText,
     objectPosition: pick.objectPosition ?? null,

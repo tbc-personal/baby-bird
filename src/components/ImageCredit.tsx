@@ -1,5 +1,4 @@
 import type { ComparisonImage } from '../lib/schema';
-import { macaulayAssetUrl } from './macaulay';
 import { useDisclosure } from './useDisclosure';
 
 /**
@@ -39,16 +38,6 @@ export function ImageCredit({ image }: { image: ComparisonImage | null }) {
 
 function creditContent(image: ComparisonImage | null): React.ReactNode {
   if (!image || image.provider === null) return null;
-
-  if (image.provider === 'macaulay' && image.mlAssetId) {
-    return (
-      <>
-        Photo: {image.credit ?? 'Macaulay Library contributor'} / Macaulay Library at the
-        Cornell Lab of Ornithology{' '}
-        <a href={macaulayAssetUrl(image.mlAssetId)}>ML{image.mlAssetId}</a>.
-      </>
-    );
-  }
 
   if (image.provider === 'commons' && image.author && image.license) {
     return (

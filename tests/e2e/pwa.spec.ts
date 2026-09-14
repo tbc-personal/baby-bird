@@ -122,8 +122,9 @@ test('no cross-origin request is made on load (ADR-003)', async ({ page }) => {
   });
   await page.goto('/#/');
   await page.waitForTimeout(1200);
-  // No analytics, no Google Fonts, no third-party scripts. The only permitted
-  // cross-origin traffic is a Macaulay embed frame, and no row carries one yet.
+  // No analytics, no Google Fonts, no third-party scripts. Every photo ships
+  // as a local file under `public/images/`, so there is no cross-origin
+  // traffic at all.
   expect(external).toEqual([]);
 });
 

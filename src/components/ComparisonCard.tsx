@@ -13,7 +13,7 @@ import { isConventionSwitchWeek } from '../lib/gestation';
 import { CommonsImage } from './CommonsImage';
 import { FactList } from './FactList';
 import { ImageCredit } from './ImageCredit';
-import { MacaulayEmbed, PhotoComing } from './MacaulayEmbed';
+import { PhotoComing } from './PhotoFrame';
 import { MeasureDialog, type Measure } from './MeasureDialog';
 import './ComparisonCard.css';
 
@@ -133,24 +133,13 @@ export function ComparisonCard({
   function renderPhoto() {
     const image = row.image;
     const kind = row.kind ?? 'bird';
-    const alt = image?.altText ?? `${comparison}, photograph`;
 
     const credit = <ImageCredit image={image} />;
 
-    if (image?.provider === 'macaulay' && image.mlAssetId) {
-      return (
-        <MacaulayEmbed
-          assetId={image.mlAssetId}
-          kind={kind}
-          altText={alt}
-          credit={credit}
-        />
-      );
-    }
     if (image?.provider === 'commons' && image.file) {
       return <CommonsImage image={image} base={base} credit={credit} />;
     }
-    // No asset curated yet: the kind silhouette, distinct from the offline goose.
+    // No photo sourced for this week yet (weeks 7, 9, 12, 13): the kind silhouette.
     return <PhotoComing kind={kind} />;
   }
 }

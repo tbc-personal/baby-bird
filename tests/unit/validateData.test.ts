@@ -20,10 +20,7 @@ interface RawFact {
 }
 
 interface RawImage {
-  provider: 'macaulay' | 'commons' | null;
-  mlAssetId?: string | null;
-  fallbackMlAssetId?: string | null;
-  embedUrl?: string | null;
+  provider: 'commons' | null;
   credit?: string | null;
   altText?: string | null;
   file?: string | null;
@@ -142,11 +139,6 @@ const validCommonsImage = (): RawImage => ({
   license: 'CC BY 4.0',
   licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
   sourceUrl: 'https://commons.wikimedia.org/wiki/File:example.jpg',
-});
-
-const validMacaulayImage = (): RawImage => ({
-  provider: 'macaulay',
-  mlAssetId: '123456',
 });
 
 // ---------------------------------------------------------------------------
@@ -342,13 +334,6 @@ describe('validateComparisons: images (schema)', () => {
       ),
     ).toBe(true);
   });
-
-  it('rejects a macaulay image with a null mlAssetId', () => {
-    const image: RawImage = { provider: 'macaulay', mlAssetId: null };
-    const weeks = withWeek(makeFile().weeks, 30, { image });
-    const report = validateComparisons(makeFile({ weeks }));
-    expect(report.errors.some((e) => e.includes('mlAssetId'))).toBe(true);
-  });
 });
 
 describe('validateComparisons: malformed input', () => {
@@ -422,7 +407,7 @@ describe('referencedImageFiles', () => {
       withWeek(makeFile().weeks, 20, { image: validCommonsImage() }),
       30,
       {
-        image: validMacaulayImage(),
+        image: { provider: null },
       },
     );
     const result = referencedImageFiles(makeFile({ weeks }));
