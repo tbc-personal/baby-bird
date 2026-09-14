@@ -36,8 +36,8 @@ export function AboutContent() {
         <ul>
           <li>
             Fetal length and weight: the author&rsquo;s own table, drawn from{' '}
-            <a href="https://datayze.com/">Datayze</a>. Fetal length is measured crown-to-rump
-            through week 20 and head-to-heel from week 21.
+            <a href="https://datayze.com/">Datayze</a>. Fetal length is measured
+            crown-to-rump through week 20 and head-to-heel from week 21.
           </li>
           <li>
             Due dates count 280 days from the first day of your last period, adjusted for
@@ -79,9 +79,10 @@ export function AboutContent() {
       <section className="section section--last">
         <h2>Your data</h2>
         <p>
-          Your date and your settings are stored on your device only. There are no
-          accounts, no analytics, and no data transmission. The only network requests
-          the app makes are the photo embeds. The link you copy above only encodes your due date.
+          Your date and your settings are stored on your device only. There are no accounts,
+          no analytics, and no data transmission: the photographs ship with the app, so it
+          never calls out to another server. The link you copy above only encodes your due
+          date.
         </p>
         {confirmingForget ? (
           <div className="sheet">
