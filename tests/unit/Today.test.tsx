@@ -4,7 +4,11 @@ import { TodayScreen } from '../../src/screens/Today';
 import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
-import { parseIsoDate } from '../../src/lib/gestation';
+import {
+  FIRST_COMPARISON_WEEK,
+  LAST_COMPARISON_WEEK,
+  parseIsoDate,
+} from '../../src/lib/gestation';
 import { COMPARISON_WEEKS, weekRow } from '../../src/data/comparisons';
 
 function day(iso: string): Date {
@@ -94,6 +98,17 @@ describe('Today screen (mockup 2)', () => {
     saveLmp('2026-09-20');
     renderToday('2026-09-06');
     expect(screen.getByText('That date has not arrived yet')).toBeInTheDocument();
+  });
+
+  it('names the real first week in the out-of-range empty state, not a hard-coded 2', () => {
+    saveLmp('2026-03-29');
+    renderToday('2026-09-06', 99);
+    expect(screen.getByText('No comparison for week 99')).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        `The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`,
+      ),
+    ).toBeInTheDocument();
   });
 });
 

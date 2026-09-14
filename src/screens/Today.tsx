@@ -55,7 +55,7 @@ export function TodayScreen({ today, week }: { today: Date; week: number | null 
       <>
         <EmptyState
           title={`No comparison for week ${String(week)}`}
-          body="The table runs from week 2 to week 42."
+          body={`The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`}
         />
         <p className="small">
           <a href={hrefFor({ name: 'timeline' })}>Back to the timeline</a>
@@ -226,7 +226,7 @@ export function WeekCard({
     return (
       <EmptyState
         title="No comparison for this week"
-        body="The table runs from week 2 to week 42."
+        body={`The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`}
       />
     );
   }
