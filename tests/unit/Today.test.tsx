@@ -100,6 +100,41 @@ describe('Today screen (mockup 2)', () => {
     expect(screen.getByText('That date has not arrived yet')).toBeInTheDocument();
   });
 
+  describe('the trimester pill follows the week on screen', () => {
+    // Today is week 25 (second trimester) throughout: an LMP of 2026-03-29 puts
+    // 2026-09-20 at 25w0d. Browsing away must move the pill with the card.
+    const LMP = '2026-03-29';
+    const TODAY = '2026-09-20';
+
+    it('reads the current trimester when not browsing', () => {
+      saveLmp(LMP);
+      renderToday(TODAY);
+      expect(screen.getByText('Second trimester')).toBeInTheDocument();
+    });
+
+    it.each([
+      [3, 'First trimester'],
+      [13, 'First trimester'],
+      [14, 'Second trimester'],
+      [27, 'Second trimester'],
+      [28, 'Third trimester'],
+      [42, 'Third trimester'],
+    ])('reads week %i as %s while browsing', (week, label) => {
+      saveLmp(LMP);
+      renderToday(TODAY, week);
+      expect(screen.getByText(label)).toBeInTheDocument();
+    });
+
+    it('leaves the due date alone, since it does not depend on the viewed week', () => {
+      saveLmp(LMP);
+      const { unmount } = renderToday(TODAY);
+      const due = screen.getByText(/^due /).textContent;
+      unmount();
+      renderToday(TODAY, 3);
+      expect(screen.getByText(/^due /).textContent).toBe(due);
+    });
+  });
+
   it('names the real first week in the out-of-range empty state, not a hard-coded 2', () => {
     saveLmp('2026-03-29');
     renderToday('2026-09-06', 99);

@@ -7,6 +7,7 @@ import {
   LAST_COMPARISON_WEEK,
   parseIsoDate,
   TRIMESTER_LABEL,
+  trimesterFor,
   weekDateRange,
   type Progress,
 } from '../lib/gestation';
@@ -135,11 +136,25 @@ export function ProgressHeader({
       ? weekDateRange(progress.lmpEquivalent, viewedWeek)
       : null;
 
+  /*
+   * While browsing, the pill names the trimester of the week on screen, not the
+   * one you are in. Everything else in the header already follows the browsed
+   * week — the heading, the offset, the date range — so a pill left on today's
+   * trimester sat directly above a card it disagreed with: "Second trimester"
+   * over a week 3 poppy seed.
+   *
+   * `week * 7` is that week's day 0, which is the reading a card headed
+   * "Week N" carries. The due date beside it does not change, because it does
+   * not depend on which week you are looking at.
+   */
+  const shownTrimester =
+    browsing && viewedWeek !== null ? trimesterFor(viewedWeek * 7) : progress.trimester;
+
   return (
     <>
       <div className="meta meta--pills">
         <span className="pill pill--trimester">
-          {progress.trimester ? TRIMESTER_LABEL[progress.trimester] : 'Not started'}
+          {shownTrimester ? TRIMESTER_LABEL[shownTrimester] : 'Not started'}
         </span>
         <span className="pill pill--due mono">due {formatShortDate(progress.dueDate)}</span>
       </div>
