@@ -87,8 +87,3 @@ export function indefiniteArticle(word: string): 'a' | 'an' {
   // a general-purpose article picker.
   return 'aeiou'.includes(first) ? 'an' : 'a';
 }
-
-/** The full noun phrase shown on the card: "an American Robin egg". */
-export function comparisonPhrase(comparison: string): string {
-  return `${indefiniteArticle(comparison)} ${comparison}`;
-}

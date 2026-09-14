@@ -10,8 +10,6 @@ import { FIRST_COMPARISON_WEEK, LAST_COMPARISON_WEEK } from '../lib/gestation';
 
 const parsed = comparisonsSchema.parse(raw);
 
-export const LENGTH_CONVENTION = parsed.lengthConvention;
-
 /** Every row, week 1 first. Week 1 carries no comparison, by design. */
 export const ALL_WEEKS: readonly WeekRow[] = [...parsed.weeks].sort(
   (a, b) => a.week - b.week,

@@ -2,10 +2,12 @@ import { describe, expect, it } from 'vitest';
 import { applySkin, getSkin, skinCss, SKIN_LIST, SKINS } from '../../src/skins';
 import { SKIN_IDS, DEFAULT_SKIN } from '../../src/skins/ids';
 import { TOKEN_PROPERTY, type Tokens } from '../../src/skins/types';
-import { contrast, parseHex } from '../../src/lib/contrast';
-
-const AA = 4.5;
-const AA_LARGE = 3;
+import {
+  AA_LARGE_TEXT as AA_LARGE,
+  AA_NORMAL_TEXT as AA,
+  contrast,
+  parseHex,
+} from '../../src/lib/contrast';
 
 /**
  * Every pair of tokens that ends up as text on a background somewhere in the

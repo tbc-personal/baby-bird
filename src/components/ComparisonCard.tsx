@@ -2,11 +2,11 @@ import { useRef, useState } from 'react';
 import type { WeekRow } from '../lib/schema';
 import type { Units } from '../lib/storage';
 import {
-  exactWeight,
   formatLength,
   formatWeight,
   indefiniteArticle,
   lengthLabel,
+  weightDetail,
   weightNeedsDetail,
 } from '../lib/measures';
 import { isConventionSwitchWeek } from '../lib/gestation';
@@ -79,11 +79,9 @@ export function ComparisonCard({
             >
               <b className="mono">{formatWeight(row.weightOz, units)}</b>
               <span>
-                {row.weightIsUpperBound
-                  ? `weight, under ${exactWeight(row.weightOz, units)}`
-                  : weightNeedsDetail(row.weightOz, units)
-                    ? `weight (${exactWeight(row.weightOz, units)})`
-                    : 'weight'}
+                {row.weightIsUpperBound || weightNeedsDetail(row.weightOz, units)
+                  ? weightDetail(row.weightOz, units, row.weightIsUpperBound)
+                  : 'weight'}
               </span>
             </button>
           ) : null}

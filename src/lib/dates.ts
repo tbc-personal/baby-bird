@@ -30,8 +30,3 @@ export function formatDateRange(start: Date, end: Date): string {
   }
   return `${format(start, 'MMMM d')} \u2013 ${format(end, 'MMMM d')}`;
 }
-
-/** "2026-03-29" for the <input type="date"> value. */
-export function formatInputDate(date: Date): string {
-  return format(date, 'yyyy-MM-dd');
-}

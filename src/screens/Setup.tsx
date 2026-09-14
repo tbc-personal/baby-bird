@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   computeProgress,
+  CONCEPTION_TO_DUE_DAYS,
   convertInputDate,
   DEFAULT_CYCLE_DAYS,
   formatIsoDate,
   formatWeeksAndDays,
+  GESTATION_DAYS,
   MAX_CYCLE_DAYS,
   MIN_CYCLE_DAYS,
   parseIsoDate,
@@ -36,13 +38,13 @@ const METHODS: ReadonlyArray<{
     id: 'lmp',
     option: 'Last menstrual period',
     dateLabel: 'First day of last period',
-    formula: 'due = date + 280 d + (cycle − 28)',
+    formula: `due = date + ${GESTATION_DAYS} d + (cycle − ${DEFAULT_CYCLE_DAYS})`,
   },
   {
     id: 'conception',
     option: 'Conception date',
     dateLabel: 'Date of conception',
-    formula: 'due = date + 266 d',
+    formula: `due = date + ${CONCEPTION_TO_DUE_DAYS} d`,
   },
   {
     id: 'dueDate',
