@@ -7,8 +7,10 @@ name: Update the skin screenshots
 #
 #   - From the Actions tab, against any branch. This only appears once the file
 #     has reached the default branch, which is how workflow_dispatch works.
-#   - By pushing a commit whose message contains [update-screenshots], which is
-#     the only route available from a branch before that.
+#   - By pushing a commit whose SUBJECT LINE carries the marker, which is the
+#     only route available from a branch before that. The subject line and not
+#     the whole message: a commit whose body merely mentions the marker is
+#     talking about it, not asking for it.
 #
 # Either way, review the committed images before merging.
 on:
@@ -20,11 +22,34 @@ permissions:
   contents: write
 
 jobs:
-  update:
-    name: Regenerate and commit the baselines
+  # A GitHub expression cannot look at one line of a commit message, so the
+  # job-level `if` below is only a cheap prefilter and this decides.
+  decide:
+    name: Is the marker on the subject line?
     if: >-
       github.event_name == 'workflow_dispatch' ||
       contains(github.event.head_commit.message, '[update-screenshots]')
+    runs-on: ubuntu-latest
+    outputs:
+      asked: ${{ steps.marker.outputs.asked }}
+    steps:
+      - id: marker
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          if [ '${{ github.event_name }}' = 'workflow_dispatch' ]; then
+            echo 'asked=true' >> "$GITHUB_OUTPUT"
+          elif printf '%s' "$MESSAGE" | head -n 1 | grep -qF '[update-screenshots]'; then
+            echo 'asked=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'asked=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::The marker is only in the commit body; not regenerating.'
+          fi
+
+  update:
+    name: Regenerate and commit the baselines
+    needs: decide
+    if: needs.decide.outputs.asked == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -63,8 +63,12 @@ jobs:
           # GitHub's, not the author's; the PR head is the commit to ask about.
           SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          message="$(gh api "repos/${{ github.repository }}/commits/$SHA" --jq '.commit.message')"
-          if printf '%s' "$message" | grep -qF '[update-screenshots]'; then
+          # The subject line only. A commit that merely mentions the marker in its
+          # body is talking about it, not asking for it — which is exactly what the
+          # commit introducing this step did: it skipped its own visual check and
+          # set a pointless baseline regeneration running.
+          subject="$(gh api "repos/${{ github.repository }}/commits/$SHA" --jq '.commit.message' | head -n 1)"
+          if printf '%s' "$subject" | grep -qF '[update-screenshots]'; then
             echo 'regenerating=true' >> "$GITHUB_OUTPUT"
             echo "::notice::Skipping the visual regression: $SHA asks for new baselines."
           else
