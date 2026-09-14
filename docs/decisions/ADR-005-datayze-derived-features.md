@@ -174,3 +174,102 @@ that). `doi.org` itself is not among the hosts checked. None of this amounts
 to verification: no figure above has actually been read at its source, and in
 particular `0.093 × 0.72 ≈ 0.067` **remains** two round numbers from general
 literature. **Confirm all of them before release.**
+
+## Third addendum (2026-09-14): the dip was the truncation, not the targets
+
+**The 34–37 week trough is fixed.** The preterm component is no longer truncated
+to `[140, 259)`. Everything else about the family is unchanged, all four targets
+are still met to the same tolerances, and the fitted parameters move only
+slightly.
+
+### What the second addendum got wrong
+
+That addendum diagnosed the trough as "a property of the four targets, not of
+`μ_p` and `σ_p`", and reported a sweep of `μ_p` over [215, 245] and `σ_p` over
+[10, 26] that moved the fall but never removed it. The sweep was real and its
+conclusion about `μ_p`/`σ_p` was correct. The diagnosis was not.
+
+The truncation was never in the swept space. It was doing the damage on its own:
+cutting the preterm component off at day 259 exactly meant the density fell
+**eighteenfold in a single day** at 37w0d — from 1.520 to 0.083 per thousand —
+and the weekly figure read **0.48% at 37 weeks against 1.56% at 34**, displayed
+as "under 1%". A reader at 37 weeks was told they were less likely to go into
+labor in the next week than they had been three weeks earlier.
+
+The second addendum offered two ways out, and rejected both as out of scope:
+widen `σ_t` past the post-term tolerance, or start the panel at 37 weeks so the
+trough is never shown. There was a third it did not consider, which costs
+nothing: remove the truncation.
+
+### Why the truncation was wrong anyway
+
+It encoded "labor by the preterm process cannot happen at or after 37 weeks",
+which is not true of the thing being modelled. Preterm and term labor are
+distinct processes, which is the honest reason for two components, but the
+boundary between them is a definition about gestational age, not a fact about
+onset mechanics. A process centred at 35w0d with a two-and-a-half week spread
+should be expected to contribute a little onset after 37 weeks, and now does:
+about 1.9 points of the 8.6% weight lands there.
+
+`π` rises from 0.0669 to 0.0856 as a result. It is the share following the
+preterm _process_, which the truncation had forced to coincide with the share
+_delivering_ preterm; untruncated the two come apart, and the 6.7% target is met
+by the part of the component that lands below day 259.
+
+### What it costs on screen
+
+| Week  | Truncated | Untruncated |
+| ----- | --------- | ----------- |
+| 34w0d | 1.56%     | 1.33%       |
+| 35w0d | 1.58%     | 1.35%       |
+| 36w0d | 1.28%     | 1.19%       |
+| 37w0d | **0.48%** | **1.30%**   |
+| 38w0d | 5.55%     | 5.69%       |
+
+A shallow trough remains, and should: a gap between a preterm process centred
+near 35 weeks and a term one near 40.5 is a real feature, not an artifact. What
+has gone is the cliff. The largest single-day fall in density between 34 and 40
+weeks is now **2.8%**, against 94.5% before, and 37 weeks is no longer the low
+point of the band. `tests/unit/laborProbability.test.ts` pins both the 2.8% and
+the requirement that no reading in the band sits below four fifths of the
+highest.
+
+### Datayze's own approach was evaluated and not taken
+
+Their published methodology (read at
+`https://datayze.com/labor-probability-calculator`, 2026-09-14) uses a **single
+skew-normal**, calibrated to roughly 10% preterm and a median at the due date,
+citing Kieler 1995 (SD 9 days) and Bergsjø 1990 (SD 13). It notably does **not**
+constrain the post-term share, and it explicitly treats a mode later than the
+median as correct — "in prior studies the mode date is typically after the
+median", "conventional wisdom is that the most common day to go into labor is
+around 41 weeks". That is the behaviour the first follow-up session rejected the
+skew-normal for.
+
+Refitting a skew-normal here confirms why it still cannot be used. Holding the
+median at 283 and hitting the preterm target, it forces **P(D > 294) between
+12% and 27%** depending on the shape parameter, against an observed 6%. At
+`α = −4` the fit reproduces this ADR's own earlier skew-normal almost exactly
+(ω 20.74, ξ 296.99), which is a useful check that the two calculations agree.
+Trading a 0.5-point error at 37 weeks for a 6-to-21-point error past 42 weeks is
+not an improvement, so the mixture stays.
+
+### Verification status, at last partly discharged
+
+Network access is open, and two figures have now been **read at their sources**
+rather than recalled:
+
+- **CDC preterm rate, 10.4% for 2022** — confirmed on `cdc.gov`: "The preterm
+  birth rate declined 1% from 2021 to 2022, to 10.4%."
+- **Jukic 2013** — confirmed on PMC: "The median time from ovulation to birth was
+  268 days", and an LMP-based mean of 285 days with **SD 14**. On the LMP scale
+  that median is ~282 days, which corroborates Smith's 283 to within a day.
+
+**Smith 2001 is still unread.** OUP serves HTTP 403 to this environment, so the
+median of 283 and the 6% post-term figure remain second-hand, now with Jukic as
+independent support for the first.
+
+**The two adjustment factors are still the weakest input and still unverified.**
+`0.093 × 0.72 ≈ 0.067` remains two round numbers from general literature. They
+are now the only wholly unsourced numbers in the model, and remain the first
+thing to check.

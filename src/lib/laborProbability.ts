@@ -6,15 +6,23 @@
  *
  *   D ~ π · Preterm + (1 − π) · Term
  *   Term    = Normal(μ_t, σ_t)
- *   Preterm = Normal(μ_p, σ_p) truncated to [140, 259)
+ *   Preterm = Normal(μ_p, σ_p)
  *
  * Preterm labor is a physiologically distinct process, not the tail of the term
  * one, which is the honest reason to give it its own component. It is also what
  * makes the fit possible: a single skew-normal (the family used before the
  * first follow-up, see the ADR-005 addenda) cannot meet the median, preterm and
  * post-term targets at once, and its left skew put the mode eight days after
- * the due date, which read as wrong on screen. A symmetric term component puts
- * the mode back beside the median.
+ * the due date. A symmetric term component puts the mode back beside the median.
+ *
+ * The preterm component used to be truncated to [140, 259). That truncation was
+ * the sole cause of the 34–37 week trough this model was criticised for: it cut
+ * the component off at 37w0d exactly, so the density fell eighteenfold in one
+ * day and the weekly figure read lower at 37 weeks than at 34. Removing it
+ * costs nothing — all four published targets are still met to the same
+ * tolerances — and the honest reading is that it was always wrong, since labor
+ * by the preterm process does not become impossible the moment 37 weeks is
+ * reached. See the third ADR-005 addendum.
  *
  * Nothing here is scraped from Datayze. The constraints below come from
  * published sources; the parameters were fitted to them offline by
@@ -27,12 +35,17 @@
 /**
  * The calibration targets.
  *
- * NOTE ON VERIFICATION: no build session so far has been able to open any of
- * these pages. The egress proxy refuses cdc.gov, ncbi.nlm.nih.gov and
- * datayze.com along with everything else, so the figures are those recorded in
- * `docs/research/datayze-features.md` during planning, plus two adjustment
- * factors taken from general obstetric literature. Confirm all of them before
- * release. See docs/decisions/ADR-005-datayze-derived-features.md.
+ * NOTE ON VERIFICATION (2026-09-14). Network access is open now, and two of
+ * these figures have finally been read at their sources rather than recalled:
+ * the CDC preterm rate (10.4% for 2022, confirmed on cdc.gov) and Jukic 2013
+ * (confirmed on PMC: median 268 days from ovulation, and a mean LMP-based
+ * gestation of 285 days with an SD of 14). Smith 2001 is still unread — OUP
+ * serves 403 to this environment — but Jukic's LMP median of 282 days
+ * corroborates its 283 to within a day.
+ *
+ * Still unverified, and still the weakest input: the two adjustment factors
+ * below that take the CDC figure to `pretermShare`. See
+ * docs/decisions/ADR-005-datayze-derived-features.md.
  */
 export const CALIBRATION = {
   /**
@@ -105,14 +118,6 @@ export const CALIBRATION = {
   jukicSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
 } as const;
 
-/** The preterm component is truncated to this half-open interval, in days. */
-export const PRETERM_SUPPORT = {
-  /** 20w0d. Before this a loss is not a preterm birth. */
-  firstDay: 140,
-  /** 37w0d, exclusive. Preterm is by definition before this. */
-  lastDayExclusive: CALIBRATION.pretermDay,
-} as const;
-
 /**
  * The residuals of the fit in `scripts/fit-labor-model.ts`. All four targets
  * are met; these are the achieved values, pinned by the unit tests so a change
@@ -129,6 +134,12 @@ export const FIT_RESIDUALS = {
   modeDay: 284,
   /** Not a target. Kept non-zero so the curve does not call 43 weeks impossible. */
   beyond43WeeksShare: 0.0051,
+  /**
+   * The largest single-day fall in density between 34w0d and 40w0d, as a
+   * fraction of the previous day. The truncated model's worst was 0.945 — an
+   * eighteenfold cliff at 37w0d exactly. Pinned so the cliff cannot come back.
+   */
+  worstDailyFall34to40: 0.028,
 } as const;
 
 /**
@@ -172,11 +183,11 @@ export interface MixtureParams {
  * ones, and that this model runs slightly narrow past 41 weeks.
  */
 export const LABOR_MODEL: MixtureParams = {
-  pretermWeight: 0.066852,
+  pretermWeight: 0.08557,
   pretermMean: 245,
-  pretermSd: 14,
-  termMean: 283.6145,
-  termSd: 6.8341,
+  pretermSd: 18,
+  termMean: 283.768,
+  termSd: 6.769,
 };
 
 /** The panel appears from 34w0d (mockup 4). */
@@ -216,25 +227,13 @@ export function normalCdf(z: number): number {
 
 // --- the mixture ------------------------------------------------------------
 
-/** The mass of the untruncated preterm normal that falls inside its support. */
-function pretermNormalizer(model: MixtureParams): number {
-  const { pretermMean: mean, pretermSd: sd } = model;
-  return (
-    normalCdf((PRETERM_SUPPORT.lastDayExclusive - mean) / sd) -
-    normalCdf((PRETERM_SUPPORT.firstDay - mean) / sd)
-  );
-}
-
 /** Density of the mixture at `day`, in probability per day. */
 export function pdf(day: number, model: MixtureParams = LABOR_MODEL): number {
   const term =
     ((1 - model.pretermWeight) / model.termSd) *
     normalPdf((day - model.termMean) / model.termSd);
-  if (day < PRETERM_SUPPORT.firstDay || day >= PRETERM_SUPPORT.lastDayExclusive) {
-    return term;
-  }
   const preterm =
-    (model.pretermWeight / (model.pretermSd * pretermNormalizer(model))) *
+    (model.pretermWeight / model.pretermSd) *
     normalPdf((day - model.pretermMean) / model.pretermSd);
   return term + preterm;
 }
@@ -242,16 +241,9 @@ export function pdf(day: number, model: MixtureParams = LABOR_MODEL): number {
 /** Distribution function of the mixture: P(D ≤ day). */
 export function cdf(day: number, model: MixtureParams = LABOR_MODEL): number {
   const term = (1 - model.pretermWeight) * normalCdf((day - model.termMean) / model.termSd);
-  let preterm: number;
-  if (day >= PRETERM_SUPPORT.lastDayExclusive) preterm = 1;
-  else if (day <= PRETERM_SUPPORT.firstDay) preterm = 0;
-  else {
-    preterm =
-      (normalCdf((day - model.pretermMean) / model.pretermSd) -
-        normalCdf((PRETERM_SUPPORT.firstDay - model.pretermMean) / model.pretermSd)) /
-      pretermNormalizer(model);
-  }
-  return clamp01(term + model.pretermWeight * preterm);
+  const preterm =
+    model.pretermWeight * normalCdf((day - model.pretermMean) / model.pretermSd);
+  return clamp01(term + preterm);
 }
 
 /** P(fromDay ≤ D ≤ toDay). */

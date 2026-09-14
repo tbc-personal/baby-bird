@@ -10,19 +10,22 @@
  *
  *   D ~ π · Preterm + (1 − π) · Term
  *   Term    = Normal(μ_t, σ_t)
- *   Preterm = Normal(μ_p, σ_p) truncated to [140, 259)
+ *   Preterm = Normal(μ_p, σ_p)
  *
  * μ_p and σ_p are assumptions (see the note on LABOR_MODEL), so the fit solves
- * for the other three. Because the whole preterm component sits below day 259,
- * the three targets separate cleanly:
+ * for the other three against the three targets:
  *
- *   preterm:   π + (1 − π) Φ((259 − μ_t)/σ_t) = 0.067
- *   median:    π + (1 − π) Φ((283 − μ_t)/σ_t) = 0.5
- *   post-term: (1 − π) (1 − Φ((294 − μ_t)/σ_t)) = 0.06
+ *   preterm:   π Φ((259 − μ_p)/σ_p) + (1 − π) Φ((259 − μ_t)/σ_t) = 0.067
+ *   median:    π Φ((283 − μ_p)/σ_p) + (1 − π) Φ((283 − μ_t)/σ_t) = 0.5
+ *   post-term: π (1 − Φ((294 − μ_p)/σ_p)) + (1 − π) (1 − Φ((294 − μ_t)/σ_t)) = 0.06
  *
- * The last two give σ_t and μ_t in closed form once π is known, and the first
- * gives π once μ_t and σ_t are known, so a fixed point of that pair is the fit.
- * It converges in a few dozen passes from any sane start.
+ * The preterm component was truncated to [140, 259) until 2026-09-14, which let
+ * the three equations separate in closed form — and which was also the cause of
+ * the 34–37 week trough, since it cut the density off at 37w0d exactly. Without
+ * the truncation the preterm term no longer vanishes from any of the three, so
+ * they are solved numerically instead: bisect σ_t and μ_t for the post-term and
+ * median targets at a given π, then step π toward the preterm target and
+ * repeat. See the third ADR-005 addendum.
  */
 import {
   CALIBRATION,
@@ -30,7 +33,6 @@ import {
   LABOR_MODEL,
   normalCdf,
   pdf,
-  PRETERM_SUPPORT,
   type MixtureParams,
 } from '../src/lib/laborProbability.ts';
 
@@ -41,37 +43,65 @@ const BEYOND_43_WEEKS_DAY = 43 * 7;
 
 /** The two documented assumptions. */
 const PRETERM_MEAN = 245;
-const PRETERM_SD = 14;
+const PRETERM_SD = 18;
 
-/** Φ⁻¹ by bisection. Accurate enough at the precision the parameters are kept to. */
-function probit(p: number): number {
-  let low = -12;
-  let high = 12;
-  for (let i = 0; i < 200; i += 1) {
-    const mid = (low + high) / 2;
-    if (normalCdf(mid) < p) low = mid;
-    else high = mid;
-  }
-  return (low + high) / 2;
+/**
+ * Mixture CDF for a candidate parameter set. Written out here rather than taken
+ * from the app module so the fit does not depend on its default model while it
+ * is being solved for.
+ */
+function mixtureCdf(day: number, m: MixtureParams): number {
+  return (
+    m.pretermWeight * normalCdf((day - m.pretermMean) / m.pretermSd) +
+    (1 - m.pretermWeight) * normalCdf((day - m.termMean) / m.termSd)
+  );
 }
 
 function fit(pretermMean: number, pretermSd: number): MixtureParams {
+  // With the preterm component untruncated it contributes to all three targets,
+  // so they no longer separate in closed form. Solve them as a nest: for a
+  // given π, bisect σ_t against the post-term target with μ_t bisected against
+  // the median inside it, then step π toward the preterm target and repeat.
+  let pretermWeight: number = CALIBRATION.pretermShare;
   let termMean = 283.5;
   let termSd = 7;
-  let pretermWeight = CALIBRATION.pretermShare;
 
-  for (let pass = 0; pass < 500; pass += 1) {
-    // π from the preterm target, given the term component. The truncated
-    // preterm component contributes all of its mass below day 259, so it enters
-    // this equation as 1.
-    const termBelowPreterm = normalCdf((PRETERM_DAY - termMean) / termSd);
-    pretermWeight = (CALIBRATION.pretermShare - termBelowPreterm) / (1 - termBelowPreterm);
+  const medianFor = (pi: number, sd: number): number => {
+    let low = 250;
+    let high = 320;
+    for (let i = 0; i < 60; i += 1) {
+      const mid = (low + high) / 2;
+      const model = {
+        pretermWeight: pi,
+        pretermMean,
+        pretermSd,
+        termMean: mid,
+        termSd: sd,
+      };
+      // The median rises with μ_t, so bisect on it directly.
+      if (mixtureCdf(MEDIAN_DAY, model) > 0.5) low = mid;
+      else high = mid;
+    }
+    return (low + high) / 2;
+  };
 
-    // μ_t and σ_t from the median and post-term targets, given π.
-    const zMedian = probit((0.5 - pretermWeight) / (1 - pretermWeight));
-    const zPostTerm = probit(1 - CALIBRATION.postTermTargetShare / (1 - pretermWeight));
-    termSd = (POST_TERM_DAY - MEDIAN_DAY) / (zPostTerm - zMedian);
-    termMean = MEDIAN_DAY - zMedian * termSd;
+  for (let pass = 0; pass < 200; pass += 1) {
+    let lowSd = 3;
+    let highSd = 30;
+    for (let i = 0; i < 60; i += 1) {
+      const sd = (lowSd + highSd) / 2;
+      const mean = medianFor(pretermWeight, sd);
+      const model = { pretermWeight, pretermMean, pretermSd, termMean: mean, termSd: sd };
+      if (1 - mixtureCdf(POST_TERM_DAY, model) < CALIBRATION.postTermTargetShare)
+        lowSd = sd;
+      else highSd = sd;
+      termSd = sd;
+      termMean = mean;
+    }
+    const model = { pretermWeight, pretermMean, pretermSd, termMean, termSd };
+    const error = mixtureCdf(PRETERM_DAY, model) - CALIBRATION.pretermShare;
+    if (Math.abs(error) < 1e-9) break;
+    pretermWeight = Math.max(1e-4, Math.min(0.5, pretermWeight - error * 0.8));
   }
 
   return { pretermWeight, pretermMean, pretermSd, termMean, termSd };
@@ -122,10 +152,9 @@ function row(label: string, target: string, got: string, verdict: string): void 
 const fitted = fit(PRETERM_MEAN, PRETERM_SD);
 const stats = describe(fitted);
 
-console.log('Two-component mixture, fitted to all four targets (ADR-005 addendum 2).\n');
+console.log('Two-component mixture, fitted to all four targets (ADR-005 addendum 3).\n');
 console.log(
-  `Preterm component: Normal(${PRETERM_MEAN}, ${PRETERM_SD}) truncated to ` +
-    `[${PRETERM_SUPPORT.firstDay}, ${PRETERM_SUPPORT.lastDayExclusive}). ` +
+  `Preterm component: Normal(${PRETERM_MEAN}, ${PRETERM_SD}), untruncated. ` +
     'Assumed, not fitted.\n',
 );
 console.log('export const LABOR_MODEL: MixtureParams = {');
@@ -203,27 +232,30 @@ for (const day of [238, 259, 266, 273, 280, 287, 294]) {
 // ---------------------------------------------------------------------------
 
 console.log(
-  '\nThe 7-day figure is not monotonic between 34 and 37 weeks: the preterm\n' +
-    'component runs out at 37w0d before the term one has begun. Every day of it:\n',
+  '\nThe 34-37 week band, which the truncated model got wrong. A trough between\n' +
+    'a preterm process centred near 35 weeks and a term one near 40.5 is real;\n' +
+    'the truncation made it a cliff. Weekly figures across the band:\n',
 );
-let previous = -1;
-const dips: number[] = [];
-for (let day = CALIBRATION.pretermDay - 21; day <= CALIBRATION.pretermDay; day += 1) {
-  const still = 1 - cdf(day, fitted);
-  const next7 = (cdf(day + 7, fitted) - cdf(day, fitted)) / still;
-  if (next7 < previous - 1e-9) dips.push(day);
-  previous = next7;
+for (const week of [34, 35, 36, 37, 38]) {
+  const day = week * 7;
+  const next7 = (cdf(day + 7, fitted) - cdf(day, fitted)) / (1 - cdf(day, fitted));
+  console.log(`  ${week}w0d  ${(next7 * 100).toFixed(2)}%`);
+}
+let worstFall = 0;
+let worstDay = 0;
+for (let day = 34 * 7; day < 40 * 7; day += 1) {
+  const fall = 1 - pdf(day + 1, fitted) / pdf(day, fitted);
+  if (fall > worstFall) {
+    worstFall = fall;
+    worstDay = day;
+  }
 }
 console.log(
-  `  falls on ${dips.length} of the 21 days from 34w0d to 37w0d` +
-    (dips.length > 0
-      ? `, first on day ${dips[0]} (${Math.floor(dips[0] / 7)}w${dips[0] % 7}d)`
-      : ''),
+  `\n  largest single-day fall in density, 34w-40w: ${(worstFall * 100).toFixed(1)}% ` +
+    `at day ${worstDay} (${Math.floor(worstDay / 7)}w${worstDay % 7}d)`,
 );
 console.log(
-  '  It is a property of the four targets, not of μ_p and σ_p: 6.7% of onsets\n' +
-    '  must fit below day 259 and the term component contributes almost nothing\n' +
-    '  there, so the hazard has to fall somewhere in the late preterm weeks.\n' +
-    '  Sweeping μ_p over [215, 245] and σ_p over [10, 26] moves the fall but\n' +
-    '  never removes it. See the second ADR-005 addendum.',
+  '  The truncated model fell 94.5% in one day at 37w0d, which put the weekly\n' +
+    '  figure lower at 37 weeks than at 34 and showed it as "under 1%".\n' +
+    '  See the third ADR-005 addendum.',
 );
