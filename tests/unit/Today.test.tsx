@@ -125,6 +125,17 @@ describe('Today screen (mockup 2)', () => {
       expect(screen.getByText(label)).toBeInTheDocument();
     });
 
+    it.each([
+      [3, '7.5%'],
+      [20, '50.0%'],
+      [40, '100.0%'],
+      [42, '100.0%'],
+    ])('sets the bar to week %i of the 40-week term (%s)', (week, width) => {
+      saveLmp(LMP);
+      const { container } = renderToday(TODAY, week);
+      expect(container.querySelector('.bar i')).toHaveStyle({ width });
+    });
+
     it('leaves the due date alone, since it does not depend on the viewed week', () => {
       saveLmp(LMP);
       const { unmount } = renderToday(TODAY);
