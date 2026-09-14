@@ -101,8 +101,7 @@ export function ComparisonCard({
 
         {isConventionSwitchWeek(row.week) ? (
           <p className="note">
-            Length is measured crown to rump through week 20 and head to heel from week 21,
-            which is why the number jumps.
+            Fetal length is measured crown-to-rump through week 20, then head-to-heel from week 21.
           </p>
         ) : null}
 
