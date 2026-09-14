@@ -89,7 +89,7 @@ describe('About, as the lower half of Setup', () => {
     expect(screen.getByText(/not medical advice/i)).toBeInTheDocument();
     expect(screen.getByText(/no ads and no paid tier/)).toBeInTheDocument();
     expect(screen.getByText(/must not be used commercially/)).toBeInTheDocument();
-    expect(screen.getByText(/stored on this device only/)).toBeInTheDocument();
+    expect(screen.getByText(/stored on (your|this) device only/i)).toBeInTheDocument();
     expect(screen.getByText(/no accounts, no analytics/)).toBeInTheDocument();
     // ADR-005: the miscarriage panel is deferred, and says so.
     expect(screen.getByText(/coming later/)).toBeInTheDocument();
@@ -98,7 +98,9 @@ describe('About, as the lower half of Setup', () => {
   it('credits every source the project uses', () => {
     save();
     renderAbout();
-    expect(screen.getByRole('link', { name: 'Macaulay Library' })).toBeInTheDocument();
+    // No Macaulay credit any more, and there should not be one: the embed route
+    // was abandoned (ADR-003) and every photograph now comes from Commons.
+    expect(screen.queryByRole('link', { name: 'Macaulay Library' })).toBeNull();
     expect(screen.getByText(/Wikimedia Commons contributors/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Datayze' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Jukic et al. 2013' })).toBeInTheDocument();

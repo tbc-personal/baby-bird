@@ -160,7 +160,9 @@ test('the info panel opens and closes', async ({ page }) => {
 
   await info.click();
   await expect(panel).toBeVisible();
-  await page.getByText(/size, week by week/).click();
+  // The tagline, by class rather than by its words: this only needs somewhere
+  // outside the panel to click, and it broke once on a copy edit.
+  await page.locator('.setup__tagline').click();
   await expect(info).toHaveAttribute('aria-expanded', 'false');
   await expect(panel).toBeHidden();
 });
