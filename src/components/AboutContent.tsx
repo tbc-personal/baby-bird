@@ -80,9 +80,8 @@ export function AboutContent() {
         <h2>Your data</h2>
         <p>
           Your date and your settings are stored on your device only. There are no accounts,
-          no analytics, and no data transmission: the photographs ship with the app, so it
-          never calls out to another server. The link you copy above only encodes your due
-          date.
+          no analytics, and no data transmission. The link you copy above only encodes your
+          due date.
         </p>
         {confirmingForget ? (
           <div className="sheet">

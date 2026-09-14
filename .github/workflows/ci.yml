@@ -48,7 +48,31 @@ jobs:
         # a shared ?m=&d= link never reaches the cache.
         run: npm run test:e2e:smoke
 
+      # A commit that deliberately changes how the app looks marks itself
+      # `[update-screenshots]`, and `update-screenshots.yml` regenerates the
+      # baselines and commits them. That workflow runs alongside this one rather
+      # than before it, so comparing against the old baselines here only ever
+      # produces a red run that a bot commit then fixes. Skip the comparison on
+      # those commits and let the regenerated baselines be checked by the next
+      # push that does not carry the marker.
+      - name: Does this commit regenerate the baselines?
+        id: baselines
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # On a pull_request run, HEAD is a merge commit whose message is
+          # GitHub's, not the author's; the PR head is the commit to ask about.
+          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          message="$(gh api "repos/${{ github.repository }}/commits/$SHA" --jq '.commit.message')"
+          if printf '%s' "$message" | grep -qF '[update-screenshots]'; then
+            echo 'regenerating=true' >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping the visual regression: $SHA asks for new baselines."
+          else
+            echo 'regenerating=false' >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Per-skin visual regression (ADR-007)
+        if: steps.baselines.outputs.regenerating != 'true'
         run: npm run test:e2e:visual
 
       - name: Upload the Playwright report when something fails
