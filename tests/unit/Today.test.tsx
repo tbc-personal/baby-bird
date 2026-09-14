@@ -130,16 +130,21 @@ describe('ComparisonCard', () => {
   });
 
   it('notes the measurement convention on weeks 20 and 21 only', () => {
+    // Matched loosely on purpose. What this test is about is which weeks carry
+    // the note, not how it is worded, and it broke once on an edit that only
+    // hyphenated "crown to rump".
+    const note = /crown.?to.?rump.+week 20/i;
+
     const twenty = card(20);
-    expect(screen.getByText(/crown to rump through week 20/)).toBeInTheDocument();
+    expect(screen.getByText(note)).toBeInTheDocument();
     twenty.unmount();
 
     const twentyOne = card(21);
-    expect(screen.getByText(/crown to rump through week 20/)).toBeInTheDocument();
+    expect(screen.getByText(note)).toBeInTheDocument();
     twentyOne.unmount();
 
     card(19);
-    expect(screen.queryByText(/crown to rump through week 20/)).toBeNull();
+    expect(screen.queryByText(note)).toBeNull();
   });
 
   it('shows the crown-to-rump label before the switch', () => {
