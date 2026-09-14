@@ -65,11 +65,7 @@ export function AboutContent() {
 
       <section className="section">
         <h2>Non-commercial</h2>
-        <p>
-          This app carries no ads and no paid tier, and must not be used commercially. The
-          photographs come from Wikimedia Commons under licences that allow commercial use;
-          staying non-commercial is a choice, not a condition.
-        </p>
+        <p>This app carries no ads and no paid tier, and must not be used commercially.</p>
       </section>
 
       <section className="section section--last">
