@@ -88,7 +88,7 @@ export function LaborScreen({ today }: { today: Date }) {
           last fortnight; <a href={CALIBRATION.jukicSource}>Jukic 2013</a> measures a wider
           spread than the 42-week figure allows for here.
         </p>
-        <p className="mono caveat__stat">
+        <p className="caveat__stat">
           {Math.round(cdf(gestationalDays) * 100)}% have started labor by this point.
         </p>
         <button
