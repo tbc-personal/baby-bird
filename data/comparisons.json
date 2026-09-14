@@ -613,12 +613,12 @@
         "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": "A Ruby-throated Hummingbird hovering beside a spray of pale yellow flowers, its wings blurred with motion.",
+        "altText": "A Ruby-throated Hummingbird hovering at a scarlet beebalm flower, wings blurred, its green back catching the light.",
         "file": "images/birds/ruby-throated-hummingbird.jpg",
-        "author": "Paul Danese",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250813_ruby_throated_hummingbird_pleasant_valley_PD204970.jpg"
+        "author": "Joe Schneid , Louisville, Kentucky",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:RubyThroatedHummingbird(Crop).jpg"
       },
       "facts": [
         {
@@ -714,12 +714,12 @@
         "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": "A Black-capped Chickadee perched among tall yellow catkins, with an American Goldfinch lower in the frame.",
+        "altText": "A Black-capped Chickadee perched on a branch stub, its black cap and bib sharp against a soft green background.",
         "file": "images/birds/black-capped-chickadee.jpg",
-        "author": "Paul Danese",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20241004_black_capped_chickadee_and_american_goldfinch_pleasant_valley_PD207710.jpg"
+        "author": "Cephas",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Poecile_atricapillus_CT3.jpg"
       },
       "facts": [
         {
@@ -866,12 +866,12 @@
         "fallbackMlAssetId": null,
         "embedUrl": null,
         "credit": null,
-        "altText": "Three Cedar Waxwings perched among green vine leaves, their smooth crests and black eye masks visible.",
+        "altText": "A Cedar Waxwing perched among serviceberry leaves and green berries, its crest smooth and its black mask clear.",
         "file": "images/birds/cedar-waxwing.jpg",
         "author": "Paul Danese",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240629_cedar_waxwing_gay_city_PD203316_13.jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20230608_cedar_waxwing_PD26635.jpg"
       },
       "facts": [
         {

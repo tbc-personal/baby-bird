@@ -376,7 +376,7 @@ interface Scored extends FileInfo {
   notes: string[];
 }
 
-function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
+function score(file: FileInfo, kind: 'egg' | 'bird', prefer: RegExp | null): Scored {
   const notes: string[] = [];
   const haystack = [file.title, file.description ?? '', file.categories.join(' ')].join(
     ' ',
@@ -461,6 +461,13 @@ function score(file: FileInfo, kind: 'egg' | 'bird'): Scored {
       notes.push('no egg or nest in the subject');
     }
   }
+  if (prefer) {
+    const hay = [file.title, file.description ?? '', cats].join(' ');
+    if (prefer.test(hay)) {
+      points += 200;
+      notes.push(`matches --prefer ${prefer.source}`);
+    }
+  }
   return { ...file, score: Math.round(points), notes };
 }
 
@@ -510,6 +517,18 @@ const args = process.argv.slice(2);
 const refresh = args.includes('--refresh');
 const wantSheet = args.includes('--sheet');
 const weekArg = args[args.indexOf('--weeks') + 1];
+/**
+ * `--prefer <regex>` lifts candidates matching it to the top of the shortlist.
+ *
+ * Scoring knows about badges, crops and usage; it knows nothing about which bird
+ * the author wants to look at. Week 20 is the case it was added for: every
+ * Eastern Bluebird candidate was shippable and well-ranked, and the author
+ * wanted the male, whose colour is the point of the card. `--prefer '\bmale\b'`
+ * says so once, repeatably, instead of hand-picking down a list. Note that
+ * `\bmale\b` does not match "female" — the b before the m is not a boundary.
+ */
+const preferArg = args[args.indexOf('--prefer') + 1];
+const prefer = preferArg && !preferArg.startsWith('--') ? new RegExp(preferArg, 'i') : null;
 
 function parseWeeks(spec: string | undefined): number[] | null {
   if (!spec || spec.startsWith('--')) return null;
@@ -676,7 +695,7 @@ for (const week of weeks) {
 
     const kept: Scored[] = [];
     for (const file of shippableFiles) {
-      const s = score(file, kind);
+      const s = score(file, kind, prefer);
       if (s.notes.includes('no egg or nest in the subject') || s.score < -100) {
         rejected['scored out'] = (rejected['scored out'] ?? 0) + 1;
         continue;
