@@ -54,7 +54,3 @@
 .legend__line {
   background: var(--secondary);
 }
-
-.legend__due {
-  background: var(--ink-2);
-}

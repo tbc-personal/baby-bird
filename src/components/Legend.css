@@ -24,7 +24,31 @@
   vertical-align: -1px;
 }
 
+/*
+ * Swatches for the two vertical rules both charts draw: "today" / "week N" in
+ * the accent, and the dashed grey one ("due date", "ruler changes at week 20").
+ *
+ * They were 10x10 rounded blocks like the area swatch above, which said nothing
+ * about which rule on the chart they named — and the grey one is dashed, so a
+ * solid block was actively the wrong picture of it. These are rules instead:
+ * the same proportions, and the dashed one repeats the 3-on-3-off pattern the
+ * SVG draws with `stroke-dasharray: 3 3`.
+ */
+.legend i.legend__today,
+.legend i.legend__due,
+.legend i.legend__break {
+  width: 3px;
+  height: 12px;
+  border-radius: 1px;
+  vertical-align: -2px;
+}
+
 /* Both charts mark the current point in the accent. */
 .legend__today {
   background: var(--accent);
+}
+
+.legend i.legend__due,
+.legend i.legend__break {
+  background: repeating-linear-gradient(to bottom, var(--ink-2) 0 3px, transparent 3px 6px);
 }
