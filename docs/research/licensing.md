@@ -94,7 +94,7 @@ correspondence.
 - Every file carries machine-readable license metadata: `LicenseShortName`, `Artist`, `Credit`, `UsageTerms`, `AttributionRequired`, `LicenseUrl` under `extmetadata`.
 - Attribution requirements: name the author, name the license with a link, link to the source file. CC BY-SA on a _photo_ does not force the app's code to be CC BY-SA; share-alike applies only to derivatives of the photo itself.
 - Reuse guidance: [Commons:Reusing content outside Wikimedia](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia).
-- Plan: a one-time curation script (or manual pass) picks one Commons file per week, resolves the metadata, and writes `data/images.json` with URL, thumbnail, author, license, license URL, and source link. The app never calls Commons at runtime. Images are downloaded into the repo (or a CDN) at build time so the app works offline and is not dependent on Commons hotlinking, which Commons discourages at scale.
+- Plan: a one-time curation script (or manual pass) picks one Commons file per week, resolves the metadata, and writes the attribution into each row's `image` object in `data/comparisons.json` (as built; this section proposed a separate `data/images.json`). The app never calls Commons at runtime. Images are downloaded into the repo (or a CDN) at build time so the app works offline and is not dependent on Commons hotlinking, which Commons discourages at scale.
 
 ## Wikipedia text
 

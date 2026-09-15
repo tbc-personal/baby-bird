@@ -118,7 +118,7 @@ export const weekSchema = z.object({
   ebirdSpeciesCode: z.string().min(1).nullable(),
   image: imageSchema.nullable(),
   facts: z.array(factSchema),
-  /** Week 3 only: a comparison the author has not signed off on yet. */
+  /** A comparison the author has not signed off on yet. No row carries one now. */
   proposed: z.boolean().optional(),
   proposalNote: z.string().optional(),
 });

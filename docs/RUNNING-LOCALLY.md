@@ -103,8 +103,6 @@ be generated on the GitHub runner that checks them. See the README.
 
 ## Reviewing the bird facts
 
-Moved here on 2026-09-15 from `docs/CURATION.md`, which was deleted.
-
 Every fact in `data/comparisons.json` carries a `reviewed` flag. Setting it to
 `true` is the author's act and no script may do it — see ADR-004 for why, and
 for the one narrow exception.

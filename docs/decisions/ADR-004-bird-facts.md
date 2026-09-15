@@ -20,9 +20,6 @@ All About Birds "Cool Facts" are Cornell copyright with no reuse license. Wikipe
 
 ## Sign-off: what `reviewed: true` means
 
-Moved here on 2026-09-15 from `docs/CURATION.md`, which was deleted; four
-scripts cited that file for this rule and it existed nowhere else.
-
 A fact carries `reviewed: false` until a person has checked it against its cited
 source, edited it for voice, and set the flag by hand. **Setting it is the
 author's act.** No script may set it, and `scripts/apply-fact-check.ts`

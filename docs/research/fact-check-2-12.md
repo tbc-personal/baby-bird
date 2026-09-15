@@ -1,5 +1,11 @@
 # Fact-check: weeks 2–12
 
+> **Week numbers here are the old ones.** These reports were written when the
+> comparison table began at week 2. It begins at week 3 now: the poppy seed moved
+> from week 2 to week 3, and the week-3 "grain of grit" comparison was dropped.
+> Read the Comparison column, not the Week column — that is what
+> `npm run mark-reviewed` matches on.
+
 Opened and read the full pre-downloaded corpus (`.fc/corpus/week-02.json` … `week-12.json`) for every source that wasn't blocked: `en.wikipedia.org` articles for all 11 weeks, the Audubon Field Guide page for weeks 4–12, and the Birds of the World introduction page for weeks 7–12 (BOW's actual content sections are subscriber-only; only the nav/intro text came through). `www.allaboutbirds.org` returned empty text (HTTP 403) for every week that cited it — 21 of the 33 facts in this range — and was never opened or quoted. Where the corpus didn't settle a claim, live `WebSearch`/`WebFetch` reached `en.wikipedia.org` (including the live API for articles not in the corpus, e.g. `Papaver`, `Pine_siskin`, `Northern_house_wren`), `www.audubon.org`, `dec.ny.gov`, `menunkatuck.org` (a local Audubon chapter), `pennington.com`, `riverrefugeseed.com`, `agmrc.org`, `todayshomeowner.com`, `wild-bird-watching.com`, `gardenorganic.org.uk`, and `northernwoodlands.org`. `mgnv.org`, `ruffedgrousesociety.org`, `birdsandblooms.com`, `academy.allaboutbirds.org`, and `familyhandyman.com` returned 403/429 and were not used.
 
 ## Summary table

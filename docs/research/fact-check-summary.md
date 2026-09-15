@@ -1,5 +1,9 @@
 # Fact-check: adjudication summary
 
+> **Week numbers here are the old ones**, as in the range reports: the table began
+> at week 2 when this pass ran and begins at week 3 now. The 123 facts it covered
+> include three for the "grain of grit" comparison, since dropped; the data holds 120. Read the Comparison column rather than the Week column.
+
 Rollup of the four range reports (`fact-check-2-12.md`, `-13-22`, `-23-32`, `-33-42`),
 which cover all 123 facts in `data/comparisons.json`. Run 2026-09-08.
 

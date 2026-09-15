@@ -1,5 +1,11 @@
 # Fact-check: weeks 13–22
 
+> **Week numbers here are the old ones.** These reports were written when the
+> comparison table began at week 2. It begins at week 3 now: the poppy seed moved
+> from week 2 to week 3, and the week-3 "grain of grit" comparison was dropped.
+> Read the Comparison column, not the Week column — that is what
+> `npm run mark-reviewed` matches on.
+
 Opened and read: `en.wikipedia.org` articles for every week (including `Structural_coloration` for week 22), the Audubon Field Guide page for every week, and the Birds of the World free introduction for every week — all via the pre-downloaded corpus in `.fc/corpus/week-13.json` … `week-22.json`. Also used live `WebSearch`/`WebFetch` against `en.wikipedia.org`, `birdsoftheworld.org`, and other reachable sites (FWS, NestWatch, Smithsonian, Cool Green Science / TNC, sialis.org, avianreport.com, birdsbybent.com, auduboncnc.org, and the primary UV-vision literature) where the corpus and candidates didn't settle a claim. `www.allaboutbirds.org` (All About Birds) returned HTTP 403 in this environment for all 10 weeks and was never opened or quoted — it is the cited source for 20 of the 30 facts in this range, so those citations are unverified-as-cited and a replacement is proposed for each in the table below.
 
 ## Summary table

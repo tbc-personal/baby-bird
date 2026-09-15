@@ -96,8 +96,8 @@ none of the backoff machinery that makes the Commons crawl take an hour.
    photo licence, rank on `faves_count`, dimensions and orientation, emit the
    same review-sheet format. Simpler than the Commons version: the annotations do
    the subject-matching the Commons scorer had to guess at.
-2. **Schema change.** `IMAGE_PROVIDERS` is `['macaulay', 'commons']`; this adds a
-   third. That touches `src/lib/schema.ts`, `scripts/validate-data.ts`, the
+2. **Schema change.** `IMAGE_PROVIDERS` is `['commons']`; this adds a
+   second. That touches `src/lib/schema.ts`, `scripts/validate-data.ts`, the
    `ImageCredit` component's provider branch, and their tests.
 3. **A credit format.** Commons rows credit a named author; these would credit a
    username, and the licence link differs. One more branch in `ImageCredit`.

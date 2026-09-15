@@ -5,15 +5,11 @@ fetal size as a seed, an egg, then a bird: a poppy seed at week 3, Atlantic Puff
 
 Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
-Status: **v1 built**, and revised since. Everything the original plan scoped is implemented and
-tested. The Macaulay Library embed route the plan built for
-bird and egg photos turned out to be unshippable and its code has since been removed (ADR-003);
-every photo now comes from Wikimedia Commons, downloaded into the repo and served locally, and the
-app makes no third-party requests at runtime and works fully offline, photos included. Two things
-remain deliberately unfinished and do not block the app running: four weeks still have no Commons
-photo (`docs/CURATING-PHOTOS.md`), and 24 of the 120 bird facts are still
-unreviewed. Network access is open now, unlike during the original build session; see "Known gaps"
-below.
+Status: **v1 built**, and revised since. Every photo is a Wikimedia Commons file downloaded into
+the repo, so the app makes no third-party request at runtime and works fully offline (ADR-003
+records why the planned Macaulay Library embeds were abandoned). Two things are deliberately
+unfinished and neither blocks the app running: four weeks have no photo yet
+(`docs/CURATING-PHOTOS.md`), and 24 of the 120 bird facts are unreviewed. See "Known gaps".
 
 ## Running it
 
@@ -101,5 +97,5 @@ non-commercial use only; that route was abandoned and its code removed (see
 
 - Fetal length and weight table: the author's spreadsheet, drawn from datayze.com.
 - Bird comparisons: the author's own pairings.
-- Photos: Wikimedia Commons contributors, credited and licensed per image. The original plan used Macaulay Library embeds for bird and egg photos; that route was abandoned (ADR-003) and no Macaulay media ships.
+- Photos: Wikimedia Commons contributors, credited and licensed per image.
 - Labor probability model: Smith 2001, Jukic et al. 2013, CDC/NCHS natality data. See `docs/research/datayze-features.md`.
