@@ -37,7 +37,7 @@ masks or Marzluff. Every replacement URL was checked to return HTTP 200.
 
 ## What changed since the work order was written
 
-The work order (`docs/V0.1.0-TRIAGE.md` §P1) assumed `WebFetch` and `curl` were blocked
+The work order for this pass assumed `WebFetch` and `curl` were blocked
 and that agents could only confirm a fact _appeared_ in search snippets. That is no
 longer true — network access was opened for this session. Reachability now:
 

@@ -4,7 +4,7 @@ Status: accepted (2026-09-06)
 
 ## Decision
 
-The user picks one of seven skins in About. (About was merged into Setup in v0.1.0 — see `docs/V0.1.0-TRIAGE.md` — so this is reached from the sliders tab, on Setup, not a separate About screen.) A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
+The user picks one of seven skins. (About was merged into Setup in v0.1.0, so this is reached from the sliders tab, on Setup, rather than from a separate About screen as originally decided.) A skin is a palette (five roles, each with light and dark values) and a display/body typeface pair. IBM Plex Mono is shared across skins for numbers. Default skin: Puffin.
 
 | Skin        | Bird               | Ground / Ink / Accent / Secondary / Highlight (light) | Display / Body                              |
 | ----------- | ------------------ | ----------------------------------------------------- | ------------------------------------------- |

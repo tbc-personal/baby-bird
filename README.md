@@ -5,8 +5,8 @@ fetal size as a seed, an egg, then a bird: a poppy seed at week 3, Atlantic Puff
 
 Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
-Status: **v1 built**, and revised since (`docs/V0.1.0-TRIAGE.md`). All seven milestones in
-`docs/PLAN.md` §4 are implemented and tested. The Macaulay Library embed route the plan built for
+Status: **v1 built**, and revised since. Everything the original plan scoped is implemented and
+tested. The Macaulay Library embed route the plan built for
 bird and egg photos turned out to be unshippable and its code has since been removed (ADR-003);
 every photo now comes from Wikimedia Commons, downloaded into the repo and served locally, and the
 app makes no third-party requests at runtime and works fully offline, photos included. Two things
@@ -88,17 +88,14 @@ non-commercial use only; that route was abandoned and its code removed (see
 
 ## Repository map
 
-| Path                               | What                                                                 |
-| ---------------------------------- | -------------------------------------------------------------------- |
-| `docs/PLAN.md`                     | Scope, architecture, milestones, risks, testing                      |
-| `docs/decisions/`                  | Architecture decision records (ADR-001 … 007)                        |
-| `docs/research/`                   | Licensing findings; Datayze feature feasibility and sources          |
-| `docs/mockups/`                    | Static HTML mockups of the main screens and skins; offline goose SVG |
-| `docs/V0.1.0-TRIAGE.md`            | The v0.1.0 change list: what was done, what is deferred, and why     |
-| `docs/research/font-audit.md`      | Typography inventory; what is deliberately inconsistent              |
-| `data/comparisons.json`            | Single source of truth for weeks, sizes, species, images, facts      |
-| `data/size-comparisons.source.csv` | The original spreadsheet export                                      |
-| `prompts/opus-build-prompt.md`     | The prompt for the implementation session                            |
+| Path                               | What                                                            |
+| ---------------------------------- | --------------------------------------------------------------- |
+| `docs/decisions/`                  | Architecture decision records (ADR-001 … 007)                   |
+| `docs/research/`                   | Licensing findings; Datayze feature feasibility and sources     |
+| `docs/mockups/`                    | Static HTML mockups of the main screens and skins               |
+| `docs/research/font-audit.md`      | Typography inventory; what is deliberately inconsistent         |
+| `data/comparisons.json`            | Single source of truth for weeks, sizes, species, images, facts |
+| `data/size-comparisons.source.csv` | The original spreadsheet export                                 |
 
 ## Sources and credits
 
