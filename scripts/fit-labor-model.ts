@@ -19,7 +19,7 @@
  *   median:    π Φ((283 − μ_p)/σ_p) + (1 − π) Φ((283 − μ_t)/σ_t) = 0.5
  *   spread:    σ_t = 10 days, from Jukic 2013
  *
- * Two changes on 2026-09-14 and -15, both recorded in the ADR-005 addenda. The
+ * Two changes on 2026-09-14 and -15, both under ADR-005 "Routes already tried". The
  * preterm component was truncated to [140, 259), which cut the density off at
  * 37w0d exactly and made it fall eighteenfold in a day; it is untruncated now.
  * And σ_t was fitted to a post-term share of 6%, which forced it to 6.8
@@ -134,7 +134,7 @@ function row(label: string, target: string, got: string, verdict: string): void 
 const fitted = fit(PRETERM_MEAN, PRETERM_SD);
 const stats = describe(fitted);
 
-console.log('Two-component mixture, fitted to all four targets (ADR-005 addendum 3).\n');
+console.log('Two-component mixture (ADR-005, "The model as it stands").\n');
 console.log(
   `Preterm component: Normal(${PRETERM_MEAN}, ${PRETERM_SD}), untruncated. ` +
     'Assumed, not fitted.\n',
@@ -241,5 +241,5 @@ console.log(
 console.log(
   '  For comparison: the truncated model fell 94.5% in one day at 37w0d, and\n' +
     '  the fit that replaced it still read 1.30% at 37 weeks against 1.33% at 34.\n' +
-    '  See the third and fourth ADR-005 addenda.',
+    '  See ADR-005, "Routes already tried".',
 );

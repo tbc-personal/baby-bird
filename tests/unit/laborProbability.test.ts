@@ -137,7 +137,7 @@ describe('the density is a proper density', () => {
   });
 });
 
-describe('the calibration targets (ADR-005, second addendum)', () => {
+describe('the calibration targets (ADR-005)', () => {
   it('the median is within one day of 283 (Smith 2001)', () => {
     expect(Math.abs(medianDay() - CALIBRATION.medianDay)).toBeLessThanOrEqual(1);
     expect(medianDay()).toBeCloseTo(FIT_RESIDUALS.medianDay, 2);

@@ -109,7 +109,7 @@ describe('the labor screen (mockup 4)', () => {
     save();
     renderLabor(261);
     // Once, for the median. It was cited twice while the 42-week figure was a
-    // fitted target; that figure is an output now (ADR-005, fourth addendum).
+    // fitted target; that figure is an output now (ADR-005).
     expect(screen.getAllByRole('link', { name: 'Smith 2001' })).toHaveLength(1);
     expect(
       screen.getByRole('link', { name: 'CDC preterm birth rate' }),

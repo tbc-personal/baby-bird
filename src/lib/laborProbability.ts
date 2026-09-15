@@ -11,7 +11,7 @@
  * Preterm labor is a physiologically distinct process, not the tail of the term
  * one, which is the honest reason to give it its own component. It is also what
  * makes the fit possible: a single skew-normal (the family used before the
- * first follow-up, see the ADR-005 addenda) cannot meet the median, preterm and
+ * first family tried, see ADR-005 "Routes already tried") cannot meet the median,
  * post-term targets at once, and its left skew put the mode eight days after
  * the due date. A symmetric term component puts the mode back beside the median.
  *
@@ -22,7 +22,7 @@
  * costs nothing — all four published targets are still met to the same
  * tolerances — and the honest reading is that it was always wrong, since labor
  * by the preterm process does not become impossible the moment 37 weeks is
- * reached. See the third ADR-005 addendum.
+ * reached. See ADR-005, "Routes already tried".
  *
  * Nothing here is scraped from Datayze. The constraints below come from
  * published sources; the parameters were fitted to them offline by
@@ -103,7 +103,7 @@ export const CALIBRATION = {
    * Fitting the post-term figure instead forced this to 6.8 days, which put the
    * term component 3.7 SD below its mean at 37 weeks and left almost nothing
    * there: the panel read a 1.3% chance over a whole week at 37w0d, then 5.7% a
-   * week later. See the fourth ADR-005 addendum.
+   * week later. See ADR-005, "Routes already tried".
    */
   termSd: 10,
   termSdSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
@@ -195,7 +195,7 @@ export interface MixtureParams {
  * where most of it is observed. Nothing the app shows past 37 weeks depends on
  * the choice, because the conditional probability re-normalizes; what it does
  * change is the 34–37 week readings, and the sensitivity is documented in the
- * second ADR-005 addendum.
+ * ADR-005, "The model as it stands".
  *
  * σ_t = 6.83 days is tighter than Jukic 2013 measures the spread of term
  * gestation to be (roughly 10 to 13 days). It is forced by the post-term
