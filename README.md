@@ -75,12 +75,8 @@ about any individual pregnancy. Talk to your clinician.
 
 ## Non-commercial
 
-The project has no ads, no paid tier, and must not be used commercially. This is a project choice,
-not a licensing constraint on the images shipped today: photos come from Wikimedia Commons under
-licenses that permit commercial use, credited per image. The commercial restriction dates from when
-the app was planned around Macaulay Library embeds, which the Cornell Lab permits for
-non-commercial use only; that route was abandoned and its code removed (see
-`docs/decisions/ADR-003-images.md`), but the project's non-commercial posture has not changed.
+This project's photographs come from Wikimedia Commons.
+The project has no ads, no paid tier, and must not be used commercially.
 
 ## Repository map
 
