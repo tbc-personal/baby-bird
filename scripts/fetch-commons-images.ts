@@ -23,6 +23,7 @@
  * Exit code 1 if any pick cannot be resolved or carries a disallowed licence.
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { writeComparisons } from './writeComparisons.ts';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -251,6 +252,6 @@ comparisonsSchema.parse(data);
 if (dryRun) {
   console.log(`\n--dry-run: ${written} row(s) would be written.`);
 } else {
-  writeFileSync(DATA, JSON.stringify(data, null, 2) + '\n');
+  await writeComparisons(DATA, data);
   console.log(`\n${written} image row(s) written to ${DATA}.`);
 }

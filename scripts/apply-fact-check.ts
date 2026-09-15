@@ -18,10 +18,11 @@
  * Run with `npm run apply-fact-check`. `--dry-run` prints the diff without
  * writing. Exit code 1 if any change cannot be applied.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { comparisonsSchema } from '../src/lib/schema.ts';
+import { writeComparisons } from './writeComparisons.ts';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = resolve(ROOT, 'data/comparisons.json');
@@ -36,6 +37,8 @@ interface Change {
   text?: string;
   why: string;
   rewrite?: boolean;
+  /** The comparison this entry was written against; see the lookup below. */
+  comparison?: string;
 }
 
 const changeset = JSON.parse(readFileSync(CHANGESET, 'utf8')) as { changes: Change[] };
@@ -48,10 +51,15 @@ comparisonsSchema.parse(raw); // fail early if the file is already invalid
 const data = raw as {
   weeks: {
     week: number;
+    comparison: string | null;
     facts: { text: string; sources: string[]; reviewed: boolean }[];
   }[];
 };
 const byWeek = new Map(data.weeks.map((w) => [w.week, w]));
+/** Comparison name to row, so a renumbering of the table cannot misalign this. */
+const byComparison = new Map(
+  data.weeks.filter((w) => w.comparison).map((w) => [w.comparison as string, w]),
+);
 
 /** The ADR-004 rules `validate-data.ts` enforces, checked before writing. */
 function violations(text: string, sources: string[]): string[] {
@@ -73,33 +81,38 @@ function violations(text: string, sources: string[]): string[] {
   return out;
 }
 
-/**
- * `JSON.stringify` renders 21.0 as 21. That is the same number, but it is a
- * change to rows this pass was not asked to touch, so put the original spelling
- * back wherever the value is unchanged.
- */
-function preserveIntegralFloats(next: string, prev: string): string {
-  const wasFloat = new Set<string>();
-  for (const m of prev.matchAll(/"([A-Za-z_]+)":\s(-?\d+)\.0(?=[,\n\r])/g)) {
-    wasFloat.add(`${m[1]}:${m[2]}`);
-  }
-  if (wasFloat.size === 0) return next;
-  return next.replace(
-    /"([A-Za-z_]+)":\s(-?\d+)(?=[,\n\r])/g,
-    (whole, key: string, num: string) =>
-      wasFloat.has(`${key}:${num}`) ? `"${key}": ${num}.0` : whole,
-  );
-}
-
 const problems: string[] = [];
+const skipped: string[] = [];
+let skippedEntries = 0;
 let rewritten = 0;
 let recited = 0;
 
 for (const c of changeset.changes) {
-  const week = byWeek.get(c.week);
-  const fact = week?.facts[c.fact - 1];
+  /*
+   * Match on the comparison, not the week number. This changeset was written
+   * when the table began at week 2; it begins at week 3 now, because the poppy
+   * seed moved and the week-3 "grain of grit" comparison was dropped. Applying
+   * it by week would have put grit's citation onto the poppy's third fact and
+   * said nothing about it. (That never happened: the changeset was applied
+   * before the renumbering, and the data is correct. The hazard was only ever
+   * for a re-run.)
+   */
+  const week = c.comparison ? byComparison.get(c.comparison) : byWeek.get(c.week);
+  if (!week) {
+    if (c.comparison) {
+      // The comparison was dropped from the table, so this entry is stale
+      // rather than broken. Say so and carry on; it is not a failure.
+      const note = `  "${c.comparison}" (changeset week ${c.week}) is no longer in the data`;
+      if (!skipped.includes(note)) skipped.push(note);
+      skippedEntries += 1;
+    } else {
+      problems.push(`week ${c.week} is not in the data, and the entry names no comparison`);
+    }
+    continue;
+  }
+  const fact = week.facts[c.fact - 1];
   if (!fact) {
-    problems.push(`week ${c.week} fact ${c.fact} does not exist`);
+    problems.push(`"${week.comparison}" has no fact ${c.fact}`);
     continue;
   }
   const text = c.text ?? fact.text;
@@ -120,6 +133,13 @@ for (const c of changeset.changes) {
   }
   fact.sources = [...c.sources];
   // reviewed stays false, deliberately. See the header comment.
+}
+
+if (skipped.length) {
+  console.log(
+    `\nskipped ${skippedEntries} stale entr(y/ies) for ${skipped.length} dropped comparison(s):`,
+  );
+  for (const line of skipped) console.log(line);
 }
 
 if (problems.length) {
@@ -146,17 +166,15 @@ console.log(
     ? `\n${stillBlocked.length} All About Birds citation(s) remain:\n  ${stillBlocked.join('\n  ')}`
     : '\nNo All About Birds citations remain.',
 );
-const unreviewed = data.weeks.flatMap((w) => w.facts.filter((f) => f.reviewed)).length;
+const reviewed = data.weeks.flatMap((w) => w.facts.filter((f) => f.reviewed)).length;
 console.log(
-  `Facts marked reviewed:true: ${unreviewed} (should be 0 — that is the author's call).`,
+  `Facts marked reviewed:true: ${reviewed}, unchanged by this script. ` +
+    `Setting that flag is the author's act (ADR-004).`,
 );
 
 if (dryRun) {
   console.log('\n--dry-run: nothing written.');
 } else {
-  writeFileSync(
-    DATA,
-    preserveIntegralFloats(JSON.stringify(data, null, 2) + '\n', original),
-  );
+  await writeComparisons(DATA, data, original);
   console.log(`\nWrote ${DATA}.`);
 }

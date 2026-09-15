@@ -31,11 +31,22 @@ laundering a triage pass into a sign-off — the two are different things, and t
 difference is the whole value of the flag.
 
 `scripts/mark-reviewed.ts` is the one partial exception, and it is narrow on
-purpose: it sets the flag only for facts a fact-check report calls plainly
+purpose. It sets the flag only for facts a fact-check report calls plainly
 supported, reading the verdicts back out of the reports rather than taking a
 hand-typed list, and it holds back anything carrying an open question. Every
 other verdict — partly supported, contradicted, unverifiable, and every fact
-rewritten during a pass — stays `reviewed: false`.
+rewritten during a pass — is left alone.
+
+Two rules keep it on the right side of this decision:
+
+- **It never clears a flag.** Clearing a `reviewed: true` that a person set
+  would be the same laundering in reverse. Where a report disagrees with a flag
+  already set, the script reports the disagreement, changes nothing, and exits
+  non-zero for a person to resolve.
+- **It matches facts by comparison name, not week number.** The reports were
+  written when the table began at week 2, and matching positionally mapped a
+  dropped comparison's verdicts onto a different week's facts. Anything it
+  cannot match by name is reported rather than guessed at.
 
 `npm run validate-data` prints the outstanding count on every run. It reports
 rather than fails: curation is allowed to trail the code, and a warning that
