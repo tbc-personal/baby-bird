@@ -1,12 +1,12 @@
 /**
- * Apply the fact-check changeset to `data/comparisons.json` (CURATION.md §B).
+ * Apply the fact-check changeset to `data/comparisons.json` (ADR-004).
  *
  * Reads `docs/research/fact-check-changeset.json`, which names each change by
  * week and 1-based index into that week's `facts[]` and records why it is being
  * made. Keeping the changeset separate from this script means the content
  * decisions can be reviewed on their own, and the application re-run.
  *
- * What it deliberately does NOT do: set `reviewed: true`. Per docs/CURATION.md
+ * What it deliberately does NOT do: set `reviewed: true`. Per ADR-004
  * that is the author's act, and a script that flipped it would be laundering a
  * triage pass into a sign-off. Facts stay `reviewed: false` after this runs.
  *

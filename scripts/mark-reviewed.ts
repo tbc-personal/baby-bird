@@ -1,6 +1,6 @@
 /**
  * Set `reviewed: true` on the facts the P1 pass found plainly supported
- * (CURATION.md task B sign-off).
+ * (ADR-004, "Sign-off: what `reviewed: true` means").
  *
  * The verdicts live in the summary table of each `docs/research/fact-check-*.md`
  * report, three rows per week in week order. This reads them back rather than

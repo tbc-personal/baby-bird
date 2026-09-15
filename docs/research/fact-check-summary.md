@@ -14,7 +14,7 @@ two or three facts at once, one row covered seven weeks in a single line, and tw
 Birds.
 
 **Every fact is still `reviewed: false`,** and the apply script deliberately cannot set
-it. Per `docs/CURATION.md` that is the author's act; a script that flipped it would be
+it. Per ADR-004 that is the author's act; a script that flipped it would be
 laundering a triage pass into a sign-off. No All About Birds URL remains in any
 `sources[]`. The `allAboutBirdsSlug` on each row is untouched — that drives the card's
 "More at All About Birds" link, which ADR-004 asks for, and is not a citation.
@@ -110,7 +110,7 @@ Three facts were re-cited but not rewritten, and are the next thing worth your a
 
 ## Caveat worth keeping
 
-These reports are a triage pass, not the sign-off `docs/CURATION.md` describes. They
+These reports are a triage pass, not the sign-off ADR-004 describes. They
 narrow your review to the disputed rows; they do not replace it. The 99 "supported"
 verdicts are the ones nobody has independently re-read — they are the most likely place
 for a wrong verdict to be sitting quietly.

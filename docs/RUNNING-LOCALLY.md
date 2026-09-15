@@ -101,6 +101,30 @@ Do **not** run `npm run test:e2e:update` to fix failing screenshot tests. Those 
 pixel comparisons of text, which rasterizes differently on different machines, so they have to
 be generated on the GitHub runner that checks them. See the README.
 
+## Reviewing the bird facts
+
+Moved here on 2026-09-15 from `docs/CURATION.md`, which was deleted.
+
+Every fact in `data/comparisons.json` carries a `reviewed` flag. Setting it to
+`true` is the author's act and no script may do it — see ADR-004 for why, and
+for the one narrow exception.
+
+1. Run the app with `?review=1` on the URL, or just `npm run dev`, where review
+   mode is always on. Each unreviewed fact shows a small **draft** chip beside
+   it, so the timeline shows exactly what is left.
+2. Walk the weeks. For each fact, open the URLs in its `sources[]` and confirm
+   the claim actually appears there.
+3. Edit for accuracy and for voice in `data/comparisons.json`, then set
+   `"reviewed": true` on that fact.
+4. `npm run validate-data` prints the remaining count. Release wants zero.
+
+Two things worth reading first, because they narrow the job considerably:
+`docs/research/fact-check-summary.md` records a pass that checked every fact
+against downloaded source text and lists the three still unresolved, and
+`docs/research/fact-check-<range>.md` holds the per-fact evidence. Facts that
+pass already read `reviewed: true`; what is left is what that pass could not
+settle.
+
 ## If something goes wrong
 
 | What you see                                             | What it means                                                                                |

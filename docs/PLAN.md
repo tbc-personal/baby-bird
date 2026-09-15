@@ -84,7 +84,7 @@ field is null), so the comparison table runs weeks 3–42, 40 rows, not 1–42. 
 (7, 9, 12, 13) have no Commons photo curated yet. The week-3 "grain of grit" comparison this plan
 originally proposed was dropped rather than signed off; no row in the data is `proposed: true`.
 24 of 120 facts are still unreviewed. Names, slugs and codes were filled during planning and must be
-verified (see `docs/CURATION.md`).
+verified (`npm run check-links` does it).
 
 ## 4. Milestones for the build session
 

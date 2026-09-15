@@ -11,7 +11,7 @@ bird and egg photos turned out to be unshippable and its code has since been rem
 every photo now comes from Wikimedia Commons, downloaded into the repo and served locally, and the
 app makes no third-party requests at runtime and works fully offline, photos included. Two things
 remain deliberately unfinished and do not block the app running: four weeks still have no Commons
-photo (`docs/CURATION.md`, `docs/CURATING-PHOTOS.md`), and 24 of the 120 bird facts are still
+photo (`docs/CURATING-PHOTOS.md`), and 24 of the 120 bird facts are still
 unreviewed. Network access is open now, unlike during the original build session; see "Known gaps"
 below.
 
@@ -40,11 +40,11 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 
 ## Known gaps
 
-| Gap                                                                                                       | Where                                                     |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| Weeks 7, 9, 12 and 13 have no Commons photo yet; those cards show a kind silhouette tagged "Photo coming" | `docs/CURATING-PHOTOS.md`                                 |
-| 24 of 120 bird facts are still `reviewed: false`                                                          | `docs/CURATION.md`, `docs/research/fact-check-summary.md` |
-| The labor model's weekly figure dips between 34 and 37 weeks, where the preterm component runs out        | `docs/decisions/ADR-005-datayze-derived-features.md`      |
+| Gap                                                                                                                                                | Where                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Weeks 7, 9, 12 and 13 have no Commons photo yet; those cards show a kind silhouette tagged "Photo coming"                                          | `docs/CURATING-PHOTOS.md`                            |
+| 24 of 120 bird facts are still `reviewed: false`                                                                                                   | `docs/research/fact-check-summary.md`, ADR-004       |
+| The labor model's preterm target rests on two unverified adjustment factors, and it puts more pregnancies past 42 weeks than delivery records show | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
 ## What it does
 
@@ -93,7 +93,6 @@ non-commercial use only; that route was abandoned and its code removed (see
 | `docs/PLAN.md`                     | Scope, architecture, milestones, risks, testing                      |
 | `docs/decisions/`                  | Architecture decision records (ADR-001 … 007)                        |
 | `docs/research/`                   | Licensing findings; Datayze feature feasibility and sources          |
-| `docs/CURATION.md`                 | Human checklist: image IDs, fact review, slug verification           |
 | `docs/mockups/`                    | Static HTML mockups of the main screens and skins; offline goose SVG |
 | `docs/V0.1.0-TRIAGE.md`            | The v0.1.0 change list: what was done, what is deferred, and why     |
 | `docs/research/font-audit.md`      | Typography inventory; what is deliberately inconsistent              |
