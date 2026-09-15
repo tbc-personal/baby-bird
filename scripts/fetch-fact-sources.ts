@@ -1,5 +1,5 @@
 /**
- * Build the evidence corpus for the fact-check pass (CURATION.md §B, work-order P1).
+ * Build the evidence corpus for the fact-check pass (ADR-004, work-order P1).
  *
  * Every fact in `data/comparisons.json` was drafted from the build session's own
  * knowledge and cited to a page that session could not open. This script opens

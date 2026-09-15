@@ -18,7 +18,7 @@ const LEFT = 40;
 const RIGHT = 268;
 const TOP = 14;
 const BASELINE = 128;
-const AXIS_WEEKS = [2, 12, 22, 32, 42];
+const AXIS_WEEKS = [FIRST_COMPARISON_WEEK, 12, 22, 32, 42];
 
 interface Point {
   readonly week: number;
@@ -41,7 +41,7 @@ function ticksUpTo(max: number): number[] {
 }
 
 /**
- * Weeks 2–42 for one measure, dropping any row with no value for it (the
+ * Weeks 3–42 for one measure, dropping any row with no value for it (the
  * schema allows `null`; the current data never does, but the chart should not
  * assume that stays true).
  */
@@ -53,7 +53,7 @@ function pointsFor(measure: Measure): Point[] {
 }
 
 /**
- * The card's inset, opened. Weeks 2–42, one measure, plotted straight from
+ * The card's inset, opened. Weeks 3–42, one measure, plotted straight from
  * `COMPARISON_WEEKS` (no chart library, matching `LaborCurve`).
  *
  * The y axis is linear, from zero.
@@ -67,7 +67,7 @@ function pointsFor(measure: Measure): Point[] {
  *
  * Linear tells the truth: growth accelerates, and the early weeks really are
  * that small. It is also what clinical fetal growth charts use, so the shape
- * matches what a reader has seen at an appointment. The cost is that weeks 2
+ * matches what a reader has seen at an appointment. The cost is that weeks 3
  * to 12 hug the axis; the number is in the card above, so the chart does not
  * have to carry it.
  */

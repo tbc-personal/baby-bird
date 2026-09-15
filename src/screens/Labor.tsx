@@ -2,6 +2,7 @@ import {
   cdf,
   conditionalProbabilityInWindow,
   CALIBRATION,
+  FIT_RESIDUALS,
   mostLikelyDayFrom,
 } from '../lib/laborProbability';
 import {
@@ -82,13 +83,13 @@ export function LaborScreen({ today }: { today: Date }) {
           {(CALIBRATION.pretermShare * 100).toFixed(1)}% chance of labor before 37 weeks,
           derived from the <a href={CALIBRATION.cdcSource}>CDC preterm birth rate</a> for{' '}
           {CALIBRATION.cdcYear} by removing multiples and deliveries that were induced or
-          scheduled, and a {(CALIBRATION.postTermTargetShare * 100).toFixed(0)}% chance of
-          going past 42 weeks (<a href={CALIBRATION.postTermSource}>Smith 2001</a> again).
-          Because the model contains no induction at all, it runs a little narrow in the
-          last fortnight; <a href={CALIBRATION.jukicSource}>Jukic 2013</a> measures a wider
-          spread than the 42-week figure allows for here.
+          scheduled, and a spread of {CALIBRATION.termSd} days around the median (
+          <a href={CALIBRATION.jukicSource}>Jukic 2013</a>). Because it contains no
+          induction at all, it runs longer than delivery records do: it puts about{' '}
+          {(FIT_RESIDUALS.postTermShare * 100).toFixed(0)}% of pregnancies past 42 weeks,
+          against roughly {(CALIBRATION.postTermReferenceShare * 100).toFixed(0)}% observed.
         </p>
-        <p className="mono caveat__stat">
+        <p className="caveat__stat">
           {Math.round(cdf(gestationalDays) * 100)}% have started labor by this point.
         </p>
         <button

@@ -5,11 +5,11 @@ fetal size as a seed, an egg, then a bird: a poppy seed at week 3, Atlantic Puff
 
 Name: **Nestling** (chosen 2026-09-06; alternates listed under "Naming").
 
-Status: **v1 built**. All seven milestones in `docs/PLAN.md` §4 are implemented and tested.
-Two things are deliberately unfinished and do not block the app running: the image curation in
-`docs/CURATION.md` (no asset IDs, no seed photos) and the review pass on the 123 bird facts. The
-build session had no network access to Macaulay Library, Wikimedia Commons, Wikipedia or the CDC,
-so none of it could be fetched or checked; see "Known gaps" below.
+Status: **v1 built**, and revised since. Every photo is a Wikimedia Commons file downloaded into
+the repo, so the app makes no third-party request at runtime and works fully offline (ADR-003
+records why the planned Macaulay Library embeds were abandoned). Two things are deliberately
+unfinished and neither blocks the app running: four weeks have no photo yet
+(`docs/CURATING-PHOTOS.md`), and 24 of the 120 bird facts are unreviewed. See "Known gaps".
 
 ## Running it
 
@@ -36,23 +36,23 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 
 ## Known gaps
 
-| Gap | Where |
-|---|---|
-| No Macaulay Library asset IDs; every card shows a kind silhouette tagged "Photo coming" | `docs/CURATION.md` |
-| No Commons seed photos for weeks 2-6 | `docs/CURATION.md` |
-| The Macaulay embed `src` is an unverified guess, isolated in one constant | `docs/decisions/ADR-003-images.md` |
-| All 123 facts are `reviewed: false` and were written without opening their sources | `docs/CURATION.md` |
-| The labor model's weekly figure dips between 34 and 37 weeks, where the preterm component runs out | `docs/decisions/ADR-005-datayze-derived-features.md` |
+| Gap                                                                                                                                                | Where                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Weeks 7, 9, 12 and 13 have no Commons photo yet; those cards show a kind silhouette tagged "Photo coming"                                          | `docs/CURATING-PHOTOS.md`                            |
+| 24 of 120 bird facts are still `reviewed: false`                                                                                                   | `docs/research/fact-check-summary.md`, ADR-004       |
+| The labor model's preterm target rests on two unverified adjustment factors, and it puts more pregnancies past 42 weeks than delivery records show | `docs/decisions/ADR-005-datayze-derived-features.md` |
 
 ## What it does
+
 - Choose how to count (last menstrual period, conception date, or a known due date) and enter the
   date. Counting from a period also asks your typical cycle length, because Naegele's 280 days
   assumes a 28-day cycle and a longer one means later ovulation and a later due date (ADR-002).
 - See progress as weeks and days, days remaining, and trimester.
 - Look ahead or back a week at a time from Today, with the calendar dates that week covers.
-- Tap either measurement to see that measure plotted across weeks 2-42, this week marked.
-- See this week's comparison with fetal length and weight, a Cornell Lab Macaulay Library photo embed,
-  two or three short original bird facts, and a link to the species on All About Birds.
+- Tap either measurement to see that measure plotted across weeks 3-42, this week marked.
+- See this week's comparison with fetal length and weight, a locally-served Wikimedia Commons photo
+  (or a silhouette for the four weeks not yet curated), two or three short original bird facts, and
+  a link to the species on All About Birds.
 - Browse the full week-by-week timeline.
 - From 34 weeks, see the chance of going into labor in the next week, re-derived from published studies.
 - Seven skins named for birds: Puffin, Kingfisher, Bluebird, Green Heron, Oriole, Goldfinch, Cardinal.
@@ -61,36 +61,37 @@ icons from `public/favicon.svg`, `npm run fit-labor-model` re-derives the labor 
 - Works as an installable web app. Data stays on your device.
 
 ## Naming
-| Candidate | Why |
-|---|---|
-| Nestling | A chick still in the nest. One word, literal for the theme, reads as a noun for the baby. |
-| Featherweight | The lightest weight class; the app's weekly weight readout. Warm without being cute. |
-| Hatch Day | The due date, reframed. Puns on birthday; works as a countdown ("47 days to hatch day"). |
+
+| Candidate     | Why                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| Nestling      | A chick still in the nest. One word, literal for the theme, reads as a noun for the baby. |
+| Featherweight | The lightest weight class; the app's weekly weight readout. Warm without being cute.      |
+| Hatch Day     | The due date, reframed. Puns on birthday; works as a countdown ("47 days to hatch day").  |
 
 ## Not medical advice
+
 Fetal sizes are population averages. Probability features are population statistics, not predictions
 about any individual pregnancy. Talk to your clinician.
 
 ## Non-commercial
-This project uses Wikimedia Commons media embeds.
+
+This project's photographs come from Wikimedia Commons.
 The project has no ads, no paid tier, and must not be used commercially.
 
 ## Repository map
-| Path | What |
-|---|---|
-| `docs/PLAN.md` | Scope, architecture, milestones, risks, testing |
-| `docs/decisions/` | Architecture decision records (ADR-001 … 007) |
-| `docs/research/` | Licensing findings; Datayze feature feasibility and sources |
-| `docs/CURATION.md` | Human checklist: image IDs, fact review, slug verification |
-| `docs/mockups/` | Static HTML mockups of the main screens and skins; offline goose SVG |
-| `docs/V0.1.0-TRIAGE.md` | The v0.1.0 change list: what was done, what is deferred, and why |
-| `docs/research/font-audit.md` | Typography inventory; what is deliberately inconsistent |
-| `data/comparisons.json` | Single source of truth for weeks, sizes, species, images, facts |
-| `data/size-comparisons.source.csv` | The original spreadsheet export |
-| `prompts/opus-build-prompt.md` | The prompt for the implementation session |
+
+| Path                               | What                                                            |
+| ---------------------------------- | --------------------------------------------------------------- |
+| `docs/decisions/`                  | Architecture decision records (ADR-001 … 007)                   |
+| `docs/research/`                   | Licensing findings; Datayze feature feasibility and sources     |
+| `docs/mockups/`                    | Static HTML mockups of the main screens and skins               |
+| `docs/research/font-audit.md`      | Typography inventory; what is deliberately inconsistent         |
+| `data/comparisons.json`            | Single source of truth for weeks, sizes, species, images, facts |
+| `data/size-comparisons.source.csv` | The original spreadsheet export                                 |
 
 ## Sources and credits
+
 - Fetal length and weight table: the author's spreadsheet, drawn from datayze.com.
 - Bird comparisons: the author's own pairings.
-- Photos: Macaulay Library at the Cornell Lab of Ornithology (embedded, non-commercial); seed photos from Wikimedia Commons contributors (credited per image).
+- Photos: Wikimedia Commons contributors, credited and licensed per image.
 - Labor probability model: Smith 2001, Jukic et al. 2013, CDC/NCHS natality data. See `docs/research/datayze-features.md`.

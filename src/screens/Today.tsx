@@ -1,12 +1,15 @@
 import {
+  clamp,
   computeProgress,
   FIRST_COMPARISON_WEEK,
   formatDaysRemaining,
   formatWeekOffset,
   formatWeeksAndDays,
+  GESTATION_DAYS,
   LAST_COMPARISON_WEEK,
   parseIsoDate,
   TRIMESTER_LABEL,
+  trimesterFor,
   weekDateRange,
   type Progress,
 } from '../lib/gestation';
@@ -55,7 +58,7 @@ export function TodayScreen({ today, week }: { today: Date; week: number | null 
       <>
         <EmptyState
           title={`No comparison for week ${String(week)}`}
-          body="The table runs from week 2 to week 42."
+          body={`The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`}
         />
         <p className="small">
           <a href={hrefFor({ name: 'timeline' })}>Back to the timeline</a>
@@ -135,11 +138,40 @@ export function ProgressHeader({
       ? weekDateRange(progress.lmpEquivalent, viewedWeek)
       : null;
 
+  /*
+   * While browsing, the pill names the trimester of the week on screen, not the
+   * one you are in. Everything else in the header already follows the browsed
+   * week — the heading, the offset, the date range — so a pill left on today's
+   * trimester sat directly above a card it disagreed with: "Second trimester"
+   * over a week 3 poppy seed.
+   *
+   * `week * 7` is that week's day 0, which is the reading a card headed
+   * "Week N" carries. The due date beside it does not change, because it does
+   * not depend on which week you are looking at.
+   */
+  const shownTrimester =
+    browsing && viewedWeek !== null ? trimesterFor(viewedWeek * 7) : progress.trimester;
+
+  /*
+   * The bar tracks the week on screen too, for the same reason, as a fraction
+   * of the 40-week term. `progressFraction` is already `gestationalDays / 280`
+   * clamped to 1, so the two agree at day granularity when not browsing; a
+   * browsed week uses its day 0.
+   *
+   * Clamping means the bar stops at week 40 and stays full through 41 and 42.
+   * That is deliberate: the term is the thing being measured against, and a bar
+   * that kept growing past it would need a scale nobody is counting in.
+   */
+  const shownFraction =
+    browsing && viewedWeek !== null
+      ? clamp((viewedWeek * 7) / GESTATION_DAYS, 0, 1)
+      : progress.progressFraction;
+
   return (
     <>
       <div className="meta meta--pills">
         <span className="pill pill--trimester">
-          {progress.trimester ? TRIMESTER_LABEL[progress.trimester] : 'Not started'}
+          {shownTrimester ? TRIMESTER_LABEL[shownTrimester] : 'Not started'}
         </span>
         <span className="pill pill--due mono">due {formatShortDate(progress.dueDate)}</span>
       </div>
@@ -164,7 +196,7 @@ export function ProgressHeader({
       ) : null}
 
       <div className="bar">
-        <i style={{ width: `${(progress.progressFraction * 100).toFixed(1)}%` }} />
+        <i style={{ width: `${(shownFraction * 100).toFixed(1)}%` }} />
       </div>
       {progress.status === 'pastTerm' && !browsing ? (
         <p className="note">Past 42 weeks. The card stays on the last row.</p>
@@ -226,7 +258,7 @@ export function WeekCard({
     return (
       <EmptyState
         title="No comparison for this week"
-        body="The table runs from week 2 to week 42."
+        body={`The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`}
       />
     );
   }

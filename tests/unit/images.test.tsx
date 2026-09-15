@@ -1,187 +1,39 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MacaulayEmbed, PhotoComing } from '../../src/components/MacaulayEmbed';
-import {
-  EMBED_TIMEOUT_MS,
-  EMBED_VISIBILITY_FALLBACK_MS,
-  MACAULAY_EMBED_TEMPLATE,
-  macaulayAssetUrl,
-  macaulayEmbedUrl,
-} from '../../src/components/macaulay';
+import { PhotoComing, PhotoFrame } from '../../src/components/PhotoFrame';
 import { CommonsImage } from '../../src/components/CommonsImage';
 import { ImageCredit } from '../../src/components/ImageCredit';
-import { OfflineGoose } from '../../src/components/OfflineGoose';
 import { Silhouette } from '../../src/components/Silhouette';
 
-/** jsdom has no IntersectionObserver; this one fires immediately. */
-class ImmediateObserver implements IntersectionObserver {
-  readonly root = null;
-  readonly rootMargin = '';
-  readonly thresholds: readonly number[] = [];
-  constructor(private readonly callback: IntersectionObserverCallback) {}
-  observe(target: Element): void {
-    this.callback(
-      [{ isIntersecting: true, target } as unknown as IntersectionObserverEntry],
-      this,
+describe('PhotoFrame', () => {
+  it('renders a corner tag when given one', () => {
+    render(
+      <PhotoFrame tag="Loading photo">
+        <span>content</span>
+      </PhotoFrame>,
     );
-  }
-  unobserve(): void {}
-  disconnect(): void {}
-  takeRecords(): IntersectionObserverEntry[] {
-    return [];
-  }
-}
-
-/** One that never fires, to prove the frame is not created until it is seen. */
-class NeverObserver extends ImmediateObserver {
-  override observe(): void {}
-}
-
-function setOnline(online: boolean) {
-  Object.defineProperty(window.navigator, 'onLine', {
-    configurable: true,
-    get: () => online,
+    expect(screen.getByText('Loading photo')).toBeInTheDocument();
+    expect(screen.getByText('content')).toBeInTheDocument();
   });
-}
 
-beforeEach(() => {
-  setOnline(true);
-  vi.stubGlobal('IntersectionObserver', ImmediateObserver);
-});
-
-afterEach(() => {
-  vi.unstubAllGlobals();
-  vi.useRealTimers();
-});
-
-describe('embed URL construction (ADR-003)', () => {
-  it('builds every URL from the single template constant', () => {
-    expect(MACAULAY_EMBED_TEMPLATE).toContain('{id}');
-    expect(macaulayEmbedUrl('633445471')).toBe(
-      'https://macaulaylibrary.org/asset/633445471/embed',
+  it('renders no tag when given null', () => {
+    render(
+      <PhotoFrame tag={null}>
+        <span>content</span>
+      </PhotoFrame>,
     );
-    expect(macaulayAssetUrl('633445471')).toBe(
-      'https://macaulaylibrary.org/asset/633445471',
+    expect(screen.queryByText('Loading photo')).toBeNull();
+    expect(screen.getByText('content')).toBeInTheDocument();
+  });
+
+  it('renders the credit alongside the children', () => {
+    render(
+      <PhotoFrame tag={null} credit={<span>credit here</span>}>
+        <span>content</span>
+      </PhotoFrame>,
     );
-  });
-
-  it('escapes anything unexpected in the id', () => {
-    expect(macaulayEmbedUrl('1 2/3')).toBe(
-      'https://macaulaylibrary.org/asset/1%202%2F3/embed',
-    );
-  });
-});
-
-describe('MacaulayEmbed', () => {
-  it('renders an iframe once the card is in view', async () => {
-    render(<MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />);
-    const frame = await screen.findByTitle('A puffin');
-    expect(frame.tagName).toBe('IFRAME');
-    expect(frame).toHaveAttribute('src', 'https://macaulaylibrary.org/asset/123/embed');
-    expect(frame).toHaveAttribute('loading', 'lazy');
-  });
-
-  it('does not create the iframe until the card is near the viewport', () => {
-    vi.stubGlobal('IntersectionObserver', NeverObserver);
-    render(<MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />);
-    expect(screen.queryByTitle('A puffin')).toBeNull();
-  });
-
-  it('shows the goose, not the silhouette, when offline', () => {
-    setOnline(false);
-    render(<MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />);
-    expect(screen.getByText('Photo needs a connection')).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /goose wearing a hat/ })).toBeInTheDocument();
-    expect(screen.queryByTitle('A puffin')).toBeNull();
-  });
-
-  it('does not sit on "Loading photo" when the observer never reports', async () => {
-    // The failure the author hit on week 22: an IntersectionObserver that never
-    // fires means no frame, so nothing to time out, so no goose either — the
-    // card showed the kind silhouette under "Loading photo" indefinitely and
-    // never made a request at all.
-    vi.useFakeTimers({ shouldAdvanceTime: true });
-    class SilentObserver implements IntersectionObserver {
-      readonly root = null;
-      readonly rootMargin = '';
-      readonly thresholds: readonly number[] = [];
-      observe() {}
-      unobserve() {}
-      disconnect() {}
-      takeRecords(): IntersectionObserverEntry[] {
-        return [];
-      }
-    }
-    vi.stubGlobal('IntersectionObserver', SilentObserver);
-    try {
-      render(<MacaulayEmbed assetId="123" kind="bird" altText="A bird" />);
-      expect(screen.queryByTitle('A bird')).toBeNull();
-
-      act(() => {
-        vi.advanceTimersByTime(EMBED_VISIBILITY_FALLBACK_MS + 10);
-      });
-      expect(await screen.findByTitle('A bird')).toBeInTheDocument();
-
-      // And from there the usual timeout still reaches the goose.
-      act(() => {
-        vi.advanceTimersByTime(EMBED_TIMEOUT_MS + 10);
-      });
-      await waitFor(() => {
-        expect(
-          screen.getByRole('img', { name: /goose wearing a hat/ }),
-        ).toBeInTheDocument();
-      });
-    } finally {
-      vi.unstubAllGlobals();
-      vi.useRealTimers();
-    }
-  });
-
-  it('shows the goose when the frame has not loaded within the timeout', async () => {
-    vi.useFakeTimers({ shouldAdvanceTime: true });
-    render(<MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />);
-    expect(await screen.findByTitle('A puffin')).toBeInTheDocument();
-
-    act(() => {
-      vi.advanceTimersByTime(EMBED_TIMEOUT_MS + 10);
-    });
-
-    await waitFor(() => {
-      expect(screen.getByText('Photo needs a connection')).toBeInTheDocument();
-    });
-    expect(screen.queryByTitle('A puffin')).toBeNull();
-  });
-
-  it('the timeout is the 6 seconds ADR-003 specifies', () => {
-    expect(EMBED_TIMEOUT_MS).toBe(6000);
-  });
-
-  /*
-   * The component also has an `onError` handler on the frame, which is not
-   * asserted here: React's `onError` for an <iframe> does not fire under jsdom,
-   * so a test for it would pass or fail for reasons unrelated to the app. The
-   * six-second timeout above is the guarantee that actually matters, since a
-   * cross-origin frame that is blocked or slow usually fires neither load nor
-   * error. ADR-003's Playwright check (one real embed reaching `load`) is the
-   * place to cover the browser behavior.
-   */
-
-  it('goes back to the frame when the connection returns', async () => {
-    setOnline(false);
-    const { rerender } = render(
-      <MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />,
-    );
-    expect(screen.getByText('Photo needs a connection')).toBeInTheDocument();
-
-    setOnline(true);
-    act(() => {
-      window.dispatchEvent(new Event('online'));
-    });
-    rerender(<MacaulayEmbed assetId="123" kind="bird" altText="A puffin" />);
-    await waitFor(() => {
-      expect(screen.getByTitle('A puffin')).toBeInTheDocument();
-    });
+    expect(screen.getByText('credit here')).toBeInTheDocument();
   });
 });
 
@@ -189,26 +41,6 @@ describe('placeholders are distinct (ADR-003)', () => {
   it('an uncurated row shows "Photo coming" with the kind silhouette', () => {
     render(<PhotoComing kind="egg" />);
     expect(screen.getByText('Photo coming')).toBeInTheDocument();
-    expect(screen.queryByText('Photo needs a connection')).toBeNull();
-    expect(screen.queryByRole('img', { name: /goose/ })).toBeNull();
-  });
-});
-
-describe('OfflineGoose', () => {
-  it('keeps the hat and the no-wifi symbol, in currentColor, under 40 commands', () => {
-    const { container } = render(<OfflineGoose />);
-    const svg = container.querySelector('svg');
-    expect(svg).toHaveAttribute('stroke', 'currentColor');
-    expect(svg).toHaveAttribute('aria-label', expect.stringContaining('hat'));
-    expect(svg?.getAttribute('aria-label')).toMatch(/wifi/i);
-
-    // Count path commands across every <path d="...">.
-    const commands = [...container.querySelectorAll('path')]
-      .map((path) => path.getAttribute('d') ?? '')
-      .join(' ')
-      .match(/[a-zA-Z]/g);
-    expect(commands?.length ?? 0).toBeLessThan(40);
-    expect(commands?.length ?? 0).toBeGreaterThan(0);
   });
 });
 
@@ -231,10 +63,7 @@ describe('Silhouette', () => {
 describe('CommonsImage and credits', () => {
   const commons = {
     provider: 'commons' as const,
-    mlAssetId: null,
-    fallbackMlAssetId: null,
     objectPosition: null,
-    embedUrl: null,
     credit: null,
     altText: 'A pile of poppy seeds',
     file: 'images/seeds/poppy.jpg',
@@ -291,33 +120,6 @@ describe('CommonsImage and credits', () => {
     const button = screen.getByRole('button', { name: 'Show photo credit' });
     expect(button).toBeVisible();
     expect(button).toHaveAttribute('aria-expanded', 'false');
-  });
-
-  it('credits a Macaulay asset with photographer, library and ML number', async () => {
-    render(
-      <ImageCredit
-        image={{
-          provider: 'macaulay',
-          mlAssetId: '633445471',
-          fallbackMlAssetId: null,
-          objectPosition: null,
-          embedUrl: null,
-          credit: 'R. Photographer',
-          altText: null,
-          file: null,
-          author: null,
-          license: null,
-          licenseUrl: null,
-          sourceUrl: null,
-        }}
-      />,
-    );
-    await userEvent
-      .setup()
-      .click(screen.getByRole('button', { name: 'Show photo credit' }));
-    expect(screen.getByText(/R\. Photographer/)).toBeVisible();
-    expect(screen.getByText(/Macaulay Library at the Cornell Lab/)).toBeVisible();
-    expect(screen.getByRole('link', { name: 'ML633445471' })).toBeInTheDocument();
   });
 
   it('renders nothing when there is no image', () => {

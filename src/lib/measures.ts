@@ -50,11 +50,16 @@ export function formatWeight(weightOz: number, units: Units): string {
 /**
  * The exact figure in the base unit, without the pound rollup: "17.6 oz".
  * The card repeats it under the headline weight (mockup 2).
+ *
+ * The decimals match the headline this annotates, so the two cannot appear to
+ * disagree. Above a pound `formatWeight` rounds the ounces part to one decimal,
+ * and showing "1 lb 7.4 oz" beside "23.36 oz" read as two different numbers;
+ * below a pound the headline keeps two decimals, because a seed at 0.04 oz has
+ * nothing left at one.
  */
 export function exactWeight(weightOz: number, units: Units): string {
-  return units === 'metric'
-    ? `${Math.round(weightOz * GRAMS_PER_OUNCE)} g`
-    : `${round(weightOz, 2)} oz`;
+  if (units === 'metric') return `${Math.round(weightOz * GRAMS_PER_OUNCE)} g`;
+  return `${round(weightOz, weightOz >= OUNCES_PER_POUND ? 1 : 2)} oz`;
 }
 
 /** The secondary line under the weight: "weight (17.6 oz)" in the mockup. */
@@ -86,9 +91,4 @@ export function indefiniteArticle(word: string): 'a' | 'an' {
   // style exception. The data validator would surface a new name; this is not
   // a general-purpose article picker.
   return 'aeiou'.includes(first) ? 'an' : 'a';
-}
-
-/** The full noun phrase shown on the card: "an American Robin egg". */
-export function comparisonPhrase(comparison: string): string {
-  return `${indefiniteArticle(comparison)} ${comparison}`;
 }

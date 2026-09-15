@@ -8,14 +8,16 @@
  */
 import { addDays, differenceInCalendarDays, isValid, parseISO } from 'date-fns';
 
-export const APP_NAME = 'Nestling';
-
 /** Gestational length in days from LMP to the due date. */
 export const GESTATION_DAYS = 280;
-/** Days from conception to the due date (280 − 14). */
-export const CONCEPTION_TO_DUE_DAYS = 266;
 /** Days by which conception trails LMP on the gestational-age scale. */
 export const LMP_TO_CONCEPTION_DAYS = 14;
+/**
+ * Days from conception to the due date. Derived rather than written as 266, so
+ * it cannot drift from the two figures it is the difference of. Setup shows it
+ * in the "how each method is calculated" panel.
+ */
+export const CONCEPTION_TO_DUE_DAYS = GESTATION_DAYS - LMP_TO_CONCEPTION_DAYS;
 
 /**
  * Cycle length, in days, and the value Naegele's rule assumes.

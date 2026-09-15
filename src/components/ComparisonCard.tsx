@@ -2,18 +2,18 @@ import { useRef, useState } from 'react';
 import type { WeekRow } from '../lib/schema';
 import type { Units } from '../lib/storage';
 import {
-  exactWeight,
   formatLength,
   formatWeight,
   indefiniteArticle,
   lengthLabel,
+  weightDetail,
   weightNeedsDetail,
 } from '../lib/measures';
 import { isConventionSwitchWeek } from '../lib/gestation';
 import { CommonsImage } from './CommonsImage';
 import { FactList } from './FactList';
 import { ImageCredit } from './ImageCredit';
-import { MacaulayEmbed, PhotoComing } from './MacaulayEmbed';
+import { PhotoComing } from './PhotoFrame';
 import { MeasureDialog, type Measure } from './MeasureDialog';
 import './ComparisonCard.css';
 
@@ -79,11 +79,9 @@ export function ComparisonCard({
             >
               <b className="mono">{formatWeight(row.weightOz, units)}</b>
               <span>
-                {row.weightIsUpperBound
-                  ? `weight, under ${exactWeight(row.weightOz, units)}`
-                  : weightNeedsDetail(row.weightOz, units)
-                    ? `weight (${exactWeight(row.weightOz, units)})`
-                    : 'weight'}
+                {row.weightIsUpperBound || weightNeedsDetail(row.weightOz, units)
+                  ? weightDetail(row.weightOz, units, row.weightIsUpperBound)
+                  : 'weight'}
               </span>
             </button>
           ) : null}
@@ -133,24 +131,13 @@ export function ComparisonCard({
   function renderPhoto() {
     const image = row.image;
     const kind = row.kind ?? 'bird';
-    const alt = image?.altText ?? `${comparison}, photograph`;
 
     const credit = <ImageCredit image={image} />;
 
-    if (image?.provider === 'macaulay' && image.mlAssetId) {
-      return (
-        <MacaulayEmbed
-          assetId={image.mlAssetId}
-          kind={kind}
-          altText={alt}
-          credit={credit}
-        />
-      );
-    }
     if (image?.provider === 'commons' && image.file) {
       return <CommonsImage image={image} base={base} credit={credit} />;
     }
-    // No asset curated yet: the kind silhouette, distinct from the offline goose.
+    // No photo sourced for this week yet (weeks 7, 9, 12, 13): the kind silhouette.
     return <PhotoComing kind={kind} />;
   }
 }

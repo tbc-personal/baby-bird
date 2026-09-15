@@ -6,15 +6,23 @@
  *
  *   D ~ π · Preterm + (1 − π) · Term
  *   Term    = Normal(μ_t, σ_t)
- *   Preterm = Normal(μ_p, σ_p) truncated to [140, 259)
+ *   Preterm = Normal(μ_p, σ_p)
  *
  * Preterm labor is a physiologically distinct process, not the tail of the term
  * one, which is the honest reason to give it its own component. It is also what
  * makes the fit possible: a single skew-normal (the family used before the
- * first follow-up, see the ADR-005 addenda) cannot meet the median, preterm and
+ * first family tried, see ADR-005 "Routes already tried") cannot meet the median,
  * post-term targets at once, and its left skew put the mode eight days after
- * the due date, which read as wrong on screen. A symmetric term component puts
- * the mode back beside the median.
+ * the due date. A symmetric term component puts the mode back beside the median.
+ *
+ * The preterm component used to be truncated to [140, 259). That truncation was
+ * the sole cause of the 34–37 week trough this model was criticised for: it cut
+ * the component off at 37w0d exactly, so the density fell eighteenfold in one
+ * day and the weekly figure read lower at 37 weeks than at 34. Removing it
+ * costs nothing — all four published targets are still met to the same
+ * tolerances — and the honest reading is that it was always wrong, since labor
+ * by the preterm process does not become impossible the moment 37 weeks is
+ * reached. See ADR-005, "Routes already tried".
  *
  * Nothing here is scraped from Datayze. The constraints below come from
  * published sources; the parameters were fitted to them offline by
@@ -27,12 +35,17 @@
 /**
  * The calibration targets.
  *
- * NOTE ON VERIFICATION: no build session so far has been able to open any of
- * these pages. The egress proxy refuses cdc.gov, ncbi.nlm.nih.gov and
- * datayze.com along with everything else, so the figures are those recorded in
- * `docs/research/datayze-features.md` during planning, plus two adjustment
- * factors taken from general obstetric literature. Confirm all of them before
- * release. See docs/decisions/ADR-005-datayze-derived-features.md.
+ * NOTE ON VERIFICATION (2026-09-14). Network access is open now, and two of
+ * these figures have finally been read at their sources rather than recalled:
+ * the CDC preterm rate (10.4% for 2022, confirmed on cdc.gov) and Jukic 2013
+ * (confirmed on PMC: median 268 days from ovulation, and a mean LMP-based
+ * gestation of 285 days with an SD of 14). Smith 2001 is still unread — OUP
+ * serves 403 to this environment — but Jukic's LMP median of 282 days
+ * corroborates its 283 to within a day.
+ *
+ * Still unverified, and still the weakest input: the two adjustment factors
+ * below that take the CDC figure to `pretermShare`. See
+ * docs/decisions/ADR-005-datayze-derived-features.md.
  */
 export const CALIBRATION = {
   /**
@@ -79,12 +92,34 @@ export const CALIBRATION = {
   pretermShare: 0.067,
 
   /**
-   * Post-term is delivery after 42w0d, i.e. after day 294. Roughly 6%, from
-   * Smith's survival curve. Tolerance ±1.5 points: the observed figure is
-   * depressed by induction, and this model contains no induction at all.
+   * The spread of the term component, in days. **This is a fitted target as of
+   * 2026-09-15, and it replaced the post-term one.**
+   *
+   * Jukic 2013 measures the SD of ovulation-based gestation at 10 days and of
+   * LMP-based gestation at 14; the difference is cycle-length variation, which
+   * this app removes by asking for cycle length (ADR-002). 10 is therefore the
+   * right scale for the population the app actually addresses.
+   *
+   * Fitting the post-term figure instead forced this to 6.8 days, which put the
+   * term component 3.7 SD below its mean at 37 weeks and left almost nothing
+   * there: the panel read a 1.3% chance over a whole week at 37w0d, then 5.7% a
+   * week later. See ADR-005, "Routes already tried".
+   */
+  termSd: 10,
+  termSdSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
+
+  /**
+   * Post-term is delivery after 42w0d, i.e. after day 294.
+   *
+   * **No longer a fitted target.** It was fitted to roughly 6%, read off
+   * Smith's survival curve during planning and never confirmed at source — the
+   * abstract, which has since been read, states the median but no post-term
+   * figure. Holding it forced a term spread far narrower than any measured one,
+   * and starved the weeks most readers are looking at. The model now reports
+   * whatever share it implies rather than being bent to hit this number.
    */
   postTermDay: 294,
-  postTermTargetShare: 0.06,
+  postTermReferenceShare: 0.06,
   postTermSource: 'https://doi.org/10.1093/humrep/16.7.1497',
 
   /**
@@ -105,14 +140,6 @@ export const CALIBRATION = {
   jukicSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
 } as const;
 
-/** The preterm component is truncated to this half-open interval, in days. */
-export const PRETERM_SUPPORT = {
-  /** 20w0d. Before this a loss is not a preterm birth. */
-  firstDay: 140,
-  /** 37w0d, exclusive. Preterm is by definition before this. */
-  lastDayExclusive: CALIBRATION.pretermDay,
-} as const;
-
 /**
  * The residuals of the fit in `scripts/fit-labor-model.ts`. All four targets
  * are met; these are the achieved values, pinned by the unit tests so a change
@@ -123,12 +150,18 @@ export const FIT_RESIDUALS = {
   medianDay: 283.0,
   /** Target 0.067 ±0.005. */
   pretermShare: 0.067,
-  /** Target 0.06 ±0.015. */
-  postTermShare: 0.06,
+  /** No longer a target: what the fit implies, given the others. */
+  postTermShare: 0.1472,
   /** Target: within 2 days of the median. */
   modeDay: 284,
   /** Not a target. Kept non-zero so the curve does not call 43 weeks impossible. */
-  beyond43WeeksShare: 0.0051,
+  beyond43WeeksShare: 0.0414,
+  /**
+   * The largest single-day fall in density between 34w0d and 40w0d, as a
+   * fraction of the previous day. The truncated model's worst was 0.945 — an
+   * eighteenfold cliff at 37w0d exactly. Pinned so the cliff cannot come back.
+   */
+  worstDailyFall34to40: 0,
 } as const;
 
 /**
@@ -162,7 +195,7 @@ export interface MixtureParams {
  * where most of it is observed. Nothing the app shows past 37 weeks depends on
  * the choice, because the conditional probability re-normalizes; what it does
  * change is the 34–37 week readings, and the sensitivity is documented in the
- * second ADR-005 addendum.
+ * ADR-005, "The model as it stands".
  *
  * σ_t = 6.83 days is tighter than Jukic 2013 measures the spread of term
  * gestation to be (roughly 10 to 13 days). It is forced by the post-term
@@ -172,11 +205,11 @@ export interface MixtureParams {
  * ones, and that this model runs slightly narrow past 41 weeks.
  */
 export const LABOR_MODEL: MixtureParams = {
-  pretermWeight: 0.066852,
+  pretermWeight: 0.078461,
   pretermMean: 245,
-  pretermSd: 14,
-  termMean: 283.6145,
-  termSd: 6.8341,
+  pretermSd: 18,
+  termMean: 284.0318,
+  termSd: CALIBRATION.termSd,
 };
 
 /** The panel appears from 34w0d (mockup 4). */
@@ -216,25 +249,13 @@ export function normalCdf(z: number): number {
 
 // --- the mixture ------------------------------------------------------------
 
-/** The mass of the untruncated preterm normal that falls inside its support. */
-function pretermNormalizer(model: MixtureParams): number {
-  const { pretermMean: mean, pretermSd: sd } = model;
-  return (
-    normalCdf((PRETERM_SUPPORT.lastDayExclusive - mean) / sd) -
-    normalCdf((PRETERM_SUPPORT.firstDay - mean) / sd)
-  );
-}
-
 /** Density of the mixture at `day`, in probability per day. */
 export function pdf(day: number, model: MixtureParams = LABOR_MODEL): number {
   const term =
     ((1 - model.pretermWeight) / model.termSd) *
     normalPdf((day - model.termMean) / model.termSd);
-  if (day < PRETERM_SUPPORT.firstDay || day >= PRETERM_SUPPORT.lastDayExclusive) {
-    return term;
-  }
   const preterm =
-    (model.pretermWeight / (model.pretermSd * pretermNormalizer(model))) *
+    (model.pretermWeight / model.pretermSd) *
     normalPdf((day - model.pretermMean) / model.pretermSd);
   return term + preterm;
 }
@@ -242,16 +263,9 @@ export function pdf(day: number, model: MixtureParams = LABOR_MODEL): number {
 /** Distribution function of the mixture: P(D ≤ day). */
 export function cdf(day: number, model: MixtureParams = LABOR_MODEL): number {
   const term = (1 - model.pretermWeight) * normalCdf((day - model.termMean) / model.termSd);
-  let preterm: number;
-  if (day >= PRETERM_SUPPORT.lastDayExclusive) preterm = 1;
-  else if (day <= PRETERM_SUPPORT.firstDay) preterm = 0;
-  else {
-    preterm =
-      (normalCdf((day - model.pretermMean) / model.pretermSd) -
-        normalCdf((PRETERM_SUPPORT.firstDay - model.pretermMean) / model.pretermSd)) /
-      pretermNormalizer(model);
-  }
-  return clamp01(term + model.pretermWeight * preterm);
+  const preterm =
+    model.pretermWeight * normalCdf((day - model.pretermMean) / model.pretermSd);
+  return clamp01(term + preterm);
 }
 
 /** P(fromDay ≤ D ≤ toDay). */

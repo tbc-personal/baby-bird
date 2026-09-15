@@ -30,9 +30,9 @@ const { stats } = report;
 console.log(
   [
     '',
-    `weeks:                 ${stats.weeks}`,
-    `facts:                 ${stats.facts} (${stats.unreviewedFacts} unreviewed)`,
-    `weeks missing facts:   ${stats.weeksMissingFacts}`,
+    `weeks:                  ${stats.weeks}`,
+    `facts:                  ${stats.facts} (${stats.unreviewedFacts} unreviewed)`,
+    `weeks missing facts:    ${stats.weeksMissingFacts}`,
     `weeks missing an image: ${stats.weeksMissingImage}`,
   ].join('\n'),
 );

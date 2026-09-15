@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import {
-  comparisonPhrase,
   formatLength,
   formatWeight,
   indefiniteArticle,
@@ -71,11 +70,6 @@ describe('indefiniteArticle', () => {
     ['Osprey', 'an'],
   ] as const)('%s → %s', (name, expected) => {
     expect(indefiniteArticle(name)).toBe(expected);
-  });
-
-  it('builds the card phrase', () => {
-    expect(comparisonPhrase('American Robin egg')).toBe('an American Robin egg');
-    expect(comparisonPhrase('Blue Jay')).toBe('a Blue Jay');
   });
 });
 

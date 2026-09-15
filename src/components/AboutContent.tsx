@@ -24,11 +24,6 @@ export function AboutContent() {
           for singleton pregnancies with spontaneous onset, not a prediction about any one
           pregnancy. This is not medical advice. Talk to your clinician.
         </p>
-        <p className="small">
-          A &ldquo;chance of continuing&rdquo; panel for early pregnancy is planned but not
-          built. It is deferred to a later version and will be opt-in and permanently
-          hideable, coming later.
-        </p>
       </section>
 
       <section className="section">
@@ -42,7 +37,7 @@ export function AboutContent() {
           <li>
             Due dates count 280 days from the first day of your last period, adjusted for
             your cycle length: a cycle longer than 28 days means later ovulation and a later
-            due date (ADR-002).
+            due date.
           </li>
           <li>
             Labor model: a two-part fit, one bell curve for preterm labor and one for term
@@ -70,10 +65,7 @@ export function AboutContent() {
 
       <section className="section">
         <h2>Non-commercial</h2>
-        <p>
-          Macaulay Library media may be embedded for non-commercial purposes only. This app
-          carries no ads and no paid tier, and must not be used commercially.
-        </p>
+        <p>This app carries no ads and no paid tier, and must not be used commercially.</p>
       </section>
 
       <section className="section section--last">

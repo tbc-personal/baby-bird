@@ -11,7 +11,6 @@ import {
   normalPdf,
   pdf,
   probabilityInWindow,
-  PRETERM_SUPPORT,
 } from '../../src/lib/laborProbability';
 
 /** The median, solved rather than read off, so its tolerance is in days. */
@@ -49,30 +48,57 @@ describe('normal primitives', () => {
 });
 
 describe('the mixture', () => {
-  it('is the term component alone once the preterm support has closed', () => {
-    for (const day of [259, 266, 283, 300]) {
+  it('is the weighted sum of its two untruncated components', () => {
+    for (const day of [240, 259, 266, 283, 300]) {
       const term =
         (1 - LABOR_MODEL.pretermWeight) *
         normalCdf((day - LABOR_MODEL.termMean) / LABOR_MODEL.termSd);
-      expect(cdf(day)).toBeCloseTo(term + LABOR_MODEL.pretermWeight, 10);
+      const preterm =
+        LABOR_MODEL.pretermWeight *
+        normalCdf((day - LABOR_MODEL.pretermMean) / LABOR_MODEL.pretermSd);
+      expect(cdf(day)).toBeCloseTo(term + preterm, 10);
     }
   });
 
-  it('places the whole preterm component before 37 weeks', () => {
-    // Everything the preterm component contributes has arrived by day 259.
-    expect(cdf(PRETERM_SUPPORT.lastDayExclusive)).toBeCloseTo(
-      LABOR_MODEL.pretermWeight +
-        (1 - LABOR_MODEL.pretermWeight) *
-          normalCdf(
-            (PRETERM_SUPPORT.lastDayExclusive - LABOR_MODEL.termMean) / LABOR_MODEL.termSd,
-          ),
-      10,
-    );
+  /**
+   * The preterm component used to be truncated at 37w0d, which made the density
+   * fall eighteenfold in a single day there. It is untruncated now, so a little
+   * of its mass lands after 37 weeks — which is the point: labor by the preterm
+   * process does not become impossible the instant 37 weeks is reached.
+   */
+  it('leaves some preterm mass after 37 weeks, rather than cutting it off', () => {
+    const after =
+      LABOR_MODEL.pretermWeight *
+      (1 -
+        normalCdf(
+          (CALIBRATION.pretermDay - LABOR_MODEL.pretermMean) / LABOR_MODEL.pretermSd,
+        ));
+    expect(after).toBeGreaterThan(0.01);
+    expect(after).toBeLessThan(0.03);
   });
 
+  /**
+   * π is the share following the *preterm process*, which is not the same as
+   * the share delivering preterm. Untruncated, some of that component lands
+   * after 37 weeks, so π has to exceed the 6.7% preterm target to leave 6.7%
+   * below day 259. It was 0.0669 while the component was truncated, when the
+   * two quantities were forced to coincide.
+   */
   it('gives the term component almost all of the mass', () => {
-    expect(LABOR_MODEL.pretermWeight).toBeGreaterThan(0.05);
-    expect(LABOR_MODEL.pretermWeight).toBeLessThan(0.08);
+    expect(LABOR_MODEL.pretermWeight).toBeGreaterThan(CALIBRATION.pretermShare);
+    expect(LABOR_MODEL.pretermWeight).toBeLessThan(0.1);
+  });
+
+  it('delivers the preterm target from a slightly larger preterm process', () => {
+    // The gap between the two is the preterm component's own right tail.
+    const spillover =
+      LABOR_MODEL.pretermWeight *
+      (1 -
+        normalCdf(
+          (CALIBRATION.pretermDay - LABOR_MODEL.pretermMean) / LABOR_MODEL.pretermSd,
+        ));
+    expect(cdf(CALIBRATION.pretermDay)).toBeCloseTo(CALIBRATION.pretermShare, 4);
+    expect(LABOR_MODEL.pretermWeight - spillover).toBeLessThan(CALIBRATION.pretermShare);
   });
 });
 
@@ -111,7 +137,7 @@ describe('the density is a proper density', () => {
   });
 });
 
-describe('the calibration targets (ADR-005, second addendum)', () => {
+describe('the calibration targets (ADR-005)', () => {
   it('the median is within one day of 283 (Smith 2001)', () => {
     expect(Math.abs(medianDay() - CALIBRATION.medianDay)).toBeLessThanOrEqual(1);
     expect(medianDay()).toBeCloseTo(FIT_RESIDUALS.medianDay, 2);
@@ -123,10 +149,41 @@ describe('the calibration targets (ADR-005, second addendum)', () => {
     expect(got).toBeCloseTo(FIT_RESIDUALS.pretermShare, 4);
   });
 
-  it('the post-term share is within 1.5 points of 6%', () => {
+  it('the term spread is the figure Jukic measures', () => {
+    expect(LABOR_MODEL.termSd).toBe(CALIBRATION.termSd);
+  });
+
+  /**
+   * The post-term share is an output, not a target, since 2026-09-15. Fitting
+   * it to 6% forced the term spread to 6.8 days, which left almost nothing at
+   * 37 weeks. This pins what the model now implies and that it exceeds the
+   * observed figure, which is expected: the model contains no induction.
+   */
+  it('reports a post-term share above the observed one, and says so', () => {
     const got = 1 - cdf(CALIBRATION.postTermDay);
-    expect(Math.abs(got - CALIBRATION.postTermTargetShare)).toBeLessThanOrEqual(0.015);
     expect(got).toBeCloseTo(FIT_RESIDUALS.postTermShare, 4);
+    expect(got).toBeGreaterThan(CALIBRATION.postTermReferenceShare);
+  });
+
+  /**
+   * The failure that started all of this: at 37w0d the panel read a 1.3% chance
+   * over a whole week, lower than the rate a day earlier and a quarter of what
+   * the only measured distribution to hand implies. The weekly figure must now
+   * rise every day from 34 weeks on.
+   */
+  it('rises every day from 34 weeks to 43 weeks', () => {
+    let previous = -1;
+    for (let day = 34 * 7; day <= 43 * 7; day += 1) {
+      const value = conditionalProbabilityInWindow(day, day + 7);
+      expect(value, `day ${day}`).toBeGreaterThanOrEqual(previous - 1e-12);
+      previous = value;
+    }
+  });
+
+  it('gives 37 weeks a plausible weekly chance, not a rounding artefact', () => {
+    const at37 = conditionalProbabilityInWindow(37 * 7, 38 * 7);
+    expect(at37).toBeGreaterThan(0.03);
+    expect(at37).toBeLessThan(0.05);
   });
 
   /**
@@ -194,23 +251,38 @@ describe('conditionalProbabilityInWindow', () => {
   });
 
   /**
-   * Between 34 and 37 weeks it is NOT monotonic, and this test pins the size of
-   * the dip rather than pretending otherwise. The preterm component runs out at
-   * 37w0d before the term one has begun, so the hazard falls there. It is a
-   * property of the four calibration targets, not of the assumed preterm shape:
-   * 6.7% of onsets have to fit below day 259 while the term component
-   * contributes almost nothing there. See the second ADR-005 addendum; this is
-   * the model's main open question for review.
+   * Superseded. This used to assert the 34-37 week readings sat in a flat band
+   * between 1% and 2%, which is what the narrow term component produced and
+   * what made 37 weeks read as low as 34. The band rises now; "rises every day
+   * from 34 weeks" above is the assertion that replaced it.
    */
-  it('dips between 34 and 37 weeks, by the documented amount', () => {
+  it('separates the late-preterm weeks from the early-term ones', () => {
     const at = (day: number) => conditionalProbabilityInWindow(day, day + 7);
-    expect(at(34 * 7)).toBeGreaterThan(at(CALIBRATION.pretermDay));
-    // The whole dip stays inside a range that reads as "unlikely either way".
-    for (let day = 34 * 7; day <= CALIBRATION.pretermDay; day += 1) {
-      expect(at(day), `day ${day}`).toBeGreaterThan(0.004);
-      expect(at(day), `day ${day}`).toBeLessThan(0.02);
+    // 34 to 36 weeks stay low: labor there is genuinely uncommon.
+    for (const week of [34, 35, 36]) {
+      expect(at(week * 7), `week ${week}`).toBeLessThan(0.02);
     }
-    expect(at(CALIBRATION.pretermDay)).toBeCloseTo(0.0048, 3);
+    // 37 weeks is several times 34, not equal to it.
+    expect(at(37 * 7)).toBeGreaterThan(at(34 * 7) * 2);
+  });
+
+  /**
+   * The cliff itself, pinned directly: the truncation made the density fall
+   * 94.5% in one day at 37w0d. Nothing in the late-preterm weeks may fall by
+   * more than a few per cent a day now.
+   */
+  it('has no single-day cliff in the density between 34 and 40 weeks', () => {
+    let worst = 0;
+    let worstDay = 0;
+    for (let day = 34 * 7; day < 40 * 7; day += 1) {
+      const fall = 1 - pdf(day + 1) / pdf(day);
+      if (fall > worst) {
+        worst = fall;
+        worstDay = day;
+      }
+    }
+    expect(worst, `worst fall at day ${worstDay}`).toBeLessThan(0.05);
+    expect(worst).toBeCloseTo(FIT_RESIDUALS.worstDailyFall34to40, 3);
   });
 
   it('stays a probability', () => {

@@ -51,7 +51,3 @@
   font-family: var(--font-mono);
   font-size: 8px;
 }
-
-.legend__break {
-  background: var(--ink-2);
-}

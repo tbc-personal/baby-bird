@@ -108,8 +108,9 @@ describe('the labor screen (mockup 4)', () => {
   it('names its sources and states the caveats', () => {
     save();
     renderLabor(261);
-    // Cited twice: once for the median, once for the 42-week figure.
-    expect(screen.getAllByRole('link', { name: 'Smith 2001' })).toHaveLength(2);
+    // Once, for the median. It was cited twice while the 42-week figure was a
+    // fitted target; that figure is an output now (ADR-005).
+    expect(screen.getAllByRole('link', { name: 'Smith 2001' })).toHaveLength(1);
     expect(
       screen.getByRole('link', { name: 'CDC preterm birth rate' }),
     ).toBeInTheDocument();

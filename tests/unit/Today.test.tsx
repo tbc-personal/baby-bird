@@ -4,7 +4,11 @@ import { TodayScreen } from '../../src/screens/Today';
 import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
-import { parseIsoDate } from '../../src/lib/gestation';
+import {
+  FIRST_COMPARISON_WEEK,
+  LAST_COMPARISON_WEEK,
+  parseIsoDate,
+} from '../../src/lib/gestation';
 import { COMPARISON_WEEKS, weekRow } from '../../src/data/comparisons';
 
 function day(iso: string): Date {
@@ -94,6 +98,63 @@ describe('Today screen (mockup 2)', () => {
     saveLmp('2026-09-20');
     renderToday('2026-09-06');
     expect(screen.getByText('That date has not arrived yet')).toBeInTheDocument();
+  });
+
+  describe('the trimester pill follows the week on screen', () => {
+    // Today is week 25 (second trimester) throughout: an LMP of 2026-03-29 puts
+    // 2026-09-20 at 25w0d. Browsing away must move the pill with the card.
+    const LMP = '2026-03-29';
+    const TODAY = '2026-09-20';
+
+    it('reads the current trimester when not browsing', () => {
+      saveLmp(LMP);
+      renderToday(TODAY);
+      expect(screen.getByText('Second trimester')).toBeInTheDocument();
+    });
+
+    it.each([
+      [3, 'First trimester'],
+      [13, 'First trimester'],
+      [14, 'Second trimester'],
+      [27, 'Second trimester'],
+      [28, 'Third trimester'],
+      [42, 'Third trimester'],
+    ])('reads week %i as %s while browsing', (week, label) => {
+      saveLmp(LMP);
+      renderToday(TODAY, week);
+      expect(screen.getByText(label)).toBeInTheDocument();
+    });
+
+    it.each([
+      [3, '7.5%'],
+      [20, '50.0%'],
+      [40, '100.0%'],
+      [42, '100.0%'],
+    ])('sets the bar to week %i of the 40-week term (%s)', (week, width) => {
+      saveLmp(LMP);
+      const { container } = renderToday(TODAY, week);
+      expect(container.querySelector('.bar i')).toHaveStyle({ width });
+    });
+
+    it('leaves the due date alone, since it does not depend on the viewed week', () => {
+      saveLmp(LMP);
+      const { unmount } = renderToday(TODAY);
+      const due = screen.getByText(/^due /).textContent;
+      unmount();
+      renderToday(TODAY, 3);
+      expect(screen.getByText(/^due /).textContent).toBe(due);
+    });
+  });
+
+  it('names the real first week in the out-of-range empty state, not a hard-coded 2', () => {
+    saveLmp('2026-03-29');
+    renderToday('2026-09-06', 99);
+    expect(screen.getByText('No comparison for week 99')).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        `The table runs from week ${FIRST_COMPARISON_WEEK} to week ${LAST_COMPARISON_WEEK}.`,
+      ),
+    ).toBeInTheDocument();
   });
 });
 

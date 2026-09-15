@@ -13,7 +13,8 @@ The app's whole state is two values (a date and a method). Everything else is de
 ## Consequences
 
 - All computation is client-side pure functions, which makes the due-date and probability math trivially unit-testable.
-- Offline works for everything except the Macaulay Library embeds (see ADR-003), which need a placeholder when offline.
+- Offline works for everything, photos included: every image is downloaded into the repo and served
+  locally, so there is no offline case to place a fallback for (ADR-003).
 - Sharing between partners is by URL (see ADR-006), not by account.
 - Native app-store presence is out of scope. Revisit only if push notifications become a requirement.
 

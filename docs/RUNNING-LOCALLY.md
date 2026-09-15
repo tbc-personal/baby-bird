@@ -78,8 +78,9 @@ source reload in the browser straight away.
 
 - It opens on **Setup**, because no date is saved yet. Enter one and press **Show me my
   nestling**.
-- **Every card shows a bird silhouette tagged "Photo coming."** That is expected, not a bug:
-  no image has been curated yet. See `docs/CURATION.md`.
+- **36 of the 40 cards show a real photo**, served from `public/images/`. The four egg weeks —
+  **7, 9, 12, and 13** — show a bird silhouette tagged "Photo coming" instead: those are the only
+  weeks with no Commons photo curated yet. See `docs/CURATING-PHOTOS.md`.
 - Dark mode follows your operating system's setting, so flip your OS theme to check both.
 - Your date lives in that browser only. Clearing site data resets the app to Setup.
 
@@ -99,6 +100,28 @@ Only `npm run dev` is needed to look at the app. The rest are what CI runs:
 Do **not** run `npm run test:e2e:update` to fix failing screenshot tests. Those baselines are
 pixel comparisons of text, which rasterizes differently on different machines, so they have to
 be generated on the GitHub runner that checks them. See the README.
+
+## Reviewing the bird facts
+
+Every fact in `data/comparisons.json` carries a `reviewed` flag. Setting it to
+`true` is the author's act and no script may do it — see ADR-004 for why, and
+for the one narrow exception.
+
+1. Run the app with `?review=1` on the URL, or just `npm run dev`, where review
+   mode is always on. Each unreviewed fact shows a small **draft** chip beside
+   it, so the timeline shows exactly what is left.
+2. Walk the weeks. For each fact, open the URLs in its `sources[]` and confirm
+   the claim actually appears there.
+3. Edit for accuracy and for voice in `data/comparisons.json`, then set
+   `"reviewed": true` on that fact.
+4. `npm run validate-data` prints the remaining count. Release wants zero.
+
+Two things worth reading first, because they narrow the job considerably:
+`docs/research/fact-check-summary.md` records a pass that checked every fact
+against downloaded source text and lists the three still unresolved, and
+`docs/research/fact-check-<range>.md` holds the per-fact evidence. Facts that
+pass already read `reviewed: true`; what is left is what that pass could not
+settle.
 
 ## If something goes wrong
 

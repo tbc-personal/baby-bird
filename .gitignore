@@ -7,7 +7,7 @@ playwright-report/
 test-results/
 tests/e2e/__screenshots__/*/*-actual.png
 tests/e2e/__screenshots__/*/*-diff.png
-coverage/
+*.tsbuildinfo
 
 # Scratch git worktrees created by Claude Code subagents.
 .claude/worktrees/
@@ -20,3 +20,9 @@ coverage/
 
 # Crop preview sheets (regenerate with `npm run crop-preview`)
 .crop-preview/
+
+# Working sheets from `npm run survey-commons`: candidate shortlists and the raw
+# survey JSON. Regenerate them when curating; the chosen photos and the reason
+# for each live in docs/research/commons-images.json, which is committed.
+docs/research/commons-shortlist-*.md
+docs/research/commons-survey-*.json

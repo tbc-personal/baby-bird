@@ -5,7 +5,7 @@
  * for the seed weeks. The Macaulay route turned out to be unshippable, so every
  * week now needs a Commons file, and the expensive half of that is *finding*
  * one: Commons holds tens of thousands of bird photos, most of them wrong for a
- * 150px-tall strip that gets centre-cropped.
+ * 200px-tall strip that gets centre-cropped.
  *
  * This script does the finding mechanically so the only human step left is
  * looking at a handful of thumbnails. For each week it walks the species'

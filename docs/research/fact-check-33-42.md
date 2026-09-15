@@ -1,5 +1,11 @@
 # Fact-check: weeks 33–42
 
+> **Week numbers here are the old ones.** These reports were written when the
+> comparison table began at week 2. It begins at week 3 now: the poppy seed moved
+> from week 2 to week 3, and the week-3 "grain of grit" comparison was dropped.
+> Read the Comparison column, not the Week column — that is what
+> `npm run mark-reviewed` matches on.
+
 Opened and read: `en.wikipedia.org` articles for every week, the Audubon Field
 Guide page for every week, and the Birds of the World free introduction for
 every week, all via the pre-downloaded corpus in `.fc/corpus/week-33.json` …

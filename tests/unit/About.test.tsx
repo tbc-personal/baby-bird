@@ -91,8 +91,40 @@ describe('About, as the lower half of Setup', () => {
     expect(screen.getByText(/must not be used commercially/)).toBeInTheDocument();
     expect(screen.getByText(/stored on (your|this) device only/i)).toBeInTheDocument();
     expect(screen.getByText(/no accounts, no analytics/)).toBeInTheDocument();
-    // ADR-005: the miscarriage panel is deferred, and says so.
-    expect(screen.getByText(/coming later/)).toBeInTheDocument();
+  });
+
+  /**
+   * ADR-005 defers the miscarriage "chance of continuing" panel to a later
+   * version. About used to announce that, which told a reader about a feature
+   * they cannot use and said "a later version" and "coming later" in one
+   * breath. The deferral is recorded in the ADR; the product does not need to
+   * carry it.
+   */
+  it('does not advertise features that are not built', () => {
+    save();
+    renderAbout();
+    expect(screen.queryByText(/coming later/i)).toBeNull();
+    expect(screen.queryByText(/chance of continuing/i)).toBeNull();
+  });
+
+  /**
+   * The non-commercial statement used to justify itself with Macaulay Library
+   * embed terms. Those embeds were removed; the Commons photographs that
+   * replaced them permit commercial use, so the restriction is the project's
+   * own choice and has to stop citing a licence that no longer applies.
+   */
+  it('states the non-commercial choice without citing a licence it does not rely on', () => {
+    save();
+    renderAbout();
+    expect(screen.getByText(/must not be used commercially/)).toBeInTheDocument();
+    expect(screen.queryByText(/Macaulay/i)).toBeNull();
+  });
+
+  /** ADR references are for the repository, not for the reader. */
+  it('keeps internal document references out of the copy', () => {
+    save();
+    renderAbout();
+    expect(screen.queryByText(/ADR-\d/)).toBeNull();
   });
 
   it('credits every source the project uses', () => {
