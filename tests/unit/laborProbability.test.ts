@@ -149,10 +149,41 @@ describe('the calibration targets (ADR-005, second addendum)', () => {
     expect(got).toBeCloseTo(FIT_RESIDUALS.pretermShare, 4);
   });
 
-  it('the post-term share is within 1.5 points of 6%', () => {
+  it('the term spread is the figure Jukic measures', () => {
+    expect(LABOR_MODEL.termSd).toBe(CALIBRATION.termSd);
+  });
+
+  /**
+   * The post-term share is an output, not a target, since 2026-09-15. Fitting
+   * it to 6% forced the term spread to 6.8 days, which left almost nothing at
+   * 37 weeks. This pins what the model now implies and that it exceeds the
+   * observed figure, which is expected: the model contains no induction.
+   */
+  it('reports a post-term share above the observed one, and says so', () => {
     const got = 1 - cdf(CALIBRATION.postTermDay);
-    expect(Math.abs(got - CALIBRATION.postTermTargetShare)).toBeLessThanOrEqual(0.015);
     expect(got).toBeCloseTo(FIT_RESIDUALS.postTermShare, 4);
+    expect(got).toBeGreaterThan(CALIBRATION.postTermReferenceShare);
+  });
+
+  /**
+   * The failure that started all of this: at 37w0d the panel read a 1.3% chance
+   * over a whole week, lower than the rate a day earlier and a quarter of what
+   * the only measured distribution to hand implies. The weekly figure must now
+   * rise every day from 34 weeks on.
+   */
+  it('rises every day from 34 weeks to 43 weeks', () => {
+    let previous = -1;
+    for (let day = 34 * 7; day <= 43 * 7; day += 1) {
+      const value = conditionalProbabilityInWindow(day, day + 7);
+      expect(value, `day ${day}`).toBeGreaterThanOrEqual(previous - 1e-12);
+      previous = value;
+    }
+  });
+
+  it('gives 37 weeks a plausible weekly chance, not a rounding artefact', () => {
+    const at37 = conditionalProbabilityInWindow(37 * 7, 38 * 7);
+    expect(at37).toBeGreaterThan(0.03);
+    expect(at37).toBeLessThan(0.05);
   });
 
   /**
@@ -220,24 +251,19 @@ describe('conditionalProbabilityInWindow', () => {
   });
 
   /**
-   * Between 34 and 37 weeks the figure is still not monotonic — a trough
-   * between a preterm process centred near 35 weeks and a term one centred
-   * near 40.5 is real, not an artifact. What is pinned here is that it is now
-   * shallow. The truncated model read 1.56% at 34w0d and 0.48% at 37w0d, so
-   * the panel told someone at 37 weeks they were less likely to go into labor
-   * than at 34, and showed it as "under 1%". See the third ADR-005 addendum.
+   * Superseded. This used to assert the 34-37 week readings sat in a flat band
+   * between 1% and 2%, which is what the narrow term component produced and
+   * what made 37 weeks read as low as 34. The band rises now; "rises every day
+   * from 34 weeks" above is the assertion that replaced it.
    */
-  it('keeps the 34-37 week readings shallow and close together', () => {
+  it('separates the late-preterm weeks from the early-term ones', () => {
     const at = (day: number) => conditionalProbabilityInWindow(day, day + 7);
-    const weekly = [34, 35, 36, 37].map((w) => at(w * 7));
-    for (const value of weekly) {
-      expect(value).toBeGreaterThan(0.01);
-      expect(value).toBeLessThan(0.02);
+    // 34 to 36 weeks stay low: labor there is genuinely uncommon.
+    for (const week of [34, 35, 36]) {
+      expect(at(week * 7), `week ${week}`).toBeLessThan(0.02);
     }
-    // No reading in the band may sit below four fifths of the highest one.
-    expect(Math.min(...weekly) / Math.max(...weekly)).toBeGreaterThan(0.8);
-    // 37 weeks is no longer the low point of the band.
-    expect(at(37 * 7)).toBeGreaterThan(at(36 * 7));
+    // 37 weeks is several times 34, not equal to it.
+    expect(at(37 * 7)).toBeGreaterThan(at(34 * 7) * 2);
   });
 
   /**

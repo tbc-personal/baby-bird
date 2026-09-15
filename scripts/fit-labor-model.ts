@@ -13,19 +13,22 @@
  *   Preterm = Normal(μ_p, σ_p)
  *
  * μ_p and σ_p are assumptions (see the note on LABOR_MODEL), so the fit solves
- * for the other three against the three targets:
+ * for the other two against these targets:
  *
  *   preterm:   π Φ((259 − μ_p)/σ_p) + (1 − π) Φ((259 − μ_t)/σ_t) = 0.067
  *   median:    π Φ((283 − μ_p)/σ_p) + (1 − π) Φ((283 − μ_t)/σ_t) = 0.5
- *   post-term: π (1 − Φ((294 − μ_p)/σ_p)) + (1 − π) (1 − Φ((294 − μ_t)/σ_t)) = 0.06
+ *   spread:    σ_t = 10 days, from Jukic 2013
  *
- * The preterm component was truncated to [140, 259) until 2026-09-14, which let
- * the three equations separate in closed form — and which was also the cause of
- * the 34–37 week trough, since it cut the density off at 37w0d exactly. Without
- * the truncation the preterm term no longer vanishes from any of the three, so
- * they are solved numerically instead: bisect σ_t and μ_t for the post-term and
- * median targets at a given π, then step π toward the preterm target and
- * repeat. See the third ADR-005 addendum.
+ * Two changes on 2026-09-14 and -15, both recorded in the ADR-005 addenda. The
+ * preterm component was truncated to [140, 259), which cut the density off at
+ * 37w0d exactly and made it fall eighteenfold in a day; it is untruncated now.
+ * And σ_t was fitted to a post-term share of 6%, which forced it to 6.8
+ * days — narrow enough that the term component sat 3.7 SD below its mean at 37
+ * weeks and contributed almost nothing there. σ_t is a target now, and the
+ * post-term share is an output.
+ *
+ * That leaves two unknowns for two targets, solved numerically: bisect μ_t for
+ * the median at a given π, then step π toward the preterm target and repeat.
  */
 import {
   CALIBRATION,
@@ -58,50 +61,29 @@ function mixtureCdf(day: number, m: MixtureParams): number {
 }
 
 function fit(pretermMean: number, pretermSd: number): MixtureParams {
-  // With the preterm component untruncated it contributes to all three targets,
-  // so they no longer separate in closed form. Solve them as a nest: for a
-  // given π, bisect σ_t against the post-term target with μ_t bisected against
-  // the median inside it, then step π toward the preterm target and repeat.
+  // σ_t is a target now rather than a free parameter, which leaves two unknowns
+  // for two targets: μ_t for the median, π for the preterm share. Bisect μ_t
+  // inside a step on π. The post-term share is whatever this implies, and is
+  // reported below rather than fitted.
+  const termSd = CALIBRATION.termSd;
   let pretermWeight: number = CALIBRATION.pretermShare;
   let termMean = 283.5;
-  let termSd = 7;
 
-  const medianFor = (pi: number, sd: number): number => {
+  for (let pass = 0; pass < 500; pass += 1) {
     let low = 250;
     let high = 320;
-    for (let i = 0; i < 60; i += 1) {
+    for (let i = 0; i < 200; i += 1) {
       const mid = (low + high) / 2;
-      const model = {
-        pretermWeight: pi,
-        pretermMean,
-        pretermSd,
-        termMean: mid,
-        termSd: sd,
-      };
-      // The median rises with μ_t, so bisect on it directly.
+      const model = { pretermWeight, pretermMean, pretermSd, termMean: mid, termSd };
+      // The median falls as μ_t rises, so a CDF above one half means μ_t is low.
       if (mixtureCdf(MEDIAN_DAY, model) > 0.5) low = mid;
       else high = mid;
     }
-    return (low + high) / 2;
-  };
-
-  for (let pass = 0; pass < 200; pass += 1) {
-    let lowSd = 3;
-    let highSd = 30;
-    for (let i = 0; i < 60; i += 1) {
-      const sd = (lowSd + highSd) / 2;
-      const mean = medianFor(pretermWeight, sd);
-      const model = { pretermWeight, pretermMean, pretermSd, termMean: mean, termSd: sd };
-      if (1 - mixtureCdf(POST_TERM_DAY, model) < CALIBRATION.postTermTargetShare)
-        lowSd = sd;
-      else highSd = sd;
-      termSd = sd;
-      termMean = mean;
-    }
+    termMean = (low + high) / 2;
     const model = { pretermWeight, pretermMean, pretermSd, termMean, termSd };
     const error = mixtureCdf(PRETERM_DAY, model) - CALIBRATION.pretermShare;
-    if (Math.abs(error) < 1e-9) break;
-    pretermWeight = Math.max(1e-4, Math.min(0.5, pretermWeight - error * 0.8));
+    if (Math.abs(error) < 1e-12) break;
+    pretermWeight = Math.max(1e-6, Math.min(0.6, pretermWeight - error * 0.7));
   }
 
   return { pretermWeight, pretermMean, pretermSd, termMean, termSd };
@@ -180,9 +162,9 @@ row(
 );
 row(
   'P(D > 294), post-term',
-  `${CALIBRATION.postTermTargetShare.toFixed(4)} ±0.015`,
+  `${CALIBRATION.postTermReferenceShare.toFixed(4)} (ref)`,
   stats.postTerm.toFixed(4),
-  Math.abs(stats.postTerm - CALIBRATION.postTermTargetShare) <= 0.015 ? 'met' : 'MISSED',
+  'not fitted: see CALIBRATION',
 );
 row(
   'mode of D, vs the median',
@@ -232,9 +214,9 @@ for (const day of [238, 259, 266, 273, 280, 287, 294]) {
 // ---------------------------------------------------------------------------
 
 console.log(
-  '\nThe 34-37 week band, which the truncated model got wrong. A trough between\n' +
-    'a preterm process centred near 35 weeks and a term one near 40.5 is real;\n' +
-    'the truncation made it a cliff. Weekly figures across the band:\n',
+  '\nThe late-preterm and early-term band, which two earlier fits got wrong: the\n' +
+    'truncation made a cliff of it, and a term spread fitted to the post-term\n' +
+    'figure then left 37 weeks reading lower than 34. It rises throughout now:\n',
 );
 for (const week of [34, 35, 36, 37, 38]) {
   const day = week * 7;
@@ -251,11 +233,13 @@ for (let day = 34 * 7; day < 40 * 7; day += 1) {
   }
 }
 console.log(
-  `\n  largest single-day fall in density, 34w-40w: ${(worstFall * 100).toFixed(1)}% ` +
-    `at day ${worstDay} (${Math.floor(worstDay / 7)}w${worstDay % 7}d)`,
+  worstFall <= 0
+    ? '\n  the density never falls between 34w and 40w'
+    : `\n  largest single-day fall in density, 34w-40w: ${(worstFall * 100).toFixed(1)}% ` +
+        `at day ${worstDay} (${Math.floor(worstDay / 7)}w${worstDay % 7}d)`,
 );
 console.log(
-  '  The truncated model fell 94.5% in one day at 37w0d, which put the weekly\n' +
-    '  figure lower at 37 weeks than at 34 and showed it as "under 1%".\n' +
-    '  See the third ADR-005 addendum.',
+  '  For comparison: the truncated model fell 94.5% in one day at 37w0d, and\n' +
+    '  the fit that replaced it still read 1.30% at 37 weeks against 1.33% at 34.\n' +
+    '  See the third and fourth ADR-005 addenda.',
 );

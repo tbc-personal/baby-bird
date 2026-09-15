@@ -92,12 +92,34 @@ export const CALIBRATION = {
   pretermShare: 0.067,
 
   /**
-   * Post-term is delivery after 42w0d, i.e. after day 294. Roughly 6%, from
-   * Smith's survival curve. Tolerance ±1.5 points: the observed figure is
-   * depressed by induction, and this model contains no induction at all.
+   * The spread of the term component, in days. **This is a fitted target as of
+   * 2026-09-15, and it replaced the post-term one.**
+   *
+   * Jukic 2013 measures the SD of ovulation-based gestation at 10 days and of
+   * LMP-based gestation at 14; the difference is cycle-length variation, which
+   * this app removes by asking for cycle length (ADR-002). 10 is therefore the
+   * right scale for the population the app actually addresses.
+   *
+   * Fitting the post-term figure instead forced this to 6.8 days, which put the
+   * term component 3.7 SD below its mean at 37 weeks and left almost nothing
+   * there: the panel read a 1.3% chance over a whole week at 37w0d, then 5.7% a
+   * week later. See the fourth ADR-005 addendum.
+   */
+  termSd: 10,
+  termSdSource: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3777570/',
+
+  /**
+   * Post-term is delivery after 42w0d, i.e. after day 294.
+   *
+   * **No longer a fitted target.** It was fitted to roughly 6%, read off
+   * Smith's survival curve during planning and never confirmed at source — the
+   * abstract, which has since been read, states the median but no post-term
+   * figure. Holding it forced a term spread far narrower than any measured one,
+   * and starved the weeks most readers are looking at. The model now reports
+   * whatever share it implies rather than being bent to hit this number.
    */
   postTermDay: 294,
-  postTermTargetShare: 0.06,
+  postTermReferenceShare: 0.06,
   postTermSource: 'https://doi.org/10.1093/humrep/16.7.1497',
 
   /**
@@ -128,18 +150,18 @@ export const FIT_RESIDUALS = {
   medianDay: 283.0,
   /** Target 0.067 ±0.005. */
   pretermShare: 0.067,
-  /** Target 0.06 ±0.015. */
-  postTermShare: 0.06,
+  /** No longer a target: what the fit implies, given the others. */
+  postTermShare: 0.1472,
   /** Target: within 2 days of the median. */
   modeDay: 284,
   /** Not a target. Kept non-zero so the curve does not call 43 weeks impossible. */
-  beyond43WeeksShare: 0.0051,
+  beyond43WeeksShare: 0.0414,
   /**
    * The largest single-day fall in density between 34w0d and 40w0d, as a
    * fraction of the previous day. The truncated model's worst was 0.945 — an
    * eighteenfold cliff at 37w0d exactly. Pinned so the cliff cannot come back.
    */
-  worstDailyFall34to40: 0.028,
+  worstDailyFall34to40: 0,
 } as const;
 
 /**
@@ -183,11 +205,11 @@ export interface MixtureParams {
  * ones, and that this model runs slightly narrow past 41 weeks.
  */
 export const LABOR_MODEL: MixtureParams = {
-  pretermWeight: 0.08557,
+  pretermWeight: 0.078461,
   pretermMean: 245,
   pretermSd: 18,
-  termMean: 283.768,
-  termSd: 6.769,
+  termMean: 284.0318,
+  termSd: CALIBRATION.termSd,
 };
 
 /** The panel appears from 34w0d (mockup 4). */

@@ -273,3 +273,91 @@ independent support for the first.
 `0.093 × 0.72 ≈ 0.067` remains two round numbers from general literature. They
 are now the only wholly unsourced numbers in the model, and remain the first
 thing to check.
+
+## Fourth addendum (2026-09-15): the post-term target was starving the term weeks
+
+The third addendum removed the truncation and called the trough fixed. It was
+not. The author read the panel at 37w0d, saw **1.3% over a whole week**, and said
+that must be wrong — that 1% sounds like a figure for the next _day_, not the
+next seven. They were right, and the check that would have caught it was never
+run: at no point had anyone asked what share of pregnancies the model puts in
+each week, or compared that to a measured distribution.
+
+Doing so is damning:
+
+| Week | Model, as of addendum 3 | Jukic 2013, N(285, 14) on the LMP scale |
+| ---- | ----------------------- | --------------------------------------- |
+| 37w  | **1.2%**                | **5.6%**                                |
+| 38w  | 5.2%                    | 10.8%                                   |
+| 39w  | 21.6%                   | 16.5%                                   |
+| 40w  | **36.2%**               | 19.6%                                   |
+| 41w  | 23.0%                   | 18.3%                                   |
+
+Week 37 was about a quarter of what the only measured distribution to hand
+implies, and week 40 alone absorbed 36% of all pregnancies. The weekly sequence
+ran 1.33, 1.35, 1.19, 1.30, then **5.69** — a fourfold step between consecutive
+weeks. The hazard of spontaneous labor climbs into term; it does not sit flat
+for a month and then quadruple.
+
+### The cause, and what changes
+
+`σ_t` was 6.8 days. At 37w0d that is 3.66 SD below the term mean, so the term
+component contributed essentially nothing and the week-37 mass was leftover
+preterm. `σ_t` was not chosen: it was **forced** by fitting `P(D > 294) = 0.06`.
+Holding the median at 283 and that share at 6% admits no wider term component.
+
+So the post-term share stops being a target, and the term spread becomes one:
+
+- **`σ_t = 10` days**, from Jukic 2013, which measures the SD of ovulation-based
+  gestation at 10 and of LMP-based at 14. The difference is cycle-length
+  variation, which this app removes by asking for cycle length (ADR-002), so 10
+  is the right scale for the population it addresses.
+- **`P(D > 294)` is now an output**: 14.7%, against the ~6% previously fitted.
+
+Fitted parameters: `π = 0.078461`, `μ_t = 284.0318`, `σ_t = 10`, with `μ_p = 245`
+and `σ_p = 18` unchanged. Median 283.000, `P(D < 259)` 0.0670, mode 284.
+
+### Why the 6% was the figure to give up
+
+It was always the weakest of the four. Smith 2001's abstract has since been read
+(via Europe PMC; the full text is still paywalled to this environment) and it
+states the median of 283 days — which is now **verified** — and **no post-term
+figure at all**. The 6% was read off a survival curve during planning and has
+never been confirmed.
+
+Smith's cohort also argues against transplanting any spread from it: he selected
+1514 women whose menstrual dating and first-trimester crown-rump length agreed
+**within one day**. That is a deliberately dating-accurate sample, narrower than
+the population using this app, who type in a period date from memory.
+
+A post-term share of 14.7% is higher than delivery records show, and that is
+expected rather than embarrassing: this model contains no induction at all,
+while the observed 6% comes from a population where most pregnancies past 41
+weeks are induced. The labor screen says so in as many words now, rather than
+quoting 6% as something the curve was fitted to.
+
+### What it costs, and what it buys
+
+| Week  | Addendum 3 | Now       |
+| ----- | ---------- | --------- |
+| 34w0d | 1.33%      | 1.22%     |
+| 35w0d | 1.35%      | 1.30%     |
+| 36w0d | 1.19%      | 1.61%     |
+| 37w0d | 1.30%      | **3.73%** |
+| 38w0d | 5.69%      | 10.73%    |
+| 39w0d | 24.87%     | 24.29%    |
+
+The weekly figure now **rises every single day from 34 weeks to 43**, and the
+density never falls anywhere between 34 and 40 weeks. Both are asserted in
+`tests/unit/laborProbability.test.ts`, replacing the test that pinned the flat
+1–2% band as though it were correct.
+
+### The lesson worth keeping
+
+Two successive fits met every stated target and were still wrong on screen,
+because the targets described the _tails_ — a median, a preterm share, a
+post-term share — and nothing described the _middle_, which is the part almost
+every reader looks at. A calibration target set that pins only the ends of a
+distribution will let the middle go anywhere. The weekly table above is now
+printed by `npm run fit-labor-model` on every run, so the shape is visible
+rather than inferred from residuals that all say "met".
