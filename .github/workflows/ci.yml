@@ -1,17 +1,31 @@
 name: CI
 
-# Branch pushes are covered by the pull_request run, so `push` is only for the
-# default branch. Running both meant 38 of this branch's 42 commits were built
-# twice: the two events produce different `github.ref` values, so the
-# concurrency group below never collapsed them.
+# Every push to every branch, so work is checked as it is written rather than
+# only once a pull request exists. Restricting `push` to the default branch meant
+# a branch could accumulate any number of commits with no CI at all: this one
+# reached seventeen, and nothing ran until a merge commit landed on the PR.
+#
+# Running `push` and `pull_request` together is what caused the double builds
+# this trigger was narrowed to stop. Two changes prevent that instead:
+#
+#   - `pull_request` drops `synchronize`, so a push to a branch with an open PR
+#     fires one event, not two. What is left is the merge-commit check at the
+#     moment a PR opens, which is the one thing a `push` run cannot do — it
+#     builds the head alone, not head merged into the base.
+#   - The concurrency group keys on the *head branch* rather than `github.ref`.
+#     That was the real bug: a push reports `refs/heads/x` and a pull_request
+#     reports `refs/pull/N/merge`, so the two never shared a group and neither
+#     could cancel the other.
 on:
   push:
-    branches: [main]
+    branches: ['**']
   pull_request:
+    types: [opened, reopened, ready_for_review]
 
-# Cancel a superseded run rather than paying for both.
+# Cancel a superseded run rather than paying for both. The fallback covers push
+# events, where `github.event.pull_request` is null.
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.event.pull_request.head.ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
