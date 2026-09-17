@@ -1,9 +1,11 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { TodayScreen } from '../../src/screens/Today';
 import { ComparisonCard } from '../../src/components/ComparisonCard';
 import { AppStateProvider } from '../../src/state';
 import { STORAGE_KEY } from '../../src/lib/storage';
+import { hrefFor } from '../../src/lib/router';
 import {
   FIRST_COMPARISON_WEEK,
   LAST_COMPARISON_WEEK,
@@ -143,6 +145,41 @@ describe('Today screen (mockup 2)', () => {
       unmount();
       renderToday(TODAY, 3);
       expect(screen.getByText(/^due /).textContent).toBe(due);
+    });
+  });
+
+  describe('tapping the due-date pill', () => {
+    it('is hidden until the pill is tapped, then offers Setup and links there', async () => {
+      const user = userEvent.setup();
+      saveLmp('2026-03-29');
+      renderToday('2026-09-06');
+
+      const pill = screen.getByRole('button', { name: 'due Jan 3' });
+      expect(pill).toHaveAttribute('aria-expanded', 'false');
+      // jsdom does not apply stylesheets, so this can only check the attribute.
+      const panel = document.getElementById(pill.getAttribute('aria-controls') ?? '');
+      expect(panel).toHaveAttribute('hidden');
+
+      await user.click(pill);
+
+      expect(pill).toHaveAttribute('aria-expanded', 'true');
+      expect(panel).not.toHaveAttribute('hidden');
+      expect(screen.getByText('Change your due date?')).toBeVisible();
+      const link = screen.getByRole('link', { name: 'Yes, go to Setup' });
+      expect(link).toHaveAttribute('href', hrefFor({ name: 'setup' }));
+    });
+
+    it('closes again on a second tap of the pill', async () => {
+      const user = userEvent.setup();
+      saveLmp('2026-03-29');
+      renderToday('2026-09-06');
+
+      const pill = screen.getByRole('button', { name: 'due Jan 3' });
+      await user.click(pill);
+      expect(pill).toHaveAttribute('aria-expanded', 'true');
+
+      await user.click(pill);
+      expect(pill).toHaveAttribute('aria-expanded', 'false');
     });
   });
 

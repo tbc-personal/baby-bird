@@ -19,6 +19,7 @@ import { datingFrom, isReviewMode } from '../lib/storage';
 import { weekRow } from '../data/comparisons';
 import { ComparisonCard } from '../components/ComparisonCard';
 import { LaborPanelCard } from '../components/LaborPanel';
+import { useDisclosure } from '../components/useDisclosure';
 import { LABOR_PANEL_FROM_DAY } from '../lib/laborProbability';
 import { useAppState } from '../useAppState';
 import './Today.css';
@@ -167,13 +168,23 @@ export function ProgressHeader({
       ? clamp((viewedWeek * 7) / GESTATION_DAYS, 0, 1)
       : progress.progressFraction;
 
+  const dueDateConfirm = useDisclosure();
+
   return (
     <>
-      <div className="meta meta--pills">
-        <span className="pill pill--trimester">
-          {shownTrimester ? TRIMESTER_LABEL[shownTrimester] : 'Not started'}
-        </span>
-        <span className="pill pill--due mono">due {formatShortDate(progress.dueDate)}</span>
+      <div ref={dueDateConfirm.containerRef}>
+        <div className="meta meta--pills">
+          <span className="pill pill--trimester">
+            {shownTrimester ? TRIMESTER_LABEL[shownTrimester] : 'Not started'}
+          </span>
+          <button className="pill pill--due mono" {...dueDateConfirm.triggerProps}>
+            due {formatShortDate(progress.dueDate)}
+          </button>
+        </div>
+        <div className="due-confirm" {...dueDateConfirm.panelProps}>
+          <p>Change your due date?</p>
+          <a href={hrefFor({ name: 'setup' })}>Yes, go to Setup</a>
+        </div>
       </div>
 
       <div className="head">

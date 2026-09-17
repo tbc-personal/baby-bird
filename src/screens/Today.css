@@ -87,4 +87,41 @@
 .pill--due {
   background: var(--accent-soft);
   color: var(--ink);
+  border: none;
+  cursor: pointer;
+}
+
+/*
+ * The confirm popover the due-date pill discloses. Same in-flow treatment as
+ * Setup's "how it's calculated" panel (`useDisclosure`): it pushes the header
+ * down rather than covering it, and closes on outside tap, Escape, or a
+ * second tap of the pill.
+ *
+ * Background and link color reuse the "links on paper" and "body text on
+ * paper" pairs already asserted in skins.test.ts, rather than the note/accent
+ * tokens the surrounding pills use, since no link-on-note pair is verified.
+ */
+.due-confirm {
+  margin: 6px 0 0;
+  padding: 9px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.due-confirm p {
+  margin: 0;
+}
+
+.due-confirm a {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.due-confirm[hidden] {
+  display: none;
 }
