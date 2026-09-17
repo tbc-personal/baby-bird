@@ -31,8 +31,18 @@
   color: var(--accent);
 }
 
+/*
+ * `.field` is a single-column grid, and a grid item's default `min-width` is
+ * `auto` rather than 0 — it takes its intrinsic content size as a floor even
+ * when a percentage width is set. For a native date input that floor is the
+ * locale-formatted value (e.g. "Aug 21, 2026") plus the calendar glyph, which
+ * is wider on iOS's compact control than on desktop; without this override,
+ * `width: 100%` loses to that floor and the control spills past the app
+ * shell's `--screen-max` instead of shrinking to fit.
+ */
 .ctl {
   width: 100%;
+  min-width: 0;
   border: 1.5px solid var(--line);
   border-radius: 10px;
   padding: 11px 12px;
