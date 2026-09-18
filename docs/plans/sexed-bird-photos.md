@@ -59,55 +59,43 @@ pass: survey, human pick from six, licence check, crop-preview, a curated
 week, of which we already own roughly half. §4 puts the number between 10 and 18
 new photographs depending on how §5.1 is decided.
 
-## 3. Which species qualify — DRAFT, NOT VERIFIED
+## 3. Which species qualify — VERIFIED 2026-09-18
 
-This is the load-bearing content question and I have not verified it. The list
-below is written from general ornithological knowledge, which per CLAUDE.md is
-not a finding. **Phase 0 is checking every row against Birds of the World or the
-All About Birds species account and recording the verdict with its source**, the
-same standard ADR-004 holds the facts to.
+Verified in `docs/research/dimorphism.md`, with the evidence quoted per week.
+**Not against Birds of the World, which is paywalled** — the plumage sections
+need a subscription. English Wikipedia was used instead, which ADR-004 already
+accepts as a reference. Five tier B rows are still open and marked ⚠ there.
 
-Three tiers, because they behave differently in a 200px letterbox:
+**Tier A — usable at card size (8 weeks): 14 Ruby-throated Hummingbird, 20
+Eastern Bluebird, 21 American Kestrel, 25 Belted Kingfisher, 32 Hooded
+Merganser, 36 Wood Duck, 39 Mallard, 40 Snowy Owl.** The same eight this plan
+guessed at before verification.
 
-**Tier A — whole-bird colour difference, unmistakable at card size (8 weeks)**
+**Tier B — real but marginal (5 weeks):** 24 Northern Flicker and 31 Pileated
+Woodpecker (malar stripe only), 42 Osprey and 29 American Barn Owl (a tendency,
+not a mark), 15 Ruby-crowned Kinglet (**drop** — the male conceals the patch).
+Osprey and Barn Owl were wrongly filed as monomorphic in the first draft.
 
-| Week | Species                   | The difference                                           |
-| ---- | ------------------------- | -------------------------------------------------------- |
-| 14   | Ruby-throated Hummingbird | male's ruby gorget; female white-throated                |
-| 20   | Eastern Bluebird          | male saturated blue; female grey-blue, muted             |
-| 21   | American Kestrel          | male blue-grey wings; female rufous, barred              |
-| 25   | Belted Kingfisher         | female has the rust belly band; male does not            |
-| 32   | Hooded Merganser          | male black-and-white crest; female cinnamon              |
-| 36   | Wood Duck                 | male iridescent and patterned; female grey with eye-ring |
-| 39   | Mallard                   | male green head; female mottled brown                    |
-| 40   | Snowy Owl                 | male near-white; female heavily barred                   |
-
-Week 25 is the one worth keeping whatever else is cut: the female is the
-brighter bird, the card's existing fact already says so, and it is the only week
-where the feature contradicts the expectation it sets.
-
-**Tier B — a head or face mark only (3 weeks).** Northern Flicker (male's malar
-stripe), Pileated Woodpecker (male's red malar and forecrown), Ruby-crowned
-Kinglet (male's crown patch, usually concealed even on the male). These work
-only if the crop is on the head, which fights the strip crop. Recommend
-deferring all three, and dropping the kinglet outright — a mark the male himself
-usually hides cannot carry a "this is your boy" card.
-
-**Tier C — size only, no plumage difference (8 weeks).** Peregrine Falcon,
-Cooper's Hawk, Red-tailed Hawk, Red-shouldered Hawk, Barred Owl, Great Horned
-Owl, Atlantic Puffin, Common Tern. All have reverse size dimorphism and a single
-photograph cannot show relative size. **Out**, and the reason should be written
-down so it is not re-proposed.
-
-**Monomorphic (10 weeks).** Chickadee, Carolina Wren, Tufted Titmouse, Cedar
-Waxwing, Blue Jay, American Crow, Green Heron, Ring-billed Gull, American Barn
-Owl, Osprey. Barn Owl and Osprey have statistical tendencies (female spotting,
-female breast necklace) that do not survive being pointed at as "the female".
+**Out — size-only or negligible (16 weeks):** 16, 17, 18, 19, 22, 23, 26, 27,
+28, 30, 33, 34, 35, 37, 38, 41. Eight of these differ only in size, which a
+single photograph cannot show; that rejection is structural and permanent.
 
 **So the feature covers 8 of 29 bird weeks — under a third.** A parent who sets
 "boy" sees a different photograph on eight cards out of twenty-nine and an
 identical one on the other twenty-one. That is the feature's real shape and §5.2
 is about whether the app explains it or lets it read as a bug.
+
+### The sexing rule verification forced
+
+Four ways a pick could be mis-sexed turned up (eclipse plumage on the three
+ducks, juvenile kingfishers carrying the female's rufous band, snowy owl
+overlap, and the unidentified week 40 photo). All four point one way:
+
+**A sexed pick is valid only if the Commons file itself states the sex** — in
+its categories, title or description. We do not sex a bird by looking at it.
+This is stricter than the rest of the curation, because unlike a crop judgement
+it is a factual claim the card then makes. It belongs in ADR-008 and in
+`CURATING-PHOTOS.md`.
 
 ## 4. Photograph budget
 
@@ -239,12 +227,12 @@ naming convention to be load-bearing, which is a reason to keep it.
 
 ## 7. Phases
 
-**Phase 0 — verify the species list.** Check all 29 bird weeks against Birds of
-the World / All About Birds, record each verdict and its source in
-`docs/research/dimorphism.md`, including the tier C and monomorphic rejections
-so they are not re-litigated. Also settle §5. _No code._
-Done when: every bird week has a sourced verdict and the author has signed off
-on the tier A list.
+**Phase 0 — verify the species list. Done, partly.** All 29 bird weeks have a
+sourced verdict in `docs/research/dimorphism.md`, including the rejections, so
+they are not re-litigated. Verified against Wikipedia, not Birds of the World,
+which is paywalled — see that file for what that costs. Still open: the author's
+sign-off on tier A, the five ⚠ tier B rows, week 40's photo identification, and
+§5.
 
 **Phase 1 — schema and selection, invisible.** `sexedImages` in the schema, the
 four validator rules, `imageFor()`, unit tests. Ships with no data and changes
